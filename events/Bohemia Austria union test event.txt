@@ -1,0 +1,75 @@
+#Test Bohemia Union With Austria
+country_event = {
+	id = flavor_pol.18
+	title = flavor_pol.18.t
+	desc = flavor_pol.18.d
+
+	picture = LIBERUM_VETO_eventPicture
+	
+	fire_only_once = yes
+	major = yes
+	
+	trigger = {
+		tag = BOH
+		is_subject = no
+		has_interregnum = yes
+		NOT = { has_reform = celestial_empire }
+		LIT = {
+			exists = yes
+			is_subject = no
+			NOT = { junior_union_with = HAB }
+			dynasty = "Habsburg"
+		}
+		NOT = { is_year = 1450 }
+	}
+	
+	immediate = {
+		set_global_flag = hab_union_outcome_flag
+	}
+	
+	mean_time_to_happen = {
+		months = 12
+		modifier = {
+			factor = 0.1
+			is_year = 1447
+		}
+		modifier = {
+			factor = 0.01
+			is_year = 1448
+		}
+		modifier = {
+			factor = 0.001
+			is_year = 1449
+		}
+	}
+	
+	option = {
+		name = flavor_pol.18.a #A Habsburg Prince will do nicely
+		ai_chance = { 
+			factor = 10 
+		}
+		BOH = { 
+			country_event = { id = flavor_lit.16 }
+        option = {
+		name = flavor_lit.16.a 
+		
+		ai_chance = { factor = 1 } 
+		set_country_flag = lit_accepted_pu
+		HAB = { 
+			create_union = BOH 
+			country_event = { id = flavor_pol.20 }
+		}
+		}
+		}
+	}
+	option = {
+		name = flavor_boh.25.b #Never forget
+	ai_chance = {
+		factor = 90
+	}
+	add_opinion = {
+		who = HAB
+		modifier = BOH_Will_Never_Join_You
+	}
+	}
+	}
