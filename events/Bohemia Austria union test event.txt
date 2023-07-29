@@ -1,8 +1,8 @@
 #Test Bohemia Union With Austria
 country_event = {
-	id = flavor_pol.18
-	title = flavor_pol.18.t
-	desc = flavor_pol.18.d
+	id = flavor_boh.14
+	title = flavor_boh.14.t
+	desc = flavor_boh.14.d
 
 	picture = LIBERUM_VETO_eventPicture
 	
@@ -44,17 +44,17 @@ country_event = {
 	}
 	
 	option = {
-		name = flavor_pol.18.a #A Habsburg Prince will do nicely
+		name = flavor_boh.14.a #A Habsburg Prince will do nicely
 		ai_chance = { 
 			factor = 10 
 		}
 		BOH = { 
-			country_event = { id = flavor_lit.16 }
+			country_event = { id = flavor_hab.26 }
         option = {
-		name = flavor_lit.16.a 
+		name = flavor_boh.14.a 
 		
 		ai_chance = { factor = 1 } 
-		set_country_flag = lit_accepted_pu
+		set_country_flag = boh_accepted_pu
 		HAB = { 
 			create_union = BOH 
 			country_event = { id = flavor_pol.20 }
@@ -63,7 +63,7 @@ country_event = {
 		}
 	}
 	option = {
-		name = flavor_boh.25.b #Never forget
+		name = flavor_boh.14.b #Never forget
 	ai_chance = {
 		factor = 90
 	}
