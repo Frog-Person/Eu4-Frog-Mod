@@ -1,0 +1,4 @@
+BOH_Will_Never_Join_You = {
+    opinion = -100
+    yearly_decay = 5
+}
