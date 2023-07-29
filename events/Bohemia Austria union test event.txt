@@ -48,7 +48,7 @@ country_event = {
 		ai_chance = { 
 			factor = 10 
 		}
-		BOH = { 
+		HAB = { 
 			country_event = { id = flavor_hab.26 }
         option = {
 		name = flavor_boh.14.a 
