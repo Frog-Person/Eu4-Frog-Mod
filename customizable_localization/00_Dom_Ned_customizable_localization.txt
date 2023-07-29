@@ -1,0 +1,291 @@
+defined_text = {
+    name = GetPeasantsName
+
+    text = {
+        localisation_key = string_peasants
+        trigger = {
+           has_reform = peasants_republic
+        }
+    }
+	#text = {
+    #   localisation_key = string_serfdom
+    #    trigger = {
+	#		#has_estate_privilege = estate_peasants_serfdom
+	#	}
+    #}
+}
+defined_text = {
+    name = GetGuildsName
+
+    text = {
+        localisation_key = string_guilds
+        trigger = {
+		   always = yes
+        }
+    }
+}
+defined_text = {
+    name = GetTradersName
+
+    text = {
+        localisation_key = string_traders
+        trigger = {
+		   always = yes
+        }
+    }
+}
+defined_text = {
+    name = GetAristocratsName
+
+    text = {
+        localisation_key = string_aristocrats
+        trigger = {
+		   always = yes
+        }
+    }
+}
+
+
+defined_text = {
+    name = GetUniNameNetherlands
+
+    text = {
+        localisation_key = string_leuven
+        trigger = {
+			OR = {
+				primary_culture = flemish
+				primary_culture = wallonian
+			}
+		}
+    }
+    text = {
+        localisation_key = string_leiden
+        trigger = {
+		   primary_culture = dutch
+		   NOT = { tag = GEL }
+        }
+    }
+    text = {
+        localisation_key = string_franeker
+        trigger = {
+		   primary_culture = frisian
+        }
+    }
+    text = {
+        localisation_key = string_harderwijk
+        trigger = {
+			tag = GEL
+        }
+    }
+}
+
+defined_text = {
+    name = GetSwedesMissionName
+
+    text = {
+        localisation_key = string_the_swedes
+        trigger = {
+			SWE = { exists = yes }
+        }
+    }
+    text = {
+        localisation_key = string_the_scandinavians
+        trigger = {
+			NOT = { SWE = { exists = yes } }
+			SCA = { exists = yes }
+        }
+    }
+}
+
+defined_text = {
+    name = GetEconomyStartMissionName
+
+    text = {
+        localisation_key = string_flemish_cloth
+        trigger = {
+			OR = {
+				tag = FLA tag = BRB tag = HAI tag = LUX 
+				AND = {
+					tag = NED
+					OR = {
+						was_tag = FLA was_tag = BRB was_tag = HAI was_tag = LUX
+					}
+				}
+			}
+        }
+    }
+    text = {
+        localisation_key = string_cheese_markets
+        trigger = {
+			OR = {
+				tag = NED tag = HOL tag = UTR tag = GEL tag = FRI tag = EFR tag = GRN tag = IJS tag = VOC tag = ZEE tag = LBG
+			}
+			NOT = {
+				was_tag = BRB was_tag = FLA was_tag = HAI was_tag = LUX
+			}
+        }
+    }
+}
+
+defined_text = {
+    name = GetEconomyStartMissionDesc
+
+    text = {
+        localisation_key = string_flemish_cloth_desc
+        trigger = {
+			OR = {
+				tag = FLA tag = BRB tag = HAI tag = LUX 
+				AND = {
+					tag = NED
+					OR = {
+						was_tag = FLA was_tag = BRB was_tag = HAI was_tag = LUX
+					}
+				}
+			}
+        }
+    }
+    text = {
+        localisation_key = string_cheese_markets_desc
+        trigger = {
+			OR = {
+				tag = NED tag = HOL tag = UTR tag = GEL tag = FRI tag = EFR tag = GRN tag = IJS tag = VOC
+			}
+			NOT = {
+				was_tag = BRB was_tag = FLA was_tag = HAI was_tag = LUX
+			}
+        }
+    }
+}
+
+defined_text = {
+    name = GetUniNameNetherlandsPROV
+
+    text = {
+        localisation_key = string_brabant
+        trigger = {
+		   primary_culture = flemish
+        }
+    }
+    text = {
+        localisation_key = string_den_haag
+        trigger = {
+		   primary_culture = dutch
+			NOT = { tag = GEL }
+		}
+    }
+    text = {
+        localisation_key = string_fryslan
+        trigger = {
+		   primary_culture = frisian
+        }
+    }
+    text = {
+        localisation_key = string_gelre
+        trigger = {
+		   tag = GEL
+        }
+    }
+}
+
+defined_text = {
+	name = age_siege_ability
+	
+	text = {
+		localisation_key = age_siege_tur
+		trigger = {
+			tag = TUR
+		}
+	}
+	text = {
+		localisation_key = age_siege_others
+		trigger = {
+			NOT = { tag = TUR }
+		}
+	}
+}
+
+
+defined_text = {
+	name = age_venetian_trade
+	
+	text = {
+		localisation_key = age_trade_ven
+		trigger = {
+			tag = VEN
+		}
+	}
+	text = {
+		localisation_key = age_trade_others
+		trigger = {
+			NOT = { tag = VEN }
+		}
+	}
+}
+
+defined_text = {
+	name = age_spanish_tercio
+	
+	text = {
+		localisation_key = age_spanish_tercio_spa
+		trigger = {
+			tag = SPA
+		}
+	}
+	text = {
+		localisation_key = age_spanish_tercio_others
+		trigger = {
+			NOT = { tag = SPA }
+		}
+	}
+}
+
+defined_text = {
+	name = age_mughal_artillery
+	
+	text = {
+		localisation_key = age_indian_artillery_mug
+		trigger = {
+			tag = MUG
+		}
+	}
+	text = {
+		localisation_key = age_indian_artillery_others
+		trigger = {
+			NOT = { tag = MUG }
+		}
+	}
+}
+
+defined_text = {
+    name = GetFrisianHeroName
+
+    text = {
+        localisation_key = string_grutte_pier
+        trigger = {
+           NOT = { tag = EFR }
+        }
+    }
+    text = {
+        localisation_key = string_cirksena
+        trigger = {
+           tag = EFR
+        }
+    }
+}
+
+defined_text = {
+    name = GetFrisianHeroDesc
+
+    text = {
+        localisation_key = string_grutte_pier_desc
+        trigger = {
+           NOT = { tag = EFR }
+        }
+    }
+    text = {
+        localisation_key = string_cirksena_desc
+        trigger = {
+           tag = EFR
+        }
+    }
+}

@@ -1,0 +1,54 @@
+sided_with_burgundy_friend = {
+	opinion = 10
+	yearly_decay = 0
+}
+
+sided_against_burgundy_friend = {
+	opinion = 10
+	yearly_decay = 0
+}
+
+sided_with_burgundy_foe = {
+	opinion = -10
+	yearly_decay = 0
+}
+
+sided_against_burgundy_foe = {
+	opinion = -10
+	yearly_decay = 0
+}
+
+bur_promised_protection = {
+	opinion = 25
+	yearly_decay = 1
+}
+
+bur_denied_protection = {
+	opinion = -25
+	yearly_decay = 1
+}
+
+elevated_frisia = {
+	opinion = 100
+	yearly_decay = 2.5
+}
+
+opinion_king_in_frisia = {
+	opinion = 50
+	yearly_decay = 2.5
+}
+
+opinion_frisia_not_recognized = {
+	opinion = -100
+	yearly_decay = 2.5
+}
+
+opinion_frisia_not_recognized_allies = {
+	opinion = -50
+	yearly_decay = 2.5
+}
+
+elevated_frisia_rivals = {
+	opinion = -50
+	yearly_decay = 2.5
+}

@@ -1,0 +1,32 @@
+﻿l_english:
+ #extra localisation for when i might want them
+ 
+ #GERMANY
+ JUL: "Jülich"
+ JUL_ADJ: "Jülicher"
+ TEC: "Tecklenburg"
+ TEC_ADJ: "Tecklenburger"
+ ZCH: "Zürich"
+ ZCH_ADJ: "Züricher"
+ SBV: "Straubing"
+ SBV_ADJ: "Straubinger"
+ 
+ #LOW COUNTRIES
+ ARS: "Artois"
+ ARS_ADJ: "Artesian"
+ LBG: "Limburg"
+ LBG_ADJ: "Limburger"
+ NAM: "Namur"
+ NAM_ADJ: "Namurese"
+ BEL: "Belgium"
+ BEL_ADJ: "Belgian"
+ GRN: "Groningen"
+ GRN_ADJ: "Groninger"
+ CMB: "Cambray"
+ CMB_ADJ: "Cambrayan"
+ IJS: "Overijssel"
+ IJS_ADJ: "Overijsseler"
+ VOC: "Vereenigde Oostindische Compagnie"
+ VOC_ADJ: "Vereenigde Oostindische Compagnie"
+ ZEE: "Zeeland"
+ ZEE_ADJ: "Zeelandic"

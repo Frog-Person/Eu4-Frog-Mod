@@ -1,0 +1,40 @@
+estate_peasants_frisian_freedom = {
+	icon = privilege_grant_autonomy
+	land_share = 5
+	conditional_modifier = { trigger = { has_absolutism_reduction_for_estate_privileges = yes } modifier = { max_absolutism = 1 } }
+	max_absolutism = -50
+	influence = 0.10
+	can_select = {
+		primary_culture = frisian
+		has_reform = peasants_republic		
+	}
+	on_granted = {
+	}
+	penalties = {
+		min_autonomy = 10
+	}
+	benefits = {
+		global_manpower_modifier = 0.05
+	}
+	can_revoke = {
+		OR = {
+			NOT = {
+				estate_influence = {
+					estate = estate_burghers
+					influence = 40
+				}
+			}
+			estate_loyalty = {
+				estate = estate_burghers
+				loyalty = 70
+			}
+			NOT = {
+			has_reform = peasants_republic
+			}
+		}
+	}
+	ai_will_do = {
+		factor = 0
+	}
+	#cooldown_years = 20
+}

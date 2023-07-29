@@ -1,0 +1,123 @@
+﻿l_english:
+ #DECISIONS
+ #CHO_form_belgium_title: "@BEL Form the Belgian Nation"
+ #CHO_form_belgium_desc: "Without a unifying title, our realm is vulnerable to the depredations of our powerful neighbours. We have achieved a position of dominance in the former Roman province of Belgica and are now in a position to proclaim its restoration under our rule."
+ 
+ #WONDERS
+ 
+ fortress_of_luxemburg: "Fortress Luxembourg"
+ palace_of_coudenberg: "Palace of Coudenberg"
+ 
+ #Cultures
+ anglo_frisian: "Anglo-Frisian"
+ 
+ #Mercenaries
+ 
+ merc_arumer_zwarte_hoop: "Arumer Zwarte Hoop"
+ unlock_merc_arumer_zwarte_hoop_tt: "Unlock the mercenary company §YArumer Zwarte Hoop§! to recruit."
+ 
+ #Warnings?
+ 
+ overlord_doesnt_share_religion_tt: "Your §YOverlord: [Root.Overlord.GetName]§! doesn't have the same religion as you"
+ subject_conversion_blocked_tt: "Your §YOverlord: [Root.Overlord.GetName]§! can no longer forcefully change your §Yreligion§!"
+ warning_anabaptist_munster_tt: "§ROther nations will get a severe opinion penalty against you!§!"
+ schieringers_vetkopers_tt: "Weathered the troubles between the schieringers & vetkopers."
+ 
+ #Disasters
+ 
+ schieringers_vetkopers: "Schieringers and Vetkopers"
+ desc_schieringers_vetkopers: "This nation is suffering from conflicts between the Schieringers and Vetkopers"
+ guelders_wars: "Guelders Wars"
+ desc_guelders_wars: "This nation is suffering from the Guelders Wars"
+ 
+ #Decision Requirements
+ 
+ waterlinie_inundation_require_tt: "Requires the completion of the mission"
+ dutch_fluyt_require_tt: "Requires the completion of the mission"
+ 
+ #Decisions
+ 
+ dutch_waterlinie_inundation_title: "Inundate the Dutch Waterlinie"
+ ned_fluyt_ship_title: "Construct the Fluyt Ships"
+ dutch_waterlinie_inundation_desc: "§REXPERIMENTAL ADDITION!§! \n\nInundation of the Waterlinie was a prime strategy by the Dutch Republic to avoid their heartland being invaded by foreign troops."
+ ned_fluyt_ship_desc: "§REXPERIMENTAL ADDITION!§! \n\nThe Dutch sailing vessel from Hoorn is a dedicated cargo vessel. It is not built for conversion in wartime to a warship, but carries twice the cargo."
+ dutch_revoke_waterlinie_inundation_title: "Revert the Inundation of the Waterlinie"
+ ned_revoke_fluyt_ship_title: "Revert the transformation of Fluytships"
+ ned_commission_art_title: "Commission Art"
+ ned_commission_art_desc: "By spending some gold we can commission artists in our country to make masterpieces."
+ 
+ dom_ned_reload_missions_update_title: "Reload Missions"
+ dom_ned_reload_missions_update_desc: "After an update, there is a chance that the current missions are no longer up to date, to make sure it is up to date again, use this decision."
+ 
+ not_magna_frisia_tt: "Did §RNot§! become §YMagna Frisia§!"
+ ned_commission_art_tt: "This event allows us to choose what art we should commission"
+ not_recently_art_tt: "Did not recently Commission Art"
+ 
+ #Anabaptism
+ anabaptist: "Anabaptist"
+ anabaptist_religion_desc: "Anabaptism covers a wide range of more non-mainstream religious traditions inspired men such as Menno Simons. It found it's roots early on in the Protestant Reformation, but was rejected by many authorities as it questioned those. Leading to many emigrants and refugees, who propagated their believes. Sometimes violently, sometimes non-violently."
+ 
+ anabaptist_test_aspect: "Anabaptist Test Aspect"
+ desc_anabaptist_test_aspect: "Anabaptist Test Aspect"
+ 
+ #Reforms
+ peasants_chiefdom: "Peasant Dictatorship"
+ peasants_chiefdom_desc: "Peasant Dictators are Peasant Republics governed by a single ruler who managed to get hold of enough power to end democratic process. At least for a while. It could very well end in the current ruler taking full control and turning it in a monarchy."
+ PEASANT_CHIEFDOM: "Peasant Dictatorship"
+ hansa_free_city_reform: "Hanseatic Free City"
+ hansa_free_city_reform_desc: "A Free Imperial City with special rights and privileges granted by the Emperor, with the ability to form a new trade league."
+ 
+ 
+ #Renames
+ #BATAVIAN_REPUBLIC_NAME: "Batavian Republic" #rename of Revolutionary Netherlands
+ #HELVETIC_REPBULIC_NAME: ""
+ #KINGDOM_OF_HOLLAND_NAME: "Holland"
+ 
+ obj_convert_5_provinces_tooltip: "Convert §Y5§! Provinces"
+ 
+ #AREAS AND REGIONS
+ 
+ pacific_east_indies_region: "Pacific East Indies"
+ gulf_of_thailand_area: "Gulf of Thailand"
+ 
+ #Diplomatic Actions
+ influence_bishop_election: "Influence Bishop's Election"
+ influence_bishop_election_title: "Influence Bishop's Election"
+ influence_bishop_election_desc: "By spending some favors with the pope and the bishopric, we can influence the election of the next bishop."
+ influence_bishop_election_tooltip: "By spending some favors with the pope and the bishopric, we can influence the election of the next bishop."
+ influence_bishop_election_alert_tooltip: "Influence Bishop's Election"
+ 
+ #
+ sided_with_burgundy_friend: "Shared Burgundian Policy"
+ sided_against_burgundy_friend: "Shared Burgundian Policy"
+ sided_with_burgundy_foe: "Opposing Burgundian Policy"
+ sided_against_burgundy_foe: "Opposing Burgundian Policy"
+ burgundy_state_reform_tt: "Burgundian State becomes available as a reform"
+ 
+ #BOOKMARKS
+ PeaceWestphalia_BOOKMARK:0 "Peace of Westphalia"
+ PeaceWestphalia_BOOKMARK_DESC:0 "On the 24th of October 1648, the Thirty Years War was formally ended with multiple treaties being signed between the various nations involved. Now we stand upon a New Europe, with the Victors in a perfect position to expand and the Holy Roman Empire effectively being made a mere confederation."
+ 
+ #HRE Incidents
+ incident_king_in_frisia_member_alert: "The King in Frisia"
+ incident_king_in_frisia: "The King in Frisia"
+ incident_king_in_frisia_member_alert: "Frisia is once again becoming dominant and considers itself as a contender on the world stage. [FRI.Monarch.GetTitle] [FRI.Monarch.GetName] has announced [FRI.Monarch.GetHerHis] intention to create a Kingdom of Magna Frisia, elevating the nation from its status as a mere [FRI.GovernmentName]. This is almost unprecedented within the Holy Roman Empire, and the Emperor must consider how to handle this matter."
+ incident_king_in_frisia_emperor_alert: "Frisia is once again becoming dominant and considers itself as a contender on the world stage. [FRI.Monarch.GetTitle] [FRI.Monarch.GetName] has announced [FRI.Monarch.GetHerHis] intention to create a Kingdom of Magna Frisia, elevating the nation from its status as a mere [FRI.GovernmentName]. This is almost unprecedented within the Holy Roman Empire, and the Emperor must consider how to handle this matter."
+ elevated_frisia: "Elevated Frisia"
+ opinion_king_in_frisia: "King in Frisia"
+ opinion_frisia_not_recognized: "Denies Frisian Legitimacy"
+ 
+ #Governments
+ BURGEMEESTER: "Burgemeester"
+ BURGEMEESTER_fem: "Burgemeester"
+ PEASANT_REPUBLIC: "Peasant Republic"
+ 
+ #OTHER
+ NOT_PEASANT_REPUBLIC: "Peasant Republics cannot become a Free City"
+ 
+ #Estate privileges
+ estate_peasants_frisian_freedom: "Frisian Freedom"
+ estate_peasants_frisian_freedom_desc: "The Frisian Freedom or in Frisian, Fryske Frijheid, was a system of heavy autonomy in the region of Friesland in the middle ages, in which peasants were not constrained by feudalism and had the their own economic interest in mind. There were local elections in which Chieftains would be elected who represented them in the Upstalbeam"
+ 
+ #Triggered Modifiers
+ japanese_samurai_mission: "Japanese Friendship"

@@ -1,0 +1,17 @@
+#Netherlands
+
+ned_city_investments = {
+	allowed_num_of_buildings = 1 
+	local_development_cost = -0.1
+}
+
+colonial_inhibitor = {
+	local_colonial_growth = -100
+	local_colony_cost_modifier = -100
+}
+
+frisians_satisfied = {
+	min_local_autonomy = -10 
+	local_development_cost = -0.05
+	#local_years_of_nationalism = 5
+}

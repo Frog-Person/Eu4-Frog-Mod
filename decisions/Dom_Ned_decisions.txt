@@ -1,0 +1,208 @@
+country_decisions = {
+	
+	dutch_waterlinie_inundation = {
+		major = yes
+		color = { 255 152 45 }
+		potential = {
+			OR = {
+				primary_culture = dutch
+				primary_culture = flemish
+				primary_culture = frisian
+			}
+			NOT = {
+				has_country_flag = dutch_waterlinie_decision
+			}
+		}
+		provinces_to_highlight = {
+			fort_level = 1 
+			owned_by = ROOT
+		}
+		allow = {
+			OR = {
+				mission_completed = dom_ned_fixed_garrison_system_two
+				mission_completed = dom_ned_fixed_garrison_system
+				
+			}
+		}
+	 	effect = {
+			every_owned_province = {
+				limit = {
+					fort_level = 1 
+				}
+				add_province_modifier = {
+					name = dutch_inundation
+					duration = -1
+				}
+			}
+			set_country_flag = dutch_waterlinie_decision
+		}
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				factor = 10
+				OR = {
+					war_with = FRA
+					war_with = ENG
+					war_with = SPA
+					war_with = HAB
+				}
+			}
+		}
+		ai_importance = 400
+	}
+	
+	ned_fluyt_ship = {
+		major = yes
+		color = { 255 152 45 }
+		potential = {
+			OR = {
+				primary_culture = dutch
+				primary_culture = flemish
+				primary_culture = frisian
+			}
+			NOT = {				
+				has_country_flag = fluytship_dutch
+			}
+		}
+		provinces_to_highlight = {
+		}
+		allow = {
+			mission_completed = dom_ned_fluyt
+		}
+	 	effect = {
+			add_country_modifier = {
+				name = fluyt_tradeship
+				duration = -1
+			}
+			set_country_flag = fluytship_dutch
+		}
+		ai_will_do = {
+			factor = 0
+		}
+		ai_importance = 400
+	}
+	
+	ned_revoke_fluyt_ship = {
+		#color = { 255 172 28 }
+		potential = {
+			OR = {
+				primary_culture = dutch
+				primary_culture = flemish
+				primary_culture = frisian
+			}
+			has_country_flag = fluytship_dutch
+		}
+		provinces_to_highlight = {
+		}
+		allow = {
+		}
+	 	effect = {
+			add_treasury = -1000
+			remove_country_modifier = fluyt_tradeship
+			clr_country_flag = fluytship_dutch
+		}
+		ai_will_do = {
+			factor = 0
+		}
+		ai_importance = 400
+	}
+	
+	dutch_revoke_waterlinie_inundation = {
+		#color = { 255 172 28 }
+		potential = {
+			OR = {
+				primary_culture = dutch
+				primary_culture = flemish
+				primary_culture = frisian
+			}
+			has_country_flag = dutch_waterlinie_decision
+		}
+		provinces_to_highlight = {
+		}
+		allow = {
+		}
+	 	effect = {
+			every_owned_province = {
+				remove_province_modifier = dutch_inundation
+			}
+			clr_country_flag = dutch_waterlinie_decision
+		}
+		ai_will_do = {
+			factor = 0
+		}
+		ai_importance = 400
+	}
+	#remove dutch_inundation
+	#
+	
+	dom_ned_reload_missions_update = {
+		major = yes
+		potential = {
+			OR = {
+				tag = NED tag = HOL tag = UTR tag = GEL tag = FRI tag = EFR tag = GRN tag = FLA tag = BRB tag = IJS tag = HAI tag = LUX tag = VOC tag = ZEE tag = LBG tag = LOT
+			}
+			NOT = {
+				has_country_flag = update_minors_flavor_320714
+			}
+		}
+		provinces_to_highlight = {
+		}
+		allow = {
+		}
+	 	effect = {
+			country_event = {
+				id = dutch_domination.20
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 400
+	}
+	
+	ned_commission_art = {
+		color = { 255 162 25 }
+		major = yes
+		potential = {
+			OR = {
+				primary_culture = dutch
+				primary_culture = flemish
+				primary_culture = frisian
+			}
+		}
+		allow = {
+			#OR = { 
+				mission_completed = dom_ned_fund_artists
+			#	has_country_flag = dutch_comission_art_decision_true
+			#}
+			treasury = 250
+			custom_trigger_tooltip = {
+				tooltip = not_recently_art_tt
+				NOT = {
+					OR = {
+						has_country_modifier = recently_commissioned_art
+						has_country_modifier = art_maritime_mod
+						has_country_modifier = art_foreign_lands_mod
+						has_country_modifier = art_military_mod
+						has_country_modifier = art_aristocrats
+						has_country_modifier = art_landscape
+						has_country_modifier = art_every_day
+					}
+				}
+			}
+		}
+	 	effect = {
+			country_event_with_insight = {
+				id = dutch_domination.23
+				insight_tooltip = ned_commission_art_tt
+			}
+			#country_event = {
+			#	id = dutch_domination.23
+			#}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+		ai_importance = 400
+	}
+}
