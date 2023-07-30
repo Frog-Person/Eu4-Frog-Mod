@@ -1,0 +1,237 @@
+#Austria Missions
+hab_cultural_ambitions = {
+	slot = 1 #upper left column
+	generic = no #if a mission without generic = yes wants this slot then it overrides this.
+	ai = yes
+	potential = {
+		NOT = { map_setup = map_setup_random }
+		tag = HAB
+        }
+	has_country_shield = yes
+	subjugate_hungary = { #Decline of Hungary
+		icon = mission_eastern_european_city
+        position = 1
+		required_missions = {  } #None
+		completed_by = 1490.1.1
+		trigger = {
+			if = {
+				limit = {
+					exists = HUN
+				}
+				total_own_and_non_tributary_subject_development = HUN
+				total_own_and_non_tributary_subject_development = 200
+			}
+			else = {
+				total_own_and_non_tributary_subject_development = 200
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					exists = HUN
+					valid_for_personal_unions_trigger = yes
+					HUN = {
+						valid_for_personal_unions_trigger = yes
+					}
+				}
+				add_casus_belli = {
+					type = cb_restore_personal_union
+					months = 300
+					target = HUN
+				}
+			}
+			else = {
+				slovakia_area = {
+					limit = {
+						NOT = { is_core = ROOT }
+						NOT = { is_permanent_claim = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
+				transdanubia_area = {
+					limit = {
+						NOT = { is_core = ROOT }
+						NOT = { is_permanent_claim = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
+				alfold_area = {
+					limit = {
+						NOT = { is_core = ROOT }
+						NOT = { is_permanent_claim = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
+			}
+		}
+		ai_weight = {
+			factor = 500	#Historical conquest
+		}
+	}
+    austrian_hungary = {
+		icon = mission_monarch_in_throne_room
+		required_missions = { subjugate_hungary }
+		position = 2
+		completed_by = 1490.1.1
+		ai_weight = {
+			factor = 500
+			modifier = {
+				factor = 2
+				slovakia_area = {
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+			}
+			modifier = {
+				factor = 2
+				transdanubia_area = {
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+			}
+		}
+		
+		provinces_to_highlight = {
+			OR = {
+				area = slovakia_area
+				area = transdanubia_area
+				area = alfold_area
+			}
+			NOT = {
+				ROOT = {
+					num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+						value = 11 #out of 14
+						OR = {
+							area = slovakia_area
+							area = transdanubia_area
+							area = alfold_area
+						}
+					}
+				}
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 11 #out of 14
+				OR = {
+					area = slovakia_area
+					area = transdanubia_area
+					area = alfold_area
+				}
+			}
+		}
+		effect = {
+			slavonia_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			croatia_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			east_adriatic_coast_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			add_country_modifier = {
+				name = "royal_hungary"
+				duration = 5475
+			}
+		}
+	}
+    stable_dynastic_lands = {
+        icon = mission_build_to_force_limit
+        position = 3
+        required_missions = {austrian_hungary}
+        provinces_to_highlight = {}
+        trigger = {
+            if = {
+                NOT = { exists = HUN}
+                NOT = { exists = BOH}
+                erzgebrige_area = {
+                    type = all
+                    country_or_non_sovereign_subject_holds = ROOT
+                }
+                bohemia_area = {
+                    type = all
+                    country_or_non_sovereign_subject_holds
+                }
+                OR = {
+                    lusatia_area = {
+                        type = all
+                        country_or_non_sovereign_subject_holds
+                    }
+                    silesia_area = {
+                        type = all
+                        country_or_non_sovereign_subject_holds
+                    }
+                
+                    }
+                moravia_area = {
+                    type = all
+                    country_or_non_sovereign_subject_holds
+                }
+                transdanubia_area = {
+                    type = all
+                    country_or_non_sovereign_subject_holds
+                }
+                slovakia_area = {
+                    type = all
+                    country_or_non_sovereign_subject_holds
+                }
+                alfold_area = {
+                    type = all
+                    country_or_non_sovereign_subject_holds
+                }
+                northern_transylvania_area = {
+                    type = all
+                    country_or_non_sovereign_subject_holds
+                }
+                southern_transylvania_area = {
+                    type = all
+                    country_or_non_sovereign_subject_holds
+                }
+                effect = {
+                }
+                else_if = {
+                   AND = {
+                     AND = {
+                       HUN = { is_subject_of = HAB}
+                       HUN = { has_opinion = {
+                                who = HAB
+                                value = 150
+                       }
+                       }
+                   }
+                     AND = {
+                       BOH = { is_subject_of = HAB}
+                       BOH = { has_opinion = {
+                               who = HAB
+                               value = 150
+                       }
+                       }
+                     }
+                   }
+                        }
+                effect = {   
+                }
+            }
+        }
+    }
+    direction_of_our_country = {
+        icon = mission_build_to_force_limit
+        position = 4
+        required_missions = { 
+            stable_dynastic_lands
+            imperial_succession
+            }
+    }
+}
