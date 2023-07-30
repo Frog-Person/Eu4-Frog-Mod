@@ -150,7 +150,10 @@ hab_cultural_ambitions = {
     stable_dynastic_lands = {
         icon = mission_build_to_force_limit
         position = 3
-        required_missions = {austrian_hungary}
+        required_missions = {
+			austrian_hungary
+			all_hussites_follow_the_leader
+			}
         provinces_to_highlight = {}
         trigger = {
             if = {
@@ -232,6 +235,90 @@ hab_cultural_ambitions = {
         required_missions = { 
             stable_dynastic_lands
             imperial_succession
-            }
-    }
+        }
+	}
+}
+hab_other_minorities_approach = {
+    slot = 2
+	generic = no
+	potential = {
+		tag = HAB
+	}
+	has_country_shield = yes
+	bohemian_crown = {
+		icon = mission_build_to_force_limit
+		position = 1
+		required_missions = {}
+		completed_by = 1490.1.1
+	    trigger = {
+			if = {
+				OR = {				
+					BOH = { is_subject_of = HAB }
+				erzgebrige_area = {
+                    type = all
+                    country_or_non_sovereign_subject_holds
+                }
+                bohemia_area = {
+                    type = all
+                    country_or_non_sovereign_subject_holds
+                }
+                OR = {
+                    lusatia_area = {
+                        type = all
+                        country_or_non_sovereign_subject_holds
+                    }
+                    silesia_area = {
+                        type = all
+                        country_or_non_sovereign_subject_holds
+                    }
+                }
+                moravia_area = {
+                    type = all
+                    country_or_non_sovereign_subject_holds
+                }	
+			}
+		}
+		effect = {
+		}
+		}
+	}
+	all_hussites_follow_the_leader = {
+		icon = mission_build_to_force_limit
+		position = 1
+		required_missions = { bohemian_crown }
+		trigger = {
+            if = {
+				erzgebrige_area = {
+                    type = all
+                    country_or_non_sovereign_subject_holds
+					religion = catholic
+                }
+                bohemia_area = {
+                    type = all
+                    country_or_non_sovereign_subject_holds
+					religion = catholic
+                }
+                OR = {
+                    lusatia_area = {
+                        type = all
+                        country_or_non_sovereign_subject_holds
+						religion = catholic
+                    }
+                    silesia_area = {
+                        type = all
+                        country_or_non_sovereign_subject_holds
+						religion = catholic
+                    }
+                }
+                moravia_area = {
+                    type = all
+                    country_or_non_sovereign_subject_holds
+					religion = catholic
+                }	
+			}
+			effect = {
+				
+			}
+		}
+	}	
 }
