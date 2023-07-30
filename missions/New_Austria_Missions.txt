@@ -284,7 +284,7 @@ hab_other_minorities_approach = {
 	}
 	all_hussites_follow_the_leader = {
 		icon = mission_build_to_force_limit
-		position = 1
+		position = 2
 		required_missions = { bohemian_crown }
 		trigger = {
             if = {
