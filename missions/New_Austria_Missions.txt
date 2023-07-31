@@ -167,17 +167,6 @@ hab_cultural_ambitions = {
                     type = all
                     country_or_non_sovereign_subject_holds
                 }
-                OR = {
-                    lusatia_area = {
-                        type = all
-                        country_or_non_sovereign_subject_holds
-                    }
-                    silesia_area = {
-                        type = all
-                        country_or_non_sovereign_subject_holds
-                    }
-                
-                    }
                 moravia_area = {
                     type = all
                     country_or_non_sovereign_subject_holds
@@ -320,5 +309,39 @@ hab_other_minorities_approach = {
 				
 			}
 		}
-	}	
+	}
+	consolidate_croatian_lands = {
+		icon = mission_build_to_force_limit
+		position = 4
+		required_missions = { stable_dynastic_lands }
+		trigger = {
+			if = {
+				AND = { 
+					slavonia_area = {
+					type = all
+					culture = austrian
+					}
+					croatia_area = {
+					type = all
+					culture = austrian
+					}
+				}
+			}
+			effect = {}
+			else_if = {
+				AND = {
+					slavonia_area = {
+						type = all
+						development = 10
+					}
+					croatia_area = {
+						type = all
+						development = 10
+					}
+				}
+			}
+			effect = {}
+		}
+	}
+
 }
