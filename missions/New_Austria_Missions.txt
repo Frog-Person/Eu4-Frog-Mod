@@ -267,8 +267,7 @@ hab_other_minorities_approach = {
                 }	
 			}
 		}
-		effect = {
-		}
+		effect = {}
 		}
 	}
 	all_hussites_follow_the_leader = {
@@ -340,8 +339,32 @@ hab_other_minorities_approach = {
 					}
 				}
 			}
-			effect = {}
+			effect = {
+				bosnia_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
 		}
 	}
+	foothold_in_the_mountains = {
+		icon = mission_build_to_force_limit
+		position = 5
+		required_missions = { consolidate_croatian_lands }
+		trigger = {
+			if ={
+				bosnia_area = {
+					type = all
+					country_or_non_sovereign_subject_holds
+				}
+			}
+		}
+		effect = {}
+	}
+	}
+	the_bulwark_against_ottoman_aggression ={}
+
 
 }
