@@ -1,0 +1,77 @@
+nap_renaissance_centre = {
+	local_development_cost = -0.125
+	local_build_cost = -0.125
+}
+nap_neapolitan_renaissance = {
+	advisor_cost = -0.05
+}
+nap_a_centralised_capital = {
+	local_development_cost = -0.10
+	local_build_cost = -0.25
+}
+nap_a_centralised_nation = {
+	global_autonomy = -0.05
+}
+nap_home_skanderbeg = {
+	local_defensiveness = 0.35
+	supply_limit_modifier = 0.25
+}
+nap_european_doors = {
+	army_tradition_decay = -0.01
+	navy_tradition_decay = -0.01
+	warscore_cost_vs_other_religion = -0.25
+}
+nap_champion_christianity = {
+	diplomatic_reputation = 2
+	improve_relation_modifier = 0.20
+}
+nap_holy_land = {
+	diplomatic_reputation = 1
+	papal_influence = 2
+	yearly_patriarch_authority = 0.002
+}
+nap_controller_spice_trade = {
+	local_tax_modifier = 0.30
+	province_trade_power_modifier = 0.30
+}
+nap_commissioni_marittime = {
+	trade_efficiency = 0.075
+	global_trade_goods_size_modifier = 0.075
+}
+nap_sicilian_ruling = {
+	local_missionary_strength = 0.02
+	local_unrest = -2
+	province_trade_power_modifier = 0.10
+	trade_goods_size_modifier = 0.10
+}
+nap_benedizione_san_nicola = {
+	papal_influence = 1
+	yearly_patriarch_authority = 0.001
+	improve_relation_modifier = 0.20
+}
+nap_dominating_adriatic = {
+	galley_power = 0.15
+}
+nap_lighthouse_otranto = {
+	local_ship_cost = -0.20
+	province_trade_power_modifier = 0.10
+	province_trade_power_value = 5
+}
+nap_le_castella = {
+	local_defensiveness = 0.15
+	ship_recruit_speed = -0.10
+}
+nap_tuscan_ideas = {
+	idea_cost = -0.1
+}
+nap_controller_of_rome = {
+	papal_influence = 1
+	yearly_patriarch_authority = 0.001
+	global_missionary_strength = 0.01
+}
+nap_defeated_milan {
+	ae_impact = -0.30	
+}
+nap_victory_monument {
+	prestige = 0.75
+}
