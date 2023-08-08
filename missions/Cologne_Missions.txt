@@ -14,11 +14,11 @@ German_Dominance = {
 			army_size_percentage = 1
 		}
 		effect = {
-			north_rhein_area = {
-				add_permanent_claim = KOL
+			north_rhine_area = {
+				add_permanent_claim = ROOT
 			}
-			lower_rheinland_area = {
-				add_permanent_claim = KOL
+			lower_rhineland_area = {
+				add_permanent_claim = ROOT
 			}
 		}
 	}
@@ -119,7 +119,7 @@ German_Dominance = {
 		trigger = {
 			1876 = {
 				trade_share = {
-					country = ROOT
+					country = KOL
 					share = 60
 				}
 			}
@@ -392,12 +392,18 @@ German_Dominance = {
 	}
 }
 
-slot_2 = {
+Cologne_second = {
 	slot = 2
 	generic = no
 	ai = yes
 	potential = {
-		always = yes
+		OR = {
+			tag = KOL
+			AND = {
+				tag = GER
+				was_tag = KOL
+			}
+		}
 	}
 
 	Conquer_Westphalia = {
@@ -505,7 +511,7 @@ slot_2 = {
 	}
 }
 
-slot_3 = {
+Cologne_third = {
 	slot = 3
 	generic = no
 	ai = yes
@@ -568,7 +574,7 @@ slot_3 = {
 	}
 }
 
-slot_4 = {
+Cologne_fourth = {
 	slot = 4
 	generic = no
 	ai = yes
@@ -762,7 +768,7 @@ slot_4 = {
 	}
 }
 
-slot_5 = {
+Cologne_fith = {
 	slot = 5
 	generic = no
 	ai = yes
