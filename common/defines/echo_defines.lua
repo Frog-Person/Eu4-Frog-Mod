@@ -82,7 +82,7 @@ NDefines.NCountry.LIBERTY_DESIRE_HISTORICAL_RIVAL = 0
 NDefines.NCountry.NORMAL_ELECTION_CYCLE = 5
 NDefines.NCountry.PROMOTE_INVESTMENTS_TRADEPOWER = 0
 NDefines.NCountry.PROMOTE_INVESTMENTS_INFLATION = 0
-NDefines.NCountry.INNOVATIVENESS_AHEAD_OF_TIME_BONUS = 0.005
+NDefines.NCountry.INNOVATIVENESS_AHEAD_OF_TIME_BONUS = 0.01
 NDefines.NCountry.INNOVATIVENESS_FIRST_REACHED_TECH_LEVEL = 4.0  -- Innovativeness bonus to first country (or countries) to reach a certain tech level.
 NDefines.NCountry.INNOVATIVENESS_FIRST_PICKED_IDEA = 2.0			-- Innovativeness bonus to first country (or countries) to pick an idea.													
 NDefines.NCountry.MAXIMUM_ADVISOR_SKILL = 7							
@@ -140,6 +140,9 @@ NDefines.NMilitary.LIGHT_SHIP_SAILORS_COST = 50					-- 1 = 1 men in cost.
 NDefines.NMilitary.GALLEY_SHIP_SAILORS_COST = 50
 NDefines.NMilitary.GALLEY_TIME = 90							-- _MDEF_GALLEY_TIME = 10,
 NDefines.NMilitary.TRANSPORT_TIME = 30	
+NDefines.NMilitary.INFANTRY_BREAKTHROUGH = 0.05
+NDefines.NMilitary.CAVALRY_BREAKTHROUGH = 0.3
+NDefines.NMilitary.CAVALRY_SPEED = 1.2
 
 NDefines.NAI.BIGSHIP_FRACTION = 0.1
 NDefines.NAI.TRANSPORT_FRACTION = -1 -- Max fraction of naval forcelimit that should be transports
