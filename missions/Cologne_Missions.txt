@@ -1,4 +1,4 @@
-German Dominance = {
+German_Dominance = {
 	slot = 1
 	generic = no
 	ai = yes
@@ -6,7 +6,7 @@ German Dominance = {
 		always = yes
 	}
 
-	Build to forcelimit = {
+	Build_to_forcelimit = {
 		icon = mission_build_up_to_force_limit
 		position = 1
 		required_missions = {  }
@@ -22,10 +22,10 @@ German Dominance = {
 			}
 		}
 	}
-	Conquer Rhineland = {
+	Conquer_Rhineland = {
 		icon = mission_build_up_to_force_limit
 		position = 2
-		required_missions = { Build to forcelimit }
+		required_missions = { Build_to_forcelimit }
 		provinces_to_highlight = {
 			OR = {
 				area = north_rhine_area
@@ -56,10 +56,10 @@ German Dominance = {
 			}
 		}
 	}
-	Conquer Hesse = {
+	Conquer_Hesse = {
 		icon = mission_build_up_to_force_limit
 		position = 3
-		required_missions = { Conquer Rhineland }
+		required_missions = { Conquer_Rhineland }
 		trigger = {
 			hesse_area = {
 				type = all
@@ -90,10 +90,10 @@ German Dominance = {
 			}
 		 }
 	}
-	Finish the conquest of the banks of the rhine upstream = {
+	Finish_the_conquest_of_the_banks_of_the_rhine_upstream = {
 		icon = mission_build_up_to_force_limit
 		position = 4
-		required_missions = { Conquer Hesse }
+		required_missions = { Conquer_Hesse }
 		trigger = {
 			palatinate_area = {
 				type = all
@@ -112,10 +112,10 @@ German Dominance = {
 
 		 }
 	}
-	Rhine trade = {
+	Rhine_trade = {
 		icon = mission_build_up_to_force_limit
 		position = 5
-		required_missions = { Finish the conquest of the banks of the rhine upstream }
+		required_missions = { Finish_the_conquest_of_the_banks_of_the_rhine_upstream }
 		trigger = {
 			1876 = {
 				trade_share = {
@@ -133,10 +133,10 @@ German Dominance = {
 			}
 		 }
 	}
-	Expand the home market = {
+	Expand_the_home_market = {
 		icon = mission_build_up_to_force_limit
 		position = 6
-		required_missions = { Rhine trade The roar of industry }
+		required_missions = { Rhine_trade The_roar_of_industry }
 		trigger = {
 			1876 = {
 				trade_node_value = 50
@@ -187,7 +187,7 @@ German Dominance = {
 			}
 		 }
 	}
-	Army Reform = {
+	Army_Reform = {
 		icon = mission_build_up_to_force_limit
 		position = 7
 		required_missions = {  }
@@ -204,10 +204,10 @@ German Dominance = {
 			}
 		}
 	}
-	German Dominance = {
+	German_Dominance = {
 		icon = mission_build_up_to_force_limit
 		position = 8
-		required_missions = { Army Reform }
+		required_missions = { Army_Reform }
 		trigger = {
 			army_strength = {
 				who = PRU
@@ -229,10 +229,10 @@ German Dominance = {
 		}
 	}
 
-	Unify Germany = {
+	Unify_Germany = {
 		icon = mission_build_up_to_force_limit
 		position = 9
-		required_missions = { German Dominance }
+		required_missions = { German_Dominance }
 		provinces_to_highlight = {
 			OR = {
 				AND = {
@@ -372,10 +372,10 @@ German Dominance = {
 		effect = { }
 	}
 
-	Storm of Steel = {
+	Storm_of_Steel = {
 		icon = mission_build_up_to_force_limit
 		position = 10
-		required_missions = { Unify Germany }
+		required_missions = { Unify_Germany }
 		trigger = {
 			war_score_against = {
 				who = FRA
@@ -392,7 +392,7 @@ German Dominance = {
 	}
 }
 
-slot 2 = {
+slot_2 = {
 	slot = 2
 	generic = no
 	ai = yes
@@ -400,10 +400,10 @@ slot 2 = {
 		always = yes
 	}
 
-	Conquer Westphalia = {
+	Conquer_Westphalia = {
 		icon = mission_build_up_to_force_limit
 		position = 2
-		required_missions = { Build to forcelimit }
+		required_missions = { Build_to_forcelimit }
 		trigger = {
 			south_westphalia_area = {
 				type = all
@@ -424,10 +424,10 @@ slot 2 = {
 			}
 		}
 	}
-	Conquer Braunschweig = {
+	Conquer_Braunschweig = {
 		icon = mission_build_up_to_force_limit
 		position = 4
-		required_missions = { Conquer Westphalia }
+		required_missions = { Conquer_Westphalia }
 		trigger = {
 			owns_all_provinces = {
 				area = braunschweig
@@ -443,10 +443,10 @@ slot 2 = {
 			}
 		}
 	}
-	Control the Weser Estuary = {
+	Control_the_Weser_Estuary = {
 		icon = mission_build_up_to_force_limit
 		position = 5
-		required_missions = { Conquer Braunschweig }
+		required_missions = { Conquer_Braunschweig }
 		trigger = {
 			weser_area = {
 				type = all
@@ -462,7 +462,7 @@ slot 2 = {
 			}
 		}
 	}
-	Imperial Relations = {
+	Imperial_Relations = {
 		icon = mission_build_up_to_force_limit
 		position = 7
 		required_missions = {  }
@@ -484,10 +484,10 @@ slot 2 = {
 			}
 		}
 	}
-	Secured Electorship = {
+	Secured_Electorship = {
 		icon = mission_build_up_to_force_limit
 		position = 8
-		required_missions = { Imperial Relations }
+		required_missions = { Imperial_Relations }
 		trigger = {
 			OR = {
 				hre_religion_locked = yes
@@ -516,7 +516,7 @@ slot_3 = {
 	Control_the_Ems_Estuary = {
 		icon = mission_build_up_to_force_limit
 		position = 3
-		required_missions = { Conquer Westphalia }
+		required_missions = { Conquer_Westphalia }
 		trigger = {
 			1931 = {
 				country_or_non_soverein_subject_holds = ROOT
@@ -531,10 +531,10 @@ slot_3 = {
 			}
 		}
 	}
-	Control the Rhine Estuary = {
+	Control_the_Rhine_Estuary = {
 		icon = mission_build_up_to_force_limit
 		position = 4
-		required_missions = { Control the Ems Estuary }
+		required_missions = { Control_the_Ems_Estuary }
 		trigger = {
 			4383 = {
 				country_or_non_soverein_subject_holds = ROOT
@@ -547,10 +547,10 @@ slot_3 = {
 			}
 		}
 	}
-	Channel Trade = {
+	Channel_Trade = {
 		icon = mission_build_up_to_force_limit
 		position = 5
-		required_missions = { Control the Rhine Estuary }
+		required_missions = { Control_the_Rhine_Estuary }
 		trigger = {
 			1269 = {
 				trade_share = {
@@ -568,7 +568,7 @@ slot_3 = {
 	}
 }
 
-slot 4 = {
+slot_4 = {
 	slot = 4
 	generic = no
 	ai = yes
@@ -576,7 +576,7 @@ slot 4 = {
 		always = yes
 	}
 
-	Develop Köln = {
+	Develop_Köln = {
 		icon = mission_build_up_to_force_limit
 		position = 1
 		required_missions = {  }
@@ -591,10 +591,10 @@ slot 4 = {
 			add_building = cathedral
 		}
 	}
-	Increase the Cathedral to level 2 = {
+	Increase_the_Cathedral_to_level_2 = {
 		icon = mission_build_up_to_force_limit
 		position = 2
-		required_missions = { Develop Köln }
+		required_missions = { Develop_Köln }
 		trigger = {
 			85 = {
 				has_great_project = {
@@ -610,10 +610,10 @@ slot 4 = {
 			}
 		}
 	}
-	Develop the Rhine area = {
+	Develop_the_Rhine_area = {
 		icon = mission_build_up_to_force_limit
 		position = 3
-		required_missions = { Conquer Rhineland Increase the Cathedral to level 2 }
+		required_missions = { Conquer_Rhineland Increase_the_Cathedral_to_level_2 }
 		trigger = {
 			north_rhine_area = {
 				type = all
@@ -638,10 +638,10 @@ slot 4 = {
 			add_years_of_income = 2
 		}
 	}
-	Center of German Industry = {
+	Center_of_German_Industry = {
 		icon = mission_build_up_to_force_limit
 		position = 4
-		required_missions = { Develop the Rhine area }
+		required_missions = { Develop_the_Rhine_area }
 		trigger = {
 			north_rhine_area = {
 				type = all
@@ -680,10 +680,10 @@ slot 4 = {
 			}
 		}
 	}
-	Weser Defensive Line = {
+	Weser_Defensive_Line = {
 		icon = mission_build_up_to_force_limit
 		position = 5
-		required_missions = { Conquer Braunschweig }
+		required_missions = { Conquer_Braunschweig }
 		trigger = {
 			4774 = {
 				country_or_non_soverein_subject_holds = ROOT
@@ -746,10 +746,10 @@ slot 4 = {
 			}
 		}
 	}
-	Win leage war = {
+	Win_leage_war = {
 		icon = mission_build_up_to_force_limit
 		position = 7
-		required_missions = { Religious Question }
+		required_missions = { Religious_Question }
 		trigger = {
 			has_country_flag = religious_league_war_on_winning_side
 		}
@@ -762,7 +762,7 @@ slot 4 = {
 	}
 }
 
-slot 5 = {
+slot_5 = {
 	slot = 5
 	generic = no
 	ai = yes
@@ -770,10 +770,10 @@ slot 5 = {
 		always = yes
 	}
 
-	Develop Westphalia = {
+	Develop_Westphalia = {
 		icon = mission_build_up_to_force_limit
 		position = 3
-		required_missions = { Conquer Westphalia Increase the Cathedral to level 2 }
+		required_missions = { Conquer_Westphalia Increase_the_Cathedral_to_level_2 }
 		trigger = {
 			south_westphalia_area = {
 				type = all
@@ -798,10 +798,10 @@ slot 5 = {
 			add_years_of_income = 2
 		}
 	}
-	Educate the Nation = {
+	Educate_the_Nation = {
 		icon = mission_build_up_to_force_limit
 		position = 4
-		required_missions = { Develop the Rhine area Develop Westphalia }
+		required_missions = { Develop_the_Rhine_area Develop_Westphalia }
 		trigger = {
 			north_rhine_area = {
 				type = all
@@ -827,10 +827,10 @@ slot 5 = {
 			}
 		}
 	}
-	The roar of industry = {
+	The_roar_of_industry = {
 		icon = mission_build_up_to_force_limit
 		position = 5
-		required_missions = { Center of German Industry }
+		required_missions = { Center_of_German_Industry }
 		trigger = {
 			trade_goods_produced_amount = {
 				trade_goods = grain
@@ -860,7 +860,7 @@ slot 5 = {
 			}
 		}
 	}
-	Religious Question = {
+	Religious_Question = {
 		icon = mission_build_up_to_force_limit
 		position = 6
 		required_missions = {  }
@@ -892,7 +892,7 @@ slot 5 = {
 	}
 }
 
-catholic path = {
+catholic_path = {
 	slot = 5
 	generic = no
 	ai = yes
@@ -900,10 +900,10 @@ catholic path = {
 		has_country_flag = kol_cath
 	}
 
-	Staying true to the Pope = {
+	Staying_true_to_the_Pope = {
 		icon = mission_build_up_to_force_limit
 		position = 7
-		required_missions = { Religious Question }
+		required_missions = { Religious_Question }
 		trigger = {
 			reverse_has_opinion = {
 				who = PAP
@@ -915,7 +915,7 @@ catholic path = {
 	}
 }
 
-protestant path = {
+protestant_path = {
 	slot = 5
 	generic = no
 	ai = yes
@@ -923,16 +923,16 @@ protestant path = {
 		has_country_flag = kol_prot
 	}
 
-	Found the new Church = {
+	Found_the_new_Church = {
 		icon = mission_build_up_to_force_limit
 		position = 7
-		required_missions = { Religious Question }
+		required_missions = { Religious_Question }
 		trigger = { }
 		effect = { }
 	}
 }
 
-reformed path = {
+reformed_path = {
 	slot = 5
 	generic = no
 	ai = yes
@@ -940,7 +940,7 @@ reformed path = {
 		has_country_flag = kol_ref
 	}
 
-	The likes of Calvin and Hutter = {
+	The_likes_of_Calvin_and_Hutter = {
 		icon = mission_build_up_to_force_limit
 		position = 7
 		required_missions = {  }
@@ -950,7 +950,7 @@ reformed path = {
 		}
 		effect = { }
 	}
-	How radical of a reformation = {
+	How_radical_of_a_reformation = {
 		icon = mission_build_up_to_force_limit
 		position = 8
 		required_missions = {  }
@@ -967,7 +967,7 @@ reformed path = {
 	}
 }
 
-very radical = {
+very_radical = {
 	slot = 5
 	generic = no
 	ai = yes
@@ -975,7 +975,7 @@ very radical = {
 		has_country_flag = kol_very_radical
 	}
 
-	A truly radical reformation = {
+	A_truly_radical_reformation = {
 		icon = mission_build_up_to_force_limit
 		position = 9
 		required_missions = { How radical of a reformation }
@@ -986,7 +986,7 @@ very radical = {
 	}
 }
 
-not so radical = {
+not_so_radical = {
 	slot = 5
 	generic = no
 	ai = yes
@@ -994,7 +994,7 @@ not so radical = {
 		has_country_flag = kol_not_so_radical
 	}
 
-	Keeping it real = {
+	Keeping_it_real = {
 		icon = mission_build_up_to_force_limit
 		position = 9
 		required_missions = {  }
@@ -1005,7 +1005,7 @@ not so radical = {
 	}
 }
 
-branching 1 = {
+branching_1 = {
 	slot = 5
 	generic = no
 	ai = yes
@@ -1015,10 +1015,10 @@ branching 1 = {
 		NOT = { has_country_flag = kol_ref }	
 		}
 
-	Branching mission = {
+	Branching_mission = {
 		icon = mission_unknown_mission
 		position = 7
-		required_missions = { Religious Question }
+		required_missions = { Religious_Question }
 		trigger = {
 			always = no
 		}
