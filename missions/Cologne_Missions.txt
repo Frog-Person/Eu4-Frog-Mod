@@ -3,7 +3,13 @@ German_Dominance = {
 	generic = no
 	ai = yes
 	potential = {
-		always = yes
+		OR = {
+			tag = KOL
+			AND = {
+				tag = GER
+				was_tag = KOL
+			}
+		}
 	}
 
 	Build_to_forcelimit = {
@@ -516,7 +522,13 @@ Cologne_third = {
 	generic = no
 	ai = yes
 	potential = {
-		always = yes
+		OR = {
+			tag = KOL
+			AND = {
+				tag = GER
+				was_tag = KOL
+			}
+		}
 	}
 
 	Control_the_Ems_Estuary = {
@@ -579,7 +591,13 @@ Cologne_fourth = {
 	generic = no
 	ai = yes
 	potential = {
-		always = yes
+		OR = {
+			tag = KOL
+			AND = {
+				tag = GER
+				was_tag = KOL
+			}
+		}
 	}
 
 	Develop_Köln = {
@@ -773,7 +791,13 @@ Cologne_fith = {
 	generic = no
 	ai = yes
 	potential = {
-		always = yes
+		OR = {
+			tag = KOL
+			AND = {
+				tag = GER
+				was_tag = KOL
+			}
+		}
 	}
 
 	Develop_Westphalia = {
