@@ -213,7 +213,7 @@ german_dominance = {
 			}
 		}
 	}
-	german_dominance = {
+	german_victory = {
 		icon = mission_build_up_to_force_limit
 		position = 8
 		required_missions = { army_reform }
@@ -238,10 +238,10 @@ german_dominance = {
 		}
 	}
 
-	unify_germany = {
+	kol_germany_unified = {
 		icon = mission_build_up_to_force_limit
 		position = 9
-		required_missions = { german_dominance }
+		required_missions = { german_victory }
 		provinces_to_highlight = {
 			OR = {
 				AND = {
@@ -378,7 +378,12 @@ german_dominance = {
 				value = 50
 			}
 		 }
-		effect = { }
+		effect = {
+			add_country_modifier = {
+				name = kol_germany_reward
+				duration = -1
+			}
+		}
 	}
 
 	storm_of_steel = {
