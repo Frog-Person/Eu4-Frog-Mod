@@ -231,7 +231,7 @@ german_dominance = {
 							culture_group = german
 						}
 					}
-					type = cb_nationalism
+					type = cb_nationalist
 					months = -1
 				}
 			}
@@ -241,7 +241,9 @@ german_dominance = {
 	kol_germany_unified = {
 		icon = mission_build_up_to_force_limit
 		position = 9
+
 		required_missions = { german_victory }
+
 		provinces_to_highlight = {
 			OR = {
 				AND = {
@@ -341,6 +343,7 @@ german_dominance = {
 				NOT = { is_core = ROOT }
 			}
 		}
+
 		trigger = {
 			owns_core_province = 50	# Berlin
 			owns_core_province = 57	# Brunswick
@@ -389,7 +392,7 @@ german_dominance = {
 	storm_of_steel = {
 		icon = mission_build_up_to_force_limit
 		position = 10
-		required_missions = { unify_germany }
+		required_missions = { kol_germany_unified }
 		trigger = {
 			war_score_against = {
 				who = FRA
