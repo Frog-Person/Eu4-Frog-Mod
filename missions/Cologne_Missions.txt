@@ -87,7 +87,7 @@ German_Dominance = {
 				}
 				add_permanent_claim = ROOT
 			}
-			baden_area = {
+			upper_rhineland_area = {
 				limit = {
 					NOT = { is_core = ROOT }
 					NOT = { is_permanent_claim = ROOT }
@@ -398,7 +398,7 @@ German_Dominance = {
 	}
 }
 
-Cologne_second = {
+cologne_second = {
 	slot = 2
 	generic = no
 	ai = yes
@@ -417,11 +417,11 @@ Cologne_second = {
 		position = 2
 		required_missions = { Build_to_forcelimit }
 		trigger = {
-			south_westphalia_area = {
+			westphalia_area = {
 				type = all
 				country_or_non_soverein_subject_holds = ROOT
 			}
-			north_westphalia = {
+			north_westphalia_area = {
 				type = all
 				country_or_non_soverein_subject_holds = ROOT
 			}
