@@ -778,7 +778,7 @@ cologne_fourth = {
 				}
 				if = {
 					limit = {
-						4774 = { has_building = ramparts }
+						KOL = { has_idea_group = defensive_ideas }
 					}
 					add_province_modifier = {
 						name = festung_staat_rheinland
@@ -793,7 +793,7 @@ cologne_fourth = {
 				}
 				if = {
 					limit = {
-						2972 = { has_building = ramparts }
+						ROOT = { has_idea_group = defensive_ideas }
 					}
 					add_province_modifier = {
 						name = festung_staat_rheinland
@@ -808,7 +808,7 @@ cologne_fourth = {
 				}
 				if = {
 					limit = {
-						2971 = { has_building = ramparts }
+						ROOT = { has_idea_group = defensive_ideas }
 					}
 					add_province_modifier = {
 						name = festung_staat_rheinland
