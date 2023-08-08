@@ -32,25 +32,28 @@ german_dominance = {
 		icon = mission_build_up_to_force_limit
 		position = 2
 		required_missions = { build_to_forcelimit }
+
 		provinces_to_highlight = {
 			OR = {
 				area = north_rhine_area
 				area = lower_rhineland_area
 			}
 			NOT = {
-				country_or_non_soverein_subject_holds = ROOT
+				country_or_non_sovereign_subject_holds = ROOT
 			}
 		}
+
 		trigger = {
 			north_rhine_area = {
 				type = all
-				country_or_non_soverein_subject_holds = ROOT
+				country_or_non_sovereign_subject_holds = ROOT
 			}
 			lower_rhineland_area = {
 				type = all
-				country_or_non_soverein_subject_holds = ROOT
+				country_or_non_sovereign_subject_holds = ROOT
 			}
 		}
+		
 		effect = {
 			add_prestige = 10
 			hesse_area = {
@@ -69,7 +72,7 @@ german_dominance = {
 		trigger = {
 			hesse_area = {
 				type = all
-				country_or_non_soverein_subject_holds = ROOT
+				country_or_non_sovereign_subject_holds = ROOT
 			}
 		 }
 		effect = {
@@ -103,15 +106,15 @@ german_dominance = {
 		trigger = {
 			palatinate_area = {
 				type = all
-				country_or_non_soverein_subject_holds = ROOT
+				country_or_non_sovereign_subject_holds = ROOT
 			}
 			alsace_area = {
 				type = all
-				country_or_non_soverein_subject_holds = ROOT
+				country_or_non_sovereign_subject_holds = ROOT
 			}
-			baden_area = {
+			upper_rhineland_area = {
 				type = all
-				country_or_non_soverein_subject_holds = ROOT
+				country_or_non_sovereign_subject_holds = ROOT
 			}
 		 }
 		effect = {
@@ -167,7 +170,7 @@ german_dominance = {
 					duration = -1
 				}
 			}
-			baden_area = {
+			upper_rhineland_area = {
 				add_permanent_province_modifier = {
 					name = rhine_trade_encuraged
 					duration = -1
@@ -419,11 +422,11 @@ cologne_second = {
 		trigger = {
 			westphalia_area = {
 				type = all
-				country_or_non_soverein_subject_holds = ROOT
+				country_or_non_sovereign_subject_holds = ROOT
 			}
 			north_westphalia_area = {
 				type = all
-				country_or_non_soverein_subject_holds = ROOT
+				country_or_non_sovereign_subject_holds = ROOT
 			}
 		}
 		effect = {
@@ -439,7 +442,7 @@ cologne_second = {
 	conquer_braunschweig = {
 		icon = mission_build_up_to_force_limit
 		position = 4
-		required_missions = { Conquer_Westphalia }
+		required_missions = { conquer_westphalia }
 		trigger = {
 			owns_all_provinces = {
 				area = braunschweig
@@ -455,14 +458,14 @@ cologne_second = {
 			}
 		}
 	}
-	Control_the_Weser_Estuary = {
+	control_the_weser_estuary = {
 		icon = mission_build_up_to_force_limit
 		position = 5
-		required_missions = { Conquer_Braunschweig }
+		required_missions = { conquer_braunschweig }
 		trigger = {
 			weser_area = {
 				type = all
-				country_or_non_soverein_subject_holds = ROOT
+				country_or_non_sovereign_subject_holds = ROOT
 			}
 		}
 		effect = {
@@ -474,7 +477,7 @@ cologne_second = {
 			}
 		}
 	}
-	Imperial_Relations = {
+	imperial_relations = {
 		icon = mission_build_up_to_force_limit
 		position = 7
 		required_missions = {  }
@@ -496,10 +499,10 @@ cologne_second = {
 			}
 		}
 	}
-	Secured_Electorship = {
+	secured_electorship = {
 		icon = mission_build_up_to_force_limit
 		position = 8
-		required_missions = { Imperial_Relations }
+		required_missions = { imperial_relations }
 		trigger = {
 			OR = {
 				hre_religion_locked = yes
@@ -537,7 +540,7 @@ cologne_third = {
 		required_missions = { conquer_westphalia }
 		trigger = {
 			1931 = {
-				country_or_non_soverein_subject_holds = ROOT
+				country_or_non_sovereign_subject_holds = ROOT
 			}
 		}
 		effect = {
@@ -555,16 +558,19 @@ cologne_third = {
 		required_missions = { control_the_ems_estuary }
 		trigger = {
 			4383 = {
-				country_or_non_soverein_subject_holds = ROOT
+				country_or_non_sovereign_subject_holds = ROOT
 			}
 		}
 		effect = {
-			add_permanent_province_modifier = {
-				name = main_port_to_germany
-				duration = -1
+			4383 = {
+				add_permanent_province_modifier = {
+					name = main_port_to_germany
+					duration = -1
+				}
 			}
 		}
 	}
+
 	channel_trade = {
 		icon = mission_build_up_to_force_limit
 		position = 5
@@ -611,8 +617,10 @@ cologne_fourth = {
 			}
 		}
 		effect = {
-			remove_building = temple
-			add_building = cathedral
+			85 = {
+				remove_building = temple
+				add_building = cathedral
+			}
 		}
 	}
 	increase_the_cathedral_to_level_2 = {
@@ -710,15 +718,15 @@ cologne_fourth = {
 		required_missions = { conquer_braunschweig }
 		trigger = {
 			4774 = {
-				country_or_non_soverein_subject_holds = ROOT
+				country_or_non_sovereign_subject_holds = ROOT
 				fort_level = 2
 			}
 			2972 = {
-				country_or_non_soverein_subject_holds = ROOT
+				country_or_non_sovereign_subject_holds = ROOT
 				fort_level = 2
 			}
 			2971 = {
-				country_or_non_soverein_subject_holds = ROOT
+				country_or_non_sovereign_subject_holds = ROOT
 				fort_level = 2
 			}
 		}
@@ -805,7 +813,7 @@ cologne_fith = {
 		position = 3
 		required_missions = { conquer_westphalia increase_the_cathedral_to_level_2 }
 		trigger = {
-			south_westphalia_area = {
+			westphalia_area = {
 				type = all
 				base_production = 8
 				has_building = workshop
@@ -817,7 +825,7 @@ cologne_fith = {
 			}
 		}
 		effect = {
-			south_westphalia_area = {
+			westphalia_area = {
 				remove_building = workshop
 				add_building = counting_house
 			}
@@ -841,7 +849,7 @@ cologne_fith = {
 				type = all
 				has_building = university
 			}
-			south_westphalia_area = {
+			westphalia_area = {
 				type = all
 				has_building = university
 			}
