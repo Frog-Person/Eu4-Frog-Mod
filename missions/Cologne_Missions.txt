@@ -231,9 +231,9 @@ german_dominance = {
 							culture_group = german
 						}
 					}
-					type = cb_nationalist
-					months = -1
 				}
+				type = cb_nationalist
+				months = -1
 			}
 		}
 	}
@@ -392,7 +392,9 @@ german_dominance = {
 	storm_of_steel = {
 		icon = mission_build_up_to_force_limit
 		position = 10
+
 		required_missions = { kol_germany_unified }
+		
 		trigger = {
 			war_score_against = {
 				who = FRA
