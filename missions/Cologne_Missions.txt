@@ -118,8 +118,25 @@ german_dominance = {
 			}
 		 }
 		effect = {
-
-		 }
+			palatinate_area = {
+				add_province_modifier = {
+					name = kol_rhine_no_tolls
+					duration = -1
+				}
+			}
+			alsace_area = {
+				add_province_modifier = {
+					name = kol_rhine_no_tolls
+					duration = -1
+				}
+			}
+			upper_rhineland_area = {
+				add_province_modifier = {
+					name = kol_rhine_no_tolls
+					duration = -1
+				}
+			}
+		}
 	}
 	rhine_trade = {
 		icon = mission_build_up_to_force_limit
