@@ -12,7 +12,7 @@ german_dominance = {
 		}
 	}
 
-	build_to_forcelimit = {
+	kol_build_to_forcelimit = {
 		icon = mission_build_up_to_force_limit
 		position = 1
 		required_missions = {  }
@@ -31,7 +31,7 @@ german_dominance = {
 	conquer_rhineland = {
 		icon = mission_build_up_to_force_limit
 		position = 2
-		required_missions = { build_to_forcelimit }
+		required_missions = { kol_build_to_forcelimit }
 
 		provinces_to_highlight = {
 			OR = {
@@ -225,19 +225,32 @@ german_dominance = {
 		}
 		effect = {
 			add_casus_belli = {
-				target = {
-					every_country = {
-						limit = {
-							culture_group = german
-						}
-					}
-				}
+				target = PRU
+				type = cb_nationalist
+				months = -1
+			}
+			add_casus_belli = {
+				target = FRA
+				type = cb_nationalist
+				months = -1
+			}
+			add_casus_belli = {
+				target = HAB
+				type = cb_nationalist
+				months = -1
+			}
+			add_casus_belli = {
+				target = POL
+				type = cb_nationalist
+				months = -1
+			}
+			add_casus_belli = {
+				target = PLC
 				type = cb_nationalist
 				months = -1
 			}
 		}
 	}
-
 	kol_germany_unified = {
 		icon = mission_build_up_to_force_limit
 		position = 9
@@ -407,7 +420,7 @@ german_dominance = {
 				name = storm_of_steel
 				duration = 1825
 			}
-		 }
+		}
 	}
 }
 
@@ -428,7 +441,7 @@ cologne_second = {
 	conquer_westphalia = {
 		icon = mission_build_up_to_force_limit
 		position = 2
-		required_missions = { build_to_forcelimit }
+		required_missions = { kol_build_to_forcelimit }
 		trigger = {
 			westphalia_area = {
 				type = all
