@@ -78,5 +78,5 @@ inland_trade_encuraged = {
 }
 
 kol_rhine_no_tolls = {
-	local_development_cost = -0.01
+	local_development_cost = -0.05
 }
