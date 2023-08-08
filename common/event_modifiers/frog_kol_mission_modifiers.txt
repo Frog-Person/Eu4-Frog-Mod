@@ -71,7 +71,7 @@ kol_germany_reward = {
 	army_tradition_from_battle = 0.4
 }
 
-inland_trade_encouraged = {
+inland_trade_encuraged = {
 	province_trade_power_value = 5
 	allowed_num_of_manufactories = 1
 	allowed_num_of_buildings = 2

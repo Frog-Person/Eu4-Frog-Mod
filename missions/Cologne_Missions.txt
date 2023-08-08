@@ -468,7 +468,7 @@ cologne_second = {
 		required_missions = { conquer_westphalia }
 		trigger = {
 			owns_all_provinces = {
-				area = braunschweig
+				area = braunschweig_area
 			}
 		}
 		effect = {
@@ -700,15 +700,15 @@ cologne_fourth = {
 		trigger = {
 			north_rhine_area = {
 				type = all
-				has_building = manufactory
+				has_manufactory_trigger = yes
 			}
 			lower_rhineland_area = {
 				type = all
-				has_building = manufactory
+				has_manufactory_trigger = yes
 			}
 			palatinate_area = {
 				type = all
-				has_building = manufactory
+				has_manufactory_trigger = yes
 			}
 		}
 		effect = {
