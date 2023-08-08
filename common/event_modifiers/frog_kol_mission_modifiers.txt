@@ -70,3 +70,9 @@ kol_germany_reward = {
 	warscore_from_battles_modifier = 0.4
 	army_tradition_from_battle = 0.4
 }
+
+inland_trade_encouraged = {
+	province_trade_power_value = 5
+	allowed_num_of_manufactories = 1
+	allowed_num_of_buildings = 2
+}

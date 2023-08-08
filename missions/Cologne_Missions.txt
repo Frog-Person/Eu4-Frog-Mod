@@ -731,7 +731,7 @@ cologne_fourth = {
 				}
 			}
 			1760 = {
-				change_trade_good = iron
+				change_trade_goods = iron
 			}
 		}
 	}
@@ -972,7 +972,7 @@ catholic_path = {
 			}
 			papal_influence = 100	
 		}
-		effect = {A}
+		effect = { }
 	}
 }
 
@@ -1074,6 +1074,7 @@ branching_1 = {
 		NOT = { has_country_flag = kol_cath }
 		NOT = { has_country_flag = kol_prot }	
 		NOT = { has_country_flag = kol_ref }	
+		tag = KOL
 		}
 
 	branching_mission = {
