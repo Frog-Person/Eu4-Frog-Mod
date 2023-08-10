@@ -1,0 +1,11 @@
+country_decision = {
+    form_austrian_empire_decision = {
+
+    }
+    form_transdanubian_confederation_decision = {
+
+    }
+    form_austria_hungary ={
+        
+    }
+}

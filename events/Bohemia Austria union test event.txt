@@ -1,4 +1,4 @@
-#Test Bohemia Union With Austria
+Austrian_Bohemian_Union
 country_event = {
 	id = flavor_boh.14
 	title = flavor_boh.14.t
