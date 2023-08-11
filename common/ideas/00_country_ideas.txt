@@ -853,7 +853,7 @@ CAS_ideas = {
 
 FRA_ideas = {
 	start = {
-		diplomatic_reputation = 1
+		improve_relation_modifier = 0.2
 		global_manpower_modifier = 0.2
 	}
 	
@@ -884,8 +884,7 @@ FRA_ideas = {
 		global_unrest = -1 
 	}
 	native_trading_principles = {
-		native_uprising_chance = -0.5
-		native_assimilation = 0.5
+		production_efficiency = 0.10
 	}
 	divine_right_to_rule = {
 		core_creation = -0.1
@@ -16037,7 +16036,7 @@ CLI_ideas = {
 
 WES_ideas = {
 	start = {
-		diplomats = 1
+		infantry_power = 0.1
 		land_forcelimit_modifier = 0.2
 	}
 	bonus = {
