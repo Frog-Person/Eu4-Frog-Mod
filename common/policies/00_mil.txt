@@ -302,7 +302,7 @@ modern_firearm_techniques = {
 		full_idea_group = quality_ideas
 	}
 	
-	infantry_power = 0.15
+	mil_tech_cost_modifier = -0.1
 
 	effect = {}
 	removed_effect = {}
