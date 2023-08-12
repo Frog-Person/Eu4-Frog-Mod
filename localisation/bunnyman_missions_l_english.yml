@@ -450,7 +450,9 @@
  MOR_el_badi_desc: "El Badi' Palace, translating to 'Palace of Wonder', is an estate commissioned by one of the Sa'adi sultans of Morocco. Despite its splendor, it fell into disrepair and neglect following its founder and patron's death."
  mor_defeat_the_infidels_title: "Defeat the Infidels"
  mor_defeat_the_infidels_desc: "We must put an end to the oppression coming from the North. Let us take their capitals, forcing them to run to the North like cowards"
-
+ mor_ceuta_fort_title: "Defence of Ceuta"
+ mor_ceuta_fort_desc: "We will defend Ceuta to our last man"
+ 
  #Morocoo Unique Events/Modifiers
  mor_imperial_city: "Imperial City"
  mor_go_to_brazil: "GO TO BRAZIL"
@@ -465,7 +467,7 @@
  MOR_zayyanids_subjugated: "Zayyanids Subjugated"
  mor_iberia_united: "Islam rules Iberia"
  mor_leading_africa: "Leader of Africa"
- 
+ defend_ceuta: "Defend until the last man"
  
  #Morocco Events
  ME_Morocco_Events.1.t: "Status of Ceuta"
@@ -593,7 +595,7 @@
  persia_fire_temple_desc: "The Great Temple of Baku Ateshgah. Home to a sacred fire set to flame by the Sassanian Dynasty all those ages ago. Renovating and restoring such a temple would surely turn the world's gaze upon Persia, and ensure our status as a great empire."
  persia_king_sun_title: "King of the Sun"
  persia_king_sun_desc: "Like the light of the Sun itself, the glory of Persia shines as a beacon to the rest of the world for what an Empire can be, and what an Emperor should be. Let us be that light, and like the sun, let our Emperor light the way out of the darkness for the whole of the earth."
-
+ 
  #Persia Events
  ME_Persia_Events.19.T: "Capital for the Padishah"
  ME_Persia_Events.19.D: "With the restoration of the Persian state, we must decide on a capital for our grand empire. There are many places we could claim, ancient Parsa, the spiritual home of our ancestors, or even Isfahan, the population center of our empire. What ever the choice is, only good things will follow."
@@ -715,3 +717,10 @@
  gme_golestan_palace_desc: "§g§!"
  fez_market: "Grand Fez Bazaar"
  fez_market_desc: "Grand Fez Bazaar"
+ fu_red_fort: "Lal Qila"
+ zhengyangmen: "Zhengyangmen"
+ champaner: "Champaner City"
+ fort_williams: "Fort William"
+ motijheel: "Motijheel Palace"
+ nalanda_university: "Nalanda University"
+ kaiserbagh: "Kaiser Bagh"

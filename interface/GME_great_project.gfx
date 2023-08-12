@@ -115,4 +115,32 @@ spriteTypes = {
 		name = "GFX_great_project_fez_market"
 		texturefile = "gfx//interface//great_projects//great_project_fez_market.dds"
 	}
+	spriteType = {
+		name = "GFX_great_project_fu_red_fort"
+		texturefile = "gfx//interface//great_projects//great_project_fu_red_fort.dds"
+	}
+	spriteType = {
+		name = "GFX_great_project_zhengyangmen"
+		texturefile = "gfx//interface//great_projects//great_project_zhengyangmen.dds"
+	}
+	spriteType = {
+		name = "GFX_great_project_kaiserbagh"	
+		texturefile = "gfx//interface//great_projects//great_project_kaiserbagh.dds"
+	}
+	spriteType = {
+		name = "GFX_great_project_nalanda_university"	
+		texturefile = "gfx//interface//great_projects//great_project_nalanda_university.dds"
+	}
+	spriteType = {
+		name = "GFX_great_project_motijheel"	
+		texturefile = "gfx//interface//great_projects//great_project_motijheel.dds"
+	}
+	spriteType = {
+		name = "GFX_great_project_fort_williams"	
+		texturefile = "gfx//interface//great_projects//great_project_fort_williams.dds"
+	}
+	spriteType = {
+		name = "GFX_great_project_champaner"	
+		texturefile = "gfx//interface//great_projects//great_project_champaner.dds"
+	}
 }
