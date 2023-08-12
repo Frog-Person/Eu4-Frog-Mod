@@ -3669,12 +3669,11 @@ french_rev_missions_3 = {
 			OR = { 
 				is_hegemon_of_type = economic_hegemon 
 				full_idea_group = economic_ideas 
-				monthly_income = 500 
+				monthly_income = 700 
 			}
 			NOT = { inflation = 0.1 } 
 			NOT = { corruption = 0.1 } 
 			NOT = { num_of_loans = 1 } 
-			has_idea = mandats_territoriaux
 		}
 		effect = {
 			add_country_modifier = { 
@@ -4701,7 +4700,7 @@ french_missions_4_normal_contiuation = {
 				value = 12
 			}
 			OR = { 
-				full_idea_group = trade_ideas 
+				full_idea_group = economic_ideas 
 				ruler_has_personality = entrepreneur_personality 
 				home_trade_node = { highest_value_trade_node = yes } 
 				if = { 
@@ -4748,7 +4747,7 @@ french_missions_4_normal_contiuation = {
 			}
 			else = { mercantilism = 35 } 
 			OR = { 
-				full_idea_group = trade_ideas 
+				full_idea_group = economic_ideas 
 				home_trade_node = {
 					trade_share = {
 						country = ROOT 
@@ -4959,7 +4958,7 @@ french_rev_missions_4 = {
 					innovativeness = 90 
 				}
 				full_idea_group = innovativeness_ideas 
-				AND = { 
+				OR = { 
 					ruler_has_personality = scholar_personality 
 					monthly_adm = 14 
 				}
