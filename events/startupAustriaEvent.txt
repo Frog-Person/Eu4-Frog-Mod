@@ -5,10 +5,11 @@ country_event = {
     picture = HRE_eventPicture
 
     fire_only_once = yes
-
+    major = yes
+    
     trigger = {
         tag = HAB
-        on_startup
+        is_year = 1444
     }
     option = {
         name = "Deciding our future"
