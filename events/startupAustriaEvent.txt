@@ -14,7 +14,7 @@ country_event = {
         name = "Deciding our future"
         set_variable = {
             which = Richtung
-            value = 0
+            value = 6
         }
     }
 }

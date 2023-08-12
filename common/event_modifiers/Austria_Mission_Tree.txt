@@ -1,0 +1,43 @@
+# Austria
+acceptance_path1 = {
+    num_accepted_cultures = 1
+    manpower_in_accepted_culture_provinces = 0.04
+}
+acceptance_path2 = {
+    num_accepted_cultures = 2
+    manpower_in_accepted_culture_provinces = 0.08
+}
+acceptance_path3 = {
+    num_accepted_cultures = 3
+    manpower_in_accepted_culture_provinces = 0.12
+}
+acceptance_path4 = {
+    num_accepted_cultures = 4
+    manpower_in_accepted_culture_provinces = 0.16
+}
+acceptance_path5 = {
+    num_accepted_cultures = 5
+    manpower_in_accepted_culture_provinces = 0.20
+}
+acceptance_path6 = {
+    num_accepted_cultures = 6
+    manpower_in_accepted_culture_provinces = 0.24
+}
+austrian_path1 = {
+    development_cost_in_primary_culture = -0.01
+}
+austrian_path2 = {
+    development_cost_in_primary_culture = -0.02
+}
+austrian_path3 = {
+    development_cost_in_primary_culture = -0.03
+}
+austrian_path4 = {
+    development_cost_in_primary_culture = -0.04
+}
+austrian_path5 = {
+    development_cost_in_primary_culture = -0.05
+}
+austrian_path6 = {
+    development_cost_in_primary_culture = -0.06
+}

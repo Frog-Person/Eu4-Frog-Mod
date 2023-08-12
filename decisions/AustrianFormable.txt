@@ -1,11 +1,34 @@
 country_decision = {
-    form_austrian_empire_decision = {
-
-    }
-    form_transdanubian_confederation_decision = {
-
-    }
-    form_austria_hungary ={
-        
+    Austrian_Nation = {
+        tag = HAB
+        allow = {
+            if = (Richtung < 3) {
+                has_country_flag = aus_acceptance_set
+            }
+            effect = {
+                change_tag = HAE
+                set_government_rank = 3
+                add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+                }
+            }
+            else_if = {
+                has_country_flag = aus_acceptance_set
+                3 <= Richtung <= 9
+            }
+            effect = {
+                change_tag = AHE
+                set_government_rank = 3
+                add_country_modifier = {
+                    name = "centralization_modifier"
+                    duration = 7300
+                }
+            }
+            else_if = {
+                has_country_flag = aus_acceptance_set
+                Richtung > 9
+            }
+        }
     }
 }
