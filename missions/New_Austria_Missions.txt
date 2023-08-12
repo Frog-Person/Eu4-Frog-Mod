@@ -88,7 +88,6 @@ hab_cultural_ambitions = {
 				}
 			}
 		}
-		
 		provinces_to_highlight = {
 			OR = {
 				area = slovakia_area
@@ -193,7 +192,8 @@ hab_cultural_ambitions = {
                 }
                 effect = {
                 }
-                else_if = {
+			}
+            else_if = {
                    AND = {
                      AND = {
                        HUN = { is_subject_of = HAB}
@@ -208,13 +208,12 @@ hab_cultural_ambitions = {
                        BOH = { has_opinion = {
                                who = HAB
                                value = 150
-                       }
-                       }
-                     }
-                   }
+                       		}
                         }
-                effect = {   
+                    }
                 }
+			}
+            effect = {   
             }
         }
     }
@@ -415,6 +414,7 @@ hab_cultural_ambitions = {
 					change_variable = Richtung
 					value = -1
 				}
+		    }
 		}
 	}
 	croatian_conundrum = {
@@ -741,7 +741,6 @@ hab_cultural_ambitions = {
 				set_country_flag = aus_acceptance_set
 			}
 		}
-	}
 	}
 }
 hab_other_minorities_approach = {
