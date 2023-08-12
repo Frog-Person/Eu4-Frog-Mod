@@ -3669,7 +3669,7 @@ french_rev_missions_3 = {
 			OR = { 
 				is_hegemon_of_type = economic_hegemon 
 				full_idea_group = economic_ideas 
-				monthly_income = 700 
+				monthly_income = 1000 
 			}
 			NOT = { inflation = 0.1 } 
 			NOT = { corruption = 0.1 } 
