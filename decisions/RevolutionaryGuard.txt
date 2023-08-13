@@ -47,6 +47,10 @@ country_decisions = {
 				name = "professional_revolutionary_guard_modifier"
 				duration = -1
 			}
+			add_country_modifier = {
+				name = "professional_revolutionary_guard_modifier_country"
+				duration = -1
+			}
 		}
 		ai_will_do = {
 			factor = 0
@@ -97,6 +101,10 @@ country_decisions = {
 		effect = {
 			add_country_modifier = {
 				name = "vanguard_revolutionary_guard_modifier"
+				duration = -1
+			}
+			add_country_modifier = {
+				name = "vanguard_revolutionary_guard_modifier_country"
 				duration = -1
 			}
 		}
