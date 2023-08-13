@@ -640,10 +640,10 @@ hab_cultural_ambitions = {
 					}
 				}
 				remove_country_modifier = austrian_path1
-					add_country_modifier - {
-						name = austria_path2
-						duration = -1
-					}
+				add_country_modifier = {
+					name = austria_path2
+					duration = -1
+				}
 			}
 			else = {
 			remove_country_modifier = austrian_path2
@@ -1283,7 +1283,7 @@ hab_cultural_ambitions = {
 					name = acceptance_path6
 					duration = -1
 				}
-				add_country_flag = transdanubia_formable
+				set_country_flag = transdanubia_formable
 			}
 			else_if = {
 				limit = {
@@ -1464,6 +1464,7 @@ hab_cultural_ambitions = {
 			}
 		}
 	}
+
 hab_other_minorities_approach = {
     slot = 2
 	generic = no
@@ -1541,34 +1542,22 @@ hab_other_minorities_approach = {
 			}
 		}
 	}
+}
+
+balkan_push_and_aemp_expansion = {
 	consolidate_croatian_lands = {
 		icon = mission_build_to_force_limit
 		position = 4
 		required_missions = { stable_dynastic_lands }
 		trigger = {
 			if = {
-				AND = { 
-					slavonia_area = {
+				slavonia_area = {
 					type = all
-					culture = austrian
-					}
-					croatia_area = {
-					type = all
-					culture = austrian
-					}
+					development = 10
 				}
-			}
-			effect = {}
-			else_if = {
-				AND = {
-					slavonia_area = {
-						type = all
-						development = 10
-					}
-					croatia_area = {
-						type = all
-						development = 10
-					}
+				croatia_area = {
+					type = all
+					development = 10
 				}
 			}
 			effect = {
@@ -1578,9 +1567,10 @@ hab_other_minorities_approach = {
 					NOT = { is_permanent_claim = ROOT }
 				}
 				add_permanent_claim = ROOT
-			}
+				}
+			}	
 		}
-	}
+	}	
 	foothold_in_the_mountains = {
 		icon = mission_build_to_force_limit
 		position = 5
@@ -1589,14 +1579,10 @@ hab_other_minorities_approach = {
 			if ={
 				bosnia_area = {
 					type = all
-					country_or_non_sovereign_subject_holds
+					country_or_non_sovereign_subject_holds = yes
 				}
 			}
 		}
 		effect = {}
 	}
-	}
-	the_bulwark_against_ottoman_aggression ={}
-
-
 }
