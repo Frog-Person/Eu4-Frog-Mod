@@ -641,7 +641,7 @@ hab_cultural_ambitions = {
 				}
 				remove_country_modifier = austrian_path1
 					add_country_modifier - {
-						name_austria_path2
+						name = austria_path2
 						duration = -1
 					}
 			}
@@ -1017,7 +1017,7 @@ hab_cultural_ambitions = {
 						num_of_times_improved = 5
 					}
 				}	
-				remove_country_modifir = acceptance_path3
+				remove_country_modifier = acceptance_path3
 				add_country_modifier {						
 					name = acceptance_path4
 					duration = -1
@@ -1115,7 +1115,10 @@ hab_cultural_ambitions = {
 						}
 					}
 				}
-				add_country_modifier = austrian_path1
+				add_country_modifier = {
+					name = austrian_path1
+					duration = -1
+				}
 			}
 			else_if = {
 				limit = {
