@@ -4960,7 +4960,7 @@ french_rev_missions_4 = {
 				full_idea_group = innovativeness_ideas 
 				OR = { 
 					ruler_has_personality = scholar_personality 
-					monthly_adm = 14 
+					monthly_adm = 16 
 				}
 			}
 		}

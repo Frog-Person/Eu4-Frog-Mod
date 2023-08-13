@@ -15042,7 +15042,7 @@ SYN_ideas = {
 MOR_ideas = {
 	start = {
 		galley_power = 0.2
-		land_morale = 0.1
+		hostile_attrition = 1
 	}
 	bonus = {
 		naval_forcelimit_modifier = 0.25
@@ -16830,7 +16830,7 @@ LFA_ideas = {
 		global_trade_goods_size_modifier = 0.1
 	}
 	lfa_state_expansion = {
-		expand_administration_cost = -0.3
+		expand_administration_cost = -0.05
 		development_cost = -0.1
 	}
 }
