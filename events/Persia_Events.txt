@@ -1,0 +1,148 @@
+namespace = Persia_events
+
+country_event = {
+	id = ME_Persia_Events.19
+	title = ME_Persia_Events.19.T
+	desc = ME_Persia_Events.19.D
+	picture = GOOD_WITH_MONARCH_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = ME_Persia_Events.19.OPT1
+
+		ai_chance = { factor = 33 }
+
+		capital_scope = {
+			add_base_tax = 2
+			add_base_manpower = 2
+			add_base_production = 2
+		}
+	}
+
+	option = {
+		name = ME_Persia_Events.19.OPT2
+
+		ai_chance = { factor = 33 }
+
+		set_capital = 428
+		428 = {
+			if = {
+				limit = {
+					has_dlc = "Leviathan"
+				}
+			}
+			add_base_tax = 2
+			add_base_manpower = 2
+			add_base_production = 2
+		}
+	}
+
+	option = {
+		name = ME_Persia_Events.19.OPT3
+		trigger = {
+			owns = 424
+			controls = 424
+		}
+
+		ai_chance = { factor = 33 }
+
+		set_capital = 424
+		424 = {
+			if = {
+				limit = {
+					has_dlc = "Leviathan"
+				}
+			}
+			add_base_tax = 2
+			add_base_manpower = 2
+			add_base_production = 2
+		}
+	}
+
+	option = {
+		name = ME_Persia_Events.19.OPT4
+
+		ai_chance = { factor = 33 }
+
+		set_capital = 429
+		429 = {
+			if = {
+				limit = {
+					has_dlc = "Leviathan"
+				}
+				if = {
+					limit = {
+						has_great_project = {
+							type = maidan-e_naqsh-e_jahan
+						}
+						NOT = {
+							has_great_project = {
+								type = maidan-e_naqsh-e_jahan
+								tier = 3
+							}
+						}
+					}
+					add_great_project_tier = {
+						type = maidan-e_naqsh-e_jahan
+						tier = 1
+					}
+				}
+			}
+			else = {
+				add_base_tax = 2
+				add_base_manpower = 2
+				add_base_production = 2
+			}
+		}
+	}
+	
+	
+}
+
+country_event = {
+	id = PER_choose_religion
+	title = PER_choose_religion.T
+	desc = PER_choose_religion.D
+	picture = GOOD_WITH_MONARCH_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = PER_choose_religion.OPT1
+
+		ai_chance = { factor = 90 }
+
+		change_religion = shiite
+		add_stability = 2
+		add_country_modifier = {
+			name = PER_shia_cavalary
+			duration = -1
+		}
+	}
+	
+	option = {
+		name = PER_choose_religion.OPT2
+
+		ai_chance = { factor = 5 }
+
+		change_religion = sunni
+		add_prestige = 30
+		add_country_modifier = {
+			name = PER_sunni_scholars
+			duration = -1
+		}
+	}	
+	option = {
+		name = PER_choose_religion.OPT3
+
+		ai_chance = { factor = 5 }
+
+		change_religion = zoroastrian
+		add_stability = -2
+		add_country_modifier = {
+			name = PER_zoroastrian_immortals
+			duration = -1
+		}
+	}	
+}

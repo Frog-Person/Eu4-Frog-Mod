@@ -7680,7 +7680,7 @@ pol_facing_the_catholics_modifier = {
 	tolerance_own = 2 
 }
 pol_reformed_education_system_modifier = {
-	expand_administration_cost = -0.5
+	expand_administration_cost = -0.1
 	advisor_cost = -0.15 
 }
 pol_incentives_modifier = {
@@ -9493,7 +9493,7 @@ fra_stable_currency_modifier = {
 }
 
 fra_code_napoleon_modifier = {
-	expand_administration_cost = -1 
+	expand_administration_cost = -0.2 
 	expand_infrastructure_cost_modifier = -0.25
 	max_revolutionary_zeal = 5 
 }
@@ -9511,7 +9511,7 @@ fra_studying_dutch_naval_conduct_modifier = {
 }
 
 fra_funded_reforms_of_condorcet_modifier = { 
-	technology_cost = -0.1
+	technology_cost = -0.05
 	country_admin_power = 1 
 }
 

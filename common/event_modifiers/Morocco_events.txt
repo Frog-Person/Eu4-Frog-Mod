@@ -1,0 +1,70 @@
+MOR_zayyanids_subjugated = {
+	global_autonomy = -0.2
+	land_morale = 0.10
+}
+MOR_supremacy_over_maghreb = {
+	tolerance_own = 1
+	land_forcelimit_modifier = 0.05
+}
+MOR_mosque_of_al_qarawiyyin = {
+	tax_income = 24
+	advisor_pool = 1
+}
+MOR_fez_growing_city = {
+	local_tax_modifier = 0.35
+	local_prosperity_growth = 1
+	trade_goods_size_modifier = 0.25
+}
+MOR_el_badi_palace = {
+	legitimacy = 0.5
+	monthly_splendor = 1
+}
+MOR_marrakesh_growing = {
+	local_tax_modifier = 0.35
+	local_prosperity_growth = 1
+	trade_goods_size_modifier = 0.25
+}
+MOR_corsairs_of_the_mediterranean = {
+	privateer_efficiency = 0.15
+	light_ship_cost = -0.15
+}
+MOR_raiding = {
+	available_province_loot = 0.3
+}
+MOR_rush_of_colonists = {
+	global_colonial_growth = 15
+	colonist_placement_chance = 0.1
+}
+mor_go_to_brazil = {
+	global_colonial_growth = 5
+	colonist_placement_chance = 0.05
+}
+mor_imperial_city = {
+	local_development_cost = -0.075
+	local_build_cost = -0.075
+}
+mor_leading_africa = {
+	warscore_cost_vs_other_religion = -0.20
+	manpower_in_true_faith_provinces = 0.15
+}
+mor_iberia_united = {
+	diplomatic_reputation = 1
+	prestige = 1
+	global_tax_modifier = 0.2
+}
+defend_ceuta = {
+	local_defensiveness = 0.30
+	local_garrison_size = 0.15
+}
+mor_new_world_power = {
+	global_tariffs = 0.075
+}
+MOR_mosque_of_ben_youssef = {
+	tax_income = 24
+}
+mor_north_sea_corsairs = {
+	heavy_ship_power = 0.20
+}
+mor_privateering = {
+	capture_ship_chance = 0.20
+}

@@ -853,7 +853,7 @@ CAS_ideas = {
 
 FRA_ideas = {
 	start = {
-		diplomatic_reputation = 1
+		improve_relation_modifier = 0.2
 		global_manpower_modifier = 0.2
 	}
 	
@@ -884,8 +884,7 @@ FRA_ideas = {
 		global_unrest = -1 
 	}
 	native_trading_principles = {
-		native_uprising_chance = -0.5
-		native_assimilation = 0.5
+		production_efficiency = 0.10
 	}
 	divine_right_to_rule = {
 		core_creation = -0.1
@@ -15042,16 +15041,23 @@ SYN_ideas = {
 
 MOR_ideas = {
 	start = {
-		naval_attrition = -0.25
-		naval_forcelimit_modifier = 0.25
+		galley_power = 0.2
+		hostile_attrition = 1
 	}
 	bonus = {
-		hostile_attrition = 1
+		naval_forcelimit_modifier = 0.25
 	}
 	trigger = {
 		tag = MOR
 	}
 	free = yes
+	mor_slave_soldiers = {
+		land_maintenance_modifier = -0.05
+		cavalry_power = 0.15
+	}
+	mor_fleet = {
+		navy_tradition_decay = -0.005
+	}
 	mor_powerful_viziers = {
 		same_culture_advisor_cost = -0.2
 	}
@@ -15063,15 +15069,8 @@ MOR_ideas = {
 		trade_efficiency = 0.1
 		caravan_power = 0.2
 	}
-	mor_fleet = {
-		galley_power = 0.2
-	}
 	mor_pirate_republics = {
 		privateer_efficiency = 0.15
-	}
-	mor_slave_soldiers = {
-		land_maintenance_modifier = -0.05
-		cavalry_power = 0.1
 	}
 	mor_curb_power_of_the_tribes = {
 		global_autonomy = -0.05
@@ -16037,7 +16036,7 @@ CLI_ideas = {
 
 WES_ideas = {
 	start = {
-		diplomats = 1
+		infantry_power = 0.1
 		land_forcelimit_modifier = 0.2
 	}
 	bonus = {
@@ -16831,7 +16830,7 @@ LFA_ideas = {
 		global_trade_goods_size_modifier = 0.1
 	}
 	lfa_state_expansion = {
-		expand_administration_cost = -0.3
+		expand_administration_cost = -0.05
 		development_cost = -0.1
 	}
 }

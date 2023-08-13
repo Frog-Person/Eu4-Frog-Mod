@@ -58,10 +58,25 @@ heretics_gtfo = {
 
 surge_of_great_thinkers = {
 	technology_cost = -0.1
-	idea_cost = -0.5
+	idea_cost = -0.05
 }
 
 state_sponsored_industries = {
 	global_trade_goods_size_modifier = 0.2
 	global_tax_income = -64
+}
+
+kol_germany_reward = {
+	warscore_from_battles_modifier = 0.4
+	army_tradition_from_battle = 0.4
+}
+
+inland_trade_encuraged = {
+	province_trade_power_value = 5
+	allowed_num_of_manufactories = 1
+	allowed_num_of_buildings = 2
+}
+
+kol_rhine_no_tolls = {
+	local_development_cost = -0.05
 }
