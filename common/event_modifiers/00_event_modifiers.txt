@@ -9926,7 +9926,7 @@ elite_revolutionary_guard_modifier = {
 }
 
 elite_revolutionary_guard_modifier_country = {
-	special_unit_forcelimit = -0.125
+	allowed_rev_guard_fraction = -0.025
 }
 
 professional_revolutionary_guard_modifier = {
@@ -9937,7 +9937,7 @@ professional_revolutionary_guard_modifier = {
 }
 
 professional_revolutionary_guard_modifier_country = {
-	special_unit_forcelimit = 0.25
+	allowed_rev_guard_fraction = 0.05
 }
 
 mass_revolutionary_guard_modifier = {
@@ -9948,7 +9948,7 @@ mass_revolutionary_guard_modifier = {
 }
 
 mass_revolutionary_guard_modifier_country = {
-	special_unit_forcelimit = 0.75
+	allowed_rev_guard_fraction = 0.15
 }
 
 vanguard_revolutionary_guard_modifier = {
@@ -9959,7 +9959,7 @@ vanguard_revolutionary_guard_modifier = {
 }
 
 vanguard_revolutionary_guard_modifier_country = {
-	special_unit_forcelimit = -0.125
+	allowed_rev_guard_fraction = -0.025
 }
 
 #Muslim Schools
