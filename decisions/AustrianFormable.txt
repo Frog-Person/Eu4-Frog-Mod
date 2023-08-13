@@ -8,12 +8,12 @@ country_decisions = {
         allow = {
                 check_variable = {
                     which = Richtung
-                    value = 0
+                    value => 0
                 }
                 NOT = {
                     check_variable = {
                         which = Richtung
-                        value = 3
+                        value < 3
                     }
                 }
         }
