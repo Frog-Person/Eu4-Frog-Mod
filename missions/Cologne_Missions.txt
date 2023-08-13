@@ -218,13 +218,13 @@ german_dominance = {
 		position = 7
 		required_missions = {  }
 		trigger = {
-			army_professionalism = 1
+			army_professionalism = 0.7
 			army_tradition = 80
 		}
 		effect = {
 			add_country_modifier = {
 				name = modern_army
-				duration = -1
+				duration = 18250
 				desc = MODERNIZED_ARMY_KOL_DESC_TOOLTIP
 				hidden = no
 			}
@@ -916,7 +916,7 @@ cologne_fith = {
 			}
 			trade_goods_produced_amount = {
 				trade_goods = iron
-				amount = 5
+				amount = 12
 			}
 			trade_goods_produced_amount = {
 				trade_goods = copper
@@ -924,11 +924,11 @@ cologne_fith = {
 			}
 			trade_goods_produced_amount = {
 				trade_goods = paper
-				amount = 5
+				amount = 16
 			}
 			trade_goods_produced_amount = {
 				trade_goods = cloth
-				amount = 15
+				amount = 35
 			}
 		}
 		effect = {
