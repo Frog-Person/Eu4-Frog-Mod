@@ -9921,34 +9921,36 @@ standardized_uniforms_modifier = {
 
 elite_revolutionary_guard_modifier = {
 	is_revolutionary_guard_modifier = yes
-	discipline = 0.025
+	discipline = 0.05
 	land_maintenance_modifier = 1.0
 }
 
 elite_revolutionary_guard_modifier_country = {
-	special_unit_forcelimit = -0.1
+	special_unit_forcelimit = -0.05
 }
 
 professional_revolutionary_guard_modifier = {
 	is_revolutionary_guard_modifier = yes
 	drill_decay_modifier = -0.25
-	land_maintenance_modifier = 0.5
+	recover_army_morale_speed = 0.2
+	land_maintenance_modifier = 0.25
 }
 
 mass_revolutionary_guard_modifier = {
 	is_revolutionary_guard_modifier = yes
 	drill_decay_modifier = 0.5
+	reinforce_speed = 0.15
 }
 
 mass_revolutionary_guard_modifier_country = {
-	special_unit_forcelimit = 0.1
+	special_unit_forcelimit = 0.2
 }
 
 vanguard_revolutionary_guard_modifier = {
 	is_revolutionary_guard_modifier = yes
 	shock_damage_received = -0.1
 	fire_damage_received = -0.1
-	land_maintenance_modifier = 0.5
+	land_maintenance_modifier = 1.0
 }
 
 #Muslim Schools
