@@ -907,9 +907,15 @@ hab_cultural_ambitions = {
 hab_other_minorities_approach = {
     slot = 2
 	generic = no
-	potential = {
-		tag = HAB
+	ai = yes
+	potential_on_load = {
+		has_dlc = "Emperor"
 	}
+	potential = {
+		NOT = { map_setup = map_setup_random }
+		tag = HAB
+		has_dlc = "Emperor"
+        }
 	has_country_shield = yes
 	bohemian_crown = {
 		icon = mission_build_to_force_limit
