@@ -1,4 +1,4 @@
-Austrian_Bohemian_Union
+#austrian_bohemian_union
 country_event = {
 
 	picture = LIBERUM_VETO_eventPicture
@@ -46,15 +46,15 @@ country_event = {
 			factor = 10 
 		}
 		HAB = { 
-			country_event = { id = flavor_hab.26 }
+			country_event = { }
         option = {
-		name = flavor_boh.14.a 
+		name =
 		}
 		ai_chance = { factor = 1 } 
 		set_country_flag = boh_accepted_pu
 		HAB = { 
 			create_union = BOH 
-			country_event = { id = flavor_pol.20 }
+			country_event = { }
 		}
 		}
 	}

@@ -12,7 +12,7 @@ hab_cultural_ambitions = {
 		has_dlc = "Emperor"
         }
 	has_country_shield = yes
-	subjugate_hungary = { #Decline of Hungary
+	dominate_hungary = { 
 		icon = mission_eastern_european_city
         position = 1
 		required_missions = {  } #None
@@ -72,7 +72,7 @@ hab_cultural_ambitions = {
 			factor = 500	#Historical conquest
 		}
 	}
-    austrian_hungary = {
+    rule_hungary = {
 		icon = mission_monarch_in_throne_room
 		required_missions = { subjugate_hungary }
 		position = 2
@@ -159,67 +159,69 @@ hab_cultural_ambitions = {
 			}
         provinces_to_highlight = {}
         trigger = {
-            if = {
-				AND = {
-                	NOT = { exists = HUN }
-                	NOT = { exists = BOH }
-                	erzgebirge_area = {
-                    	type = all
-                    	country_or_non_sovereign_subject_holds = ROOT
-                	}
-                	bohemia_area = {
-                    	type = all
-                    	country_or_non_sovereign_subject_holds
-                	}
-                	moravia_area = {
-                   		 type = all
-                    	country_or_non_sovereign_subject_holds
-                	}
-                	transdanubia_area = {
-                   		 type = all
-                    	country_or_non_sovereign_subject_holds
-                	}
-                	slovakia_area = {
-                    	type = all
-                    	ountry_or_non_sovereign_subject_holds
-                	}
-                	alfold_area = {
-                   		 type = all
-                    	country_or_non_sovereign_subject_holds
-                	}
-                	transylvania_area = {
-                    	type = all
-                    	country_or_non_sovereign_subject_holds
-                	}
-                	southern_transylvania_area = {
-                    	type = all
-                    	country_or_non_sovereign_subject_holds
-                	}
+			OR = {
+				if = {
+					AND = {
+						NOT = { exists = HUN }
+						NOT = { exists = BOH }
+						erzgebirge_area = {
+							type = all
+							country_or_non_sovereign_subject_holds = ROOT
+						}
+						bohemia_area = {
+							type = all
+							country_or_non_sovereign_subject_holds = ROOT
+						}
+						moravia_area = {
+							type = all
+							country_or_non_sovereign_subject_holds = ROOT
+						}
+						transdanubia_area = {
+							type = all
+							country_or_non_sovereign_subject_holds = ROOT
+						}
+						slovakia_area = {
+							type = all
+							country_or_non_sovereign_subject_holds = ROOT
+						}
+						alfold_area = {
+							type = all
+							country_or_non_sovereign_subject_holds = ROOT
+						}
+						transylvania_area = {
+							type = all
+							country_or_non_sovereign_subject_holds = ROOT
+						}
+						southern_transylvania_area = {
+							type = all
+							country_or_non_sovereign_subject_holds = ROOT
+						}
+					}
 				}
-			}
-            if = {
-                AND = {
-                    AND = {
-                    	HUN = { is_subject_of = HAB}
-                    	HUN = { has_opinion = {
-                             	who = HAB
-                             	value = 150
-                    			}
-                    	}
-                   	}
-                    AND = {
-                       	BOH = { is_subject_of = HAB}
-                       	BOH = { has_opinion = {
-                               	who = HAB
-                               	value = 150
-                       			}
-                        }
-                    }
-                }
+				if = {
+					AND = {
+						AND = {
+							HUN = { is_subject_of = HAB}
+							HUN = { has_opinion = {
+									who = HAB
+									value = 150
+									}
+							}
+						}
+						AND = {
+							BOH = { is_subject_of = HAB}
+							BOH = { has_opinion = {
+									who = HAB
+									value = 150
+									}
+							}
+						}
+					}
+				}
 			}
         }
 		effect = {
-
+			add_prestige = 10
 		}
     }
     direction_of_our_country = {
