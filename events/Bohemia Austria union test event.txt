@@ -1,8 +1,5 @@
 Austrian_Bohemian_Union
 country_event = {
-	id = flavor_boh.14
-	title = flavor_boh.14.t
-	desc = flavor_boh.14.d
 
 	picture = LIBERUM_VETO_eventPicture
 	
@@ -44,7 +41,7 @@ country_event = {
 	}
 	
 	option = {
-		name = flavor_boh.14.a #A Habsburg Prince will do nicely
+		name = "A Habsburg Prince will do nicely"
 		ai_chance = { 
 			factor = 10 
 		}
@@ -52,7 +49,7 @@ country_event = {
 			country_event = { id = flavor_hab.26 }
         option = {
 		name = flavor_boh.14.a 
-		
+		}
 		ai_chance = { factor = 1 } 
 		set_country_flag = boh_accepted_pu
 		HAB = { 
@@ -60,16 +57,15 @@ country_event = {
 			country_event = { id = flavor_pol.20 }
 		}
 		}
-		}
 	}
 	option = {
-		name = flavor_boh.14.b #Never forget
-	ai_chance = {
-		factor = 90
+		name = "Never forget"
+		ai_chance = {
+			factor = 90
+		}
+		add_opinion = {
+			who = HAB
+			modifier = BOH_Will_Never_Join_You
+		}
 	}
-	add_opinion = {
-		who = HAB
-		modifier = BOH_Will_Never_Join_You
-	}
-	}
-	}
+}

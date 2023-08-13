@@ -1,7 +1,4 @@
 country_event = {
-    id = flavor_hab.26
-    title = "flavor_hab.26
-    desc = "flavor_hab.26"
     picture = HRE_eventPicture
 
     fire_only_once = yes

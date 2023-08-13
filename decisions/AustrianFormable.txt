@@ -1,34 +1,26 @@
-country_decision = {
-    Austrian_Nation = {
-        tag = HAB
+country_decisions = {
+
+    an_austrian_empire = {
+        major = yes
+        potential = {
+            tag = HAB
+        }
         allow = {
-            if = (Richtung < 3) {
-                has_country_flag = aus_acceptance_set
-            }
-            effect = {
-                change_tag = HAE
-                set_government_rank = 3
-                add_country_modifier = {
-				name = "centralization_modifier"
-				duration = 7300
+                check_variable = {
+                    which = Richtung
+                    value = 0
                 }
-            }
-            else_if = {
-                has_country_flag = aus_acceptance_set
-                3 <= Richtung <= 9
-            }
-            effect = {
-                change_tag = AHE
-                set_government_rank = 3
-                add_country_modifier = {
-                    name = "centralization_modifier"
-                    duration = 7300
+                NOT = {
+                    check_variable = {
+                        which = Richtung
+                        value = 3
+                    }
                 }
-            }
-            else_if = {
-                has_country_flag = aus_acceptance_set
-                Richtung > 9
-            }
+        }
+        effect = {
+            change_tag = HAE
+            on_change_tag_effects = yes
+            restore_country_name = yes
         }
     }
 }
