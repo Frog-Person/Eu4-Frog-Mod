@@ -1588,7 +1588,7 @@ POR_ideas = {
 	free = yes		#will be added at load.
 	
 	legacy_of_the_navigator = {
-		naval_morale = 0.1
+		naval_morale = 0.15
 		range = 0.20
 	}
 	afonsine_ordinances = {
