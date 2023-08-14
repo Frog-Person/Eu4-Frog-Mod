@@ -142,13 +142,12 @@ country_event = {
 	fire_only_once = yes
 	
 	trigger = {
-		always = no
+		always = yes
 		tag = MOR
-		NOT = { is_year = 1455 } #Died in 1448
 	}
 	
 	mean_time_to_happen = {
-		months = 33
+		months = 1
 	}
 	
 	option = {
@@ -175,18 +174,19 @@ country_event = {
 	}
 	
 	mean_time_to_happen = {
-		months = 126
+		months = 6
 	}
 	
 	option = {
 		name = flavor_mor.6.a #Kill them all!
 		ai_chance = { factor = 1 }
-		add_stability = -1
+		add_stability = 1
 		country_event = { id = flavor_mor.7 days = 30 }
 	}
 	
 	option = {
 		name = flavor_mor.6.b #They remain our trusted advisors.
+		custom_tooltip = "MOR_wattasid_prince"
 		ai_chance = { factor = 0 }
 		set_country_flag = mor_wattasid_power
 	}
@@ -243,7 +243,7 @@ country_event = {
 	}
 	
 	mean_time_to_happen = {
-		months = 30
+		months = 6
 	}
 	
 	immediate = {
@@ -258,6 +258,10 @@ country_event = {
 			name = "Muhammad I"
 			dynasty = "Wattasid"
 			culture = berber
+			adm = 6
+			dip = 5
+			mil = 5
+			age = 24
 		}
 		if = {
 			limit = {
@@ -525,11 +529,10 @@ country_event = {
 		}
 	}
 	mean_time_to_happen = {
-		months = 24
+		months = 10
 	}
 	option = { # Assert Dominance beyond the capital
 		name = "flavor_mor.13.a"
-		add_stability = -1
 		add_country_modifier = {
 			name = "mor_looks_outward"
 			duration = 7300

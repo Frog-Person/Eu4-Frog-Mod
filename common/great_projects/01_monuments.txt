@@ -2092,6 +2092,7 @@ kremlin = {
 
 		#what modifiers are added to the country when we have this project here on this tier
 		country_modifiers = {
+			garrison_size = 0.025
 		}
 
 		#what effects happen when this tier is achieved
@@ -2122,6 +2123,7 @@ kremlin = {
 
 		#what modifiers are added to the country when we have this project here on this tier
 		country_modifiers = {
+			garrison_size = 0.05
 		}
 
 		#what effects happen when this tier is achieved
@@ -2154,6 +2156,8 @@ kremlin = {
 		#what modifiers are added to the country when we have this project here on this tier
 		country_modifiers = {
 			global_regiment_cost = -0.1
+			global_manpower_modifier = 0.05
+			garrison_size = 0.075
 		}
 
 		#what effects happen when this tier is achieved
@@ -10774,15 +10778,6 @@ bran_castle = {
 	type = monument
 
 	build_trigger = {
-		if = {
-			limit = {
-				owner = {
-					NOT = { has_country_flag = teu_can_utilize_bran_castle }
-				}
-			}
-			culture_group = carpathian
-			province_is_or_accepts_culture = yes
-		}
 	}
 
 	on_built = {
@@ -10792,27 +10787,9 @@ bran_castle = {
 	}
 
 	can_use_modifiers_trigger = {
-		if = {
-			limit = {
-				owner = {
-					NOT = { has_country_flag = teu_can_utilize_bran_castle }
-				}
-			}
-			culture_group = carpathian
-			province_is_or_accepts_culture = yes
-		}
 	}
 
 	can_upgrade_trigger = {
-		if = {
-			limit = {
-				owner = {
-					NOT = { has_country_flag = teu_can_utilize_bran_castle }
-				}
-			}
-			culture_group = carpathian
-			province_is_or_accepts_culture = yes
-		}
 	}
 
 	keep_trigger = {
@@ -10865,7 +10842,7 @@ bran_castle = {
 		province_modifiers = {
 		}
 		area_modifier = {
-			local_defensiveness = 0.15
+			local_defensiveness = 0.25
 		}
 		country_modifiers = {
 			rival_border_fort_maintenance = -0.2
@@ -10886,12 +10863,12 @@ bran_castle = {
 		province_modifiers = {
 		}
 		area_modifier = {
-			local_defensiveness = 0.25
+			local_defensiveness = 0.35
 		}
 		country_modifiers = {
 			rival_border_fort_maintenance = -0.3
 			global_garrison_growth = 0.3
-			garrison_size = 0.15
+			garrison_size = 0.10
 		}
 		on_upgraded = {
 		}
@@ -11764,7 +11741,7 @@ dutch_polders = {
 			months = 120
 		}
 		cost_to_upgrade = {
-			factor = 500
+			factor = 1000
 		}
 		province_modifiers = {
 		}
@@ -11785,7 +11762,7 @@ dutch_polders = {
 			months = 240
 		}
 		cost_to_upgrade = {
-			factor = 1500
+			factor = 2000
 		}
 		province_modifiers = {
 		}
@@ -11806,7 +11783,7 @@ dutch_polders = {
 			months = 480
 		}
 		cost_to_upgrade = {
-			factor = 3000
+			factor = 4000
 		}
 		province_modifiers = {
 		}
@@ -13852,7 +13829,7 @@ malbork_castle = {
 			legitimacy = 0.5
 			devotion = 0.5
 			mercenary_cost = -0.05
-			garrison_size = 0.15
+			garrison_size = 0.125
 		}
 		on_upgraded = {
 		}
@@ -13875,7 +13852,7 @@ malbork_castle = {
 			legitimacy = 1
 			devotion = 1
 			mercenary_cost = -0.1
-			garrison_size = 0.25
+			garrison_size = 0.15
 		}
 		on_upgraded = {
 		}
@@ -14628,7 +14605,6 @@ churches_lalibela = {
 		}
 		country_modifiers = {
 			global_missionary_strength = 0.005
-			prestige = 0.25
 		}
 		on_upgraded = {
 		}
@@ -14648,7 +14624,6 @@ churches_lalibela = {
 		country_modifiers = {
 			global_missionary_strength = 0.01
 			missionary_maintenance_cost = -0.05
-			prestige = 0.5
 		}
 		on_upgraded = {
 		}
@@ -14667,8 +14642,9 @@ churches_lalibela = {
 		}
 		country_modifiers = {
 			global_missionary_strength = 0.02
+			missionaries = 1	
 			missionary_maintenance_cost = -0.1
-			prestige = 1
+			prestige = 0.25
 		}
 		on_upgraded = {
 		}
@@ -18773,7 +18749,6 @@ gme_port_de_moon = {
 			province_trade_power_value = 5
 			local_sailors_modifier = 0.3
 			local_ship_repair = 0.2
-			ship_recruit_speed = -0.15
 		}
 		area_modifier = {
 			ship_recruit_speed = -0.25
@@ -18791,8 +18766,8 @@ gme_port_de_moon = {
 		cost_to_upgrade = { factor = 3000 }
 		province_modifiers = {
 			local_development_cost = -0.15
-			local_sailors_modifier = 0.45
 			province_trade_power_value = 10
+			local_sailors_modifier = 0.45
 			local_ship_repair = 0.25
 		}
 		area_modifier = {
@@ -20107,31 +20082,8 @@ gme_brotherhood_school = {
 	build_trigger = { }
 	on_built = { }
 	on_destroyed = { }
-	can_use_modifiers_trigger = {
-		culture_group = east_slavic
-		OR = {
-			has_owner_culture = yes
-			owner = {
-				culture_group = east_slavic
-				has_cultural_union = yes
-			}
-		}
-		owner = {
-			NOT = { primary_culture = russian }
-			NOT = { primary_culture = novgorodian}
-			NOT = { primary_culture = karelian }
-		}
-	}
-	can_upgrade_trigger = {
-		culture_group = east_slavic
-		OR = {
-			has_owner_culture = yes
-			owner = {
-				culture_group = east_slavic
-				has_cultural_union = yes
-			}
-		}
-	}
+	can_use_modifiers_trigger = { }
+	can_upgrade_trigger = { }
 	keep_trigger = { }
 	tier_0 = {
 		upgrade_time = { months = 0	}
@@ -20161,7 +20113,7 @@ gme_brotherhood_school = {
 		cost_to_upgrade = { factor = 1500 }
 		province_modifiers = {
 			local_institution_spread = 0.20
-			local_development_cost = -0.10
+			local_development_cost = -0.075
 		}
 		area_modifier = { }
 		region_modifier = { }
@@ -20177,7 +20129,7 @@ gme_brotherhood_school = {
 		cost_to_upgrade = { factor = 3000 }
 		province_modifiers = {
 			local_institution_spread = 0.30
-			local_development_cost = -0.15
+			local_development_cost = -0.10
 		}
 		area_modifier = { }
 		region_modifier = { }
@@ -20349,17 +20301,11 @@ gme_santiago_compostela = {
 	on_destroyed = { }
 	can_use_modifiers_trigger = {
 		religion = catholic
-		owner = {
-			culture_group = iberian
-		}
 		province_is_or_accepts_culture = yes
 		has_owner_religion = yes
 	}
 	can_upgrade_trigger = {
 		religion = catholic
-		owner = {
-			culture_group = iberian
-		}
 		province_is_or_accepts_culture = yes
 		has_owner_religion = yes
 	}
@@ -20958,7 +20904,7 @@ fu_library_alexandria = {
 		months = 120
 	}
 	
-	build_cost = 1250
+	build_cost = 500
 	
 	can_be_moved = no
 	
@@ -21006,7 +20952,7 @@ fu_library_alexandria = {
 		}
 
 		cost_to_upgrade = {
-			factor = 1500
+			factor = 500
 		}
 
 		province_modifiers = {
@@ -21294,6 +21240,7 @@ gme_reichstag = {
 		region_modifier = { }
 		country_modifiers = { 
 			legitimacy = 0.1
+			governing_capacity_modifier = 0.05
 		}
 		on_upgraded = {
 			add_devastation = -10
@@ -21327,7 +21274,7 @@ gme_reichstag = {
 		area_modifier = { }
 		region_modifier = { }
 		country_modifiers = {
-			governing_capacity_modifier = 0.15
+			governing_capacity_modifier = 0.20
 			yearly_corruption = -0.02
 			legitimacy = 0.5
 			national_unrest = -1
@@ -21361,11 +21308,15 @@ fez_market = {
 	}
 
 	can_use_modifiers_trigger = {
-		tag = MOR
+		owner = {
+			tag = MOR
+		}
 	}
 
 	can_upgrade_trigger = {
-		tag = MOR
+		owner = {
+			tag = MOR
+		}
 	}
 
 	keep_trigger = {
@@ -22257,8 +22208,7 @@ motijheel = {
 
 		#what modifiers are added to the country when we have this project here on this tier
 		country_modifiers = {
-			army_tradition = 0.5
-			discipline = 0.025
+			army_tradition = 0.75
 			siege_ability = 0.1
 			diplomatic_reputation = 1
 			prestige = 1
@@ -22270,7 +22220,7 @@ motijheel = {
 	}
 }
 
-charminar = {
+champaner = {
 	# province it starts in
 	start = 542
 	
@@ -22665,5 +22615,205 @@ fort_williams = {
 		#what effects happen when this tier is achieved
 		on_upgraded = {
 		}
+	}
+}
+
+gonder_castle = {
+	start = 1224 #Gonder
+	date = 1357.01.01
+	time = { months = 0	}
+	build_cost = 0
+	can_be_moved = no
+	move_days_per_unit_distance = 10
+	starting_tier = 1
+	type = monument
+
+	build_trigger = {
+		province_is_or_accepts_religion = {
+			religion = coptic
+		}
+	}
+
+	on_built = {
+	}
+
+	on_destroyed = {
+	}
+
+	can_use_modifiers_trigger = {
+		province_is_or_accepts_religion = {
+			religion = coptic
+		}
+	}
+
+	can_upgrade_trigger = {
+		province_is_or_accepts_religion = {
+			religion = coptic
+		}
+	}
+
+	keep_trigger = {
+	}
+
+	tier_0 = {
+		upgrade_time = {
+			months = 0
+		}
+		cost_to_upgrade = {
+			factor = 0
+		}
+		province_modifiers = {
+		}
+		area_modifier = {
+		}
+		country_modifiers = {
+		}
+		on_upgraded = {
+		}
+	}
+
+	tier_1 = {
+		upgrade_time = {
+			months = 120
+		}
+		cost_to_upgrade = {
+			factor = 500
+		}
+		province_modifiers = {
+			local_defensiveness = 0.15
+		}
+		area_modifier = {
+		}
+		country_modifiers = {
+			rival_border_fort_maintenance = -0.15
+			global_garrison_growth = 0.1
+			prestige = 0.5
+		}
+		on_upgraded = {
+		}
+	}
+
+	tier_2 = {
+		upgrade_time = {
+			months = 240
+		}
+		cost_to_upgrade = {
+			factor = 1500
+		}
+		province_modifiers = {
+		}
+		area_modifier = {
+			local_defensiveness = 0.25
+		}
+		country_modifiers = {
+			rival_border_fort_maintenance = -0.2
+			global_garrison_growth = 0.2
+			garrison_size = 0.075
+			prestige = 0.75
+		}
+		on_upgraded = {
+		}
+	}
+
+	tier_3 = {
+		upgrade_time = {
+			months = 480
+		}
+		cost_to_upgrade = {
+			factor = 3000
+		}
+		province_modifiers = {
+		}
+		area_modifier = {
+			local_defensiveness = 0.35
+		}
+		country_modifiers = {
+			rival_border_fort_maintenance = -0.3
+			global_garrison_growth = 0.3
+			garrison_size = 0.15
+			prestige = 1
+		}
+		on_upgraded = {
+		}
+	}
+}
+
+gme_saint_mark_coptic_cathedral = {
+	start = 358
+	date = 1.01.01
+	time = { months = 120 }
+	build_cost = 1000
+	starting_tier = 1
+	type = monument
+	can_be_moved = no
+	build_trigger = { }
+	on_built = { }
+	on_destroyed = { }
+	can_use_modifiers_trigger = {
+		religion = coptic
+		has_owner_religion = yes
+	}
+	can_upgrade_trigger = {
+		religion = coptic
+		has_owner_religion = yes
+	}
+	keep_trigger = { }
+	tier_0 = {
+		upgrade_time = { months = 0 }
+		cost_to_upgrade = { factor = 0 }
+		province_modifiers = { }
+		area_modifier = { }
+		region_modifier = { }
+		country_modifiers = { }
+		on_upgraded = { }
+	}
+	tier_1 = {
+		upgrade_time = { months = 120 }
+		cost_to_upgrade = { factor = 1000 }
+		province_modifiers = {
+			local_unrest = -1
+			local_tax_modifier = 0.15
+		}
+		area_modifier = { }
+		region_modifier = { }
+		country_modifiers = {
+			tolerance_own = 0.5
+			manpower_in_true_faith_provinces = 0.05
+		}
+		on_upgraded = { }
+	}
+	tier_2 = {
+		upgrade_time = { months = 240 }
+		cost_to_upgrade = { factor = 2500 }
+		province_modifiers = {
+		}
+		area_modifier = {
+			local_unrest = -1
+			local_tax_modifier = 0.25
+		}
+		region_modifier = { }
+		country_modifiers = {
+			tolerance_own = 1
+			religious_unity = 0.05
+			manpower_in_true_faith_provinces = 0.10
+		}
+		on_upgraded = { }
+	}
+	tier_3 = {
+		upgrade_time = { months = 480 }
+		cost_to_upgrade = { factor = 5000 }
+		province_modifiers = {
+		}
+		area_modifier = {
+			local_unrest = -2
+			local_tax_modifier = 0.33
+		}
+		region_modifier = { }
+		country_modifiers = {
+			tolerance_own = 2
+			religious_unity = 0.15
+			manpower_in_true_faith_provinces = 0.15
+		}
+		on_upgraded = { }
 	}
 }

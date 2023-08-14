@@ -475,6 +475,10 @@
  defend_ceuta: "Defend until the last man"
  MOR_funduqs_expanded: "Fundquqs Expanded"
  MOR_mosque_of_ben_youssef: "Mosque of Ben Youssef"
+ mor_mountain_imperial_city: "Imperial Mountain City"
+ 
+ #Morocco tooltips
+ MOR_wattasid_prince: "A Wattasid ruler would likely be more competent than our current ruler, but would come at the cost of stability"
 
  #Morocco Events
  ME_Morocco_Events.1.t: "Status of Ceuta"
@@ -731,3 +735,8 @@
  motijheel: "Motijheel Palace"
  nalanda_university: "Nalanda University"
  kaiserbagh: "Kaiser Bagh"
+ kaiserbagh_desc: "Kaiser Bagh"
+ gme_saint_mark_coptic_cathedral: "Saint Mark Coptic Cathedral"
+ gme_saint_mark_coptic_cathedral_desc: "Saint Mark Coptic Cathedral"
+ gonder_castle: "Fasil Ghebbi"
+ gonder_castle_desc: "Fasil Ghebbi - the old castle of Gonder"

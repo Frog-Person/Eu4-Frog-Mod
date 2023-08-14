@@ -64,30 +64,34 @@ gc_morocco_1 = {
 		
 		effect = {
 			342 = {
-				add_base_tax = 2
+				add_base_tax = 3
+				add_base_manpower = 1
 				add_province_modifier = {
 					name = mor_imperial_city
 					duration = -1
 				}
 			}
 			2467 = {
-				add_base_tax = 2
+				add_base_tax = 3
+				add_base_manpower = 1
 				add_province_modifier = {
-					name = mor_imperial_city
+					name = mor_mountain_imperial_city
 					duration = -1
 				}
 			}
 			343 = {
-				add_base_tax = 2
+				add_base_tax = 3
+				add_base_manpower = 1
 				add_province_modifier = {
-					name = mor_imperial_city
+					name = mor_mountain_imperial_city
 					duration = -1
 				}
 			}
 			344 = {
-				add_base_tax = 2
+				add_base_tax = 3
+				add_base_manpower = 1
 				add_province_modifier = {
-					name = mor_imperial_city
+					name = mor_mountain_imperial_city
 					duration = -1
 				}
 			}
@@ -108,7 +112,7 @@ gc_morocco_1 = {
 		}
 		
 		trigger = {
-			1110 = {
+			341 = {
 				is_strongest_trade_power = ROOT
 			}
 			if = {
@@ -864,7 +868,7 @@ gc_morocco_3 = {
 		icon = mission_ottoman_harem
 		required_missions = {  }
 		trigger = {
-			stability = 1
+			stability = 0
 			NOT = { num_of_rebel_armies = 1 }
 			NOT = { num_of_rebel_controlled_provinces = 1 }
 			OR = {
@@ -872,10 +876,11 @@ gc_morocco_3 = {
 					tooltip = gc_mor_wattasid_tt
 					has_country_flag = wattasid_resolution
 				}
-				is_year = 1500
+				is_year = 1450
 			}
 		}
 		effect = {
+			add_stability = 1
 			algiers_area = {
 				limit = {
 					NOT = { is_permanent_claim = ROOT	}

@@ -773,7 +773,7 @@ SPA_ideas = {
 
 CAS_ideas = {
 	start = {
-		land_morale = 0.15
+		diplomatic_reputation = 1
 		naval_forcelimit_modifier = 0.25
 	}
 	bonus = {
@@ -798,7 +798,7 @@ CAS_ideas = {
 		colonists = 1
 	}
 	infantas = {
-		diplomatic_reputation = 1
+		land_morale = 0.15
 		heir_chance = 0.33
 	}
 	salamanca_scholars = {
@@ -1574,7 +1574,7 @@ BRA_ideas = {
 POR_ideas = {
 	start = {
 		movement_speed_in_fleet_modifier = 1
-		infantry_power = 0.1
+		global_trade_power = 0.1
 	}
 	
 	bonus = {
@@ -1587,14 +1587,14 @@ POR_ideas = {
 	free = yes		#will be added at load.
 	
 	legacy_of_the_navigator = {
-		naval_morale = 0.1
+		naval_morale = 0.15
 		range = 0.20
 	}
 	afonsine_ordinances = {
 		global_trade_goods_size_modifier = 0.1
 	}
 	case_de_india = {
-		global_trade_power = 0.1
+		infantry_power = 0.1
 	}
 	land_before_faith = {
 		global_colonial_growth = 15
@@ -2154,7 +2154,7 @@ JAP_ideas = {
 MAM_ideas = {
 	start = {
 		trade_steering = 0.25
-		cavalry_power = 0.10
+		cavalry_power = 0.15
 	}
 	
 	bonus = {

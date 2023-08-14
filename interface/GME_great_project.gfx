@@ -143,4 +143,12 @@ spriteTypes = {
 		name = "GFX_great_project_champaner"	
 		texturefile = "gfx//interface//great_projects//great_project_champaner.dds"
 	}
+	spriteType = {
+		name = "GFX_great_project_gonder_castle"	
+		texturefile = "gfx//interface//great_projects//great_project_gonder_castle.dds"
+	}
+	spriteType = {
+		name = "GFX_great_project_gme_saint_mark_coptic_cathedral"	
+		texturefile = "gfx//interface//great_projects//great_project_gme_saint_mark_coptic_cathedral.dds"
+	}
 }
