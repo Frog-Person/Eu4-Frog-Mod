@@ -1502,6 +1502,31 @@ hab_other_minorities_approach = {
 				}
 			}
 		}
+		effect = {
+			if = {
+				limit = {
+					BOH = { is_subject_of = HAB }
+					erzgebirge_area = {
+						type = all
+						owned_by = ROOT
+					}
+					bohemia_area = {
+						type = all
+						owned_by = ROOT
+					}
+					moravia_area = {
+						type = all
+						owned_by = ROOT
+					}
+				}
+				effect = {
+					add_country_modifier = {
+						name = convert_the_hus
+						duration = 3650
+					}
+				}
+			}
+		}
 	}
 	all_hussites_follow_the_leader = {
 		icon = mission_build_to_force_limit
