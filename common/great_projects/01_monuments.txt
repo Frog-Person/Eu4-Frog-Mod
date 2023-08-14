@@ -20082,31 +20082,8 @@ gme_brotherhood_school = {
 	build_trigger = { }
 	on_built = { }
 	on_destroyed = { }
-	can_use_modifiers_trigger = {
-		culture_group = east_slavic
-		OR = {
-			has_owner_culture = yes
-			owner = {
-				culture_group = east_slavic
-				has_cultural_union = yes
-			}
-		}
-		owner = {
-			NOT = { primary_culture = russian }
-			NOT = { primary_culture = novgorodian}
-			NOT = { primary_culture = karelian }
-		}
-	}
-	can_upgrade_trigger = {
-		culture_group = east_slavic
-		OR = {
-			has_owner_culture = yes
-			owner = {
-				culture_group = east_slavic
-				has_cultural_union = yes
-			}
-		}
-	}
+	can_use_modifiers_trigger = { }
+	can_upgrade_trigger = { }
 	keep_trigger = { }
 	tier_0 = {
 		upgrade_time = { months = 0	}
@@ -20136,7 +20113,7 @@ gme_brotherhood_school = {
 		cost_to_upgrade = { factor = 1500 }
 		province_modifiers = {
 			local_institution_spread = 0.20
-			local_development_cost = -0.10
+			local_development_cost = -0.075
 		}
 		area_modifier = { }
 		region_modifier = { }
@@ -20152,7 +20129,7 @@ gme_brotherhood_school = {
 		cost_to_upgrade = { factor = 3000 }
 		province_modifiers = {
 			local_institution_spread = 0.30
-			local_development_cost = -0.15
+			local_development_cost = -0.10
 		}
 		area_modifier = { }
 		region_modifier = { }
