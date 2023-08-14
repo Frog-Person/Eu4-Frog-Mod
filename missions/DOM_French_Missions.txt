@@ -2370,10 +2370,9 @@ french_rev_missions_2 = {
 						tooltip = 4_tolerance_heretic_tt
 						has_global_modifier_value = {
 							which = tolerance_heretic
-							value = 4
+							value = 2
 						}
-					}
-					full_idea_group = humanist_ideas 
+					} 
 					NOT = { has_estate = estate_church }
 				}
 			}
