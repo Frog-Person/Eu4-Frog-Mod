@@ -332,7 +332,7 @@ maghrebi_corsairs = {
 	}
 
 	country_modifier = {
-		privateer_efficiency = 0.15
+		privateer_efficiency = 0.20
 		may_perform_slave_raid = yes
 		available_province_loot = 0.6
 	}
