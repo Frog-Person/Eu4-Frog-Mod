@@ -1397,7 +1397,7 @@ mercenary_ideas = {
 		reinforce_cost_modifier = -0.25
 	}
 	seasoned_veterans = {
-		mercenary_discipline = 0.05
+		leader_cost = -0.20
 	}
 	organised_mercenary_recruitment = { 
 		mercenary_manpower = 0.25
