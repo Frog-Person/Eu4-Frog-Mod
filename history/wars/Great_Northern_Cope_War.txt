@@ -1,0 +1,34 @@
+name = "Crusade of Cope-nhagen"
+war_goal = {
+	type = superiority_crusade
+	casus_belli = cb_crusade
+}
+
+1443.1.1 = {
+	add_attacker = SWE
+	add_defender = DAN
+	add_defender = TEU
+	add_defender = LIV
+	add_defender = RIG
+	add_defender = NOV
+	add_defender = NOR
+	add_defender = WOL
+	add_defender = MKL
+	add_defender = HSA
+	add_defender = SHL
+}
+
+
+1444.11.11 = {
+	rem_attacker = SWE
+	rem_defender = DAN
+	rem_defender = TEU
+	rem_defender = LIV
+	rem_defender = RIG
+	rem_defender = NOV
+	rem_defender = NOR
+	rem_defender = WOL
+	rem_defender = MKL
+	rem_defender = HSA
+	rem_defender = SHL
+}
