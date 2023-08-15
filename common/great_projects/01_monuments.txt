@@ -16829,7 +16829,7 @@ visby_city = {
 		area_modifier = {
 		}
 		country_modifiers = {		
-			privateer_efficiency = 0.15
+			privateer_efficiency = 0.20
 			global_own_trade_power = 0.20
 		}
 		on_upgraded = {

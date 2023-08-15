@@ -15069,7 +15069,7 @@ MOR_ideas = {
 		caravan_power = 0.2
 	}
 	mor_pirate_republics = {
-		privateer_efficiency = 0.15
+		privateer_efficiency = 0.10
 	}
 	mor_curb_power_of_the_tribes = {
 		global_autonomy = -0.05
