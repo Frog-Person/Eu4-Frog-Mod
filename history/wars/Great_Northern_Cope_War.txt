@@ -16,6 +16,7 @@ war_goal = {
 	add_defender = MKL
 	add_defender = HSA
 	add_defender = SHL
+    add_defender = GOT
 }
 
 
@@ -31,4 +32,5 @@ war_goal = {
 	rem_defender = MKL
 	rem_defender = HSA
 	rem_defender = SHL
+    rem_defender = GOT
 }
