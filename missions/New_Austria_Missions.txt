@@ -1219,42 +1219,44 @@ hab_cultural_ambitions = {
 		icon = mission_eastern_european_city
 		position = 9
 		trigger = {
-			if = {
-				owns_core_province = 1772
-				1772 = {
-					has_owner_accepted_culture = yes
-					num_of_times_improved = 3
-					OR = {
-						has_building = courthouse
-						has_building = town_hall
+			OR = {
+				if = {
+					owns_core_province = 1772
+					1772 = {
+						has_owner_accepted_culture = yes
+						num_of_times_improved = 3
+						OR = {
+							has_building = courthouse
+							has_building = town_hall
+						}
+					}
+					slovakia_area = {
+						type = all
+						has_owner_accepted_culture = yes
+						num_of_times_improved = 5
 					}
 				}
-				slovakia_area = {
-					type = all
-					has_owner_accepted_culture = yes
-					num_of_times_improved = 5
-				}
-			}
-			if = {
-				owns_core_province = 1772
-				1772 = {
-					culture = austrian
-					num_of_times_improved = 3
-					OR = {
-						has_building = courthouse
-						has_building = town_hall
+				if = {
+					owns_core_province = 1772
+					1772 = {
+						culture = austrian
+						num_of_times_improved = 3
+						OR = {
+							has_building = courthouse
+							has_building = town_hall
+						}
 					}
-				}
-				slovakia_area = {
-					type = all
-					culture = austrian
-					OR = {
-						has_building = workshop
-						has_building = counting_house
-					}
-					OR = {
-						has_building = temple
-						has_building = cathedral
+					slovakia_area = {
+						type = all
+						culture = austrian
+						OR = {
+							has_building = workshop
+							has_building = counting_house
+						}
+						OR = {
+							has_building = temple
+							has_building = cathedral
+						}
 					}
 				}
 			}
@@ -1465,7 +1467,7 @@ hab_cultural_ambitions = {
 		}
 	}
 
-hab_other_minorities_approach = {
+hab_other_formable_needs = {
     slot = 2
 	generic = no
 	ai = yes
@@ -1528,7 +1530,7 @@ hab_other_minorities_approach = {
 			}
 		}
 	}
-	all_hussites_follow_the_leader = {
+	all_hussites_follow_their_leader = {
 		icon = mission_build_to_force_limit
 		position = 2
 		required_missions = { bohemian_crown }
