@@ -204,8 +204,8 @@ dutch_trade_fleet = {
 	}
 
 	country_modifier = {
-		global_ship_trade_power = 0.25
-		range = 0.25
+		global_ship_trade_power = 0.15
+		range = 0.30
 	}
 	effect = {}
 	removed_effect = {}
