@@ -1463,11 +1463,9 @@ austrian_unique_formable_slot2 = {
 						owned_by = ROOT
 					}
 				}
-				effect = {
-					add_country_modifier = {
-						name = convert_the_hus
-						duration = 3650
-					}
+				add_country_modifier = {
+					name = convert_the_hus
+					duration = 3650
 				}
 			}
 		}
@@ -2095,12 +2093,12 @@ ah_gov_reform = {
 				trader = 5
 			}
 			OR = {
-				army_organizer = 5
+				army_organiser = 5
 				army_reformer = 5
 				commandant = 5
 				grand_captain = 5
-				master_recruiter = 5
-				military_engineer = 5
+				recruitmaster = 5
+				fortification_expert = 5
 				quartermaster = 5
 			}
 		}
