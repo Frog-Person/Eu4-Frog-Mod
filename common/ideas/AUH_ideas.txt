@@ -1,0 +1,45 @@
+AUH_ideas = {
+	start = {
+		land_morale = 0.15
+		improve_relation_modifier = 0.35
+	}
+
+	bonus = {
+		governing_capacity_modifier = 0.1
+	}
+	
+	trigger = {
+		tag = AUH
+	}
+	free = yes		#will be added at load.
+	
+	last_of_the_emperors = {
+		imperial_authority = 0.15
+		diplomatic_reputation = 1
+		diplomatic_upkeep = 1
+	}
+	universal_conscription = {
+		vassal_forcelimit_bonus = 0.5
+	}
+	an_industrious_power = {
+		global_trade_goods_size_modifier = 0.1
+		trade_efficiency = 0.1
+	}
+	augsleich = {
+		reduced_liberty_desire = 15
+		num_accepted_cultures = 2
+
+	}
+	a_multicultural_society = {
+		tolerance_heretic = 1
+		tolerance_heathen = 1
+	}
+	ministry_of_doctors = {
+		reform_progress_growth = 0.2
+		max_absolutism = 10
+	}
+	kuk_kreigsminister = {
+		reinforce_speed = 0.3
+		discipline = 0.05
+	}
+}
