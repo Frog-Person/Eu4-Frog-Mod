@@ -1785,7 +1785,7 @@ ah_expansion = {
 	generic = no
 	ai = yes
 	potential = {
-		tag = A02
+		tag = AUH
 	}
 
 	unite_our_lands_and_expand = {
@@ -1845,7 +1845,7 @@ ah_expansion = {
 			}
 		}
 		effect = {
-			add_prestiege = 10
+			add_prestige = 10
 		}
 	}
 
@@ -1909,7 +1909,7 @@ ah_ecobs = {
 	generic = no
 	ai = yes
 	potential = {
-		tag = A02
+		tag = AUH
 	}
 
 	expand_trade_influence = {
@@ -1991,22 +1991,41 @@ fist_of_the_hre = {
 	generic = no
 	ai = yes
 	potential = {
-		tag = A02
+		tag = AUH
 	}
 
 	a_quality_force = {
 		icon = mission_build_up_to_force_limit
 		position = 3
 		required_missions = {  }
-		trigger = { }
+		trigger = {
+			army_size_percentage = 1
+			land_force_limit = 150
+			has_global_modifier_value = {
+				which = discipline
+				value = 0.2
+			}
+		}
 		effect = { }
 	}
 	a_modern_navy = {
 		icon = mission_build_up_to_force_limit
 		position = 4
 		required_missions = { a_quality_force }
-		trigger = { }
-		effect = { }
+		trigger = {
+			has_flagship = yes
+			navy_size_percentage = 1
+			num_of_provinces_with = {
+			    OR = {
+			        has_building = shipyard
+			        has_building = grand_shipyard
+			    }
+			    value = 7
+			}
+		 }
+		effect = {
+			add_prestige = 10
+		 }
 	}
 	engage_our_rivals = {
 		icon = mission_build_up_to_force_limit
@@ -2023,7 +2042,7 @@ fist_of_the_hre = {
 			}
 		}
 		effect = {
-			add_prestiege = 10
+			add_prestige = 10
 		}
 	}
 }
@@ -2033,7 +2052,7 @@ ah_gov_reform = {
 	generic = no
 	ai = yes
 	potential = {
-		tag = A02
+		tag = AUH
 	}
 
 	expand_state_administration = {
@@ -2058,9 +2077,34 @@ ah_gov_reform = {
 		position = 5
 		required_missions = { expand_state_administration }
 		trigger = {
-			has_adm_advisor_5 = yes
-			has_dip_advisor_5 = yes
-			has_mil_advisor_5 = yes
+
+			OR = {
+				artist = 5
+				inquisitor = 5
+				master_of_mint = 5
+				natural_scientist = 5
+				philosopher = 5
+				theologian = 5
+				treasurer = 5
+			}
+			OR = {
+				colonial_governor = 5
+				diplomat = 5
+				naval_reformer = 5
+				navigator = 5
+				spymaster = 5
+				statesman = 5
+				trader = 5
+			}
+			OR = {
+				army_organizer = 5
+				army_reformer = 5
+				commandant = 5
+				grand_captain = 5
+				master_recruiter = 5
+				military_engineer = 5
+				quartermaster = 5
+			}
 		}
 		effect = {
 			add_prestige = 10
