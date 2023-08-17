@@ -1,0 +1,81 @@
+#Netherlands
+
+efr_cirksena = {
+	republican_tradition = -1.0
+	stability_cost_modifier = -0.75
+	land_forcelimit_modifier = 0.25
+}
+
+dutch_inundation = {
+	local_hostile_attrition = 6
+	local_defensiveness = 0.40
+	local_hostile_movement_speed = 0.5
+	local_monthly_devastation = 5
+	max_attrition = 3
+	local_tax_modifier = -0.7
+	local_production_efficiency = -0.7
+}
+
+fluyt_tradeship = {
+	light_ship_power = -0.5
+	global_ship_trade_power = 0.20
+}
+
+burgundian_successor = {
+	reduced_liberty_desire = 33
+}
+
+voc_ships_allowed = {
+	has_voc_indiamen = yes
+}
+
+recently_commissioned_art = { 
+
+}
+
+art_maritime_mod = { 
+	navy_tradition = 1 
+}
+art_foreign_lands_mod = { 
+	colonist_placement_chance = 0.05
+}
+art_military_mod = { 
+	army_tradition = 1
+}
+
+art_aristocrats = { 
+	prestige = 0.5 
+}
+art_landscape = { 
+	build_time = -0.10
+}
+art_every_day = { 
+	global_tax_income = 1 
+}
+
+
+#STANDARD
+
+diplo_rep_neg_1 = {
+	diplomatic_reputation = -1
+}
+
+diplo_rep_neg_2 = {
+	diplomatic_reputation = -2
+}
+
+diplo_rep_neg_3 = {
+	diplomatic_reputation = -3
+}
+
+diplo_rep_pos_1 = {
+	diplomatic_reputation = 1
+}
+
+diplo_rep_pos_2 = {
+	diplomatic_reputation = 2
+}
+
+diplo_rep_pos_3 = {
+	diplomatic_reputation = 3
+}
