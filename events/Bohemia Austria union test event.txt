@@ -9,7 +9,6 @@ country_event = {
 	trigger = {
 		tag = BOH
 		is_subject = no
-		has_interregnum = yes
 		NOT = { has_reform = celestial_empire }
 		LIT = {
 			exists = yes
@@ -56,7 +55,7 @@ country_event = {
 		ai_chance = { factor = 90 }
 		HAB = {
 			add_casus_belli = {
-				cb_restore_personal_union
+				type = cb_restore_personal_union
 				months = 300
 				target = BOH
 			}

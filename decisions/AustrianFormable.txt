@@ -38,10 +38,11 @@ country_decisions = {
 
             if = {
                 limit = {
-                    NOT = { exists = BAV }
+                    exists = BAV
                 }
                 add_casus_belli = {
 				    type = cb_vassalize_mission
+                    months = 1000
 					target = BAV
 				}
             }
@@ -62,7 +63,7 @@ country_decisions = {
 
             if = {
                 limit = {
-                    NOT = { exists = WAL }
+                    exists = WAL
                 }
                 add_casus_belli = {
 				    type = cb_vassalize_mission
