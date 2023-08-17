@@ -155,7 +155,6 @@ german_dominance = {
 				name = kol_rhine_trade
 				duration = -1
 				desc = KOL_RHINE_TRADE_DESC_TOOLTIP
-				hidden = no
 			}
 		 }
 	}
@@ -226,7 +225,6 @@ german_dominance = {
 				name = modern_army
 				duration = 18250
 				desc = MODERNIZED_ARMY_KOL_DESC_TOOLTIP
-				hidden = no
 			}
 		}
 	}
@@ -676,9 +674,11 @@ cologne_fourth = {
 			}
 		}
 		effect = {
-			add_great_project_tier {
-				type = cologne_cathedral
-				tier = 1
+			85 = {
+				add_great_project_tier = {
+					type = cologne_cathedral
+					tier = 1
+				}
 			}
 		}
 	}
