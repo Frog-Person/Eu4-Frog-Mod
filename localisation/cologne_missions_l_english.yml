@@ -1,0 +1,128 @@
+﻿l_english:
+
+ #---------------------------------------------------------
+ # German Dominance
+ #---------------------------------------------------------
+
+ kol_build_to_forcelimit_title: "Build To Forcelimit"
+ kol_build_to_forcelimit_desc: "The Archbishopric of Cologne has historically maintained prominence in the Holy Roman Empire as an Electorate and as Arch-chancellor of Italy. It is time for the Archbishopric to regain its former status and safeguard its position."
+ conquer_rhineland_title: "Conquer Rhineland"
+ conquer_rhineland_desc: "Our domain is a divided one and Koln, our capital and seat of power, is vulnerable and isolated. We must protect the city and our interests on the Rhine river."
+ conquer_hesse_title: "Conquer Hesse"
+ conquer_hesse_desc: "Just beyond our eastern frontier lies the city of Frankfurt, at the center of Germany. We must claim this prize from our rivals and further extend our control over the Rhine river. The city of Frankfurt holds many symbols of German unity as well, we may be able to use these to our advantage and gain a legitimate claim to be the leading German state."
+ finish_the_conquest_of_the_banks_of_the_rhine_upstream_title: "Control the Southern Rhine"
+ finish_the_conquest_of_the_banks_of_the_rhine_upstream_desc: "Our nation is economically tied to the Rhine river. It provides access to ocean going trade and connects our domain and its major cities. Extending this control is vital to secure this economic artery."
+ rhine_trade_title: "Rhine Trade"
+ rhine_trade_desc: ""
+ expand_the_home_market_title: "Expand The Home Markets"
+ expand_the_home_market_desc: "With the security of the Rhine river and the explosion of our industrial output we must take advantage of the situation and promote our exports and build up the nation as a center of trade within Europe."
+ army_reform_title: "Reform the Army"
+ army_reform_desc: "We are surrounded by great empires and military powers. If we wish to survive and eventually compete with them, we must reform and modernize our army."
+ german_victory_title: "Prussian Rivalry"
+ german_victory_desc: "Prussia has been our main competitor and threat in Germany. We have gained the upper hand and must now reconsider our position in Europe and whether we desire to join the great powers and unite Germany."
+ kol_germany_unified_title: "German unification"
+ kol_germany_unified_desc: "We have grown into a unified German Empire. Our position is a powerful one but a vulnerable one at the heart of Europe. We must be wary and protect our nation at all costs from the empires that surround us and are unhappy with the shift in European power."
+ storm_of_steel_title: "Storm Of Steel"
+ storm_of_steel_desc: "The decaying empires to our east and west, Russia and France, must be put in their place so they may never challenge us again. Germany will never be threatened again and take its rightful place as the leaders of Europe."
+
+ #---------------------------------------------------------
+ # Slot 2
+ #---------------------------------------------------------
+
+ conquer_westphalia_title: "Conquer Westphalia"
+ conquer_westphalia_desc: "The Bishopric of Munster has long been a rival and with the growing influence of the Free Cities, the Imperial City of Dortmund has threatened our control over regional trade. We must remove such threats and further grow our realm."
+ conquer_braunschweig_title: "Conquer Braunschweig"
+ conquer_braunschweig_desc: "Our eastern border lacks natural defensive features as of yet. The best we can hope for is to use the small Weser river. Controlling it would protect our heartland and open up future economic opportunities to our nation."
+ control_the_weser_estuary_title: "Control The Weser Estuary"
+ control_the_weser_estuary_desc: "Now that much of the Weser river is under our control, conquering Bremen and the estuary of the Weser river would give us access to the North Sea. This would also increase our sway over the other Hanseatic Cities of northern Germany."
+ imperial_relations_title: "Imperial Relations"
+ imperial_relations_desc: "As a prominent Electorate we must participate in Imperial politics. Securing alliances with other electors can give leverage over the Emperor while maintaining good relations with the Emperor can give us lenient treatment."
+ secured_electorship_title: "Secured Electorship"
+ secured_electorship_desc: "After decades of turmoil in the Holy Roman Empire we have emerged and secured our prominent place in the Empire as an elector."
+
+ #---------------------------------------------------------
+ # Slot 3
+ #---------------------------------------------------------
+
+ control_the_ems_estuary_title: "Control The Ems Estuary"
+ control_the_ems_estuary_desc: "The Ems river allows access to the North Sea for the northwestern portion of our country and could allow for an alternate route for exports should the Rhine river estuary ever be close to us. Controlling it would decrease the leverage of whoever comes to control the Low Countries."
+ control_the_rhine_estuary_title: "The Rhine Estuary"
+ control_the_rhine_estuary_desc: "The Rhine river is the heart of our nation and the main economic artery we rely on. Although the Ems provides an emergency alternative it is not enough. Ensuring access to the sea via the Rhine river is a necessity for our nation."
+ channel_trade_title: "English Channel Trade"
+ channel_trade_desc: "Now that we control the Rhine estuary our merchants are free to compete on equal footing with those of the English and have been able to increase overall traffic on the Rhine substantially. We must capitalize on these developments to promote such mercantile endeavors."
+
+ #---------------------------------------------------------
+ # Slot 4
+ #---------------------------------------------------------
+
+ develop_köln_title: "Develop Köln"
+ develop_köln_desc: "The Köln Cathedral is one of the most ambitious construction projects undertaken during the medieval era, starting construction in 1248 and continuing construction until 1560. The cathedral was only fully finished in 1880 after another 40 years of construction. This project is a symbol of our prestige and the favor God has placed upon the city and our nation."
+ increase_the_cathedral_to_level_2_title: "Finish the Cathedral"
+ increase_the_cathedral_to_level_2_desc: "More investment and time is needed to finish the Cathedral. The end result is likely to be short of what we hoped for initially but the building is as grand as any found in Rome. It will be the pride of the nation and a marvel to worshipers across Europe."
+ develop_the_rhine_area_title: "Develop the Rhine Valley"
+ develop_the_rhine_area_desc: "Early manufacturing took off in the Ruhr Valley and later it became a hub of industry. Investing in these industries and taking advantage of our central position in Europe will generate massive returns and strengthen our economy."
+ center_of_german_industry_title: "Early German Industry"
+ center_of_german_industry_desc: "Manufacturing has become more centralized and reliant on large production facilities instead of small craftsmen. The increased efficiency of such facilities warrants further investment and may allow our relatively small population to compete with the empires around us."
+ weser_defensive_line_title: "Weser Defensive Fortifications"
+ weser_defensive_line_desc: "The Weser river is the key natural defensive feature of our eastern border. Alone this river does little to hinder foreign armies. We must fortify the main crossings and slow any invading armies advance so we can organize to repel them."
+ win_leage_war_title: "Win Leage War"
+ win_leage_war_desc: "The political and religious divisions in Germany and the Holy Roman Empire finally erupted into one of the worst wars the region has ever seen. Our nation has managed to survive this calamity and emerge among the victors and now we must abide by and enforce the terms of the peace."
+
+ #---------------------------------------------------------
+ # Slot 5
+ #---------------------------------------------------------
+
+ develop_westphalia_title: "Develop Westphalia"
+ develop_westphalia_desc: "Westphalia is reliant on the Ems river, developing this river and local industry will help diversify our economy and make it harder for opponents to cripple us completely by targeting access to the Rhine."
+ educate_the_nation_title: "German Enlightenment"
+ educate_the_nation_desc: "The advancement in the sciences and education have allowed for further developments in administration, industry, and technology. We must capitalize on these advancements and establish Cologne as a leading nation by investing in higher education."
+ the_roar_of_industry_title: "The Roar Of Industry"
+ the_roar_of_industry_desc: "Industrial and manufacturing development in our nation has been far more successful than we ever could have expected. So many goods are being produced and exported that taxing them all has required additional expenditures to keep up."
+ religious_question_title: "The Protestant Reformation"
+ religious_question_desc: "Luther has ripped the christian world apart, and Germany in particular. Princes have begun breaking with the Catholic church and our own citizens are split on doctrine. We must find a way to navigate these uncertain times and unify our people and faith."
+
+ #---------------------------------------------------------
+ # Catholic Path
+ #---------------------------------------------------------
+
+ staying_true_to_the_pope_title: "Staying True To The Pope"
+ staying_true_to_the_pope_desc: ""
+
+ #---------------------------------------------------------
+ # Protestant Path
+ #---------------------------------------------------------
+
+ found_the_new_church_title: "Found The New Church"
+ found_the_new_church_desc: ""
+
+ #---------------------------------------------------------
+ # Reformed Path
+ #---------------------------------------------------------
+
+ the_likes_of_calvin_and_hutter_title: "The Likes Of Calvin And Hutter"
+ the_likes_of_calvin_and_hutter_desc: ""
+ how_radical_of_a_reformation_title: "How Radical Of A Reformation"
+ how_radical_of_a_reformation_desc: ""
+
+ #---------------------------------------------------------
+ # Very Radical
+ #---------------------------------------------------------
+
+ a_truly_radical_reformation_title: "A Truly Radical Reformation"
+ a_truly_radical_reformation_desc: ""
+
+ #---------------------------------------------------------
+ # Not So Radical
+ #---------------------------------------------------------
+
+ keeping_it_real_title: "Keeping It Real"
+ keeping_it_real_desc: ""
+
+ #---------------------------------------------------------
+ # Branching 1
+ #---------------------------------------------------------
+
+ Branching_mission_title: "Branching Mission"
+ Branching_mission_desc: "These missions depend on what religion you chose in the reformation"
+
+ 
