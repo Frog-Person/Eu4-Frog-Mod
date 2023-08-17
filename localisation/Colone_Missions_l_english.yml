@@ -4,10 +4,10 @@ l_english:
  # German Dominance
  #---------------------------------------------------------
 
- Build_to_forcelimit_title: "Build To Forcelimit"
- Build_to_forcelimit_desc: "The Archbishopric of Cologne has historically maintained prominence in the Holy Roman Empire as an Electorate and as Arch-chancellor of Italy. It is time for the Archbishopric to regain its former status and safeguard its position."
- Conquer_Rhineland_title: "Conquer Rhineland"
- Conquer_Rhineland_desc: "Our domain is a divided one and Koln, our capital and seat of power, is vulnerable and isolated. We must protect the city and our interests on the Rhine river."
+ kol_build_to_forcelimit_title: "Build To Forcelimit"
+ kol_build_to_forcelimit_desc: "The Archbishopric of Cologne has historically maintained prominence in the Holy Roman Empire as an Electorate and as Arch-chancellor of Italy. It is time for the Archbishopric to regain its former status and safeguard its position."
+ conquer_Rhineland_title: "Conquer Rhineland"
+ conquer_Rhineland_desc: "Our domain is a divided one and Koln, our capital and seat of power, is vulnerable and isolated. We must protect the city and our interests on the Rhine river."
  Conquer_Hesse_title: "Conquer Hesse"
  Conquer Hesse_desc: "Just beyond our eastern frontier lies the city of Frankfurt, at the center of Germany. We must claim this prize from our rivals and further extend our control over the Rhine river. The city of Frankfurt holds many symbols of German unity as well, we may be able to use these to our advantage and gain a legitimate claim to be the leading German state."
  Finish_the_conquest_of_the_banks_of_the_rhine_upstream_title: "Control the Southern Rhine"
