@@ -21180,48 +21180,12 @@ gme_reichstag = {
 	on_built = { }
 	on_destroyed = { }
 	can_use_modifiers_trigger = {
-		FROM = {
-			OR = {
-				tag = GER
-				tag = PRU
-				tag = HLR
-				AND = {
-					culture_group = germanic
-					NOT = { primary_culture = dutch }
-				}
-			}
-		}
+		culture_group = germanic
+		NOT = { primary_culture = dutch }
 	}
 	can_upgrade_trigger = {
-		FROM = { adm_tech = 20 }
-		FROM = {
-			OR = {
-				tag = GER
-				tag = PRU
-				tag = HLR
-				AND = {
-					culture_group = germanic
-					NOT = { primary_culture = dutch }
-				}
-			}
-		}
-		if = {
-			limit = { has_dlc = "Common Sense" }
-			FROM = {
-				OR = {
-					has_parliament = yes
-					government = republic
-				}
-			}
-		}
-		else = {
-			FROM = {
-				OR = {
-					government = republic
-					has_reform = parliamentary_reform
-				}
-			}
-		}
+		culture_group = germanic
+		NOT = { primary_culture = dutch }
 	}
 	keep_trigger = { }
 	tier_0 = {
