@@ -55,8 +55,8 @@
  # Slot 4
  #---------------------------------------------------------
 
- develop_köln_title: "Develop Cologne"
- develop_köln_desc: "The Colonge Cathedral is one of the most ambitious construction projects undertaken during the medieval era, starting construction in 1248 and continuing construction until 1560. The cathedral was only fully finished in 1880 after another 40 years of construction. This project is a symbol of our prestige and the favor God has placed upon the city and our nation."
+ develop_cologne_title: "Develop Cologne"
+ develop_cologne_desc: "The Colonge Cathedral is one of the most ambitious construction projects undertaken during the medieval era, starting construction in 1248 and continuing construction until 1560. The cathedral was only fully finished in 1880 after another 40 years of construction. This project is a symbol of our prestige and the favor God has placed upon the city and our nation."
  increase_the_cathedral_to_level_2_title: "Finish the Cathedral"
  increase_the_cathedral_to_level_2_desc: "More investment and time is needed to finish the Cathedral. The end result is likely to be short of what we hoped for initially but the building is as grand as any found in Rome. It will be the pride of the nation and a marvel to worshipers across Europe."
  develop_the_rhine_area_title: "Develop the Rhine Valley"
@@ -122,7 +122,56 @@
  # Branching 1
  #---------------------------------------------------------
 
- Branching_mission_title: "Branching Mission"
- Branching_mission_desc: "These missions depend on what religion you chose in the reformation"
-
+ branching_mission_title: "Branching Mission"
+ branching_mission_desc: "These missions depend on what religion you chose in the reformation"
  
+
+ #---------------------------------------------------------
+ # Modifiers and stuff
+ #---------------------------------------------------------
+ kol_rhine_no_tolls:0 "Toll Removal"
+ desc_kol_rhine_no_tolls:0 "With the establishment of a common market along the rhine economic development has been made easier."
+ kol_rhine_trade:0 "Rhine trade"
+ desc_kol_rhine_trade:0 "We have established a firm control over trade along the Rhine and her tributaries"
+ KOL_RHINE_TRADE_DESC_TOOLTIP:0 "bababoey"
+ rhine_trade_encuraged:0 "Rhine trade encuraged"
+ desc_rhine_trade_encuraged:0 "Through increasing the availability of the the waterways we can make our manufactoring sector operate at better margins"
+ modern_army:0 "Modernized army"
+ desc_modern_army:0 "Our modernization efforts have enabled our army to have a tactical advantage over our enemies"
+ MODERNIZED_ARMY_KOL_DESC_TOOLTIP:0 "bababoey"
+ kol_germany_reward:0 "Gunpoint Unification"
+ desc_kol_germany_reward:0 "Our conquest of Germany has made our every move recorded anxiously by our enemies and enthusiastically by our allies"
+ storm_of_steel:0 "Storm of Steel"
+ desc_storm_of_steel:0 "Once more in to the breach"
+ inland_trade_encuraged:0 "Inland trade encuraged"
+ desc_inland_trade_encuraged:0 "Rivers are the main mode of transport for goods produced inland"
+ kol_imperial_relations:0 "Imperial relations"
+ desc_kol_imperial_relations:0 "We have many friends in high palces. We can leverage these connections to get even more."
+ KOL_IMPERIAL_RELATIONS:0 "bababoey"
+ kol_traditional_elector:0 "Traditional Elector"
+ desc_kol_traditional_elector:0 "Our status as an elector in the empire is taken for granted by everyone but us"
+ kol_traditional_elector_desc_tooltip:0 "bababoey"
+ main_port_to_germany:0 "Main port to Germany"
+ desc_main_port_to_germany:0 "Den Haag is the main port of Germany. Goods from all over the world are unloaded here for further transport inland on river boats"
+ kol_world_trade:0 "Around the World"
+ desc_kol_world_trade:0 "We have business connections everywhere"
+ kol_river_fort_line:0 "River fortification"
+ desc_kol_river_fort_line:0 "Investments in the fortifications in this province has made it extra hard for attackers to take."
+ festung_staat_rheinland:0 "To the last man"
+ desc_festung_staat_rheinland:0 "WE SHALL NEVER SURRENDER"
+ heretics_gtfo:0 "When words fail"
+ desc_heretics_gtfo:0 "Perhaps we can use the sword to strengthen our argument"
+ surge_of_great_thinkers:0 "German Enlightenment"
+ desc_surge_of_great_thinkers:0 "Eghhh.... don't murder or steal...."
+ state_sponsored_industries:0 "State Sponsored Industries"
+ desc_state_sponsored_industries:0 "The lost tax money is more than compensaded for with the general increase of the economy"
+ KOL_RADICAL_REFORMATION.1:0 "bababoey"
+
+ # Events
+ frog_flavor_kol.EVTNAME1: "How radical of a reformation?"
+ frog_flavor_kol.EVTOPTA1: "Did Jesus not say "It is easier for a cammel to enter through the eye of a needle than a rich person to enter heaven"?"
+ frog_flavor_kol.EVTOPTB1: "Let's not get ahead of yourselves here"
+ frog_flavor_kol.EVTDESC1: "Our reformation movement has picked up steam in the last couple years, primarily among the peasantry. While this is good and all, many peasants have now started to take up arms against the feudal order in order to purify the social relationships. They claim that faith is a personal endevour and as such cannot be forced upon an indivudual. What's more, they claim that the church has no authority to enact taxes as a result! Indeed, the Church these radicals profess membership of is the Church Invisible, being the community of true believers in Christ and nothing more. This Church Invisible has no chapels, no bells, no altar. The only door is true faith and the only authority is God. While this radical doctrine is undoubtedly shunned by by every temporal power perhaps the common folk are right and the only authority that the land needs is God. As above in heaven as below on earth?"
+
+ peasant_theocracy_reform: "Peasant Theocracy"
+ peasant_theocracy_reform_desc: "A community of radical christians who believe that the only lord is God in heaven and that one should serve no master but Him"

@@ -5,8 +5,12 @@ german_dominance = {
 	potential = {
 		OR = {
 			tag = KOL
-			AND = {
-				tag = GER
+			AND = { 
+				OR = {
+					tag = WES
+					tag = HAN
+					tag = GER
+				}
 				was_tag = KOL
 			}
 		}
@@ -446,8 +450,12 @@ cologne_second = {
 	potential = {
 		OR = {
 			tag = KOL
-			AND = {
-				tag = GER
+			AND = { 
+				OR = {
+					tag = WES
+					tag = HAN
+					tag = GER
+				}
 				was_tag = KOL
 			}
 		}
@@ -565,8 +573,12 @@ cologne_third = {
 	potential = {
 		OR = {
 			tag = KOL
-			AND = {
-				tag = GER
+			AND = { 
+				OR = {
+					tag = WES
+					tag = HAN
+					tag = GER
+				}
 				was_tag = KOL
 			}
 		}
@@ -637,14 +649,18 @@ cologne_fourth = {
 	potential = {
 		OR = {
 			tag = KOL
-			AND = {
-				tag = GER
+			AND = { 
+				OR = {
+					tag = WES
+					tag = HAN
+					tag = GER
+				}
 				was_tag = KOL
 			}
 		}
 	}
 
-	develop_köln = {
+	develop_cologne = {
 		icon = mission_build_up_to_force_limit
 		position = 1
 		required_missions = {  }
@@ -664,7 +680,7 @@ cologne_fourth = {
 	increase_the_cathedral_to_level_2 = {
 		icon = mission_build_up_to_force_limit
 		position = 2
-		required_missions = { develop_köln }
+		required_missions = { develop_cologne }
 		trigger = {
 			85 = {
 				has_great_project = {
@@ -841,8 +857,12 @@ cologne_fith = {
 	potential = {
 		OR = {
 			tag = KOL
-			AND = {
-				tag = GER
+			AND = { 
+				OR = {
+					tag = WES
+					tag = HAN
+					tag = GER
+				}
 				was_tag = KOL
 			}
 		}
@@ -989,7 +1009,29 @@ catholic_path = {
 			}
 			papal_influence = 100	
 		}
-		effect = { }
+		effect = {
+			add_country_modifier = {
+				name = kol_pope_happy
+				duration = -1
+			}
+		}
+	}
+
+	we_are_the_pope = {
+		icon = mission_build_up_to_force_limit
+		position = 8
+		required_missions = {
+			staying_true_to_the_pope
+		}
+		trigger = {
+			is_papal_controller = yes
+		}
+		effect = {
+			add_country_modifier = {
+				name = kol_catholic_control
+				duration = -1
+			}
+		}
 	}
 }
 
@@ -1005,8 +1047,15 @@ protestant_path = {
 		icon = mission_build_up_to_force_limit
 		position = 7
 		required_missions = { religious_question }
-		trigger = { }
-		effect = { }
+		trigger = {
+			num_of_aspects = 3
+		}
+		effect = {
+			add_country_modifier = {
+				name = flexible_theology
+				duration = -1
+			}
+		}
 	}
 }
 
@@ -1021,23 +1070,27 @@ reformed_path = {
 	the_likes_of_calvin_and_hutter = {
 		icon = mission_build_up_to_force_limit
 		position = 7
-		required_missions = {  }
+		required_missions = { religious_question }
 		trigger = {
 			fervor = 50
 			has_active_fervor = yes
 		}
-		effect = { }
+		effect = {
+			add_fervor = 200
+			add_adm_power = 100
+			add_dip_power = 100
+		}
 	}
 	how_radical_of_a_reformation = {
 		icon = mission_build_up_to_force_limit
 		position = 8
-		required_missions = {  }
+		required_missions = { the_likes_of_calvin_and_hutter }
 		trigger = {
 			has_global_flag = great_peasants_war_flag
 		}
 		effect = {
 			country_event = {
-				id = kol_radical_reformation.1
+				id = frog_flavor_kol.1
 				days = 2
 				tooltip = KOL_RADICAL_REFORMATION.1
 			}
@@ -1060,7 +1113,9 @@ very_radical = {
 		trigger = {
 			always = yes
 		}
-		effect = { }
+		effect = { 
+			add_government_reform = peasant_theocracy_reform
+		}
 	}
 }
 
@@ -1075,11 +1130,16 @@ not_so_radical = {
 	keeping_it_real = {
 		icon = mission_build_up_to_force_limit
 		position = 9
-		required_missions = {  }
+		required_missions = { how_radical_of_a_reformation }
 		trigger = {
 			always = yes
 		}
-		effect = { }
+		effect = {
+			add_country_modifier = {
+				name = kol_sided_with_establishment
+				duration = -1
+			}
+		}
 	}
 }
 
@@ -1091,8 +1151,18 @@ branching_1 = {
 		NOT = { has_country_flag = kol_cath }
 		NOT = { has_country_flag = kol_prot }	
 		NOT = { has_country_flag = kol_ref }	
-		tag = KOL
+		OR = {
+			tag = KOL
+			AND = { 
+				OR = {
+					tag = WES
+					tag = HAN
+					tag = GER
+				}
+				was_tag = KOL
+			}
 		}
+	}
 
 	branching_mission = {
 		icon = mission_unknown_mission

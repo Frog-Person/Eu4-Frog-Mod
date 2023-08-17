@@ -1118,6 +1118,7 @@ theocracy = {
 				land_christian_sun_reform
 				#
 				new_jerusalem_reform
+				peasant_theocracy_reform
 			}
 		}
 		internal_vs_external_mission = {

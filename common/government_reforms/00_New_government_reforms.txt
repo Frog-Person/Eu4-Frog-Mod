@@ -236,3 +236,34 @@ new_jerusalem_reform = {
 		gain_monarch_power_from_force_converting = yes
 	}	
 }
+
+peasant_theocracy_reform = {
+	icon = "peasant_republic"
+	allow_normal_conversion = no
+
+	potential = {
+		has_country_flag = kol_very_radical
+	}
+
+	trigger = {
+		has_country_flag = kol_very_radical
+		religion = reformed
+	}
+	modifiers = {
+		global_unrest = -5
+		land_morale = 0.2
+		development_cost = -0.05
+		diplomatic_reputation = -5
+		election_cycle = 6
+		max_terms = 4
+	}
+	lock_level_when_selected = yes
+	republican_name = yes
+	has_term_election = yes
+	custom_attributes = {
+		gain_monarch_power_from_force_converting = yes
+		cannot_ally_non_republics_or_non_rev = yes
+		disables_estate_nobles = yes
+		has_term_election = yes
+	}
+}

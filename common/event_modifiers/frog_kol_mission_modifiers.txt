@@ -79,3 +79,24 @@ inland_trade_encuraged = {
 kol_rhine_no_tolls = {
 	local_development_cost = -0.05
 }
+
+flexible_theology = {
+	technology_cost = -0.05
+	idea_cost = -0.05
+}
+
+sided_with_the_establishment = {
+	global_tax_modifier = 0.2
+	nobles_loyalty_modifier = 0.2
+}
+
+kol_pope_happy = {
+	papal_influence = 2
+	curia_treasury_contribution = 0.5
+}
+
+kol_catholic_control = {
+	papal_influence_from_cardinals = 2
+	global_missionary_strength = 0.05
+	reform_progress_growth = 0.1
+}
