@@ -7,15 +7,18 @@ efr_cirksena = {
 }
 
 dutch_inundation = {
-	local_hostile_attrition = 5
-	local_defensiveness = 0.2
+	local_hostile_attrition = 6
+	local_defensiveness = 0.40
 	local_hostile_movement_speed = 0.5
+	local_monthly_devastation = 5
+	max_attrition = 3
+	local_tax_modifier = -0.5
+	local_production_efficiency = -0.5
 }
 
 fluyt_tradeship = {
-	light_ship_power = -0.8
-	naval_forcelimit_modifier = 0.25
-	global_ship_trade_power = 1.0
+	light_ship_power = -0.5
+	global_ship_trade_power = 0.20
 }
 
 burgundian_successor = {

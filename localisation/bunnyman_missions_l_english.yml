@@ -751,6 +751,10 @@
  gme_saint_mark_coptic_cathedral_desc: "Saint Mark Coptic Cathedral"
  gonder_castle: "Fasil Ghebbi"
  gonder_castle_desc: "Fasil Ghebbi - the old castle of Gonder"
+ port_of_hong_kong: "Port of Hong Kong"
+ port_of_singapore: "Port of Singapore"
+ batavia_city: "City of Batavia"
+ the_city_colombo: "City of Colombo"
 
  #Misc
  free_colonist_2: "Free Colonist 1600"
@@ -760,3 +764,11 @@
  fleet_disarmament_modifier: "Fleet Disarmed"
  recovering_fleet: "Recovering Fleet"
  CB_ALLOWED_po_fleet_disarmament: "Fleet Disarmament"
+ 
+ #Netherlands Extra
+ voc_investments_moluccas: "Moluccas Investments"
+ ned_batavia: "Batavia"
+ ned_life_on_the_sea: "Dutch Sea Life"
+ ned_dutch_ship_production: "Dutch Ship ProductioN"
+ ned_diplo_rep: "Dutch Dynasty"
+ ned_city_investments_2: "City Investments"

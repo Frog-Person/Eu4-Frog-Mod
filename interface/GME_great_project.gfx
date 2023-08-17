@@ -151,4 +151,20 @@ spriteTypes = {
 		name = "GFX_great_project_gme_saint_mark_coptic_cathedral"	
 		texturefile = "gfx//interface//great_projects//great_project_gme_saint_mark_coptic_cathedral.dds"
 	}
+	spriteType = {
+		name = "GFX_great_project_port_of_hong_kong"	
+		texturefile = "gfx//interface//great_projects//great_project_port_of_hong_kong.dds"
+	}
+	spriteType = {
+		name = "GFX_great_project_port_of_singapore"	
+		texturefile = "gfx//interface//great_projects//great_project_port_of_singapore.dds"
+	}
+	spriteType = {
+		name = "GFX_great_project_batavia_city"	
+		texturefile = "gfx//interface//great_projects//great_project_batavia_city.dds"
+	}
+	spriteType = {
+		name = "GFX_great_project_the_city_colombo"	
+		texturefile = "gfx//interface//great_projects//great_project_the_city_colombo.dds"
+	}
 }

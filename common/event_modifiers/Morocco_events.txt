@@ -32,6 +32,7 @@ MOR_raiding = {
 	available_province_loot = 0.3
 }
 MOR_rush_of_colonists = {
+	colonists = 1
 	global_colonial_growth = 15
 	colonist_placement_chance = 0.1
 }
