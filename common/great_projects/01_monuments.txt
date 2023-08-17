@@ -11497,12 +11497,15 @@ doges_palace = {
 			factor = 500
 		}
 		province_modifiers = {
+			local_development_cost = -0.05
 		}
 		area_modifier = {
 		}
 		country_modifiers = {
 			reform_progress_growth = 0.1
 			republican_tradition = 0.1 
+			galley_power = 0.025
+			light_ship_power = 0.05
 		}
 		on_upgraded = {
 		}
@@ -11516,6 +11519,7 @@ doges_palace = {
 			factor = 1500
 		}
 		province_modifiers = {
+			local_development_cost = -0.1
 		}
 		area_modifier = {
 		}
@@ -11523,6 +11527,8 @@ doges_palace = {
 			reform_progress_growth = 0.2
 			republican_tradition = 0.25 
 			prestige = 0.5
+			galley_power = 0.05
+			light_ship_power = 0.10
 		}
 		on_upgraded = {
 		}
@@ -11536,6 +11542,7 @@ doges_palace = {
 			factor = 3000
 		}
 		province_modifiers = {
+			local_development_cost = -0.15
 		}
 		area_modifier = {
 		}
@@ -11543,6 +11550,8 @@ doges_palace = {
 			reform_progress_growth = 0.3
 			republican_tradition = 0.5 
 			prestige = 1
+			galley_power = 0.075
+			light_ship_power = 0.15
 		}
 		on_upgraded = {
 		}
@@ -21281,12 +21290,20 @@ fez_market = {
 	can_use_modifiers_trigger = {
 		owner = {
 			tag = MOR
+			tag = ADU
+			tag = TUN
+			tag = MAM
+			tag = EGY
 		}
 	}
 
 	can_upgrade_trigger = {
 		owner = {
 			tag = MOR
+			tag = ADU
+			tag = TUN
+			tag = MAM
+			tag = EGY
 		}
 	}
 
