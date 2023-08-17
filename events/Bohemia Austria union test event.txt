@@ -45,27 +45,21 @@ country_event = {
 		ai_chance = { 
 			factor = 10 
 		}
-		HAB = { 
-			country_event = { }
-        option = {
-		name =
-		}
-		ai_chance = { factor = 1 } 
+		ai_chance = { factor = 10 } 
 		set_country_flag = boh_accepted_pu
 		HAB = { 
 			create_union = BOH 
-			country_event = { }
-		}
 		}
 	}
 	option = {
 		name = "Never forget"
-		ai_chance = {
-			factor = 90
-		}
-		add_opinion = {
-			who = HAB
-			modifier = BOH_Will_Never_Join_You
+		ai_chance = { factor = 90 }
+		HAB = {
+			add_casus_belli = {
+				cb_restore_personal_union
+				months = 300
+				target = BOH
+			}
 		}
 	}
 }
