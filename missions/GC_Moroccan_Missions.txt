@@ -1348,7 +1348,7 @@ gc_morocco_4 = {
 		effect = {
 			add_country_modifier = {
 				name = MOR_rush_of_colonists
-				duration = 14600
+				duration = 18250
 			}
 			
 		}
