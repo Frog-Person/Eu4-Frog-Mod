@@ -44,9 +44,3 @@ austrian_path6 = {
 convert_the_hus = {
     global_missionary_strength = 0.03
 }
-BOH_Will_Never_Join_You = {
-    add_opinion = {
-        who = BOH
-        value = -100
-    }
-}
