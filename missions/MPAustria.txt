@@ -1993,14 +1993,13 @@ fist_of_the_hre = {
 	potential = {
 		tag = AUH
 	}
-
 	a_quality_force = {
 		icon = mission_build_up_to_force_limit
 		position = 3
 		required_missions = {  }
 		trigger = {
 			army_size_percentage = 1
-			land_force_limit = 150
+			land_forcelimit = 150
 			has_global_modifier_value = {
 				which = discipline
 				value = 0.2
@@ -2015,17 +2014,17 @@ fist_of_the_hre = {
 		trigger = {
 			has_flagship = yes
 			navy_size_percentage = 1
-			num_of_provinces_with = {
+			num_of_owned_provinces_with = {
 			    OR = {
 			        has_building = shipyard
 			        has_building = grand_shipyard
 			    }
 			    value = 7
 			}
-		 }
+		}
 		effect = {
 			add_prestige = 10
-		 }
+		}
 	}
 	engage_our_rivals = {
 		icon = mission_build_up_to_force_limit
@@ -2054,7 +2053,6 @@ ah_gov_reform = {
 	potential = {
 		tag = AUH
 	}
-
 	expand_state_administration = {
 		icon = mission_build_up_to_force_limit
 		position = 4
@@ -2166,7 +2164,7 @@ ah_gov_reform = {
 		trigger = {
 			has_flagship = yes
 			navy_size_percentage = 1
-			num_of_provinces_with = {
+			num_of_owned_provinces_with = {
 			    OR = {
 			        has_building = shipyard
 			        has_building = grand_shipyard
