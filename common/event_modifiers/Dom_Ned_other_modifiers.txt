@@ -12,8 +12,8 @@ dutch_inundation = {
 	local_hostile_movement_speed = 0.5
 	local_monthly_devastation = 5
 	max_attrition = 3
-	local_tax_modifier = -0.7
-	local_production_efficiency = -0.7
+	local_tax_modifier = -0.5
+	local_production_efficiency = -0.5
 }
 
 fluyt_tradeship = {
