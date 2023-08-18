@@ -33,7 +33,7 @@ german_dominance = {
 		}
 	}
 	conquer_rhineland = {
-		icon = mission_build_up_to_force_limit
+		icon = mission_cannons_firing
 		position = 2
 		required_missions = { kol_build_to_forcelimit }
 
@@ -70,7 +70,7 @@ german_dominance = {
 		}
 	}
 	conquer_hesse = {
-		icon = mission_build_up_to_force_limit
+		icon = mission_cannons_firing
 		position = 3
 		required_missions = { conquer_rhineland }
 		trigger = {
@@ -104,7 +104,7 @@ german_dominance = {
 		 }
 	}
 	finish_the_conquest_of_the_banks_of_the_rhine_upstream = {
-		icon = mission_build_up_to_force_limit
+		icon = mission_hanseatic_city
 		position = 4
 		required_missions = { conquer_hesse }
 		trigger = {
@@ -143,7 +143,7 @@ german_dominance = {
 		}
 	}
 	rhine_trade = {
-		icon = mission_build_up_to_force_limit
+		icon = mission_open_up_china
 		position = 5
 		required_missions = { finish_the_conquest_of_the_banks_of_the_rhine_upstream }
 		trigger = {
@@ -163,7 +163,7 @@ german_dominance = {
 		 }
 	}
 	expand_the_home_market = {
-		icon = mission_build_up_to_force_limit
+		icon = reform_the_state
 		position = 6
 		required_missions = { rhine_trade the_roar_of_industry }
 		trigger = {
@@ -462,7 +462,7 @@ cologne_second = {
 	}
 
 	conquer_westphalia = {
-		icon = mission_build_up_to_force_limit
+		icon = mission_cannons_firing
 		position = 2
 		required_missions = { kol_build_to_forcelimit }
 		trigger = {
@@ -486,7 +486,7 @@ cologne_second = {
 		}
 	}
 	conquer_braunschweig = {
-		icon = mission_build_up_to_force_limit
+		icon = mission_cannons_firing
 		position = 4
 		required_missions = { conquer_westphalia }
 		trigger = {
@@ -505,7 +505,7 @@ cologne_second = {
 		}
 	}
 	control_the_weser_estuary = {
-		icon = mission_build_up_to_force_limit
+		icon = mission_galleys_in_port
 		position = 5
 		required_missions = { conquer_braunschweig }
 		trigger = {
@@ -524,7 +524,7 @@ cologne_second = {
 		}
 	}
 	imperial_relations = {
-		icon = mission_build_up_to_force_limit
+		icon = spread_the_von_wettins
 		position = 7
 		required_missions = {  }
 		trigger = {
@@ -546,7 +546,7 @@ cologne_second = {
 		}
 	}
 	secured_electorship = {
-		icon = mission_build_up_to_force_limit
+		icon = polish_diplomacy
 		position = 8
 		required_missions = { imperial_relations }
 		trigger = {
@@ -585,7 +585,7 @@ cologne_third = {
 	}
 
 	control_the_ems_estuary = {
-		icon = mission_build_up_to_force_limit
+		icon = mission_galleys_in_port
 		position = 3
 		required_missions = { conquer_westphalia }
 		trigger = {
@@ -603,7 +603,7 @@ cologne_third = {
 		}
 	}
 	control_the_rhine_estuary = {
-		icon = mission_build_up_to_force_limit
+		icon = mission_open_up_china
 		position = 4
 		required_missions = { control_the_ems_estuary }
 		trigger = {
@@ -622,7 +622,7 @@ cologne_third = {
 	}
 
 	channel_trade = {
-		icon = mission_build_up_to_force_limit
+		icon = mission_galleys_in_port
 		position = 5
 		required_missions = { control_the_rhine_estuary }
 		trigger = {
@@ -661,7 +661,7 @@ cologne_fourth = {
 	}
 
 	develop_cologne = {
-		icon = mission_build_up_to_force_limit
+		icon = ansbach_succession
 		position = 1
 		required_missions = {  }
 		trigger = {
@@ -678,7 +678,7 @@ cologne_fourth = {
 		}
 	}
 	increase_the_cathedral_to_level_2 = {
-		icon = mission_build_up_to_force_limit
+		icon = mission_european_church
 		position = 2
 		required_missions = { develop_cologne }
 		trigger = {
@@ -699,7 +699,7 @@ cologne_fourth = {
 		}
 	}
 	develop_the_rhine_area = {
-		icon = mission_build_up_to_force_limit
+		icon = mission_eastern_european_city
 		position = 3
 		required_missions = { conquer_rhineland increase_the_cathedral_to_level_2 }
 		trigger = {
@@ -727,7 +727,7 @@ cologne_fourth = {
 		}
 	}
 	center_of_german_industry = {
-		icon = mission_build_up_to_force_limit
+		icon = ger_kaiserreich
 		position = 4
 		required_missions = { develop_the_rhine_area }
 		trigger = {
@@ -769,7 +769,7 @@ cologne_fourth = {
 		}
 	}
 	weser_defensive_line = {
-		icon = mission_build_up_to_force_limit
+		icon = the_imperial_border
 		position = 5
 		required_missions = { conquer_braunschweig }
 		trigger = {
@@ -835,7 +835,7 @@ cologne_fourth = {
 		}
 	}
 	win_leage_war = {
-		icon = mission_build_up_to_force_limit
+		icon = holy_state
 		position = 7
 		required_missions = { religious_question }
 		trigger = {
