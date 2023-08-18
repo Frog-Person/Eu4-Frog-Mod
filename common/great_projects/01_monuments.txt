@@ -11172,7 +11172,7 @@ cahokia = {
 		area_modifier = {
 		}
 		country_modifiers = {
-			tribal_development_growth = 0.01			
+			tribal_development_growth = 0			
 		}
 		on_upgraded = {
 		}
@@ -11191,7 +11191,7 @@ cahokia = {
 		area_modifier = {
 		}
 		country_modifiers = {
-			tribal_development_growth = 0.02
+			tribal_development_growth = 0
 			global_manpower_modifier = 0.1
 		}
 		on_upgraded = {
@@ -11211,7 +11211,7 @@ cahokia = {
 			local_monthly_devastation = -1
 		}
 		country_modifiers = {
-			tribal_development_growth = 0.03
+			tribal_development_growth = 0
 			global_manpower_modifier = 0.2
 		}
 		on_upgraded = {

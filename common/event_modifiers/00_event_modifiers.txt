@@ -12419,7 +12419,7 @@ tot_ceramics_discovered = {
 }
 
 tot_dedicated_ruler = {
-	tribal_development_growth = 0.02
+	tribal_development_growth = 0
 }
 
 tot_shameful_ruler = {
@@ -12533,13 +12533,13 @@ chateau_de_chenonceau = {
 
 #Native Federations
 leadership_pays_off_mod = {
-	monthly_federation_favor_growth = 0.05
+	monthly_federation_favor_growth = 0.01
 }
 grow_in_harmony_mod = {
 	development_cost = -0.05
 }
 primus_inter_pares_mod = {
-	tribal_development_growth = 0.02
+	tribal_development_growth = 0
 }
 stand_the_ground_mod = {
 	defensiveness = 0.10

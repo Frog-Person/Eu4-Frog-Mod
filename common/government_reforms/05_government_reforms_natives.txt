@@ -53,7 +53,7 @@ native_chiefdom_reform = {
 	nation_designer_cost = 20
 
 	modifiers = {
-		tribal_development_growth = 0.02
+		tribal_development_growth = 0
 	}
 }
 
@@ -134,7 +134,7 @@ native_martial_tradition_reform = {
 native_oral_tradition_reform = {
 	icon = "native_oral_tradition_reform"
 	modifiers = {
-		monthly_reform_progress_modifier = 0.25
+		monthly_reform_progress_modifier = 0
 	}
 
 	ai = {
@@ -145,8 +145,8 @@ native_oral_tradition_reform = {
 native_land_tradition_reform = {
 	icon = "native_land_tradition_reform"
 	modifiers = {
-		add_tribal_land_cost = -0.25
-		country_admin_power = 1 
+		add_tribal_land_cost = 0
+		country_admin_power = 0 
 	}
 
 	ai = {
@@ -225,7 +225,7 @@ native_seasonal_travel_reform = {
 	}
 	modifiers = {
 		migration_cost = -0.25
-		tribal_development_growth = 0.02
+		tribal_development_growth = 0
 	}
 	conditional = {
 		allow = { has_dlc = "Conquest of Paradise" }
@@ -267,7 +267,7 @@ native_settle_down_reform = {
 	}
 	modifiers = {
 		global_institution_spread = 0.2
-		add_tribal_land_cost = 2.0
+		add_tribal_land_cost = 7.0
 		governing_capacity_modifier = -0.25
 	}
 	conditional = {
