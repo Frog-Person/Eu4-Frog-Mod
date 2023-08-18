@@ -1,6 +1,9 @@
 #austrian_bohemian_union
 country_event = {
-
+	id = MP_BOH_Events.1
+	title = MP_BOH_Events.1.t #fuck_if_i_know
+	desc = MP_BOH_Events.1.d
+	picture = GOOD_WITH_MONARCH_eventPicture
 	picture = LIBERUM_VETO_eventPicture
 	
 	fire_only_once = yes
