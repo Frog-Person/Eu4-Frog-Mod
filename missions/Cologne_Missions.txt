@@ -148,9 +148,16 @@ german_dominance = {
 		required_missions = { finish_the_conquest_of_the_banks_of_the_rhine_upstream }
 		trigger = {
 			1876 = {
-				trade_share = {
-					country = KOL
-					share = 60
+				OR = {
+					trade_share = {
+						country = WES
+						share = 60
+					}
+				
+					trade_share = {
+						country = KOL
+						share = 60
+					}
 				}
 			}
 		 }
