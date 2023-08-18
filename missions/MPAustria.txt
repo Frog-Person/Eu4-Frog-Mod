@@ -1570,6 +1570,8 @@ austrian_formable_slot1 = {
 						type = all
 						culture = austrian
 						OR = {
+							NOT = { can_build = workshop }
+							NOT = { can_build = counting_house }
 							has_building = workshop
 							has_building = counting_house
 						}
@@ -1586,36 +1588,38 @@ austrian_formable_slot1 = {
 				}
 			}
 			else_if = {
-					limit = {
-						has_country_modifier = austrian_path2
-						owns_core_province = 1772
-						1772 = {
-							culture = austrian
-							num_of_times_improved = 3
-							OR = {
-								has_building = courthouse
-								has_building = town_hall
-							}
+				limit = {
+					has_country_modifier = austrian_path2
+					owns_core_province = 1772
+					1772 = {
+						culture = austrian
+						num_of_times_improved = 3
+						OR = {
+							has_building = courthouse
+							has_building = town_hall
 						}
-						slovakia_area = {
-							type = all
-							culture = austrian
-							OR = {
-								has_building = workshop
-								has_building = counting_house
-							}
-							OR = {
-								has_building = temple
-								has_building = cathedral
-							}
-								}
 					}
-					remove_country_modifier = austrian_path2
-					add_country_modifier = {
-						name = austrian_path3
-						duration = -1	
+					slovakia_area = {
+						type = all
+						culture = austrian
+						OR = {
+							NOT = { can_build = workshop }
+							NOT = { can_build = counting_house }
+							has_building = workshop
+							has_building = counting_house
+						}
+						OR = {
+							has_building = temple
+							has_building = cathedral
+						}
 					}
-					set_country_flag = austrian_hungary_formable
+				}
+				remove_country_modifier = austrian_path2
+				add_country_modifier = {
+					name = austrian_path3
+					duration = -1	
+				}
+				set_country_flag = austrian_hungary_formable
 			}
 			else_if = {
 				limit = {
@@ -1633,6 +1637,8 @@ austrian_formable_slot1 = {
 					type = all
 					culture = austrian
 					OR = {
+						NOT = { can_build = workshop }
+						NOT = { can_build = counting_house }
 						has_building = workshop
 						has_building = counting_house
 					}
