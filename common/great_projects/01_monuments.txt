@@ -20018,13 +20018,11 @@ gme_bakhchisaray_palace = {
 	build_trigger = { }
 	on_built = { }
 	on_destroyed = { }
-	can_use_modifiers_trigger = {}
+	can_use_modifiers_trigger = {
+		province_is_or_accepts_culture = yes
+	}
 	can_upgrade_trigger = {
 		province_is_or_accepts_culture = yes
-		OR = {
-			owned_by = GLH
-			owned_by = MGE
-		}
 	}
 	keep_trigger = { }
 	tier_0 = {
@@ -21289,21 +21287,25 @@ fez_market = {
 
 	can_use_modifiers_trigger = {
 		owner = {
-			tag = MOR
-			tag = ADU
-			tag = TUN
-			tag = MAM
-			tag = EGY
+			OR = {
+				tag = MOR
+				tag = ADU
+				tag = TUN
+				tag = MAM
+				tag = EGY
+			}
 		}
 	}
 
 	can_upgrade_trigger = {
 		owner = {
-			tag = MOR
-			tag = ADU
-			tag = TUN
-			tag = MAM
-			tag = EGY
+			OR = {
+				tag = MOR
+				tag = ADU
+				tag = TUN
+				tag = MAM
+				tag = EGY
+			}
 		}
 	}
 
