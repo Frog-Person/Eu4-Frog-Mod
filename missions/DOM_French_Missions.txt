@@ -475,13 +475,6 @@ french_missions_1_kill_hre_path = {
 				name = fra_victory_germany_modifier
 				duration = 9125 
 			}
-
-			183 = {
-				add_province_modifier = {
-					name = center_mil_matters_strategy_modifier
-					duration = -1 
-				}
-			}
 			custom_tooltip = fra_every_required_area_gains_tt
 			tooltip = {
 				add_province_modifier = {
