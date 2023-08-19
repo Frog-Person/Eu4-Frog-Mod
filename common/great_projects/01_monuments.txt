@@ -9014,7 +9014,11 @@ heddal_stave_church = {
 		country_modifiers = {
 			stability_cost_modifier = -0.1
 			missionary_maintenance_cost = -0.2
+			global_missionary_strength = 0.01
 			missionaries = 1
+			papal_influence = 2
+			monthly_fervor_increase = 1.25
+			church_power_modifier = 0.2
 		}
 
 		#what effects happen when this tier is achieved
