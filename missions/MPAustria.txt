@@ -1972,7 +1972,7 @@ austria_slot_4_imperial = {
 		}
 		effect = {
 			add_country_modifier = {
-				"efficient_bureaucracy"
+				name = "efficient_bureaucracy"
 				duration = 5480
 			}
 		}
