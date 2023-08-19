@@ -9206,8 +9206,7 @@ versailles = {
 		conditional_modifier = {
 			trigger = {
 				owner = { 
-					mission_completed = fra_means_expansion 
-					is_emperor = yes 
+					mission_completed = fra_push_imperial_line
 				}
 			}
 			modifier = {
