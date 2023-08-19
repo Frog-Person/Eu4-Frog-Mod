@@ -17160,7 +17160,8 @@ mbanza_kongo = {
 		}
 		country_modifiers = {
 			institution_spread_from_true_faith = 0.33
-			reform_progress_growth = 0.15
+			reform_progress_growth = 0.2
+			stability_cost_modifier = -0.1
 			legitimacy = 0.5
 		}
 		on_upgraded = {
@@ -17180,7 +17181,9 @@ mbanza_kongo = {
 		}
 		country_modifiers = {
 			institution_spread_from_true_faith = 0.5
-			reform_progress_growth = 0.2
+			reform_progress_growth = 0.3
+			global_unrest = -1
+			stability_cost_modifier = -0.2
 			legitimacy = 1
 			allow_free_estate_privilege_revocation = yes
 		}
