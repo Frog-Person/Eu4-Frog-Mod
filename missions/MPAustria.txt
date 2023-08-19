@@ -3,8 +3,10 @@ austrian_formable_slot1 = {
 	generic = no
 	ai = yes
 	potential = {
-		tag = HAB
-		tag = AUH
+		OR = {
+			tag = HAB
+			tag = AUH
+		}
 	}
 
 	dominate_hungary = {
@@ -1676,8 +1678,10 @@ austrian_unique_formable_slot2 = {
 	generic = no
 	ai = yes
 	potential = {
-		tag = HAB
-		tag = AUH
+		OR = {
+			tag = HAB
+			tag = AUH
+		}
 	}
 
 	rule_bohemia = {
@@ -1777,8 +1781,10 @@ austrian_eco_slot3 = {
 	generic = no
 	ai = yes
 	potential = {
-		tag = HAB
-		tag = AUH
+		OR = {
+			tag = HAB
+			tag = AUH
+		}
 	}
 
 	balance_the_estates = {
@@ -1943,8 +1949,8 @@ austrian_eco_slot3 = {
 			}
 		}
 		effect = {
+			add_prestige = 15
 			add_country_modifier = {
-				add_prestige = 10
 				name = "capitals_of_the_hre"
 				duration = -1
 			}
@@ -1957,8 +1963,10 @@ austria_slot_4_imperial = {
 	generic = no
 	ai = yes
 	potential = {
-		tag = HAB
-		tag = AUH
+		OR = {
+			tag = HAB
+			tag = AUH
+		}
 	}
 
 	hre_government_reform = {
@@ -2015,8 +2023,10 @@ balkan_expansion_slot_5 = {
 	generic = no
 	ai = yes
 	potential = {
-		tag = HAB
-		tag = AUH
+		OR = {
+			tag = HAB
+			tag = AUH
+		}
 	}
 
 	consolidate_croatian_land = {
