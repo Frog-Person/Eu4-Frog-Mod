@@ -4129,6 +4129,7 @@ the_great_wall_of_china = {
 
 		#what modifiers are added to the country when we have this project here on this tier
 		country_modifiers = {
+			garrison_size = 0.10
 		}
 
 		#what effects happen when this tier is achieved
@@ -4192,7 +4193,7 @@ the_great_wall_of_china = {
 		#what modifiers are added to the country when we have this project here on this tier
 		country_modifiers = {
 			hostile_attrition = 2
-			garrison_size = 0.25
+			garrison_size = 0.15
 		}
 
 		#what effects happen when this tier is achieved
