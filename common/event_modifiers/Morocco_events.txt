@@ -32,6 +32,7 @@ MOR_raiding = {
 	available_province_loot = 0.3
 }
 MOR_rush_of_colonists = {
+	colonists = 1
 	global_colonial_growth = 15
 	colonist_placement_chance = 0.1
 }
@@ -42,6 +43,12 @@ mor_go_to_brazil = {
 mor_imperial_city = {
 	local_development_cost = -0.075
 	local_build_cost = -0.075
+	local_tax_modifier = 0.15
+}
+mor_mountain_imperial_city = {
+	local_development_cost = -0.075
+	local_build_cost = -0.30
+	local_tax_modifier = 0.15
 }
 mor_leading_africa = {
 	warscore_cost_vs_other_religion = -0.20

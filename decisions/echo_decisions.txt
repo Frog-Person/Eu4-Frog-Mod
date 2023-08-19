@@ -94,9 +94,64 @@ country_decisions = {
 				ai = no
 				dip_tech = 6
 			}
-
 		allow = {
 			dip_tech = 6
+			OR = {
+				tag = POR
+				tag = CAS
+				tag = SPA
+				tag = GBR
+				tag = ENG
+				tag = FRA
+				tag = ADU
+				tag = SCO
+				tag = HOL
+				tag = NED
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = "free_colonist"
+				duration = -1
+			}
+		}
+	}
+	free_colonist_2 = {
+		color = { 166  0  0 }
+		potential = {
+				NOT = {
+					capital_scope = {
+						continent = north_america
+					}
+				}
+				NOT = {
+					capital_scope = {
+						continent = south_america
+					}
+				}
+				NOT = {
+					is_nomad = yes
+				}
+				NOT = { has_country_modifier = free_colonist}	
+				ai = no
+				dip_tech = 6
+			}
+		allow = {
+			is_year = 1600
+			NOT = {
+				OR = {
+					tag = POR
+					tag = CAS
+					tag = SPA
+					tag = GBR
+					tag = ENG
+					tag = FRA
+					tag = ADU
+					tag = SCO
+					tag = HOL
+					tag = NED
+				}
+			}
 		}
 		effect = {
 			add_country_modifier = {
@@ -187,37 +242,6 @@ country_decisions = {
 			add_dip_power = -50
 		}
 		
-	}
-	Create_a_Trade_Hub_2 = {
-		color = { 166  0  0 }
-		potential = {
-			ai = no
-			has_dlc = "Dharma"
-		}
-		
-		allow = {
-			is_at_war = no
-			any_owned_province = {
-					base_production = 10
-					OR = {
-						has_building = workshop
-						has_building = counting_house
-					}
-					OR = {
-						trade_goods = naval_supplies
-						trade_goods = livestock
-						trade_goods = wool
-						trade_goods = grain
-					}
-			}
-			NOT = { has_country_modifier = trade_hub_created_2 }
-			treasury = 250 
-			dip_power = 100
-		}
-		
-		effect = {
-			country_event = { id = echo.3 }
-		}
 	}
 
 	echo_development_counter = {

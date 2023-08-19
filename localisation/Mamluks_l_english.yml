@@ -384,7 +384,7 @@
  MAM_furthermore_10_recovery_speed: "During the §YMamluks Reforms§! Disaster we will receive:\n    Manpower Recovery Speed: §G+10.0%§!"
  MAM_upgrade: "Append Local Goods Produced: §G+1.00§! onto the '§YGranary of the Mediterranean§!' Modifier."
  MAM_trade_modifier_upgrade_1: "Modify '§YBazaar of the East§!' by:\n    Provincial Trade Power Modifier: §G+5.0%§!\n    Trade Efficiency: §G+5.0%§!"
- MAM_trade_modifier_upgrade_2: "Modify '§YBazaar of the East§!' by:\n    Provincial Trade Power Modifier: §G+5.0%§!\n    Trade Efficiency: §G+5.0%§!\n    Ship Tradepower Propagation: §G+20.0%§!"
+ MAM_trade_modifier_upgrade_2: "Modify '§YBazaar of the East§!' by:\n    Provincial Trade Power Modifier: §G+5.0%§!\n    Trade Efficiency: §G+5.0%§!\n    Ship Tradepower Propagation: §G+10.0%§!"
  MAM_highlighted_area: "The §YHighlighted Area§!:"
  MAM_if_we_have_60_burgher_loyalty: "If we have at least §Y60§! Loyalty of the §Y[Root.GetBurghersName]§!:"
  MAM_three_most_developed_provinces: "The §G3§! Most §YDeveloped§! Provinces that do not have '§YGranary of the Mediterranean§!' Modifier and that have the following §YTrade Goods§!:\n[Root.MamluksShowBadGoods]\nmight receive either §YCloth§!, §YGlass§!, or §YPaper§! via the following event."
@@ -526,4 +526,16 @@
  MAM_fight_the_turks_title: "Defeat the Turks"
  MAM_fight_the_turks_desc: "The Turks are on our doorsteps. The coachroaches will rape our wives and children. We will defend ourselves!"
 
+ MAM_upgrade_two: "Append Local Goods Produced: §G+2.00§! onto the '§YGranary of the Mediterranean§!' Modifier."
  
+ MAM_feed_the_world_mission_title: "Feed the World!"
+ MAM_feed_the_world_mission_desc: "We will produce enough grain to feed the mouths of all the peoples of this world"
+ MAM_aswan_dam_title: "Aswan Dam"
+ MAM_aswan_dam_desc: "Construct a grand damn to develop upper Egypt"
+ MAM_develop_upper_nile_title: "Develop Upper Egypt"
+ MAM_develop_upper_nile_desc: "Develop the lands along the Upper Nile." 
+ 
+ MAM_feed_the_world: "Feed the World"
+ MAM_develop_the_lower_nile: "Nile Canals"
+ MAM_aswan_dam: "Nile Canals"
+ MAM_renovated_capital: "Renovated Capital"

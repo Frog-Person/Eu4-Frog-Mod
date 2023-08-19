@@ -51,7 +51,7 @@ dom_ned_exploration_start_1_group = {
 		
 		effect = {
 			add_country_modifier = {
-				duration = 7300
+				duration = -1
 				name = ned_kaapstad
 			}
 			tooltip = {
@@ -313,8 +313,8 @@ dom_ned_exploration_start_1_group = {
 			1500 = {
 				add_trade_modifier = {
 					who = ROOT
-					duration = 5475
-					power = 25
+					duration = -1
+					power = 30
 					key = NED_FURTRADE
 				}
 			}
@@ -476,8 +476,6 @@ dom_ned_exploration_start_2_group = {
 					has_discovered = 649
 					has_discovered = 650
 				}
-				custom_trigger_tooltip = {
-					tooltip = round_the_cape_tt
 					OR = {
 						has_country_flag = flag_passed_the_cape
 						1539 = {
@@ -489,12 +487,11 @@ dom_ned_exploration_start_2_group = {
 							}
 						}
 					}
-				}
 			}
 		}
 		effect = {
-			add_prestige = 5
-			custom_tooltip = tooltip_wip
+			add_prestige = 25
+			add_navy_tradition = 25
 		}
 	}
 	
@@ -562,34 +559,10 @@ dom_ned_exploration_start_2_group = {
 		}
 		
 		effect = {
-			custom_tooltip = tooltip_wip
-			#new zealand
-			if = {
-				limit = {
-					num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
-						colonial_region = colonial_australia
-						value = 5
-						is_city = yes
-					}
-				}
-				custom_tooltip = BONUS_REWARD_YES
+			add_country_modifier = {
+				name = ned_life_on_the_sea
+				duration = -1
 			}
-			else = { custom_tooltip = BONUS_REWARD_NO }
-			custom_tooltip = alternatively_tt
-			if = {
-				limit = {
-					OR = {						
-						any_ally = {
-							primary_culture = maori
-						}
-						any_subject_country = { 
-							primary_culture = maori
-						}
-					}
-				}
-				custom_tooltip = BONUS_REWARD_YES
-			}
-			else = { custom_tooltip = BONUS_REWARD_NO }
 		}
 	}
 	
@@ -649,8 +622,8 @@ dom_ned_exploration_start_2_group = {
 			1376 = {
 				add_trade_modifier = {
 					who = ROOT
-					duration = 5475
-					power = 50
+					duration = -1
+					power = 40
 					key = DUTCH_DEJIMA
 				}
 			}
@@ -722,13 +695,10 @@ dom_ned_exploration_start_2_group = {
 		}
 		
 		effect = {
-			custom_tooltip = tooltip_wip
 			custom_tooltip = japanese_triggered_mod_tt
-			tooltip = {
 			add_country_modifier = {
 				name = ned_japanese_friend
 				duration = -1
-			}
 			}
 			add_accepted_culture = japanese
 			if = {
@@ -839,11 +809,11 @@ dom_ned_exploration_start_2_group = {
 			tooltip = {
 				suriname_area = {
 					change_trade_goods = sugar
-					add_base_production = 1
+					add_base_production = 3
 				}
 				guyana_area = {
 					change_trade_goods = sugar
-					add_base_production = 1
+					add_base_production = 3
 				}
 			}
 			hidden_effect = {
@@ -966,9 +936,10 @@ dom_ned_exploration_start_2_group = {
 				}
 			}
 			#
+			add_treasury = 1000
 			add_power_projection = {
 				type = ned_desseyn_powerp_brazil
-				amount = 10
+				amount = 2
 			}
 			add_country_modifier = {
 				name = "ned_brazil_mod"
@@ -1078,9 +1049,6 @@ dom_ned_exploration_start_3_group = {
 				name = voc_investments_moluccas
 				duration = -1
 			}
-			custom_tooltip = country_event_burn_cloves_monopoly
-			custom_tooltip = if_allied_with_ternate_do_x_else
-			custom_tooltip = do_y
 		}
 	}
 	
@@ -1097,15 +1065,13 @@ dom_ned_exploration_start_3_group = {
 		trigger = {			
 			trading_part = {
 				trade_goods = cloves
-				value = 0.90
+				value = 0.80
 			}
 		}
 		
 		effect = {
-			add_prestige_or_monarch_power = { amount = 20 }
-			add_treasury = 2500
-			custom_tooltip = tooltip_wip
-			custom_tooltip = permanent_cb_on_clove_countries
+			add_prestige_or_monarch_power = { amount = 25 }
+			add_treasury = 10000
 		}
 	}
 	
@@ -1222,15 +1188,15 @@ dom_ned_exploration_start_3_group = {
 				#}
 				add_power_projection = {
 					type = ned_desseyn_powerp_brazil
-					amount = 10
+					amount = 2
 				}
 				add_power_projection = {
 					type = ned_desseyn_powerp_luanda
-					amount = 10
+					amount = 2
 				}
 				add_power_projection = {
 					type = ned_desseyn_powerp_gold_coast
-					amount = 10
+					amount = 2
 				}
 			}
 			custom_tooltip = zim_amongst_the_great_powers_tt
@@ -1268,9 +1234,10 @@ dom_ned_exploration_start_3_group = {
 		
 		effect = {
 			add_prestige_or_monarch_power = { amount = 25 }
+			add_treasury = 1000
 			add_power_projection = {
 				type = ned_desseyn_powerp_luanda
-				amount = 10
+				amount = 2
 			}
 			clr_country_flag = dom_ned_desseyn_challenge
 		}
@@ -1374,9 +1341,13 @@ dom_ned_exploration_start_4_group = {
 			630 = {
 				rename_capital = "Batavia"
 				add_base_tax = 2
-				add_base_production = 2
+				add_base_production = 4
 				add_base_manpower = 2
-			}
+				add_permanent_province_modifier = {
+					name = ned_batavia
+					duratgion = -1
+				}
+			}	
 			malacca_area = {
 				limit = {
 					NOT = { is_permanent_claim = ROOT }
@@ -1480,16 +1451,16 @@ dom_ned_exploration_start_4_group = {
 			1357 = {
 				add_trade_modifier = {
 					who = root
-					duration = 7300
-					power = 50
+					duration = -1
+					power = 35
 					key = DUTCH_EAST_INDIES_TRADE
 				}
 			}
 			1361 = {
 				add_trade_modifier = {
 					who = root
-					duration = 7300
-					power = 50
+					duration = -1
+					power = 35
 					key = DUTCH_EAST_INDIES_TRADE
 				}
 			}
@@ -1544,9 +1515,10 @@ dom_ned_exploration_start_4_group = {
 		
 		effect = {
 			add_prestige_or_monarch_power = { amount = 25 }
+			add_treasury = 1000
 			add_power_projection = {
 				type = ned_desseyn_powerp_gold_coast
-				amount = 10
+				amount = 2
 			}
 			clr_country_flag = dom_ned_desseyn_challenge
 		}
@@ -1627,7 +1599,7 @@ dom_ned_exploration_start_5_group = {
 			}
 		}
 		effect = {
-			add_mercantilism = 2
+			add_mercantilism = 5
 		}
 	}	
 }

@@ -385,7 +385,7 @@ mam_missions_2 = {
 				add_trade_modifier = {
 					who = ROOT
 					duration = -1
-					power = 5
+					power = 15
 					key = MAM_supporting_red_sea_trade
 				}
 			}
@@ -393,7 +393,7 @@ mam_missions_2 = {
 				add_trade_modifier = {
 					who = ROOT
 					duration = -1
-					power = 5
+					power = 10
 					key = MAM_supporting_red_sea_trade
 				}
 			}
@@ -963,7 +963,7 @@ mam_missions_3 = {
 				add_trade_modifier = {
 					who = ROOT
 					duration = -1
-					power = 5
+					power = 25
 					key = MAM_strict_control
 				}
 			}
@@ -1062,7 +1062,7 @@ mam_missions_3 = {
 				add_trade_modifier = {
 					who = ROOT
 					duration = -1
-					power = 50
+					power = 30
 					key = MAM_red_sea_controlled
 				}
 			}
@@ -1315,7 +1315,7 @@ mam_missions_3 = {
 		trigger = {
 			OR = {
 				army_size = 45
-				army_size_percentage = 0.85 
+				army_size_percentage = 0.90 
 			}
 		}
 		effect = {
@@ -1642,7 +1642,6 @@ mam_missions_4 = {
 			
 			custom_tooltip = " "
 			
-			custom_tooltip = MAM_distribute_10_10_10_dev_amongst_our_trade_centers
 			hidden_effect = {
 				for = {
 					amount = 10 
@@ -1751,6 +1750,87 @@ mam_missions_4 = {
 		}
 	}
 	
+	MAM_feed_the_world_mission = {
+		icon = mission_consume_the_baghels
+		required_missions = { MAM_process_the_grains }
+		position = 7
+		provinces_to_highlight = {
+			OR = {
+				province_id = 2316
+				province_id = 4316
+				province_id = 363
+				province_id = 362
+				province_id = 4320
+			}
+			OR = { 
+				NOT = { owned_by = ROOT }
+				NOT = { development = 31 }
+			}
+		}
+		trigger = {
+			2316 = {
+				development = 30
+				owned_by = ROOT
+			}
+			4316 = {
+				development = 30
+				owned_by = ROOT
+			}
+			363 = {
+				development = 30
+				owned_by = ROOT
+			}
+			362 = {
+				development = 30
+				owned_by = ROOT
+			}
+			4320 = {
+				development = 30
+				owned_by = ROOT
+			}
+		}
+		effect = {
+			custom_tooltip = MAM_upgrade_two
+			hidden_effect = {
+				2316 = {
+					remove_province_modifier = MAM_upgraded_granary
+					add_permanent_province_modifier = {
+						name = MAM_feed_the_world
+						duration = -1
+					}
+				}
+				4316 = {
+					remove_province_modifier = MAM_upgraded_granary
+					add_permanent_province_modifier = {
+						name = MAM_feed_the_world
+						duration = -1
+					}
+				}
+				363 = {
+					remove_province_modifier = MAM_upgraded_granary
+					add_permanent_province_modifier = {
+						name = MAM_feed_the_world
+						duration = -1
+					}
+				}
+				362 = {
+					remove_province_modifier = MAM_upgraded_granary
+					add_permanent_province_modifier = {
+						name = MAM_feed_the_world
+						duration = -1
+					}
+				}
+				4320 = {
+					remove_province_modifier = MAM_upgraded_granary
+					add_permanent_province_modifier = {
+						name = MAM_feed_the_world
+						duration = -1
+					}
+				}
+			}
+		}
+	}
+	
 	MAM_protectors_of_the_caliph = {
 		icon = me_mission_muslim_priest
 		required_missions = { }
@@ -1758,7 +1838,6 @@ mam_missions_4 = {
 		provinces_to_highlight = {
 		}
 		trigger = {
-			ME_has_abbasid_caliph = yes
 			if = {
 				limit = {
 					has_estate = estate_church
@@ -1771,8 +1850,6 @@ mam_missions_4 = {
 			
 		}
 		effect = {
-			set_defender_of_the_faith_effect = yes
-			
 			add_country_modifier = {
 				name = MAM_protectors_of_the_caliph_modifier
 				duration = 7300
@@ -1806,70 +1883,6 @@ mam_missions_4 = {
 			add_country_modifier = {
 				name = MAM_four_maddhabs_modifier
 				duration = -1
-			}
-			
-			set_country_flag = AYY_establish_Religious_school_Buff
-			
-			if = {
-				limit = {
-					has_dlc = "Cradle of Civilization"
-				}
-				custom_tooltip = AYY_establish_Religious_school_Buff
-				
-				custom_tooltip = " "
-				
-				custom_tooltip = AYY_if_we_have_invited_maliki
-				tooltip = {
-					add_country_modifier = {
-						name = AYY_maliki_scholar
-						duration = 14600
-					}
-				}
-				custom_tooltip = AYY_if_we_have_invited_hanbali
-				tooltip = {
-					add_country_modifier = {
-						name = AYY_hanbali_scholar
-						duration = 14600
-					}
-				}
-				custom_tooltip = AYY_if_we_have_invited_hanafi
-				tooltip = {
-					add_country_modifier = {
-						name = AYY_hanafi_scholar
-						duration = 14600
-					}
-				}
-				
-				hidden_effect = {
-					if = {
-						limit = {
-							has_country_modifier = hanafi_scholar_modifier
-						}
-						add_country_modifier = {
-							name = AYY_hanafi_scholar
-							duration = 14600
-						}
-					}
-					else_if = {
-						limit = {
-							has_country_modifier = hanbali_scholar_modifier
-						}
-						add_country_modifier = {
-							name = AYY_hanbali_scholar
-							duration = 14600
-						}
-					}
-					else_if = {
-						limit = {
-							has_country_modifier = maliki_scholar_modifier
-						}
-						add_country_modifier = {
-							name = AYY_maliki_scholar
-							duration = 14600
-						}
-					}
-					else = { }
-				}
 			}
 		}
 	}
@@ -2041,9 +2054,11 @@ mam_north_missions = {
 			}
 		}
 		effect = {
-			country_event = { id = flavor_mam.2 }
 			361 = { 
-				create_or_add_center_of_trade_level = { level = 1 }
+				add_province_modifier = {
+					name = MAM_renovated_capital
+					duration = -1
+				}
 			}
 		}
 	}
@@ -2096,6 +2111,7 @@ mam_north_missions = {
 				province_id = 4316
 				province_id = 363
 				province_id = 362
+				province_id = 4320
 			}
 			OR = { 
 				NOT = { owned_by = ROOT }
@@ -2119,32 +2135,43 @@ mam_north_missions = {
 				development = 16
 				owned_by = ROOT
 			}
+			4320 = {
+				development = 16
+				owned_by = ROOT
+			}
 		}
 		effect = {
 			custom_tooltip = MAM_upgrade
 			hidden_effect = {
 				2316 = {
 					remove_province_modifier = granary_of_the_mediterranean
-					add_permanent_province_modifier = {
+					add_province_modifier = {
 						name = MAM_upgraded_granary
 						duration = -1
 					}
 				}
 				4316 = {
 					remove_province_modifier = granary_of_the_mediterranean
-					add_permanent_province_modifier = {
+					add_province_modifier = {
 						name = MAM_upgraded_granary
 						duration = -1
 					}
 				}
 				363 = {
 					remove_province_modifier = granary_of_the_mediterranean
-					add_permanent_province_modifier = {
+					add_province_modifier = {
 						name = MAM_upgraded_granary
 						duration = -1
 					}
 				}
 				362 = {
+					remove_province_modifier = granary_of_the_mediterranean
+					add_province_modifier = {
+						name = MAM_upgraded_granary
+						duration = -1
+					}
+				}
+				4320 = {
 					remove_province_modifier = granary_of_the_mediterranean
 					add_permanent_province_modifier = {
 						name = MAM_upgraded_granary
@@ -2344,6 +2371,120 @@ mam_north_missions = {
 		}
 	}
 	
+	MAM_develop_upper_nile = {
+		icon = mission_consume_the_baghels
+		required_missions = { }
+		position = 12
+		provinces_to_highlight = {
+			OR = {
+				province_id = 4318
+				province_id = 2317
+				province_id = 2319
+				province_id = 4320
+			}
+			OR = { 
+				NOT = { owned_by = ROOT }
+				NOT = { development = 14 }
+			}
+		}
+		trigger = {
+			4318 = {
+				development = 14
+				owned_by = ROOT
+			}
+			2317 = {
+				development = 14
+				owned_by = ROOT
+			}
+			2319 = {
+				development = 14
+				owned_by = ROOT
+			}
+			4320 = {
+				development = 14
+				owned_by = ROOT
+			}
+		}
+		effect = {
+			4318 = {
+				add_permanent_province_modifier = {
+					name = MAM_develop_the_lower_nile
+					duration = -1
+				}
+			}
+			2317 = {
+				add_permanent_province_modifier = {
+					name = MAM_develop_the_lower_nile
+					duration = -1
+				}
+			}
+			2319 = {
+				add_permanent_province_modifier = {
+					name = MAM_develop_the_lower_nile
+					duration = -1
+				}
+			}
+			4320 = {
+				add_permanent_province_modifier = {
+					name = MAM_develop_the_lower_nile
+					duration = -1
+				}
+			}
+		}
+	}
+
+	MAM_aswan_dam = {
+		icon = mission_steer_trade_to_bengal
+		required_missions = { MAM_develop_upper_nile }
+		position = 13
+		provinces_to_highlight = {
+			OR = {
+				province_id = 360
+				province_id = 4319
+				province_id = 1231
+			}
+			OR = { 
+				NOT = { owned_by = ROOT }
+				NOT = { development = 8 }
+			}
+		}
+		trigger = {
+			360 = {
+				development = 8
+				owned_by = ROOT
+			}
+			4319 = {
+				development = 8
+				owned_by = ROOT
+			}
+			1231 = {
+				development = 8
+				owned_by = ROOT
+			}
+		}
+		effect = {
+			360 = {
+				add_permanent_province_modifier = {
+					name = MAM_aswan_dam
+					duration = -1
+				}
+			}
+			4319 = {
+				add_permanent_province_modifier = {
+					name = MAM_aswan_dam
+					duration = -1
+				}
+			}
+			1231 = {
+				add_permanent_province_modifier = {
+					name = MAM_aswan_dam
+					duration = -1
+					
+				}
+			}
+		}
+	}
+
 	MAM_no_more_threat = {
 		icon = mission_non-western_soldiers
 		required_missions = { MAM_defeat_turks }
@@ -2365,7 +2506,7 @@ mam_north_missions = {
 		effect = {
 			add_power_projection = {
 				type = MAM_perma_ottoman_pp
-				amount = 3
+				amount = 10
 			}
 			custom_tooltip = MAM_permanent_PP
 			

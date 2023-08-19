@@ -401,6 +401,8 @@
  emp_nap_defeat_milan_desc: "For many years Milan has attempted to rival us. They believe that their northern blood is better than ours. We will erect a monument to our glory in their capital!"
  nap_galley_fleet_mission_title: "Grand Galley Fleet"
  nap_galley_fleet_mission_desc: "Build enough galleys to burn the world"
+ nap_stato_presidi_title: "State of the Presidi"
+ nap_stato_presidi_desc: "State of the Presidi"
 
  #Naples Unique Events/Modifiers
  nap_victory_monument: "Monument of Southern Supremacy"
@@ -409,10 +411,19 @@
  nap_controller_of_rome: "Controls the Vatican"
  nap_a_centralised_nation: "Neopolitan Centralism"
  nap_a_centralised_capital: "Heart of the South"
- nap_neopolitan_renaissance: "Renaissance Advisors"
+ nap_neapolitan_renaissance: "Renaissance Advisors"
  nap_renaissance_centre: "Sicilian Renaissance"
  nap_tuscan_ideas: "Tuscan Ideas"
  nap_galley_fleet: "Galley Fleet"
+ nap_benedizione_san_nicola: "Basilica San Nicola"
+ nap_dominating_adriatic: "Dominating Adriatic"
+ nap_italian_chestnut: "Italian Chestnut"
+ nap_controller_spice_trade: "The Spice Trade"
+ nap_commissioni_marittime: "Mercantile navy"
+ nap_sicilian_ruling: "Sicilian Rule"
+ nap_champion_christianity: "Champion of Christianity"
+ nap_home_skanderbeg: "Home of Skanderbeg"
+ nap_european_doors: "Doors to Europe"
  
  #Naples Tooltip
  NAP_OTTOMAN_DOMAIN_TOOLTIP: "§Y[Root.GetName]§! gains permanent claim on all the sea provinces owned by §Y[TUR.GetName]§! provinces in the §Y[137.GetName]§! trade node.\n"
@@ -475,6 +486,10 @@
  defend_ceuta: "Defend until the last man"
  MOR_funduqs_expanded: "Fundquqs Expanded"
  MOR_mosque_of_ben_youssef: "Mosque of Ben Youssef"
+ mor_mountain_imperial_city: "Imperial Mountain City"
+ 
+ #Morocco tooltips
+ MOR_wattasid_prince: "A Wattasid ruler would likely be more competent than our current ruler, but would come at the cost of stability"
 
  #Morocco Events
  ME_Morocco_Events.1.t: "Status of Ceuta"
@@ -731,3 +746,29 @@
  motijheel: "Motijheel Palace"
  nalanda_university: "Nalanda University"
  kaiserbagh: "Kaiser Bagh"
+ kaiserbagh_desc: "Kaiser Bagh"
+ gme_saint_mark_coptic_cathedral: "Saint Mark Coptic Cathedral"
+ gme_saint_mark_coptic_cathedral_desc: "Saint Mark Coptic Cathedral"
+ gonder_castle: "Fasil Ghebbi"
+ gonder_castle_desc: "Fasil Ghebbi - the old castle of Gonder"
+ port_of_hong_kong: "Port of Hong Kong"
+ port_of_singapore: "Port of Singapore"
+ batavia_city: "City of Batavia"
+ the_city_colombo: "City of Colombo"
+
+ #Misc
+ free_colonist_2: "Free Colonist 1600"
+ po_fleet_disarmament_title: "Fleet Disarmament"
+ po_fleet_disarmament_desc: "Their naval capabilties will be severely reduced for the next 20 years"
+ PEACE_po_fleet_disarmament: "Fleet Disarmament"
+ fleet_disarmament_modifier: "Fleet Disarmed"
+ recovering_fleet: "Recovering Fleet"
+ CB_ALLOWED_po_fleet_disarmament: "Fleet Disarmament"
+ 
+ #Netherlands Extra
+ voc_investments_moluccas: "Moluccas Investments"
+ ned_batavia: "Batavia"
+ ned_life_on_the_sea: "Dutch Sea Life"
+ ned_dutch_ship_production: "Dutch Ship ProductioN"
+ ned_diplo_rep: "Dutch Dynasty"
+ ned_city_investments_2: "City Investments"

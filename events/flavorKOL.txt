@@ -1,0 +1,33 @@
+namespace = frog_flavor_kol
+
+
+
+country_event = {
+	id = frog_flavor_kol.1
+	title = "frog_flavor_kol.EVTNAME1"
+	desc = "frog_flavor_kol.EVTDESC1"
+	picture = COURT_eventPicture
+
+	is_triggered_only = yes
+
+	trigger = {
+
+	}
+
+	option = {
+		name = "frog_flavor_kol.EVTOPTA1"
+		ai_chance = {
+			factor = 1
+		}
+		set_country_flag = kol_very_radical
+		swap_non_generic_missions = yes
+	}
+	option = {
+		name = "frog_flavor_kol.EVTOPTB2"
+		ai_chance = {
+			factor = 1
+		}
+		set_country_flag = kol_not_so_radical
+		swap_non_generic_missions = yes
+	}
+}

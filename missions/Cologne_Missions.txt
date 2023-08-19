@@ -5,8 +5,12 @@ german_dominance = {
 	potential = {
 		OR = {
 			tag = KOL
-			AND = {
-				tag = GER
+			AND = { 
+				OR = {
+					tag = WES
+					tag = HAN
+					tag = GER
+				}
 				was_tag = KOL
 			}
 		}
@@ -29,7 +33,7 @@ german_dominance = {
 		}
 	}
 	conquer_rhineland = {
-		icon = mission_build_up_to_force_limit
+		icon = mission_cannons_firing
 		position = 2
 		required_missions = { kol_build_to_forcelimit }
 
@@ -66,7 +70,7 @@ german_dominance = {
 		}
 	}
 	conquer_hesse = {
-		icon = mission_build_up_to_force_limit
+		icon = mission_cannons_firing
 		position = 3
 		required_missions = { conquer_rhineland }
 		trigger = {
@@ -100,7 +104,7 @@ german_dominance = {
 		 }
 	}
 	finish_the_conquest_of_the_banks_of_the_rhine_upstream = {
-		icon = mission_build_up_to_force_limit
+		icon = mission_hanseatic_city
 		position = 4
 		required_missions = { conquer_hesse }
 		trigger = {
@@ -139,14 +143,21 @@ german_dominance = {
 		}
 	}
 	rhine_trade = {
-		icon = mission_build_up_to_force_limit
+		icon = mission_open_up_china
 		position = 5
 		required_missions = { finish_the_conquest_of_the_banks_of_the_rhine_upstream }
 		trigger = {
 			1876 = {
-				trade_share = {
-					country = KOL
-					share = 60
+				OR = {
+					trade_share = {
+						country = WES
+						share = 60
+					}
+				
+					trade_share = {
+						country = KOL
+						share = 60
+					}
 				}
 			}
 		 }
@@ -155,12 +166,11 @@ german_dominance = {
 				name = kol_rhine_trade
 				duration = -1
 				desc = KOL_RHINE_TRADE_DESC_TOOLTIP
-				hidden = no
 			}
 		 }
 	}
 	expand_the_home_market = {
-		icon = mission_build_up_to_force_limit
+		icon = reform_the_state
 		position = 6
 		required_missions = { rhine_trade the_roar_of_industry }
 		trigger = {
@@ -218,15 +228,14 @@ german_dominance = {
 		position = 7
 		required_missions = {  }
 		trigger = {
-			army_professionalism = 1
+			army_professionalism = 0.7
 			army_tradition = 80
 		}
 		effect = {
 			add_country_modifier = {
 				name = modern_army
-				duration = -1
+				duration = 18250
 				desc = MODERNIZED_ARMY_KOL_DESC_TOOLTIP
-				hidden = no
 			}
 		}
 	}
@@ -448,15 +457,19 @@ cologne_second = {
 	potential = {
 		OR = {
 			tag = KOL
-			AND = {
-				tag = GER
+			AND = { 
+				OR = {
+					tag = WES
+					tag = HAN
+					tag = GER
+				}
 				was_tag = KOL
 			}
 		}
 	}
 
 	conquer_westphalia = {
-		icon = mission_build_up_to_force_limit
+		icon = mission_cannons_firing
 		position = 2
 		required_missions = { kol_build_to_forcelimit }
 		trigger = {
@@ -480,7 +493,7 @@ cologne_second = {
 		}
 	}
 	conquer_braunschweig = {
-		icon = mission_build_up_to_force_limit
+		icon = mission_cannons_firing
 		position = 4
 		required_missions = { conquer_westphalia }
 		trigger = {
@@ -499,7 +512,7 @@ cologne_second = {
 		}
 	}
 	control_the_weser_estuary = {
-		icon = mission_build_up_to_force_limit
+		icon = mission_galleys_in_port
 		position = 5
 		required_missions = { conquer_braunschweig }
 		trigger = {
@@ -518,7 +531,7 @@ cologne_second = {
 		}
 	}
 	imperial_relations = {
-		icon = mission_build_up_to_force_limit
+		icon = spread_the_von_wettins
 		position = 7
 		required_missions = {  }
 		trigger = {
@@ -540,7 +553,7 @@ cologne_second = {
 		}
 	}
 	secured_electorship = {
-		icon = mission_build_up_to_force_limit
+		icon = polish_diplomacy
 		position = 8
 		required_missions = { imperial_relations }
 		trigger = {
@@ -567,15 +580,19 @@ cologne_third = {
 	potential = {
 		OR = {
 			tag = KOL
-			AND = {
-				tag = GER
+			AND = { 
+				OR = {
+					tag = WES
+					tag = HAN
+					tag = GER
+				}
 				was_tag = KOL
 			}
 		}
 	}
 
 	control_the_ems_estuary = {
-		icon = mission_build_up_to_force_limit
+		icon = mission_galleys_in_port
 		position = 3
 		required_missions = { conquer_westphalia }
 		trigger = {
@@ -593,7 +610,7 @@ cologne_third = {
 		}
 	}
 	control_the_rhine_estuary = {
-		icon = mission_build_up_to_force_limit
+		icon = mission_open_up_china
 		position = 4
 		required_missions = { control_the_ems_estuary }
 		trigger = {
@@ -612,7 +629,7 @@ cologne_third = {
 	}
 
 	channel_trade = {
-		icon = mission_build_up_to_force_limit
+		icon = mission_galleys_in_port
 		position = 5
 		required_missions = { control_the_rhine_estuary }
 		trigger = {
@@ -639,15 +656,19 @@ cologne_fourth = {
 	potential = {
 		OR = {
 			tag = KOL
-			AND = {
-				tag = GER
+			AND = { 
+				OR = {
+					tag = WES
+					tag = HAN
+					tag = GER
+				}
 				was_tag = KOL
 			}
 		}
 	}
 
-	develop_köln = {
-		icon = mission_build_up_to_force_limit
+	develop_cologne = {
+		icon = ansbach_succession
 		position = 1
 		required_missions = {  }
 		trigger = {
@@ -664,9 +685,9 @@ cologne_fourth = {
 		}
 	}
 	increase_the_cathedral_to_level_2 = {
-		icon = mission_build_up_to_force_limit
+		icon = mission_european_church
 		position = 2
-		required_missions = { develop_köln }
+		required_missions = { develop_cologne }
 		trigger = {
 			85 = {
 				has_great_project = {
@@ -676,14 +697,16 @@ cologne_fourth = {
 			}
 		}
 		effect = {
-			add_great_project_tier {
-				type = cologne_cathedral
-				tier = 1
+			85 = {
+				add_great_project_tier = {
+					type = cologne_cathedral
+					tier = 1
+				}
 			}
 		}
 	}
 	develop_the_rhine_area = {
-		icon = mission_build_up_to_force_limit
+		icon = mission_eastern_european_city
 		position = 3
 		required_missions = { conquer_rhineland increase_the_cathedral_to_level_2 }
 		trigger = {
@@ -711,7 +734,7 @@ cologne_fourth = {
 		}
 	}
 	center_of_german_industry = {
-		icon = mission_build_up_to_force_limit
+		icon = ger_kaiserreich
 		position = 4
 		required_missions = { develop_the_rhine_area }
 		trigger = {
@@ -753,7 +776,7 @@ cologne_fourth = {
 		}
 	}
 	weser_defensive_line = {
-		icon = mission_build_up_to_force_limit
+		icon = the_imperial_border
 		position = 5
 		required_missions = { conquer_braunschweig }
 		trigger = {
@@ -819,7 +842,7 @@ cologne_fourth = {
 		}
 	}
 	win_leage_war = {
-		icon = mission_build_up_to_force_limit
+		icon = holy_state
 		position = 7
 		required_missions = { religious_question }
 		trigger = {
@@ -841,8 +864,12 @@ cologne_fith = {
 	potential = {
 		OR = {
 			tag = KOL
-			AND = {
-				tag = GER
+			AND = { 
+				OR = {
+					tag = WES
+					tag = HAN
+					tag = GER
+				}
 				was_tag = KOL
 			}
 		}
@@ -916,7 +943,7 @@ cologne_fith = {
 			}
 			trade_goods_produced_amount = {
 				trade_goods = iron
-				amount = 5
+				amount = 12
 			}
 			trade_goods_produced_amount = {
 				trade_goods = copper
@@ -924,11 +951,11 @@ cologne_fith = {
 			}
 			trade_goods_produced_amount = {
 				trade_goods = paper
-				amount = 5
+				amount = 16
 			}
 			trade_goods_produced_amount = {
 				trade_goods = cloth
-				amount = 15
+				amount = 35
 			}
 		}
 		effect = {
@@ -989,7 +1016,29 @@ catholic_path = {
 			}
 			papal_influence = 100	
 		}
-		effect = { }
+		effect = {
+			add_country_modifier = {
+				name = kol_pope_happy
+				duration = -1
+			}
+		}
+	}
+
+	we_are_the_pope = {
+		icon = mission_build_up_to_force_limit
+		position = 8
+		required_missions = {
+			staying_true_to_the_pope
+		}
+		trigger = {
+			is_papal_controller = yes
+		}
+		effect = {
+			add_country_modifier = {
+				name = kol_catholic_control
+				duration = -1
+			}
+		}
 	}
 }
 
@@ -1005,8 +1054,15 @@ protestant_path = {
 		icon = mission_build_up_to_force_limit
 		position = 7
 		required_missions = { religious_question }
-		trigger = { }
-		effect = { }
+		trigger = {
+			num_of_aspects = 3
+		}
+		effect = {
+			add_country_modifier = {
+				name = flexible_theology
+				duration = -1
+			}
+		}
 	}
 }
 
@@ -1021,23 +1077,27 @@ reformed_path = {
 	the_likes_of_calvin_and_hutter = {
 		icon = mission_build_up_to_force_limit
 		position = 7
-		required_missions = {  }
+		required_missions = { religious_question }
 		trigger = {
 			fervor = 50
 			has_active_fervor = yes
 		}
-		effect = { }
+		effect = {
+			add_fervor = 200
+			add_adm_power = 100
+			add_dip_power = 100
+		}
 	}
 	how_radical_of_a_reformation = {
 		icon = mission_build_up_to_force_limit
 		position = 8
-		required_missions = {  }
+		required_missions = { the_likes_of_calvin_and_hutter }
 		trigger = {
 			has_global_flag = great_peasants_war_flag
 		}
 		effect = {
 			country_event = {
-				id = kol_radical_reformation.1
+				id = frog_flavor_kol.1
 				days = 2
 				tooltip = KOL_RADICAL_REFORMATION.1
 			}
@@ -1060,7 +1120,9 @@ very_radical = {
 		trigger = {
 			always = yes
 		}
-		effect = { }
+		effect = { 
+			add_government_reform = peasant_theocracy_reform
+		}
 	}
 }
 
@@ -1075,11 +1137,16 @@ not_so_radical = {
 	keeping_it_real = {
 		icon = mission_build_up_to_force_limit
 		position = 9
-		required_missions = {  }
+		required_missions = { how_radical_of_a_reformation }
 		trigger = {
 			always = yes
 		}
-		effect = { }
+		effect = {
+			add_country_modifier = {
+				name = kol_sided_with_establishment
+				duration = -1
+			}
+		}
 	}
 }
 
@@ -1091,8 +1158,18 @@ branching_1 = {
 		NOT = { has_country_flag = kol_cath }
 		NOT = { has_country_flag = kol_prot }	
 		NOT = { has_country_flag = kol_ref }	
-		tag = KOL
+		OR = {
+			tag = KOL
+			AND = { 
+				OR = {
+					tag = WES
+					tag = HAN
+					tag = GER
+				}
+				was_tag = KOL
+			}
 		}
+	}
 
 	branching_mission = {
 		icon = mission_unknown_mission

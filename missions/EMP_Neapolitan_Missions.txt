@@ -142,7 +142,7 @@ emp_naples_2 = {
 		position = 3
 		provinces_to_highlight = { province_id = 104 }
 		trigger = {
-			owns_core_province = 121
+			owns_core_province = 104
 		}
 		effect = {
 			add_country_modifier = {
@@ -308,7 +308,7 @@ emp_naples_2 = {
 			}
 			add_country_modifier = {
 				name = nap_european_doors
-				duration = 3650
+				duration = -1
 			}
 		}
 	}
@@ -1271,14 +1271,14 @@ emp_naples_4 = {
 			province_id = 1933
 			OR = {
 				NOT = { owned_by = ROOT }
-				NOT = { base_tax = 17 }
+				NOT = { base_tax = 11 }
 				NOT = { has_tax_building_trigger = yes }
 			}
 		}
 		trigger = {
 			1933 = {
 				owned_by = ROOT
-				base_tax = 17
+				base_tax = 11
 				has_tax_building_trigger = yes
 			}
 		}
@@ -1656,12 +1656,12 @@ emp_naples_5 = {
 		effect = {
 			add_country_modifier = {
 				name = nap_italian_chestnut
-				duration = 7300
+				duration = -1
 			}
 			377 = {	# Aleppo
 				add_trade_modifier = {
 					who = ROOT
-					duration = 7300
+					duration = -1
 					power = 20
 					key = nap_italian_chestnut
 				}
@@ -1669,7 +1669,7 @@ emp_naples_5 = {
 			358 = {	# Alexandria
 				add_trade_modifier = {
 					who = ROOT
-					duration = 7300
+					duration = -1
 					power = 20
 					key = nap_italian_chestnut
 				}

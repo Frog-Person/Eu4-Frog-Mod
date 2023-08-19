@@ -14,8 +14,14 @@ country_decisions = {
 			}
 		}
 		provinces_to_highlight = {
-			fort_level = 1 
-			owned_by = ROOT
+			OR = {
+				area = holland_area
+				area = frisia_area
+				area = brabant_area
+				area = flanders_area
+				area = north_brabant_area
+			}
+			country_or_non_sovereign_subject_holds = ROOT
 		}
 		allow = {
 			OR = {
@@ -27,7 +33,13 @@ country_decisions = {
 	 	effect = {
 			every_owned_province = {
 				limit = {
-					fort_level = 1 
+					OR = {
+						area = holland_area
+						area = frisia_area
+						area = brabant_area
+						area = flanders_area
+						area = north_brabant_area
+					}
 				}
 				add_province_modifier = {
 					name = dutch_inundation

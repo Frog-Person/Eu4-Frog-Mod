@@ -808,7 +808,7 @@ swe_nobles_fortification = {	#Permanent, province
 #}
 
 swe_arctic_expansion = {
-	local_development_cost = -0.4
+	local_production_efficiency = 0.1
 	allowed_num_of_buildings = 1
 }
 
