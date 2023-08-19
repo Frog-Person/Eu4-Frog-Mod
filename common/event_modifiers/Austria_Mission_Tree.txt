@@ -48,6 +48,9 @@ end_of_reformists = {
     global_unrest = -1
     global_autonomy = -0.05
 }
+early_industrial_works = {
+    production_efficiency = 0.1
+}
 capitals_of_the_hre = {
     imperial_authority = 0.05
 }
