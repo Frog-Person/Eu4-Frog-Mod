@@ -13613,7 +13613,7 @@ krakow_cloth_hall = {
 		}
 		country_modifiers = {
 			merchants = 1
-			global_trade_power = 0.05
+			global_trade_power = 0.025
 		}
 		on_upgraded = {
 		}
@@ -13633,7 +13633,7 @@ krakow_cloth_hall = {
 		}
 		country_modifiers = {
 			merchants = 2
-			global_trade_power = 0.1
+			global_trade_power = 0.05
 		}
 		on_upgraded = {
 		}
