@@ -1692,17 +1692,19 @@ austrian_unique_formable_slot2 = {
 			if = {
 							OR = {				
 								BOH = { is_subject_of = HAB }
-								erzgebirge_area = {
-									type = all
-									owned_by = ROOT
-								}
-								bohemia_area = {
-									type = all
-									owned_by = ROOT
-								}
-								moravia_area = {
-									type = all
-									owned_by = ROOT
+								AND = {
+									erzgebirge_area = {
+										type = all
+										owned_by = ROOT
+									}
+									bohemia_area = {
+										type = all
+										owned_by = ROOT
+									}
+									moravia_area = {
+										type = all
+										owned_by = ROOT
+									}
 								}	
 							}
 						}
@@ -1710,18 +1712,22 @@ austrian_unique_formable_slot2 = {
 		effect = {
 			if = {
 				limit = {
-					BOH = { is_subject_of = HAB }
-					erzgebirge_area = {
-						type = all
-						owned_by = ROOT
-					}
-					bohemia_area = {
-						type = all
-						owned_by = ROOT
-					}
-					moravia_area = {
-						type = all
-						owned_by = ROOT
+					OR = {
+						BOH = { is_subject_of = HAB }
+						AND = {
+							erzgebirge_area = {
+								type = all
+								owned_by = ROOT
+							}
+							bohemia_area = {
+								type = all
+								owned_by = ROOT
+							}
+							moravia_area = {
+								type = all
+								owned_by = ROOT
+							}
+						}
 					}
 				}
 				add_country_modifier = {
