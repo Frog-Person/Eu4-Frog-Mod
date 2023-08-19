@@ -1,0 +1,64 @@
+#austrian_bohemian_union
+country_event = {
+
+	picture = LIBERUM_VETO_eventPicture
+	
+	fire_only_once = yes
+	major = yes
+	
+	trigger = {
+		tag = BOH
+		is_subject = no
+		NOT = { has_reform = celestial_empire }
+		LIT = {
+			exists = yes
+			is_subject = no
+			NOT = { junior_union_with = HAB }
+			dynasty = "Habsburg"
+		}
+		NOT = { is_year = 1450 }
+	}
+	
+	immediate = {
+		set_global_flag = hab_union_outcome_flag
+	}
+	
+	mean_time_to_happen = {
+		months = 12
+		modifier = {
+			factor = 0.1
+			is_year = 1447
+		}
+		modifier = {
+			factor = 0.01
+			is_year = 1448
+		}
+		modifier = {
+			factor = 0.001
+			is_year = 1449
+		}
+	}
+	
+	option = {
+		name = "A Habsburg Prince will do nicely"
+		ai_chance = { 
+			factor = 10 
+		}
+		ai_chance = { factor = 10 } 
+		set_country_flag = boh_accepted_pu
+		HAB = { 
+			create_union = BOH 
+		}
+	}
+	option = {
+		name = "Never forget"
+		ai_chance = { factor = 90 }
+		HAB = {
+			add_casus_belli = {
+				type = cb_restore_personal_union
+				months = 300
+				target = BOH
+			}
+		}
+	}
+}
