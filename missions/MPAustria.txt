@@ -756,12 +756,12 @@ austrian_formable_slot1 = {
 									}
 								}
 								transdanubia_area = {
-									num_of_times_improved = 8
+									num_of_times_improved = 4
 									type = all
 									has_owner_accepted_culture = yes
 								}
 								alfold_area = {
-									num_of_times_improved = 5
+									num_of_times_improved = 4
 									type = all
 									has_owner_accepted_culture = yes
 								}
@@ -770,7 +770,7 @@ austrian_formable_slot1 = {
 								owns_core_province = 153
 								153 = {
 									culture = austrian
-									num_of_times_improved = 8
+									num_of_times_improved = 7
 									OR = {
 										has_building = courthouse
 										has_building = town_hall
@@ -817,12 +817,12 @@ austrian_formable_slot1 = {
 										}
 									}
 									transdanubia_area = {
-										num_of_times_improved = 8
+										num_of_times_improved = 4
 										type = all
 										has_owner_accepted_culture = yes
 									}
 									alfold_area = {
-										num_of_times_improved = 5
+										num_of_times_improved = 4
 										type = all
 										has_owner_accepted_culture = yes
 									}
@@ -846,12 +846,12 @@ austrian_formable_slot1 = {
 										}
 									}
 									transdanubia_area = {
-										num_of_times_improved = 8
+										num_of_times_improved = 4
 										type = all
 										has_owner_accepted_culture = yes
 									}
 									alfold_area = {
-										num_of_times_improved = 5
+										num_of_times_improved = 4
 										type = all
 										has_owner_accepted_culture = yes
 									}
@@ -875,12 +875,12 @@ austrian_formable_slot1 = {
 										}
 									}
 									transdanubia_area = {
-										num_of_times_improved = 8
+										num_of_times_improved = 4
 										type = all
 										has_owner_accepted_culture = yes
 									}
 									alfold_area = {
-										num_of_times_improved = 5
+										num_of_times_improved = 4
 										type = all
 										has_owner_accepted_culture = yes
 									}
@@ -903,12 +903,12 @@ austrian_formable_slot1 = {
 										}
 									}
 									transdanubia_area = {
-										num_of_times_improved = 8
+										num_of_times_improved = 4
 										type = all
 										has_owner_accepted_culture = yes
 									}
 									alfold_area = {
-										num_of_times_improved = 5
+										num_of_times_improved = 4
 										type = all
 										has_owner_accepted_culture = yes
 									}
@@ -924,7 +924,7 @@ austrian_formable_slot1 = {
 									owns_core_province = 153
 									153 = {
 										culture = austrian
-										num_of_times_improved = 8
+										num_of_times_improved = 7
 										OR = {
 											has_building = courthouse
 											has_building = town_hall
@@ -969,7 +969,7 @@ austrian_formable_slot1 = {
 									owns_core_province = 153
 									153 = {
 										culture = austrian
-										num_of_times_improved = 8
+										num_of_times_improved = 7
 										OR = {
 											has_building = courthouse
 											has_building = town_hall
@@ -1013,7 +1013,7 @@ austrian_formable_slot1 = {
 									owns_core_province = 153
 									153 = {
 										culture = austrian
-										num_of_times_improved = 8
+										num_of_times_improved = 7
 										OR = {
 											has_building = courthouse
 											has_building = town_hall
@@ -1078,12 +1078,12 @@ austrian_formable_slot1 = {
 						}
 					}
 					transylvania_area = {
-						num_of_times_improved = 5
+						num_of_times_improved = 3
 						type = all
 						has_owner_accepted_culture = yes
 					}
 					southern_transylvania_area = {
-						num_of_times_improved = 5
+						num_of_times_improved = 3
 						type = all
 						has_owner_accepted_culture = yes
 					}
@@ -1139,12 +1139,12 @@ austrian_formable_slot1 = {
 						}
 					}
 					transylvania_area = {
-						num_of_times_improved = 5
+						num_of_times_improved = 3
 						type = all
 						has_owner_accepted_culture = yes
 					}
 					southern_transylvania_area = {
-						num_of_times_improved = 5
+						num_of_times_improved = 3
 						type = all
 						has_owner_accepted_culture = yes
 					}
@@ -1254,7 +1254,7 @@ austrian_formable_slot1 = {
 						}
 					}
 					transylvania_area = {
-						num_of_times_improved = 5
+						num_of_times_improved = 3
 						type = all
 						has_owner_accepted_culture = yes
 					}
@@ -2154,7 +2154,7 @@ ah_expansion = {
 				}
 				add_country_modifier = {
 						name = "influx_of_bavarian_luxuries"
-						duration = 5400
+						duration = -1
 				}
 			}
 			else_if = {
@@ -2173,7 +2173,7 @@ ah_expansion = {
 					}
 				}
 				add_country_modifier = {
-					name = "staple_bavarian_goods"
+					name = "new_german_state_under_the_crown"
 					duration = -1
 				}
 			}
@@ -2200,7 +2200,7 @@ ah_expansion = {
 				}
 				add_country_modifier = {
 					name = "an_extended_front"
-					duration = 5600
+					duration = -1
 				}
 			}
 			else_if = {
@@ -2211,7 +2211,7 @@ ah_expansion = {
 					}
 				}
 				add_country_modifier = {
-					name = "an_independent_front"
+					name = "new_balkan_state_under_the_crown"
 					duration = -1
 				}
 			}
@@ -2300,7 +2300,7 @@ ah_expansion = {
 				}
 				add_country_modifier = {
 					name = "expanded_costal_influence"
-					duration = 5400
+					duration = -1
 				}
 			}
 			else_if = {
@@ -2323,7 +2323,7 @@ ah_expansion = {
 					}
 				}
 				add_country_modifier = {
-					name = "utilizing_native_sailors"
+					name = "new_adriatic_state_under_the_crown"
 					duration = -1
 				}
 			}
@@ -2374,7 +2374,7 @@ ah_expansion = {
 			        }
 				}
 				add_country_modifier = {
-					name = "experienced_naval_officers"
+					name = "new_italian_state_under_the_crown"
 					duration = -1
 				}
 			}
@@ -2522,7 +2522,7 @@ ah_ecobs = {
 			    base_production = 8
 			    value = 30
 			}
-			monthly_income = 1000
+			monthly_income = 300
 			num_of_loans = 0
 		}
 		effect = {
