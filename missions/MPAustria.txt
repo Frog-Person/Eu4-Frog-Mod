@@ -3,7 +3,10 @@ austrian_formable_slot1 = {
 	generic = no
 	ai = yes
 	potential = {
-		tag = HAB
+		OR = {
+			tag = HAB
+			tag = AUH
+		}
 	}
 
 	dominate_hungary = {
@@ -294,17 +297,17 @@ austrian_formable_slot1 = {
 									}
 								}
 								bohemia_area = {
-									num_of_times_improved = 8
+									num_of_times_improved = 4
 									type = all
 									has_owner_accepted_culture = yes
 								}
 								erzgebirge_area = {
-									num_of_times_improved = 5
+									num_of_times_improved = 3
 									type = all
 									has_owner_accepted_culture = yes
 								}
 								moravia_area = {
-									num_of_times_improved = 5
+									num_of_times_improved = 3
 									type = all
 									has_owner_accepted_culture = yes
 								}
@@ -372,17 +375,17 @@ austrian_formable_slot1 = {
 									}
 								}
 								bohemia_area = {
-									num_of_times_improved = 8
+									num_of_times_improved = 4
 									type = all
 									has_owner_accepted_culture = yes
 								}
 								erzgebirge_area = {
-									num_of_times_improved = 5
+									num_of_times_improved = 3
 									type = all
 									has_owner_accepted_culture = yes
 								}
 								moravia_area = {
-									num_of_times_improved = 5
+									num_of_times_improved = 3
 									type = all
 									has_owner_accepted_culture = yes
 								}
@@ -390,6 +393,38 @@ austrian_formable_slot1 = {
 							remove_country_modifier = acceptance_path1
 							add_country_modifier = {
 								name = acceptance_path2
+								duration = -1
+							}
+						}
+						else_if = {
+							limit = {
+								owns_core_province = 266
+								266 = {
+									has_owner_accepted_culture = yes
+									num_of_times_improved = 7
+									OR = {
+										has_building = courthouse
+										has_building = town_hall
+									}
+								}
+								bohemia_area = {
+									num_of_times_improved = 4
+									type = all
+									has_owner_accepted_culture = yes
+								}
+								erzgebirge_area = {
+									num_of_times_improved = 3
+									type = all
+									has_owner_accepted_culture = yes
+								}
+								moravia_area = {
+									num_of_times_improved = 3
+									type = all
+									has_owner_accepted_culture = yes
+								}
+							}
+							add_country_modifier = {
+								name = acceptance_path1
 								duration = -1
 							}
 						}
@@ -446,7 +481,10 @@ austrian_formable_slot1 = {
 								duration = -1
 							}
 						}
-						else = {
+						else_if = {
+							limit = { 
+								has_country_modifier = austrian_path1
+							}
 							remove_country_modifier = austrian_path1
 							add_country_modifier = {
 								name = austrian_path2
@@ -461,144 +499,244 @@ austrian_formable_slot1 = {
 		required_missions = { czech_choice }
 		trigger = {
 			OR = {
-							if = {
-								owns_core_province = 131
-								131 = {
-									has_owner_accepted_culture = yes
-									num_of_times_improved = 3
-									OR = {
-										has_building = courthouse
-										has_building = town_hall
-									}
-								}
-								croatia_area = {
-									num_of_times_improved = 5
-									type = all
-									has_owner_accepted_culture = yes
-								}
-								slavonia_area = {
-									num_of_times_improved = 5
-									type = all
-									has_owner_accepted_culture = yes
-								}
-							}
-							if = {
-								owns_core_province = 131
-								131 = {
-									culture = austrian
-									num_of_times_improved = 3
-									OR = {
-										has_building = courthouse
-										has_building = town_hall
-									}
-								}
-								croatia_area = {
-									type = all
-									culture = austrian
-									OR = {
-										has_building = workshop
-										has_building = counting_house
-									}
-									OR = {
-										has_building = temple
-										has_building = cathedral
-									}
-								}
-								slavonia_area = {
-									type = all
-									culture = austrian
-									OR = {
-										has_building = workshop
-										has_building = counting_house
-									}
-									OR = {
-										has_building = temple
-										has_building = cathedral
-									}
-								}
-							}
+				if = {
+					owns_core_province = 131
+					131 = {
+						has_owner_accepted_culture = yes
+						num_of_times_improved = 5
+						OR = {
+							has_building = courthouse
+							has_building = town_hall
 						}
+					}
+					croatia_area = {
+						num_of_times_improved = 3
+						type = all
+						has_owner_accepted_culture = yes
+					}
+					slavonia_area = {
+						num_of_times_improved = 3
+						type = all
+						has_owner_accepted_culture = yes
+					}
+				}
+				if = {
+					owns_core_province = 131
+					131 = {
+						culture = austrian
+						num_of_times_improved = 5
+						OR = {
+							has_building = courthouse
+							has_building = town_hall
+						}
+					}
+					croatia_area = {
+						type = all
+						culture = austrian
+						OR = {
+							has_building = workshop
+							has_building = counting_house
+						}
+						OR = {
+							has_building = temple
+							has_building = cathedral
+						}
+					}
+					slavonia_area = {
+						type = all
+						culture = austrian
+						OR = {
+							has_building = workshop
+							has_building = counting_house
+						}
+						OR = {
+							has_building = temple
+							has_building = cathedral
+						}
+					}
+				}
+			}
 		}
 		effect = {
 			if = {
-							limit = {
-								has_country_modifier = acceptance_path2
-								owns_core_province = 131
-								131 = {
-									has_owner_accepted_culture = yes
-									num_of_times_improved = 3
-									OR = {
-										has_building = courthouse
-										has_building = town_hall
-									}
-								}
-								croatia_area = {
-									num_of_times_improved = 5
-									type = all
-									has_owner_accepted_culture = yes
-								}
-								slavonia_area = {
-									num_of_times_improved = 5
-									type = all
-									has_owner_accepted_culture = yes
-								}
-							}
-							remove_country_modifier = acceptance_path2
-							add_country_modifier = {
-								name = acceptance_path3
-								duration = -1
-							}
+				limit = {
+					has_country_modifier = acceptance_path2
+					owns_core_province = 131
+					131 = {
+						has_owner_accepted_culture = yes
+						num_of_times_improved = 3
+						OR = {
+							has_building = courthouse
+							has_building = town_hall
 						}
-						else_if = {
-							limit = {
-								has_country_modifier = austrian_path1
-								owns_core_province = 131
-								131 = {
-									culture = austrian
-									num_of_times_improved = 3
-									OR = {
-										has_building = courthouse
-										has_building = town_hall
-									}
-								}
-								croatia_area = {
-									type = all
-									culture = austrian
-									OR = {
-										has_building = workshop
-										has_building = counting_house
-									}
-									OR = {
-										has_building = temple
-										has_building = cathedral
-									}
-								}
-								slavonia_area = {
-									type = all						
-									culture = austrian
-									OR = {
-										has_building = workshop
-										has_building = counting_house
-									}
-									OR = {
-										has_building = temple
-										has_building = cathedral
-									}
-								}
-							}
-							remove_country_modifier = austrian_path1
-							add_country_modifier = {
-								name = austrian_path2
-								duration = -1
-							}
+					}
+					croatia_area = {
+						num_of_times_improved = 5
+						type = all
+						has_owner_accepted_culture = yes
+					}
+					slavonia_area = {
+						num_of_times_improved = 5
+						type = all
+						has_owner_accepted_culture = yes
+					}
+				}
+				remove_country_modifier = acceptance_path2
+				add_country_modifier = {
+					name = acceptance_path3
+					duration = -1
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_modifier = acceptance_path1
+					owns_core_province = 131
+					131 = {
+						has_owner_accepted_culture = yes
+						num_of_times_improved = 3
+						OR = {
+							has_building = courthouse
+							has_building = town_hall
 						}
-						else = {
-						remove_country_modifier = austrian_path2
-							add_country_modifier = {
-								name = austrian_path3
-								duration = -1
-							}
+					}
+					croatia_area = {
+						num_of_times_improved = 5
+						type = all
+						has_owner_accepted_culture = yes
+					}
+					slavonia_area = {
+						num_of_times_improved = 5
+						type = all
+						has_owner_accepted_culture = yes
+					}
+				}
+				remove_country_modifier = acceptance_path1
+				add_country_modifier = {
+					name = acceptance_path2
+					duration = -1
+				}
+			}
+			else_if = {
+				limit = {
+					owns_core_province = 131
+					131 = {
+						has_owner_accepted_culture = yes
+						num_of_times_improved = 3
+						OR = {
+							has_building = courthouse
+							has_building = town_hall
 						}
+					}
+					croatia_area = {
+						num_of_times_improved = 5
+						type = all
+						has_owner_accepted_culture = yes
+					}
+					slavonia_area = {
+						num_of_times_improved = 5
+						type = all
+						has_owner_accepted_culture = yes
+					}
+				}
+				add_country_modifier = {
+					name = acceptance_path1
+					duration = -1
+				}
+			}
+			else_if = {
+				limit = {
+					owns_core_province = 131
+					131 = {
+						culture = austrian
+						num_of_times_improved = 3
+						OR = {
+							has_building = courthouse
+							has_building = town_hall
+						}
+					}
+					croatia_area = {
+						type = all
+						culture = austrian
+						OR = {
+							has_building = workshop
+							has_building = counting_house
+						}
+						OR = {
+							has_building = temple
+							has_building = cathedral
+						}
+					}
+					slavonia_area = {
+						type = all						
+						culture = austrian
+						OR = {
+							has_building = workshop
+							has_building = counting_house
+						}
+						OR = {
+							has_building = temple
+							has_building = cathedral
+						}
+					}
+				}
+				add_country_modifier = {
+					name = austrian_path1
+					duration = -1
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_modifier = austrian_path1
+					owns_core_province = 131
+					131 = {
+						culture = austrian
+						num_of_times_improved = 3
+						OR = {
+							has_building = courthouse
+							has_building = town_hall
+						}
+					}
+					croatia_area = {
+						type = all
+						culture = austrian
+						OR = {
+							has_building = workshop
+							has_building = counting_house
+						}
+						OR = {
+							has_building = temple
+							has_building = cathedral
+						}
+					}
+					slavonia_area = {
+						type = all						
+						culture = austrian
+						OR = {
+							has_building = workshop
+							has_building = counting_house
+						}
+						OR = {
+							has_building = temple
+							has_building = cathedral
+						}
+					}
+				}
+				remove_country_modifier = austrian_path1
+				add_country_modifier = {
+					name = austrian_path2
+					duration = -1
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_modifier = austrian_path2
+				}
+			remove_country_modifier = austrian_path2
+				add_country_modifier = {
+					name = austrian_path3
+					duration = -1
+				}
+			}
 		}
 	}
 	hungarian_headache = {
@@ -618,12 +756,12 @@ austrian_formable_slot1 = {
 									}
 								}
 								transdanubia_area = {
-									num_of_times_improved = 8
+									num_of_times_improved = 4
 									type = all
 									has_owner_accepted_culture = yes
 								}
 								alfold_area = {
-									num_of_times_improved = 5
+									num_of_times_improved = 4
 									type = all
 									has_owner_accepted_culture = yes
 								}
@@ -632,7 +770,7 @@ austrian_formable_slot1 = {
 								owns_core_province = 153
 								153 = {
 									culture = austrian
-									num_of_times_improved = 8
+									num_of_times_improved = 7
 									OR = {
 										has_building = courthouse
 										has_building = town_hall
@@ -679,12 +817,12 @@ austrian_formable_slot1 = {
 										}
 									}
 									transdanubia_area = {
-										num_of_times_improved = 8
+										num_of_times_improved = 4
 										type = all
 										has_owner_accepted_culture = yes
 									}
 									alfold_area = {
-										num_of_times_improved = 5
+										num_of_times_improved = 4
 										type = all
 										has_owner_accepted_culture = yes
 									}
@@ -708,12 +846,12 @@ austrian_formable_slot1 = {
 										}
 									}
 									transdanubia_area = {
-										num_of_times_improved = 8
+										num_of_times_improved = 4
 										type = all
 										has_owner_accepted_culture = yes
 									}
 									alfold_area = {
-										num_of_times_improved = 5
+										num_of_times_improved = 4
 										type = all
 										has_owner_accepted_culture = yes
 									}
@@ -721,6 +859,35 @@ austrian_formable_slot1 = {
 								remove_country_modifier = acceptance_path2
 								add_country_modifier = {
 									name = acceptance_path3
+									duration = -1
+								}	
+							}
+							else_if = {
+								limit = {
+									has_country_modifier = acceptance_path1
+									owns_core_province = 153
+									153 = {
+										has_owner_accepted_culture = yes
+										num_of_times_improved = 7
+										OR = {
+											has_building = courthouse
+											has_building = town_hall
+										}
+									}
+									transdanubia_area = {
+										num_of_times_improved = 4
+										type = all
+										has_owner_accepted_culture = yes
+									}
+									alfold_area = {
+										num_of_times_improved = 4
+										type = all
+										has_owner_accepted_culture = yes
+									}
+								}
+								remove_country_modifier = acceptance_path1
+								add_country_modifier = {
+									name = acceptance_path2
 									duration = -1
 								}	
 							}
@@ -736,12 +903,12 @@ austrian_formable_slot1 = {
 										}
 									}
 									transdanubia_area = {
-										num_of_times_improved = 8
+										num_of_times_improved = 4
 										type = all
 										has_owner_accepted_culture = yes
 									}
 									alfold_area = {
-										num_of_times_improved = 5
+										num_of_times_improved = 4
 										type = all
 										has_owner_accepted_culture = yes
 									}
@@ -757,7 +924,7 @@ austrian_formable_slot1 = {
 									owns_core_province = 153
 									153 = {
 										culture = austrian
-										num_of_times_improved = 8
+										num_of_times_improved = 7
 										OR = {
 											has_building = courthouse
 											has_building = town_hall
@@ -798,10 +965,55 @@ austrian_formable_slot1 = {
 							}
 							else_if = {
 								limit = {
+									has_country_modifier = austrian_path2
 									owns_core_province = 153
 									153 = {
 										culture = austrian
-										num_of_times_improved = 8
+										num_of_times_improved = 7
+										OR = {
+											has_building = courthouse
+											has_building = town_hall
+										}
+									}
+									transdanubia_area = {
+										type = all
+										culture = austrian
+										OR = {
+											has_building = workshop
+											has_building = counting_house
+										}
+										OR = {
+											has_building = temple
+											has_building = cathedral
+										}
+									}
+									alfold_area = {
+										type = all
+										culture = austrian
+										AND = {
+											OR = {
+												has_building = workshop
+												has_building = counting_house
+											}
+											OR = {
+												has_building = temple
+												has_building = cathedral
+											}
+										}
+									}
+								}
+								remove_country_modifier = austrian_path2
+								add_country_modifier = {
+									name = austrian_path3
+									duration = -1
+								}
+							}
+							else_if = {
+								limit = {
+									owns_core_province = 153
+									153 = {
+										culture = austrian
+										num_of_times_improved = 7
 										OR = {
 											has_building = courthouse
 											has_building = town_hall
@@ -837,7 +1049,10 @@ austrian_formable_slot1 = {
 									duration = -1
 								}
 							}
-							else = {
+							else_if = {
+								limit = {
+									has_country_modifier = austrian_path3
+								}
 								remove_country_modifier = austrian_path3
 								add_country_modifier = {
 									name = austrian_path4								
@@ -852,313 +1067,345 @@ austrian_formable_slot1 = {
 		required_missions = { hungarian_headache }
 		trigger = {
 			OR = {
-							if = {
-								owns_core_province = 1951
-								1951 = {
-									has_owner_accepted_culture = yes
-									num_of_times_improved = 3
-									OR = {
-										has_building = courthouse
-										has_building = town_hall
-									}
-								}
-								transylvania_area = {
-									num_of_times_improved = 5
-									type = all
-									has_owner_accepted_culture = yes
-								}
-								southern_transylvania_area = {
-									num_of_times_improved = 5
-									type = all
-									has_owner_accepted_culture = yes
-								}
-							}
-							if = {
-								owns_core_province = 1951
-								1951 = {
-									culture = austrian
-									num_of_times_improved = 3
-									OR = {
-										has_building = courthouse
-										has_building = town_hall
-									}
-								}
-								transylvania_area = {
-									type = all
-									culture = austrian
-									OR = {
-										has_building = workshop
-										has_building = counting_house
-									}
-									OR = {
-										has_building = temple
-										has_building = cathedral
-									}
-								}
-								southern_transylvania_area = {
-									type = all
-									culture = austrian
-									OR = {
-										has_building = workshop
-										has_building = counting_house
-									}
-									OR = {
-										has_building = temple
-										has_building = cathedral
-									}
-								}
-							}
+				if = {
+					owns_core_province = 1951
+					1951 = {
+						has_owner_accepted_culture = yes
+						num_of_times_improved = 3
+						OR = {
+							has_building = courthouse
+							has_building = town_hall
 						}
+					}
+					transylvania_area = {
+						num_of_times_improved = 3
+						type = all
+						has_owner_accepted_culture = yes
+					}
+					southern_transylvania_area = {
+						num_of_times_improved = 3
+						type = all
+						has_owner_accepted_culture = yes
+					}
+				}
+				if = {
+					owns_core_province = 1951
+					1951 = {
+						culture = austrian
+						num_of_times_improved = 3
+						OR = {
+							has_building = courthouse
+							has_building = town_hall
+						}
+					}
+					transylvania_area = {
+						type = all
+						culture = austrian
+						OR = {
+							has_building = workshop
+							has_building = counting_house
+						}
+						OR = {
+							has_building = temple
+							has_building = cathedral
+						}
+					}
+					southern_transylvania_area = {
+						type = all
+						culture = austrian
+						OR = {
+							has_building = workshop
+							has_building = counting_house
+						}
+						OR = {
+							has_building = temple
+							has_building = cathedral
+						}
+					}
+				}
+			}
 		}
 		effect = {
 			if = {
-							limit = {
-								has_country_modifier = acceptance_path4
-								owns_core_province = 1951
-								1951 = {
-									has_owner_accepted_culture = yes
-									num_of_times_improved = 3
-									OR = {
-										has_building = courthouse
-										has_building = town_hall
-									}
-								}
-									transylvania_area = {
-									num_of_times_improved = 5
-									type = all
-									has_owner_accepted_culture = yes
-								}
-								southern_transylvania_area = {
-									num_of_times_improved = 5
-									type = all
-									has_owner_accepted_culture = yes
-								}
-							}	
-							remove_country_modifier = acceptance_path4
-							add_country_modifier = {
-								name = acceptance_path5
-								duration = -1
-							}
+				limit = {
+					has_country_modifier = acceptance_path4
+					owns_core_province = 1951
+					1951 = {
+						has_owner_accepted_culture = yes
+						num_of_times_improved = 3
+						OR = {
+							has_building = courthouse
+							has_building = town_hall
 						}
-						else_if = {
-							limit = {
-								has_country_modifier = acceptance_path2
-								owns_core_province = 1951
-								1951 = {
-									has_owner_accepted_culture = yes
-									num_of_times_improved = 3
-									OR = {
-										has_building = courthouse
-										has_building = town_hall
-									}
-								}
-								transylvania_area = {
-									num_of_times_improved = 5
-									type = all
-									has_owner_accepted_culture = yes
-								}
-								southern_transylvania_area = {
-									num_of_times_improved = 5
-									type = all
-									has_owner_accepted_culture = yes
-								}
-							}	
-							remove_country_modifier = acceptance_path3
-							add_country_modifier = {						
-								name = acceptance_path4
-								duration = -1
-							}
+					}
+					transylvania_area = {
+						num_of_times_improved = 3
+						type = all
+						has_owner_accepted_culture = yes
+					}
+					southern_transylvania_area = {
+						num_of_times_improved = 3
+						type = all
+						has_owner_accepted_culture = yes
+					}
+				}	
+				remove_country_modifier = acceptance_path4
+				add_country_modifier = {
+					name = acceptance_path5
+					duration = -1
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_modifier = acceptance_path3
+					owns_core_province = 1951
+					1951 = {
+						has_owner_accepted_culture = yes
+						num_of_times_improved = 3
+						OR = {
+							has_building = courthouse
+							has_building = town_hall
 						}
-						else_if = {
-							limit = {
-								has_country_modifier = acceptance_path1
-								owns_core_province = 1951
-								1951 = {
-									has_owner_accepted_culture = yes
-									num_of_times_improved = 3
-									OR = {
-										has_building = courthouse
-										has_building = town_hall
-									}
-								}
-								transylvania_area = {
-									num_of_times_improved = 5
-									type = all
-									has_owner_accepted_culture = yes
-								}	
-								southern_transylvania_area = {
-									num_of_times_improved = 5	
-									type = all
-									has_owner_accepted_culture  yes						
-								}
-							}	
-							remove_country_modifier = acceptance_path2
-							add_country_modifier = {
-								name = acceptance_path5
-								duration = -1
-							}
+					}
+					transylvania_area = {
+						num_of_times_improved = 3
+						type = all
+						has_owner_accepted_culture = yes
+					}
+					southern_transylvania_area = {
+						num_of_times_improved = 3
+						type = all
+						has_owner_accepted_culture = yes
+					}
+				}	
+				remove_country_modifier = acceptance_path3
+				add_country_modifier = {
+					name = acceptance_path4
+					duration = -1
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_modifier = acceptance_path3
+					owns_core_province = 1951
+					1951 = {
+						has_owner_accepted_culture = yes
+						num_of_times_improved = 3
+						OR = {
+							has_building = courthouse
+							has_building = town_hall
 						}
-						else_if = {
-							limit = {
-								owns_core_province = 1951
-								1951 = {
-									has_owner_accepted_culture = yes
-									num_of_times_improved = 3
-									OR = {
-										has_building = courthouse
-										has_building = town_hall
-									}
-								}
-								transylvania_area = {
-									num_of_times_improved = 5
-									type = all
-									has_owner_accepted_culture = yes
-								}
-								southern_transylvania_area = {
-									num_of_times_improved = 5
-									type = all
-									has_owner_accepted_culture = yes
-								}
-							}	
-							add_country_modifier =  {
-								name = acceptance_path1
-								duration = -1
-							}
+					}
+					transylvania_area = {
+						num_of_times_improved = 3
+						type = all
+						has_owner_accepted_culture = yes
+					}
+					southern_transylvania_area = {
+						num_of_times_improved = 3
+						type = all
+						has_owner_accepted_culture = yes
+					}
+				}	
+				remove_country_modifier = acceptance_path3
+				add_country_modifier = {						
+					name = acceptance_path4
+					duration = -1
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_modifier = acceptance_path1
+					owns_core_province = 1951
+					1951 = {
+						has_owner_accepted_culture = yes
+						num_of_times_improved = 3
+						OR = {
+							has_building = courthouse
+							has_building = town_hall
 						}
-						else_if = {
-							limit = {
-								owns_core_province = 1951
-								1951 = {
-									culture = austrian
-									num_of_times_improved = 3
-									OR = {
-										has_building = courthouse
-										has_building = town_hall
-									}
-								}
-								transylvania_area = {
-									type = all
-									culture = austrian
-									OR = {
-										has_building = workshop
-										has_building = counting_house
-									}
-									OR = {
-										has_building = temple
-										has_building = cathedral
-									}
-								}
-								southern_transylvania_area = {
-									type = all
-									culture = austrian
-									OR = {
-										has_building = workshop
-										has_building = counting_house
-									}
-									OR = {
-										has_building = temple
-										has_building = cathedral
-									}
-								}
-							}
-							add_country_modifier = {
-								name = austrian_path1
-								duration = -1
-							}
+					}
+					transylvania_area = {
+						num_of_times_improved = 3
+						type = all
+						has_owner_accepted_culture = yes
+					}	
+					southern_transylvania_area = {
+						num_of_times_improved = 3	
+						type = all
+						has_owner_accepted_culture = yes						
+					}
+				}	
+				remove_country_modifier = acceptance_path1
+				add_country_modifier = {
+					name = acceptance_path2
+						duration = -1
+				}
+			}
+			else_if = {
+				limit = {
+					owns_core_province = 1951
+					1951 = {
+						has_owner_accepted_culture = yes
+						num_of_times_improved = 3
+						OR = {
+							has_building = courthouse
+							has_building = town_hall
 						}
-						else_if = {
-							limit = {
-								has_country_modifier = austrian_path1
-								owns_core_province = 1951
-								1951 = {
-									culture = austrian
-									num_of_times_improved = 3
-									OR = {
-										has_building = courthouse
-										has_building = town_hall
-									}
-								}
-								transylvania_area = {
-									type = all
-									culture = austrian
-									OR = {
-										has_building = workshop
-									has_building = counting_house
-									}
-									OR = {
-										has_building = temple
-										has_building = cathedral
-									}
-								}
-								southern_transylvania_area = {
-									type = all
-									culture = austrian
-									OR = {
-										has_building = workshop
-										has_building = counting_house
-									}
-									OR = {
-										has_building = temple
-										has_building = cathedral
-									}
-								}
-							}
-							remove_country_modifier = austrian_path1
-							add_country_modifier = {
-								name = austrian_path2
-								duration = -1
-							}
+					}
+					transylvania_area = {
+						num_of_times_improved = 3
+						type = all
+						has_owner_accepted_culture = yes
+					}
+					southern_transylvania_area = {
+						num_of_times_improved = 3
+						type = all
+						has_owner_accepted_culture = yes
+					}
+				}	
+				add_country_modifier =  {
+					name = acceptance_path1
+					duration = -1
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_modifier = austrian_path1
+					owns_core_province = 1951
+					1951 = {
+						culture = austrian
+						num_of_times_improved = 3
+						OR = {
+							has_building = courthouse
+							has_building = town_hall
 						}
-						else_if = {
-							limit = {
-								has_country_modifier = austrian_path2
-								owns_core_province = 1951
-								1951 = {
-									culture = austrian
-									num_of_times_improved = 3
-									OR = {
-										has_building = courthouse
-										has_building = town_hall
-									}
-								}
-								transylvania_area = {
-									type = all
-									culture = austrian
-									OR = {
-										has_building = workshop
-										has_building = counting_house
-									}
-									OR = {
-										has_building = temple
-										has_building = cathedral
-									}
-								}
-								southern_transylvania_area = {
-									type = all
-									culture = austrian
-									OR = {
-										has_building = workshop
-										has_building = counting_house
-									}
-									OR = {
-										has_building = temple
-										has_building = cathedral
-									}
-								}
-							}
-							remove_country_modifier = austrian_path2
-							add_country_modifier = {
-								name = austrian_path3
-								duration = -1
-							}
+					}
+					transylvania_area = {
+						type = all
+						culture = austrian
+						OR = {
+							has_building = workshop
+							has_building = counting_house
 						}
-						else = {
-							remove_country_modifier = austrian_path4
-							add_country_modifier = {
-								name = austrian_path5
-								duration = -1
-							}
+						OR = {
+							has_building = temple
+							has_building = cathedral
 						}
+					}
+					southern_transylvania_area = {
+						type = all
+						culture = austrian
+						OR = {
+							has_building = workshop
+							has_building = counting_house
+						}
+						OR = {
+							has_building = temple
+							has_building = cathedral
+						}
+					}
+				}
+				remove_country_modifier = austrian_path1
+				add_country_modifier = {
+					name = austrian_path2
+					duration = -1
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_modifier = austrian_path3
+					owns_core_province = 1951
+					1951 = {
+						culture = austrian
+						num_of_times_improved = 3
+						OR = {
+							has_building = courthouse
+							has_building = town_hall
+						}
+					}
+					transylvania_area = {
+						type = all
+						culture = austrian
+						OR = {
+							has_building = workshop
+							has_building = counting_house
+						}
+						OR = {
+							has_building = temple
+							has_building = cathedral
+						}
+					}
+					southern_transylvania_area = {
+						type = all
+						culture = austrian
+						OR = {
+							has_building = workshop
+							has_building = counting_house
+						}
+						OR = {
+							has_building = temple
+							has_building = cathedral
+						}
+					}
+				}
+				remove_country_modifier = austrian_path3
+				add_country_modifier = {
+					name = austrian_path4
+					duration = -1
+				}
+			}
+			else_if = {
+				limit = {
+					owns_core_province = 1951
+					1951 = {
+						culture = austrian
+						num_of_times_improved = 3
+						OR = {
+							has_building = courthouse
+							has_building = town_hall
+						}
+					}
+					transylvania_area = {
+						type = all
+						culture = austrian
+						OR = {
+							has_building = workshop
+							has_building = counting_house
+						}
+						OR = {
+							has_building = temple
+							has_building = cathedral
+						}
+					}
+					southern_transylvania_area = {
+						type = all
+						culture = austrian
+						OR = {
+							has_building = workshop
+							has_building = counting_house
+						}
+						OR = {
+							has_building = temple
+							has_building = cathedral
+						}
+					}
+				}
+				add_country_modifier = {
+					name = austrian_path1
+					duration = -1
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_modifier = austrian_path4
+				}
+				remove_country_modifier = austrian_path4
+				add_country_modifier = {
+					name = austrian_path5
+					duration = -1
+				}
+			}
 		}
 	}
 	slovak_situation = {
@@ -1167,211 +1414,215 @@ austrian_formable_slot1 = {
 		required_missions = { transylvanian_trouble }
 		trigger = {
 			OR = {
-							if = {
-								owns_core_province = 1772
-								1772 = {
-									has_owner_accepted_culture = yes
-									num_of_times_improved = 3
-									OR = {
-										has_building = courthouse
-										has_building = town_hall
-									}
-								}
-								slovakia_area = {
-									num_of_times_improved = 5
-									type = all
-									has_owner_accepted_culture = yes
-								}
-							}
-							if = {
-								owns_core_province = 1774
-								1774 = {
-									culture = austrian
-									num_of_times_improved = 3
-									OR = {
-										has_building = courthouse
-										has_building = town_hall
-									}
-								}
-								slovakia_area = {
-									type = all
-									culture = austrian
-									OR = {
-										can_build = workshop
-										can_build = counting_house
-										has_building = workshop
-										has_building = counting_house
-									}
-									OR = {
-										has_building = temple
-										has_building = cathedral
-									}
-								}
-							}
+				if = {
+					owns_core_province = 1772
+					1772 = {
+						has_owner_accepted_culture = yes
+						num_of_times_improved = 3
+						OR = {
+							has_building = courthouse
+							has_building = town_hall
 						}
+					}
+					slovakia_area = {
+						num_of_times_improved = 5
+						type = all
+						has_owner_accepted_culture = yes
+					}
+				}
+				if = {
+					owns_core_province = 1772
+					1772 = {
+						culture = austrian
+						num_of_times_improved = 3
+						OR = {
+							has_building = courthouse
+							has_building = town_hall
+						}
+					}
+					slovakia_area = {
+						type = all
+						culture = austrian
+						OR = {
+							NOT = { can_build = workshop }
+							NOT = { can_build = counting_house }
+							has_building = workshop
+							has_building = counting_house
+						}
+						OR = {
+							has_building = temple
+							has_building = cathedral
+						}
+					}
+				}
+			}
 		}
 		effect = {
 			if = {
-							limit = {
-								has_country_modifier = acceptance_path5
-								owns_core_province = 1772
-								1772 = {
-									has_owner_accepted_culture = yes
-									num_of_times_improved = 3
-									OR = {
-										has_building = courthouse
-										has_building = town_hall
-									}
-								}
-								slovakia_area = {
-									type = all
-									has_owner_accepted_culture = yes
-									num_of_times_improved = 5
-								}
-							}
-							remove_country_modifier = acceptance_path5
-							add_country_modifier = {
-								name = acceptance_path6
-								duration = -1
-							}
-							set_country_flag = transdanubia_formable
+				limit = {
+					has_country_modifier = acceptance_path5
+					owns_core_province = 1772
+					1772 = {
+						has_owner_accepted_culture = yes
+						num_of_times_improved = 3
+						OR = {
+							has_building = courthouse
+							has_building = town_hall
 						}
-						else_if = {
-							limit = {
-								has_country_modifier = acceptance_path3
-								owns_core_province = 1772
-								1772 = {
-									has_owner_accepted_culture = yes
-									num_of_times_improved = 3
-									OR = {
-										has_building = courthouse
-										has_building = town_hall
-									}
-								}
-								slovakia_area = {
-									type = all
-									has_owner_accepted_culture = yes
-									num_of_times_improved = 5
-								}
-							}
-							remove_country_modifier = acceptance_path3
-							add_country_modifier = {
-								name = acceptance_path4
-								duration = -1
-							}
-							set_country_flag = transdanubia_formable
-						}
-						else_if = {
-							limit = {
-								has_country_modifier = acceptance_path2
-								owns_core_province = 1772
-								1772 = {
-									has_owner_accepted_culture = yes
-									num_of_times_improved = 3
-									OR = {
-										has_building = courthouse
-										has_building = town_hall
-									}
-								}
-								slovakia_area = {
-									type = all
-									has_owner_accepted_culture = yes
-									num_of_times_improved = 5
-								}
-							}
-							remove_country_modifier = acceptance_path2
-							add_country_modifier =  {
-								name = acceptance_path3
-								duration = -1
-							}
-							set_country_flag = austrian_hungary_formable
-						}
-						else_if = {
-							limit = {
-								has_country_modifier = acceptance_path1
-								owns_core_province = 1772
-								1772 = {
-									has_owner_accepted_culture = yes
-									num_of_times_improved = 3
-									OR = {
-										has_building = courthouse
-										has_building = town_hall
-									}
-								}
-								slovakia_area = {
-									type = all
-									has_owner_accepted_culture = yes
-									num_of_times_improved = 5
-								}
-							}
-							remove_country_modifier = acceptance_path1
-							add_country_modifier =  {
-								name = acceptance_path2
-								duration = -1
-							}
-						}
-						else_if = {
-							limit = {
-								has_country_modifier = austrian_path1
-								owns_core_province = 1772
-								1772 = {
-									culture = austrian
-									num_of_times_improved = 3
-									OR = {
-										has_building = courthouse
-										has_building = town_hall
-									}
-								}
-								slovakia_area = {
-									type = all
-									culture = austrian
-									OR = {
-										has_building = workshop
-										has_building = counting_house
-									}
-									OR = {
-										has_building = temple
-										has_building = cathedral
-									}
-								}
-							}
-							remove_country_modifier = austrian_path1
-							add_country_modifier = {
-								name = austrian_path2
-								duration = -1	
-							}
-						}
+					}
+					slovakia_area = {
+						type = all
+						has_owner_accepted_culture = yes
+						num_of_times_improved = 5
+					}
+				}
+				remove_country_modifier = acceptance_path5
+				add_country_modifier = {
+					name = acceptance_path6
+					duration = -1
+				}
+				set_country_flag = transdanubia_formable
+			}
 			else_if = {
-					limit = {
-						has_country_modifier = austrian_path2
-						owns_core_province = 1772
-						1772 = {
-							culture = austrian
-							num_of_times_improved = 3
-							OR = {
-								has_building = courthouse
-								has_building = town_hall
-							}
+				limit = {
+					has_country_modifier = acceptance_path3
+					owns_core_province = 1772
+					1772 = {
+						has_owner_accepted_culture = yes
+						num_of_times_improved = 3
+					OR = {
+						has_building = courthouse
+						has_building = town_hall
+					}
+					}
+					slovakia_area = {
+						type = all
+						has_owner_accepted_culture = yes
+						num_of_times_improved = 5
+					}
+				}
+				remove_country_modifier = acceptance_path3
+				add_country_modifier = {
+					name = acceptance_path4
+					duration = -1
+				}
+				set_country_flag = transdanubia_formable
+			}
+			else_if = {
+				limit = {
+					has_country_modifier = acceptance_path2
+					owns_core_province = 1772
+					1772 = {
+						has_owner_accepted_culture = yes
+						num_of_times_improved = 3
+						OR = {
+							has_building = courthouse
+							has_building = town_hall
 						}
-						slovakia_area = {
-							type = all
-							culture = austrian
-							OR = {
-								has_building = workshop
-								has_building = counting_house
-							}
-							OR = {
-								has_building = temple
-								has_building = cathedral
-							}
-								}
 					}
-					remove_country_modifier = austrian_path2
-					add_country_modifier = {
-						name = austrian_path3
-						duration = -1	
+					slovakia_area = {
+						type = all
+						has_owner_accepted_culture = yes
+						num_of_times_improved = 5
 					}
-					set_country_flag = austrian_hungary_formable
+				}
+				remove_country_modifier = acceptance_path2
+				add_country_modifier =  {
+					name = acceptance_path3
+					duration = -1
+				}
+				set_country_flag = austrian_hungary_formable
+			}
+			else_if = {
+				limit = {
+					has_country_modifier = acceptance_path1
+					owns_core_province = 1772
+					1772 = {
+						has_owner_accepted_culture = yes
+						num_of_times_improved = 3
+						OR = {
+							has_building = courthouse
+							has_building = town_hall
+						}
+					}
+					slovakia_area = {
+						type = all
+						has_owner_accepted_culture = yes
+						num_of_times_improved = 5
+					}
+				}
+				remove_country_modifier = acceptance_path1
+				add_country_modifier =  {
+					name = acceptance_path2
+					duration = -1
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_modifier = austrian_path1
+					owns_core_province = 1772
+					1772 = {
+						culture = austrian
+						num_of_times_improved = 3
+						OR = {
+							has_building = courthouse
+							has_building = town_hall
+						}
+					}
+					slovakia_area = {
+						type = all
+						culture = austrian
+						OR = {
+							NOT = { can_build = workshop }
+							NOT = { can_build = counting_house }
+							has_building = workshop
+							has_building = counting_house
+						}
+						OR = {
+							has_building = temple
+							has_building = cathedral
+						}
+					}
+				}
+				remove_country_modifier = austrian_path1
+				add_country_modifier = {
+					name = austrian_path2
+					duration = -1	
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_modifier = austrian_path2
+					owns_core_province = 1772
+					1772 = {
+						culture = austrian
+						num_of_times_improved = 3
+						OR = {
+							has_building = courthouse
+							has_building = town_hall
+						}
+					}
+					slovakia_area = {
+						type = all
+						culture = austrian
+						OR = {
+							NOT = { can_build = workshop }
+							NOT = { can_build = counting_house }
+							has_building = workshop
+							has_building = counting_house
+						}
+						OR = {
+							has_building = temple
+							has_building = cathedral
+						}
+					}
+				}
+				remove_country_modifier = austrian_path2
+				add_country_modifier = {
+					name = austrian_path3
+					duration = -1	
+				}
+				set_country_flag = austrian_hungary_formable
 			}
 			else_if = {
 				limit = {
@@ -1389,6 +1640,8 @@ austrian_formable_slot1 = {
 					type = all
 					culture = austrian
 					OR = {
+						NOT = { can_build = workshop }
+						NOT = { can_build = counting_house }
 						has_building = workshop
 						has_building = counting_house
 					}
@@ -1405,7 +1658,10 @@ austrian_formable_slot1 = {
 					}
 					set_country_flag = austrian_empire_formable
 			}
-			else = {	
+			else_if = {
+				limit = {
+					has_country_modifier = austrian_path5
+				}
 				remove_country_modifier = austrian_path5
 				add_country_modifier = {
 					name = austrian_path6
@@ -1422,7 +1678,10 @@ austrian_unique_formable_slot2 = {
 	generic = no
 	ai = yes
 	potential = {
-		tag = HAB
+		OR = {
+			tag = HAB
+			tag = AUH
+		}
 	}
 
 	rule_bohemia = {
@@ -1433,17 +1692,19 @@ austrian_unique_formable_slot2 = {
 			if = {
 							OR = {				
 								BOH = { is_subject_of = HAB }
-								erzgebirge_area = {
-									type = all
-									owned_by = ROOT
-								}
-								bohemia_area = {
-									type = all
-									owned_by = ROOT
-								}
-								moravia_area = {
-									type = all
-									owned_by = ROOT
+								AND = {
+									erzgebirge_area = {
+										type = all
+										owned_by = ROOT
+									}
+									bohemia_area = {
+										type = all
+										owned_by = ROOT
+									}
+									moravia_area = {
+										type = all
+										owned_by = ROOT
+									}
 								}	
 							}
 						}
@@ -1451,22 +1712,26 @@ austrian_unique_formable_slot2 = {
 		effect = {
 			if = {
 				limit = {
-					BOH = { is_subject_of = HAB }
-					erzgebirge_area = {
-						type = all
-						owned_by = ROOT
-					}
-					bohemia_area = {
-						type = all
-						owned_by = ROOT
-					}
-					moravia_area = {
-						type = all
-						owned_by = ROOT
+					OR = {
+						BOH = { is_subject_of = HAB }
+						AND = {
+							erzgebirge_area = {
+								type = all
+								owned_by = ROOT
+							}
+							bohemia_area = {
+								type = all
+								owned_by = ROOT
+							}
+							moravia_area = {
+								type = all
+								owned_by = ROOT
+							}
+						}
 					}
 				}
 				add_country_modifier = {
-					name = convert_the_hus
+					name = "convert_the_hus"
 					duration = 3650
 				}
 			}
@@ -1508,7 +1773,11 @@ austrian_unique_formable_slot2 = {
 						}
 		}
 		effect = {
-			add_prestige = 15
+			add_prestige = 20
+			add_country_modifier = {
+				name = "end_of_reformists"
+				duration = 3650
+			}
 		}
 	}
 }
@@ -1518,7 +1787,10 @@ austrian_eco_slot3 = {
 	generic = no
 	ai = yes
 	potential = {
-		tag = HAB
+		OR = {
+			tag = HAB
+			tag = AUH
+		}
 	}
 
 	balance_the_estates = {
@@ -1629,7 +1901,10 @@ austrian_eco_slot3 = {
 						}
 		}
 		effect = {
-			add_prestige = 15
+			add_country_modifier = {
+				name = "early_industrial_works"
+				duration = 5480
+			}
 		}
 	}
 	imperial_capitals = {
@@ -1680,7 +1955,11 @@ austrian_eco_slot3 = {
 			}
 		}
 		effect = {
-			add_prestige = 10
+			add_prestige = 15
+			add_country_modifier = {
+				name = "capitals_of_the_hre"
+				duration = -1
+			}
 		}
 	}
 }
@@ -1690,7 +1969,10 @@ austria_slot_4_imperial = {
 	generic = no
 	ai = yes
 	potential = {
-		tag = HAB
+		OR = {
+			tag = HAB
+			tag = AUH
+		}
 	}
 
 	hre_government_reform = {
@@ -1703,7 +1985,10 @@ austria_slot_4_imperial = {
 			is_emperor = yes
 		}
 		effect = {
-			add_prestige = 10
+			add_country_modifier = {
+				name = "efficient_bureaucracy"
+				duration = 5480
+			}
 		}
 	}
 	hre_eco_reform = {
@@ -1716,7 +2001,10 @@ austria_slot_4_imperial = {
 			is_emperor = yes
 		}
 		effect = {
-			add_prestige = 10
+			add_country_modifier = {
+				name = "efficient_and_exact_taxation"
+				duration = 7560
+			}
 		}
 	}
 	enact_the_diet = {
@@ -1728,7 +2016,10 @@ austria_slot_4_imperial = {
 			is_emperor = yes
 		}
 		effect = {
-			add_prestige = yes
+			add_country_modifier = {
+				name = "ease_of_governance"
+				duration = -1
+			}
 		}
 	}
 }
@@ -1738,7 +2029,10 @@ balkan_expansion_slot_5 = {
 	generic = no
 	ai = yes
 	potential = {
-		tag = HAB
+		OR = {
+			tag = HAB
+			tag = AUH
+		}
 	}
 
 	consolidate_croatian_land = {
@@ -1760,7 +2054,9 @@ balkan_expansion_slot_5 = {
 			}
 		}
 		effect = {
-			add_prestige = 10
+			bosnia_area = {
+				add_permanent_claim = ROOT
+			}
 		}
 	}
 
@@ -1773,9 +2069,22 @@ balkan_expansion_slot_5 = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
+			bosnia_area = {
+				OR = {
+					has_building = fort_15th
+					has_building = fort_16th
+					has_building = fort_17th
+					has_building = fort_18th
+				}	
+			}
 		}
 		effect = {
-			add_prestige = 10
+			bosnia_area = {
+				add_province_modifier = {
+					name = "the_front_line_defenses"
+					duration = 7560
+				}
+			}	
 		}
 	}
 }
@@ -1806,7 +2115,11 @@ ah_expansion = {
 			}
 		}
 		effect = {
-			add_prestige = 10
+			add_prestige = 20
+			add_country_modifier = {
+				name = "extent_of_our_desire"
+				duration = 5480
+			}
 		}
 	}
 
@@ -1830,7 +2143,46 @@ ah_expansion = {
 			}
 		}
 		effect = {
-			add_prestige = 10
+			if = {
+				limit = {
+					upper_bavaria_area = {
+						type = all
+						owned_by = AUH
+					}
+					lower_bavaria_area = {
+						type = all
+						owned_by = AUH
+					}
+					east_bavaria_area = {
+						type = all
+						owned_by = AUH
+					}
+				}
+				add_country_modifier = {
+						name = "influx_of_bavarian_luxuries"
+						duration = -1
+				}
+			}
+			else_if = {
+				limit = {
+					upper_bavaria_area = {
+						type = all
+						country_or_non_sovereign_subject_holds = ROOT
+					}
+					lower_bavaria_area = {
+						type = all
+						country_or_non_sovereign_subject_holds = ROOT
+					}
+					east_bavaria_area = {
+						type = all
+						country_or_non_sovereign_subject_holds = ROOT
+					}
+				}
+				add_country_modifier = {
+					name = "new_german_state_under_the_crown"
+					duration = -1
+				}
+			}
 		}
 	}
 
@@ -1845,7 +2197,30 @@ ah_expansion = {
 			}
 		}
 		effect = {
-			add_prestige = 10
+			if = {
+				limit = {
+					wallachia_area = {
+					type = all
+					owned_by = ROOT
+					}
+				}
+				add_country_modifier = {
+					name = "an_extended_front"
+					duration = -1
+				}
+			}
+			else_if = {
+				limit = {
+					wallachia_area = {
+					type = all
+					country_or_non_sovereign_subject_holds = ROOT
+					}
+				}
+				add_country_modifier = {
+					name = "new_balkan_state_under_the_crown"
+					duration = -1
+				}
+			}
 		}
 	}
 
@@ -1870,9 +2245,95 @@ ah_expansion = {
 			        has_building = drydock
 			    }
 			}
-			#istria_and_ragusa_monument_lvl_2
+			137 = {
+				country_or_non_sovereign_subject_holds = ROOT 
+				if = {
+					OR = { 
+						has_great_project = { 
+							type = gme_walls_ragusa
+							tier = 1
+						}
+						has_great_project = { 
+							type = gme_walls_ragusa 
+							tier = 2
+						}
+						has_great_project = { 
+							type = gme_walls_ragusa 
+							tier = 3
+						}
+					}
+				}
+			}
+			130 = {
+				country_or_non_sovereign_subject_holds = ROOT 
+				if = {
+					OR = { 
+						has_great_project = { 
+							type = pula_Fortress
+							tier = 1
+						}
+						has_great_project = { 
+							type = pula_Fortress 
+							tier = 2
+						}
+						has_great_project = { 
+							type = pula_Fortress 
+							tier = 3
+						}
+					}
+				}
+			}
 		}
-		effect = { }
+		effect = { 
+			if = {
+				limit = {
+					east_adriatic_coast_area = {
+						type = all
+						owned_by = ROOT
+						OR = {
+							has_building = shipyard
+							has_building = grand_shipyard
+						}
+						OR = {
+							has_building = coastal_defence
+							has_building = naval_battery
+						}
+						OR = {
+							has_building = dock
+							has_building = drydock
+						}
+					}
+				}
+				add_country_modifier = {
+					name = "expanded_costal_influence"
+					duration = -1
+				}
+			}
+			else_if = {
+				limit = {
+					east_adriatic_coast_area = {
+						type = all
+						country_or_non_sovereign_subject_holds = ROOT
+						OR = {
+							has_building = shipyard
+							has_building = grand_shipyard
+						}
+						OR = {
+							has_building = coastal_defence
+							has_building = naval_battery
+						}
+						OR = {
+							has_building = dock
+							has_building = drydock
+						}
+					}
+				}
+				add_country_modifier = {
+					name = "new_adriatic_state_under_the_crown"
+					duration = -1
+				}
+			}
+		}
 	}
 
 	the_uskok_situation = {
@@ -1899,7 +2360,45 @@ ah_expansion = {
 			}
 		}
 		effect = {
-			add_prestige = 10
+			if = {
+				limit = {
+					venetia_area = {
+			            type = all
+			            owned_by = ROOT
+			        }
+				}
+				add_country_modifier = {
+					name = "the_venetian_dockyards"
+					duration = -1
+				}
+			}
+			else_if = {
+				limit = {
+					venetia_area = {
+			            type = all
+			            country_or_non_sovereign_subject_holds = ROOT
+			        }
+				}
+				add_country_modifier = {
+					name = "new_italian_state_under_the_crown"
+					duration = -1
+				}
+			}
+			else_if = {
+				limit = {
+					any_ally = {
+			            culture_group = latin
+			            venetia_area = {
+			                type = all
+			                owned_by = ITA
+			            }
+			        }
+				}
+				add_country_modifier = {
+					name = "foreign_naval_officers"
+					duration = -1
+				}
+			}
 		}
 	}
 }
@@ -1940,7 +2439,41 @@ ah_ecobs = {
 			}
 		}
 		effect = {
-			add_prestige = 10
+			define_advisor = {
+				type = trader
+				skill = 4
+				cost_multiplier = 0.75
+			}
+			134 = {
+				add_province_modifier = {
+					name = "skilled_traders"
+					duration = -1
+				}
+			}
+			4762 = {
+				add_province_modifier = {
+					name = "skilled_traders"
+					duration = -1
+				}
+			}
+			4761 = {
+				add_province_modifier = {
+					name = "skilled_traders"
+					duration = -1
+				}
+			}
+			133 = {
+				add_province_modifier = {
+					name = "skilled_traders"
+					duration = -1
+				}
+			}
+			1770 = {
+				add_province_modifier = {
+					name = "skilled_traders"
+					duration = -1
+				}
+			}
 		}
 	}
 	
@@ -1963,7 +2496,25 @@ ah_ecobs = {
 			}
 		}
 		effect = {
-			add_prestige = 10
+			add_prestige = 15
+			73 = {
+			   add_province_modifier = {
+				name = "standardized_imperial_minting"
+				duration = -1
+			   } 
+			}
+			154 = {
+			   add_province_modifier = {
+				name = "standardized_imperial_minting"
+				duration = -1
+			   }  
+			}
+			2967 = {
+			   add_province_modifier = {
+				name = "standardized_imperial_minting"
+				duration = -1
+			   }  
+			}
 		}
 	}
 
@@ -1977,11 +2528,15 @@ ah_ecobs = {
 			    base_production = 8
 			    value = 30
 			}
-			monthly_income = 1000
+			monthly_income = 300
 			num_of_loans = 0
 		}
 		effect = {
-			add_prestige = 10
+			add_years_of_income = 0.75
+			add_country_modifier = {
+				name = "an_industrial_power"
+				duration = -1
+			}
 		}
 	}
 }
@@ -2005,7 +2560,12 @@ fist_of_the_hre = {
 				value = 0.2
 			}
 		}
-		effect = { }
+		effect = {
+			add_country_modifier = {
+				name = "resolve_of_the_empire"
+				duration = 7460
+			}
+		}
 	}
 	a_modern_navy = {
 		icon = mission_build_up_to_force_limit
@@ -2023,7 +2583,10 @@ fist_of_the_hre = {
 			}
 		}
 		effect = {
-			add_prestige = 10
+			add_country_modifier = {
+				name = "modern_naval_tactics"
+				duration = 7460
+			}
 		}
 	}
 	engage_our_rivals = {
@@ -2041,7 +2604,11 @@ fist_of_the_hre = {
 			}
 		}
 		effect = {
-			add_prestige = 10
+			add_prestige = 50
+			add_country_modifier = {
+				name = "gott_schutze_de_kaiser"
+				duration = -1
+			}
 		}
 	}
 }
@@ -2067,7 +2634,10 @@ ah_gov_reform = {
 			}
 		}
 		effect = {
-			add_prestige = 10
+			add_country_modifier = {
+				name = "a_modern_bureaucracy"
+				duration = -1
+			}
 		}
 	}
 	quality_cabinet = {
@@ -2105,7 +2675,11 @@ ah_gov_reform = {
 			}
 		}
 		effect = {
-			add_prestige = 10
+			change_government_reform_progress = 75
+			add_country_modifier = {
+				name = "ministry_of_doctors"
+				duration = 5460
+			}
 		}
 	}
 	the_strength_of_the_monarchy = {
@@ -2128,7 +2702,6 @@ ah_gov_reform = {
 					estate = all
 					loyalty = 60
 				}
-				num_of_subjects = 5
 				NOT = {
 					any_subject_country = {
 						liberty_desire = 20
@@ -2154,7 +2727,11 @@ ah_gov_reform = {
 			}
 		}
 		effect = {
-			add_prestige = 10
+			change_government_reform_progress = 100
+			add_country_modifier = {
+				name = "an_absolute_rule"
+				duration = -1
+			}
 		}
 	}
 	a_strong_realm = {
