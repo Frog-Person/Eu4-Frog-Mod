@@ -20043,7 +20043,7 @@ gme_bakhchisaray_palace = {
 			local_development_cost = -0.075
 			local_regiment_cost = -0.10
 			local_defensiveness = 0.20
-			province_trade_power_modifier = 0.25
+			province_trade_power_modifier = 0.30
 		}
 		area_modifier = { }
 		region_modifier = { }
@@ -20059,7 +20059,7 @@ gme_bakhchisaray_palace = {
 			local_manpower_modifier = 0.05
 			local_regiment_cost = -0.10
 			local_defensiveness = 0.20
-			province_trade_power_modifier = 0.50
+			province_trade_power_modifier = 0.60
 		}
 		region_modifier = { }
 		country_modifiers = {
@@ -20076,7 +20076,7 @@ gme_bakhchisaray_palace = {
 			local_manpower_modifier = 0.10
 			local_regiment_cost = -0.15
 			local_defensiveness = 0.35
-			province_trade_power_modifier = 0.75
+			province_trade_power_modifier = 0.85
 		}
 		region_modifier = { }
 		country_modifiers = {
