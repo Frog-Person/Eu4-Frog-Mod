@@ -13,7 +13,7 @@ country_event = {
 		tag = BOH
 		is_subject = no
 		NOT = { has_reform = celestial_empire }
-		LIT = {
+		HAB = {
 			exists = yes
 			is_subject = no
 			NOT = { junior_union_with = HAB }
@@ -44,13 +44,10 @@ country_event = {
 	
 	option = {
 		name = "A Habsburg Prince will do nicely"
-		ai_chance = { 
-			factor = 10 
-		}
 		ai_chance = { factor = 10 } 
-		set_country_flag = boh_accepted_pu
 		HAB = { 
-			create_union = BOH 
+			create_union = BOH
+			set_country_flag = boh_accepted_pu 
 		}
 	}
 	option = {

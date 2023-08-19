@@ -62,43 +62,47 @@ efficient_and_exact_taxation = {
     local_tax_modifier = 0.15
 }
 ease_of_governance = {
-    local_state_maintenance_modifier = -0.05
-    statewide_governing_cost = -0.05
+    state_maintenance_modifier = -0.05
+    state_governing_cost = -0.05
 }
 the_front_line_defenses = {
     fort_maintenance_modifier = -0.15
-    local_defensiveness = 0.15
+    defensiveness = 0.15
 }
 extent_of_our_desire = {
     ae_impact = -0.15
 }
 influx_of_bavarian_luxuries = {
-    production_efficiency = 0.10
-}
-staple_bavarian_goods = {
     production_efficiency = 0.05
 }
-an_extended_front = {
-    local_defensiveness = 0.15
+new_german_state_under_the_crown = {
+    vassal_forcelimit_bonus = 0.25
+    vassal_income = 0.2
 }
-an_independent_front = {
-    local_defensiveness = 0.10
+new_state_under_the_crown = {
+    vassal_forcelimit_bonus = 0.25
+    vassal_income = 0.2
+}
+new_adriatic_state_under_the_crown = {
+    vassal_forcelimit_bonus = 0.25
+    vassal_income = 0.2
+}
+new_italian_state_under_the_crown = {
+    vassal_forcelimit_bonus = 0.25
+    vassal_income = 0.2
+}
+an_extended_front = {
+    defensiveness = 0.10
 }
 expanded_costal_influence = {
-    naval_forcelimit_modifier = 0.1
-}
-utilizing_native_sailors = {
     naval_forcelimit_modifier = 0.15
 }
 the_venetian_dockyards = {
     global_ship_cost = -0.05
     global_ship_recruit_speed = -0.1
 }
-experienced_naval_officers = {
-    naval_morale = 0.1
-}
 foreign_naval_officers = {
-    naval_morale = 0.05
+    naval_morale = 0.1
 }
 skilled_traders = {
     trade_value_modifier = 0.1
