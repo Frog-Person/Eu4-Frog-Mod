@@ -2307,7 +2307,7 @@ ah_expansion = {
 			}
 			else_if = {
 				limit = {
-					WAL = { is_subject_of = HAB }
+					WAL = { is_subject_of = AUH }
 					wallachia_area = {
 					type = all
 					country_or_non_sovereign_subject_holds = ROOT
@@ -2472,7 +2472,7 @@ ah_expansion = {
 			}
 			else_if = {
 				limit = {
-					VEN = { is_subject_of = HAB }
+					VEN = { is_subject_of = AUH }
 					venetia_area = {
 			            type = all
 			            country_or_non_sovereign_subject_holds = ROOT
