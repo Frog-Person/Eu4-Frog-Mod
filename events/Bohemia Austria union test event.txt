@@ -15,7 +15,6 @@ country_event = {
 		HAB = {
 			exists = yes
 			is_subject = no
-			NOT = { junior_union_with = HAB }
 			dynasty = "Habsburg"
 		}
 	}	
