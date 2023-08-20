@@ -197,10 +197,10 @@ austrian_formable_slot1 = {
 						}
 					}
 				}
-			}
-			add_country_modifier = {
-				name = "consolidate_administrations"
-				duration = 9132
+				add_country_modifier = {
+					name = "consolidate_administrations"
+					duration = 9132
+				}
 			}
 			else_if = {
 				limit = {
