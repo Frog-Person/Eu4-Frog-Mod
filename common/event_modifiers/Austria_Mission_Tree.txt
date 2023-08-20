@@ -130,5 +130,11 @@ ministry_of_doctors = {
     advisor_cost = -0.30
 }
 an_absolute_rule = {
-    yearly_absolutism = 0.1
+    yearly_absolutism = 1
+}
+consolidate_administrations = {
+    diplomatic_annexation_cost = -0.2
+}
+administrations_consolidated = {
+    global_unrest = -2
 }
