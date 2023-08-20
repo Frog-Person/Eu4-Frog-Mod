@@ -19,20 +19,21 @@ AUH_ideas = {
 		diplomatic_upkeep = 1
 	}
 	universal_conscription = {
-		vassal_forcelimit_bonus = 0.5
+		vassal_forcelimit_bonus = 0.35
+		global_manpower_modifier = 0.15
 	}
 	an_industrious_power = {
 		global_trade_goods_size_modifier = 0.1
-		trade_efficiency = 0.1
+		global_prov_trade_power_modifier = 0.1
 	}
 	augsleich = {
 		reduced_liberty_desire = 15
 		num_accepted_cultures = 2
 
 	}
-	a_multicultural_society = {
-		tolerance_heretic = 1
-		tolerance_heathen = 1
+	a_tolerant_society = {
+		tolerance_heretic = 1.5
+		tolerance_heathen = 1.5
 	}
 	ministry_of_doctors = {
 		reform_progress_growth = 0.2
