@@ -21823,15 +21823,8 @@ nalanda_university = {
 	#can we build it?
 	build_trigger = {
 		owner = {
-			OR = {
-				culture_group = western_aryan
-				culture_group = eastern_aryan
-				culture_group = hindusthani
-				culture_group = central_indic
-				culture_group = dravidian
-			}
+			religion = sikhism
 		}
-		province_is_or_accepts_culture = yes
 	}
 
 	#what to do when it's built
@@ -21845,29 +21838,15 @@ nalanda_university = {
 	#can our country use it?
 	can_use_modifiers_trigger = {
 		owner = {
-			OR = {
-				culture_group = western_aryan
-				culture_group = eastern_aryan
-				culture_group = hindusthani
-				culture_group = central_indic
-				culture_group = dravidian
-			}
+			religion = sikhism
 		}
-		province_is_or_accepts_culture = yes
 	}
 
 	#can our country upgrade it?
 	can_upgrade_trigger = {
 		owner = {
-			OR = {
-				culture_group = western_aryan
-				culture_group = eastern_aryan
-				culture_group = hindusthani
-				culture_group = central_indic
-				culture_group = dravidian
-			}
+			religion = sikhism
 		}
-		province_is_or_accepts_culture = yes
 	}
 
 	#can our country keep it or is it destroyed when we get hold of it?
@@ -21989,9 +21968,10 @@ nalanda_university = {
 		#what modifiers are added to the country when we have this project here on this tier
 		country_modifiers = {
 			diplomatic_reputation = 1
-		    innovativeness_gain = 0.2
+		    	innovativeness_gain = 0.2
 			idea_cost = -0.10
 			technology_cost = -0.05
+			mil_tech_cost_modifier = -0.05	
 		}
 
 		#what effects happen when this tier is achieved
