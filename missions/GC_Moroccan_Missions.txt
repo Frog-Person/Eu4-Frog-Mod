@@ -639,7 +639,6 @@ gc_morocco_1 = {
 						value = 125
 					}
 				}
-				#custom_trigger_tooltip = { tooltip = ARB_playtester_note }
 			}
 		}
 		effect = {
