@@ -150,6 +150,7 @@ ANS	= "countries/Ansbach.txt"
 AUG = "countries/Augsburg.txt"
 <<<<<<<<< Temporary merge branch 1
 AUH = "countries/AustriaHungary.txt"
+TDC = "countries/TransdanubianConfederation.txt"
 =========
 >>>>>>>>> Temporary merge branch 2
 BAD	= "countries/Baden.txt"
