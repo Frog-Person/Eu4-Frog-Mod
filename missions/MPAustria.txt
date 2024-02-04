@@ -645,19 +645,19 @@ austrian_formable_slot1 = {
 					owns_core_province = 131
 					131 = {
 						has_owner_accepted_culture = yes
-						num_of_times_improved = 3
+						num_of_times_improved = 5
 						OR = {
 							has_building = courthouse
 							has_building = town_hall
 						}
 					}
 					croatia_area = {
-						num_of_times_improved = 5
+						num_of_times_improved = 3
 						type = all
 						has_owner_accepted_culture = yes
 					}
 					slavonia_area = {
-						num_of_times_improved = 5
+						num_of_times_improved = 3
 						type = all
 						has_owner_accepted_culture = yes
 					}
@@ -674,19 +674,19 @@ austrian_formable_slot1 = {
 					owns_core_province = 131
 					131 = {
 						has_owner_accepted_culture = yes
-						num_of_times_improved = 3
+						num_of_times_improved = 5
 						OR = {
 							has_building = courthouse
 							has_building = town_hall
 						}
 					}
 					croatia_area = {
-						num_of_times_improved = 5
+						num_of_times_improved = 3
 						type = all
 						has_owner_accepted_culture = yes
 					}
 					slavonia_area = {
-						num_of_times_improved = 5
+						num_of_times_improved = 3
 						type = all
 						has_owner_accepted_culture = yes
 					}
@@ -702,19 +702,19 @@ austrian_formable_slot1 = {
 					owns_core_province = 131
 					131 = {
 						has_owner_accepted_culture = yes
-						num_of_times_improved = 3
+						num_of_times_improved = 5
 						OR = {
 							has_building = courthouse
 							has_building = town_hall
 						}
 					}
 					croatia_area = {
-						num_of_times_improved = 5
+						num_of_times_improved = 3
 						type = all
 						has_owner_accepted_culture = yes
 					}
 					slavonia_area = {
-						num_of_times_improved = 5
+						num_of_times_improved = 3
 						type = all
 						has_owner_accepted_culture = yes
 					}
