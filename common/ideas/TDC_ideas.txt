@@ -1,0 +1,44 @@
+TDC_ideas = {
+    start = {
+        land_morale = -0.05
+        development_cost = -0.1
+    }
+    bonus = {
+        possible_policy = 1
+    }
+
+    trigger = {
+		tag = TDC
+	}
+	free = yes
+
+    standard_banking_practices = {
+        inflation_reduction = 0.15
+    }
+
+    early_manufactories = {
+        production_efficiency = 0.20
+    }
+
+    trade_econimists = {
+        trade_efficiency = 0.20
+    }
+
+    master_builders = {
+        build_cost = -0.20
+        build_time = -0.10
+    }
+
+    hold_the_line = {
+        defensiveness = 0.40
+    }
+
+    mass_conscription = {
+        global_manpower_modifier = 0.33
+        land_forcelimit_modifier = 0.25
+    }
+
+    improved_refining = {
+        global_trade_goods_size_modifier = 0.15
+    }
+}
