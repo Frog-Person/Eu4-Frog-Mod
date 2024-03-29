@@ -2308,9 +2308,11 @@ ah_expansion = {
 			else_if = {
 				limit = {
 					WAL = { is_subject_of = AUH }
-					wallachia_area = {
-					type = all
-					country_or_non_sovereign_subject_holds = ROOT
+					AND = {
+						wallachia_area = {
+						type = all
+						country_or_non_sovereign_subject_holds = ROOT
+						}
 					}
 				}
 				add_country_modifier = {
@@ -2408,7 +2410,7 @@ ah_expansion = {
 			}
 			else_if = {
 				limit = {
-					DAL = { is_subject_of = AUH }
+					RAG = { is_subject_of = ROOT }
 					east_adriatic_coast_area = {
 						type = all
 						country_or_non_sovereign_subject_holds = ROOT
