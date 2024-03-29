@@ -583,7 +583,7 @@ estate_qizilbash_regimental_discipline = {
 			estate_loyalty = { estate = estate_qizilbash loyalty = 60 }
 		}
 		modifier = {
-			discipline = 0.05
+			discipline = 0.025
 		}
 	}
 	influence_scaled_conditional_modifier = {
@@ -592,7 +592,7 @@ estate_qizilbash_regimental_discipline = {
 			NOT = { estate_loyalty = { estate = estate_qizilbash loyalty = 60 } }
 		}
 		modifier = {
-			discipline = 0.025
+			discipline = 0.0125
 		}
 	}
 	influence_scaled_conditional_modifier = {
@@ -720,12 +720,12 @@ estate_qizilbash_qurchi_service = {
 		}
 	}
 	benefits = {
-		morale_damage_received = -0.1
+		morale_damage_received = -0.05
 	}
 	loyalty_scaled_conditional_modifier = {
 		trigger = { always = yes }
 		modifier = {
-			monarch_lifespan = 0.5
+			monarch_lifespan = 0.25
 			nobles_influence_modifier = -0.5
 			ghulams_influence_modifier = -0.5
 			qizilbash_influence_modifier = 0.5

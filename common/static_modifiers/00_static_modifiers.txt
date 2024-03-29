@@ -685,7 +685,7 @@ bank_loan = {
 	global_colonial_growth = -2.5}
 
 inflation = {
-	#build_cost = 0.01									#1% for each inflation step.
+	build_cost = 0.01									#1% for each inflation step.
 	infantry_cost = 0.01								#1% for each inflation step
 	cavalry_cost = 0.01									#1% for each inflation step
 	artillery_cost = 0.01								#1% for each inflation step
