@@ -2287,7 +2287,6 @@ ah_expansion = {
 		position = 5
 		required_missions = { control_bavaria }
 		trigger = {
-				WAL = { is_subject_of = AUH }
 				wallachia_area = {
 					type = all
 					country_or_non_sovereign_subject_holds = ROOT
@@ -2298,7 +2297,7 @@ ah_expansion = {
 				limit = {
 					wallachia_area = {
 					type = all
-					owned_by = ROOT
+					owned_by = AUH
 					}
 				}
 				add_country_modifier = {
@@ -2309,9 +2308,11 @@ ah_expansion = {
 			else_if = {
 				limit = {
 					WAL = { is_subject_of = AUH }
-					wallachia_area = {
-					type = all
-					country_or_non_sovereign_subject_holds = ROOT
+					AND ={
+						wallachia_area = {
+							type = all
+							country_or_non_sovereign_subject_holds = ROOT
+						}
 					}
 				}
 				add_country_modifier = {
