@@ -2699,17 +2699,14 @@ fist_of_the_hre = {
 		required_missions = { a_modern_navy }
 		trigger = {
 			if ={
-				AND ={ 
 					has_won_war_against = {
-			    		who = { is_enemy = ROOT }
+			    		who = FRA
 			    		max_years_since = 50
 					}
-					has_won_war_against ={
-						who = NOT ={ PREV }
-						who = { is_enemy = ROOT }
+					has_won_war_against = {
+						who = TUR
 						max_years_since = 50
 					}
-				}
 				great_power_rank = 3
 			}
 		}
