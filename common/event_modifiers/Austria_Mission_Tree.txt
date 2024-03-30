@@ -49,7 +49,7 @@ end_of_reformists = {
     global_autonomy = -0.05
 }
 early_industrial_works = {
-    production_efficiency = 0.1
+    production_efficiency = 0.15
 }
 capitals_of_the_hre = {
     imperial_authority = 0.05
@@ -76,19 +76,19 @@ influx_of_bavarian_luxuries = {
     production_efficiency = 0.05
 }
 new_german_state_under_the_crown = {
-    vassal_forcelimit_bonus = 0.25
+    vassal_forcelimit_bonus = 0.10
     vassal_income = 0.2
 }
 new_state_under_the_crown = {
-    vassal_forcelimit_bonus = 0.25
+    vassal_forcelimit_bonus = 0.10
     vassal_income = 0.2
 }
 new_adriatic_state_under_the_crown = {
-    vassal_forcelimit_bonus = 0.25
+    vassal_forcelimit_bonus = 0.10
     vassal_income = 0.2
 }
 new_italian_state_under_the_crown = {
-    vassal_forcelimit_bonus = 0.25
+    vassal_forcelimit_bonus = 0.10
     vassal_income = 0.2
 }
 an_extended_front = {
@@ -120,6 +120,7 @@ modern_naval_tactics = {
     global_naval_engagement_modifier = 0.1
 }
 gott_schutze_de_kaiser = {
+    max_absolutism_effect = 0.1
     max_absolutism = 15
     prestige = 0.5
 }

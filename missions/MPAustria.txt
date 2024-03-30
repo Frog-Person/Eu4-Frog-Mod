@@ -726,47 +726,6 @@ austrian_formable_slot1 = {
 			}
 			else_if = {
 				limit = {
-					owns_core_province = 131
-					131 = {
-						culture = austrian
-						num_of_times_improved = 3
-						OR = {
-							has_building = courthouse
-							has_building = town_hall
-						}
-					}
-					croatia_area = {
-						type = all
-						culture = austrian
-						OR = {
-							has_building = workshop
-							has_building = counting_house
-						}
-						OR = {
-							has_building = temple
-							has_building = cathedral
-						}
-					}
-					slavonia_area = {
-						type = all						
-						culture = austrian
-						OR = {
-							has_building = workshop
-							has_building = counting_house
-						}
-						OR = {
-							has_building = temple
-							has_building = cathedral
-						}
-					}
-				}
-				add_country_modifier = {
-					name = austrian_path1
-					duration = -1
-				}
-			}
-			else_if = {
-				limit = {
 					has_country_modifier = austrian_path1
 					owns_core_province = 131
 					131 = {
@@ -808,6 +767,47 @@ austrian_formable_slot1 = {
 					duration = -1
 				}
 			}
+			else_if = {
+				limit = {
+					owns_core_province = 131
+					131 = {
+						culture = austrian
+						num_of_times_improved = 3
+						OR = {
+							has_building = courthouse
+							has_building = town_hall
+						}
+					}
+					croatia_area = {
+						type = all
+						culture = austrian
+						OR = {
+							has_building = workshop
+							has_building = counting_house
+						}
+						OR = {
+							has_building = temple
+							has_building = cathedral
+						}
+					}
+					slavonia_area = {
+						type = all						
+						culture = austrian
+						OR = {
+							has_building = workshop
+							has_building = counting_house
+						}
+						OR = {
+							has_building = temple
+							has_building = cathedral
+						}
+					}
+				}
+				add_country_modifier = {
+					name = austrian_path1
+					duration = -1
+				}
+			}			
 			else_if = {
 				limit = {
 					has_country_modifier = austrian_path2
@@ -2287,9 +2287,12 @@ ah_expansion = {
 		position = 5
 		required_missions = { control_bavaria }
 		trigger = {
-			wallachia_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+			OR ={
+				WAL ={ is_subject_of = AUH }
+				wallachia_area = {
+					type = all
+					country_or_non_sovereign_subject_holds = ROOT
+				}
 			}
 		}
 		effect = {
@@ -2695,13 +2698,19 @@ fist_of_the_hre = {
 		position = 5
 		required_missions = { a_modern_navy }
 		trigger = {
-			has_won_war_against = {
-			    who = FRA
-			    max_years_since = 150
-			}
-			has_won_war_against = {
-			    who = TUR
-			    max_years_since = 150
+			if ={
+				AND ={ 
+					has_won_war_against = {
+			    		who = { is_enemy = ROOT }
+			    		max_years_since = 50
+					}
+					has_won_war_against ={
+						who = NOT ={ PREV }
+						who = { is_enemy = ROOT }
+						max_years_since = 50
+					}
+				}
+				great_power_rank = 3
 			}
 		}
 		effect = {
