@@ -558,16 +558,16 @@ austrian_formable_slot1 = {
 								duration = -1
 							}
 						}
-						else_if = {
-							limit = { 
-								has_country_modifier = austrian_path1
-							}
-							remove_country_modifier = austrian_path1
-							add_country_modifier = {
-								name = austrian_path2
-								duration = -1
-							}
-						}
+			else_if = {
+				limit = { 
+					has_country_modifier = austrian_path1
+				}
+				remove_country_modifier = austrian_path1
+				add_country_modifier = {
+						name = austrian_path2
+						duration = -1
+				}
+			}
 		}
 	}
 	croatian_conundrum = {
@@ -1275,7 +1275,7 @@ austrian_formable_slot1 = {
 			}
 			else_if = {
 				limit = {
-					has_country_modifier = acceptance_path3
+					has_country_modifier = acceptance_path2
 					owns_core_province = 1951
 					1951 = {
 						has_owner_accepted_culture = yes
@@ -1296,9 +1296,9 @@ austrian_formable_slot1 = {
 						has_owner_accepted_culture = yes
 					}
 				}	
-				remove_country_modifier = acceptance_path3
+				remove_country_modifier = acceptance_path2
 				add_country_modifier = {						
-					name = acceptance_path4
+					name = acceptance_path3
 					duration = -1
 				}
 			}
@@ -2287,13 +2287,11 @@ ah_expansion = {
 		position = 5
 		required_missions = { control_bavaria }
 		trigger = {
-			OR ={
-				WAL ={ is_subject_of = AUH }
+				WAL = { is_subject_of = AUH }
 				wallachia_area = {
 					type = all
 					country_or_non_sovereign_subject_holds = ROOT
 				}
-			}
 		}
 		effect = {
 			if = {
@@ -2311,11 +2309,9 @@ ah_expansion = {
 			else_if = {
 				limit = {
 					WAL = { is_subject_of = AUH }
-					AND = {
-						wallachia_area = {
-						type = all
-						country_or_non_sovereign_subject_holds = ROOT
-						}
+					wallachia_area = {
+					type = all
+					country_or_non_sovereign_subject_holds = ROOT
 					}
 				}
 				add_country_modifier = {
