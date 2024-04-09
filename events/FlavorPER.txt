@@ -1176,19 +1176,19 @@ country_event = {
 			trade_goods = silk
 			key = PERSIA_SILK_MONOPOLIZATION
 			value = 1.5
-			duration = 14600
+			duration = 1460
 		}
 		change_price = {
 			trade_goods = cloth
 			key = PERSIA_CLOTH_MONOPOLIZATION
 			value = 0.25
-			duration = 14600
+			duration = 1460
 		}
 		change_price = {
 			trade_goods = dyes
 			key = PERSIA_DYES_MONOPOLIZATION
 			value = 0.25
-			duration = 14600
+			duration = 1460
 		}
 		ai_chance = {
 			factor = 0
