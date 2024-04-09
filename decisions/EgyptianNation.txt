@@ -50,6 +50,7 @@ country_decisions = {
 					tag = MAM
 					adm_tech = 16
 				}
+			}
 			is_free_or_tributary_trigger = yes
 			is_nomad = no
 			is_at_war = no
