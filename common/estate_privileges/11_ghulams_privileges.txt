@@ -391,7 +391,7 @@ estate_ghulams_special_privilege = {
 	influence = 0.05
 	land_share = 5
 	modifier_by_land_ownership = {
-		infantry_power = 0.1
+		infantry_power = 0.05
 		qizilbash_loyalty_modifier = -0.5
 		nobles_loyalty_modifier = -0.5
 	}
@@ -652,7 +652,7 @@ estate_ghulams_tupchi_artillery_corps = {
 			}
 		}
 		modifier = {
-			artillery_cost = -0.33
+			artillery_cost = -0.15
 		}
 	}
 	benefits = {
