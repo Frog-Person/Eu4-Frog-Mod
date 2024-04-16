@@ -1506,7 +1506,10 @@ country_event = { #Administrating the Northern Territories
 			is_subject_of = ROOT
 		}
 	}
-	is_triggered_only = yes
+	
+	mean_time_to_happen = {
+		days = 1
+	}
 	goto = 382
 	
 	option = {
