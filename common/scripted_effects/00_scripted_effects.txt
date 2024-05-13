@@ -274,8 +274,6 @@ add_vassalise_cb_effect = {
 		target = ROOT
 	}
 }
-
-
 remove_vassalise_cb_effect = {
 	if = {
 		limit = {
@@ -440,7 +438,6 @@ add_half_industrialization_effect = {
 		}
 	}
 }
-
 #province scope
 add_quarter_industrialization_effect = {
 	if = {
@@ -463,7 +460,6 @@ choose_random_development_bonus_effect = {
 		1 = { set_province_flag = add_base_manpower_flag }
 	}
 }
-
 apply_random_development_bonus_bonus_effect = {
 	trigger_switch = {
 		on_trigger = has_province_flag
@@ -473,7 +469,6 @@ apply_random_development_bonus_bonus_effect = {
 	}
 	clear_random_development_bonus_flags_effect = yes
 }
-
 clear_random_development_bonus_flags_effect = {
 	clr_province_flag = add_base_tax_flag
 	clr_province_flag = add_base_production_flag
@@ -604,7 +599,6 @@ spawn_small_scaled_rebels = {
 		]
 	}
 }
-
 spawn_large_scaled_rebels = {
 	#always specify type
 	#specify saved_name = <saved_name> if you want to use one of those
@@ -771,7 +765,6 @@ spawn_large_scaled_rebels = {
 	}
 }
 
-
 #country scope. Currently just applies to the Hansa, if future ones are added, update the flags
 #Used in nation formation decisions
 restore_country_name_effect = {
@@ -785,7 +778,6 @@ restore_country_name_effect = {
 		}
 	}
 }
-
 #Used to clone the nation when forming a colonial tag.
 restore_old_nation_on_formation_effect = {
 	if = {
@@ -1241,7 +1233,6 @@ change_government_to_republic = {
 		change_government_reform_progress = -200
 	}
 }
-
 change_government_to_monarchy = {
 	if = {
 		limit = {
@@ -1260,7 +1251,6 @@ change_government_to_monarchy = {
 		}
 	}
 }
-
 change_government_to_theocracy = {
 	if = {
 		limit = {
@@ -1279,7 +1269,6 @@ change_government_to_theocracy = {
 		}
 	}
 }
-
 change_government_to_tribal = {
 	if = {
 		limit = {
@@ -1287,90 +1276,6 @@ change_government_to_tribal = {
 		}
 		change_government = tribal
 		change_government_reform_progress = -800
-	}
-}
-
-add_ruler_personality_ancestor = {
-	# key = personality to test again
-	if = {
-		limit = { 
-			has_dlc = "Leviathan"
-			religion = totemism 
-		}
-		add_ruler_personality = ancestor_$key$_personality
-	}
-	else = {
-		add_ruler_personality = $key$_personality
-	}
-}
-
-add_heir_personality_ancestor = {
-	# key = personality to test again
-	if = {
-		limit = { 
-			has_dlc = "Leviathan"
-			religion = totemism 
-		}
-		add_heir_personality = ancestor_$key$_personality
-	}
-	else = {
-		add_heir_personality = $key$_personality
-	}
-}
-
-add_queen_personality_ancestor = {
-	# key = personality to test again
-	if = {
-		limit = { 
-			has_dlc = "Leviathan"
-			religion = totemism 
-		}
-		add_queen_personality = ancestor_$key$_personality
-	}
-	else = {
-		add_queen_personality = $key$_personality
-	}
-}
-
-remove_ruler_personality_ancestor = {
-	# key = personality to test again
-	if = {
-		limit = { 
-			has_dlc = "Leviathan"
-			religion = totemism 
-		}
-		remove_ruler_personality = ancestor_$key$_personality
-	}
-	else = {
-		remove_ruler_personality = $key$_personality
-	}
-}
-
-remove_heir_personality_ancestor = {
-	# key = personality to test again
-	if = {
-		limit = { 
-			has_dlc = "Leviathan"
-			religion = totemism 
-		}
-		remove_heir_personality = ancestor_$key$_personality
-	}
-	else = {
-		remove_heir_personality = $key$_personality
-	}
-}
-
-remove_queen_personality_ancestor = {
-	# key = personality to test again
-	if = {
-		limit = { 
-			has_dlc = "Leviathan"
-			religion = totemism 
-		}
-		remove_queen_personality = ancestor_$key$_personality
-	}
-	else = {
-		remove_queen_personality = $key$_personality
 	}
 }
 
@@ -1409,7 +1314,6 @@ set_great_project_tier_1 = {
 		add_base_manpower = 1
 	}
 }
-
 #Sets monument tier 2 (has no effect if the monument is tier 2 or higher)
 #Province scope
 set_great_project_tier_2 = {
@@ -1478,7 +1382,6 @@ set_great_project_tier_2 = {
 		add_base_manpower = 1
 	}
 }
-
 #Sets monument tier 3 (has no effect if the monument is tier 3 or higher)
 #Province scope
 set_great_project_tier_3 = {
@@ -1610,7 +1513,6 @@ create_colony_mission_reward = {
 		add_permanent_claim = $province$
 	}
 }
-
 #Country effect
 seize_empty_province_effect = {
 	if = {
@@ -1636,7 +1538,6 @@ seize_empty_province_effect = {
 		}
 	}
 }
-
 #Provine effect
 create_colony_mission_reward_province = {
 	if = {
@@ -2335,21 +2236,10 @@ add_temporary_colonist = {
 	}
 	custom_tooltip = add_temporary_colonist_tt
 }
-
-#Country effect - Mission reward
-allow_baseline_invite_scholar = {
-	custom_tooltip = allows_every_time_invite_of_$religious_school$
+remove_temporary_colonist = {
 	hidden_effect = {
-		set_country_flag = can_always_invite_$religious_school$
+		remove_country_modifier = temporary_colonist
 	}
-	[[religious_school_modifier]
-		tooltip = {
-			add_country_modifier = {
-				name = $religious_school_modifier$
-				duration = -1
-			}
-		}
-	]
 }
 
 #Country effect
@@ -4084,18 +3974,18 @@ faction_in_power_effect = {
 }
 
 ## adds the culture as an accepted culture or 100 dip power
-### add_accepted_culture_or_dip_power = { culture = <culture> (optional) free = yes (optional) dip_reward = yes (optional, use when you have this effect twice in a row) new_line = yes }
+### add_accepted_culture_or_dip_power_stated = { culture = <culture> (optional) free = yes (optional) dip_reward = yes (optional) value = x (optional, works like dip_reward giving X diplomatic power instead) }
 ### the custom effect is only able to check for up to 10 culture slots
 #Credits for that script goes to Stiopa
 # In case you want a culture to be a free slot then make sure that you have the following covered:
 # defined a free_slot_for_$culture$ = { num_accepted_culture = 1 }
 # Supports currently the following cultures:
-#	armenian
-#	georgian
-#	turkish
-#	al_iraqiya_arabic
-#	al_suryah_arabic
-add_accepted_culture_or_dip_power = {
+	# armenian
+	# georgian
+	# turkish
+	# al_iraqiya_arabic
+	# al_suryah_arabic
+add_accepted_culture_or_dip_power_stated = {
 	tooltip = {
 		add_accepted_culture = $culture$
 	}
@@ -4385,8 +4275,6 @@ set_center_level_3_center_of_trade = {
 		}
 	}
 }
-
-
 set_center_level_2_center_of_trade = {
 	custom_tooltip = set_center_level_2_center_of_trade_tt
 	hidden_effect = {
@@ -5225,6 +5113,92 @@ create_leader_scaling_with_tradition = {
 	custom_tooltip = create_leader_scaling_with_tradition_tt
 }
 
+#A Specific case of the above
+create_general_scaling_with_tradition_and_pips = {
+	if = {
+		limit = {
+			army_tradition = 80
+		}
+		create_general_with_pips = {
+			tradition = 100
+			[[add_fire] add_fire = $add_fire$ ]
+			[[add_shock] add_shock = $add_shock$ ]
+			[[add_manuever] add_manuever = $add_manuever$ ]
+			[[add_siege] add_siege = $add_siege$ ]
+		}
+	}
+	else_if = {
+		limit = {
+			army_tradition = 70
+		}
+		create_general_with_pips = {
+			tradition = 90
+			[[add_fire] add_fire = $add_fire$ ]
+			[[add_shock] add_shock = $add_shock$ ]
+			[[add_manuever] add_manuever = $add_manuever$ ]
+			[[add_siege] add_siege = $add_siege$ ]
+		}
+	}
+	else_if = {
+		limit = {
+			army_tradition = 60
+		}
+		create_general_with_pips = {
+			tradition = 80
+			[[add_fire] add_fire = $add_fire$ ]
+			[[add_shock] add_shock = $add_shock$ ]
+			[[add_manuever] add_manuever = $add_manuever$ ]
+			[[add_siege] add_siege = $add_siege$ ]
+		}
+	}
+	else_if = {
+		limit = {
+			army_tradition = 50
+		}
+		create_general_with_pips = {
+			tradition = 70
+			[[add_fire] add_fire = $add_fire$ ]
+			[[add_shock] add_shock = $add_shock$ ]
+			[[add_manuever] add_manuever = $add_manuever$ ]
+			[[add_siege] add_siege = $add_siege$ ]
+		}
+	}
+	else_if = {
+		limit = {
+			army_tradition = 40
+		}
+		create_general_with_pips = {
+			tradition = 60
+			[[add_fire] add_fire = $add_fire$ ]
+			[[add_shock] add_shock = $add_shock$ ]
+			[[add_manuever] add_manuever = $add_manuever$ ]
+			[[add_siege] add_siege = $add_siege$ ]
+		}
+	}
+	else_if = {
+		limit = {
+			army_tradition = 30
+		}
+		create_general_with_pips = {
+			tradition = 50
+			[[add_fire] add_fire = $add_fire$ ]
+			[[add_shock] add_shock = $add_shock$ ]
+			[[add_manuever] add_manuever = $add_manuever$ ]
+			[[add_siege] add_siege = $add_siege$ ]
+		}
+	}
+	else = {
+		create_general_with_pips = {
+			tradition = 40
+			[[add_fire] add_fire = $add_fire$ ]
+			[[add_shock] add_shock = $add_shock$ ]
+			[[add_manuever] add_manuever = $add_manuever$ ]
+			[[add_siege] add_siege = $add_siege$ ]
+		}
+	}
+	custom_tooltip = create_leader_scaling_with_tradition_tt
+}
+
 #type = heavy_ship/light_ship/galley/transport
 add_ship_construction_scaled_to_ports = {	
 	random_owned_province = {
@@ -5283,9 +5257,143 @@ add_ship_construction_scaled_to_ports = {
 				cost = 0
 			}
 		}
+		else = {
+			add_unit_construction = {
+				amount = 1
+				type = $type$
+				speed = 0.5
+				cost = 0
+			}
+		}
+	}
+}
+add_ship_construction_scaled_to_ports_MAY = {	
+	random_owned_province = {
+		limit = {
+			has_port = yes
+		}
+		if = {
+			limit = {
+				owner = {
+					num_of_ports = 10
+				}
+			}
+			add_unit_construction = {
+				amount = 10
+				type = heavy_ship
+				speed = 0.5
+				cost = 0
+			}
+		}
+		else_if = {
+			limit = {
+				owner = {
+					num_of_ports = 8
+				}
+			}
+			add_unit_construction = {
+				amount = 8
+				type = heavy_ship
+				speed = 0.5
+				cost = 0
+			}
+		}
+		else_if = {
+			limit = {
+				owner = {
+					num_of_ports = 6
+				}
+			}
+			add_unit_construction = {
+				amount = 6
+				type = heavy_ship
+				speed = 0.5
+				cost = 0
+			}
+		}
+		else_if = {
+			limit = {
+				owner = {
+					num_of_ports = 4
+				}
+			}
+			add_unit_construction = {
+				amount = 4
+				type = heavy_ship
+				speed = 0.5
+				cost = 0
+			}
+		}
+		else = {
+			add_unit_construction = {
+				amount = 2
+				type = heavy_ship
+				speed = 0.5
+				cost = 0
+			}
+		}
+	}
+}
+add_ship_construction_scaled_to_ports_MAY = {	
+	random_owned_province = {
+		limit = {
+			has_port = yes
+		}
+		if = {
+			limit = {
+				owner = {
+					num_of_ports = 10
+				}
+			}
+			add_unit_construction = {
+				amount = 10
+				type = heavy_ship
+				speed = 0.5
+				cost = 0
+			}
+		}
+		else_if = {
+			limit = {
+				owner = {
+					num_of_ports = 8
+				}
+			}
+			add_unit_construction = {
+				amount = 8
+				type = heavy_ship
+				speed = 0.5
+				cost = 0
+			}
+		}
+		else_if = {
+			limit = {
+				owner = {
+					num_of_ports = 6
+				}
+			}
+			add_unit_construction = {
+				amount = 6
+				type = heavy_ship
+				speed = 0.5
+				cost = 0
+			}
+		}
+		else_if = {
+			limit = {
+				owner = {
+					num_of_ports = 4
+				}
+			}
+			add_unit_construction = {
+				amount = 4
+				type = heavy_ship
+				speed = 0.5
+				cost = 0
+			}
+		}
 		add_unit_construction = {
-			amount = 1
-			type = $type$
+			amount = 2
+			type = heavy_ship
 			speed = 0.5
 			cost = 0
 		}
@@ -9408,7 +9516,6 @@ add_or_upgrade_trade_building = {
 		else = { add_building = marketplace }
 	}
 }
-
 add_or_upgrade_tax_building = {
 	custom_tooltip = add_or_upgrade_tax_building_tt
 	hidden_effect = {
@@ -9423,7 +9530,6 @@ add_or_upgrade_tax_building = {
 		else = { add_building = temple }
 	}
 }
-
 add_or_upgrade_production_building = {
 	custom_tooltip = add_or_upgrade_production_building_tt
 	hidden_effect = {
@@ -9448,7 +9554,7 @@ add_or_upgrade_dock_building = {
 		}
 		else_if = {
 			limit = { has_building = drydock }
-			ROOT = { add_sailors = 0.5 }
+			ROOT = { add_sailors = 500 }
 		}
 		else = { add_building = dock }
 	}
@@ -9463,7 +9569,7 @@ add_or_upgrade_shipyard_building = {
 		}
 		else_if = {
 			limit = { has_building = grand_shipyard }
-			ROOT = { add_sailors = 0.5 }
+			ROOT = { add_sailors = 500 }
 		}
 		else = { add_building = shipyard }
 	}
@@ -9624,7 +9730,7 @@ upgrade_dock_building = {
 		}
 		else_if = {
 			limit = { has_building = drydock }
-			ROOT = { add_sailors = 0.5 }
+			ROOT = { add_sailors = 500 }
 		}
 	}
 }
@@ -9638,7 +9744,7 @@ upgrade_shipyard_building = {
 		}
 		else_if = {
 			limit = { has_building = grand_shipyard }
-			ROOT = { add_sailors = 0.5 }
+			ROOT = { add_sailors = 500 }
 		}
 	}
 }
@@ -9724,52 +9830,1265 @@ upgrade_naval_defense_building = {
 	}
 }
 
-remove_temporary_colonist = {
+
+#####################
+# 	USAGE
+# 	pick_best_tags = {
+#		global_trigger = "your global triggers here" OPTIONAL
+#		<example>
+#		global_trigger = "
+#		OR = {
+#			continent = europe
+#			allied_with = ROOT
+#		}"
+#		scale = your trigger type here REQUIRED
+#		<example>
+#		scale = army_size
+#		<number of tags here> = yes (supported numbers: 1-3) REQUIRED
+#		event_target_name = "your name for event target here> REQUIRED
+#		scope = "your scope here> OPTIONAL
+#		<example>
+#		scope = "every_neighbor_country"
+#		default is every_country
+#	}
+#####################
+
+pick_best_tags = {
+	[[scope]
+		pick_best_tags_2 = {
+			scope = $scope$
+			scale = $scale$
+			event_target_name = $event_target_name$
+			global_trigger = "$global_trigger$"
+			1 = "$1$"
+			2 = "$2$"
+			3 = "$3$"
+			4 = "$4$"
+			5 = "$5$"
+			10 = "$10$"
+		}
+		set_global_flag = PICK_BEST_TAG_FLAG
+	] #curses for not having an [ELSE ] or something.
+	if = {
+		limit = {
+			NOT = { has_global_flag = PICK_BEST_TAG_FLAG } #This check is here to prevent the algorithm from being run again after the scoped version was executed
+		}
+		pick_best_tags_2 = {
+			scope = every_country
+			scale = $scale$
+			event_target_name = $event_target_name$
+			global_trigger = "$global_trigger$"
+			1 = "$1$"
+			2 = "$2$"
+			3 = "$3$"
+			4 = "$4$"
+			5 = "$5$"
+			10 = "$10$"
+		}
+	}
+	else = { clr_global_flag = PICK_BEST_TAG_FLAG }
+}
+
+pick_best_tags_2 = {
 	hidden_effect = {
-		remove_country_modifier = temporary_colonist
+		[[1]
+			if = {
+				limit = { always = $1$ }
+				pick_best_tag = {
+					scale = "$scale$"
+					scope = $scope$
+					global_trigger = "$global_trigger$"
+					event_target_name = "$event_target_name$"
+					number = 1
+				}
+			}
+		]
+		[[2]
+			if = {
+				limit = { always = $2$ }
+				pick_best_tag = {
+					scale = "$scale$"
+					scope = $scope$
+					global_trigger = "$global_trigger$"
+					event_target_name = "$event_target_name$"
+					number = 1
+				}
+				pick_best_tag = {
+					scale = "$scale$"
+					scope = $scope$
+					global_trigger = "$global_trigger$"
+					event_target_name = "$event_target_name$"
+					number = 2
+				}
+			}
+		]
+		[[3]
+			if = {
+				limit = { always = $3$ }
+				pick_best_tag = {
+					scale = "$scale$"
+					scope = $scope$
+					global_trigger = "$global_trigger$"
+					event_target_name = "$event_target_name$"
+					number = 1
+				}
+				pick_best_tag = {
+					scale = "$scale$"
+					scope = $scope$
+					global_trigger = "$global_trigger$"
+					event_target_name = "$event_target_name$"
+					number = 2
+				}
+				pick_best_tag = {
+					scale = "$scale$"
+					scope = $scope$
+					global_trigger = "$global_trigger$"
+					event_target_name = "$event_target_name$"
+					number = 3
+				}
+			}
+		]
+		[[4]
+			if = {
+				limit = { always = $4$ }
+				pick_best_tag = {
+					scale = "$scale$"
+					scope = $scope$
+					global_trigger = "$global_trigger$"
+					event_target_name = "$event_target_name$"
+					number = 1
+				}
+				pick_best_tag = {
+					scale = "$scale$"
+					scope = $scope$
+					global_trigger = "$global_trigger$"
+					event_target_name = "$event_target_name$"
+					number = 2
+				}
+				pick_best_tag = {
+					scale = "$scale$"
+					scope = $scope$
+					global_trigger = "$global_trigger$"
+					event_target_name = "$event_target_name$"
+					number = 3
+				}
+				pick_best_tag = {
+					scale = "$scale$"
+					scope = $scope$
+					global_trigger = "$global_trigger$"
+					event_target_name = "$event_target_name$"
+					number = 4
+				}
+			}
+		]
+		[[5]
+			if = {
+				limit = { always = $5$ }
+				pick_best_tag = {
+					scale = "$scale$"
+					scope = $scope$
+					global_trigger = "$global_trigger$"
+					event_target_name = "$event_target_name$"
+					number = 1
+				}
+				pick_best_tag = {
+					scale = "$scale$"
+					scope = $scope$
+					global_trigger = "$global_trigger$"
+					event_target_name = "$event_target_name$"
+					number = 2
+				}
+				pick_best_tag = {
+					scale = "$scale$"
+					scope = $scope$
+					global_trigger = "$global_trigger$"
+					event_target_name = "$event_target_name$"
+					number = 3
+				}
+				pick_best_tag = {
+					scale = "$scale$"
+					scope = $scope$
+					global_trigger = "$global_trigger$"
+					event_target_name = "$event_target_name$"
+					number = 4
+				}
+				pick_best_tag = {
+					scale = "$scale$"
+					scope = $scope$
+					global_trigger = "$global_trigger$"
+					event_target_name = "$event_target_name$"
+					number = 5
+				}
+			}
+		]
+		[[10]
+			if = {
+				limit = { always = $10$ }
+				pick_best_tag = {
+					scale = "$scale$"
+					scope = $scope$
+					global_trigger = "$global_trigger$"
+					event_target_name = "$event_target_name$"
+					number = 1
+				}
+				pick_best_tag = {
+					scale = "$scale$"
+					scope = $scope$
+					global_trigger = "$global_trigger$"
+					event_target_name = "$event_target_name$"
+					number = 2
+				}
+				pick_best_tag = {
+					scale = "$scale$"
+					scope = $scope$
+					global_trigger = "$global_trigger$"
+					event_target_name = "$event_target_name$"
+					number = 3
+				}
+				pick_best_tag = {
+					scale = "$scale$"
+					scope = $scope$
+					global_trigger = "$global_trigger$"
+					event_target_name = "$event_target_name$"
+					number = 4
+				}
+				pick_best_tag = {
+					scale = "$scale$"
+					scope = $scope$
+					global_trigger = "$global_trigger$"
+					event_target_name = "$event_target_name$"
+					number = 5
+				}
+				pick_best_tag = {
+					scale = "$scale$"
+					scope = $scope$
+					global_trigger = "$global_trigger$"
+					event_target_name = "$event_target_name$"
+					number = 6
+				}
+				pick_best_tag = {
+					scale = "$scale$"
+					scope = $scope$
+					global_trigger = "$global_trigger$"
+					event_target_name = "$event_target_name$"
+					number = 7
+				}
+				pick_best_tag = {
+					scale = "$scale$"
+					scope = $scope$
+					global_trigger = "$global_trigger$"
+					event_target_name = "$event_target_name$"
+					number = 8
+				}
+				pick_best_tag = {
+					scale = "$scale$"
+					scope = $scope$
+					global_trigger = "$global_trigger$"
+					event_target_name = "$event_target_name$"
+					number = 9
+				}
+				pick_best_tag = {
+					scale = "$scale$"
+					scope = $scope$
+					global_trigger = "$global_trigger$"
+					event_target_name = "$event_target_name$"
+					number = 10
+				}
+			}
+		]
+		$scope$ = {
+			limit = {
+				has_country_flag = $event_target_name$_exclude
+			}
+			clr_country_flag = $event_target_name$_exclude
+		}
 	}
 }
 
-restore_greek_names = {
-	custom_tooltip = reestablishing_themes_names_tooltip
-	hidden_effect = {
-		149 = { change_province_name = Adrianople rename_capital = Adrianople }
-		151 = { change_province_name = Constantinople rename_capital = Constantinople }
-		316 = { change_province_name = Optimatoi rename_capital = Nikomedeia }
-		317 = { change_province_name = Opsikion rename_capital = Prussa }
-		318 = { change_province_name = Smyrna rename_capital = Smyrna }
-		319 = { change_province_name = Mylasa rename_capital = Mougla }
-		322 = { change_province_name = Kotyaion rename_capital = Kotyaion }
-		323 = { change_province_name = Ikonion rename_capital = Iconion }
-		324 = { change_province_name = Laranda rename_capital = Laranda }
-		325 = { change_province_name = Paphlagonia rename_capital = Timonio }
-		326 = { change_province_name = Galatia rename_capital = Ancyra }
-		327 = { change_province_name = Cilicia rename_capital = Atana }
-		328 = { change_province_name = Sinope rename_capital = Sinop }
-		329 = { change_province_name = Sebasteia rename_capital = Sebastopolis }
-		330 = { change_province_name = Trebizond rename_capital = Trapezous }
-		331 = { change_province_name = Theodosiopolis rename_capital = Theodosiopolis }
-		1764 = { change_province_name = Mesambria rename_capital = Mesambria }
-		1846 = { change_province_name = Armeniakon rename_capital = Amasea }
-		1848 = { change_province_name = Baris rename_capital = Baris }
-		2296 = { change_province_name = Abydos rename_capital = Pigai }
-		2297 = { change_province_name = Thrakesion rename_capital = Magnesia }
-		2298 = { change_province_name = Attalia rename_capital = Attalia }
-		2299 = { change_province_name = Boukellarion rename_capital = Klaudiopol}
-		2300 = { change_province_name = Cappadocia rename_capital = Tavium }
-		2301 = { change_province_name = Charsianon rename_capital = Ceasarea }
-		2302 = { change_province_name = Seleucia rename_capital = Kermarage }
-		2304 = { change_province_name = Chaldia rename_capital = Amissos}
-		2305 = { change_province_name = Acilisene rename_capital = Acilisene }
-		2750 = { change_province_name = Philippopolis rename_capital = Philippopolis}
-		4307 = { change_province_name = Colonia rename_capital = Colonia }
-		4308 = { change_province_name = Laodicea rename_capital = Laodicea }
-		4309 = { change_province_name = Tralles rename_capital = Tralles }
-		4310 = { change_province_name = Tephrike rename_capital = Tephrike }
-		4311 = { change_province_name = Anatolikon rename_capital = Polydorion }
-		4312 = { change_province_name = Dorylaeum rename_capital = Dorylaeum }
-		4313 = { change_province_name = Gangra rename_capital = Gangra }
-		4314 = { change_province_name = Justinianopolis rename_capital = Justinianopolis }
-		4315 = { change_province_name = Evdoksia rename_capital = Evdoksia }
+pick_best_tag = {
+	1 = { save_event_target_as = $event_target_name$_$number$ }
+	$scope$ = {
+		limit = {
+			[[global_trigger] $global_trigger$ ]
+			$scale$ = event_target:$event_target_name$_$number$
+			NOT = { has_country_flag = $event_target_name$_exclude }
+		}
+		save_event_target_as = $event_target_name$_$number$
 	}
+	event_target:$event_target_name$_$number$ = {
+		set_country_flag = $event_target_name$_exclude
+	}
+}
+
+# distribute_development = {
+#	type = x //The 3 development types. E.G. type = production
+#	amount = x //How many development to add. E.G amount = 10
+#	limit = " " OPTIONAL //takes actual triggers. E.G. limit = " NOT = { culture = ROOT } "
+#}
+distribute_development = {
+	hidden_effect = {
+		set_variable = {
+			which = $type$_loop
+			value = 0
+		}
+		while = {
+			limit = {
+				NOT = {
+					check_variable = {
+						which = $type$_loop
+						value = $amount$
+					}
+				}
+			}
+			random_owned_province = {
+				[[limit]
+					limit = {
+						$limit$
+					} 
+				]
+				add_base_$type$ = 1
+			}
+			change_variable = {
+				which = $type$_loop
+				value = 1
+			}
+		}
+	}
+	custom_tooltip = $type$_$amount$
+	custom_tooltip = " "
+	[[tooltip]
+		custom_tooltip = $tooltip$
+		custom_tooltip = " "
+	]
+}
+
+# This file contains all effects which are are needed for dynamic effects, but have more than 512 characters in total.
+# It also has the dynamic effect itself too.
+#Use insight_tooltip = INSIGHT_JUST_TOOLTIP if you don't want to have anything specific
+country_event_with_insight = {
+	country_event = {
+		id = $id$
+		[[days] days = $days$]
+		[[random] random = $random$]
+		[[tooltip] tooltip = $tooltip$]
+	}
+	custom_tooltip = EVENT_INSIGHT_INTRO
+	custom_tooltip = $insight_tooltip$
+	[[effect_tooltip] tooltip = { $effect_tooltip$ }]
+}
+
+# "Simple" as in "Do not put too many characters in the input argument or else it will not work"
+# This serves as both an useful effect for small dynamic mission rewards
+# And as a reminder how the template for the dynamic mission rewards should look like
+
+# Use this if you want the rewards / triggers to be exclusive
+# This means if a AND b are fulfilled then the player gets only reward from a
+# IMPORTANT: They do NOT fire events for some reason.
+simple_dynamic_effect = {
+	custom_tooltip = $first_custom_tooltip$
+	if = {
+		limit = {
+			$first_limit$
+		}
+		custom_tooltip = BONUS_REWARD_YES
+	}
+	else = { custom_tooltip = BONUS_REWARD_NO }
+	tooltip = {
+		$first_effect$
+	}
+	custom_tooltip = mission_alternatively_tt
+	[[second_custom_tooltip] custom_tooltip = $second_custom_tooltip$ ]
+	if = {
+		limit = {
+			$second_limit$
+		}
+		custom_tooltip = BONUS_REWARD_YES
+	}
+	else = { custom_tooltip = BONUS_REWARD_NO }
+	tooltip = {
+		$second_effect$
+	}
+	hidden_effect = {
+		if = {
+			limit = { $first_limit$ }
+			$first_effect$
+		}
+		else = {
+			$second_effect$
+		}
+	}
+}
+
+# Use this if you want the rewards / triggers to be additive
+# This means if a AND b are fulfilled then the player gets both
+simple_dynamic_effect_without_alternative = {
+	custom_tooltip = $first_custom_tooltip$
+	if = {
+		limit = {
+			$first_limit$
+		}
+		custom_tooltip = BONUS_REWARD_YES
+	}
+	else = { custom_tooltip = BONUS_REWARD_NO }
+	tooltip = {
+		$first_effect$
+	}
+	[[second_custom_tooltip] custom_tooltip = $second_custom_tooltip$ ]
+	if = {
+		limit = {
+			$second_limit$
+		}
+		custom_tooltip = BONUS_REWARD_YES
+	}
+	else = { custom_tooltip = BONUS_REWARD_NO }
+	tooltip = {
+		$second_effect$
+	}
+	hidden_effect = {
+		if = {
+			limit = { $first_limit$ }
+			$first_effect$
+		}
+		if = {
+			limit = { $second_limit$ }
+			$second_effect$
+		}
+	}
+}
+
+# "Complex" as in "if you need this effect then you should rethink your mission reward"
+# Supports up to 10 dynamic effects
+# Will probably result in a grocery list when you hover over the effects though
+complex_dynamic_effect = {
+	custom_tooltip = $first_custom_tooltip$
+	if = {
+		limit = {
+			$first_limit$
+		}
+		custom_tooltip = BONUS_REWARD_YES
+	}
+	else = { custom_tooltip = BONUS_REWARD_NO }
+	tooltip = {
+		$first_effect$
+	}
+
+	[[second_custom_tooltip] 
+	custom_tooltip = mission_alternatively_tt
+	custom_tooltip = $second_custom_tooltip$
+	if = {
+		limit = {
+			$second_limit$
+		}
+		custom_tooltip = BONUS_REWARD_YES
+	}
+	else = { custom_tooltip = BONUS_REWARD_NO }
+	tooltip = {
+		$second_effect$
+	}
+	]
+
+	[[third_custom_tooltip] 
+	custom_tooltip = mission_alternatively_tt
+	custom_tooltip = $third_custom_tooltip$
+	if = {
+		limit = {
+			$third_limit$
+		}
+		custom_tooltip = BONUS_REWARD_YES
+	}
+	else = { custom_tooltip = BONUS_REWARD_NO }
+	tooltip = {
+		$third_effect$
+	}
+	]
+
+	[[fourth_custom_tooltip] 
+	custom_tooltip = mission_alternatively_tt
+	custom_tooltip = $fourth_custom_tooltip$
+	if = {
+		limit = {
+			$fourth_limit$
+		}
+		custom_tooltip = BONUS_REWARD_YES
+	}
+	else = { custom_tooltip = BONUS_REWARD_NO }
+	tooltip = {
+		$fourth_effect$
+	}
+	]
+
+	[[fifth_custom_tooltip] 
+	custom_tooltip = mission_alternatively_tt
+	custom_tooltip = $fifth_custom_tooltip$
+	if = {
+		limit = {
+			$fifth_limit$
+		}
+		custom_tooltip = BONUS_REWARD_YES
+	}
+	else = { custom_tooltip = BONUS_REWARD_NO }
+	tooltip = {
+		$fifth_effect$
+	}
+	]
+
+	[[sixth_custom_tooltip] 
+	custom_tooltip = mission_alternatively_tt
+	custom_tooltip = $sixth_custom_tooltip$
+	if = {
+		limit = {
+			$sixth_limit$
+		}
+		custom_tooltip = BONUS_REWARD_YES
+	}
+	else = { custom_tooltip = BONUS_REWARD_NO }
+	tooltip = {
+		$sixth_effect$
+	}
+	]
+
+	[[seventh_custom_tooltip] 
+	custom_tooltip = mission_alternatively_tt
+	custom_tooltip = $seventh_custom_tooltip$
+	if = {
+		limit = {
+			$seventh_limit$
+		}
+		custom_tooltip = BONUS_REWARD_YES
+	}
+	else = { custom_tooltip = BONUS_REWARD_NO }
+	tooltip = {
+		$seventh_effect$
+	}
+	]
+
+	[[eighth_custom_tooltip] 
+	custom_tooltip = mission_alternatively_tt
+	custom_tooltip = $eighth_custom_tooltip$
+	if = {
+		limit = {
+			$eighth_limit$
+		}
+		custom_tooltip = BONUS_REWARD_YES
+	}
+	else = { custom_tooltip = BONUS_REWARD_NO }
+	tooltip = {
+		$eighth_effect$
+	}
+	]
+
+	[[nineth_custom_tooltip] 
+	custom_tooltip = mission_alternatively_tt
+	custom_tooltip = $nineth_custom_tooltip$
+	if = {
+		limit = {
+			$nineth_limit$
+		}
+		custom_tooltip = BONUS_REWARD_YES
+	}
+	else = { custom_tooltip = BONUS_REWARD_NO }
+	tooltip = {
+		$nineth_effect$
+	}
+	]
+
+	[[tenth_custom_tooltip] 
+	custom_tooltip = mission_alternatively_tt
+	custom_tooltip = $tenth_custom_tooltip$
+	if = {
+		limit = {
+			$tenth_limit$
+		}
+		custom_tooltip = BONUS_REWARD_YES
+	}
+	else = { custom_tooltip = BONUS_REWARD_NO }
+	tooltip = {
+		$tenth_effect$
+	}
+	]
+
+	hidden_effect = {
+		if = {
+			limit = { $first_limit$ }
+			$first_effect$
+		}
+		[[second_custom_tooltip] 
+		else_if = {
+			limit = { $second_limit$ }
+			$second_effect$
+		}
+		]
+		[[third_custom_tooltip] 
+		else_if = {
+			limit = { $third_limit$ }
+			$third_effect$
+		}
+		]
+		[[fourth_custom_tooltip] 
+		else_if = {
+			limit = { $fourth_limit$ }
+			$fourth_effect$
+		}
+		]
+		[[fifth_custom_tooltip] 
+		else_if = {
+			limit = { $fifth_limit$ }
+			$fifth_effect$
+		}
+		]
+		[[sixth_custom_tooltip] 
+		else_if = {
+			limit = { $sixth_limit$ }
+			$sixth_effect$
+		}
+		]
+		[[seventh_custom_tooltip] 
+		else_if = {
+			limit = { $seventh_limit$ }
+			$seventh_effect$
+		}
+		]
+		[[eigth_custom_tooltip] 
+		else_if = {
+			limit = { $eigth_limit$ }
+			$eigth_effect$
+		}
+		]
+		[[nineth_custom_tooltip] 
+		else_if = {
+			limit = { $nineth_limit$ }
+			$nineth_effect$
+		}
+		]
+		[[tenth_custom_tooltip] 
+		else_if = {
+			limit = { $tenth_limit$ }
+			$tenth_effect$
+		}
+		]
+	}
+}
+
+# Use this if you want the rewards / triggers to be additive
+# This means if a AND b are fulfilled then the player gets both
+complex_dynamic_effect_without_alternative = {
+	custom_tooltip = $first_custom_tooltip$
+	if = {
+		limit = {
+			$first_limit$
+		}
+		custom_tooltip = BONUS_REWARD_YES
+	}
+	else = { custom_tooltip = BONUS_REWARD_NO }
+	tooltip = {
+		$first_effect$
+	}
+
+	[[second_custom_tooltip] 
+	custom_tooltip = $second_custom_tooltip$
+	if = {
+		limit = {
+			$second_limit$
+		}
+		custom_tooltip = BONUS_REWARD_YES
+	}
+	else = { custom_tooltip = BONUS_REWARD_NO }
+	tooltip = {
+		$second_effect$
+	}
+	]
+
+	[[third_custom_tooltip] 
+	custom_tooltip = $third_custom_tooltip$
+	if = {
+		limit = {
+			$third_limit$
+		}
+		custom_tooltip = BONUS_REWARD_YES
+	}
+	else = { custom_tooltip = BONUS_REWARD_NO }
+	tooltip = {
+		$third_effect$
+	}
+	]
+
+	[[fourth_custom_tooltip] 
+	custom_tooltip = $fourth_custom_tooltip$
+	if = {
+		limit = {
+			$fourth_limit$
+		}
+		custom_tooltip = BONUS_REWARD_YES
+	}
+	else = { custom_tooltip = BONUS_REWARD_NO }
+	tooltip = {
+		$fourth_effect$
+	}
+	]
+
+	[[fifth_custom_tooltip] 
+	custom_tooltip = $fifth_custom_tooltip$
+	if = {
+		limit = {
+			$fifth_limit$
+		}
+		custom_tooltip = BONUS_REWARD_YES
+	}
+	else = { custom_tooltip = BONUS_REWARD_NO }
+	tooltip = {
+		$fifth_effect$
+	}
+	]
+
+	[[sixth_custom_tooltip] 
+	custom_tooltip = $sixth_custom_tooltip$
+	if = {
+		limit = {
+			$sixth_limit$
+		}
+		custom_tooltip = BONUS_REWARD_YES
+	}
+	else = { custom_tooltip = BONUS_REWARD_NO }
+	tooltip = {
+		$sixth_effect$
+	}
+	]
+
+	[[seventh_custom_tooltip] 
+	custom_tooltip = $seventh_custom_tooltip$
+	if = {
+		limit = {
+			$seventh_limit$
+		}
+		custom_tooltip = BONUS_REWARD_YES
+	}
+	else = { custom_tooltip = BONUS_REWARD_NO }
+	tooltip = {
+		$seventh_effect$
+	}
+	]
+
+	[[eighth_custom_tooltip] 
+	custom_tooltip = $eighth_custom_tooltip$
+	if = {
+		limit = {
+			$eighth_limit$
+		}
+		custom_tooltip = BONUS_REWARD_YES
+	}
+	else = { custom_tooltip = BONUS_REWARD_NO }
+	tooltip = {
+		$eighth_effect$
+	}
+	]
+
+	[[nineth_custom_tooltip] 
+	custom_tooltip = $nineth_custom_tooltip$
+	if = {
+		limit = {
+			$nineth_limit$
+		}
+		custom_tooltip = BONUS_REWARD_YES
+	}
+	else = { custom_tooltip = BONUS_REWARD_NO }
+	tooltip = {
+		$nineth_effect$
+	}
+	]
+
+	[[tenth_custom_tooltip] 
+	custom_tooltip = $tenth_custom_tooltip$
+	if = {
+		limit = {
+			$tenth_limit$
+		}
+		custom_tooltip = BONUS_REWARD_YES
+	}
+	else = { custom_tooltip = BONUS_REWARD_NO }
+	tooltip = {
+		$tenth_effect$
+	}
+	]
+
+	[[combined_effect]
+	if = {
+		limit = {
+			$first_limit$
+			$second_limit$
+			$third_limit$
+			$fourth_limit$
+			$fifth_limit$
+			$sixth_limit$
+			$seventh_limit$
+			$eigth_limit$
+			$nineth_limit$
+			$tenth_limit$
+		}
+		custom_tooltip = COMBINED_BONUS_REWARD_YES
+	}
+	else = { custom_tooltip = COMBINED_BONUS_REWARD_NO }
+	tooltip = {
+		$combined_effect$
+	}
+	]
+
+	hidden_effect = {
+		if = {
+			limit = { $first_limit$ }
+			$first_effect$
+		}
+		[[second_custom_tooltip] 
+		if = {
+			limit = { $second_limit$ }
+			$second_effect$
+		}
+		]
+		[[third_custom_tooltip] 
+		if = {
+			limit = { $third_limit$ }
+			$third_effect$
+		}
+		]
+		[[fourth_custom_tooltip] 
+		if = {
+			limit = { $fourth_limit$ }
+			$fourth_effect$
+		}
+		]
+		[[fifth_custom_tooltip] 
+		if = {
+			limit = { $fifth_limit$ }
+			$fifth_effect$
+		}
+		]
+		[[sixth_custom_tooltip] 
+		if = {
+			limit = { $sixth_limit$ }
+			$sixth_effect$
+		}
+		]
+		[[seventh_custom_tooltip] 
+		if = {
+			limit = { $seventh_limit$ }
+			$seventh_effect$
+		}
+		]
+		[[eigth_custom_tooltip] 
+		if = {
+			limit = { $eigth_limit$ }
+			$eigth_effect$
+		}
+		]
+		[[nineth_custom_tooltip] 
+		if = {
+			limit = { $nineth_limit$ }
+			$nineth_effect$
+		}
+		]
+		[[tenth_custom_tooltip] 
+		if = {
+			limit = { $tenth_limit$ }
+			$tenth_effect$
+		}
+		]
+		[[combined_effect] 
+		if = {
+			limit = {
+				$first_limit$
+				$second_limit$
+				$third_limit$
+				$fourth_limit$
+				$fifth_limit$
+				$sixth_limit$
+				$seventh_limit$
+				$eigth_limit$
+				$nineth_limit$
+				$tenth_limit$
+			}
+			$combined_effect$
+		}
+		]
+	}
+}
+
+pick_best_provinces = {
+	[[scope]
+		pick_best_provinces_2 = {
+			scope = "$scope$"
+			scale = "$scale$"
+			event_target_name = "$event_target_name$"
+			global_trigger = "$global_trigger$"
+			1 = "$1$"
+			2 = "$2$"
+			3 = "$3$"
+			4 = "$4$"
+			5 = "$5$"
+			10 = "$10$"
+		}
+		set_global_flag = PICK_BEST_PROVINCES_FLAG
+	] #curses for not having an [ELSE ] or something.
+	if = {
+		limit = {
+			NOT = { has_global_flag = PICK_BEST_PROVINCES_FLAG } #This check is here to prevent the algorithm from being run again after the scoped version was executed
+		}
+		pick_best_provinces_2 = {
+			scope = " every_province "
+			scale = "$scale$"
+			event_target_name = "$event_target_name$"
+			global_trigger = "$global_trigger$"
+			1 = "$1$"
+			2 = "$2$"
+			3 = "$3$"
+			4 = "$4$"
+			5 = "$5$"
+			10 = "$10$"
+		}
+	}
+	else = { clr_global_flag = PICK_BEST_PROVINCES_FLAG }
+}
+
+pick_best_provinces_2 = {
+	hidden_effect = {
+		[[1]
+			if = {
+				limit = { always = $1$ }
+				pick_best_province = {
+					scale = "$scale$"
+					scope = $scope$
+					global_trigger = "$global_trigger$"
+					event_target_name = "$event_target_name$"
+					number = 1
+				}
+			}
+		]
+		[[2]
+			if = {
+				limit = { always = $2$ }
+				pick_best_province = {
+					scale = "$scale$"
+					scope = $scope$
+					global_trigger = "$global_trigger$"
+					event_target_name = "$event_target_name$"
+					number = 1
+				}
+				pick_best_province = {
+					scale = "$scale$"
+					scope = $scope$
+					global_trigger = "$global_trigger$"
+					event_target_name = "$event_target_name$"
+					number = 2
+				}
+			}
+		]
+		[[3]
+			if = {
+				limit = { always = $3$ }
+				pick_best_province = {
+					scale = "$scale$"
+					scope = $scope$
+					global_trigger = "$global_trigger$"
+					event_target_name = "$event_target_name$"
+					number = 1
+				}
+				pick_best_province = {
+					scale = "$scale$"
+					scope = $scope$
+					global_trigger = "$global_trigger$"
+					event_target_name = "$event_target_name$"
+					number = 2
+				}
+				pick_best_province = {
+					scale = "$scale$"
+					scope = $scope$
+					global_trigger = "$global_trigger$"
+					event_target_name = "$event_target_name$"
+					number = 3
+				}
+			}
+		]
+		[[4]
+			if = {
+				limit = { always = $4$ }
+				pick_best_province = {
+					scale = "$scale$"
+					scope = $scope$
+					global_trigger = "$global_trigger$"
+					event_target_name = "$event_target_name$"
+					number = 1
+				}
+				pick_best_province = {
+					scale = "$scale$"
+					scope = $scope$
+					global_trigger = "$global_trigger$"
+					event_target_name = "$event_target_name$"
+					number = 2
+				}
+				pick_best_province = {
+					scale = "$scale$"
+					scope = $scope$
+					global_trigger = "$global_trigger$"
+					event_target_name = "$event_target_name$"
+					number = 3
+				}
+				pick_best_province = {
+					scale = "$scale$"
+					scope = $scope$
+					global_trigger = "$global_trigger$"
+					event_target_name = "$event_target_name$"
+					number = 4
+				}
+			}
+		]
+		[[5]
+			if = {
+				limit = { always = $5$ }
+				pick_best_province = {
+					scale = "$scale$"
+					scope = $scope$
+					global_trigger = "$global_trigger$"
+					event_target_name = "$event_target_name$"
+					number = 1
+				}
+				pick_best_province = {
+					scale = "$scale$"
+					scope = $scope$
+					global_trigger = "$global_trigger$"
+					event_target_name = "$event_target_name$"
+					number = 2
+				}
+				pick_best_province = {
+					scale = "$scale$"
+					scope = $scope$
+					global_trigger = "$global_trigger$"
+					event_target_name = "$event_target_name$"
+					number = 3
+				}
+				pick_best_province = {
+					scale = "$scale$"
+					scope = $scope$
+					global_trigger = "$global_trigger$"
+					event_target_name = "$event_target_name$"
+					number = 4
+				}
+				pick_best_province = {
+					scale = "$scale$"
+					scope = $scope$
+					global_trigger = "$global_trigger$"
+					event_target_name = "$event_target_name$"
+					number = 5
+				}
+			}
+		]
+		[[10]
+			if = {
+				limit = { always = $10$ }
+				pick_best_province = {
+					scale = "$scale$"
+					scope = $scope$
+					global_trigger = "$global_trigger$"
+					event_target_name = "$event_target_name$"
+					number = 1
+				}
+				pick_best_province = {
+					scale = "$scale$"
+					scope = $scope$
+					global_trigger = "$global_trigger$"
+					event_target_name = "$event_target_name$"
+					number = 2
+				}
+				pick_best_province = {
+					scale = "$scale$"
+					scope = $scope$
+					global_trigger = "$global_trigger$"
+					event_target_name = "$event_target_name$"
+					number = 3
+				}
+				pick_best_province = {
+					scale = "$scale$"
+					scope = $scope$
+					global_trigger = "$global_trigger$"
+					event_target_name = "$event_target_name$"
+					number = 4
+				}
+				pick_best_province = {
+					scale = "$scale$"
+					scope = $scope$
+					global_trigger = "$global_trigger$"
+					event_target_name = "$event_target_name$"
+					number = 5
+				}
+				pick_best_province = {
+					scale = "$scale$"
+					scope = $scope$
+					global_trigger = "$global_trigger$"
+					event_target_name = "$event_target_name$"
+					number = 6
+				}
+				pick_best_province = {
+					scale = "$scale$"
+					scope = $scope$
+					global_trigger = "$global_trigger$"
+					event_target_name = "$event_target_name$"
+					number = 7
+				}
+				pick_best_province = {
+					scale = "$scale$"
+					scope = $scope$
+					global_trigger = "$global_trigger$"
+					event_target_name = "$event_target_name$"
+					number = 8
+				}
+				pick_best_province = {
+					scale = "$scale$"
+					scope = $scope$
+					global_trigger = "$global_trigger$"
+					event_target_name = "$event_target_name$"
+					number = 9
+				}
+				pick_best_province = {
+					scale = "$scale$"
+					scope = $scope$
+					global_trigger = "$global_trigger$"
+					event_target_name = "$event_target_name$"
+					number = 10
+				}
+			}
+		]
+		$scope$ = {
+			limit = {
+				has_province_flag = $event_target_name$_exclude
+			}
+			clr_province_flag = $event_target_name$_exclude
+		}
+	}
+}
+
+pick_best_province = {
+	$scope$ = {
+		limit = {
+			[[global_trigger] $global_trigger$ ]
+			NOT = { has_province_flag = $event_target_name$_exclude }
+		}
+		save_event_target_as = $event_target_name$_$number$
+	}
+	$scope$ = {
+		limit = {
+			[[global_trigger] $global_trigger$ ]
+			$scale$ = event_target:$event_target_name$_$number$
+			NOT = { has_province_flag = $event_target_name$_exclude }
+		}
+		save_event_target_as = $event_target_name$_$number$
+	}
+	event_target:$event_target_name$_$number$ = {
+		set_province_flag = $event_target_name$_exclude
+	}
+}
+
+create_general_with_pips = {
+	create_general = {
+		tradition = $tradition$
+		[[add_fire] add_fire = $add_fire$ ]
+		[[add_shock] add_shock = $add_shock$ ]
+		[[add_manuever] add_manuever = $add_manuever$ ]
+		[[add_siege] add_siege = $add_siege$ ]
+		[[name] name = "$name$" ]
+		[[culture] culture = $culture$ ]
+	}
+	custom_tooltip = ME_GENERAL_$add_fire$_$add_shock$_$add_manuever$_$add_siege$
+}
+
+give_province_claims = {
+	$id$ = {
+		if = {
+			limit = {
+				NOT = { is_core = $tag$ }
+				NOT = { is_permanent_claim = $tag$ }
+			}
+			add_permanent_claim = $tag$
+		}
+	}
+}
+
+give_area_claims = {
+	$group$ = {
+		limit = {
+			NOT = { is_core = $tag$ }
+			NOT = { is_permanent_claim = $tag$ }
+		}
+		add_permanent_claim = $tag$
+	}
+}
+
+give_claims = {
+	[[province]
+		give_province_claims = { id = $province$ tag = ROOT }
+	]
+	[[id]
+		give_province_claims = { id = $id$ tag = ROOT }
+	]
+	[[area]
+		give_area_claims = { group = $area$ tag = ROOT }
+	]
+	[[region]
+		give_area_claims = { group = $region$ tag = ROOT }
+	]
+
+}
+
+add_power_projection_mission = {
+	add_power_projection = {
+		type = mission_rewards_power_projection
+		amount = $amount$
+	}
+}
+
+country_event_with_effect_insight = {
+	country_event = {
+		id = $id$
+		[[days] days = $days$]
+		[[random] random = $random$]
+		[[tooltip] tooltip = $tooltip$]
+	}
+	custom_tooltip = EVENT_INSIGHT_INTRO
+	tooltip = {
+		$effect$
+	}
+}
+
+country_event_with_option_insight = {
+	country_event = {
+		id = $id$
+		[[days] days = $days$]
+		[[random] random = $random$]
+		[[tooltip] tooltip = $tooltip$]
+	}
+	custom_tooltip = EVENT_INSIGHT_INTRO
+	custom_tooltip = EVENT_INSIGHT_OPT_1
+	tooltip = {
+		$option_1$
+	}
+	[[option_2]
+		custom_tooltip = EVENT_INSIGHT_OPT_2
+		tooltip = {
+			$option_2$
+		}
+	]
+	[[option_3]
+		custom_tooltip = EVENT_INSIGHT_OPT_3
+		tooltip = {
+			$option_3$
+		}
+	]
+	[[option_4]
+		custom_tooltip = EVENT_INSIGHT_OPT_4
+		tooltip = {
+			$option_4$
+		}
+	]
+	[[option_5]
+		custom_tooltip = EVENT_INSIGHT_OPT_5
+		tooltip = {
+			$option_5$
+		}
+	]
 }
