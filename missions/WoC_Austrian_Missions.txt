@@ -793,6 +793,126 @@ WoC_austria_1_1 = {
 			}
 		}
 	}
+	imperial_capitals = {
+		icon = mission_build_up_to_force_limit
+		position = 3
+		required_missions = { hab_vienna_waltz }
+		trigger = {
+			if = {
+				limit = {
+					is_part_of_hre = yes
+				}
+				is_emperor = yes
+				owns_core_province = 134
+				134 = {
+					development = 30
+				}
+				owns_core_province = 153
+				153 = {
+					development = 30
+				}
+				owns_core_province = 266
+				266 = {
+					development = 30
+				}
+				num_of_owned_provinces_with = {
+					value = 5
+					development = 30
+					is_part_of_hre = yes
+				}
+			}
+			else = {
+				owns_core_province = 134
+				134 = {
+					development = 30
+				}
+				owns_core_province = 153
+				153 = {
+					development = 30
+				}
+				owns_core_province = 266
+				266 = {
+					development = 30
+				}
+				num_of_owned_provinces_with = {
+					value = 5
+					development = 30
+				}
+			}
+		}
+		effect = {
+			add_prestige = 15
+			add_country_modifier = {
+				name = "capitals_of_the_hre"
+				duration = -1
+			}
+		}
+	}
+	imperial_gold_mines = {
+		icon = mission_build_up_to_force_limit
+		position = 5
+		required_missions = { expand_trade_influence }
+		trigger = {
+			owns_core_province = 73
+			73 = {
+			    base_production = 12
+			}
+			owns_core_province = 154
+			154 = {
+			    base_production = 12
+			}
+			owns_core_province = 2967
+			2967 = {
+			    base_production = 12
+			}
+		}
+		effect = {
+			add_prestige = 15
+			73 = {
+			   add_province_modifier = {
+				name = "standardized_imperial_minting"
+				duration = -1
+			   } 
+			}
+			154 = {
+			   add_province_modifier = {
+				name = "standardized_imperial_minting"
+				duration = -1
+			   }  
+			}
+			2967 = {
+			   add_province_modifier = {
+				name = "standardized_imperial_minting"
+				duration = -1
+			   }  
+			}
+			country_event = {
+				id = 6428
+			}
+		}
+	}
+
+	increase_economic_prosperity = {
+		icon = mission_build_up_to_force_limit
+		position = 6
+		required_missions = { imperial_gold_mines }
+		trigger = {
+			num_of_owned_provinces_with = {
+			    has_manufactory_trigger = yes
+			    base_production = 8
+			    value = 30
+			}
+			monthly_income = 300
+			num_of_loans = 0
+		}
+		effect = {
+			add_years_of_income = 0.75
+			add_country_modifier = {
+				name = "an_industrial_power"
+				duration = -1
+			}
+		}
+	}
 }
 WoC_austria_2 = {
 	slot = 2
@@ -2249,9 +2369,9 @@ WoC_austria_3_holy_roman_empire = {
 					limit = {
 						is_part_of_hre = yes
 					}
-					add_dip_power = 50
-					add_mil_power = 50
-					add_adm_power = 50
+					add_dip_power = 75
+					add_mil_power = 75
+					add_adm_power = 75
 				}
 			}
 		}
@@ -2693,7 +2813,7 @@ WoC_austria_3_1 = {
 	
 		trigger = {  
 			army_tradition = 40
-			num_of_cavalry = 25
+			num_of_cavalry = 18
 			OR = {
 				mil = 5
 				full_idea_group = aristocracy_ideas
@@ -4175,7 +4295,7 @@ WoC_austria_5 = {
 			else = {
 				total_own_and_non_tributary_subject_development = 800
 			}
-			army_size = 125
+			army_size = 100
 			OR = {
 				full_idea_group = diplomatic_ideas
 				diplomatic_reputation = 7
