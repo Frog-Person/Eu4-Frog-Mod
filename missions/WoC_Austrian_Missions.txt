@@ -805,7 +805,7 @@ WoC_austria_1_1 = {
 				is_emperor = yes
 				owns_core_province = 134
 				134 = {
-					development = 30
+					development = 55
 				}
 				owns_core_province = 153
 				153 = {
@@ -824,7 +824,7 @@ WoC_austria_1_1 = {
 			else = {
 				owns_core_province = 134
 				134 = {
-					development = 30
+					development = 55
 				}
 				owns_core_province = 153
 				153 = {
@@ -845,6 +845,71 @@ WoC_austria_1_1 = {
 			add_country_modifier = {
 				name = "capitals_of_the_hre"
 				duration = -1
+			}
+		}
+	}
+	expand_trade_influence = {
+		icon = mission_build_up_to_force_limit
+		position = 4
+		required_missions = { imperial_capitals }
+		trigger = {
+			134 = { #Wien
+			    is_strongest_trade_power = ROOT
+			}
+			262 = { #Krakow
+			    trade_share = {
+			        country = ROOT
+			        share = 20
+			    }
+			}
+			137 = { #Ragusa
+			    trade_share = {
+			        country = ROOT
+			        share = 30
+			    }
+			}
+			153 = { #Pest
+			    trade_share = {
+			        country = ROOT
+			        share = 40
+			    }
+			}
+		}
+		effect = {
+			define_advisor = {
+				type = trader
+				skill = 4
+				cost_multiplier = 0.75
+			}
+			134 = {
+				add_province_modifier = {
+					name = "skilled_traders"
+					duration = -1
+				}
+			}
+			4762 = {
+				add_province_modifier = {
+					name = "skilled_traders"
+					duration = -1
+				}
+			}
+			4761 = {
+				add_province_modifier = {
+					name = "skilled_traders"
+					duration = -1
+				}
+			}
+			133 = {
+				add_province_modifier = {
+					name = "skilled_traders"
+					duration = -1
+				}
+			}
+			1770 = {
+				add_province_modifier = {
+					name = "skilled_traders"
+					duration = -1
+				}
 			}
 		}
 	}
