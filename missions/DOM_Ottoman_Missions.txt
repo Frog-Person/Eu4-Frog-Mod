@@ -235,7 +235,7 @@ tur_conquest_of_europe = {
 							ROOT = {
 								has_won_war_against = {
 									max_years_since = 25
-									who = PREV
+									who = VEN
 								}
 							}
 						}
@@ -2054,6 +2054,7 @@ tur_egyptian_conquest = {
 			add_permanent_claim_province = { province = 1773 }
 			add_permanent_claim_province = { province = 4699 }
 			add_permanent_claim_province = { province = 4698 }
+			add_permanent_claim_province = { province = 1764 }
 			add_prestige = 5
 		}
 
@@ -2108,7 +2109,7 @@ tur_egyptian_conquest = {
 	}
 	
 	tur_rebuild_the_hagia_sophia = {
-		icon = mission_hagia_sophia
+		icon = byz_city_of_worlds_desire
 		required_missions = { tur_city_of_worlds_desire }
 		position = 4
 		provinces_to_highlight = {
@@ -2314,6 +2315,7 @@ tur_egyptian_conquest = {
 			if = {
 				limit = {
 					exists = MAM
+					NOT = { exists = EGY }
 				}
 				add_casus_belli = {
 					type = cb_ottoman_invasion
@@ -2321,6 +2323,14 @@ tur_egyptian_conquest = {
 					months = 600
 				}
 				custom_tooltip = tur_defeat_the_mamluks_at
+			}
+			else_if = {
+				limit = { exists = EGY }
+				add_casus_belli = {
+					type = cb_ottoman_subjugation_war
+					target = EGY
+					months = 600
+				}
 			}
 			egypt_region = {
 				limit = {
@@ -2540,7 +2550,7 @@ tur_egyptian_conquest = {
 					remove_country_modifier = tur_mamlukian_administration
 				}
 				change_ruler_stat = {
-					stat = dip
+					type = dip
 					amount = 2
 				}
 			}
@@ -3546,16 +3556,17 @@ tur_arabian_conquest = {
 			prestige = 50
 			if = {
 				limit = { religion = sunni }
-				has_country_modifier = khalifah
+				has_ruler_modifier = khalifah
 			}
 		}
 		effect = {
 			if = {
 				limit = { religion_group = muslim }
-				country_event_with_insight = {
-					id = flavor_tur.229
-					insight_tooltip = tur_seize_the_caliphate_at
+				enable_branching_mission_review = {
+					key = TUR
+					ai_event_id = flavor_tur.229
 				}
+				custom_tooltip = tur_seize_the_caliphate_at
 			}
 			else = {
 				country_event_with_insight = {
@@ -3901,6 +3912,7 @@ tur_legalism_path = {
 		provinces_to_highlight = {
 		}
 		trigger = {
+			not_in_mission_preview_mode = { key = TUR }
 			religion_group = muslim
 			if = {
 				limit = { has_dlc = "Cradle of Civilization" }
@@ -3939,6 +3951,7 @@ tur_legalism_path = {
 			NOT = { has_tax_building_trigger = yes }
 		}
 		trigger = {
+			not_in_mission_preview_mode = { key = TUR }
 			religion_group = muslim
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
 				religion = ROOT
@@ -3980,6 +3993,7 @@ tur_legalism_path = {
 		provinces_to_highlight = {
 		}
 		trigger = {
+			not_in_mission_preview_mode = { key = TUR }
 			religion_group = muslim
 			if = {
 				limit = {
@@ -4058,6 +4072,7 @@ tur_mysticism_path = {
 		provinces_to_highlight = {
 		}
 		trigger = {
+			not_in_mission_preview_mode = { key = TUR }
 			religion_group = muslim
 			if = {
 				limit = { has_dlc = "Cradle of Civilization" }
@@ -4098,6 +4113,7 @@ tur_mysticism_path = {
 			}
 		}
 		trigger = {
+			not_in_mission_preview_mode = { key = TUR }
 			religion_group = muslim
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
 				NOT = { religion_group = ROOT }
@@ -4139,6 +4155,7 @@ tur_mysticism_path = {
 		provinces_to_highlight = {
 		}
 		trigger = {
+			not_in_mission_preview_mode = { key = TUR }
 			religion_group = muslim
 			if = {
 				limit = {
@@ -4216,6 +4233,7 @@ tur_non_muslim_path = {
 			NOT = { religion = ROOT }
 		}
 		trigger = {
+			not_in_mission_preview_mode = { key = TUR }
 			all_owned_province = {
 				religion = ROOT
 			}
@@ -4248,6 +4266,7 @@ tur_non_muslim_path = {
 		provinces_to_highlight = {
 		}
 		trigger = {
+			not_in_mission_preview_mode = { key = TUR }
 			OR = {
 				custom_trigger_tooltip = {
 					tooltip = tur_spread_the_true_faith_at
@@ -4271,15 +4290,15 @@ tur_non_muslim_path = {
 				duration = -1
 			}
 			change_ruler_stat = {
-				stat = adm
+				type = adm
 				amount = 1
 			}
 			change_ruler_stat = {
-				stat = dip
+				type = dip
 				amount = 1
 			}
 			change_ruler_stat = {
-				stat = mil
+				type = mil
 				amount = 1
 			}
 		}
@@ -4347,7 +4366,7 @@ tur_issue_the_kannuname_slot = {
 				insight_tooltip = INSIGHT_JUST_TOOLTIP
 				effect_tooltip = "
 				change_ruler_stat = {
-					stat = adm
+					type = adm
 					amount = 2
 				}
 				add_ruler_modifier = { 
@@ -4547,7 +4566,7 @@ tur_persian_conquest = {
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
-			num_of_owned_provinces_with = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
 				region = persia_region
 				value = 20
 			}
@@ -4593,16 +4612,16 @@ tur_persian_conquest = {
 			else = {
 				OR = {
 					AND = {
-						region = persia_region
+						region = egypt_region
 						OR = {
 							NOT = { country_or_non_sovereign_subject_holds = ROOT }
-							NOT = { local_autonomy_above_min = 10 }
+							local_autonomy_above_min = 10
 						}
 					}
 					AND = {
 						OR = {
-							area = tabarestan_area
-							area = azerbaijan_area
+							area = bahari_area
+							area = delta_area
 						}
 						NOT = { num_of_times_improved = 4 }
 					}
@@ -4679,15 +4698,8 @@ tur_persian_conquest = {
 			}
 		}
 		effect = {
-			khorasan_region = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
 			change_ruler_stat = {
-				stat = dip
+				type = dip
 				amount = 2
 			}
 			country_event_with_insight = {
@@ -4748,7 +4760,7 @@ tur_persian_conquest = {
 	}
 	
 	tur_imperial_fabrics = {
-		#Credit to Big Boss
+		
 		icon = mission_finest_carpets
 		required_missions = { tur_the_silk_road }
 		position = 11
@@ -5476,23 +5488,21 @@ tur_stagnation_slot_3 = {
 		}
 		trigger = {
 			if = {
-				limit = { has_disaster = tur_disaster_ottoman_power_struggle }
-				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
-					region = egypt_region
-					value = 25
+				limit = {
+					is_absolutism_active = yes
 				}
-				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
-					region = persia_region
-					value = 40
-				}
-				if = {
-					limit = {
-						is_absolutism_active = yes
-					}
-					absolutism = 70
-				}
+				absolutism = 70
+			}
+			NOT = { num_of_rebel_armies = 1 }
+			NOT = { num_of_rebel_controlled_provinces = 1 }
+			if = {
+				limit = { has_disaster = tur_disaster_eyalet_rebellion }
 				NOT = {
 					any_subject_country = {
+						OR = {
+							is_subject_of_type = eyalet
+							is_subject_of_type = core_eyalet
+						}
 						OR = {
 							liberty_desire = 10
 							num_of_rebel_armies = 1
@@ -5501,28 +5511,12 @@ tur_stagnation_slot_3 = {
 					}
 				}
 				monthly_dip = 12
-				NOT = { num_of_rebel_armies = 1 }
-				NOT = { num_of_rebel_controlled_provinces = 1 }
 			}
 			else = {
 				NOT = {
 					any_subject_country = {
 						liberty_desire = 10
 					}
-				}
-				NOT = { num_of_rebel_armies = 1 }
-				NOT = { num_of_rebel_controlled_provinces = 1 }
-				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
-					region = egypt_region
-					value = 25
-				}
-				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
-					region = persia_region
-					value = 40
-				}
-				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
-					continent = europe
-					value = 60
 				}
 			}
 		}
