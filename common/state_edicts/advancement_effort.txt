@@ -83,4 +83,6 @@ gc_edict_advancement_effort_1 = {
 			}
 		}
 	}
+	# on_state_edict_enacted = {} triggers an effect when the state edict is added ROOT - Province FROM - Country that started
+	# on_state_edict_revoked = {} triggers an affect when the state edict is removed ROOT - Province FROM - Country that started
 }
