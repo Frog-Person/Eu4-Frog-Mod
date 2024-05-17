@@ -1,9 +1,8 @@
-version="1.36.*"
+version="1.35.*"
 tags={
 	"Balance"
 	"Missions And Decisions"
 }
 name="Frog Mod"
-picture="thumbnail.png"
-supported_version="v1.37.0.0"
+supported_version="1.35.6"
 remote_file_id="3025031059"

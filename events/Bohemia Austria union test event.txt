@@ -1,0 +1,38 @@
+#austrian_bohemian_union
+country_event = {
+	id = MP_BOH_Events.1
+	title = MP_BOH_Events.1.t
+	desc = MP_BOH_Events.1.d
+
+	picture = GOOD_WITH_MONARCH_eventPicture
+	
+	fire_only_once = yes
+	major = yes
+	
+	trigger = {
+		tag = BOH
+		is_subject = no
+		is_year = 1444
+	}	
+	mean_time_to_happen = {
+		months = 48
+	}
+	option = {
+		name = MP_BOH_Events.1.OPT1
+		ai_chance = { factor = 10 } 
+		HAB = { 
+			create_union = BOH
+		}
+	}
+	option = {
+		name = MP_BOH_Events.1.OPT2
+		ai_chance = { factor = 90 }
+		HAB = {
+			add_casus_belli = {
+				type = cb_restore_personal_union
+				months = 300
+				target = BOH
+			}
+		}
+	}
+}

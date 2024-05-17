@@ -2972,9 +2972,8 @@ swe_religion_start_mission_slot = {
 			}
 		}
 		effect = {
-			enable_branching_mission_review = {
-				key = SWE
-				ai_event_id = flavor_sca.1
+			country_event = {
+				id = flavor_sca.1
 			}
 			if = {
 				limit = {
@@ -3269,7 +3268,7 @@ swe_religion_mission_slot = {
 			}
 			else = {
 				change_ruler_stat = {
-					type = dip
+					stat = dip
 					amount = 1
 				}
 			}
@@ -3278,7 +3277,7 @@ swe_religion_mission_slot = {
 				loyalty = 15
 			}
 			change_ruler_stat = {
-				type = mil
+				stat = mil
 				amount = 1
 			}
 			custom_tooltip = swe_humanist_effects_tt
@@ -3405,7 +3404,7 @@ swe_religion_mission_slot = {
 			add_papal_influence = 200
 			add_war_exhaustion = -2
 			change_ruler_stat = {
-				type = mil
+				stat = mil
 				amount = 2
 			}
 			if = {
@@ -3430,7 +3429,7 @@ swe_religion_mission_slot = {
 			}
 			else = {
 				change_ruler_stat = {
-					type = dip
+					stat = dip
 					amount = 1
 				}
 			}
@@ -3439,7 +3438,7 @@ swe_religion_mission_slot = {
 			add_fervor = 100
 			add_war_exhaustion = -2
 			change_ruler_stat = {
-				type = mil
+				stat = mil
 				amount = 2
 			}
 			if = {
@@ -3465,13 +3464,13 @@ swe_religion_mission_slot = {
 			}
 			else = {
 				change_ruler_stat = {
-					type = dip
+					stat = dip
 					amount = 1
 				}
 			}
 			custom_tooltip = swe_humanist_effects_tt
 			change_ruler_stat = {
-				type = dip
+				stat = dip
 				amount = 3
 			}
 		}
@@ -3634,7 +3633,6 @@ swe_catholic_mission_slot = {
 			owned_by = PAP
 		}
 		trigger = {
-			not_in_mission_preview_mode = { key = SWE }
 			religion = catholic
 			OR = {
 				NOT = { exists = PAP }
@@ -3684,7 +3682,6 @@ swe_catholic_mission_slot = {
 			NOT = { religion = ROOT }
 		}
 		trigger = {
-			not_in_mission_preview_mode = { key = SWE }
 			religion = catholic
 			OR = {
 				has_idea = devoutness
@@ -3719,7 +3716,6 @@ swe_catholic_mission_slot = {
 		required_missions = { swe_catholic_bulwark }
 		provinces_to_highlight = {}
 		trigger = {
-			not_in_mission_preview_mode = { key = SWE }
 			religion = catholic
 			if = {
 				limit = {
@@ -3769,7 +3765,7 @@ swe_catholic_mission_slot = {
 			add_papal_influence = 200
 			add_war_exhaustion = -2
 			change_ruler_stat = {
-				type = mil
+				stat = mil
 				amount = 2
 			}
 			if = {
@@ -3824,7 +3820,7 @@ swe_catholic_mission_slot = {
 			}
 			else = {
 				change_ruler_stat = {
-					type = dip
+					stat = dip
 					amount = 1
 				}
 			}
@@ -3837,7 +3833,6 @@ swe_catholic_mission_slot = {
 		required_missions = { swe_catholic_30_years_war }
 		provinces_to_highlight = {}
 		trigger = {
-			not_in_mission_preview_mode = { key = SWE }
 			religion = catholic
 			NOT = { current_age = age_of_discovery }
 			NOT = { current_age = age_of_reformation }
@@ -3903,7 +3898,6 @@ swe_protestant_mission_slot = {
 		required_missions = { swe_the_theologian_discussions }
 		provinces_to_highlight = {}
 		trigger = {
-			not_in_mission_preview_mode = { key = SWE }
 			religion_group = christian
 			NOT = { religion = catholic }
 			calc_true_if = {
@@ -3941,7 +3935,6 @@ swe_protestant_mission_slot = {
 		required_missions = { swe_defenders_of_the_reformers }
 		provinces_to_highlight = {}
 		trigger = {
-			not_in_mission_preview_mode = { key = SWE }
 			religion_group = christian
 			NOT = { religion = catholic }
 			if = {
@@ -4022,7 +4015,7 @@ swe_protestant_mission_slot = {
 			}
 			else = {
 				change_ruler_stat = {
-					type = dip
+					stat = dip
 					amount = 1
 				}
 			}
@@ -4031,7 +4024,7 @@ swe_protestant_mission_slot = {
 				loyalty = 15
 			}
 			change_ruler_stat = {
-				type = mil
+				stat = mil
 				amount = 1
 			}
 			add_country_modifier = {
@@ -4047,7 +4040,6 @@ swe_protestant_mission_slot = {
 		required_missions = { swe_protestant_sword }
 		provinces_to_highlight = {}
 		trigger = {
-			not_in_mission_preview_mode = { key = SWE }
 			religion_group = christian
 			NOT = { religion = catholic }
 			if = {
@@ -4086,7 +4078,7 @@ swe_protestant_mission_slot = {
 			add_fervor = 100
 			add_war_exhaustion = -2
 			change_ruler_stat = {
-				type = mil
+				stat = mil
 				amount = 2
 			}
 			if = {
@@ -4112,7 +4104,7 @@ swe_protestant_mission_slot = {
 			}
 			else = {
 				change_ruler_stat = {
-					type = dip
+					stat = dip
 					amount = 1
 				}
 			}
@@ -4125,7 +4117,6 @@ swe_protestant_mission_slot = {
 		required_missions = { swe_protestant_30_years_war }
 		provinces_to_highlight = {}
 		trigger = {
-			not_in_mission_preview_mode = { key = SWE }
 			religion_group = christian
 			NOT = { religion = catholic }
 			NOT = { current_age = age_of_discovery }
@@ -4192,7 +4183,6 @@ swe_humanist_mission_slot = {
 		required_missions = { swe_the_theologian_discussions }
 		provinces_to_highlight = {}
 		trigger = {
-			not_in_mission_preview_mode = { key = SWE }
 			has_idea_group = humanist_ideas
 			theologian = 2
 			religious_unity = 0.75
@@ -4216,7 +4206,6 @@ swe_humanist_mission_slot = {
 		required_missions = { swe_commune_between_the_religions }
 		provinces_to_highlight = {}
 		trigger = {
-			not_in_mission_preview_mode = { key = SWE }
 			has_idea_group = humanist_ideas
 			if = {
 				limit = { has_estate = estate_church }
@@ -4252,7 +4241,6 @@ swe_humanist_mission_slot = {
 		required_missions = { swe_revoke_clergy_power }
 		provinces_to_highlight = {}
 		trigger = {
-			not_in_mission_preview_mode = { key = SWE }
 			has_idea_group = humanist_ideas
 			full_idea_group = humanist_ideas
 			num_accepted_cultures = 5
@@ -4263,7 +4251,7 @@ swe_humanist_mission_slot = {
 		}
 		effect = {
 			change_ruler_stat = {
-				type = dip
+				stat = dip
 				amount = 3
 			}
 		}
@@ -4275,7 +4263,6 @@ swe_humanist_mission_slot = {
 		required_missions = { swe_multi_cultural_kingdom }
 		provinces_to_highlight = {}
 		trigger = {
-			not_in_mission_preview_mode = { key = SWE }
 			has_idea_group = humanist_ideas
 			full_idea_group = humanist_ideas
 			OR = {
@@ -4346,7 +4333,6 @@ swe_norse_mission_slot = {
 			}
 		}
 		trigger = {
-			not_in_mission_preview_mode = { key = SWE }
 			religion = norse_pagan_reformed
 			num_of_owned_provinces_with = {
 				has_manpower_building_trigger = yes
@@ -4376,7 +4362,6 @@ swe_norse_mission_slot = {
 			NOT = { religion = norse_pagan_reformed }
 		}
 		trigger = {
-			not_in_mission_preview_mode = { key = SWE }
 			religion = norse_pagan_reformed
 			if = {
 				limit = { has_dlc = "Wealth of Nations" }
@@ -4406,7 +4391,6 @@ swe_norse_mission_slot = {
 		required_missions = { swe_spread_the_norse_faith }
 		provinces_to_highlight = {}
 		trigger = {
-			not_in_mission_preview_mode = { key = SWE }
 			religion = norse_pagan_reformed
 			OR = {
 				custom_trigger_tooltip = {
@@ -4450,7 +4434,6 @@ swe_norse_mission_slot = {
 			NOT = { religion = norse_pagan_reformed }
 		}
 		trigger = {
-			not_in_mission_preview_mode = { key = SWE }
 			religion = norse_pagan_reformed
 			government_rank = 3
 			religious_unity = 1

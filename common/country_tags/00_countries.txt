@@ -148,8 +148,11 @@ AAC = "countries/Aachen.txt"
 ANH	= "countries/Anhalt.txt"
 ANS	= "countries/Ansbach.txt"
 AUG = "countries/Augsburg.txt"
+<<<<<<<<< Temporary merge branch 1
 AUH = "countries/AustriaHungary.txt"
 TDC = "countries/TransdanubianConfederation.txt"
+=========
+>>>>>>>>> Temporary merge branch 2
 BAD	= "countries/Baden.txt"
 BAV	= "countries/Bavaria.txt"
 BOH	= "countries/Bohemia.txt"
@@ -196,8 +199,6 @@ VER = "countries/Verden.txt"
 NSA = "countries/Nassau.txt"
 RVA = "countries/Ravensburg.txt"
 DTT = "countries/Dithmarschen.txt"
-AUH = "countries/Austriahungary.txt"
-GMA = "countries/Greatmoravia.txt"
 	
 #Spain
 ARA	= "countries/Aragon.txt"
@@ -250,7 +251,6 @@ LIE	= "countries/Liege.txt"
 LUX	= "countries/Luxembourg.txt"
 NED	= "countries/Netherlands.txt"
 UTR	= "countries/Utrecht.txt"
-VOC = "countries/VOC.txt"
 
 #Russia 
 ARM	= "countries/Armenia.txt"
@@ -360,7 +360,6 @@ BUK = "countries/Bukhara.txt"
 AFG	= "countries/Afghanistan.txt"
 KHO	= "countries/Khorasan.txt"
 PER	= "countries/Persia.txt"
-ERS = "countries/Eranshahr.txt"
 QAR	= "countries/QaraKoyunlu.txt"
 TIM	= "countries/Timurid.txt"
 TRS = "countries/Transoxiana.txt"
@@ -752,6 +751,20 @@ KOJ = "countries/Jerusalem.txt"
 MSA = "countries/Malaya.txt"
 HIN = "countries/Hindustan.txt"
 
+<<<<<<<<< Temporary merge branch 1
+ABE = "countries/Abenaki.txt"
+=========
+>>>>>>>>> Temporary merge branch 2
+APA = "countries/Apache.txt"
+ASI = "countries/Assiniboine.txt"
+BLA = "countries/Blackfoot.txt"
+CAD = "countries/Caddo.txt"
+
+CHY = "countries/Cheyenne.txt"
+COM = "countries/Comanche.txt"
+FOX = "countries/Fox.txt"
+ILL = "countries/Illinewek.txt"
+
 
 #African Additions
 AIR = "countries/Air.txt"
@@ -952,7 +965,16 @@ SIA = "countries/Siam.txt"
 UHW = "countries/HawaiiUnited.txt"
 HAW = "countries/Hawaii.txt"
 
-
+ONE = "countries/Oneida.txt"
+ONO = "countries/Onondaga.txt"
+CAY = "countries/Cayuga.txt"
+SEN = "countries/Seneca.txt"
+TAH = "countries/Tahontaenrat.txt"
+ATT = "countries/Attignawantan.txt"
+AGG = "countries/Attigneenongnahac.txt"
+ATW = "countries/Attiwandaron.txt"
+ARN = "countries/Arendaronon.txt"
+TIO = "countries/Tionontate.txt"
 
 
 #North American Other Federations and Tags
