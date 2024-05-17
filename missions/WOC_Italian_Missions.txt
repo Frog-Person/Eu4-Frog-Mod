@@ -2904,8 +2904,7 @@ ITA_non_conquest_3 = {
 				limit = {
 					has_dlc = "Domination"
 				}
-				custom_tooltip = ITA_upgrade_city_expansion_privileges	
-				set_country_flag = ITA_upgrade_city_expansion_privileges_flag
+				add_stability_or_adm_power = yes 
 			}
 			else = {
 				add_stability_or_adm_power = yes 
