@@ -12806,13 +12806,11 @@ ned_empowered_staatse_leger = {
 }
 
 ned_low_countries_fort_buff = {
-	local_development_cost = -0.05
 	local_production_efficiency = 0.1
 	local_defensiveness = 0.1
 }
 
 ned_low_countries_fort_buff_buffed = {
-	local_development_cost = -0.1
 	local_production_efficiency = 0.2
 	local_defensiveness = 0.2
 }
@@ -12891,12 +12889,12 @@ ned_prelude_true_freedom = {
 }
 
 ned_true_freedom = {
-	all_power_cost = -0.025
+	state_governing_cost = -0.1
 	stability_cost_modifier = -0.1
 }
 
 ned_orangist_triumph = {
-	max_absolutism = 20
+	max_absolutism = 10
 	max_absolutism_effect = 0.1
 }
 
