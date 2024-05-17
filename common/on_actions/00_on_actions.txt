@@ -5603,8 +5603,8 @@ on_centralized_state = {
 			owner = { has_government_attribute = centralize_state_no_reform_cost }
 		}
 		owner = {
-			add_adm_power = 50
-			change_government_reform_progress = 50
+			add_adm_power = 20
+			change_government_reform_progress = 30
 		}
 	}
 	else_if = {
@@ -5612,8 +5612,8 @@ on_centralized_state = {
 			owner = { has_government_attribute = centralize_state_half_refund }
 		}
 		owner = {
-			add_adm_power = 25
-			change_government_reform_progress = 25
+			add_adm_power = 10
+			change_government_reform_progress = 15
 		}
 	}
 	if = {
