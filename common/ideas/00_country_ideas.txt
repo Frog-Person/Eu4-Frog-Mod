@@ -18179,7 +18179,7 @@ ARB_ideas = {
 	free = yes
 
 	ARB_arabian_pincers = {
-		cav_to_inf_ratio = 0.25
+		cav_to_inf_ratio = 0.30
 		cavalry_power = 0.25
 	}
 	ARB_pact_of_umar = {
