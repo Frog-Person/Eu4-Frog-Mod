@@ -131,7 +131,7 @@ NDefines.NMilitary.SIEGE_BONUS_WATER_SHORTAGE = 1
 NDefines.NMilitary.SIEGE_BONUS_DEFENDERS_DESERT = 1
 NDefines.NMilitary.NAVAL_DOCTRINE_SAILORS_COST = 0.05			-- Cost for switching naval doctrine (Share of sailors)
 NDefines.NMilitary.NAVAL_DOCTRINE_MIN_FORCE_LIMIT = 15
-NDefines.NMilitary.BACK_LINE_MORALE_DAMAGE_TAKEN_MODIFIER = 0.0	-- Multiplier for morale damage taken by backrow
+NDefines.NMilitary.BACK_LINE_MORALE_DAMAGE_TAKEN_MODIFIER = 0.1	-- Multiplier for morale damage taken by backrow
 NDefines.NMilitary.BACK_LINE_STRENGTH_DAMAGE_TAKEN_MODIFIER = 0.0
 NDefines.NMilitary.BACK_LINE_REINFORCE_SPEED = 40
 NDefines.NMilitary.INSUFFICIENT_SUPPORT = -0.5
@@ -142,7 +142,7 @@ NDefines.NMilitary.GALLEY_TIME = 90							-- _MDEF_GALLEY_TIME = 10,
 NDefines.NMilitary.TRANSPORT_TIME = 30	
 NDefines.NMilitary.INFANTRY_BREAKTHROUGH = 0.05
 NDefines.NMilitary.CAVALRY_BREAKTHROUGH = 0.3
-NDefines.NMilitary.CAVALRY_SPEED = 1.2
+NDefines.NMilitary.CAVALRY_SPEED = 1.4
 
 NDefines.NAI.BIGSHIP_FRACTION = 0.1
 NDefines.NAI.TRANSPORT_FRACTION = -1 -- Max fraction of naval forcelimit that should be transports
