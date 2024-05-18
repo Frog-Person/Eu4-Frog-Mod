@@ -24459,7 +24459,7 @@ venetian_arsenal_gp = {
 			months = 120
 		}
 		cost_to_upgrade = {
-			factor = 1000
+			factor = 500
 		}
 		province_modifiers = {
 			ship_recruit_speed = -0.1
@@ -24480,7 +24480,7 @@ venetian_arsenal_gp = {
 			months = 240
 		}
 		cost_to_upgrade = {
-			factor = 2500
+			factor = 1500
 		}
 		province_modifiers = {
 			ship_recruit_speed = -0.5
@@ -24503,7 +24503,7 @@ venetian_arsenal_gp = {
 			months = 480
 		}
 		cost_to_upgrade = {
-			factor = 5000
+			factor = 2500
 		}
 		province_modifiers = {
 			ship_recruit_speed = -0.5
@@ -24602,7 +24602,7 @@ amsterdam_bourse = {
 		}
 
 		cost_to_upgrade = {
-			factor = 1000
+			factor = 2000
 		}
 
 		province_modifiers = {
@@ -24628,7 +24628,7 @@ amsterdam_bourse = {
 		}
 
 		cost_to_upgrade = {
-			factor = 2500
+			factor = 7000
 		}
 
 		province_modifiers = {
@@ -24659,7 +24659,7 @@ amsterdam_bourse = {
 				}
 			}
 			modifier = {
-				trade_steering = 0.25
+				trade_steering = 0.1
 				inflation_reduction = 0.1
 			}
 		}
@@ -24701,7 +24701,7 @@ golden_kremnica = {
 			months = 120
 		}
 		cost_to_upgrade = {
-			factor = 1000
+			factor = 750
 		}
 		province_modifiers = {
 			local_gold_depletion_chance_modifier = -0.25
@@ -24723,7 +24723,7 @@ golden_kremnica = {
 			months = 240
 		}
 		cost_to_upgrade = {
-			factor = 2500
+			factor = 2000
 		}
 		province_modifiers = {
 			local_gold_depletion_chance_modifier = -0.25
@@ -24733,7 +24733,7 @@ golden_kremnica = {
 		country_modifiers = {
 			monthly_gold_inflation_modifier = -0.2
 			gold_depletion_chance_modifier = -0.2
-			interest = -0.5
+			interest = -0.25
 		}
 		on_upgraded = {
 			154 = {
@@ -24747,7 +24747,7 @@ golden_kremnica = {
 			months = 480
 		}
 		cost_to_upgrade = {
-			factor = 5000
+			factor = 4000
 		}
 		province_modifiers = {
 			local_gold_depletion_chance_modifier = -0.25
@@ -24757,7 +24757,7 @@ golden_kremnica = {
 		country_modifiers = {
 			monthly_gold_inflation_modifier = -0.33
 			gold_depletion_chance_modifier = -0.33
-			interest = -1
+			interest = -0.5
 		}
 		on_upgraded = {
 			154 = {
@@ -24804,7 +24804,7 @@ schonbrunn_palace = {
 	}
 	tier_1 = {
 		upgrade_time = { months = 120 }
-		cost_to_upgrade = { factor = 1000 }
+		cost_to_upgrade = { factor = 500 }
 		province_modifiers = {}
 		area_modifier = {}
 		country_modifiers = {
@@ -24814,7 +24814,7 @@ schonbrunn_palace = {
 	}
 	tier_2 = {
 		upgrade_time = { months = 240 }
-		cost_to_upgrade = { factor = 2500 }
+		cost_to_upgrade = { factor = 1500 }
 		province_modifiers = {}
 		area_modifier = {}
 		country_modifiers = {
@@ -24826,7 +24826,7 @@ schonbrunn_palace = {
 	}
 	tier_3 = {
 		upgrade_time = { months = 480 }
-		cost_to_upgrade = { factor = 5000 }
+		cost_to_upgrade = { factor = 2500 }
 		province_modifiers = {}
 		area_modifier = {}
 		country_modifiers = {
@@ -24890,7 +24890,7 @@ city_of_sarai = {
 	}
 	tier_1 = {
 		upgrade_time = { months = 120 }
-		cost_to_upgrade = { factor = 1000 }
+		cost_to_upgrade = { factor = 500 }
 		province_modifiers = {}
 		area_modifier = {}
 		region_modifier = {
@@ -24904,7 +24904,7 @@ city_of_sarai = {
 	}
 	tier_2 = {
 		upgrade_time = { months = 240 }
-		cost_to_upgrade = { factor = 2500 }
+		cost_to_upgrade = { factor = 1500 }
 		province_modifiers = {}
 		area_modifier = {}
 		region_modifier = {
@@ -24919,7 +24919,7 @@ city_of_sarai = {
 	}
 	tier_3 = {
 		upgrade_time = { months = 480 }
-		cost_to_upgrade = { factor = 5000 }
+		cost_to_upgrade = { factor = 2500 }
 		province_modifiers = {}
 		area_modifier = {}
 		region_modifier = {
@@ -24958,36 +24958,36 @@ afaq_khoja_mausoleum = {
 	}
 	tier_1 = {
 		upgrade_time = { months = 120 }
-		cost_to_upgrade = { factor = 1000 }
+		cost_to_upgrade = { factor = 500 }
 		province_modifiers = {}
 		area_modifier = {}
 		country_modifiers = {
 			monthly_piety_accelerator = 0.001
-			religious_unity = 0.25
+			religious_unity = 0.10
 			church_loyalty_modifier = 0.05
 		}
 		on_upgraded = {}
 	}
 	tier_2 = {
 		upgrade_time = { months = 240 }
-		cost_to_upgrade = { factor = 2500 }
+		cost_to_upgrade = { factor = 1500 }
 		province_modifiers = {}
 		area_modifier = {}
 		country_modifiers = {
 			monthly_piety_accelerator = 0.002
-			religious_unity = 0.33
+			religious_unity = 0.15
 			church_loyalty_modifier = 0.1
 		}
 		on_upgraded = {}
 	}
 	tier_3 = {
 		upgrade_time = { months = 480 }
-		cost_to_upgrade = { factor = 5000 }
+		cost_to_upgrade = { factor = 2500 }
 		province_modifiers = {}
 		area_modifier = {}
 		country_modifiers = {
 			monthly_piety_accelerator = 0.003
-			religious_unity = 0.5
+			religious_unity = 0.25
 			church_loyalty_modifier = 0.15
 		}
 		on_upgraded = {}
@@ -25018,11 +25018,11 @@ citadel_of_aleppo = {
 	}
 	tier_1 = {
 		upgrade_time = { months = 120 }
-		cost_to_upgrade = { factor = 1000 }
+		cost_to_upgrade = { factor = 500 }
 		province_modifiers = {}
 		area_modifier = {
-			local_defensiveness = 0.25
-			local_manpower_modifier = 0.25
+			local_defensiveness = 0.10
+			local_manpower_modifier = 0.10
 		}
 		country_modifiers = {
 		}
@@ -25030,11 +25030,11 @@ citadel_of_aleppo = {
 	}
 	tier_2 = {
 		upgrade_time = { months = 240 }
-		cost_to_upgrade = { factor = 2500 }
+		cost_to_upgrade = { factor = 1500 }
 		province_modifiers = {}
 		area_modifier = {
-			local_defensiveness = 0.33
-			local_manpower_modifier = 0.33
+			local_defensiveness = 0.15
+			local_manpower_modifier = 0.15
 		}
 		country_modifiers = {
 		}
@@ -25042,11 +25042,11 @@ citadel_of_aleppo = {
 	}
 	tier_3 = {
 		upgrade_time = { months = 480 }
-		cost_to_upgrade = { factor = 5000 }
+		cost_to_upgrade = { factor = 2500 }
 		province_modifiers = {}
 		area_modifier = {
-			local_defensiveness = 0.5
-			local_manpower_modifier = 0.5
+			local_defensiveness = 0.25
+			local_manpower_modifier = 0.25
 			local_defender_dice_roll_bonus = 1 
 		}
 		country_modifiers = {
