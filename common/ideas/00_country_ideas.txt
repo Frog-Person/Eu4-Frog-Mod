@@ -215,6 +215,7 @@ GBR_ideas = {
 		global_trade_goods_size_modifier = 0.2
 	}
 	britanna_rules_the_waves = {
+		global_sailors_modifier = -0.5
 		leader_naval_manuever = 1
 		blockade_efficiency = 0.33
 		allowed_marine_fraction = 0.50
