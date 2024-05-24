@@ -1810,7 +1810,7 @@ gbr_recovering_prestige = {
 
 gbr_naval_dominance = {	#Permanent
 	reduced_liberty_desire_on_other_continent = 10
-	trade_steering = 0.25
+	trade_steering = 0.10
 	global_ship_trade_power = 0.25
 	global_sailors_modifier = 0.25
 }
@@ -1824,7 +1824,7 @@ gbr_religious_stability = {
 }
 
 gbr_new_world_dominance = {	#Permanent
-	global_tariffs = 0.25
+	global_tariffs = 0.20
 	trade_efficiency = 0.1
 }
 

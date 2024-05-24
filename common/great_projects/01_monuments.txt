@@ -19262,7 +19262,7 @@ gme_westminster_palace = {
 		area_modifier = { }
 		region_modifier = { }
 		country_modifiers = { 
-			stability_cost_modifier = -0.5
+			stability_cost_modifier = -0.05
 		}
 		on_upgraded = { }
 	}
