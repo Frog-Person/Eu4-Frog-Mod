@@ -27,7 +27,8 @@ regional_port = {
     }
     state_modifiers = {
         local_development_cost = -0.10
-        local_manpower_modifier = 0.15
+        local_manpower_modifier = 0.05
+        local_sailors_modifier = 0.1
         allowed_num_of_buildings = 1
 		trade_value_modifier = 0.1
     }
@@ -43,7 +44,8 @@ world_port = {
     }
     state_modifiers = {
         local_development_cost = -0.10
-        local_manpower_modifier = 0.33
+        local_manpower_modifier = 0.15
+        local_sailors_modifier = 0.2
         allowed_num_of_buildings = 1
 		trade_value_modifier = 0.25
     }
@@ -53,15 +55,16 @@ world_port = {
 }
 world_port_2 = {
     level = 5
-    cost = 0
+    cost = 200
     type = coastal
     province_modifiers = {
-        province_trade_power_value = 30
+        province_trade_power_value = 40
         local_institution_spread = 0.3
     }
     state_modifiers = {
         local_development_cost = -0.10
-        local_manpower_modifier = 0.33
+        local_manpower_modifier = 0.15
+        local_sailors_modifier = 0.2
         allowed_num_of_buildings = 1
 		trade_value_modifier = 0.25
     }
@@ -125,10 +128,10 @@ world_trade_center = {
 
 world_trade_center_2 = {
     level = 5
-    cost = 0
+    cost = 200
     type = inland
     province_modifiers = {
-        province_trade_power_value = 30
+        province_trade_power_value = 40
         local_institution_spread = 0.5
     }
     state_modifiers = {

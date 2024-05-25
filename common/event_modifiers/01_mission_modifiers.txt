@@ -1205,7 +1205,7 @@ dan_sca_balticum_dominance_mod = {	#Permanent
 
 dan_sca_indian_administration = {	#Permanent
 	trade_company_governing_cost = -0.25
-	trade_steering = 0.2
+	trade_steering = 0.15
 }
 
 sca_great_empire_of_scandinavia = {	#Permanent
@@ -5441,7 +5441,7 @@ pru_space_marines_2 = {
 }
 
 pru_chinese_trade = {
-	trade_steering = 0.33
+	trade_steering = 0.25
 }
 
 pru_emden_company_modifier = {

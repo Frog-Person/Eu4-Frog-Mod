@@ -274,7 +274,7 @@ expansion_ideas = {
 	}
 	competetive_merchants  = {
 		placed_merchant_power_modifier = 0.5
-		trade_steering = 0.15
+		trade_steering = 0.10
 	}
 	factories = {
 		allowed_marine_fraction = 0.15
@@ -701,7 +701,7 @@ maritime_ideas = {
 	}
 	fast_negotiations = {
 		caravan_power = 0.15
-		trade_steering = 0.25
+		trade_steering = 0.10
 		movement_speed = 0.1
 	}
 	overseas_merchants = {
@@ -893,7 +893,7 @@ plutocracy_ideas = {
 		leader_land_fire = 1
 	}
 	free_cities = {
-		trade_steering = 0.25
+		trade_steering = 0.15
 		development_cost = -0.05
 	}
 	emancipation = {
@@ -1970,7 +1970,7 @@ extra_ideas = {
   		merchants = 1
   	}
 	trade_manipulation = {
-		trade_steering = 0.25
+		trade_steering = 0.15
 	}
 	indigenous_bountiful_land = {
 		tribal_development_growth = 0
