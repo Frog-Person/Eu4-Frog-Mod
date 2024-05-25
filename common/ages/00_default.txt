@@ -585,7 +585,7 @@ age_of_absolutism = {
 				tag = NED
 			}
 			modifier = {
-				trade_steering = 0.3
+				trade_steering = 0.25
 			}
 			ai_will_do = {
 				factor = 100
