@@ -19137,6 +19137,228 @@ imperial_city_kyoto = {
 	}
 }
 
+kazan_kremlin = {
+	start = 1082 
+	date = 1214.12.2
+	time = { months = 0	}
+	build_cost = 0
+	can_be_moved = no
+	move_days_per_unit_distance = 10
+	starting_tier = 0
+	type = monument
+	build_trigger = {
+	}
+	on_built = {
+	}
+	on_destroyed = {
+	}
+	can_use_modifiers_trigger = {
+	}
+	can_upgrade_trigger = {
+	}
+	keep_trigger = {
+	}
+
+	tier_0 = {
+		upgrade_time = {
+			months = 0
+		}
+		cost_to_upgrade = {
+			factor = 0
+		}
+		province_modifiers = {
+		}
+		area_modifier = {
+		}
+		country_modifiers = {
+		}
+		on_upgraded = {
+		}
+	}
+
+	tier_1 = {
+		upgrade_time = {
+			months = 120
+		}
+		cost_to_upgrade = {
+			factor = 1000
+		}
+		province_modifiers = {
+		}
+		area_modifier = {
+			
+		}
+		country_modifiers = {
+			great_project_upgrade_time = -0.1
+			global_autonomy = -0.025
+			garrison_damage = 0.10
+		}
+		on_upgraded = {
+		}
+	}
+
+	tier_2 = {
+		upgrade_time = {
+			months = 240
+		}
+		cost_to_upgrade = {
+			factor = 2500
+		}
+		province_modifiers = {
+		}
+		area_modifier = {
+			local_friendly_movement_speed = 0.25
+		}
+		region_modifier = { 
+			
+		}
+		country_modifiers = {
+			great_project_upgrade_time = -0.2
+			global_autonomy = -0.025
+			garrison_damage = 0.25
+		}	
+		on_upgraded = {
+		}
+	}
+
+	tier_3 = {
+		upgrade_time = {
+			months = 480
+		}
+		cost_to_upgrade = {
+			factor = 5000
+		}
+		province_modifiers = {
+		}
+		area_modifier = {
+			
+		}
+		region_modifier = { 
+			local_friendly_movement_speed = 0.25
+		}
+		country_modifiers = {
+			great_project_upgrade_time = -0.25
+			global_autonomy = -0.05
+			garrison_damage = 0.5
+		}	
+		on_upgraded = {
+		}
+	}
+}
+
+narikala_fortress = {
+	start = 423 #Tbilisi 
+	date = 358.5.3 #4th century 
+	time = { months = 0	}
+	build_cost = 0
+	can_be_moved = no
+	move_days_per_unit_distance = 10
+	starting_tier = 1
+	type = monument
+	build_trigger = {
+	}
+	on_built = {
+	}
+	on_destroyed = {
+	}
+	can_use_modifiers_trigger = {
+		
+	}
+	can_upgrade_trigger = {
+		
+	}
+	keep_trigger = {
+		
+	}
+
+	tier_0 = {
+		upgrade_time = {
+			months = 0
+		}
+		cost_to_upgrade = {
+			factor = 0
+		}
+		province_modifiers = {
+		}
+		area_modifier = {
+		}
+		country_modifiers = {
+		}
+		on_upgraded = {
+		}
+	}
+
+	tier_1 = {
+		upgrade_time = {
+			months = 120
+		}
+		cost_to_upgrade = {
+			factor = 1000
+		}
+		province_modifiers = {
+			local_fort_maintenance_modifier = -1
+			local_assault_fort_ability = -0.30
+			local_defensiveness = 0.25
+		}
+		area_modifier = {
+			
+		}
+		country_modifiers = {
+		}
+		on_upgraded = {
+		}
+	}
+
+	tier_2 = {
+		upgrade_time = {
+			months = 240
+		}
+		cost_to_upgrade = {
+			factor = 2500
+		}
+		province_modifiers = {
+			
+		}
+		area_modifier = {
+			local_fort_maintenance_modifier = -1
+			local_assault_fort_ability = -0.30
+			local_defensiveness = 0.25
+		}
+		region_modifier = { 
+			
+		}
+		country_modifiers = {
+		}	
+		on_upgraded = {
+		}
+	}
+
+	tier_3 = {
+		upgrade_time = {
+			months = 480
+		}
+		cost_to_upgrade = {
+			factor = 5000
+		}
+		province_modifiers = {
+		}
+		area_modifier = {
+			
+		}
+		region_modifier = {
+			local_fort_maintenance_modifier = -1
+			local_assault_fort_ability = -0.30
+			local_defensiveness = 0.25
+		}
+		country_modifiers = {
+			
+		}
+		on_upgraded = {
+			
+		}
+	}
+}
+
 #------------------------- BUNNYMANS EXTRA MONUMENTS ----------------------------
 
 gme_port_de_moon = {
@@ -24833,6 +25055,84 @@ schonbrunn_palace = {
 			chance_to_inherit = 0.1 
 			diplomats = 1
 			years_to_integrate_personal_union = -5
+		}
+		on_upgraded = {}
+	}
+}
+tzintzuntzan = {
+	start = 2624
+	date = 1300.1.1
+	time = { months = 0 }
+	build_cost = 0
+	can_be_moved = no
+	move_days_per_unit_distance = 10
+	starting_tier = 1
+	type = monument
+	build_trigger = {
+		culture_group = central_american
+		province_is_or_accepts_culture = yes
+		province_is_or_accepts_religion = {
+			religion = nahuatl
+		}
+	}
+	on_built = {}
+	on_destroyed = {}
+	can_use_modifiers_trigger = {
+		culture_group = central_american
+		province_is_or_accepts_culture = yes
+		province_is_or_accepts_religion = {
+			religion = nahuatl
+		}
+	}
+	can_upgrade_trigger = {
+		culture_group = central_american
+		province_is_or_accepts_culture = yes
+		province_is_or_accepts_religion = {
+			religion = nahuatl
+		}
+	}
+	keep_trigger = {}
+	tier_0 = {
+		upgrade_time = { months = 0 }
+		cost_to_upgrade = { factor = 0 }
+		province_modifiers = {}
+		area_modifier = {}
+		country_modifiers = {}
+		on_upgraded = {}
+	}
+	tier_1 = {
+		upgrade_time = { months = 120 }
+		cost_to_upgrade = { factor = 1000 }
+		province_modifiers = {}
+		area_modifier = {}
+		country_modifiers = {
+			diplomatic_reputation = 1
+			culture_conversion_time = -0.1
+		}
+		on_upgraded = {}
+	}
+	tier_2 = {
+		upgrade_time = { months = 240 }
+		cost_to_upgrade = { factor = 2500 }
+		province_modifiers = {}
+		area_modifier = {}
+		country_modifiers = {
+			blood_gain_modifier = 0.1
+			diplomatic_reputation = 1
+			culture_conversion_time = -0.2
+		}
+		on_upgraded = {}
+	}
+	tier_3 = {
+		upgrade_time = { months = 480 }
+		cost_to_upgrade = { factor = 5000 }
+		province_modifiers = {}
+		area_modifier = {}
+		country_modifiers = {
+			blood_gain_modifier = 0.25
+			diplomatic_reputation = 2
+			culture_conversion_time = -0.3
+			ignore_coring_distance = yes
 		}
 		on_upgraded = {}
 	}
