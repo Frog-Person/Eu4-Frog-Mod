@@ -2991,7 +2991,6 @@ NED_5_1 = {
 						add_province_modifier = {
 							name = ned_low_countries_fort_buff_buffed
 							duration = -1
-							hidden = yes
 						}
 					}
 				}
@@ -3004,7 +3003,6 @@ NED_5_1 = {
 						add_province_modifier = {
 							name = ned_low_countries_fort_buff
 							duration = -1
-							hidden = yes
 						}
 					}
 				}

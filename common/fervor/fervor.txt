@@ -69,7 +69,7 @@ fervor_stability = {
 	trigger = {
 	}
 	effect = {
-		build_cost = -0.1
+		interest = -0.5
 		global_unrest = -2
 		all_estate_loyalty_equilibrium = 0.1
 	}
@@ -189,7 +189,7 @@ fervor_stability_buffed = {
 	trigger = {
 	}
 	effect = {
-		build_cost = -0.15
+		interest = -0.75
 		global_unrest = -3
 		all_estate_loyalty_equilibrium = 0.15
 	}
