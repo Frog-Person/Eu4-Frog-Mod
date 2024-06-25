@@ -18320,44 +18320,6 @@ UCN_ideas = {
 	}
 }
 
-AUH_ideas = {
-	start = {
-		land_morale = 0.1
-		diplomatic_reputation = 2
-	}
-	
-	bonus = {
-		no_religion_penalty = yes
-	}
-	
-	trigger = {
-		tag = AUH
-	}
-	free = yes		
-	
-	auh_first = {
-		discipline = 0.05
-	}
-	auh_second = {
-		manpower_in_accepted_culture_provinces = 0.3
-	}
-	auh_third = {
-		global_trade_goods_size_modifier = 0.1
-	}
-	auh_fourth = {
-		global_unrest = -1
-	}
-	auh_fifth = {
-		state_governing_cost = -0.2
-	}
-	auh_sixth = {
-		global_prov_trade_power_modifier = 0.25
-	}
-	auh_seventh = {
-		artillery_power = 0.1
-		artillery_cost = -0.1
-	}
-}
 
 GMA_ideas = {
 	start = {
