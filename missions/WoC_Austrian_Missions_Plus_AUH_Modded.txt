@@ -4376,10 +4376,11 @@ WoC_austria_5 = {
 			factor = 0	#No
 		}
 	}
+
 	direction_of_our_country = {
 		icon = mission_build_up_to_force_limit
 		position = 4
-		required_missions = { stable_dynastic_land }
+		required_missions = { }
 		trigger = {
 			OR = {
 							if = {
@@ -4443,6 +4444,7 @@ WoC_austria_5 = {
 						}
 		}
 	}
+
 	czech_choice = {
 		icon = mission_build_up_to_force_limit
 		position = 5
@@ -4573,6 +4575,7 @@ WoC_austria_5 = {
 						}
 		}
 	}
+
 	croatian_conundrum = {
 		icon = mission_build_up_to_force_limit
 		position = 6
@@ -4718,6 +4721,7 @@ WoC_austria_5 = {
 			}
 		}
 	}
+
 	hungarian_headache = {
 		icon = mission_build_up_to_force_limit
 		position = 7
@@ -4912,6 +4916,7 @@ WoC_austria_5 = {
 							}
 		}
 	}
+
 	transylvanian_trouble = {
 		icon = mission_build_up_to_force_limit
 		position = 8
@@ -5118,6 +5123,7 @@ WoC_austria_5 = {
 			}
 		}
 	}
+	
 	slovak_situation = {
 		icon = mission_build_up_to_force_limit
 		position = 9
