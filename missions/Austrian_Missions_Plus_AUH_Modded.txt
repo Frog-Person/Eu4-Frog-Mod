@@ -4379,7 +4379,7 @@ WoC_austria_5 = {
 
 	direction_of_our_country = {
 		icon = mission_build_up_to_force_limit
-		position = 10
+		position = 11
 		required_missions = { }
 		trigger = {
 			OR = {
@@ -4444,10 +4444,9 @@ WoC_austria_5 = {
 						}
 		}
 	}
-
-czech_choice = {
+	czech_choice = {
 		icon = mission_build_up_to_force_limit
-		position = 11
+		position = 12
 		required_missions = { direction_of_our_country }
 		trigger = {
 			OR = {
@@ -4491,7 +4490,7 @@ czech_choice = {
 				}
 			}
 		}
-	effect = {
+		effect = {
 		if = {
 			limit = {
 				has_country_modifier = acceptance_path1
@@ -4567,20 +4566,19 @@ czech_choice = {
 			limit = { 
 				has_country_modifier = austrian_path1
 			}
-			remove_country_modifier = austrian_path1
-			add_country_modifier = {
-				name = austrian_path2
-				duration = -1
+				remove_country_modifier = austrian_path1
+				add_country_modifier = {
+					name = austrian_path2
+					duration = -1
+				}
 			}
 		}
 	}
-}
-
-croatian_conundrum = {
-	icon = mission_build_up_to_force_limit
-	position = 12
-	required_missions = { czech_choice }
-	trigger = {
+	croatian_conundrum = {
+		icon = mission_build_up_to_force_limit
+		position = 13
+		required_missions = { czech_choice }
+		trigger = {
 		OR = {
 			if = {
 				AND = {
@@ -4611,9 +4609,9 @@ croatian_conundrum = {
 				}
 			}
 		}
-	}
-	effect = {
-		if = {
+		}
+		effect = {
+			if = {
 			limit = {
 				has_country_modifier = acceptance_path2
 				croatia_area = {
@@ -4720,11 +4718,10 @@ croatian_conundrum = {
 			}
 		}
 	}
-}
-
+	}
 	hungarian_headache = {
 		icon = mission_build_up_to_force_limit
-		position = 13
+		position = 14
 		required_missions = { croatian_conundrum }
 		trigger = {
 			OR = {
@@ -4916,10 +4913,9 @@ croatian_conundrum = {
 							}
 		}
 	}
-
 	transylvanian_trouble = {
 		icon = mission_build_up_to_force_limit
-		position = 14
+		position = 15
 		required_missions = { hungarian_headache }
 		trigger = {
 			OR = {
@@ -5123,10 +5119,9 @@ croatian_conundrum = {
 			}
 		}
 	}
-
 	slovak_situation = {
 		icon = mission_build_up_to_force_limit
-		position = 15
+		position = 16
 		required_missions = { transylvanian_trouble }
 		trigger = {
 			OR = {
