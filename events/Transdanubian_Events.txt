@@ -5,18 +5,13 @@ country_event = {
 	desc = TRAN_EVENTS.1.d
 
 	picture = GOOD_WITH_MONARCH_eventPicture
-	
-	fire_only_once = yes
-	trigger = {
-        has_country_flag = grand_republic_formation
-    }
-    mean_time_to_happen = {
-		months = 12
-	}
+    
+    is_triggered_only = yes
+
     effect = {
         option = {# Yes
             name = TRAN_EVENTS.1.A
-            add_government_reform = transdanubian_parliamentary_republic
+            add_government_reform = peasants_republic
             ai_chance = {
                 factor = 1
             }
@@ -29,18 +24,12 @@ country_event = {
 	desc = TRAN_EVENTS.2.d
 
 	picture = GOOD_WITH_MONARCH_eventPicture
-	
-	fire_only_once = yes
-	trigger = {
-        has_country_flag = grand_republic_formation
-    }
-    mean_time_to_happen = {
-		months = 12
-	}
+
+    is_triggered_only = yes
     effect = {
         option = {# Yes
             name = TRAN_EVENTS.2.A
-            add_government_reform = united_transdanubian_states
+            add_government_reform = transdanubian_peoples_republic
             ai_chance = {
                 factor = 1
             }

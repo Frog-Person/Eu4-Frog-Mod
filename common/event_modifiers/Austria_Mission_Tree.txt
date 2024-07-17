@@ -149,7 +149,7 @@ robust_understanding_of_infrastructure_improvement = {
     expand_infrastructure_cost_modifier = -0.05
 }
 effective_road_network = {
-    movement_speed = 0.05
+    movement_speed = 0.10
 }
 an_educated_populace = {
     technology_cost = -0.05
@@ -179,7 +179,8 @@ a_prosperous_land = {
     global_unrest = -1
 }
 a_broad_spectrum_of_cultures = {
-    promote_culture_cost = -0.25
+    promote_culture_cost = -0.50
+    num_accepted_cultures = 2
 }
 welcome_to_all_who_arrive = {
     years_of_nationalism = -5

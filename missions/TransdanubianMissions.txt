@@ -35,7 +35,7 @@ trade_states = {
 			if = {
 			    limit = {
 			        OR = {
-			            BAV = { is_subject_of = AUH }
+			            BAV = { is_subject_of = TDC }
 			            AND = {
 			                upper_bavaria_area = {
 			    		           type = all
@@ -112,7 +112,7 @@ trade_states = {
 		required_missions = { trade_on_the_adriatic }
 		trigger = {
 			    num_of_owned_provinces_with = {
-			        value = 12
+			        value = 10
 			        province_has_center_of_trade_of_level = 3
 			        development = 30
 			    }
@@ -160,7 +160,7 @@ internal_development = {
 		position = 1
 		required_missions = {  }
 		trigger = {
-				owns_all_provinces = {
+				all_owned_province = {
 					development = 10
 					has_owner_accepted_culture = yes
 				}
@@ -178,8 +178,8 @@ internal_development = {
 		position = 2
 		required_missions = { basic_subsistance }
 		trigger = {
-				owns_all_provinces = {
-					development = 10
+				all_owned_province = {
+					development = 20
 					has_owner_accepted_culture = yes
 				}
 		}
@@ -197,7 +197,7 @@ internal_development = {
 		required_missions = { all_needs_met }
 		trigger = {
 			all_owned_province = {
-				num_of_times_expanded_infrastructure = 2
+				num_of_times_expanded_infrastructure = 1
 			}
 		}
 		effect = {
@@ -231,7 +231,7 @@ internal_development = {
 		required_missions = { local_universities }
 		trigger = {
 				all_owned_province = {
-					num_of_times_expanded_infrastructure = 3
+					num_of_times_expanded_infrastructure = 2
 					development = 30
 				}		
 		}
@@ -258,7 +258,7 @@ cultural_acceptance_and_dev = {
 		position = 1
 		required_missions = {  }
 		trigger = {
-				num_accepted_cultures = 10
+				num_accepted_cultures = 9
 		}
 		effect = {
 			add_country_modifier = {
@@ -318,9 +318,9 @@ cultural_acceptance_and_dev = {
 				land_forcelimit = 200
 				has_global_modifier_value = {
 					which = discipline
-					value = 0.2
+					value = 0.15
 				}
-				land_morale = 6.5
+				land_morale = 6.0
 		}
 		effect = {
 			add_country_modifier = {
@@ -354,19 +354,14 @@ cultural_acceptance_and_dev = {
 		position = 6
 		required_missions = { influence_in_the_city_of_desire country_of_100_capitals Landstreitkräfte_Österreich_Ungarns equal_representation self_sufficient_states }
 		trigger = {
-				is_year = 1750
-				current_size_of_parliament = 40
-				num_of_issues_passed = {
-					amount = 10
-				}
 				stability = 3
 				statesman = 5
 		}
 		effect = {
-			add_prestige = 30
 			country_event = { 
-				id = TRAN_EVENTS.2 
+				id = TRAN_EVENTS.2
 			}
+			add_prestige = 30
 		}
 	}
 }
@@ -384,7 +379,7 @@ government_supervision = {
 		position = 1
 		required_missions = {  }
 		trigger = {
-				num_of_different_cultures_in_court = 4
+				num_of_different_cultures_in_court = 3
 				OR = {
 					artist = 5
 					inquisitor = 5
@@ -427,8 +422,8 @@ government_supervision = {
 		required_missions = { competenet_and_multicultural_court }
 		trigger = {
 				OR = {
-					courthouse = 50
-					town_hall = 50
+					courthouse = 40
+					town_hall = 40
 				}
 				adm = 4
 		}
@@ -446,8 +441,8 @@ government_supervision = {
 		required_missions = { a_just_and_expansive_bureaucracy }
 		trigger = {
 				reform_level = 8
-				unrest = -2
-				average_autonomy = 10
+				average_unrest = -2
+				average_autonomy = 0
 			}
 		effect = {
 			add_country_modifier = {
@@ -468,7 +463,6 @@ government_supervision = {
 		}
 		effect = {
 			change_government_reform_progress = -150
-			set_country_flag = grand_republic_formation
 			country_event = { 
 				id = TRAN_EVENTS.1 
 			}
