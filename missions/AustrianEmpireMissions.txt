@@ -1,0 +1,443 @@
+push_west = {
+	slot = 1
+	generic = no
+	ai = yes
+	potential = {
+		tag = AUE
+	}
+
+	prepare_our_defenses = {
+		icon = mission_build_up_to_force_limit
+		position = 1
+		trigger = { 
+			num_of_owned_provinces_with = {
+				value = 10
+				if = {
+					limit = {
+						ROOT = {
+							NOT = { mil_tech = 14 }
+						}
+					}
+					OR = {
+						has_building = fort_15th
+						has_building = fort_16th
+						has_building = fort_17th
+						has_building = fort_18th
+					}
+				}
+				else_if = {
+					limit = {
+						ROOT = {
+							AND = {
+								mil_tech = 14
+								NOT = { mil_tech = 19 }
+							}
+						}
+					}
+					OR = {
+						has_building = fort_16th
+						has_building = fort_17th
+						has_building = fort_18th
+					}
+				}
+				else_if = {
+					limit = {
+						ROOT = {
+							AND = {
+								mil_tech = 19
+								NOT = { mil_tech = 24 }
+							}
+						}
+					}
+					OR = {
+						has_building = fort_17th
+						has_building = fort_18th
+					}
+				}
+				else_if = {
+					limit = {
+						ROOT = {
+							mil_tech = 24
+						}
+					}
+					has_building = fort_18th
+				}
+			}
+		}
+		effect = {
+			give_claims = { area = tirol_area }
+			give_claims = { area = lower_swabia_area } 
+			give_claims = { area = upper_swabia_area } 
+			add_country_modifier ={
+				name = "the_front_line_defenses"
+				duration = 5479
+			}
+		}
+	}
+
+	crush_the_swabian_league = {
+		icon = mission_build_up_to_force_limit
+		position = 2
+		required_missions = { prepare_our_defenses }
+		trigger = {
+			tirol_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			lower_swabia_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			upper_swabia_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			give_claims = { area = switzerland_area }
+			give_claims = { area = romandie_area }
+			if = {
+				limit = {
+					tirol_area = {
+						NOT = { culture = austrian }
+						type = all
+						country_or_non_sovereign_subject_holds = ROOT
+					}
+					lower_swabia_area = {
+						NOT = { culture = austrian }
+						type = all
+						country_or_non_sovereign_subject_holds = ROOT
+					}
+					upper_swabia_area = {
+						NOT = { culture = austrian }
+						type = all
+						country_or_non_sovereign_subject_holds = ROOT
+					}	
+				}
+				add_country_modifier ={
+					name = "forced_conscription"
+					duration = 5479
+				}
+			}
+			else_if = {
+				limit = {
+					tirol_area = {
+						culture = austrian
+						type = all
+						country_or_non_sovereign_subject_holds = ROOT
+					}
+					lower_swabia_area = {
+						culture = austrian
+						type = all
+						country_or_non_sovereign_subject_holds = ROOT
+					}	
+					upper_swabia_area = {
+						culture = austrian
+						type = all
+						country_or_non_sovereign_subject_holds = ROOT
+					}
+				}
+				add_country_modifier = { 
+					name = "renewed_vigor"
+					duration = -1
+				}
+			}
+		}
+	}
+
+	control_the_cantons = {
+		icon = mission_build_up_to_force_limit
+		position = 3
+		required_missions = { king_of_the_francs crush_the_swabian_league }
+		trigger = {
+			switzerland_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			romandie_area = { 
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			give_claims = { area = upper_rhineland_area }
+			give_claims = { area = alsace_area }
+			if = {
+				limit = {
+					switzerland_area = {
+						NOT = { culture = austrian }
+						type = all
+						country_or_non_sovereign_subject_holds = ROOT
+					}
+					romandie_area = { 
+						NOT = { culture = austrian }
+						type = all
+						country_or_non_sovereign_subject_holds = ROOT
+					}
+				}
+				add_country_modifier = {
+					name = "assume_control_of_the_swiss_guard"
+					duration = 3653
+				}
+			}
+			else_if = {
+				limit = {
+					switzerland_area = {
+						culture = austrian
+						type = all
+						country_or_non_sovereign_subject_holds = ROOT
+					}
+					romandie_area = { 
+						culture = austrian
+						type = all
+						country_or_non_sovereign_subject_holds = ROOT
+					}
+				}
+				add_country_modifier = {
+					name = "lessons_of_the_swiss_mercenaries"
+					duration = -1
+				}
+			}
+		}
+	}
+
+	push_for_whats_ours = {
+		icon = mission_build_up_to_force_limit
+		position = 4
+		required_missions = { rule_the_palatinate control_the_cantons }
+		trigger = {
+			upper_rhineland_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			alsace_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = { }
+	}
+	reclaim_our_contested_lands = {
+		icon = mission_build_up_to_force_limit
+		position = 5
+		required_missions = { push_for_whats_ours }
+		trigger = { }
+		effect = { }
+	}
+	humiliate_the_franks = {
+		icon = mission_build_up_to_force_limit
+		position = 6
+		required_missions = { taking_the_rhineland reclaim_our_contested_lands the_prussian_threat }
+		trigger = { }
+		effect = { }
+	}
+}
+
+push_north = {
+	slot = 2
+	generic = no
+	ai = yes
+	potential = {
+		tag = AUE
+	}
+
+	rule_bavaria = {
+		icon = mission_build_up_to_force_limit
+		position = 1
+		required_missions = {  }
+		trigger = { }
+		effect = { }
+	}
+	king_of_the_francs = {
+		icon = mission_build_up_to_force_limit
+		position = 2
+		required_missions = { rule_bavaria }
+		trigger = { }
+		effect = { }
+	}
+	rule_the_palatinate = {
+		icon = mission_build_up_to_force_limit
+		position = 3
+		required_missions = { king_of_the_francs }
+		trigger = { }
+		effect = { }
+	}
+	crossing_the_rhine = {
+		icon = mission_build_up_to_force_limit
+		position = 4
+		required_missions = { rule_the_palatinate }
+		trigger = { }
+		effect = { }
+	}
+	remove_the_archbishopric = {
+		icon = mission_build_up_to_force_limit
+		position = 5
+		required_missions = { crossing_the_rhine }
+		trigger = { }
+		effect = { }
+	}
+	one_true_faith = {
+		icon = mission_build_up_to_force_limit
+		position = 6
+		required_missions = { remove_the_archbishopric }
+		trigger = { }
+		effect = { }
+	}
+}
+
+push_prussia = {
+	slot = 3
+	generic = no
+	ai = yes
+	potential = {
+		always = yes
+	}
+
+	rally_the_troops = {
+		icon = mission_build_up_to_force_limit
+		position = 1
+		required_missions = {  }
+		trigger = { }
+		effect = { }
+	}
+	lands_of_saxony = {
+		icon = mission_build_up_to_force_limit
+		position = 2
+		required_missions = { rally_the_troops }
+		trigger = { }
+		effect = { }
+	}
+	flank_the_capitol = {
+		icon = mission_build_up_to_force_limit
+		position = 3
+		required_missions = { lands_of_saxony }
+		trigger = { }
+		effect = { }
+	}
+	push_in_to_the_coast = {
+		icon = mission_build_up_to_force_limit
+		position = 4
+		required_missions = { flank_the_capitol }
+		trigger = { }
+		effect = { }
+	}
+	the_prussian_threat = {
+		icon = mission_build_up_to_force_limit
+		position = 5
+		required_missions = { push_in_to_the_coast }
+		trigger = { }
+		effect = { }
+	}
+	a_new_capital = {
+		icon = mission_build_up_to_force_limit
+		position = 6
+		required_missions = { the_prussian_threat }
+		trigger = { }
+		effect = { }
+	}
+}
+
+austrian_empire_government = {
+	slot = 4
+	generic = no
+	ai = yes
+	potential = {
+		always = yes
+	}
+
+	a_strong_court = {
+		icon = mission_build_up_to_force_limit
+		position = 1
+		required_missions = {  }
+		trigger = { }
+		effect = { }
+	}
+	an_absolute_state = {
+		icon = mission_build_up_to_force_limit
+		position = 2
+		required_missions = { a_strong_court }
+		trigger = { }
+		effect = { }
+	}
+	a_reformed_and_mighty_state = {
+		icon = mission_build_up_to_force_limit
+		position = 3
+		required_missions = { an_absolute_state }
+		trigger = { }
+		effect = { }
+	}
+	austrian_military_with_a_state = {
+		icon = mission_build_up_to_force_limit
+		position = 4
+		required_missions = { a_reformed_and_mighty_state a_prosperous_and_wealthy_land }
+		trigger = { }
+		effect = { }
+	}
+	our_military_might = {
+		icon = mission_build_up_to_force_limit
+		position = 5
+		required_missions = { austrian_military_with_a_state }
+		trigger = { }
+		effect = { }
+	}
+	habsburg_over_hohenzolleren = {
+		icon = mission_build_up_to_force_limit
+		position = 6
+		required_missions = { our_military_might the_prussian_threat }
+		trigger = { }
+		effect = { }
+	}
+}
+
+cultural_dominance = {
+	slot = 5
+	generic = no
+	ai = yes
+	potential = {
+		always = yes
+	}
+
+	room_for_austrians = {
+		icon = mission_build_up_to_force_limit
+		position = 1
+		required_missions = {  }
+		trigger = { }
+		effect = { }
+	}
+	the_chosen_people = {
+		icon = mission_build_up_to_force_limit
+		position = 2
+		required_missions = { room_for_austrians }
+		trigger = { }
+		effect = { }
+	}
+	a_prosperous_and_wealthy_land = {
+		icon = mission_build_up_to_force_limit
+		position = 3
+		required_missions = { the_chosen_people }
+		trigger = { }
+		effect = { }
+	}
+	wealthier_than_the_channel = {
+		icon = mission_build_up_to_force_limit
+		position = 4
+		required_missions = { a_prosperous_and_wealthy_land }
+		trigger = { }
+		effect = { }
+	}
+	made_by_austrians_for_austrians = {
+		icon = mission_build_up_to_force_limit
+		position = 5
+		required_missions = { wealthier_than_the_channel }
+		trigger = { }
+		effect = { }
+	}
+	a_austrian_germany = {
+		icon = mission_build_up_to_force_limit
+		position = 6
+		required_missions = { made_by_austrians_for_austrians }
+		trigger = { }
+		effect = { }
+	}
+}
+
