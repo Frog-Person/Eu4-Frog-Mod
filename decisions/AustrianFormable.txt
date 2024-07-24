@@ -78,6 +78,7 @@ country_decisions = {
             }                     
         }
     }
+
     a_federation_of_states = {
         major = yes
         potential = {
@@ -158,8 +159,7 @@ country_decisions = {
             }                     
         }
     }
-}
-dreams_of_a_great_empire = {
+    dreams_of_a_great_empire = {
         major = yes
         potential = {
             tag = HAB
@@ -237,3 +237,4 @@ dreams_of_a_great_empire = {
             }                     
         }
     }
+}
