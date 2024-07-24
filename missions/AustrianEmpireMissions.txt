@@ -369,7 +369,7 @@ push_prussia = {
 	generic = no
 	ai = yes
 	potential = {
-		always = yes
+		tag = AUE
 	}
 
 	rally_the_troops = {
@@ -507,7 +507,7 @@ austrian_empire_government = {
 	generic = no
 	ai = yes
 	potential = {
-		always = yes
+		tag = AUE
 	}
 
 	a_strong_court = {
@@ -622,7 +622,7 @@ cultural_dominance = {
 	generic = no
 	ai = yes
 	potential = {
-		always = yes
+		tag = AUE
 	}
 
 	room_for_austrians = {
