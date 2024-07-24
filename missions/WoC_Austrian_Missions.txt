@@ -5294,28 +5294,33 @@ WoC_austria_5 = {
 				limit = {
 					has_country_modifier = austrian_path3
 					slovakia_area = {
-					type = all
-					culture = austrian
-					country_or_non_sovereign_subject_holds = ROOT
-				}
-					remove_country_modifier = austrian_path3
-					add_country_modifier = {
-						name = austrian_path4
-						duration = -1	
+						type = all
+						culture = austrian
+						country_or_non_sovereign_subject_holds = ROOT
 					}
-					set_country_flag = austrian_hungary_formable
 				}
+				remove_country_modifier = austrian_path3
+				add_country_modifier = {
+					name = austrian_path4
+					duration = -1	
+				}
+				set_country_flag = austrian_hungary_formable
 			}
 			else_if = {
 				limit = {
 					has_country_modifier = austrian_path5
+					slovakia_area = {
+						type = all
+						culture = austrian
+						country_or_non_sovereign_subject_holds = ROOT
+					}
 				}
 				remove_country_modifier = austrian_path5
 				add_country_modifier = {
 					name = austrian_path6
 					duration = -1				
 				}
-					set_country_flag = austrian_empire_formable
+				set_country_flag = austrian_empire_formable
 			}
 		}
 	}
