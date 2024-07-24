@@ -26,6 +26,7 @@ country_event = {
 	picture = GOOD_WITH_MONARCH_eventPicture
 
     is_triggered_only = yes
+    
     effect = {
         option = {
             name = TRAN_EVENTS.2.A
