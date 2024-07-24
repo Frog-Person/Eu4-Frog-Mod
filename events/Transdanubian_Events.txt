@@ -9,7 +9,7 @@ country_event = {
     is_triggered_only = yes
 
     effect = {
-        option = {# Yes
+        option = {
             name = TRAN_EVENTS.1.A
             add_government_reform = peasants_republic
             ai_chance = {
@@ -27,7 +27,7 @@ country_event = {
 
     is_triggered_only = yes
     effect = {
-        option = {# Yes
+        option = {
             name = TRAN_EVENTS.2.A
             add_government_reform = transdanubian_peoples_republic
             ai_chance = {

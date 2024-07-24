@@ -2477,18 +2477,6 @@ austrian_empire_monarchy = {
 			prussian_militarization_mechanic_1
 		}
 	}
-	conditional = {
-		allow = { has_dlc = "Domination" }
-		government_abilities = {
-			prussian_militarization_mechanic_2
-		}
-	}
-	conditional = {
-		allow = { has_dlc = "Domination" }
-		government_abilities = {
-			prussian_militarization_mechanic_3
-		}
-	}
 }
 
 austrian_dual_monarchy = {
