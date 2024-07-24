@@ -5092,6 +5092,26 @@ WoC_austria_5 = {
 			}
 			else_if = {
 				limit = {
+					has_country_modifier = austrian_path4
+					transylvania_area = {
+						type = all
+						culture = austrian
+						country_or_non_sovereign_subject_holds = ROOT	
+					}
+					southern_transylvania_area = {
+						type = all
+						culture = austrian
+						country_or_non_sovereign_subject_holds = ROOT	
+					}
+				}
+				remove_country_modifier = austrian_path4
+				add_country_modifier = {
+					name = austrian_path5
+					duration = -1
+				}
+			}
+			else_if = {
+				limit = {
 					has_country_modifier = austrian_path1
 					transylvania_area = {
 						type = all
@@ -5145,16 +5165,6 @@ WoC_austria_5 = {
 				}
 				add_country_modifier = {
 					name = austrian_path1
-					duration = -1
-				}
-			}
-			else_if = {
-				limit = {
-					has_country_modifier = austrian_path4
-				}
-				remove_country_modifier = austrian_path4
-				add_country_modifier = {
-					name = austrian_path5
 					duration = -1
 				}
 			}
