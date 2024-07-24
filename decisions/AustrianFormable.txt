@@ -217,24 +217,7 @@ country_decisions = {
 			    type = all
 			    add_permanent_claim = AUH
 			    }
-            }
-
-            if = {
-                limit = {
-                    exists = WAL
-                }
-                add_casus_belli = {
-				    type = cb_vassalize_mission
-                    months = 1000
-					target = WAL
-				}
-            }
-            else = {
-                wallachia_area = {
-			    type = all
-			    add_permanent_claim = AUH
-			    }
-            }                     
+            }                    
         }
     }
 }
