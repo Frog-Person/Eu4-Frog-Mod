@@ -229,6 +229,8 @@ free_flow_of_goods = {
     merchants = 1
     placed_merchant_power_modifier = 0.15
 }
+
+#Austrian_Empire_Modifiers
 forced_conscription = {
     manpower_recovery_speed = 0.15
 }
@@ -242,4 +244,24 @@ assume_control_of_the_swiss_guard = {
 lessons_of_the_swiss_mercenaries = {
     mercenary_cost = -0.025
     mercenary_discipline = 0.025
+}
+our_lands_returned = {
+    global_unrest = -1
+    global_autonomy = -0.025
+}
+press_the_attack = {
+    morale_damage = 0.05
+    recover_army_morale_speed = 0.10
+}
+army_with_a_state = {
+    monthly_militarized_society = 0.05
+}
+baby_boom = {
+    manpower_in_own_culture_provinces = 0.15
+}
+volkisch = {
+    global_prosperity_growth = 0.15
+}
+homogenous_community = {
+    development_cost_in_primary_culture = -0.05
 }
