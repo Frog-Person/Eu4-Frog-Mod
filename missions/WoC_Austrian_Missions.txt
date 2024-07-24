@@ -4546,59 +4546,59 @@ WoC_austria_5 = {
 							country_or_non_sovereign_subject_holds = ROOT
 						}
 					}
-					add_country_modifier = {
-						name = acceptance_path1
-						duration = -1
+				add_country_modifier = {
+					name = acceptance_path1
+					duration = -1
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_modifier = austrian_path1
+					bohemia_area = {
+						type = all
+						culture = austrian
+						country_or_non_sovereign_subject_holds = ROOT
 					}
-						}
-						else_if = {
-							limit = {
-									bohemia_area = {
-										type = all
-										culture = austrian
-										country_or_non_sovereign_subject_holds = ROOT
-									}
-									erzgebirge_area = {
-										type = all
-										culture = austrian
-										country_or_non_sovereign_subject_holds = ROOT
-									}
-									moravia_area = {
-										type = all
-										culture = austrian
-										country_or_non_sovereign_subject_holds = ROOT
-									}
-							}
-							add_country_modifier = {
-								name = austrian_path1
-								duration = -1
-							}
-						}
-						else_if = {
-							limit = { 
-								has_country_modifier = austrian_path1
-								bohemia_area = {
-									type = all
-									culture = austrian
-									country_or_non_sovereign_subject_holds = ROOT
-								}
-								erzgebirge_area = {
-									type = all
-									culture = austrian
-									country_or_non_sovereign_subject_holds = ROOT
-								}
-								moravia_area = {
-									type = all
-									culture = austrian
-									country_or_non_sovereign_subject_holds = ROOT
-								}
-							}
-							remove_country_modifier = austrian_path1
-							add_country_modifier = {
-								name = austrian_path2
-								duration = -1
-							}
-						}
+					erzgebirge_area = {
+						type = all
+						culture = austrian
+						country_or_non_sovereign_subject_holds = ROOT
+					}
+					moravia_area = {
+						type = all
+						culture = austrian
+						country_or_non_sovereign_subject_holds = ROOT
+					}
+				}
+				remove_country_modifier = austrian_path1
+				add_country_modifier = {
+					name = austrian_path2
+					duration = -1
+				}
+			}
+			else_if = {
+				limit = {
+					bohemia_area = {
+						type = all
+						culture = austrian
+						country_or_non_sovereign_subject_holds = ROOT
+					}
+					erzgebirge_area = {
+						type = all
+						culture = austrian
+						country_or_non_sovereign_subject_holds = ROOT
+					}
+					moravia_area = {
+						type = all
+						culture = austrian
+						country_or_non_sovereign_subject_holds = ROOT
+					}
+				}
+				add_country_modifier = {
+					name = austrian_path1
+					duration = -1
+				}
+			}
 		}
 	}
 
