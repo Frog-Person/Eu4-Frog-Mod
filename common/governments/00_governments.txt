@@ -491,7 +491,6 @@ monarchy = {
 
 	#States General works with few others
 	exclusive_reforms = {
-		austrian_empire_monarchy
 		mamluk_government
 		feudal_theocracy
 		states_general_reform
@@ -894,7 +893,6 @@ republic = {
 		}
 	}
 	exclusive_reforms = {
-		transdanubian_peoples_republic
 		parliamentary_reform
 		merchants_reform
 		veche_republic
