@@ -32,7 +32,6 @@ country_event = {
     
         option = {
             name = TRAN_EVENTS.2.A
-            remove_government_reform = peasant_republic
             add_government_reform = transdanubian_peoples_republic
             ai_chance = {
                 factor = 1
