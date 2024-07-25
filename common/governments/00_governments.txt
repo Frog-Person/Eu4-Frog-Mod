@@ -1592,6 +1592,9 @@ pre_dharma_mapping = {
 		government = monarchy
 		legacy_government = prussian_monarchy_legacy
 	}
+	austrian_empire_monarchy = {
+		government = monarchy
+	}
 	iqta = {
 		government = monarchy
 		legacy_government = iqta_legacy
@@ -1623,6 +1626,9 @@ pre_dharma_mapping = {
 	peasants_republic = {
 		government = republic
 		legacy_government = peasants_republic_legacy
+	}
+	transdanubian_peoples_republic = {
+		government = republic
 	}
 	veche_republic = {
 		government = republic
