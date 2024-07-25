@@ -24,6 +24,7 @@ monarchy = {
 				prussian_monarchy
 				prussian_monarchy_base
 				austrian_dual_monarchy
+				austrian_empire_monarchy
 				principality
 				tsardom
 				mamluk_government
@@ -575,6 +576,7 @@ republic = {
 	reform_levels = {
 		oligarchy_merchant_class_noble_elite = {
 			reforms = {
+				transdanubian_peoples_republic
 				oligarchy_reform
 				signoria_reform
 				merchants_reform
