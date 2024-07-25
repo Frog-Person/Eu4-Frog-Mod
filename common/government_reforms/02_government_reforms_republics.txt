@@ -4115,14 +4115,9 @@ ven_promissione_ducale_reform = {
 
 transdanubian_peoples_republic = {
 	allow_normal_conversion = no
-	icon = "peasant_republic"
+	icon = "government_for_people_reform"
 	potential = {
-		OR = {
-			has_country_flag = great_peasants_war_peasant_republic
-			have_had_reform = peasants_republic
-			have_had_reform = stateless_society
-			has_reform = peasants_republic
-		}
+		tag = TDC
 	}
 	trigger = {
 		is_not_blocked_by_estate_privilege = { estate = estate_nobles }
