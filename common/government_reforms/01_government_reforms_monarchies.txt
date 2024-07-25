@@ -2459,7 +2459,6 @@ austrian_empire_monarchy = {
 			}
 		}
 	}
-	legacy_equivalent = prussian_monarchy_legacy
 
 	modifiers = {
 		war_exhaustion = -0.01

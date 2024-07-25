@@ -9,7 +9,7 @@ AUE_ideas = {
 	}
 	
 	trigger = {
-		tag = AUH
+		tag = AUE
 	}
 	free = yes		#will be added at load.
 	
