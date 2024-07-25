@@ -1,4 +1,8 @@
 #Transdanubian_Events
+
+namespace = flavor_TRA
+
+
 country_event = {
     id = TRAN_EVENTS.1
 	title = TRAN_EVENTS.1.t
@@ -18,6 +22,7 @@ country_event = {
 	    }
     }
 }
+
 country_event = {
     id = TRAN_EVENTS.2
 	title = TRAN_EVENTS.2.t
