@@ -361,7 +361,6 @@ cultural_acceptance_and_dev = {
 			country_event = { 
 				id = TRAN_EVENTS.2
 			}
-			add_prestige = 30
 		}
 	}
 }

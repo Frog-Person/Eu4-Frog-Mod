@@ -12,7 +12,6 @@ country_event = {
     
     is_triggered_only = yes
 
-    effect = {
         option = {
             name = TRAN_EVENTS.1.A
             add_government_reform = peasants_republic
@@ -20,7 +19,6 @@ country_event = {
                 factor = 1
             }
 	    }
-    }
 }
 
 country_event = {
@@ -32,7 +30,6 @@ country_event = {
 
     is_triggered_only = yes
     
-    effect = {
         option = {
             name = TRAN_EVENTS.2.A
             add_government_reform = transdanubian_peoples_republic
@@ -40,5 +37,4 @@ country_event = {
                 factor = 1
             }
 	    }
-    }
 }
