@@ -358,7 +358,6 @@ cultural_acceptance_and_dev = {
 				statesman = 5
 		}
 		effect = {
-			remove_government_reform = peasants_republic
 			country_event = { 
 				id = TRAN_EVENTS.2
 			}
