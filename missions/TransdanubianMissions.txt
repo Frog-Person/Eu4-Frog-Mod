@@ -9,7 +9,6 @@ trade_states = {
 	bavarian_trade = {
 		icon = mission_build_up_to_force_limit
 		position = 1
-		required_missions = {  }
 		trigger = {
 			    OR = {
 			        AND = {
@@ -25,10 +24,11 @@ trade_states = {
 			                type = all
 			                country_or_non_sovereign_subject_holds = ROOT
 			            }
-			        }
+					}
 			        134 = { #Wien
 						is_strongest_trade_power = ROOT
 					}
+					BAV = { is_subject_of = TDC }
 			    }
 		}
 		effect = {
@@ -158,7 +158,6 @@ internal_development = {
 	basic_subsistance = {
 		icon = mission_build_up_to_force_limit
 		position = 1
-		required_missions = {  }
 		trigger = {
 				all_owned_province = {
 					development = 10
@@ -256,7 +255,6 @@ cultural_acceptance_and_dev = {
 	number_of_accepted_cultures = {
 		icon = mission_build_up_to_force_limit
 		position = 1
-		required_missions = {  }
 		trigger = {
 				num_accepted_cultures = 9
 		}
@@ -376,7 +374,6 @@ government_supervision = {
 	competenet_and_multicultural_court = {
 		icon = mission_build_up_to_force_limit
 		position = 1
-		required_missions = {  }
 		trigger = {
 				num_of_different_cultures_in_court = 3
 				OR = {
@@ -440,7 +437,7 @@ government_supervision = {
 		required_missions = { a_just_and_expansive_bureaucracy }
 		trigger = {
 				reform_level = 8
-				average_unrest = -2
+				unrest = -3
 				average_autonomy = 0
 			}
 		effect = {
@@ -456,7 +453,7 @@ government_supervision = {
 		position = 4
 		required_missions = { trade_on_the_adriatic united_in_common_defense a_reformed_government manufacturing_ability }
 		trigger = {
-				reform_level = 13
+				reform_level = 8
 				republican_tradition = 100
 				government_reform_progress = 150
 		}
@@ -473,10 +470,10 @@ government_supervision = {
 		position = 5
 		required_missions = { a_grand_republic }
 		trigger = {
-				current_size_of_parliament = 30
-				num_of_issues_passed = {
-					amount = 5
-				}
+			months_of_ruling = 144
+			adm = 6
+			dip = 6
+			mil = 6
 		}
 		effect = {
 			add_country_modifier = {
@@ -498,7 +495,6 @@ building_capacity = {
 	early_production_capacity = {
 		icon = mission_build_up_to_force_limit
 		position = 1
-		required_missions = {  }
 		trigger = {
 				num_of_owned_provinces_with = {
 					value = 15
@@ -590,7 +586,10 @@ building_capacity = {
 				counting_house = 50
 				town_hall = 50
 				university = 50
-				trade_depot = 50
+				OR = {
+					trade_depot = 50
+					stock_exchange = 50
+				}
 				num_of_owned_provinces_with = {
 					value = 50
 					has_manufactory_trigger = yes

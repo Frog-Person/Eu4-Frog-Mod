@@ -207,8 +207,8 @@ improved_record_keeping_and_payment_structure = {
     global_tax_modifier = 0.3
 }
 a_higher_quality_of_representative = {
-    num_of_parliament_issues = 2
-    parliament_backing_chance = 0.50
+    reelection_cost = -0.15
+    candidate_random_bonus = 1
 }
 bavarian_trade_influence = {
     trade_efficiency = 0.15

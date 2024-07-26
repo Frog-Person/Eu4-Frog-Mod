@@ -10,7 +10,8 @@ country_event = {
 	picture = GOOD_WITH_MONARCH_eventPicture
     
     is_triggered_only = yes
-
+    mission_completed = a_grand_republic
+    
     option = {
         name = TRAN_EVENTS.1.A
         add_government_reform = peasants_republic

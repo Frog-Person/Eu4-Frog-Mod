@@ -842,6 +842,7 @@ transdanubian_peoples_republic = {
 		tag = TDC
 	}
 	trigger = {
+		mission_completed = united_transdanubian_states
 		is_not_blocked_by_estate_privilege = { estate = estate_nobles }
 	}
 	modifiers = {
