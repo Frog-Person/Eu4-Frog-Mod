@@ -170,11 +170,12 @@ NDefines.NReligion.APPOINT_CARDINAL_INFLUENCE_PAPAL_STATE = 0
 
 NDefines.NGovernment.SELECT_HEIR_FROM_HAREM_AT_MONARCH_AGE = 20
 NDefines.NGovernment.GOVERNMENT_REFORM_CHANGE_PROGRESS_COST = 25
-NDefines.NGovernment.GOVERNMENT_REFORM_COST_CENTRALIZE_STATE = 20
+NDefines.NGovernment.GOVERNMENT_REFORM_COST_CENTRALIZE_STATE = 30
 NDefines.NGovernment.CENTRALIZE_STATE_YEARS = 2.5
-NDefines.NGovernment.CENTRALIZE_STATE_ADM_COST = 30
+NDefines.NGovernment.CENTRALIZE_STATE_ADM_COST = 40
 NDefines.NGovernment.EXPAND_ADMIN_COST = 400.0
 NDefines.NGovernment.LEADER_AS_MONARCH_TRADITION = 15
+NDefines.NGovernment.EXPAND_INFRASTRUCTURE_ADM_COST = 100
 
 NDefines.NGame.DAYS_BEHIND_PAUSE = 90					-- In multiplayer, if the slowest player is lagging behind this amount of days, the game will pause
 NDefines.NGame.DAYS_BEHIND_LOWER_SPEED = 999			-- In multiplayer, if the slowest player is lagging behind this amount of days, the game will slow down
