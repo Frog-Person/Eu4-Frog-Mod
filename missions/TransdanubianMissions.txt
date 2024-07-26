@@ -330,7 +330,7 @@ cultural_acceptance_and_dev = {
 		}
 	}
 
-	Landstreitkräfte_Österreich_Ungarns = {
+	Landstreitkrafte_Osterreich_Ungarns = {
 		icon = mission_build_up_to_force_limit
 		position = 5
 		required_missions = { a_strong_standing_army quartering_troops }

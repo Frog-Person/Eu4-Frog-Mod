@@ -2,7 +2,6 @@
 
 namespace = flavor_TRA
 
-
 country_event = {
     id = TRAN_EVENTS.1
 	title = TRAN_EVENTS.1.t
@@ -12,13 +11,13 @@ country_event = {
     
     is_triggered_only = yes
 
-        option = {
-            name = TRAN_EVENTS.1.A
-            add_government_reform = peasants_republic
-            ai_chance = {
-                factor = 1
-            }
-	    }
+    option = {
+        name = TRAN_EVENTS.1.A
+        add_government_reform = peasants_republic
+        ai_chance = {
+        factor = 1
+        }
+	}
 }
 
 country_event = {
