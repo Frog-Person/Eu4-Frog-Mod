@@ -1,22 +1,21 @@
 #Transdanubian_Events
 
-namespace = flavor_TRA
+namespace = TRAN_EVENTS
 
 country_event = {
     id = TRAN_EVENTS.1
 	title = TRAN_EVENTS.1.t
 	desc = TRAN_EVENTS.1.d
-
 	picture = GOOD_WITH_MONARCH_eventPicture
 
     is_triggered_only = yes
-    has_country_flag = transdanubian_peasants_republic_set
 
     option = {
         name = TRAN_EVENTS.1.A
+
         add_government_reform = peasants_republic
         ai_chance = {
-        factor = 1
+            factor = 1
         }
 	}
 }
