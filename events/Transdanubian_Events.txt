@@ -8,9 +8,11 @@ country_event = {
 	desc = TRAN_EVENTS.1.d
 
 	picture = GOOD_WITH_MONARCH_eventPicture
-    
-    is_triggered_only = yes
-    mission_completed = a_grand_republic
+    trigger = {
+        mission_completed = a_grand_republic
+        tag = TDC
+    }
+
     
     option = {
         name = TRAN_EVENTS.1.A
