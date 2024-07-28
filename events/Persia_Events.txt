@@ -107,7 +107,8 @@ country_event = {
 	picture = GOOD_WITH_MONARCH_eventPicture
 
 	is_triggered_only = yes
-
+	tag = PER
+	
 	option = {
 		name = PER_choose_religion.OPT1
 
