@@ -8,6 +8,9 @@ country_event = {
 	desc = TRAN_EVENTS.1.d
 
 	picture = GOOD_WITH_MONARCH_eventPicture
+
+    is_triggered_only = yes
+    
     trigger = {
         mission_completed = a_grand_republic
         tag = TDC
