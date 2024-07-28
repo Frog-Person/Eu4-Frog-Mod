@@ -10,11 +10,8 @@ country_event = {
 	picture = GOOD_WITH_MONARCH_eventPicture
 
     is_triggered_only = yes
-    limit = {
-        tag = TDC
-    }
+    has_country_flag = transdanubian_peasants_republic_set
 
-    
     option = {
         name = TRAN_EVENTS.1.A
         add_government_reform = peasants_republic
