@@ -347,14 +347,14 @@ territory_non_core = {
 }
 
 march_bonus = {
-	global_manpower_modifier = 0.25
-	land_forcelimit_modifier = 0.30
-	naval_forcelimit_modifier = 0.30
-	defensiveness = 0.2
-	fort_maintenance_modifier = -0.20
-	manpower_recovery_speed = 0.20
-	land_maintenance_modifier = -0.20
-	naval_maintenance_modifier = -0.20
+	global_manpower_modifier = 0.40
+	land_forcelimit_modifier = 0.40
+	naval_forcelimit_modifier = 0.40
+	defensiveness = 0.30
+	fort_maintenance_modifier = -0.40
+	manpower_recovery_speed = 0.40
+	land_maintenance_modifier = -0.40
+	naval_maintenance_modifier = -0.40
 }
 
 pu_subject_bonus = {
@@ -776,20 +776,20 @@ call_for_peace = {
 }
 
 war_exhaustion = {
-	global_unrest = 1
+	global_unrest = 1.5
 	global_regiment_recruit_speed = 0.02
 	global_ship_recruit_speed = 0.02
 	#core_creation = 0.03
 	temples_influence = -0.05
 	mr_aristocrats_influence = -0.05
 	rr_girondists_influence = -0.05
-	rr_royalists_influence = 0.05
+	rr_royalists_influence = 0.05	
 	manpower_recovery_speed = -0.01
 	sailors_recovery_speed = -0.01
-	siege_ability = -0.01
+	siege_ability = -0.005
 	global_trade_goods_size_modifier = -0.02
 	monthly_militarized_society = -0.05
-	defensiveness = -0.0125
+	defensiveness = -0.04
 }
 
 doom = {
