@@ -2484,6 +2484,7 @@ ramparts = {
 		local_hostile_attrition = 1
 		local_defensiveness = 0.15
 		local_defender_dice_roll_bonus = 1
+		local_garrison_damage = 0.15
 	}
 	build_trigger = {
 		NOT = {
