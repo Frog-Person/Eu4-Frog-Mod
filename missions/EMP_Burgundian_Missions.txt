@@ -1684,6 +1684,7 @@ mod_emp_lotharingia_3 = {
 			}
 		} 
 	}
+
 	NED_baltic_supremacy = {
 		icon = mission_rb_control_the_hansa
 		position = 5
@@ -1742,6 +1743,7 @@ mod_emp_lotharingia_3 = {
 			}
 		} 
 	}
+
 	NED_end_sound_toll = {
 		icon = mission_end_the_sound_toll
 		position = 5
@@ -1817,6 +1819,7 @@ mod_emp_lotharingia_3 = {
 			}
 		} 
 	}
+
 	fra_chateux_loire_valley = { 
 		icon = develop_the_po_valley
 		required_missions = { emp_bur_league_of_public_weal }
