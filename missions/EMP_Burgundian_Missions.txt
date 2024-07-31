@@ -1161,6 +1161,322 @@ mod_emp_lotharingia_2 = {
 			}
 		} 
 	}
+
+	fra_liberate_norm = {
+		icon = the_hundred_years_war
+		position = 8
+		required_missions = { emp_bur_league_of_public_weal	} 
+		provinces_to_highlight = { 
+			area = normandy_area 
+			NOT = { country_or_non_sovereign_subject_holds = ROOT } 
+		}
+		trigger = { 
+			normandy_area = { 
+				type = all 
+				country_or_non_sovereign_subject_holds = ROOT 
+			}
+		}
+		effect = {
+			if = { 
+				limit = { has_dlc = "Emperor" }
+				country_event = { id = flavor_fra.100 } 
+			}
+			else = { 
+				add_mil_power = 50 
+				change_estate_land_share = {
+					estate = all
+					share = -5
+				}
+			} 
+			brittany_area = { 
+				limit = { 	
+					NOT = { is_core = ROOT } 
+					NOT = { country_or_non_sovereign_subject_holds = ROOT }
+					NOT = { owned_by = ROOT } 
+				}
+				add_permanent_claim = ROOT 
+			}
+			bourgogne_area = {
+				limit = { 	
+					NOT = { is_core = ROOT } 
+					NOT = { country_or_non_sovereign_subject_holds = ROOT }
+					NOT = { owned_by = ROOT } 
+				}
+				add_permanent_claim = ROOT 
+			}
+		}
+	}
+
+	fra_burg_succession = { 
+		icon = fra_burg_succession
+		required_missions = { fra_liberate_norm } 
+		position = 9
+		provinces_to_highlight = { 
+			OR = { 
+				area = west_burgundy_area 
+				province_id = 88
+				province_id = 89
+				province_id = 1743
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT } 
+		}
+		trigger = { 
+			OR = { 
+				AND = { 
+					picardy_area = {
+						type = all 
+						OR = { 
+							province_id = 87 
+							country_or_non_sovereign_subject_holds = ROOT 
+						}
+					}
+					west_burgundy_area = { 
+						type = all 
+						country_or_non_sovereign_subject_holds = ROOT 
+					}
+				}
+				BUR = {
+					OR = { 
+						is_subject_of = ROOT 
+						alliance_with = ROOT 
+					}
+					AND = {
+						if = { 
+							limit = { is_subject_of = ROOT }
+							has_opinion = {
+								who = ROOT 
+								value = 125
+							}
+						}
+						else = {
+							has_opinion = {
+								who = ROOT 
+								value = 180
+							}
+						}
+						if = {
+							limit = { has_dlc = "Leviathan" }
+							trust = { who = FRA value = 75 }
+						}
+						else = { monthly_dip = 8 }
+						if = { 
+							limit = { is_subject_of = ROOT }
+							NOT = { liberty_desire = 10 }
+						}
+					}
+				}
+			}
+		}
+		effect = {
+			if = { 
+				limit = { 
+					has_dlc = "Emperor" 
+					BUR = { ai = yes }
+				} 
+				custom_tooltip = fra_if_bur_subject_and_emperor_dlc_tt
+				custom_tooltip = fra_alternatively_10_dev_spread_and_tt 
+				tooltip = { 
+					add_country_modifier = { 
+						name = fra_reintegration_of_burgundian_lands_modifier
+						duration = 7300
+					}
+				}
+				custom_tooltip = fra_complete_via_opinion_alliance_and_trust_tt
+			}
+			else = { 
+				custom_tooltip = fra_alternatively_10_dev_spread_and2_tt 
+				tooltip = { 
+					add_country_modifier = { 
+						name = fra_reintegration_of_burgundian_lands_modifier
+						duration = 7300
+					}
+				}
+			}
+			hidden_effect = {
+				if = { 
+					limit = { 
+						OR = {  
+							NOT = { has_dlc = "Emperor" } 
+							AND = { 
+								picardy_area = {
+									type = all 
+									OR = { 
+										province_id = 87 
+										country_or_non_sovereign_subject_holds = ROOT 
+									}
+								}
+								west_burgundy_area = { 
+									type = all 
+									country_or_non_sovereign_subject_holds = ROOT 
+								}
+							}
+						}
+					}
+					add_country_modifier = { 
+						name = fra_reintegration_of_burgundian_lands_modifier
+						duration = 7300
+					}
+					random_owned_province = { 
+						limit = { 
+							OR = { 
+								area = west_burgundy_area 
+								area = picardy_area 
+								area = bourgogne_area 
+								area = lorraine_area 
+							}
+						}
+						random_list = {
+							40 = { add_base_tax = 1 } 
+							30 = { add_base_production = 1 } 
+							30 = { add_base_manpower = 1 } 
+						}
+					}
+					random_owned_province = { 
+						limit = { 
+							OR = { 
+								area = west_burgundy_area 
+								area = picardy_area 
+								area = bourgogne_area 
+								area = lorraine_area 
+							}
+						}
+						random_list = {
+							40 = { add_base_tax = 1 } 
+							30 = { add_base_production = 1 } 
+							30 = { add_base_manpower = 1 } 
+						}
+					}
+					random_owned_province = { 
+						limit = { 
+							OR = { 
+								area = west_burgundy_area 
+								area = picardy_area 
+								area = bourgogne_area 
+								area = lorraine_area 
+							}
+						}
+						random_list = {
+							40 = { add_base_tax = 1 } 
+							30 = { add_base_production = 1 } 
+							30 = { add_base_manpower = 1 } 
+						}
+					}
+					random_owned_province = { 
+						limit = { 
+							OR = { 
+								area = west_burgundy_area 
+								area = picardy_area 
+								area = bourgogne_area 
+								area = lorraine_area 
+							}
+						}
+						random_list = {
+							40 = { add_base_tax = 1 } 
+							30 = { add_base_production = 1 } 
+							30 = { add_base_manpower = 1 } 
+						}
+					}
+					random_owned_province = { 
+						limit = { 
+							OR = { 
+								area = west_burgundy_area 
+								area = picardy_area 
+								area = bourgogne_area 
+								area = lorraine_area 
+							}
+						}
+						random_list = {
+							40 = { add_base_tax = 1 } 
+							30 = { add_base_production = 1 } 
+							30 = { add_base_manpower = 1 } 
+						}
+					}
+					random_owned_province = { 
+						limit = { 
+							OR = { 
+								area = west_burgundy_area 
+								area = picardy_area 
+								area = bourgogne_area 
+								area = lorraine_area 
+							}
+						}
+						random_list = {
+							40 = { add_base_tax = 1 } 
+							30 = { add_base_production = 1 } 
+							30 = { add_base_manpower = 1 } 
+						}
+					}
+					random_owned_province = { 
+						limit = { 
+							OR = { 
+								area = west_burgundy_area 
+								area = picardy_area 
+								area = bourgogne_area 
+								area = lorraine_area 
+							}
+						}
+						random_list = {
+							40 = { add_base_tax = 1 } 
+							30 = { add_base_production = 1 } 
+							30 = { add_base_manpower = 1 } 
+						}
+					}
+					random_owned_province = { 
+						limit = { 
+							OR = { 
+								area = west_burgundy_area 
+								area = picardy_area 
+								area = bourgogne_area 
+								area = lorraine_area 
+							}
+						}
+						random_list = {
+							40 = { add_base_tax = 1 } 
+							30 = { add_base_production = 1 } 
+							30 = { add_base_manpower = 1 } 
+						}
+					}
+					random_owned_province = { 
+						limit = { 
+							OR = { 
+								area = west_burgundy_area 
+								area = picardy_area 
+								area = bourgogne_area 
+								area = lorraine_area 
+							}
+						}
+						random_list = {
+							40 = { add_base_tax = 1 } 
+							30 = { add_base_production = 1 } 
+							30 = { add_base_manpower = 1 } 
+						}
+					}
+					random_owned_province = { 
+						limit = { 
+							OR = { 
+								area = west_burgundy_area 
+								area = picardy_area 
+								area = bourgogne_area 
+								area = lorraine_area 
+							}
+						}
+						random_list = {
+							40 = { add_base_tax = 1 } 
+							30 = { add_base_production = 1 } 
+							30 = { add_base_manpower = 1 } 
+						}
+					}
+				}
+				else_if = { 
+					limit = { 
+						BUR = { alliance_with = ROOT }
+						has_dlc = "Emperor" 
+					}
+					BUR = { set_country_flag = fra_guaranteed_succession_flag } 
+				}
+			}
+		}
+	}
 }
 
 mod_emp_burgundy_3 = {
@@ -1240,7 +1556,7 @@ mod_emp_lotharingia_3 = {
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		} 
 
-		trigger = {  
+		trigger = {
 			OR = {
 				45 = {
 					country_or_non_sovereign_subject_holds = ROOT
@@ -1319,7 +1635,7 @@ mod_emp_lotharingia_3 = {
 					}
 				"
 			}
-		} 
+		}
 	}
 
 	NED_sail_towards_lubeck = {
@@ -1500,6 +1816,62 @@ mod_emp_lotharingia_3 = {
 				"
 			}
 		} 
+	}
+	fra_chateux_loire_valley = { 
+		icon = develop_the_po_valley
+		required_missions = { emp_bur_league_of_public_weal }
+		position = 8
+		provinces_to_highlight = { 
+			OR = {
+				province_id = 178 
+				province_id = 4389 
+				province_id = 4776 
+				province_id = 184
+			}
+			OR = {
+				NOT = { country_or_non_sovereign_subject_holds = ROOT } 
+				NOT = { num_of_times_improved = 3 } 
+			}
+		}
+		trigger = { 
+			loire_area = { 
+				type = all 
+				country_or_non_sovereign_subject_holds = ROOT 
+			}
+			if = {
+				limit = { ai = no }
+				OR = { 
+					4389 = { num_of_times_improved = 3 } 
+					4776 = { num_of_times_improved = 3 }
+					184 = { num_of_times_improved = 3 }  
+					178 = { num_of_times_improved = 3 } 
+				}
+			}
+		}
+		effect = { 
+			country_event = { id = flavor_fra.103 }
+		}
+	}
+	
+	fra_armorican_peninsula = { 
+		icon = dalmatian_conquest 
+		required_missions = { fra_chateux_loire_valley fra_liberate_norm }
+		position = 9
+		provinces_to_highlight = { 
+			area = brittany_area 
+			NOT = { country_or_non_sovereign_subject_holds = ROOT } 
+		}
+		trigger = { 
+			brittany_area = {
+				type = all 
+				country_or_non_sovereign_subject_holds = ROOT 
+				NOT = { devastation = 1 } 
+			}
+			169 = { num_of_times_improved = 4 } 
+		}
+		effect = { 
+			country_event = { id = flavor_fra.104 }
+		}
 	}
 }
 
@@ -2009,6 +2381,104 @@ mod_emp_lotharingia_4_bav = {
 				name = bur_german_empire
 				duration = -1
 			}
+		}
+	}
+	fra_retake_aquitaine = { 
+		icon = mission_rb_invade_england
+		required_missions = { emp_bur_league_of_public_weal } 
+		position = 8
+		provinces_to_highlight = { 
+			OR = { 
+				province_id = 174
+				province_id = 173 
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT } 
+		}
+		trigger = { 
+			174 = { 
+				OR = { 
+					country_or_non_sovereign_subject_holds = ROOT 
+					controlled_by = ROOT 
+				}
+			}
+			173 = { 
+				OR = { 
+					country_or_non_sovereign_subject_holds = ROOT 
+					controlled_by = ROOT 
+				}
+			}
+		}
+		effect = { 
+			custom_tooltip = fra_if_completed_via_control_tt
+			custom_tooltip = fra_alternatively_lose_10_devastation_and_gain_tt
+			tooltip = { 
+				add_country_modifier = {
+					name = fra_victory_against_the_english_modifier
+					duration = 5475
+				}
+			}
+			hidden_effect = { 
+				if = { 
+					limit = {
+						is_at_war = yes 
+						174 = { 
+							NOT = { country_or_non_sovereign_subject_holds = ROOT }
+							controlled_by = ROOT 
+						}
+						173 = { 
+							NOT = { country_or_non_sovereign_subject_holds = ROOT }
+							controlled_by = ROOT 
+						}
+					}
+					174 = { 
+						add_province_modifier = {
+							name = fra_unification_movement_modifier 
+							duration = -1 
+							desc = until_we_peace_desc
+						}
+					}
+					173 = { 
+						add_province_modifier = {
+							name = fra_unification_movement_modifier 
+							duration = -1 
+							desc = until_we_peace_desc
+						}
+					}
+				}
+				else = { 
+					add_country_modifier = {
+						name = fra_victory_against_the_english_modifier
+						duration = 5475
+					}
+					173 = { add_devastation = -10 } 
+					174 = { add_devastation = -10 }
+				}
+			}
+		}
+	}
+	
+	fra_unite_france = {
+		icon = king_of_france
+		required_missions = { fra_retake_aquitaine fra_armorican_peninsula }
+		position = 10
+		provinces_to_highlight = { 
+			region = france_region 
+			NOT = { country_or_non_sovereign_subject_holds = ROOT } 
+		}
+		trigger = { 
+			num_of_provinces_owned_or_owned_by_subjects_with = { 
+				region = france_region 
+				value = 50 
+			}
+		}
+		effect = { 
+			add_power_projection = {
+				type = fra_crown_of_france
+				amount = 10
+			}
+			custom_tooltip = zim_amongst_the_great_powers_tt
+			
+			add_prestige_or_monarch_power = { amount = 25 }
 		}
 	}
 }
@@ -2645,337 +3115,6 @@ mod_emp_lotharingia_5 = {
 			add_country_modifier = {
 				name = bur_carolingia
 				duration = -1
-			}
-		}
-	}
-}
-
-mod_emp_lotharingia_french_expansion1 = {
-	slot = 2
-	generic = no
-	ai = yes
-	potential_on_load = {
-		has_dlc = "Emperor"
-	}
-	potential = {
-		tag = LOT
-		NOT = { map_setup = map_setup_random }
-		has_dlc = "Emperor"
-	}
-	has_country_shield = yes
-
-	fra_liberate_norm = {
-		icon = the_hundred_years_war
-		position = 8
-		required_missions = { emp_bur_league_of_public_weal	} 
-		position = 1 
-		provinces_to_highlight = { 
-			area = normandy_area 
-			NOT = { country_or_non_sovereign_subject_holds = ROOT } 
-		}
-		trigger = { 
-			normandy_area = { 
-				type = all 
-				country_or_non_sovereign_subject_holds = ROOT 
-			}
-		}
-		effect = {
-			if = { 
-				limit = { has_dlc = "Emperor" }
-				country_event = { id = flavor_fra.100 } 
-			}
-			else = { 
-				add_mil_power = 50 
-				change_estate_land_share = {
-					estate = all
-					share = -5
-				}
-			} 
-			brittany_area = { 
-				limit = { 	
-					NOT = { is_core = ROOT } 
-					NOT = { country_or_non_sovereign_subject_holds = ROOT }
-					NOT = { owned_by = ROOT } 
-				}
-				add_permanent_claim = ROOT 
-			}
-			bourgogne_area = {
-				limit = { 	
-					NOT = { is_core = ROOT } 
-					NOT = { country_or_non_sovereign_subject_holds = ROOT }
-					NOT = { owned_by = ROOT } 
-				}
-				add_permanent_claim = ROOT 
-			}
-		}
-	}
-fra_burg_succession = { 
-		icon = fra_burg_succession
-		required_missions = { fra_liberate_norm } 
-		position = 9
-		provinces_to_highlight = { 
-			OR = { 
-				area = west_burgundy_area 
-				province_id = 88
-				province_id = 89
-				province_id = 1743
-			}
-			NOT = { country_or_non_sovereign_subject_holds = ROOT } 
-		}
-		trigger = { 
-			OR = { 
-				AND = { 
-					picardy_area = {
-						type = all 
-						OR = { 
-							province_id = 87 
-							country_or_non_sovereign_subject_holds = ROOT 
-						}
-					}
-					west_burgundy_area = { 
-						type = all 
-						country_or_non_sovereign_subject_holds = ROOT 
-					}
-				}
-				BUR = {
-					OR = { 
-						is_subject_of = ROOT 
-						alliance_with = ROOT 
-					}
-					AND = {
-						if = { 
-							limit = { is_subject_of = ROOT }
-							has_opinion = {
-								who = ROOT 
-								value = 125
-							}
-						}
-						else = {
-							has_opinion = {
-								who = ROOT 
-								value = 180
-							}
-						}
-						if = {
-							limit = { has_dlc = "Leviathan" }
-							trust = { who = FRA value = 75 }
-						}
-						else = { monthly_dip = 8 }
-						if = { 
-							limit = { is_subject_of = ROOT }
-							NOT = { liberty_desire = 10 }
-						}
-					}
-				}
-			}
-		}
-		effect = {
-			if = { 
-				limit = { 
-					has_dlc = "Emperor" 
-					BUR = { ai = yes }
-				} 
-				custom_tooltip = fra_if_bur_subject_and_emperor_dlc_tt
-				custom_tooltip = fra_alternatively_10_dev_spread_and_tt 
-				tooltip = { 
-					add_country_modifier = { 
-						name = fra_reintegration_of_burgundian_lands_modifier
-						duration = 7300
-					}
-				}
-				custom_tooltip = fra_complete_via_opinion_alliance_and_trust_tt
-			}
-			else = { 
-				custom_tooltip = fra_alternatively_10_dev_spread_and2_tt 
-				tooltip = { 
-					add_country_modifier = { 
-						name = fra_reintegration_of_burgundian_lands_modifier
-						duration = 7300
-					}
-				}
-			}
-			hidden_effect = {
-				if = { 
-					limit = { 
-						OR = {  
-							NOT = { has_dlc = "Emperor" } 
-							AND = { 
-								picardy_area = {
-									type = all 
-									OR = { 
-										province_id = 87 
-										country_or_non_sovereign_subject_holds = ROOT 
-									}
-								}
-								west_burgundy_area = { 
-									type = all 
-									country_or_non_sovereign_subject_holds = ROOT 
-								}
-							}
-						}
-					}
-					add_country_modifier = { 
-						name = fra_reintegration_of_burgundian_lands_modifier
-						duration = 7300
-					}
-					random_owned_province = { 
-						limit = { 
-							OR = { 
-								area = west_burgundy_area 
-								area = picardy_area 
-								area = bourgogne_area 
-								area = lorraine_area 
-							}
-						}
-						random_list = {
-							40 = { add_base_tax = 1 } 
-							30 = { add_base_production = 1 } 
-							30 = { add_base_manpower = 1 } 
-						}
-					}
-					random_owned_province = { 
-						limit = { 
-							OR = { 
-								area = west_burgundy_area 
-								area = picardy_area 
-								area = bourgogne_area 
-								area = lorraine_area 
-							}
-						}
-						random_list = {
-							40 = { add_base_tax = 1 } 
-							30 = { add_base_production = 1 } 
-							30 = { add_base_manpower = 1 } 
-						}
-					}
-					random_owned_province = { 
-						limit = { 
-							OR = { 
-								area = west_burgundy_area 
-								area = picardy_area 
-								area = bourgogne_area 
-								area = lorraine_area 
-							}
-						}
-						random_list = {
-							40 = { add_base_tax = 1 } 
-							30 = { add_base_production = 1 } 
-							30 = { add_base_manpower = 1 } 
-						}
-					}
-					random_owned_province = { 
-						limit = { 
-							OR = { 
-								area = west_burgundy_area 
-								area = picardy_area 
-								area = bourgogne_area 
-								area = lorraine_area 
-							}
-						}
-						random_list = {
-							40 = { add_base_tax = 1 } 
-							30 = { add_base_production = 1 } 
-							30 = { add_base_manpower = 1 } 
-						}
-					}
-					random_owned_province = { 
-						limit = { 
-							OR = { 
-								area = west_burgundy_area 
-								area = picardy_area 
-								area = bourgogne_area 
-								area = lorraine_area 
-							}
-						}
-						random_list = {
-							40 = { add_base_tax = 1 } 
-							30 = { add_base_production = 1 } 
-							30 = { add_base_manpower = 1 } 
-						}
-					}
-					random_owned_province = { 
-						limit = { 
-							OR = { 
-								area = west_burgundy_area 
-								area = picardy_area 
-								area = bourgogne_area 
-								area = lorraine_area 
-							}
-						}
-						random_list = {
-							40 = { add_base_tax = 1 } 
-							30 = { add_base_production = 1 } 
-							30 = { add_base_manpower = 1 } 
-						}
-					}
-					random_owned_province = { 
-						limit = { 
-							OR = { 
-								area = west_burgundy_area 
-								area = picardy_area 
-								area = bourgogne_area 
-								area = lorraine_area 
-							}
-						}
-						random_list = {
-							40 = { add_base_tax = 1 } 
-							30 = { add_base_production = 1 } 
-							30 = { add_base_manpower = 1 } 
-						}
-					}
-					random_owned_province = { 
-						limit = { 
-							OR = { 
-								area = west_burgundy_area 
-								area = picardy_area 
-								area = bourgogne_area 
-								area = lorraine_area 
-							}
-						}
-						random_list = {
-							40 = { add_base_tax = 1 } 
-							30 = { add_base_production = 1 } 
-							30 = { add_base_manpower = 1 } 
-						}
-					}
-					random_owned_province = { 
-						limit = { 
-							OR = { 
-								area = west_burgundy_area 
-								area = picardy_area 
-								area = bourgogne_area 
-								area = lorraine_area 
-							}
-						}
-						random_list = {
-							40 = { add_base_tax = 1 } 
-							30 = { add_base_production = 1 } 
-							30 = { add_base_manpower = 1 } 
-						}
-					}
-					random_owned_province = { 
-						limit = { 
-							OR = { 
-								area = west_burgundy_area 
-								area = picardy_area 
-								area = bourgogne_area 
-								area = lorraine_area 
-							}
-						}
-						random_list = {
-							40 = { add_base_tax = 1 } 
-							30 = { add_base_production = 1 } 
-							30 = { add_base_manpower = 1 } 
-						}
-					}
-				}
-				else_if = { 
-					limit = { 
-						BUR = { alliance_with = ROOT }
-						has_dlc = "Emperor" 
-					}
-					BUR = { set_country_flag = fra_guaranteed_succession_flag } 
-				}
 			}
 		}
 	}
