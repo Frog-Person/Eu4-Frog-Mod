@@ -220,6 +220,7 @@ push_west = {
 			add_prestige = 30
 		}
 	}
+
 	reclaim_our_contested_lands = {
 		icon = mission_build_up_to_force_limit
 		position = 5
@@ -237,6 +238,7 @@ push_west = {
 			}
 		 }
 	}
+
 	humiliate_the_franks = {
 		icon = mission_build_up_to_force_limit
 		position = 6
@@ -294,6 +296,7 @@ push_north = {
 			}
 		}
 	}
+
 	king_of_the_francs = {
 		icon = mission_build_up_to_force_limit
 		position = 2
@@ -310,9 +313,10 @@ push_north = {
 		}
 		effect = { 
 			give_claims = { area = palatinate_area }
-			add_prestige_or_monarch_power = 15
+			add_prestige = 20
 		}
 	}
+
 	rule_the_palatinate = {
 		icon = mission_build_up_to_force_limit
 		position = 3
@@ -329,6 +333,7 @@ push_north = {
 			give_claims = { area = lower_rhineland_area }
 		}
 	}
+
 	crossing_the_rhine = {
 		icon = mission_build_up_to_force_limit
 		position = 4
@@ -356,6 +361,7 @@ push_north = {
 			}
 		}
 	}
+
 	remove_the_archbishopric = {
 		icon = mission_build_up_to_force_limit
 		position = 5
@@ -371,13 +377,14 @@ push_north = {
 			}
 		}
 		effect = { 
-			add_prestige_or_monarch_power = 20
+			add_prestige_ = 20
 			add_country_modifier = {
 				name = "german_inquisition"
 				duration = 5475
 			}
 		}
 	}
+
 	one_true_faith = {
 		icon = mission_build_up_to_force_limit
 		position = 6
@@ -385,52 +392,6 @@ push_north = {
 		trigger = {
 			religious_unity = 1
 			dominant_religion = catholic
-			AND = {
-				num_of_religion = {
-					religion = animism
-					value = 0
-				}
-				num_of_religion = {
-					religion = anglican
-					value = 0
-				}
-				num_of_religion = {
-					religion = hussite
-					value = 0
-				}
-				num_of_religion = {
-					religion = protestant
-					value = 0
-				}
-				num_of_religion = {
-					religion = preformed
-					value = 0
-				}
-				num_of_religion = {
-					religion = orthodox
-					value = 0
-				}
-				num_of_religion = {
-					religion = coptic
-					value = 0
-				}
-				num_of_religion = {
-					religion = sunni
-					value = 0
-				}
-				num_of_religion = {
-					religion = shiite
-					value = 0
-				}
-				num_of_religion = {
-					religion = ibadi
-					value = 0
-				}
-				num_of_religion = {
-					religion = jewish
-					value = 0
-				}
-			}
 		}
 		effect = { 
 			add_country_modifier = {
@@ -465,6 +426,7 @@ push_prussia = {
 			}
 		}
 	}
+
 	lands_of_saxony = {
 		icon = mission_build_up_to_force_limit
 		position = 2
@@ -484,6 +446,7 @@ push_prussia = {
 			give_claims = { area = braunschweig_area }
 		}
 	}
+
 	flank_the_capitol = {
 		icon = mission_build_up_to_force_limit
 		position = 3
@@ -509,6 +472,7 @@ push_prussia = {
 			}
 		}
 	}
+
 	push_in_to_the_coast = {
 		icon = mission_build_up_to_force_limit
 		position = 4
@@ -540,6 +504,7 @@ push_prussia = {
 			give_claims = { area = west_prussia_area }
 		}
 	}
+
 	the_prussian_threat = {
 		icon = mission_build_up_to_force_limit
 		position = 5
@@ -578,6 +543,7 @@ push_prussia = {
 			}
 		}
 	}
+
 	a_new_capital = {
 		icon = mission_build_up_to_force_limit
 		position = 6
@@ -648,6 +614,7 @@ austrian_empire_government = {
 			}
 		}
 	}
+
 	an_absolute_state = {
 		icon = mission_build_up_to_force_limit
 		position = 2
@@ -663,6 +630,7 @@ austrian_empire_government = {
 			}
 		}
 	}
+
 	a_reformed_and_mighty_state = {
 		icon = mission_build_up_to_force_limit
 		position = 3
@@ -673,19 +641,20 @@ austrian_empire_government = {
 			stability = 3
 		}
 		effect = { 
-			add_prestige_or_monarch_power = 15
+			add_prestige = 15
 			add_country_modifier = {
 				name = "greater_efficiency"
 				duration = -1
 			}
 		}
 	}
+
 	austrian_military_with_a_state = {
 		icon = mission_build_up_to_force_limit
 		position = 4
 		required_missions = { a_reformed_and_mighty_state a_prosperous_and_wealthy_land }
 		trigger = { 
-			militarized_society = 100
+			militarised_society = 100
 		}
 		effect = { 
 			add_country_modifier = {
@@ -694,6 +663,7 @@ austrian_empire_government = {
 			}
 		}
 	}
+
 	our_military_might = {
 		icon = mission_build_up_to_force_limit
 		position = 5
@@ -713,6 +683,7 @@ austrian_empire_government = {
 			}
 		}
 	}
+
 	habsburg_over_hohenzolleren = {
 		icon = mission_build_up_to_force_limit
 		position = 6
@@ -721,7 +692,7 @@ austrian_empire_government = {
 			NOT = { exists = PRU }
 		}
 		effect = { 
-			add_prestige_or_monarch_power = 10
+			add_prestige = 10
 			add_country_modifier = {
 				name = "prussian_royal_teachers"
 				duration = -1
@@ -754,6 +725,7 @@ cultural_dominance = {
 			}
 		}
 	}
+
 	the_chosen_people = {
 		icon = mission_build_up_to_force_limit
 		position = 2
@@ -771,6 +743,7 @@ cultural_dominance = {
 			}
 		}
 	}
+
 	a_prosperous_and_wealthy_land = {
 		icon = mission_build_up_to_force_limit
 		position = 3
@@ -787,6 +760,7 @@ cultural_dominance = {
 			}
 		}
 	}
+
 	wealthier_than_the_channel = {
 		icon = mission_build_up_to_force_limit
 		position = 4
@@ -805,6 +779,7 @@ cultural_dominance = {
 			}
 		}
 	}
+
 	made_by_austrians_for_austrians = {
 		icon = mission_build_up_to_force_limit
 		position = 5
@@ -821,6 +796,7 @@ cultural_dominance = {
 			}
 		}
 	}
+
 	a_austrian_germany = {
 		icon = mission_build_up_to_force_limit
 		position = 6
