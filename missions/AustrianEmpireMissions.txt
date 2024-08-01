@@ -241,8 +241,22 @@ push_west = {
 		icon = mission_build_up_to_force_limit
 		position = 6
 		required_missions = { taking_the_rhineland reclaim_our_contested_lands the_prussian_threat }
-		trigger = { }
-		effect = { }
+		trigger = {
+			owns_core_province = 183
+			134 = {
+				higher_development_than = 183
+			}
+			has_won_war_against = {
+				who = FRA
+				max_years_since = 10
+			}
+		}
+		effect = { 
+			add_country_modifier = {
+				name = "paris_is_only_a_shadow"
+				duration = -1
+			}
+		}
 	}
 }
 
@@ -296,6 +310,7 @@ push_north = {
 		}
 		effect = { 
 			give_claims = { area = palatinate_area }
+			add_prestige_or_monarch_power = 15
 		}
 	}
 	rule_the_palatinate = {
@@ -335,6 +350,10 @@ push_north = {
 		effect = { 
 			give_claims = { area = westphalia_area }
 			give_claims = { area = north_westphalia_area }
+			add_country_modifier = {
+				name = "doorstep_of_the_religious_rival"
+				duration = 3650
+			}
 		}
 	}
 	remove_the_archbishopric = {
@@ -352,15 +371,73 @@ push_north = {
 			}
 		}
 		effect = { 
-			add_prestige = 50
+			add_prestige_or_monarch_power = 20
+			add_country_modifier = {
+				name = "german_inquisition"
+				duration = 5475
+			}
 		}
 	}
 	one_true_faith = {
 		icon = mission_build_up_to_force_limit
 		position = 6
 		required_missions = { remove_the_archbishopric }
-		trigger = { }
-		effect = { }
+		trigger = {
+			religious_unity = 1
+			dominant_religion = catholic
+			AND = {
+				num_of_religion = {
+					religion = animism
+					value = 0
+				}
+				num_of_religion = {
+					religion = anglican
+					value = 0
+				}
+				num_of_religion = {
+					religion = hussite
+					value = 0
+				}
+				num_of_religion = {
+					religion = protestant
+					value = 0
+				}
+				num_of_religion = {
+					religion = preformed
+					value = 0
+				}
+				num_of_religion = {
+					religion = orthodox
+					value = 0
+				}
+				num_of_religion = {
+					religion = coptic
+					value = 0
+				}
+				num_of_religion = {
+					religion = sunni
+					value = 0
+				}
+				num_of_religion = {
+					religion = shiite
+					value = 0
+				}
+				num_of_religion = {
+					religion = ibadi
+					value = 0
+				}
+				num_of_religion = {
+					religion = jewish
+					value = 0
+				}
+			}
+		}
+		effect = { 
+			add_country_modifier = {
+				name = "unified_german_religion"
+				duration = -1
+			}
+		}
 	}
 }
 
@@ -426,6 +503,10 @@ push_prussia = {
 			give_claims = { area = weser_area }
 			give_claims = { area = holstein_area }
 			give_claims = { area = mecklenburg_area }
+			add_country_modifier = {
+				name = "doorstep_of_the_military_rival"
+				duration = 3650
+			}
 		}
 	}
 	push_in_to_the_coast = {
@@ -490,15 +571,33 @@ push_prussia = {
 			}
 		}
 		effect = { 
-			add_prestige = 10
+			add_prestige = 20
+			add_country_modifier = {
+				name = "victory_for_austria"
+				duration = 5475
+			}
 		}
 	}
 	a_new_capital = {
 		icon = mission_build_up_to_force_limit
 		position = 6
 		required_missions = { the_prussian_threat }
-		trigger = { }
-		effect = { }
+		trigger = {
+			50 = {
+				owned_by = ROOT
+				development = 50
+				num_of_buildings_in_province = 8
+			}
+		}
+		effect = { 
+			set_capital = 50
+			50 = {
+				add_province_modifier = { 
+    				name = "restructuring_berlin"
+    				duration = -1  
+				}
+			}
+		}
 	}
 }
 
@@ -569,10 +668,16 @@ austrian_empire_government = {
 		position = 3
 		required_missions = { an_absolute_state }
 		trigger = { 
-			reform_level = 5
+			reform_level = 8
+			legitimacy = 100
+			stability = 3
 		}
 		effect = { 
-			add_prestige = 10
+			add_prestige_or_monarch_power = 15
+			add_country_modifier = {
+				name = "greater_efficiency"
+				duration = -1
+			}
 		}
 	}
 	austrian_military_with_a_state = {
@@ -584,7 +689,7 @@ austrian_empire_government = {
 		}
 		effect = { 
 			add_country_modifier = {
-				name = "army_with_a_state"
+				name = "army_with_an_austrian_state"
 				duration = -1
 			}
 		}
@@ -602,6 +707,10 @@ austrian_empire_government = {
 		}
 		effect = { 
 			add_prestige = 15
+			add_country_modifier = {
+				name = "rush_across_europe"
+				duration = 5475
+			}
 		}
 	}
 	habsburg_over_hohenzolleren = {
@@ -612,7 +721,11 @@ austrian_empire_government = {
 			NOT = { exists = PRU }
 		}
 		effect = { 
-			add_prestige = 10
+			add_prestige_or_monarch_power = 10
+			add_country_modifier = {
+				name = "prussian_royal_teachers"
+				duration = -1
+			}
 		}
 	}
 }
@@ -715,6 +828,14 @@ cultural_dominance = {
 		trigger = { 
 			owns_all_provinces = {
 				region = north_german_region
+				region = south_german_region
+			}
+			num_of_owned_provinces_with = {
+				value = 81
+				region = north_german_region
+			}
+			num_of_owned_provinces_with = {
+				value = 64
 				region = south_german_region
 			}
 		}
