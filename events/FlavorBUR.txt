@@ -1147,7 +1147,7 @@ country_event = {
 }
 
 country_event = {
-	id = flavor_bur.8
+	id = flavor_bur.100
 	title = emp_mission_events.7.t
 	desc = {
 		trigger = {
@@ -1251,5 +1251,82 @@ country_event = { #Catholicon
 			add_dip_power = 50 
 			add_mil_power = 50 
 		}
+	}
+}
+
+country_event = {
+	id = flavor_bur.8
+	title = "flavor_hol.EVTNAME3502"
+	desc = "flavor_hol.EVTDESC3502"
+	picture = ELECTION_REPUBLICAN_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = NED
+		NOT = {	has_government_attribute = has_dutch_election }
+		NOT = { has_reform = celestial_empire }
+		is_revolutionary = no
+		is_subject = no
+	}
+	
+	mean_time_to_happen = {
+		months = 96
+	}
+	
+	immediate = {
+		hidden_effect = {
+			set_country_flag = ned_dutch_republic_event_happened
+		}
+	}
+	
+	option = {
+		name = "flavor_hol.EVTOPTB3502" #Confederacy on Republican Model
+		ai_chance = { factor = 100 }
+		if = {
+			limit = { NOT = { government = republic } }
+			change_government = republic
+		}
+		if = {
+			limit = {
+				has_reform = parliamentary_reform
+			}
+			remove_government_reform = parliamentary_reform
+		}
+		add_government_reform = dutch_republic
+	}
+	option = {
+		name = "flavor_hol.EVTOPTA3502" #Confederacy with traces of Monarchism
+		ai_chance = { factor = 0 }
+		if = {
+			limit = { NOT = { government = monarchy } }
+			change_government = monarchy
+		}
+		if = {
+			limit = {
+				has_reform = parliamentary_reform
+			}
+			remove_government_reform = parliamentary_reform
+		}
+		add_government_reform = stadthalter_monarchy_reform
+	}
+	option = {
+		name = "flavor_hol.EVTOPTC3502" #Centralized Monarchy
+		ai_chance = { factor = 0 }
+		trigger = { 
+			always = no
+			NOT = { government = monarchy }
+			NOT = { has_dlc = "Dharma" }
+			NOT = { has_dlc = "Emperor" }
+		}
+		if = {
+			limit = { NOT = { government = monarchy } }
+			change_government = monarchy
+		}
+		#set_legacy_government = administrative_monarchy
+	}
+	option = {
+		name = "flavor_hol.EVTOPTD3502" #Keep current government
+		ai_chance = { factor = 0 }
 	}
 }

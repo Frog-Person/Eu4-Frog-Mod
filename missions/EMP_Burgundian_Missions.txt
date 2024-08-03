@@ -1209,7 +1209,7 @@ mod_emp_lotharingia_2 = {
 
 	LOT_burg_succession = { 
 		icon = fra_burg_succession
-		required_missions = { fra_liberate_norm } 
+		required_missions = { LOT_liberate_norm } 
 		position = 9
 		provinces_to_highlight = { 
 			OR = { 
