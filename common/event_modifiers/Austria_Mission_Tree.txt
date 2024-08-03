@@ -310,3 +310,10 @@ rush_across_europe = {
 prussian_royal_teachers = {
     monarch_military_power = 2
 }
+
+#Fort Modifier
+strain_on_resources = {
+    local_fort_maintenance_modifier = 0.25
+    local_defensiveness = -0.25
+    local_manpower_modifier = -0.25
+}

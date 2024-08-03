@@ -416,6 +416,23 @@ fort_15th = {
 	time = 30
 	modifier = {
 		fort_level = 2
+		if = {
+    		limit = {
+        		any_neighbor_province = {
+            		owned_by = ROOT
+            		OR = {
+                		has_building = fort_15th
+                		has_building = fort_16th
+                		has_building = fort_17th
+                		has_building = fort_18th
+            		}
+        		}
+    		}
+    		add_province_modifier = {
+				name = "strain_on_resources"
+				duration = -1
+			}
+		}
 	}
 
 	# THIS = Province, FROM = Builder(not nessecairly owner, can be overlord)
@@ -572,6 +589,12 @@ fort_15th = {
 				has_province_modifier = ned_low_countries_fort_buff_buffed
 			}
 			remove_province_modifier = ned_low_countries_fort_buff_buffed
+		}
+		if = {
+			limit = {
+				has_province_modifier = strain_on_resources
+			}
+			remove_province_modifier = strain_on_resources
 		}
 	}
 
@@ -804,6 +827,23 @@ fort_16th = {
 	modifier = {
 		fort_level = 4
 		allowed_num_of_buildings = -1
+		if = {
+    		limit = {
+        		any_neighbor_province = {
+            		owned_by = ROOT
+            		OR = {
+                		has_building = fort_15th
+                		has_building = fort_16th
+                		has_building = fort_17th
+                		has_building = fort_18th
+            		}
+        		}
+    		}
+    		add_province_modifier = {
+				name = "strain_on_resources"
+				duration = -1
+			}
+		}
 	}
 
 	# THIS = Province, FROM = Builder(not nessecairly owner, can be overlord)
@@ -925,6 +965,12 @@ fort_16th = {
 				has_province_modifier = ned_low_countries_fort_buff_buffed
 			}
 			remove_province_modifier = ned_low_countries_fort_buff_buffed
+		}
+		if = {
+			limit = {
+				has_province_modifier = strain_on_resources
+			}
+			remove_province_modifier = strain_on_resources
 		}
 	}
 
@@ -1434,6 +1480,23 @@ fort_17th = {
 	modifier = {
 		fort_level = 6
 		allowed_num_of_buildings = -1
+		if = {
+    		limit = {
+        		any_neighbor_province = {
+            		owned_by = ROOT
+            		OR = {
+                		has_building = fort_15th
+                		has_building = fort_16th
+                		has_building = fort_17th
+                		has_building = fort_18th
+            		}
+        		}
+    		}
+    		add_province_modifier = {
+				name = "strain_on_resources"
+				duration = -1
+			}
+		}
 	}
 
 	# THIS = Province, FROM = Builder(not nessecairly owner, can be overlord)
@@ -1555,6 +1618,12 @@ fort_17th = {
 				has_province_modifier = ned_low_countries_fort_buff_buffed
 			}
 			remove_province_modifier = ned_low_countries_fort_buff_buffed
+		}
+		if = {
+			limit = {
+				has_province_modifier = strain_on_resources
+			}
+			remove_province_modifier = strain_on_resources
 		}
 		
 	}
@@ -1967,6 +2036,23 @@ fort_18th = {
 	modifier = {
 		fort_level = 8
 		allowed_num_of_buildings = -1
+		if = {
+    		limit = {
+        		any_neighbor_province = {
+            		owned_by = ROOT
+            		OR = {
+                		has_building = fort_15th
+                		has_building = fort_16th
+                		has_building = fort_17th
+                		has_building = fort_18th
+            		}
+        		}
+    		}
+    		add_province_modifier = {
+				name = "strain_on_resources"
+				duration = -1
+			}
+		}
 	}
 
 	# THIS = Province, FROM = Builder(not nessecairly owner, can be overlord)
@@ -2088,6 +2174,12 @@ fort_18th = {
 				has_province_modifier = ned_low_countries_fort_buff_buffed
 			}
 			remove_province_modifier = ned_low_countries_fort_buff_buffed
+		}
+		if = {
+			limit = {
+				has_province_modifier = strain_on_resources
+			}
+			remove_province_modifier = strain_on_resources
 		}
 	}
 
