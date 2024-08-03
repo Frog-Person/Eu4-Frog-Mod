@@ -1116,9 +1116,9 @@ mod_emp_lotharingia_2 = {
 		}
 		has_country_shield = yes
 
-	NED_securing_baltic_grain = {
+	LOT_securing_baltic_grain = {
 		icon = mission_pol_breadbasket_europe
-		required_missions = { NED_sail_towards_lubeck }
+		required_missions = { LOT_sail_towards_lubeck }
 		position = 5
 
 		trigger = { 
@@ -1162,7 +1162,7 @@ mod_emp_lotharingia_2 = {
 		} 
 	}
 
-	fra_liberate_norm = {
+	LOT_liberate_norm = {
 		icon = the_hundred_years_war
 		position = 8
 		required_missions = { emp_bur_league_of_public_weal	} 
@@ -1179,7 +1179,7 @@ mod_emp_lotharingia_2 = {
 		effect = {
 			if = { 
 				limit = { has_dlc = "Emperor" }
-				country_event = { id = flavor_fra.100 } 
+				country_event = { id = flavor_bur.100 } 
 			}
 			else = { 
 				add_mil_power = 50 
@@ -1207,7 +1207,7 @@ mod_emp_lotharingia_2 = {
 		}
 	}
 
-	fra_burg_succession = { 
+	LOT_burg_succession = { 
 		icon = fra_burg_succession
 		required_missions = { fra_liberate_norm } 
 		position = 9
@@ -1547,7 +1547,7 @@ mod_emp_lotharingia_3 = {
 		}
 		has_country_shield = yes
 
-	NED_hansa_relations = {
+	LOT_hansa_relations = {
 		icon = mission_bane_of_the_hansa
 		position = 3
 		required_missions = { emp_bur_unite_the_realm }
@@ -1638,10 +1638,10 @@ mod_emp_lotharingia_3 = {
 		}
 	}
 
-	NED_sail_towards_lubeck = {
+	LOT_sail_towards_lubeck = {
 		icon = support_the_bulk_trades
 		position = 4
-		required_missions = { NED_hansa_relations } 
+		required_missions = { LOT_hansa_relations } 
 		provinces_to_highlight = {  
 			province_id = 45
 			NOT = {
@@ -1685,10 +1685,10 @@ mod_emp_lotharingia_3 = {
 		} 
 	}
 
-	NED_baltic_supremacy = {
+	LOT_baltic_supremacy = {
 		icon = mission_rb_control_the_hansa
 		position = 5
-		required_missions = { NED_sail_towards_lubeck } 
+		required_missions = { LOT_sail_towards_lubeck } 
 		provinces_to_highlight = {  
 			province_id = 45
 			NOT = {
@@ -1744,10 +1744,10 @@ mod_emp_lotharingia_3 = {
 		} 
 	}
 
-	NED_end_sound_toll = {
+	LOT_end_sound_toll = {
 		icon = mission_end_the_sound_toll
 		position = 5
-		required_missions = { NED_baltic_supremacy } 
+		required_missions = { LOT_baltic_supremacy } 
 		provinces_to_highlight = {  
 			province_id = 12
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
@@ -1820,7 +1820,7 @@ mod_emp_lotharingia_3 = {
 		} 
 	}
 
-	fra_chateux_loire_valley = { 
+	LOT_chateux_loire_valley = { 
 		icon = develop_the_po_valley
 		required_missions = { emp_bur_league_of_public_weal }
 		position = 8
@@ -1852,13 +1852,13 @@ mod_emp_lotharingia_3 = {
 			}
 		}
 		effect = { 
-			country_event = { id = flavor_fra.103 }
+			country_event = { id = flavor_bur.103 }
 		}
 	}
 	
-	fra_armorican_peninsula = { 
+	LOT_armorican_peninsula = { 
 		icon = dalmatian_conquest 
-		required_missions = { fra_chateux_loire_valley fra_liberate_norm }
+		required_missions = { LOT_chateux_loire_valley LOT_liberate_norm }
 		position = 9
 		provinces_to_highlight = { 
 			area = brittany_area 
@@ -1873,7 +1873,7 @@ mod_emp_lotharingia_3 = {
 			169 = { num_of_times_improved = 4 } 
 		}
 		effect = { 
-			country_event = { id = flavor_fra.104 }
+			country_event = { id = flavor_bur.104 }
 		}
 	}
 }
@@ -2386,7 +2386,7 @@ mod_emp_lotharingia_4_bav = {
 			}
 		}
 	}
-	fra_retake_aquitaine = { 
+	LOT_retake_aquitaine = { 
 		icon = mission_rb_invade_england
 		required_missions = { emp_bur_league_of_public_weal } 
 		position = 8
@@ -2460,9 +2460,9 @@ mod_emp_lotharingia_4_bav = {
 		}
 	}
 	
-	fra_unite_france = {
+	LOT_unite_france = {
 		icon = king_of_france
-		required_missions = { fra_retake_aquitaine fra_armorican_peninsula }
+		required_missions = { LOT_retake_aquitaine LOT_armorican_peninsula }
 		position = 10
 		provinces_to_highlight = { 
 			region = france_region 
