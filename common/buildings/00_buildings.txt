@@ -533,23 +533,6 @@ fort_15th = {
 				duration = -1
 			}
 		}
-		if = {
-    		limit = {
-        		any_neighbor_province = {
-            		owned_by = ROOT
-            		OR = {
-                		has_building = fort_15th
-                		has_building = fort_16th
-                		has_building = fort_17th
-                		has_building = fort_18th
-            		}
-        		}
-    		}
-    		add_province_modifier = {
-				name = "strain_on_resources"
-				duration = -1
-			}
-		}
 	}
 
 	# THIS = Province, FROM = Destroyer, Will not be called on buildings made obsolete!
@@ -589,12 +572,6 @@ fort_15th = {
 				has_province_modifier = ned_low_countries_fort_buff_buffed
 			}
 			remove_province_modifier = ned_low_countries_fort_buff_buffed
-		}
-		if = {
-			limit = {
-				has_province_modifier = strain_on_resources
-			}
-			remove_province_modifier = strain_on_resources
 		}
 	}
 
@@ -921,23 +898,6 @@ fort_16th = {
 				duration = -1
 			}
 		}
-		if = {
-    		limit = {
-        		any_neighbor_province = {
-            		owned_by = ROOT
-            		OR = {
-                		has_building = fort_15th
-                		has_building = fort_16th
-                		has_building = fort_17th
-                		has_building = fort_18th
-            		}
-        		}
-    		}
-    		add_province_modifier = {
-				name = "strain_on_resources"
-				duration = -1
-			}
-		}
 	}
 
 	# THIS = Province, FROM = Destroyer, Will not be called on buildings made obsolete!
@@ -965,12 +925,6 @@ fort_16th = {
 				has_province_modifier = ned_low_countries_fort_buff_buffed
 			}
 			remove_province_modifier = ned_low_countries_fort_buff_buffed
-		}
-		if = {
-			limit = {
-				has_province_modifier = strain_on_resources
-			}
-			remove_province_modifier = strain_on_resources
 		}
 	}
 
@@ -1574,23 +1528,6 @@ fort_17th = {
 				duration = -1
 			}
 		}
-		if = {
-    		limit = {
-        		any_neighbor_province = {
-            		owned_by = ROOT
-            		OR = {
-                		has_building = fort_15th
-                		has_building = fort_16th
-                		has_building = fort_17th
-                		has_building = fort_18th
-            		}
-        		}
-    		}
-    		add_province_modifier = {
-				name = "strain_on_resources"
-				duration = -1
-			}
-		}
 	}
 
 	# THIS = Province, FROM = Destroyer, Will not be called on buildings made obsolete!
@@ -1618,14 +1555,7 @@ fort_17th = {
 				has_province_modifier = ned_low_countries_fort_buff_buffed
 			}
 			remove_province_modifier = ned_low_countries_fort_buff_buffed
-		}
-		if = {
-			limit = {
-				has_province_modifier = strain_on_resources
-			}
-			remove_province_modifier = strain_on_resources
-		}
-		
+		}	
 	}
 
 	# THIS = Province, FROM = Destroyer, Will not be called on buildings destroyed!
@@ -2130,23 +2060,6 @@ fort_18th = {
 				duration = -1
 			}
 		}
-		if = {
-    		limit = {
-        		any_neighbor_province = {
-            		owned_by = ROOT
-            		OR = {
-                		has_building = fort_15th
-                		has_building = fort_16th
-                		has_building = fort_17th
-                		has_building = fort_18th
-            		}
-        		}
-    		}
-    		add_province_modifier = {
-				name = "strain_on_resources"
-				duration = -1
-			}
-		}
 	}
 
 	# THIS = Province, FROM = Destroyer, Will not be called on buildings made obsolete!
@@ -2174,12 +2087,6 @@ fort_18th = {
 				has_province_modifier = ned_low_countries_fort_buff_buffed
 			}
 			remove_province_modifier = ned_low_countries_fort_buff_buffed
-		}
-		if = {
-			limit = {
-				has_province_modifier = strain_on_resources
-			}
-			remove_province_modifier = strain_on_resources
 		}
 	}
 
