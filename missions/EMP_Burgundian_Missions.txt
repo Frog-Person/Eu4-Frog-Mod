@@ -1220,51 +1220,22 @@ mod_emp_lotharingia_2 = {
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT } 
 		}
-		trigger = { 
-			OR = { 
-				AND = { 
-					picardy_area = {
-						type = all 
-						OR = { 
-							province_id = 87 
-							country_or_non_sovereign_subject_holds = ROOT 
-						}
-					}
-					west_burgundy_area = { 
-						type = all 
+		trigger = {
+			AND = {
+				picardy_area = {
+					type = all 
+					OR = { 
+						province_id = 87 
 						country_or_non_sovereign_subject_holds = ROOT 
 					}
 				}
-				BUR = {
-					OR = { 
-						is_subject_of = ROOT 
-						alliance_with = ROOT 
-					}
-					AND = {
-						if = { 
-							limit = { is_subject_of = ROOT }
-							has_opinion = {
-								who = ROOT 
-								value = 125
-							}
-						}
-						else = {
-							has_opinion = {
-								who = ROOT 
-								value = 180
-							}
-						}
-						if = {
-							limit = { has_dlc = "Leviathan" }
-							trust = { who = FRA value = 75 }
-						}
-						else = { monthly_dip = 8 }
-						if = { 
-							limit = { is_subject_of = ROOT }
-							NOT = { liberty_desire = 10 }
-						}
-					}
+				west_burgundy_area = { 
+					type = all 
+					country_or_non_sovereign_subject_holds = ROOT 
 				}
+				has_heir = yes
+				heir_claim = 90
+				monthly_adm = 10
 			}
 		}
 		effect = {
@@ -1467,13 +1438,169 @@ mod_emp_lotharingia_2 = {
 						}
 					}
 				}
-				else_if = { 
-					limit = { 
-						BUR = { alliance_with = ROOT }
-						has_dlc = "Emperor" 
+			}
+		}
+	}
+
+	LOT_appease_the_princes = {
+		icon = fra_appease_the_princes
+		position = 10
+		required_missions = { LOT_burg_succession }
+		provinces_to_highlight = {
+			AND = {
+				is_capital = yes 
+				owner = {
+					is_subject_of = ROOT 
+					is_subject_of_type = appanage
+					OR = {
+						has_opinion = {
+							who = ROOT 
+							value = 125 
+						}
+						liberty_desire = 10 
 					}
-					BUR = { set_country_flag = fra_guaranteed_succession_flag } 
 				}
+			}
+		}
+		trigger = {
+			if = {
+				limit = { ai = no }
+				custom_trigger_tooltip = {
+					tooltip = fra_appease_appanage_tt
+					NOT = {
+						any_subject_country = {
+							NOT = { 
+								has_opinion = {
+									who = ROOT 
+									value = 125 
+								}
+							}
+							liberty_desire = 10 
+						}
+					}
+				}
+			}
+			if = {
+				legitimacy_equivalent = 100
+				stability = 3
+
+			}
+			if = {
+				limit = { has_estate = estate_nobles }
+				estate_loyalty = {
+					estate = estate_nobles 
+					loyalty = 60
+				}
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = fra_growth_appanages
+				duration = 7300 
+			}
+			add_prestige_or_monarch_power = 20
+		}
+	}
+	
+	LOT_crown_seat_capital = {
+		icon = fra_crown_seat_capital
+		required_missions = { LOT_appease_the_princes }
+		position = 11
+		provinces_to_highlight = { 
+			
+		}
+		trigger = {
+			117 = {
+				owned_by = ROOT
+				num_of_times_improved_by_owner = 5
+			}
+			90 = {
+				owned_by = ROOT
+				num_of_times_improved_by_owner = 5
+			}
+			92 = {
+				owned_by = ROOT
+				num_of_times_improved_by_owner = 5
+			}
+			4383 = {
+				owned_by = ROOT
+				num_of_times_improved_by_owner = 5
+			}
+			183 = {
+				owned_by = ROOT
+				num_of_times_improved_by_owner = 5
+			}
+			legitimacy_equivalent = 90 
+		}
+		effect = {
+			add_country_modifier = {
+				name = fra_increased_crown_authority_modifier
+				duration = 7300
+			}
+			
+			custom_tooltip = fra_20rf_per_adm
+			hidden_effect = {
+				if = {
+					limit = { monthly_adm = 20 } 
+					change_government_reform_progress = 400 
+				}
+				else_if = {
+					limit = { monthly_adm = 19 } 
+					change_government_reform_progress = 380 
+				}
+				else_if = {
+					limit = { monthly_adm = 18 } 
+					change_government_reform_progress = 360 
+				}
+				else_if = {
+					limit = { monthly_adm = 17 } 
+					change_government_reform_progress = 340 
+				}
+				else_if = {
+					limit = { monthly_adm = 16 } 
+					change_government_reform_progress = 320 
+				}
+				else_if = {
+					limit = { monthly_adm = 15 } 
+					change_government_reform_progress = 300
+				}
+				else_if = {
+					limit = { monthly_adm = 14 } 
+					change_government_reform_progress = 280
+				}
+				else_if = {
+					limit = { monthly_adm = 13 } 
+					change_government_reform_progress = 260
+				}
+				else_if = {
+					limit = { monthly_adm = 12 } 
+					change_government_reform_progress = 240
+				}
+				else_if = {
+					limit = { monthly_adm = 11 } 
+					change_government_reform_progress = 220
+				}
+				else_if = {
+					limit = { monthly_adm = 10 } 
+					change_government_reform_progress = 200
+				}
+				else_if = {
+					limit = { monthly_adm = 9 } 
+					change_government_reform_progress = 180
+				}
+				else_if = {
+					limit = { monthly_adm = 8 } 
+					change_government_reform_progress = 160
+				}
+				else_if = {
+					limit = { monthly_adm = 7 } 
+					change_government_reform_progress = 140
+				}
+				else_if = {
+					limit = { monthly_adm = 6 } 
+					change_government_reform_progress = 120
+				}
+				else = { change_government_reform_progress = 100 }
 			}
 		}
 	}
@@ -1843,7 +1970,7 @@ mod_emp_lotharingia_3 = {
 			}
 			if = {
 				limit = { ai = no }
-				OR = { 
+				AND = { 
 					4389 = { num_of_times_improved = 3 } 
 					4776 = { num_of_times_improved = 3 }
 					184 = { num_of_times_improved = 3 }  
@@ -1874,6 +2001,68 @@ mod_emp_lotharingia_3 = {
 		}
 		effect = { 
 			country_event = { id = flavor_bur.104 }
+		}
+	}
+
+	LOT_refine_bombards = {
+		icon = fra_refine_bombards
+		position = 10
+		provinces_to_highlight = { 
+		}
+		trigger = {
+			artillery_fraction = 0.2 
+			army_size_percentage = 1.0
+			AND = { 
+				has_mil_advisor = yes 
+				national_focus = MIL
+				monthly_mil = 11
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = fra_french_bombards_modifier
+				duration = 5475
+			}
+			if = {
+				limit = { NOT = { mil_tech = 7 } }
+				capital_scope = {
+					large_cast_bronze_mortar = ROOT
+					large_cast_bronze_mortar = ROOT
+					large_cast_bronze_mortar = ROOT
+				}
+			}
+			else = {
+				capital_scope = {
+					artillery = ROOT
+					artillery = ROOT
+					artillery = ROOT
+				}
+				add_mil_power = 25
+			}
+		}
+	}
+	
+	LOT_movement_centralization = { 
+		icon = reform_bergordnung
+		required_missions = { LOT_refine_bombards LOT_crown_seat_capital } 
+		position = 12
+		trigger = {
+			NOT = { has_estate_privilege = estate_nobles_french_strong_duchies }
+			custom_trigger_tooltip = {
+				tooltip = centralize_fra_tt
+				NOT = {
+					any_subject_country = {
+						capital_scope = {
+							region = france_region
+						}
+					}
+				}
+			}
+			total_development = 500 
+			crown_land_share = 50 
+		}
+		effect = { 
+			country_event = { flavor_bur.8 }
 		}
 	}
 }
