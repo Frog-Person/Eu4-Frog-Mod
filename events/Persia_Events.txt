@@ -1,7 +1,7 @@
 namespace = Persia_events
 
 country_event = {
-	id = ME_Persia_Events.19
+	id = Persia_events_ME_Persia_Events.19
 	title = ME_Persia_Events.19.T
 	desc = ME_Persia_Events.19.D
 	picture = GOOD_WITH_MONARCH_eventPicture
@@ -101,7 +101,7 @@ country_event = {
 }
 
 country_event = {
-	id = PER_choose_religion
+	id = Persia_events_PER_choose_religion
 	title = PER_choose_religion.T
 	desc = PER_choose_religion.D
 	picture = GOOD_WITH_MONARCH_eventPicture
