@@ -1498,7 +1498,7 @@ mod_emp_lotharingia_2 = {
 				name = fra_growth_appanages
 				duration = 7300 
 			}
-			add_prestige_or_monarch_power = 20
+			add_prestige = 20
 		}
 	}
 	
@@ -1510,7 +1510,7 @@ mod_emp_lotharingia_2 = {
 			
 		}
 		trigger = {
-			117 = {
+			192 = {
 				owned_by = ROOT
 				num_of_times_improved_by_owner = 5
 			}
@@ -2062,7 +2062,7 @@ mod_emp_lotharingia_3 = {
 			crown_land_share = 50 
 		}
 		effect = { 
-			country_event = { flavor_bur.8 }
+			country_event = { id = flavor_bur.105 }
 		}
 	}
 }

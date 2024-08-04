@@ -310,3 +310,8 @@ rush_across_europe = {
 prussian_royal_teachers = {
     monarch_military_power = 2
 }
+#LothairingiaMissions
+glowing_capitals = {
+    prestige = 1
+    monthly_splendor = 1
+}

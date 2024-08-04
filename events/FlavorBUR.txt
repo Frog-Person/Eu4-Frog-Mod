@@ -1255,7 +1255,7 @@ country_event = { #Catholicon
 }
 
 country_event = {
-	id = flavor_bur.8
+	id = flavor_bur.105
 	title = "flavor_hol.EVTNAME3502"
 	desc = "flavor_hol.EVTDESC3502"
 	picture = ELECTION_REPUBLICAN_eventPicture

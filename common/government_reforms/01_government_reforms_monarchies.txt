@@ -1752,6 +1752,7 @@ stadthalter_monarchy_reform = {
 	allow_normal_conversion = yes
 	potential = {
 		OR = {
+			tag = LOT
 			AND = {
 				OR = {
 					primary_culture = dutch
