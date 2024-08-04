@@ -1534,7 +1534,7 @@ mod_emp_lotharingia_2 = {
 		}
 		effect = {
 			add_country_modifier = {
-				name = fra_increased_crown_authority_modifier
+				name = glowing_capitals
 				duration = 7300
 			}
 			
