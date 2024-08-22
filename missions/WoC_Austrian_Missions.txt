@@ -5472,9 +5472,12 @@ AUH_Expansion = {
 		position = 6
 		required_missions = { control_bavaria }
 		trigger = {
-			wallachia_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+			OR = {
+				wallachia_area = {
+					type = all
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+				WAL = { is_subject_of = AUH }
 			}
 		}
 		effect = {
@@ -5593,7 +5596,10 @@ AUH_Expansion = {
 			}
 			else_if = {
 				limit = {
+					OR = {
 					DAL = { is_subject_of = AUH }
+					RAG = { is_subject_of = AUH }
+					}
 					east_adriatic_coast_area = {
 						type = all
 						country_or_non_sovereign_subject_holds = ROOT
