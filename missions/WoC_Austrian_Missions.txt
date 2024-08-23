@@ -968,7 +968,7 @@ WoC_austria_1_1 = {
 			    value = 30
 			}
 			monthly_income = 300
-			num_of_loans = 0
+			NOT = { num_of_loans = 1 }
 		}
 		effect = {
 			add_years_of_income = 0.75
