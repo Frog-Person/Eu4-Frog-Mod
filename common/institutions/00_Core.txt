@@ -621,6 +621,7 @@ new_world_i = {
 				north_america = { has_discovered = PREV }
 				south_america = { has_discovered = PREV }
 				new_world = { has_discovered = PREV }
+				num_of_colonists = 1
 			}
 		}
 	}
