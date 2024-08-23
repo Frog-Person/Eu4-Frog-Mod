@@ -5496,10 +5496,6 @@ AUH_Expansion = {
 			else_if = {
 				limit = {
 					WAL = { is_subject_of = AUH }
-					wallachia_area = {
-					type = all
-					country_or_non_sovereign_subject_holds = ROOT
-					}
 				}
 				add_country_modifier = {
 					name = "new_balkan_state_under_the_crown"
