@@ -5479,7 +5479,7 @@ AUH_Expansion = {
 			OR = {
 				wallachia_area = {
 					type = all
-					owned_by = ROOT
+					country_or_non_sovereign_subject_holds = ROOT
 				}
 				WAL = { is_subject_of = AUH }
 			}
@@ -5499,10 +5499,12 @@ AUH_Expansion = {
 			}
 			else_if = {
 				limit = {
-					WAL = { is_subject_of = AUH }
-					wallachia_area = {
-						type = all
-						owned_by = WAL
+					OR = {
+						WAL = { is_subject_of = AUH }
+						wallachia_area = {
+							type = all
+							country_or_non_sovereign_subject_holds = ROOT
+						}
 					}
 				}
 				add_country_modifier = {

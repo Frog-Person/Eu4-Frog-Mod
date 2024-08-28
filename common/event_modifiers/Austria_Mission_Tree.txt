@@ -79,7 +79,7 @@ new_german_state_under_the_crown = {
     vassal_forcelimit_bonus = 0.10
     vassal_income = 0.2
 }
-new_state_under_the_crown = {
+new_balkan_state_under_the_crown = {
     vassal_forcelimit_bonus = 0.10
     vassal_income = 0.2
 }
