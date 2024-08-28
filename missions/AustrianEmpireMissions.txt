@@ -661,6 +661,11 @@ austrian_empire_government = {
 			land_morale = 6.8
 			land_forcelimit = 250
 			army_size_percentage = 1
+			has_government_power = {
+				mechanic_type = prussian_militarization_mechanic_1
+				power_type = prussian_militarized_society_1
+				value = 100
+			}
 		}
 		effect = { 
 			add_country_modifier = {
