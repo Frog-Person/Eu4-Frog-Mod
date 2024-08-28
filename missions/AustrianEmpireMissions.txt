@@ -377,7 +377,7 @@ push_north = {
 			}
 		}
 		effect = { 
-			add_prestige_ = 20
+			add_prestige = 20
 			add_country_modifier = {
 				name = "german_inquisition"
 				duration = 5475
@@ -653,12 +653,18 @@ austrian_empire_government = {
 		icon = mission_build_up_to_force_limit
 		position = 4
 		required_missions = { a_reformed_and_mighty_state a_prosperous_and_wealthy_land }
-		trigger = { 
-			militarised_society = 100
+		trigger = {
+			has_global_modifier_value = {
+				which = discipline
+				value = 0.25
+			}
+			land_morale = 6.8
+			land_forcelimit = 250
+			army_size_percentage = 1
 		}
 		effect = { 
 			add_country_modifier = {
-				name = "army_with_an_austrian_state"
+				name = "army_with_a_state"
 				duration = -1
 			}
 		}
@@ -670,9 +676,23 @@ austrian_empire_government = {
 		required_missions = { austrian_military_with_a_state }
 		trigger = {
 			had_recent_war = 10
-			has_won_war_against = {
-				who = PREV
-				max_years_since = 100
+			OR = {
+				has_won_war_against = {
+					who = PRU
+					max_years_since = 10
+				}
+				has_won_war_against = {
+					who = FRA
+					max_years_since = 10
+				}
+				has_won_war_against = {
+					who = KOL
+					max_years_since = 10
+				}
+				has_won_war_against = {
+					who = WES
+					max_years_since = 10
+				}
 			}
 		}
 		effect = { 
@@ -690,6 +710,7 @@ austrian_empire_government = {
 		required_missions = { our_military_might the_prussian_threat }
 		trigger = { 
 			NOT = { exists = PRU }
+			NOT = { exists = BRA }
 		}
 		effect = { 
 			add_prestige = 10

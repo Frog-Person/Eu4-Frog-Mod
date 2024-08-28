@@ -24,9 +24,9 @@ trade_states = {
 			                type = all
 			                country_or_non_sovereign_subject_holds = ROOT
 			            }
-					}
-			        134 = { #Wien
-						is_strongest_trade_power = ROOT
+			        	134 = { #Wien
+							is_strongest_trade_power = ROOT
+						}
 					}
 					BAV = { is_subject_of = TDC }
 			    }
@@ -350,7 +350,7 @@ cultural_acceptance_and_dev = {
 	united_transdanubian_states = {
 		icon = mission_build_up_to_force_limit
 		position = 6
-		required_missions = { influence_in_the_city_of_desire country_of_100_capitals Landstreitkräfte_Österreich_Ungarns equal_representation self_sufficient_states }
+		required_missions = { influence_in_the_city_of_desire country_of_100_capitals Landstreitkrafte_Osterreich_Ungarns equal_representation self_sufficient_states }
 		trigger = {
 				stability = 3
 				statesman = 5
@@ -437,7 +437,7 @@ government_supervision = {
 		required_missions = { a_just_and_expansive_bureaucracy }
 		trigger = {
 				reform_level = 8
-				unrest = -3
+				NOT = { unrest = -3 }
 				average_autonomy = 0
 			}
 		effect = {

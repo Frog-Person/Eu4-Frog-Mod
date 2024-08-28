@@ -5406,17 +5406,20 @@ AUH_Expansion = {
 		position = 5
 		required_missions = { unite_our_lands_and_expand }
 		trigger = {
+			OR = {
 				upper_bavaria_area = {
 					type = all
 					country_or_non_sovereign_subject_holds = ROOT
 				}
-			lower_bavaria_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			east_bavaria_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				lower_bavaria_area = {
+					type = all
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+				east_bavaria_area = {
+					type = all
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+				BAV = { is_subject_of = AUH }
 			}
 		}
 		effect = {
@@ -5467,6 +5470,7 @@ AUH_Expansion = {
 			}
 		}
 	}
+
 	take_wallachia = {
 		icon = mission_build_up_to_force_limit
 		position = 6
@@ -5475,7 +5479,7 @@ AUH_Expansion = {
 			OR = {
 				wallachia_area = {
 					type = all
-					country_or_non_sovereign_subject_holds = ROOT
+					owned_by = ROOT
 				}
 				WAL = { is_subject_of = AUH }
 			}
@@ -5484,8 +5488,8 @@ AUH_Expansion = {
 			if = {
 				limit = {
 					wallachia_area = {
-					type = all
-					owned_by = ROOT
+						type = all
+						owned_by = ROOT
 					}
 				}
 				add_country_modifier = {
@@ -5496,6 +5500,10 @@ AUH_Expansion = {
 			else_if = {
 				limit = {
 					WAL = { is_subject_of = AUH }
+					wallachia_area = {
+						type = all
+						owned_by = WAL
+					}
 				}
 				add_country_modifier = {
 					name = "new_balkan_state_under_the_crown"

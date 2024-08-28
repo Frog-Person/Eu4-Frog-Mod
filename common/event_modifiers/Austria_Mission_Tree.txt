@@ -156,7 +156,7 @@ an_educated_populace = {
     idea_cost = -0.05
 }
 our_shining_cities = {
-    governing_cost = -0.10
+    governing_cost = -0.15
     prestige_decay = -0.01
 }
 construction_frenzy = {
@@ -254,7 +254,7 @@ press_the_attack = {
     recover_army_morale_speed = 0.10
 }
 army_with_a_state = {
-    monthly_militarized_society = 0.05
+    monthly_prussian_militarized_society_1 = 0.01
 }
 baby_boom = {
     manpower_in_own_culture_provinces = 0.15
