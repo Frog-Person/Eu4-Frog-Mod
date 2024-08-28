@@ -19539,6 +19539,8 @@ gme_hofburg = {
 				dynasty = "von Habsburg"
 				is_emperor = yes
 				tag = HLR
+				tag = AUE
+				tag = TDC
 			}
 		}
 	}
@@ -19549,6 +19551,8 @@ gme_hofburg = {
 				dynasty = "von Habsburg"
 				is_emperor = yes
 				tag = HLR
+				tag = AUE
+				tag = TDC
 			}
 		}
 	}
