@@ -6,7 +6,10 @@ country_decisions = {
             tag = HAB
         }
         allow = {
-            has_country_flag = austrian_hungary_formable
+            custom_trigger_tooltip = {
+                tooltip = forming_austria_hungary
+                has_country_flag = austrian_hungary_formable
+            }
             NOT = { exists = HUN }
             NOT = { exists = BOH }
             adm_tech = 12
@@ -85,7 +88,10 @@ country_decisions = {
             tag = HAB
         }
         allow = {
-            has_country_flag = transdanubia_formable
+            custom_trigger_tooltip = {
+                tooltip = forming_transdanubia
+                has_country_flag = transdanubia_formable
+            }
             NOT = { exists = HUN }
             NOT = { exists = BOH }
             adm_tech = 10
@@ -185,7 +191,10 @@ country_decisions = {
             tag = HAB
         }
         allow = {
-            has_country_flag = austrian_empire_formable
+            custom_trigger_tooltip = {
+                tooltip = forming_austrian_empire
+                has_country_flag = austrian_empire_formable
+            }
             NOT = { exists = HUN }
             NOT = { exists = BOH }
             adm_tech = 15
