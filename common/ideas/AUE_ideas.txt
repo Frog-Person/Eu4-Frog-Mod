@@ -14,7 +14,7 @@ AUE_ideas = {
 	free = yes		#will be added at load.
 	
 	military_education = {
-		army_tradition_decay = -0.02
+		army_tradition_decay = -0.01
 	}
 	austrian_diplomacy = {
 		stability_cost_modifier = -0.2

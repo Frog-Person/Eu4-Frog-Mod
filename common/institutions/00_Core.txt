@@ -937,10 +937,13 @@ printing_press = {
 			trade_goods = paper
 		}
 		religion_group = christian
-		culture_group = germanic
 		OR = {
 			region = north_german_region
 			region = south_german_region
+			religion = protestant
+			religion = reformed
+			religion = anglican
+			religion = hussite
 		}
 
 	}
