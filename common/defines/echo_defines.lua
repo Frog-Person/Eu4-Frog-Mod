@@ -121,7 +121,6 @@ NDefines.NMilitary.SIEGE_FORCE_NEEDED_MULTIPLIER =  0.334			-- x times garrison 
 NDefines.NMilitary.MAX_BREACH = 1
 NDefines.NMilitary.TRANSPORT_COST = 1
 NDefines.NMilitary.SUPPLYLIMIT_BASE_MULTIPLIER = 8.0
-NDefines.NMilitary.DEFAULT_WARGOAL_TICKINGWARSCORE_BONUS = 1.67
 NDefines.NMilitary.WARGOAL_MAX_BONUS = 40
 NDefines.NMilitary.WARSCORE_MAX_FROM_BATTLES = 50
 NDefines.NMilitary.WAR_ENTHUSIASM_HIGH_THRESHOLD = -15
@@ -178,3 +177,23 @@ NDefines.NGovernment.LEADER_AS_MONARCH_TRADITION = 15
 
 NDefines.NGame.DAYS_BEHIND_PAUSE = 90					-- In multiplayer, if the slowest player is lagging behind this amount of days, the game will pause
 NDefines.NGame.DAYS_BEHIND_LOWER_SPEED = 999			-- In multiplayer, if the slowest player is lagging behind this amount of days, the game will slow down
+
+-- Bunnyman Additions
+
+-- Military
+NDefines.NMilitary.DEFAULT_WARGOAL_TICKINGWARSCORE_BONUS = 1.0 -- Monthly ticking warscore. Echo is 1.67, default is 0.4. *Change made due to complaints of ticking too fast last game
+NDefines.NMilitary.CONDOTTIERI_PRESTIGE_BONUS = 0.75 -- Prestige from land battles are modified by this. Default is 0.5. *Change made to encourage use of Condot
+NDefines.NMilitary.CONDOTTIERI_TRADITION_BONUS = 0.75 -- This modifies army tradition gained from fighting with condottieris. *Change made to encourage use of Condot
+
+-- Diplomacy
+NDefines.NDiplomacy.PEACE_COST_DEMAND_PROVINCE = 0.78 -- Cost to annex provinces. Standard is 0.80. *Change made to make provinces about 3% easier to annex.
+NDefines.NDiplomacy.PEACE_COST_BECOME_VASSAL = 0.75 -- Cost to vassalize. Standard is 0.80. *Change made to encourage use of vassals slightly more
+NDefines.NDiplomacy.PEACE_COST_RETURN_CORE = 0.60 -- Cost to return cores. Standard is 0.80. *Change made to make it easier to reclaim lost cores in comeback wars
+NDefines.NDiplomacy.PEACE_COST_REVOKE_CORE = 0.30 -- Cost to revoke cores. Standard is 0.40. *Vice-Versa of previous
+NDefines.NDiplomacy.PEACE_COST_CONVERSION = 0.70 -- Cost to covert nation. Standard is 0.80. *Change made to increase religious roleplay
+NDefines.NDiplomacy.RELIGIOUS_LEAGUE_COOLDOWN = 10 -- Minimum years between joining/leaving religious league. Default is 5. *Change made to make league selection more of a commitment
+NDefines.NDiplomacy.JOIN_HRE_DEVELOPMENT_CAP_VASSAL = 350 -- Max cap of development to join the empire. Default is 200. *Change made to encourage more HRE Roleplay
+
+-- country
+NDefines.NCountry.MAXIMUM_CONDOTTIERI = 25 -- Base number of units you can rent out. Default 20. *Change made to encourage use of Condot
+NDefines.NCountry.PS_REDUCE_WAREXHAUSTION = 125 -- Price to reduce war exhaustion. Default is 75. *Change to harder to easily spam reduce war exhaustion
