@@ -174,6 +174,7 @@ NDefines.NGovernment.CENTRALIZE_STATE_YEARS = 2.5
 NDefines.NGovernment.CENTRALIZE_STATE_ADM_COST = 30
 NDefines.NGovernment.EXPAND_ADMIN_COST = 400.0
 NDefines.NGovernment.LEADER_AS_MONARCH_TRADITION = 15
+NDefines.NGovernment.EXPAND_INFRASTRUCTURE_ADM_COST = 100
 
 NDefines.NGame.DAYS_BEHIND_PAUSE = 90					-- In multiplayer, if the slowest player is lagging behind this amount of days, the game will pause
 NDefines.NGame.DAYS_BEHIND_LOWER_SPEED = 999			-- In multiplayer, if the slowest player is lagging behind this amount of days, the game will slow down

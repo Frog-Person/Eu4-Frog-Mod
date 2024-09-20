@@ -373,7 +373,7 @@ naval_infrastructure_act = {
 	}
 
 
-	naval_forcelimit_modifier = 0.33
+	naval_forcelimit_modifier = 0.20
 
 
 	effect = {}

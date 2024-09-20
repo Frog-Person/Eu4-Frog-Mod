@@ -618,9 +618,18 @@ new_world_i = {
 		is_in_capital_area = yes
 		owner = { 
 			OR = {
-				north_america = { has_discovered = PREV }
-				south_america = { has_discovered = PREV }
-				new_world = { has_discovered = PREV }
+				AND = {
+					north_america = { has_discovered = PREV }
+					num_of_colonists = 1
+				}
+				AND = {
+					south_america = { has_discovered = PREV }
+					num_of_colonists = 1
+				}
+				AND = {
+					new_world = { has_discovered = PREV }
+					num_of_colonists = 1
+				}
 			}
 		}
 	}
@@ -927,11 +936,14 @@ printing_press = {
 			is_capital = yes
 			trade_goods = paper
 		}
+		religion_group = christian
 		OR = {
-			religion = protestant
-			religion = reformed
 			region = north_german_region
 			region = south_german_region
+			religion = protestant
+			religion = reformed
+			religion = anglican
+			religion = hussite
 		}
 
 	}
@@ -1600,6 +1612,7 @@ manufactories = {
 			has_building = plantations
 			has_building = tradecompany
 			has_building = mills
+			has_building = farm_estate
 		}
 	}
 	start_chance = 10		#in 100 for when a province can_start
