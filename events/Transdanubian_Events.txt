@@ -1,40 +1,49 @@
 #Transdanubian_Events
-
-namespace = TRAN_EVENTS
-
 country_event = {
     id = TRAN_EVENTS.1
 	title = TRAN_EVENTS.1.t
 	desc = TRAN_EVENTS.1.d
+
 	picture = GOOD_WITH_MONARCH_eventPicture
-
-    is_triggered_only = yes
-
-    option = {
-        name = TRAN_EVENTS.1.A
-
-        add_government_reform = peasants_republic
-        ai_chance = {
-            factor = 1
-        }
+	
+	fire_only_once = yes
+	trigger = {
+        has_country_flag = grand_republic_formation
+    }
+    mean_time_to_happen = {
+		months = 12
 	}
+    effect = {
+        option = {# Yes
+            name = TRAN_EVENTS.1.A
+            add_government_reform = transdanubian_parliamentary_republic
+            ai_chance = {
+                factor = 1
+            }
+	    }
+    }
 }
-
 country_event = {
     id = TRAN_EVENTS.2
 	title = TRAN_EVENTS.2.t
 	desc = TRAN_EVENTS.2.d
 
 	picture = GOOD_WITH_MONARCH_eventPicture
-
-    is_triggered_only = yes
-    
-        option = {
+	
+	fire_only_once = yes
+	trigger = {
+        has_country_flag = grand_republic_formation
+    }
+    mean_time_to_happen = {
+		months = 12
+	}
+    effect = {
+        option = {# Yes
             name = TRAN_EVENTS.2.A
-            
-            add_government_reform = transdanubian_peoples_republic
+            add_government_reform = united_transdanubian_states
             ai_chance = {
                 factor = 1
             }
 	    }
+    }
 }

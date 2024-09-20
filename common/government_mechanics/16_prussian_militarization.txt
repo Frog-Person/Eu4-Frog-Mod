@@ -5,8 +5,7 @@ prussian_militarization_mechanic_1 = {
 		has_dlc = "Domination"
 		OR = {
 			tag = PRU
-			tag = GER
-			tag = AUE 
+			tag = GER 
 			has_reform = prussian_monarchy
 			has_country_flag = access_to_prussian_militarization_flag #For the modders
 		}

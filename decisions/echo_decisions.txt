@@ -107,7 +107,6 @@ country_decisions = {
 				tag = SCO
 				tag = HOL
 				tag = NED
-				tag = BUR
 			}
 		}
 		effect = {

@@ -9,6 +9,7 @@ trade_states = {
 	bavarian_trade = {
 		icon = mission_build_up_to_force_limit
 		position = 1
+		required_missions = {  }
 		trigger = {
 			    OR = {
 			        AND = {
@@ -24,18 +25,17 @@ trade_states = {
 			                type = all
 			                country_or_non_sovereign_subject_holds = ROOT
 			            }
-			        	134 = { #Wien
-							is_strongest_trade_power = ROOT
-						}
+			        }
+			        134 = { #Wien
+						is_strongest_trade_power = ROOT
 					}
-					BAV = { is_subject_of = TDC }
 			    }
 		}
 		effect = {
 			if = {
 			    limit = {
 			        OR = {
-			            BAV = { is_subject_of = TDC }
+			            BAV = { is_subject_of = AUH }
 			            AND = {
 			                upper_bavaria_area = {
 			    		           type = all
@@ -112,7 +112,7 @@ trade_states = {
 		required_missions = { trade_on_the_adriatic }
 		trigger = {
 			    num_of_owned_provinces_with = {
-			        value = 10
+			        value = 12
 			        province_has_center_of_trade_of_level = 3
 			        development = 30
 			    }
@@ -158,8 +158,9 @@ internal_development = {
 	basic_subsistance = {
 		icon = mission_build_up_to_force_limit
 		position = 1
+		required_missions = {  }
 		trigger = {
-				all_owned_province = {
+				owns_all_provinces = {
 					development = 10
 					has_owner_accepted_culture = yes
 				}
@@ -177,8 +178,8 @@ internal_development = {
 		position = 2
 		required_missions = { basic_subsistance }
 		trigger = {
-				all_owned_province = {
-					development = 20
+				owns_all_provinces = {
+					development = 10
 					has_owner_accepted_culture = yes
 				}
 		}
@@ -196,7 +197,7 @@ internal_development = {
 		required_missions = { all_needs_met }
 		trigger = {
 			all_owned_province = {
-				num_of_times_expanded_infrastructure = 1
+				num_of_times_expanded_infrastructure = 2
 			}
 		}
 		effect = {
@@ -230,7 +231,7 @@ internal_development = {
 		required_missions = { local_universities }
 		trigger = {
 				all_owned_province = {
-					num_of_times_expanded_infrastructure = 2
+					num_of_times_expanded_infrastructure = 3
 					development = 30
 				}		
 		}
@@ -255,8 +256,9 @@ cultural_acceptance_and_dev = {
 	number_of_accepted_cultures = {
 		icon = mission_build_up_to_force_limit
 		position = 1
+		required_missions = {  }
 		trigger = {
-				num_accepted_cultures = 9
+				num_accepted_cultures = 10
 		}
 		effect = {
 			add_country_modifier = {
@@ -316,9 +318,9 @@ cultural_acceptance_and_dev = {
 				land_forcelimit = 200
 				has_global_modifier_value = {
 					which = discipline
-					value = 0.15
+					value = 0.2
 				}
-				land_morale = 6.0
+				land_morale = 6.5
 		}
 		effect = {
 			add_country_modifier = {
@@ -328,7 +330,7 @@ cultural_acceptance_and_dev = {
 		}
 	}
 
-	Landstreitkrafte_Osterreich_Ungarns = {
+	Landstreitkräfte_Österreich_Ungarns = {
 		icon = mission_build_up_to_force_limit
 		position = 5
 		required_missions = { a_strong_standing_army quartering_troops }
@@ -350,14 +352,20 @@ cultural_acceptance_and_dev = {
 	united_transdanubian_states = {
 		icon = mission_build_up_to_force_limit
 		position = 6
-		required_missions = { influence_in_the_city_of_desire country_of_100_capitals Landstreitkrafte_Osterreich_Ungarns equal_representation self_sufficient_states }
+		required_missions = { influence_in_the_city_of_desire country_of_100_capitals Landstreitkräfte_Österreich_Ungarns equal_representation self_sufficient_states }
 		trigger = {
+				is_year = 1750
+				current_size_of_parliament = 40
+				num_of_issues_passed = {
+					amount = 10
+				}
 				stability = 3
 				statesman = 5
 		}
 		effect = {
+			add_prestige = 30
 			country_event = { 
-				id = TRAN_EVENTS.2
+				id = TRAN_EVENTS.2 
 			}
 		}
 	}
@@ -374,8 +382,9 @@ government_supervision = {
 	competenet_and_multicultural_court = {
 		icon = mission_build_up_to_force_limit
 		position = 1
+		required_missions = {  }
 		trigger = {
-				num_of_different_cultures_in_court = 3
+				num_of_different_cultures_in_court = 4
 				OR = {
 					artist = 5
 					inquisitor = 5
@@ -418,8 +427,8 @@ government_supervision = {
 		required_missions = { competenet_and_multicultural_court }
 		trigger = {
 				OR = {
-					courthouse = 40
-					town_hall = 40
+					courthouse = 50
+					town_hall = 50
 				}
 				adm = 4
 		}
@@ -437,8 +446,8 @@ government_supervision = {
 		required_missions = { a_just_and_expansive_bureaucracy }
 		trigger = {
 				reform_level = 8
-				NOT = { unrest = -3 }
-				average_autonomy = 0
+				unrest = -2
+				average_autonomy = 10
 			}
 		effect = {
 			add_country_modifier = {
@@ -453,12 +462,13 @@ government_supervision = {
 		position = 4
 		required_missions = { trade_on_the_adriatic united_in_common_defense a_reformed_government manufacturing_ability }
 		trigger = {
-				reform_level = 8
+				reform_level = 13
 				republican_tradition = 100
 				government_reform_progress = 150
 		}
 		effect = {
 			change_government_reform_progress = -150
+			set_country_flag = grand_republic_formation
 			country_event = { 
 				id = TRAN_EVENTS.1 
 			}
@@ -470,10 +480,10 @@ government_supervision = {
 		position = 5
 		required_missions = { a_grand_republic }
 		trigger = {
-			months_of_ruling = 144
-			adm = 6
-			dip = 6
-			mil = 6
+				current_size_of_parliament = 30
+				num_of_issues_passed = {
+					amount = 5
+				}
 		}
 		effect = {
 			add_country_modifier = {
@@ -495,6 +505,7 @@ building_capacity = {
 	early_production_capacity = {
 		icon = mission_build_up_to_force_limit
 		position = 1
+		required_missions = {  }
 		trigger = {
 				num_of_owned_provinces_with = {
 					value = 15
@@ -586,10 +597,7 @@ building_capacity = {
 				counting_house = 50
 				town_hall = 50
 				university = 50
-				OR = {
-					trade_depot = 50
-					stock_exchange = 50
-				}
+				trade_depot = 50
 				num_of_owned_provinces_with = {
 					value = 50
 					has_manufactory_trigger = yes

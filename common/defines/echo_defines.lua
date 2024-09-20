@@ -36,7 +36,6 @@ NDefines.NDiplomacy.CELESTIAL_EMPIRE_MANDATE_PER_HUNDRED_TRIBUTARY_DEV = 0.5
 NDefines.NDiplomacy.CELESTIAL_EMPIRE_MANDATE_PER_5_LOANS = -0.36
 NDefines.NDiplomacy.TRADE_LEAGUE_BREAK_OPINION = -200
 NDefines.NDiplomacy.GREAT_POWER_SUBJECT_CONTRIBUTION = 1
-NDefines.NDiplomacy.HEGEMONY_LOST_DAYS = 3600
 
 NDefines.NCountry.ABANDON_IDEAGROUP_REFUND = 0.25
 NDefines.NCountry.ABDICATE_LEGITIMACY_THRESHOLD = 0
@@ -98,7 +97,6 @@ NDefines.NCountry.MINIMUM_POLICY_TIME = 1
 NDefines.NCountry.CONCENTRATE_DEVELOPMENT_DEVELOPMENT_DECREASE = 0.0
 NDefines.NCountry.EXPAND_INFRASTRUCTURE_DEV_LIMIT = 10
 NDefines.NCountry.ESTATE_MIN_DISTRIBUTED_CROWNLAND = 30.5
-NDefines.NCountry.MAXIMUM_CONDOTTIERI = 80
 
 NDefines.NEconomy.GOLD_MINE_SIZE = 25
 NDefines.NEconomy.EDICTS_DURATION_MONTHS = 1
@@ -121,6 +119,7 @@ NDefines.NMilitary.SIEGE_FORCE_NEEDED_MULTIPLIER =  0.334			-- x times garrison 
 NDefines.NMilitary.MAX_BREACH = 1
 NDefines.NMilitary.TRANSPORT_COST = 1
 NDefines.NMilitary.SUPPLYLIMIT_BASE_MULTIPLIER = 8.0
+NDefines.NMilitary.DEFAULT_WARGOAL_TICKINGWARSCORE_BONUS = 1.67
 NDefines.NMilitary.WARGOAL_MAX_BONUS = 40
 NDefines.NMilitary.WARSCORE_MAX_FROM_BATTLES = 50
 NDefines.NMilitary.WAR_ENTHUSIASM_HIGH_THRESHOLD = -15
@@ -132,7 +131,7 @@ NDefines.NMilitary.SIEGE_BONUS_WATER_SHORTAGE = 1
 NDefines.NMilitary.SIEGE_BONUS_DEFENDERS_DESERT = 1
 NDefines.NMilitary.NAVAL_DOCTRINE_SAILORS_COST = 0.05			-- Cost for switching naval doctrine (Share of sailors)
 NDefines.NMilitary.NAVAL_DOCTRINE_MIN_FORCE_LIMIT = 15
-NDefines.NMilitary.BACK_LINE_MORALE_DAMAGE_TAKEN_MODIFIER = 0.1	-- Multiplier for morale damage taken by backrow
+NDefines.NMilitary.BACK_LINE_MORALE_DAMAGE_TAKEN_MODIFIER = 0.0	-- Multiplier for morale damage taken by backrow
 NDefines.NMilitary.BACK_LINE_STRENGTH_DAMAGE_TAKEN_MODIFIER = 0.0
 NDefines.NMilitary.BACK_LINE_REINFORCE_SPEED = 40
 NDefines.NMilitary.INSUFFICIENT_SUPPORT = -0.5
@@ -143,7 +142,7 @@ NDefines.NMilitary.GALLEY_TIME = 90							-- _MDEF_GALLEY_TIME = 10,
 NDefines.NMilitary.TRANSPORT_TIME = 30	
 NDefines.NMilitary.INFANTRY_BREAKTHROUGH = 0.05
 NDefines.NMilitary.CAVALRY_BREAKTHROUGH = 0.3
-NDefines.NMilitary.CAVALRY_SPEED = 1.4
+NDefines.NMilitary.CAVALRY_SPEED = 1.2
 
 NDefines.NAI.BIGSHIP_FRACTION = 0.1
 NDefines.NAI.TRANSPORT_FRACTION = -1 -- Max fraction of naval forcelimit that should be transports
@@ -169,32 +168,11 @@ NDefines.NReligion.APPOINT_CARDINAL_INFLUENCE_PAPAL_STATE = 0
 
 NDefines.NGovernment.SELECT_HEIR_FROM_HAREM_AT_MONARCH_AGE = 20
 NDefines.NGovernment.GOVERNMENT_REFORM_CHANGE_PROGRESS_COST = 25
-NDefines.NGovernment.GOVERNMENT_REFORM_COST_CENTRALIZE_STATE = 20
+NDefines.NGovernment.GOVERNMENT_REFORM_COST_CENTRALIZE_STATE = 5
 NDefines.NGovernment.CENTRALIZE_STATE_YEARS = 2.5
-NDefines.NGovernment.CENTRALIZE_STATE_ADM_COST = 30
+NDefines.NGovernment.CENTRALIZE_STATE_ADM_COST = 25
 NDefines.NGovernment.EXPAND_ADMIN_COST = 400.0
 NDefines.NGovernment.LEADER_AS_MONARCH_TRADITION = 15
-NDefines.NGovernment.EXPAND_INFRASTRUCTURE_ADM_COST = 100
 
 NDefines.NGame.DAYS_BEHIND_PAUSE = 90					-- In multiplayer, if the slowest player is lagging behind this amount of days, the game will pause
 NDefines.NGame.DAYS_BEHIND_LOWER_SPEED = 999			-- In multiplayer, if the slowest player is lagging behind this amount of days, the game will slow down
-
--- Bunnyman Additions
-
--- Military
-NDefines.NMilitary.DEFAULT_WARGOAL_TICKINGWARSCORE_BONUS = 1.0 -- Monthly ticking warscore. Echo is 1.67, default is 0.4. *Change made due to complaints of ticking too fast last game
-NDefines.NMilitary.CONDOTTIERI_PRESTIGE_BONUS = 0.75 -- Prestige from land battles are modified by this. Default is 0.5. *Change made to encourage use of Condot
-NDefines.NMilitary.CONDOTTIERI_TRADITION_BONUS = 0.75 -- This modifies army tradition gained from fighting with condottieris. *Change made to encourage use of Condot
-
--- Diplomacy
-NDefines.NDiplomacy.PEACE_COST_DEMAND_PROVINCE = 0.78 -- Cost to annex provinces. Standard is 0.80. *Change made to make provinces about 3% easier to annex.
-NDefines.NDiplomacy.PEACE_COST_BECOME_VASSAL = 0.75 -- Cost to vassalize. Standard is 0.80. *Change made to encourage use of vassals slightly more
-NDefines.NDiplomacy.PEACE_COST_RETURN_CORE = 0.60 -- Cost to return cores. Standard is 0.80. *Change made to make it easier to reclaim lost cores in comeback wars
-NDefines.NDiplomacy.PEACE_COST_REVOKE_CORE = 0.30 -- Cost to revoke cores. Standard is 0.40. *Vice-Versa of previous
-NDefines.NDiplomacy.PEACE_COST_CONVERSION = 0.70 -- Cost to covert nation. Standard is 0.80. *Change made to increase religious roleplay
-NDefines.NDiplomacy.RELIGIOUS_LEAGUE_COOLDOWN = 10 -- Minimum years between joining/leaving religious league. Default is 5. *Change made to make league selection more of a commitment
-NDefines.NDiplomacy.JOIN_HRE_DEVELOPMENT_CAP_VASSAL = 350 -- Max cap of development to join the empire. Default is 200. *Change made to encourage more HRE Roleplay
-
--- country
-NDefines.NCountry.MAXIMUM_CONDOTTIERI = 25 -- Base number of units you can rent out. Default 20. *Change made to encourage use of Condot
-NDefines.NCountry.PS_REDUCE_WAREXHAUSTION = 125 -- Price to reduce war exhaustion. Default is 75. *Change to harder to easily spam reduce war exhaustion

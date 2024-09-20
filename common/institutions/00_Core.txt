@@ -15,13 +15,14 @@
 #######################################
 
 feudalism = {
-	
+
 	bonus = {
 		free_leader_pool = 1
 	}
 
 	trade_company_efficiency = 0.2
 
+	#effect = { } # When a country embraces it
 
 	history = {
 		is_year = 1000
@@ -58,19 +59,9 @@ feudalism = {
 					culture = omani_culture
 					culture = yemeni_culture
 					culture = swahili
-					
 					area = ningguta_area
 					area = jilin_area
 					culture_group = byzantine
-					culture = kongolese
-					culture = mbundu
-					culture = songhai
-					culture = mali
-					culture = bilala
-					culture = uzbehk
-					culture = khazak
-					culture = siberian
-					culture = ostyaki
 					culture_group = dravidian
 					culture_group = east_asian
 					culture_group = east_slavic
@@ -285,6 +276,7 @@ feudalism = {
 renaissance = {
 
 	bonus = {
+		development_cost = -0.05
 		build_cost = -0.05
 	}
 
@@ -416,28 +408,9 @@ renaissance = {
 				region = italy_region
 				culture_group = latin
 			}
+			
+			
 		}
-		modifier = {
-			factor = 0.3
-			scale = yes
-			potential = {
-			}
-			custom_trigger_tooltip = {
-				tooltip = tooltip_development_30
-				development = 30
-			}
-		}
-		modifier = {
-			factor = 1
-			scale = no
-			potential = {
-			}
-			custom_trigger_tooltip = {
-				tooltip = PR_renaissance_capital_country_over_100_dev
-				is_capital = yes
-				owner = { total_development = 100 }
-			}
-		}	
 		modifier = {
 			factor = 0.05
 			scale = yes
@@ -492,17 +465,6 @@ renaissance = {
 					area = tuscany_area
 					area = venetia_area
 				}
-			}
-		}
-		modifier = {
-			factor = 0.5
-			scale = yes
-			potential = {
-				area = thrace_area
-			}
-			custom_trigger_tooltip = {
-				tooltip = tooltip_thrace_area
-				area = thrace_area
 			}
 		}
 		modifier = {
@@ -592,12 +554,76 @@ new_world_i = {
 		OR = {
 			AND = {
 				is_year = 1500
-				continent = europe		
-				owner = { colony = 1 }
+				continent = europe
+				OR = {
+					owner = { has_idea = quest_for_the_new_world }
+					owner = { colony = 1 }
 				}
 			}
+			AND = {
+				is_year = 1550
+				owner = {
+					NOT = { technology_group = north_american }
+					NOT = { technology_group = mesoamerican }
+					NOT = { technology_group = south_american }
+					NOT = { technology_group = andean }
+				}
+				superregion = south_america_superregion
+			}
+			AND = {
+				is_year = 1550
+				owner = {
+					NOT = { technology_group = north_american }
+					NOT = { technology_group = mesoamerican }
+					NOT = { technology_group = south_american }
+					NOT = { technology_group = andean }
+				}
+				superregion = north_america_superregion
+			}
+			AND = {
+				is_year = 1550
+				owner = {
+					NOT = { technology_group = north_american }
+					NOT = { technology_group = mesoamerican }
+					NOT = { technology_group = south_american }
+					NOT = { technology_group = andean }
+				}
+				superregion = central_america_superregion
+			}
+			AND = {
+				is_year = 1600
+				superregion = near_east_superregion
+			}
+			AND = {
+				is_year = 1600
+				continent = europe
+			}
+			AND = {
+				is_year = 1625
+				superregion = persia_superregion
+			}
+			AND = {
+				is_year = 1650
+				superregion = india_superregion
+			}
+			
+			
+			AND = {
+				is_year = 1650
+				superregion = china_superregion
+			}
+			
+			AND = {
+				is_year = 1650
+				superregion = east_indies_superregion
+			}
+			AND = {
+				is_year = 1700
+				superregion = africa_superregion
+			}
+			is_year = 1800
 		}
-	
+	}
 	
 	can_start = {
 		is_year = 1500
@@ -617,19 +643,36 @@ new_world_i = {
 		}
 		is_in_capital_area = yes
 		owner = { 
+			has_any_exploration_idea = yes
+			#at least one province colonised or colonising, or have a subject colony
 			OR = {
-				AND = {
-					north_america = { has_discovered = PREV }
-					num_of_colonists = 1
+				any_owned_province = {
+					OR = {
+						continent = north_america
+						continent = south_america
+						continent = new_world
+					}
 				}
-				AND = {
-					south_america = { has_discovered = PREV }
-					num_of_colonists = 1
+				any_subject_country = {
+					OR = {
+						is_subject_of_type = colony
+						is_subject_of_type = crown_colony
+						is_subject_of_type = private_enterprise
+						is_subject_of_type = self_governing_colony
+					}
+					capital_scope = {
+						OR = {
+							continent = north_america
+							continent = south_america
+							continent = new_world
+						}
+					}
 				}
-				AND = {
-					new_world = { has_discovered = PREV }
-					num_of_colonists = 1
-				}
+			}
+			OR = {
+				north_america = { has_discovered = PREV }
+				south_america = { has_discovered = PREV }
+				new_world = { has_discovered = PREV }
 			}
 		}
 	}
@@ -718,53 +761,7 @@ new_world_i = {
 				}
 			}
 		}
-		modifier = {
-			factor = 0.1
-			scale = yes
-			potential = {
-			}
-			custom_trigger_tooltip = {
-				tooltip = PR_colonialism_coastal
-				has_port = yes
-			}
-		}
-		modifier = {
-			factor = 3
-			scale = no
-			potential = {
-			}
-			custom_trigger_tooltip = {
-				tooltip = PR_colonialism_coastal_cot_lvl_3
-				has_port = yes
-				province_has_center_of_trade_of_level = 3
-			}
-		}
-		modifier = {
-			factor = 0.2
-			scale = yes
-			potential = {
-			}
-			custom_trigger_tooltip = {
-				tooltip = PR_colonialism_capital_no_coast_in_country
-				is_capital = yes
-				owner = {
-					NOT = { num_of_total_ports = 1 }
-				}
-			}
-		}
-		modifier = {
-			factor = 0.2
-			scale = yes
-			potential = {
-			}
-			custom_trigger_tooltip = {
-				tooltip = PR_colonialism_cot_lvl_3_no_coast_in_country
-				province_has_center_of_trade_of_level = 3
-				owner = {
-					NOT = { num_of_total_ports = 1 }
-				}
-			}
-		}
+		
 		modifier = {
 			factor = 5
 			scale = yes
@@ -836,11 +833,9 @@ new_world_i = {
 # Printing Press
 #######################################
 printing_press = {
-	
 
 	bonus = {
-		stability_cost_modifier = -0.10
-		all_estate_loyalty_equilibrium = 0.1
+		stability_cost_modifier = -0.05
 	}
 
 	trade_company_efficiency = 0.8
@@ -936,14 +931,11 @@ printing_press = {
 			is_capital = yes
 			trade_goods = paper
 		}
-		religion_group = christian
 		OR = {
-			region = north_german_region
-			region = south_german_region
 			religion = protestant
 			religion = reformed
-			religion = anglican
-			religion = hussite
+			region = north_german_region
+			region = south_german_region
 		}
 
 	}
@@ -1024,27 +1016,17 @@ printing_press = {
 				}
 			}
 		}
-
 		modifier = {
-			factor = 0.15
+			factor = 0.05
 			scale = yes
 			potential = {
+				continent = europe
 			}
 			custom_trigger_tooltip = {
-				tooltip = PR_printing_press_capital_20_dev
+				tooltip = tooltip_development_20_capital
 				development = 20
 				is_capital = yes
-			}
-		}
-		modifier = {
-			factor = 6
-			scale = no
-			potential = {
-			}
-			custom_trigger_tooltip = {
-				tooltip = PR_printing_press_paper
-				trade_goods = paper
-				NOT = { continent = europe }
+				continent = europe
 			}
 		}
 		modifier = {
@@ -1612,7 +1594,6 @@ manufactories = {
 			has_building = plantations
 			has_building = tradecompany
 			has_building = mills
-			has_building = farm_estate
 		}
 	}
 	start_chance = 10		#in 100 for when a province can_start

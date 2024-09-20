@@ -7,7 +7,6 @@ naval_hegemon = {
 				NOT = { has_country_flag = jap_halve_naval_hegemony_requirements }
 			}
 			navy_size = 500
-			num_of_heavy_ship = 100
 			NOT = { any_other_great_power = { num_of_heavy_ship = root } }
 		}
 		else = {
@@ -32,7 +31,7 @@ naval_hegemon = {
 	}
 	
 	max = {
-		all_power_cost = -0.05
+		all_power_cost = -0.1
 		backrow_artillery_damage = 0.15
 	}
 	

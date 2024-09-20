@@ -1205,7 +1205,7 @@ dan_sca_balticum_dominance_mod = {	#Permanent
 
 dan_sca_indian_administration = {	#Permanent
 	trade_company_governing_cost = -0.25
-	trade_steering = 0.15
+	trade_steering = 0.2
 }
 
 sca_great_empire_of_scandinavia = {	#Permanent
@@ -1810,7 +1810,7 @@ gbr_recovering_prestige = {
 
 gbr_naval_dominance = {	#Permanent
 	reduced_liberty_desire_on_other_continent = 10
-	trade_steering = 0.10
+	trade_steering = 0.25
 	global_ship_trade_power = 0.25
 	global_sailors_modifier = 0.25
 }
@@ -1824,7 +1824,7 @@ gbr_religious_stability = {
 }
 
 gbr_new_world_dominance = {	#Permanent
-	global_tariffs = 0.20
+	global_tariffs = 0.25
 	trade_efficiency = 0.1
 }
 
@@ -4624,7 +4624,7 @@ reorganzied_swiss_confederacy = {
 }
 
 swi_expanded_papal_guard = {
-	mercenary_cost = -0.075
+	mercenary_cost = -0.2
 }
 
 ended_the_habsburgs = {
@@ -5202,7 +5202,7 @@ sav_savoyard_army = {
 #Italian missions
 
 ita_italian_prosperity = {
-	development_cost = -0.05
+	development_cost = -0.1
 	stability_cost_modifier = -0.25
 }
 
@@ -5441,7 +5441,7 @@ pru_space_marines_2 = {
 }
 
 pru_chinese_trade = {
-	trade_steering = 0.25
+	trade_steering = 0.33
 }
 
 pru_emden_company_modifier = {
@@ -12296,6 +12296,7 @@ ITA_integration_with_southern_france = {
 }
 
 ITA_unity = {
+	local_development_cost = -0.1
 	local_prosperity_growth = 0.33
 	trade_goods_size_modifier = 0.15
 }
@@ -12347,6 +12348,7 @@ ITA_renaissance = {
 ITA_new_renaissance = {
 	national_focus_years = -5
 	advisor_cost = -0.25
+	development_cost_in_primary_culture = -0.1
 }
 
 ITA_adapt_the_condotierri = {
@@ -12405,8 +12407,8 @@ free_slot_for_occitain = {
 }
 
 ITA_industrial_triangle_modifier = {
-	trade_goods_size_modifier = 0.10
-	local_development_cost = -0.10
+	trade_goods_size_modifier = 0.25
+	local_development_cost = -0.25
 }
 
 ITA_extra_goods_produced_for_colonies = {
@@ -12431,9 +12433,9 @@ GER_rapid_industrialization = {
 }
 
 GER_major_city = {
-	trade_goods_size_modifier = 0.20
-	trade_goods_size = 0.2
-	local_development_cost = -0.10
+	trade_goods_size_modifier = 0.33
+	trade_goods_size = 0.4
+	local_development_cost = -0.3
 }
 
 GER_a_turn_inwards = {
@@ -12804,11 +12806,13 @@ ned_empowered_staatse_leger = {
 }
 
 ned_low_countries_fort_buff = {
+	local_development_cost = -0.05
 	local_production_efficiency = 0.1
 	local_defensiveness = 0.1
 }
 
 ned_low_countries_fort_buff_buffed = {
+	local_development_cost = -0.1
 	local_production_efficiency = 0.2
 	local_defensiveness = 0.2
 }
@@ -12887,12 +12891,12 @@ ned_prelude_true_freedom = {
 }
 
 ned_true_freedom = {
-	state_governing_cost = -0.1
+	all_power_cost = -0.025
 	stability_cost_modifier = -0.1
 }
 
 ned_orangist_triumph = {
-	max_absolutism = 10
+	max_absolutism = 20
 	max_absolutism_effect = 0.1
 }
 
@@ -14860,7 +14864,8 @@ ITA_constantinople_taken_no_dlc = {
 }
 
 ITA_unity_no_dlc = {
-    trade_goods_size_modifier = 0.2
+    local_development_cost = -0.15
+    trade_goods_size_modifier = 0.3
 }
 
 ITA_best_form_of_defense_is_attack_no_dlc = {

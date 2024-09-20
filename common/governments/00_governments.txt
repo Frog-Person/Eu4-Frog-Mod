@@ -24,7 +24,6 @@ monarchy = {
 				prussian_monarchy
 				prussian_monarchy_base
 				austrian_dual_monarchy
-				austrian_empire_monarchy
 				principality
 				tsardom
 				mamluk_government
@@ -576,7 +575,6 @@ republic = {
 	reform_levels = {
 		oligarchy_merchant_class_noble_elite = {
 			reforms = {
-				transdanubian_peoples_republic
 				oligarchy_reform
 				signoria_reform
 				merchants_reform
@@ -1592,9 +1590,6 @@ pre_dharma_mapping = {
 		government = monarchy
 		legacy_government = prussian_monarchy_legacy
 	}
-	austrian_empire_monarchy = {
-		government = monarchy
-	}
 	iqta = {
 		government = monarchy
 		legacy_government = iqta_legacy
@@ -1626,9 +1621,6 @@ pre_dharma_mapping = {
 	peasants_republic = {
 		government = republic
 		legacy_government = peasants_republic_legacy
-	}
-	transdanubian_peoples_republic = {
-		government = republic
 	}
 	veche_republic = {
 		government = republic

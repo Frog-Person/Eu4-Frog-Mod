@@ -37,7 +37,7 @@ po_fleet_disarmament = {
 			remove_country_modifier = recovering_fleet
 			add_country_modifier = {
 				name = recovering_fleet
-				duration = 5475
+				duration = 7300
 			}
 		}
 	}
