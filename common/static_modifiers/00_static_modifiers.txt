@@ -347,14 +347,14 @@ territory_non_core = {
 }
 
 march_bonus = {
-	global_manpower_modifier = 0.25
-	land_forcelimit_modifier = 0.30
-	naval_forcelimit_modifier = 0.30
-	defensiveness = 0.2
-	fort_maintenance_modifier = -0.20
-	manpower_recovery_speed = 0.20
-	land_maintenance_modifier = -0.20
-	naval_maintenance_modifier = -0.20
+	global_manpower_modifier = 0.40
+	land_forcelimit_modifier = 0.40
+	naval_forcelimit_modifier = 0.40
+	defensiveness = 0.30
+	fort_maintenance_modifier = -0.40
+	manpower_recovery_speed = 0.40
+	land_maintenance_modifier = -0.40
+	naval_maintenance_modifier = -0.40
 }
 
 pu_subject_bonus = {
@@ -776,20 +776,20 @@ call_for_peace = {
 }
 
 war_exhaustion = {
-	global_unrest = 1
+	global_unrest = 1.5
 	global_regiment_recruit_speed = 0.02
 	global_ship_recruit_speed = 0.02
 	#core_creation = 0.03
 	temples_influence = -0.05
 	mr_aristocrats_influence = -0.05
 	rr_girondists_influence = -0.05
-	rr_royalists_influence = 0.05
+	rr_royalists_influence = 0.05	
 	manpower_recovery_speed = -0.01
 	sailors_recovery_speed = -0.01
-	siege_ability = -0.01
+	siege_ability = -0.005
 	global_trade_goods_size_modifier = -0.02
 	monthly_militarized_society = -0.05
-	defensiveness = -0.0125
+	defensiveness = -0.04
 }
 
 doom = {
@@ -852,7 +852,7 @@ army_tradition = {
 navy_tradition = {
 	recover_navy_morale_speed = 0.1
 	naval_morale = 0.25
-	trade_steering = 1.0
+	trade_steering = 0.5
 	privateer_efficiency = 0
 	enuchs_influence = 0.1
 	mr_traders_influence = 0.1
@@ -1426,8 +1426,8 @@ new_world_exploitation_modifier = {
 }
 
 gbr_colonial_investment = {
-	production_efficiency = 0.5
-	trade_efficiency = 0.5
+	production_efficiency = 0.15
+	trade_efficiency = 0.15
 }
 
 crown_colony_overlord = {
@@ -1691,16 +1691,16 @@ divert_trade = {
 ########################################
 
 karma_just_right = {
-	discipline = 0.05
+	discipline = 0.025
 	development_cost = -0.05
 }
 
 karma_too_high = {
-	discipline = 0.05
+	discipline = 0.025
 	development_cost = -0.05}
 
 karma_too_low = {
-	discipline = 0.05
+	discipline = 0.025
 	development_cost = -0.05
 }
 
@@ -1748,7 +1748,7 @@ native_policy_hostile = {
 
 high_harmony = {
 	tolerance_own = 3
-	development_cost = -0.1
+	build_cost = -0.1
 	meritocracy = 1
 	legitimacy = 0.5
 	devotion = 1
@@ -1895,7 +1895,6 @@ inward_focus_modifier = {
 	province_warscore_cost = 1
 	stability_cost_to_declare_war = 1
 	ae_impact = 0.33
-	development_cost_modifier = -0.05
 	defensiveness = 0.15
 	fort_maintenance_modifier = -0.2
 	build_cost = -0.05
@@ -2184,7 +2183,7 @@ under_governing_capacity_modifier = {
 
 
 lost_hegemony = {
-	#all_power_cost	= 0.10
+	all_power_cost	= 0.10
 }
 
 at_peace_revolutionary = { # Applied if at peace while reactionaries are bordering you
@@ -2198,8 +2197,7 @@ expanded_infrastructure = {
 	ship_recruit_speed = -0.15
 	local_defensiveness = 0.05
 	garrison_growth = 0.05
-	local_development_cost_modifier  = -0.05
-	local_development_cost = -0.05
+	local_development_cost = -0.15
 	local_production_efficiency = 0.15
 	local_tax_modifier = 0.15
 	local_manpower_modifier = 0.15
@@ -2210,8 +2208,8 @@ expanded_infrastructure = {
 	local_build_time = -0.05
 	province_trade_power_modifier = 0.05
 	trade_goods_size_modifier = 0.075
-	local_governing_cost_increase = 5
-	local_governing_cost = 0.1
+	local_governing_cost_increase = 10
+	local_governing_cost = 0.15
 	local_great_project_upgrade_cost = -0.05
 	land_forcelimit = 0.75
 }

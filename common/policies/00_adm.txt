@@ -303,8 +303,8 @@ public_welfare_act = {
 		full_idea_group = economic_ideas
 	}
 	
-	development_cost_in_primary_culture = -0.1
-	stability_cost_modifier = -0.25
+	development_cost_in_primary_culture = -0.05
+	stability_cost_modifier = -0.20
 
 	effect = {}
 	removed_effect = {}

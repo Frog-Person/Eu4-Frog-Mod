@@ -1752,6 +1752,7 @@ stadthalter_monarchy_reform = {
 	allow_normal_conversion = yes
 	potential = {
 		OR = {
+			tag = LOT
 			AND = {
 				OR = {
 					primary_culture = dutch
@@ -2425,6 +2426,55 @@ prussian_monarchy_base = {
 		allow = { has_dlc = "Rights of Man" }
 		government_abilities = {
 			militarization_mechanic
+		}
+	}
+}
+
+austrian_empire_monarchy = {
+	icon = "prussian_monarchy"
+	allow_normal_conversion = yes
+	potential = {
+		has_dlc = "Domination"
+		NOT = { has_reform = prussian_monarchy_base }
+		OR = {
+			AND = {
+				tag = AUE
+				NOT = { map_setup = map_setup_random }
+			}
+			has_unlocked_government_reform = {
+				government_reform = prussian_monarchy
+			}
+			has_reform = prussian_monarchy
+			have_had_reform = prussian_monarchy
+		}
+	}
+	trigger = {
+		OR = {
+			religion = protestant
+			religion = reformed
+			religion = hussite
+			religion = anglican
+			religion = catholic
+			has_unlocked_government_reform_tooltip = {
+				government_reform = prussian_monarchy
+			}
+		}
+	}
+
+	modifiers = {
+		war_exhaustion = -0.01
+		global_unrest = -1
+		global_autonomy = -0.075
+		max_absolutism = 10
+		monarch_military_power = 1
+		nobles_loyalty_modifier = 0.1
+		governing_capacity_modifier = -0.15
+	}
+
+	conditional = {
+		allow = { has_dlc = "Domination" }
+		government_abilities = {
+			prussian_militarization_mechanic_1
 		}
 	}
 }
@@ -5106,7 +5156,7 @@ poligar_reform = {
 	}
 	modifiers = {
 		infantry_power = 0.1
-		development_cost = -0.05
+		development_cost = -0.025
 	}
 	ai = {
 		factor = 3

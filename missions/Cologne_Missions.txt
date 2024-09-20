@@ -30,6 +30,10 @@ german_dominance = {
 			lower_rhineland_area = {
 				add_permanent_claim = ROOT
 			}
+			add_country_modifier = {
+				name = KOL_rise_to_power
+				duration = 10958
+			}
 		}
 	}
 	conquer_rhineland = {
@@ -73,6 +77,16 @@ german_dominance = {
 		icon = mission_cannons_firing
 		position = 3
 		required_missions = { conquer_rhineland }
+		
+		provinces_to_highlight = {
+			OR = {
+				area = hesse_area
+			}
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		
 		trigger = {
 			hesse_area = {
 				type = all
@@ -107,6 +121,18 @@ german_dominance = {
 		icon = mission_hanseatic_city
 		position = 4
 		required_missions = { conquer_hesse }
+		
+		provinces_to_highlight = {
+			OR = {
+				area = palatinate_area
+				area = alsace_area
+				area = upper_rhineland_area
+			}
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		
 		trigger = {
 			palatinate_area = {
 				type = all
@@ -472,6 +498,17 @@ cologne_second = {
 		icon = mission_cannons_firing
 		position = 2
 		required_missions = { kol_build_to_forcelimit }
+		
+		provinces_to_highlight = {
+			OR = {
+				area = westphalia_area
+				area = north_westphalia_area
+			}
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		
 		trigger = {
 			westphalia_area = {
 				type = all
@@ -496,6 +533,16 @@ cologne_second = {
 		icon = mission_cannons_firing
 		position = 4
 		required_missions = { conquer_westphalia }
+		
+		provinces_to_highlight = {
+			OR = {
+				area = braunschweig_area
+			}
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		
 		trigger = {
 			owns_all_provinces = {
 				area = braunschweig_area
@@ -514,7 +561,18 @@ cologne_second = {
 	control_the_weser_estuary = {
 		icon = mission_galleys_in_port
 		position = 5
+		
 		required_missions = { conquer_braunschweig }
+		
+		provinces_to_highlight = {
+			OR = {
+				area = weser_area
+			}
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		
 		trigger = {
 			weser_area = {
 				type = all
@@ -595,6 +653,16 @@ cologne_third = {
 		icon = mission_galleys_in_port
 		position = 3
 		required_missions = { conquer_westphalia }
+		
+		provinces_to_highlight = {
+			OR = {
+				province_id = 1931 
+			}
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		
 		trigger = {
 			1931 = {
 				country_or_non_sovereign_subject_holds = ROOT
@@ -613,6 +681,16 @@ cologne_third = {
 		icon = mission_open_up_china
 		position = 4
 		required_missions = { control_the_ems_estuary }
+		
+		provinces_to_highlight = {
+			OR = {
+				province_id = 4383
+			}
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		
 		trigger = {
 			4383 = {
 				country_or_non_sovereign_subject_holds = ROOT
@@ -671,6 +749,19 @@ cologne_fourth = {
 		icon = ansbach_succession
 		position = 1
 		required_missions = {  }
+		
+		provinces_to_highlight = {
+			OR = {
+				province_id = 85
+			}
+			NOT = {
+				AND = {
+					num_of_times_improved_by_owner = 3
+					has_building = temple
+				}
+			}
+		}
+		
 		trigger = {
 			85 = {
 				num_of_times_improved_by_owner = 3
@@ -681,13 +772,32 @@ cologne_fourth = {
 			85 = {
 				remove_building = temple
 				add_building = cathedral
+				add_base_tax = 2
+				add_base_production = 1
+				add_base_manpower = 1
 			}
+			
 		}
 	}
 	increase_the_cathedral_to_level_2 = {
 		icon = mission_european_church
 		position = 2
 		required_missions = { develop_cologne }
+		
+		provinces_to_highlight = {
+			OR = {
+				province_id = 85
+			}
+			NOT = {
+				85 = {
+					has_great_project = {
+						type = any
+						tier = 2
+					}
+				}
+			}
+		}
+		
 		trigger = {
 			85 = {
 				has_great_project = {
@@ -702,6 +812,9 @@ cologne_fourth = {
 					type = cologne_cathedral
 					tier = 1
 				}
+				add_base_tax = 2
+				add_base_production = 1
+				add_base_manpower = 1
 			}
 		}
 	}
@@ -709,6 +822,26 @@ cologne_fourth = {
 		icon = mission_eastern_european_city
 		position = 3
 		required_missions = { conquer_rhineland increase_the_cathedral_to_level_2 }
+		
+		provinces_to_highlight = {
+			OR = {
+				area = north_rhine_area
+				area = lower_rhineland_area
+			}
+			NOT = {
+				north_rhine_area = {
+					type = all
+					base_production = 8
+					has_building = workshop
+				}
+				lower_rhineland_area = {
+					type = all
+					base_production = 8
+					has_building = workshop
+				}
+			}
+		}
+		
 		trigger = {
 			north_rhine_area = {
 				type = all
@@ -737,6 +870,29 @@ cologne_fourth = {
 		icon = ger_kaiserreich
 		position = 4
 		required_missions = { develop_the_rhine_area }
+		
+		provinces_to_highlight = {
+			OR = {
+				area = north_rhine_area
+				area = lower_rhineland_area
+				area = palatinate_area
+			}
+			NOT = {
+				north_rhine_area = {
+					type = all
+					has_manufactory_trigger = yes
+				}
+				lower_rhineland_area = {
+					type = all
+					has_manufactory_trigger = yes
+				}
+				palatinate_area = {
+					type = all
+					has_manufactory_trigger = yes
+				}
+			}
+		}
+		
 		trigger = {
 			north_rhine_area = {
 				type = all
@@ -779,6 +935,18 @@ cologne_fourth = {
 		icon = the_imperial_border
 		position = 5
 		required_missions = { conquer_braunschweig }
+		
+		provinces_to_highlight = {
+			OR = {
+				province_id = 4774
+				province_id = 2972
+				province_id = 2971
+			}
+			NOT = {
+				fort_level = 2
+			}
+		}
+		
 		trigger = {
 			4774 = {
 				country_or_non_sovereign_subject_holds = ROOT
@@ -879,6 +1047,26 @@ cologne_fith = {
 		icon = mission_build_up_to_force_limit
 		position = 3
 		required_missions = { conquer_westphalia increase_the_cathedral_to_level_2 }
+		
+		provinces_to_highlight = {
+			OR = {
+				area = westphalia_area
+				area = north_westphalia_area
+			}
+			NOT = {
+				westphalia_area = {
+					type = all
+					base_production = 8
+					has_building = workshop
+				}
+				north_westphalia_area = {
+					type = all
+					base_production = 8
+					has_building = workshop
+				}
+			}
+		}
+		
 		trigger = {
 			westphalia_area = {
 				type = all
@@ -907,6 +1095,34 @@ cologne_fith = {
 		icon = mission_build_up_to_force_limit
 		position = 4
 		required_missions = { develop_the_rhine_area develop_westphalia }
+		
+		provinces_to_highlight = {
+			OR = {
+				area = westphalia_area
+				area = north_westphalia_area
+				area = north_rhine_area
+				area = lower_rhineland_area
+			}
+			NOT = {
+				north_rhine_area = {
+					type = all
+					has_building = university
+				}
+				lower_rhineland_area = {
+					type = all
+					has_building = university
+				}
+				westphalia_area = {
+					type = all
+					has_building = university
+				}
+				north_westphalia_area = {
+					type = all
+					has_building = university
+				}
+			}
+		}
+		
 		trigger = {
 			north_rhine_area = {
 				type = all
@@ -1181,4 +1397,3 @@ branching_1 = {
 		effect = { }
 	}
 }
-

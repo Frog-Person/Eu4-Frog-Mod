@@ -1,0 +1,48 @@
+swiss_expanded_mercs = {
+	mercenary_manpower = 0.25
+	mercenary_discipline = 0.05
+	merc_maintenance_modifier = -0.15
+	possible_condottieri = 1
+}
+swi_mountain_mines = {
+	artillery_power = 0.075
+}
+swi_savoy_goods = {
+	trade_goods_size = 0.75
+	defensiveness = 0.15
+	development_cost = -0.1
+}
+swi_kick_the_french = {
+	global_tax_modifier = 0.15
+	discipline = 0.025
+}
+ended_the_french = {
+	prestige = 1
+	land_morale = 0.05
+}
+swi_milan_taken = {
+	mercenary_discipline = 0.05
+	mercenary_manpower = 0.10
+}
+fortress_switzerland = {
+	local_defender_dice_roll_bonus = 1
+	garrison_damage = 0.30
+}
+swi_rhine_taken = {
+	infantry_power = 0.075
+	caravan_power = 0.1
+	trade_efficiency = 0.1
+}
+swi_textiles = {
+	trade_goods_size = 3
+}
+swiss_professional_army = {
+	yearly_army_professionalism = 0.0015
+}
+swi_prosperity = {
+	diplomatic_reputation = 2
+	diplomats = 1
+	diplomatic_upkeep = 1
+	envoy_travel_time = -0.2
+	accept_vassalization_reasons = 10
+}

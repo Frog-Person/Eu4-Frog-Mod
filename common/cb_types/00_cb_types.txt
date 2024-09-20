@@ -45,7 +45,6 @@ cb_restore_personal_union = {
 
 	prerequisites = {
 		FROM = {
-			ai = yes
 			OR = {
 				government = monarchy
 				has_reform = ambrosian_republic
@@ -202,14 +201,13 @@ cb_border_war = {
 
 # Trade War (from events and others)
 cb_trade_war_triggered = {
-	prerequisites = {
-		always = no
-	}
 	valid_for_subject = no
 
-
+	is_triggered_only = yes
+	months = 24
 
 	war_goal = superiority_trade
+
 
 	attacker_disabled_po = {
 		po_demand_provinces
@@ -229,11 +227,11 @@ cb_trade_war_triggered = {
 cb_trade_conflict = {
 	valid_for_subject = no
 
-	prerequisites = {
-		always = no
-	}
+	is_triggered_only = yes
+	months = 24
 
 	war_goal = blockade_ports
+
 
 	attacker_disabled_po = {
 		po_demand_provinces
@@ -275,9 +273,16 @@ cb_trade_conflict_triggered = {
 
 cb_trade_league_conflict = {
 
-	prerequisites = {
-		always = no
+	valid_for_subject = no
+
+	prerequisites_self = {
+		is_trade_league_leader = yes
 	}
+
+	prerequisites = {
+		can_justify_trade_conflict = FROM
+	}
+	months = 24
 
 	war_goal = blockade_ports
 
@@ -799,9 +804,6 @@ cb_crusade = {
 			}
 			cb_on_religious_enemies = yes
 		}
-	FROM = {
-			ai = yes
-		}
 	}
 
 	war_goal = superiority_crusade
@@ -823,9 +825,6 @@ cb_crusade_pheasants = {
 		}
 		NOT = { religion_group = FROM }
 		NOT = {	has_matching_religion = FROM }
-		FROM = {
-			ai = yes
-		}
 	}
 
 	war_goal = superiority_crusade
@@ -945,12 +944,21 @@ cb_excommunication = {
 cb_trade_war = {
 
 	prerequisites_self = {
-		always = no
+		is_revolutionary = no
 	}
 
 	prerequisites = {
 
-		always = no
+		OR = {
+			AND = {
+				trade_embargo_by = FROM
+				NOT = { FROM = { trade_embargo_by = ROOT } }
+			}
+			AND = {
+				has_government_attribute = is_merchant_republic
+				FROM = { has_government_attribute = is_merchant_republic }
+			}
+		}
 	}
 
 	war_goal = superiority_trade_mutual
@@ -974,11 +982,13 @@ cb_trade_war = {
 cb_trade_league_dispute = {
 
 	prerequisites_self = {
-		always = no
+		is_trade_league_leader = yes
+		is_revolutionary = no
 	}
 
 	prerequisites = {
-		always = no
+		NOT = { ROOT = { trade_embargo_by = FROM } }
+		ROOT = { trade_league_embargoed_by = FROM }
 	}
 
 	war_goal = superiority_trade_mutual
@@ -1084,12 +1094,11 @@ cb_claim_throne = {
 	valid_for_subject = no
 
 	prerequisites_self = {
-		FROM = {ai = yes }
+		is_revolutionary = no
 	}
 
 	prerequisites = {
 		succession_claim = FROM
-		FROM = {ai = yes }
 	}
 
 	war_goal = take_capital_throne
@@ -1157,14 +1166,13 @@ cb_revoke_electorate = {
 # When someone is privateering in a node that you trade and have some power in.
 cb_privateers = {
 	prerequisites_self = {
-			FROM = {ai = yes }
+		is_revolutionary = no
 	}
 
 	prerequisites = {
 		FROM = {
 			has_privateers = yes
 		}
-		FROM = {ai = yes }
 		or = {
 			home_trade_node = {
 				trade_share = {
