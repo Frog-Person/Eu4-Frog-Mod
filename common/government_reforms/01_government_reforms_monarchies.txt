@@ -365,59 +365,59 @@ appanage_reform = {
 }
 
 absolutist_france_reform = {
-	icon = "absolutist_france_reform"
-	allow_normal_conversion = no
-	potential = {
-		has_dlc = "Domination" 
-		OR = {
-			AND = { 
-				tag = FRA 
-				OR = {
-					has_reform = absolutist_france_reform
-					have_had_reform = absolutist_france_reform
-					has_unlocked_government_reform = { government_reform = absolutist_france_reform }
-				}
-			}
-			AND = {
-				is_playing_custom_nation = yes
-				have_had_reform = absolutist_france_reform
-			}
-			mission_completed = fra_movement_centralization
-		}
-	}
-	trigger = {
-		OR = {
-			AND = { 
-				tag = FRA 
-				OR = {
-					has_reform = absolutist_france_reform
-					have_had_reform = absolutist_france_reform
-				}
-			}
-			AND = {
-				is_playing_custom_nation = yes
-				have_had_reform = absolutist_france_reform
-			}
-		}
-	}
-	valid_for_nation_designer = yes
-	nation_designer_cost = 50
-	nation_designer_trigger = {
-		culture_group = french
-		technology_group = western
-		capital_scope = { region = france_region }
-	}
-	lock_level_when_selected = yes
+    icon = "absolutist_france_reform"
+    allow_normal_conversion = no
+    potential = {
+        has_dlc = "Domination" 
+        OR = {
+            AND = { 
+                tag = FRA 
+                OR = {
+                    has_reform = absolutist_france_reform
+                    have_had_reform = absolutist_france_reform
+                    has_unlocked_government_reform = { government_reform = absolutist_france_reform }
+                }
+            }
+            AND = {
+                is_playing_custom_nation = yes
+                have_had_reform = absolutist_france_reform
+            }
+            mission_completed = fra_movement_centralization
+        }
+    }
+    trigger = {
+        OR = {
+            AND = { 
+                tag = FRA 
+                OR = {
+                    has_reform = absolutist_france_reform
+                    have_had_reform = absolutist_france_reform
+                }
+            }
+            AND = {
+                is_playing_custom_nation = yes
+                have_had_reform = absolutist_france_reform
+            }
+        }
+    }
+    valid_for_nation_designer = yes
+    nation_designer_cost = 50
+    nation_designer_trigger = {
+        culture_group = french
+        technology_group = western
+        capital_scope = { region = france_region }
+    }
+    lock_level_when_selected = yes
 
-	modifiers = {
-		all_estate_influence_modifier = -0.1
-		max_absolutism = 10
-		
-	}
+    modifiers = {
+        all_estate_influence_modifier = -0.1
+        max_absolutism = 10
+        reform_progress_growth = 0.2
+    }
 
-	custom_attributes = {
-		centralize_state_development = yes 
-	}
+    # custom_attributes = {
+    #     centralize_state_development = yes 
+    # }
 }
 
 indep_daimyo = {

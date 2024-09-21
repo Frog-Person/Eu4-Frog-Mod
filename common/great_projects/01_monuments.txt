@@ -6574,8 +6574,8 @@ murud_janjira = {
 
 		#what modifiers are added to the country when we have this project here on this tier
 		country_modifiers = {
-			naval_forcelimit_modifier = 0.1
-			naval_maintenance_modifier = -0.1
+			naval_forcelimit_modifier = 0.05
+			navy_tradition = 0.1
 		}
 
 		#what effects happen when this tier is achieved
@@ -6604,9 +6604,8 @@ murud_janjira = {
 
 		#what modifiers are added to the country when we have this project here on this tier
 		country_modifiers = {
-			naval_forcelimit_modifier = 0.2
-			naval_maintenance_modifier = -0.15
-			navy_tradition = 0.5
+			naval_forcelimit_modifier = 0.1
+			navy_tradition = 0.25
 		}
 
 		#what effects happen when this tier is achieved
@@ -6635,9 +6634,8 @@ murud_janjira = {
 
 		#what modifiers are added to the country when we have this project here on this tier
 		country_modifiers = {
-			naval_forcelimit_modifier = 0.3
-			naval_maintenance_modifier = -0.2
-			navy_tradition = 1
+			naval_forcelimit_modifier = 0.15
+			navy_tradition = 0.5
 			admiral_cost = -0.1
 		}
 
@@ -18870,7 +18868,8 @@ gme_westminster_palace = {
 		area_modifier = { }
 		region_modifier = { }
 		country_modifiers = { 
-			stability_cost_modifier = -0.5
+			stability_cost_modifier = -0.1
+			legitimacy = 0.25
 		}
 		on_upgraded = { }
 	}
@@ -18884,9 +18883,8 @@ gme_westminster_palace = {
 		area_modifier = {}
 		region_modifier = { }
 		country_modifiers = { 
-			stability_cost_modifier = -0.10
+			stability_cost_modifier = -0.2
 			legitimacy = 0.5
-			republican_tradition = 0.25
 		}
 		on_upgraded = { }
 	}
@@ -18900,13 +18898,13 @@ gme_westminster_palace = {
 		area_modifier = { }
 		region_modifier = { }
 		country_modifiers = {
-			stability_cost_modifier = -0.15
-			legitimacy = 1
-			republican_tradition = 0.35
+			stability_cost_modifier = -0.33
+			legitimacy = 0.75
 		}
 		on_upgraded = { }
 	}
 }
+
 
 gme_hofburg = {
 	start = 134
