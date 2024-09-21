@@ -679,6 +679,48 @@
  PERSIA_GOVERNANCE_ZORO_TT: "This option will unlock a set of mission based on the glory of the Achaemenid and Sasanian Empire. \nWhile being §YZoroastrian§! is not strictly needed for these missions, it is recommended for the sake of flavour and immersion."
  PERSIA_CLERICAL_ARISTOCRACY_TT: "§Y20§! Owned Provinces, that meet the requirements: \nGain §G1§! Base Production"
 
+ #Swiss Missions 
+swi_university_basel_title: "University of Basel"
+swi_university_basel_desc: "Build the university of Basel"
+swi_expanded_mercs_title: "Mercenary Culture"
+swi_expanded_mercs_desc: "If we encourage our people to adopt a mercenary culture we can rely on them in times of need."
+swi_take_tirol_title: "Take Tirol!"
+swi_take_tirol_desc: "The alpine lands are rightfully ours!"
+swi_germany_unified_title: "Unite Germany"
+swi_germany_unified_desc: "We have united the German people under one banner"
+swi_end_the_french_title: "Destroy France"
+swi_end_the_french_desc: "Too long has the French crown dominated the west. They must be destroyed!"
+swi_take_burgundy_title: "Take Burgundy"
+swi_take_burgundy_desc: "Burgundy should be part of our federation."
+swi_take_savoy_title: "Take Savoy"
+swi_take_savoy_desc: "We must expand our influence to the lower alpine hills of Savoy."
+swi_take_milan_title: "Strike Italy first"
+swi_take_milan_desc: "Italy has long stood as a threat to our independence. We must strike first and take Milan! Once it is taken we can make use of the Italian mercenaries."
+swi_fortress_title: "Fortress Switzerland"
+swi_fortress_desc: "We have turned our entire nation into one great fortress!"
+swi_the_rhine_title: "Control the Rhine"
+swi_the_rhine_desc: "We have taken control of the Rhine, and will benefit greatly from control of the trade and local peoples."
+swi_st_gallen_textiles_title: "St Gallen Embroidery"
+swi_st_gallen_textiles_desc: "We control the Europe's embroidery market"
+swi_swiss_goods_title: "Swiss Goods"
+swi_swiss_goods_desc: "Us Swiss are hard workers who are capable of producing large amounts of goods."
+swi_professional_army_title: "Swiss Professionalism"
+swi_professional_army_desc: "The Swiss army is one of most well trained in Europe from being hired in so many conflicts."
+swi_prosperous_neutrality_title: "Prosperous Neutrality"
+swi_prosperous_neutrality_desc: "Switzerland's relative peace has allowed it to develop rapidly, and other nations of Europe respect us deeply."
+
+#Swiss Modifiers
+swiss_expanded_mercs: "Expanded mercenary culture"
+swi_mountain_mines: "Alpine metals"
+swi_savoy_goods: "Savoyard goods"
+swi_kick_the_french: "Booted France out of Burgundy"
+ended_the_french: "French crown destroyed"
+swi_milan_taken: "Italian mercenaries"
+fortress_switzerland: "Fortress Switzerland"
+swi_rhine_taken: "Control of the Rhine"
+swi_textiles: "Swiss textiles"
+swiss_professional_army: "Swiss professionalism"
+swi_prosperity: "Prosperous Neutrality"
 
 #Monuments
  gme_westminster_palace: "Westminster's Palace"
@@ -755,6 +797,19 @@
  port_of_singapore: "Port of Singapore"
  batavia_city: "City of Batavia"
  the_city_colombo: "City of Colombo"
+ arc_de_triomf: "Arc De Triomf"
+ vaduz_castle: "Vaduz Castle"
+ chillon_castle: "Chillon Castle"
+ college_of_geneve: "College of Geneve"
+ gottorf_castle: "Gottorf Castle"
+ danevirke: "Danevirke"
+ klaipeda_castle: "Klaipeda Castle"
+ bilhorod_fortress: "Bilhorod Fortress"
+ arch_of_marcus_aurelius: "Arch of Marcus Aurelius"
+ sumela: "Sumela Monastery"
+ great_mosque_of_diyarbakir: "Great Mosque of Diyarbakir"
+ theodosian_walls: "Theodosian Walls"
+ chateau_gaillard: "Chateau Gaillard"
 
  #Misc
  free_colonist_2: "Free Colonist 1600"
@@ -772,6 +827,9 @@
  ned_dutch_ship_production: "Dutch Ship ProductioN"
  ned_diplo_rep: "Dutch Dynasty"
  ned_city_investments_2: "City Investments"
+ 
+ #Cologne Modifiers
+ KOL_rise_to_power: "Rise to Power"
 
 #Austria BS
 MP_BOH_Events.1.t: "A Potential Union"
