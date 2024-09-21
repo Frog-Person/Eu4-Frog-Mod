@@ -26,6 +26,7 @@ swi_milan_taken = {
 }
 fortress_switzerland = {
 	local_defender_dice_roll_bonus = 1
+	local_garrison_size = 0.05
 	garrison_damage = 0.30
 }
 swi_rhine_taken = {
