@@ -36,4 +36,4 @@ naval_hegemon = {
         backrow_artillery_damage = 0.15
     }
 
-} 
+}
