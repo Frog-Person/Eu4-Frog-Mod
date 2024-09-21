@@ -100,3 +100,7 @@ kol_catholic_control = {
 	global_missionary_strength = 0.05
 	reform_progress_growth = 0.1
 }
+
+KOL_rise_to_power = {
+	ae_impact = -0.125
+}
