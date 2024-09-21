@@ -36,6 +36,7 @@ NDefines.NDiplomacy.CELESTIAL_EMPIRE_MANDATE_PER_HUNDRED_TRIBUTARY_DEV = 0.5
 NDefines.NDiplomacy.CELESTIAL_EMPIRE_MANDATE_PER_5_LOANS = -0.36
 NDefines.NDiplomacy.TRADE_LEAGUE_BREAK_OPINION = -200
 NDefines.NDiplomacy.GREAT_POWER_SUBJECT_CONTRIBUTION = 1
+NDefines.NDiplomacy.HEGEMONY_LOST_DAYS = 3600
 
 NDefines.NCountry.ABANDON_IDEAGROUP_REFUND = 0.25
 NDefines.NCountry.ABDICATE_LEGITIMACY_THRESHOLD = 0
@@ -97,6 +98,7 @@ NDefines.NCountry.MINIMUM_POLICY_TIME = 1
 NDefines.NCountry.CONCENTRATE_DEVELOPMENT_DEVELOPMENT_DECREASE = 0.0
 NDefines.NCountry.EXPAND_INFRASTRUCTURE_DEV_LIMIT = 10
 NDefines.NCountry.ESTATE_MIN_DISTRIBUTED_CROWNLAND = 30.5
+NDefines.NCountry.MAXIMUM_CONDOTTIERI = 80
 
 NDefines.NEconomy.GOLD_MINE_SIZE = 25
 NDefines.NEconomy.EDICTS_DURATION_MONTHS = 1
@@ -131,7 +133,7 @@ NDefines.NMilitary.SIEGE_BONUS_WATER_SHORTAGE = 1
 NDefines.NMilitary.SIEGE_BONUS_DEFENDERS_DESERT = 1
 NDefines.NMilitary.NAVAL_DOCTRINE_SAILORS_COST = 0.05			-- Cost for switching naval doctrine (Share of sailors)
 NDefines.NMilitary.NAVAL_DOCTRINE_MIN_FORCE_LIMIT = 15
-NDefines.NMilitary.BACK_LINE_MORALE_DAMAGE_TAKEN_MODIFIER = 0.0	-- Multiplier for morale damage taken by backrow
+NDefines.NMilitary.BACK_LINE_MORALE_DAMAGE_TAKEN_MODIFIER = 0.1	-- Multiplier for morale damage taken by backrow
 NDefines.NMilitary.BACK_LINE_STRENGTH_DAMAGE_TAKEN_MODIFIER = 0.0
 NDefines.NMilitary.BACK_LINE_REINFORCE_SPEED = 40
 NDefines.NMilitary.INSUFFICIENT_SUPPORT = -0.5
@@ -142,7 +144,7 @@ NDefines.NMilitary.GALLEY_TIME = 90							-- _MDEF_GALLEY_TIME = 10,
 NDefines.NMilitary.TRANSPORT_TIME = 30	
 NDefines.NMilitary.INFANTRY_BREAKTHROUGH = 0.05
 NDefines.NMilitary.CAVALRY_BREAKTHROUGH = 0.3
-NDefines.NMilitary.CAVALRY_SPEED = 1.2
+NDefines.NMilitary.CAVALRY_SPEED = 1.4
 
 NDefines.NAI.BIGSHIP_FRACTION = 0.1
 NDefines.NAI.TRANSPORT_FRACTION = -1 -- Max fraction of naval forcelimit that should be transports
@@ -168,11 +170,12 @@ NDefines.NReligion.APPOINT_CARDINAL_INFLUENCE_PAPAL_STATE = 0
 
 NDefines.NGovernment.SELECT_HEIR_FROM_HAREM_AT_MONARCH_AGE = 20
 NDefines.NGovernment.GOVERNMENT_REFORM_CHANGE_PROGRESS_COST = 25
-NDefines.NGovernment.GOVERNMENT_REFORM_COST_CENTRALIZE_STATE = 5
+NDefines.NGovernment.GOVERNMENT_REFORM_COST_CENTRALIZE_STATE = 20
 NDefines.NGovernment.CENTRALIZE_STATE_YEARS = 2.5
-NDefines.NGovernment.CENTRALIZE_STATE_ADM_COST = 25
+NDefines.NGovernment.CENTRALIZE_STATE_ADM_COST = 30
 NDefines.NGovernment.EXPAND_ADMIN_COST = 400.0
 NDefines.NGovernment.LEADER_AS_MONARCH_TRADITION = 15
+NDefines.NGovernment.EXPAND_INFRASTRUCTURE_ADM_COST = 100
 
 NDefines.NGame.DAYS_BEHIND_PAUSE = 90					-- In multiplayer, if the slowest player is lagging behind this amount of days, the game will pause
 NDefines.NGame.DAYS_BEHIND_LOWER_SPEED = 999			-- In multiplayer, if the slowest player is lagging behind this amount of days, the game will slow down
