@@ -102,5 +102,5 @@ kol_catholic_control = {
 }
 
 KOL_rise_to_power = {
-	ae_impact = -0.20
+	ae_impact = -0.125
 }
