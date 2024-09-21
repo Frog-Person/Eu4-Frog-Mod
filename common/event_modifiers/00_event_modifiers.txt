@@ -2897,7 +2897,7 @@ colbert_economic_reforms = {
 
 colbert_trade_reforms = {
 	global_own_trade_power = 0.15
-	trade_steering = 0.20
+	trade_steering = 0.15
 }
 
 colbert_naval_reforms = {
@@ -13522,7 +13522,8 @@ internal_focus_act_modifier = {
 }
 
 colonial_venture_act_modifier = {
-	colonist_placement_chance = 0.05
+	colonist_placement_chance = 0.10
+	colony_cost_modifier = -0.1
 	#Can select trade goods of the colonized province
 }
 
