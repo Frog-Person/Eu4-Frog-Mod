@@ -19527,9 +19527,8 @@ gme_westminster_palace = {
 		area_modifier = { }
 		region_modifier = { }
 		country_modifiers = { 
-			stability_cost_modifier = -0.05
+			stability_cost_modifier = -0.1
 			legitimacy = 0.25
-			republican_tradition = 0.10
 		}
 		on_upgraded = { }
 	}
@@ -19543,9 +19542,8 @@ gme_westminster_palace = {
 		area_modifier = {}
 		region_modifier = { }
 		country_modifiers = { 
-			stability_cost_modifier = -0.10
+			stability_cost_modifier = -0.2
 			legitimacy = 0.5
-			republican_tradition = 0.20
 		}
 		on_upgraded = { }
 	}
@@ -19559,9 +19557,8 @@ gme_westminster_palace = {
 		area_modifier = { }
 		region_modifier = { }
 		country_modifiers = {
-			stability_cost_modifier = -0.15
+			stability_cost_modifier = -0.33
 			legitimacy = 0.75
-			republican_tradition = 0.30
 		}
 		on_upgraded = { }
 	}
