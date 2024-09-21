@@ -15,9 +15,9 @@ Minor = {
                 has_country_modifier = burnt_development
             }
     }
+	
 
-
-    trigger = {
+	trigger = {
         NOT = {total_own_and_non_tributary_subject_development = 300 }
         NOT = { is_emperor = yes }
     }
