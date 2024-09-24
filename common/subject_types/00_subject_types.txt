@@ -49,6 +49,7 @@ hereditary_pronoia_subject_type = {}
 pronoia_subject_type = {}
 cultural_sphere_of_influence_subject = {}
 theodoro_personal_union = {}
+ambrosian_personal_union = {}
 incorporated_vassal = {}
 nahuatl_tributary = {}
 european_colony = {}
@@ -519,6 +520,71 @@ personal_union = {
 	support_loyalists = yes
 	divert_trade = yes
 	
+	# Modifiers:
+	modifier_overlord = {
+		modifier = union_subject
+	}
+	modifier_overlord = {
+		trigger = {
+			overlord = { has_government_attribute = personal_union_war_contribution }
+		}
+		modifier = pu_overlord_bonus
+	}
+	modifier_overlord = {
+		trigger = {
+			OR = {
+				tag = ENG
+				tag = GBR
+			}
+			overlord = { has_country_flag = ned_man_o_wars_from_pu_flag }
+		}
+		modifier = ned_man_o_war_modifier
+	}
+	modifier_subject = {
+		trigger = {
+			overlord = { has_government_attribute = personal_union_war_contribution }
+		}
+		modifier = pu_subject_bonus
+	}
+
+	overlord_opinion_modifier = in_union
+	subject_opinion_modifier = in_union
+}
+
+ambrosian_personal_union = {
+	copy_from = default
+
+	# Graphics:
+	sprite = GFX_court_union
+	diplomacy_overlord_sprite = GFX_diplomacy_leadunions
+	diplomacy_subject_sprite = GFX_diplomacy_inunion
+
+	# Properties:
+	has_overlords_ruler = yes
+	can_be_integrated = yes
+	overlord_can_attack = no
+	has_power_projection = no
+	gets_help_with_rebels = yes
+	can_have_subjects_of_other_types = yes
+	can_union_break = no
+	transfer_subjects_when_made = yes
+	can_concentrate_development = no
+	extend_trading_range = yes
+
+	liberty_desire_negative_prestige = 1.0
+	military_focus = 0.66
+
+	relative_power_class = 1
+	should_quit_wars_on_activation = yes
+
+	restoration_cb = cb_restore_personal_union
+	
+	# Subject Interactions:
+	placate_rulers = no
+	enforce_culture = yes
+	siphon_income = yes
+	support_loyalists = yes
+
 	# Modifiers:
 	modifier_overlord = {
 		modifier = union_subject
