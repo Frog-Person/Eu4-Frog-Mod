@@ -1,6 +1,0 @@
-﻿l_english:
- ambrosian_personal_union_title:0 "Junior Partner"
- ambrosian_personal_union_title_plural:0 "Junior Partners"
- ambrosian_personal_union_long_desc:0 "In a personal union two countries are ruled by the same monarch. The lesser partner must follow his overlord to war and cannot make certain diplomatic actions. When the monarch dies the union might either continue, break or the lesser partner can get inherited and annexed."
- ambrosian_personal_union_is_our:0 "$NAME|Y$ is our little silly guy OwO."
- ambrosian_personal_union_no_overlord_dow:0 "You cannot declare war on a country with which you have a Union."
