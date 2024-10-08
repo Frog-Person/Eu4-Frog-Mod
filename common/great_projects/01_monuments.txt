@@ -23490,6 +23490,7 @@ fort_zeelandia = {
 			culture_group = germanic
 			culture_group = british
 			culture_group = french
+			culture = dutch
 		}
 	}
 	can_upgrade_trigger = {
@@ -23498,6 +23499,7 @@ fort_zeelandia = {
 			culture_group = germanic
 			culture_group = british
 			culture_group = french
+			culture = dutch
 		}
 	}
 	keep_trigger = { }
