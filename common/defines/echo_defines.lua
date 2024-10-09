@@ -196,5 +196,5 @@ NDefines.NDiplomacy.RELIGIOUS_LEAGUE_COOLDOWN = 10 -- Minimum years between join
 NDefines.NDiplomacy.JOIN_HRE_DEVELOPMENT_CAP_VASSAL = 350 -- Max cap of development to join the empire. Default is 200. *Change made to encourage more HRE Roleplay
 
 -- country
-NDefines.NCountry.MAXIMUM_CONDOTTIERI = 25 -- Base number of units you can rent out. Default 20. *Change made to encourage use of Condot
+NDefines.NCountry.MAXIMUM_CONDOTTIERI = 80 -- Base number of units you can rent out. Default 20. *Change made to encourage use of Condot
 NDefines.NCountry.PS_REDUCE_WAREXHAUSTION = 125 -- Price to reduce war exhaustion. Default is 75. *Change to harder to easily spam reduce war exhaustion
