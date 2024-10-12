@@ -873,8 +873,7 @@ the_devshirme_system = {
 }
 
 the_provincial_system = {
-	local_tax_modifier = 0.33
-	local_unrest = -1
+	local_tax_modifier = 0.2
 }
 
 friday_prayers = {
@@ -1838,7 +1837,7 @@ spice_islands_modifier = { #Main entrepots of the Mollucas, point of origin for 
 	trade_goods_size = 3.0
 }
 
-skanemarket = { #SkÃ¥nemarknaden - Biggest Herring Market in Europe
+skanemarket = { #Skånemarknaden - Biggest Herring Market in Europe
 	trade_goods_size = 2
 }
 
@@ -2744,7 +2743,9 @@ bad_free_trade_merchants = {
 }
 
 public_works_of_cairo = {
-	local_development_cost = -0.1
+	monthly_splendor = 1
+	allowed_num_of_manufactories = 1
+	local_center_of_trade_upgrade_cost = -0.25
 }
 
 mam_large_festitives = {
@@ -2856,21 +2857,21 @@ french_catholics = {
 	tolerance_heretic = -2
 	tolerance_own = 1
 	global_missionary_strength = 0.01
-	local_unrest = 3
+	global_unrest = 3
 }
 
 french_protestants = {
 	tolerance_heretic = -2
 	tolerance_own = 1
 	global_missionary_strength = 0.01
-	local_unrest = 3
+	global_unrest = 3
 }
 
 french_reformed = {
 	tolerance_heretic = -2
 	tolerance_own = 1
 	global_missionary_strength = 0.01
-	local_unrest = 3
+	global_unrest = 3
 }
 
 french_moderates = {
@@ -2897,7 +2898,7 @@ colbert_economic_reforms = {
 
 colbert_trade_reforms = {
 	global_own_trade_power = 0.15
-	trade_steering = 0.15
+	trade_steering = 0.20
 }
 
 colbert_naval_reforms = {
@@ -2991,8 +2992,7 @@ tur_janissaries_salary = {
 }
 
 tur_devshirme_recruitment = {
-	reinforce_speed = 0.25
-	reinforce_cost_modifier = -0.2
+	reinforce_cost_modifier = -0.1
 	is_janissary_modifier = yes
 }
 
@@ -3003,7 +3003,6 @@ tur_protection_from_raids_modifier = {
 }
 
 tur_the_ottoman_rule = {	#Permanent until the disasters hit
-	war_exhaustion = -0.02
 	autonomy_change_time = -0.25
 }
 
@@ -3018,8 +3017,7 @@ tur_turkish_fear = {
 }
 
 tur_eyalet_recruits = {
-	vassal_manpower_bonus = 0.25
-	manpower_recovery_speed = 0.1
+	vassal_manpower_bonus = 0.15
 }
 
 tur_grand_vizier_modifier = {
@@ -3033,7 +3031,7 @@ tur_assigned_local_pasha = {
 }
 
 tur_expanded_administration = {
-	core_creation = -0.1
+	core_creation = -0.05
 }
 
 tur_competent_pashas = {
@@ -3042,7 +3040,6 @@ tur_competent_pashas = {
 
 tur_peak_of_ottoman_empire = {	#Permanent
 	governing_capacity_modifier = 0.1
-	core_creation = -0.1
 }
 
 tur_reign_of_women_modifier = {
@@ -3643,10 +3640,6 @@ pol_zebrzydowski_rebellion_flag = {
 	global_unrest = 10
 	stability_cost_modifier = 0.25
 	global_trade_goods_size_modifier = -0.25
-}
-
-plc_polish_lithuanian_union = {
-	num_accepted_cultures = 1
 }
 
 economic_development_of_mazovia = {
@@ -9929,45 +9922,34 @@ standardized_uniforms_modifier = {
 
 elite_revolutionary_guard_modifier = {
 	is_revolutionary_guard_modifier = yes
-	discipline = 0.05
+	discipline = 0.025
 	land_maintenance_modifier = 1.0
 }
 
 elite_revolutionary_guard_modifier_country = {
-	allowed_rev_guard_fraction = -0.025
+	special_unit_forcelimit = -0.1
 }
 
 professional_revolutionary_guard_modifier = {
 	is_revolutionary_guard_modifier = yes
 	drill_decay_modifier = -0.25
-	recover_army_morale_speed = 0.2
-	land_maintenance_modifier = 0.25
-}
-
-professional_revolutionary_guard_modifier_country = {
-	allowed_rev_guard_fraction = 0.05
+	land_maintenance_modifier = 0.5
 }
 
 mass_revolutionary_guard_modifier = {
 	is_revolutionary_guard_modifier = yes
 	drill_decay_modifier = 0.5
-	drill_gain_modifier = -0.75
-	reinforce_speed = 0.15
 }
 
 mass_revolutionary_guard_modifier_country = {
-	allowed_rev_guard_fraction = 0.15
+	special_unit_forcelimit = 0.1
 }
 
 vanguard_revolutionary_guard_modifier = {
 	is_revolutionary_guard_modifier = yes
 	shock_damage_received = -0.1
 	fire_damage_received = -0.1
-	land_maintenance_modifier = 1.0
-}
-
-vanguard_revolutionary_guard_modifier_country = {
-	allowed_rev_guard_fraction = -0.025
+	land_maintenance_modifier = 0.5
 }
 
 #Muslim Schools
@@ -11548,7 +11530,7 @@ estate_dhimmi_lighter_dhimmi_taxes_privilege_mod = {
 
 estate_dhimmi_manpower_mod = {
 	religion = yes
-	local_manpower_modifier = 0.3
+	local_manpower_modifier = 0.2
 }
 
 estate_maratha_levies_for_muslims_mod = {
@@ -11701,12 +11683,12 @@ estate_maratha_monopoly_of_gems_mod = {
 
 estate_janissary_professional_soldiers_mod = {
 	drill_decay_modifier = -0.25
-	reinforce_cost_modifier = -0.2
+	reinforce_cost_modifier = -0.1
 	is_janissary_modifier = yes
 }
 
 estate_janissary_rough_discipline_mod = {
-	discipline = 0.05
+	discipline = 0.025
 	is_janissary_modifier = yes
 }
 
@@ -11716,8 +11698,7 @@ estate_janissary_janissary_officers_mod = {
 }
 
 estate_janissary_strict_devshirme_recruitment_mod = {
-	local_manpower_modifier = 0.2
-	local_defensiveness = 0.15
+	local_manpower_modifier = 0.1
 	religion = yes
 }
 
@@ -12427,7 +12408,7 @@ tot_ceramics_discovered = {
 }
 
 tot_dedicated_ruler = {
-	tribal_development_growth = 0
+	tribal_development_growth = 0.02
 }
 
 tot_shameful_ruler = {
@@ -12541,13 +12522,13 @@ chateau_de_chenonceau = {
 
 #Native Federations
 leadership_pays_off_mod = {
-	monthly_federation_favor_growth = 0.01
+	monthly_federation_favor_growth = 0.05
 }
 grow_in_harmony_mod = {
 	development_cost = -0.05
 }
 primus_inter_pares_mod = {
-	tribal_development_growth = 0
+	tribal_development_growth = 0.02
 }
 stand_the_ground_mod = {
 	defensiveness = 0.10
@@ -13522,8 +13503,7 @@ internal_focus_act_modifier = {
 }
 
 colonial_venture_act_modifier = {
-	colonist_placement_chance = 0.10
-	colony_cost_modifier = -0.1
+	colonist_placement_chance = 0.05
 	#Can select trade goods of the colonized province
 }
 
@@ -14185,12 +14165,12 @@ used_persian_influece_interaction_19 = { influence_to_vassal_elevation_cost = -3
 used_persian_influece_interaction_20 = { influence_to_vassal_elevation_cost = -400 }
 
 #Permanently Accepted Culture (until demoted)
-free_slot_for_armenian = { num_accepted_cultures = 1 }
-free_slot_for_georgian = { num_accepted_cultures = 1 }
-free_slot_for_turkish = { num_accepted_cultures = 1 }
-free_slot_for_al_iraqiya_arabic = { num_accepted_cultures = 1 }
-free_slot_for_al_suryah_arabic = { num_accepted_cultures = 1 }
+#free_slot_for_armenian = { num_accepted_cultures = 1 }
+#free_slot_for_georgian = { num_accepted_cultures = 1 }
+#free_slot_for_turkish = { num_accepted_cultures = 1 }
+#free_slot_for_al_iraqiya_arabic = { num_accepted_cultures = 1 }
+#free_slot_for_al_suryah_arabic = { num_accepted_cultures = 1 }
 
 cat_lower_defense = {
-	local_defensiveness = -0.25
+	local_defensiveness = -0.15
 }
