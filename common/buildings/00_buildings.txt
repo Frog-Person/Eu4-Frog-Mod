@@ -419,16 +419,39 @@ fort_15th = {
 	}
 	# THIS = Province, FROM = Builder(not nessecairly owner, can be overlord)
 	on_built = {
-		every_neighbor_province = {
-			if = {
-				limit = {
+		if = {
+			limit = {
+				any_neighbor_province = {
 					owned_by = ROOT
-				}
-				add_province_modifier = {
-					name = cat_lower_defense
-					duration = -1
+					OR = {
+						has_building = fort_15th
+						has_building = fort_16th
+						has_building = fort_17th
+						has_building = fort_18th
+					}
 				}
 			}
+			every_neighbor_province = {
+				if = {
+					limit = {
+						owned_by = ROOT
+						OR = {
+							has_building = fort_15th
+							has_building = fort_16th
+							has_building = fort_17th
+							has_building = fort_18th
+						}
+					}
+					add_province_modifier = {
+						name = cat_lower_defense
+						duration = -1
+					}
+				}
+			}
+			add_province_modifier = {
+				name = cat_lower_defense
+				duration = -1
+			}	
 		}
 		if = {
 			limit = {
@@ -547,17 +570,7 @@ fort_15th = {
 
 	# THIS = Province, FROM = Destroyer, Will not be called on buildings made obsolete!
 	on_destroyed = {
-		every_neighbor_province = {
-			if = {
-				limit = {
-					AND = {
-						owned_by = ROOT
-						has_province_modifier = cat_lower_defense
-					}
-				}
-				remove_province_modifier = cat_lower_defense
-			}
-		}
+		remove_province_modifier = cat_lower_defense
 		if = {
 			limit = {
 				has_province_modifier = estate_nobles_vegvar_system_modifier
@@ -829,16 +842,39 @@ fort_16th = {
 
 	# THIS = Province, FROM = Builder(not nessecairly owner, can be overlord)
 	on_built = {
-		every_neighbor_province = {
-			if = {
-				limit = {
+		if = {
+			limit = {
+				any_neighbor_province = {
 					owned_by = ROOT
-				}
-				add_province_modifier = {
-					name = cat_lower_defense
-					duration = -1
+					OR = {
+						has_building = fort_15th
+						has_building = fort_16th
+						has_building = fort_17th
+						has_building = fort_18th
+					}
 				}
 			}
+			every_neighbor_province = {
+				if = {
+					limit = {
+						owned_by = ROOT
+						OR = {
+							has_building = fort_15th
+							has_building = fort_16th
+							has_building = fort_17th
+							has_building = fort_18th
+						}
+					}
+					add_province_modifier = {
+						name = cat_lower_defense
+						duration = -1
+					}
+				}
+			}
+			add_province_modifier = {
+				name = cat_lower_defense
+				duration = -1
+			}	
 		}
 		if = {
 			limit = {
@@ -934,17 +970,7 @@ fort_16th = {
 
 	# THIS = Province, FROM = Destroyer, Will not be called on buildings made obsolete!
 	on_destroyed = {
-		every_neighbor_province = {
-			if = {
-				limit = {
-					AND = {
-						owned_by = ROOT
-						has_province_modifier = cat_lower_defense
-					}
-				}
-				remove_province_modifier = cat_lower_defense
-			}
-		}
+		remove_province_modifier = cat_lower_defense
 		if = {
 			limit = {
 				has_province_modifier = estate_nobles_vegvar_system_modifier
@@ -1481,16 +1507,39 @@ fort_17th = {
 
 	# THIS = Province, FROM = Builder(not nessecairly owner, can be overlord)
 	on_built = {
-		every_neighbor_province = {
-			if = {
-				limit = {
+		if = {
+			limit = {
+				any_neighbor_province = {
 					owned_by = ROOT
-				}
-				add_province_modifier = {
-					name = cat_lower_defense
-					duration = -1
+					OR = {
+						has_building = fort_15th
+						has_building = fort_16th
+						has_building = fort_17th
+						has_building = fort_18th
+					}
 				}
 			}
+			every_neighbor_province = {
+				if = {
+					limit = {
+						owned_by = ROOT
+						OR = {
+							has_building = fort_15th
+							has_building = fort_16th
+							has_building = fort_17th
+							has_building = fort_18th
+						}
+					}
+					add_province_modifier = {
+						name = cat_lower_defense
+						duration = -1
+					}
+				}
+			}
+			add_province_modifier = {
+				name = cat_lower_defense
+				duration = -1
+			}	
 		}
 		if = {
 			limit = {
@@ -1586,17 +1635,7 @@ fort_17th = {
 
 	# THIS = Province, FROM = Destroyer, Will not be called on buildings made obsolete!
 	on_destroyed = {
-		every_neighbor_province = {
-			if = {
-				limit = {
-					AND = {
-						owned_by = ROOT
-						has_province_modifier = cat_lower_defense
-					}
-				}
-				remove_province_modifier = cat_lower_defense
-			}
-		}
+		remove_province_modifier = cat_lower_defense
 		if = {
 			limit = {
 				has_province_modifier = estate_nobles_vegvar_system_modifier
@@ -2036,16 +2075,39 @@ fort_18th = {
 
 	# THIS = Province, FROM = Builder(not nessecairly owner, can be overlord)
 	on_built = {
-		every_neighbor_province = {
-			if = {
-				limit = {
+		if = {
+			limit = {
+				any_neighbor_province = {
 					owned_by = ROOT
-				}
-				add_province_modifier = {
-					name = cat_lower_defense
-					duration = -1
+					OR = {
+						has_building = fort_15th
+						has_building = fort_16th
+						has_building = fort_17th
+						has_building = fort_18th
+					}
 				}
 			}
+			every_neighbor_province = {
+				if = {
+					limit = {
+						owned_by = ROOT
+						OR = {
+							has_building = fort_15th
+							has_building = fort_16th
+							has_building = fort_17th
+							has_building = fort_18th
+						}
+					}
+					add_province_modifier = {
+						name = cat_lower_defense
+						duration = -1
+					}
+				}
+			}
+			add_province_modifier = {
+				name = cat_lower_defense
+				duration = -1
+			}	
 		}
 		if = {
 			limit = {
@@ -2141,17 +2203,7 @@ fort_18th = {
 
 	# THIS = Province, FROM = Destroyer, Will not be called on buildings made obsolete!
 	on_destroyed = {
-		every_neighbor_province = {
-			if = {
-				limit = {
-					AND = {
-						owned_by = ROOT
-						has_province_modifier = cat_lower_defense
-					}
-				}
-				remove_province_modifier = cat_lower_defense
-			}
-		}
+		remove_province_modifier = cat_lower_defense
 		if = {
 			limit = {
 				has_province_modifier = estate_nobles_vegvar_system_modifier
