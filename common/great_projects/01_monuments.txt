@@ -23486,20 +23486,22 @@ fort_zeelandia = {
 	on_destroyed = { }
 	can_use_modifiers_trigger = {
 		owner = {
-			culture_group = iberian
-			culture_group = germanic
-			culture_group = british
-			culture_group = french
-			culture = dutch
+			OR = {
+				culture_group = iberian
+				culture_group = germanic
+				culture_group = british
+				culture_group = french
+			}
 		}
 	}
 	can_upgrade_trigger = {
 		owner = {
-			culture_group = iberian
-			culture_group = germanic
-			culture_group = british
-			culture_group = french
-			culture = dutch
+			OR = {
+				culture_group = iberian
+				culture_group = germanic
+				culture_group = british
+				culture_group = french
+			}
 		}
 	}
 	keep_trigger = { }
@@ -23574,18 +23576,22 @@ port_of_hong_kong = {
 	on_destroyed = { }
 	can_use_modifiers_trigger = {
 		owner = {
-			culture_group = iberian
-			culture_group = germanic
-			culture_group = british
-			culture_group = french
+			OR = {
+				culture_group = iberian
+				culture_group = germanic
+				culture_group = british
+				culture_group = french
+			}
 		}
 	}
 	can_upgrade_trigger = {
 		owner = {
-			culture_group = iberian
-			culture_group = germanic
-			culture_group = british
-			culture_group = french
+			OR = {
+				culture_group = iberian
+				culture_group = germanic
+				culture_group = british
+				culture_group = french
+			}
 		}
 	}
 	keep_trigger = { }
@@ -25652,7 +25658,7 @@ arch_of_marcus_aurelius = {
 	#can we build it?
 	build_trigger = {
 		owner = {
-			tag = ITA
+			culture_group = italian
 		}
 	}
 
@@ -25667,19 +25673,22 @@ arch_of_marcus_aurelius = {
 	#can our country use it?
 	can_use_modifiers_trigger = {
 		owner = {
-			tag = ITA
+			culture_group = italian
 		}
 	}
 
 	#can our country upgrade it?
 	can_upgrade_trigger = {
 		owner = {
-			tag = ITA
+			culture_group = italian
 		}
 	}
 
 	#can our country keep it or is it destroyed when we get hold of it?
 	keep_trigger = {
+		owner = {
+			culture_group = italian
+		}
 	}
 
 	#tier data
