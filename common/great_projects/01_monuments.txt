@@ -25658,7 +25658,7 @@ arch_of_marcus_aurelius = {
 	#can we build it?
 	build_trigger = {
 		owner = {
-			culture_group = italian
+			culture_group = latin
 		}
 	}
 
@@ -25673,21 +25673,21 @@ arch_of_marcus_aurelius = {
 	#can our country use it?
 	can_use_modifiers_trigger = {
 		owner = {
-			culture_group = italian
+			culture_group = latin
 		}
 	}
 
 	#can our country upgrade it?
 	can_upgrade_trigger = {
 		owner = {
-			culture_group = italian
+			culture_group = latin
 		}
 	}
 
 	#can our country keep it or is it destroyed when we get hold of it?
 	keep_trigger = {
 		owner = {
-			culture_group = italian
+			culture_group = latin
 		}
 	}
 
