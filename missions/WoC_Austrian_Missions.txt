@@ -4386,7 +4386,6 @@ WoC_austria_5 = {
 		trigger = {
 			OR = {
 				if = {
-					AND = {
 						owns_core_province = 129
 						129 = {
 							AND = {
@@ -4401,10 +4400,8 @@ WoC_austria_5 = {
 								NOT = { culture = austrian }
 							}
 						}
-					}
 				}
 				if = {
-					AND = {
 						owns_core_province = 129
 						129 = {
 							culture = austrian
@@ -4413,37 +4410,42 @@ WoC_austria_5 = {
 						1769 = {
 							culture = austrian
 						}
-					}
 				}
 			}
 		}
 		effect = {
 			if = {
-							limit = {
-								AND = {
-									owns_core_province = 129
-									129 = {
-										has_owner_accepted_culture = yes
-										NOT = { culture = austrian }
-									}
-									owns_core_province = 1769
-									1769 = {
-										has_owner_accepted_culture = yes
-										NOT = { culture = austrian }
-									}
-								}
-							}
-							add_country_modifier = {
-								name = acceptance_path1
-								duration = -1
-							}
+				limit = {
+					AND = {
+						owns_core_province = 129
+						129 = {
+							has_owner_accepted_culture = yes
+							NOT = { culture = austrian }
 						}
-						else = {
-						add_country_modifier = {
-								name = austrian_path1
-								duration = -1
-							}
+						owns_core_province = 1769
+						1769 = {
+							has_owner_accepted_culture = yes
+							NOT = { culture = austrian }
 						}
+					}
+				}
+				custom_tooltip = hab_cultural_acceptance
+				tooltip = {
+					add_country_modifier = {
+						name = acceptance_path1
+						duration = -1
+					}
+				}
+			}
+			else = {
+				custom_tooltip = hab_cultural_removal
+				tooltip = {
+					add_country_modifier = {
+						name = austrian_path1
+						duration = -1
+					}
+				}
+			}
 		}
 	}
 
@@ -4453,8 +4455,8 @@ WoC_austria_5 = {
 		required_missions = { direction_of_our_country }
 		trigger = {
 			OR = {
-				if = {
-					AND = {
+					custom_trigger_tooltip = {
+						tooltip = hab_czech_accept
 						bohemia_area = {
 							type = all
 							has_owner_accepted_culture = yes
@@ -4474,9 +4476,8 @@ WoC_austria_5 = {
 							country_or_non_sovereign_subject_holds = ROOT
 						}
 					}
-				}
-				if = {
-					AND = {
+					custom_trigger_tooltip = {
+						tooltip = hab_czech_convert
 						bohemia_area = {
 							type = all
 							culture = austrian
@@ -4494,7 +4495,6 @@ WoC_austria_5 = {
 						}
 					}
 				}
-			}
 		}
 		effect = {
 			if = {
@@ -4927,6 +4927,16 @@ WoC_austria_5 = {
 							}
 							else_if = {
 								limit = {
+									has_country_modifier = austrian_path3
+								}
+								remove_country_modifier = austrian_path3
+								add_country_modifier = {
+									name = austrian_path4								
+									duration = -1
+								}
+							}
+							else_if = {
+								limit = {
 									owns_core_province = 153
 									153 = {
 										culture = austrian
@@ -4949,16 +4959,6 @@ WoC_austria_5 = {
 								}
 								add_country_modifier = {
 									name = austrian_path1
-									duration = -1
-								}
-							}
-							else_if = {
-								limit = {
-									has_country_modifier = austrian_path3
-								}
-								remove_country_modifier = austrian_path3
-								add_country_modifier = {
-									name = austrian_path4								
 									duration = -1
 								}
 							}

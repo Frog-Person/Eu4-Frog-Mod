@@ -25,6 +25,7 @@ monarchy = {
 				prussian_monarchy_base
 				austrian_dual_monarchy
 				austrian_empire_monarchy
+				austrian_absolute_monarchy
 				principality
 				tsardom
 				mamluk_government
