@@ -1048,11 +1048,6 @@ doorstep_of_the_religious_rival: "Rally and March On!"
 homogenous_community: "Herrenvolk"
 paris_is_only_a_shadow: "Paris is only a Shadow"
 volkisch: "Volkisch"
-#Austria Culture Tooltips
-hab_cultural_acceptance: "Accepting the people of these proving grounds will provide the following modifier:"
-hab_cultural_removal: "Alternatively, securing the land for Austrians will provide the following modifier:"
-hab_czech_accept: "The culture in the Bohemia, Eerzgebirge, and Moravia states must be accepted and not Austrian"
-hab_czech_convert: "Alternatively, the culture in those stats must be Austrian"
 #Lothoringia
 LOT_securing_baltic_grain_title: "Acquiring Baltic Grain"
 LOT_liberate_norm_title: "Secure Normandy"
