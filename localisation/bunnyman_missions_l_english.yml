@@ -1067,6 +1067,11 @@ hab_more_acceptance_transdan: "Continuing acceptance will upgrade your current m
 hab_more_acceptance_austriaH: "Continuing acceptance will upgrade your current modifier to the following and allow the formation of the Austria Hungary:"
 hab_more_removal_austriaE: "Continuing acceptance will upgrade your current modifier to the following and allow the formation of the Austrian Empire:"
 hab_more_removal_austriaH: "Continuing acceptance will upgrade your current modifier to the following and allow the formation of the Austria Hungary:"
+hab_austriaH_gain: "Directly owning the land will give the following bonus:"
+hab_austriaH_vassal: "Letting the management of the land be under a vassal gives the following bonus:"
+hab_austriaH_ally: "Completing the mission with an ally gives you the following bonus:"
+hab_austriaH_all_of_the_above: "You will get one of the following for completing this mission by vassalization or conquest respectively:"
+hab_austriaH_all_of_the_above_uskok: "You will get one of the following for completing this mission by vassalization, conquest, or by an alliance respectively:"
 #Lothoringia
 LOT_securing_baltic_grain_title: "Acquiring Baltic Grain"
 LOT_liberate_norm_title: "Secure Normandy"
