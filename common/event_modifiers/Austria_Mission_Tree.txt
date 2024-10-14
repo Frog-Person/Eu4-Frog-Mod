@@ -315,3 +315,12 @@ glowing_capitals = {
     prestige = 1
     monthly_splendor = 1
 }
+
+#misc german
+pru_primary_edu = {
+    innovativeness_gain = 0.25
+}
+pru_cool_healthcare = {
+    monarch_lifespan = 0.05
+    prestige = 0.5
+}

@@ -1544,4 +1544,66 @@ emp_bra_pru_4 = {
 			factor = 500
 		}
 	}
+	pru_education_system = {
+		icon = mission_early_modern_university
+		required_missions = { emp_brapru_renovate_berlin }
+		position = 7
+		provinces_to_highlight = {
+			area = mittelmark_area
+		}
+		trigger = {
+			50 = {
+				development = 40
+				has_building = university
+			}
+			1759 = {
+				development = 30
+				has_building = university
+			}
+			4748 = {
+				development = 30
+				has_building = university
+			}
+			51 = {
+				development = 30
+				has_building = university
+			}
+			2993 = {
+				development = 30
+				has_building = university
+			}
+			innovativeness = 35
+			OR = {
+				artist = 5
+				inquisitor = 5
+				master_of_mint = 5
+				natural_scientist = 5
+				philosopher = 5
+				theologian = 5
+				treasurer = 5
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = pru_primary_edu
+				duration = -1
+			}
+		}
+	}
+	pru_health_care = {
+		icon = mission_build_up_to_force_limit
+		required_missions = { pru_education_system }
+		position = 8
+		provinces_to_highlight = { }
+		trigger = {
+			innovativeness = 75
+			university = 30
+		}
+		effect = {
+			add_country_modifier = {
+				name = pru_cool_healthcare
+				duration = -1
+			}
+		}
+	}
 }
