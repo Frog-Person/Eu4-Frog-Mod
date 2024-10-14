@@ -832,6 +832,7 @@ swi_prosperity: "Prosperous Neutrality"
  KOL_rise_to_power: "Rise to Power"
 
 #Austria BS
+HAB_UNLOCK_HABSBURG_CONNECTIONS_ESTATE_PRIVILEGE: "Unlocks the §Y[Root.Monarch.Dynasty.GetName] Connections§! Nobility Privilege, which at Max Loyalty will grant §G+2§! Monthly Diplomatic Power and §G+2§! Diplomatic Reputation."
 MP_BOH_Events.1.t: "A Potential Union"
 MP_BOH_Events.1.d: "Testing Testing 1 2 3!"
 MP_BOH_Events.1.OPT1: "A Habsburg Will do Nicely"
