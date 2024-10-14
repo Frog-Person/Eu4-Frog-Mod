@@ -1596,7 +1596,7 @@ emp_bra_pru_4 = {
 		position = 8
 		provinces_to_highlight = { }
 		trigger = {
-			innovativeness = 75
+			innovativeness = 50
 			university = 30
 		}
 		effect = {
