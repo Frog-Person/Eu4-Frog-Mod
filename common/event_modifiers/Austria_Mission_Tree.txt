@@ -427,3 +427,8 @@ pru_cool_healthcare = {
     monarch_lifespan = 0.05
     prestige = 0.5
 }
+
+#misc ADU
+new_sound_toll = {
+    province_trade_power_value = 10
+}
