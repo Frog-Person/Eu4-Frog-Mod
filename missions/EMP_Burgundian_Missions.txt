@@ -856,7 +856,7 @@ emp_lotharingia_1 = {
 		effect = {
 			add_country_modifier = {
 				name = lot_modern_army
-				duration = 1825
+				duration = 3650
 			}
 		}
 	}
@@ -878,20 +878,51 @@ emp_lotharingia_1 = {
 			}
 		}
 	}
-	lot_global_power = {
-		icon = mission_monarch_in_throne_room
-		required_missions = { lot_steal_portugese_spices lot_navy_reformation }
+	lot_dominance_of_the_channel = {
+		icon = defeat_the_english
+		required_missions = { lot_navy_reformation }
 
 		trigger = {
-			is_hegemon = yes
-			army_size = 300
-			navy_size = 300
-			monthly_income = 400
+			OR = {
+				AND = {
+					has_won_war_against = {
+						who = GBR
+						max_years_since = 10
+					}
+					GBR = {
+    					humiliated_by = FRA
+					}
+					navy_size = GBR
+				}
+				1269 = {
+					is_strongest_trade_power = ROOT
+				}
+			}
 		}
 		effect = {
-			add_country_modifier = {
-				name = lot_true_superpower
-				duration = -1
+			if = {
+				limit = {
+					AND = {
+					has_won_war_against = {
+						who = GBR
+						max_years_since = 10
+					}
+					GBR = {
+    					humiliated_by = FRA
+					}
+					navy_size = GBR
+					}
+				}
+				add_country_modifier = {
+					name = lot_naval_victory
+					duration = -1
+				}
+			}
+			else = {
+				add_country_modifier = {
+					name = embrace_dutch_naval_culture
+					duration = -1
+				}
 			}
 		}
 	}
@@ -1247,11 +1278,6 @@ emp_lotharingia_2 = {
 				province_has_center_of_trade_of_level = 1
 				NOT = { country_or_non_sovereign_subject_holds = ROOT }
 			}
-			AND = {
-				area = angola_area
-				province_has_center_of_trade_of_level = 1
-				NOT = { country_or_non_sovereign_subject_holds = ROOT }
-			}
 			province_id = 1460
 		}
 		trigger = {
@@ -1260,10 +1286,15 @@ emp_lotharingia_2 = {
 				province_has_center_of_trade_of_level = 2
 				value = 2
 			}
-			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
-				area = angola_area
-				province_has_center_of_trade_of_level = 2
-				value = 1
+			num_of_owned_provinces_with = {
+				NOT = { region = guinea_region }
+				OR = {
+					region = kongo_region
+					region = east_africa_region
+					region = south_africa_region
+				}
+				province_has_center_of_trade_of_level = 1
+				value = 4
 			}
 			1460 = {
 				trade_share = {
@@ -1314,42 +1345,7 @@ emp_lotharingia_2 = {
 			}
 		}
 		effect = {
-			2100 = {
-				add_province_modifier = {
-					name = lot_overseas_investment
-					duration = -1
-				}
-			}
-			4408 = {
-				add_province_modifier = {
-					name = lot_overseas_investment
-					duration = -1
-				}
-			}
-			4409 = {
-				add_province_modifier = {
-					name = lot_overseas_investment
-					duration = -1
-				}
-			}
-			2099 = {
-				add_province_modifier = {
-					name = lot_overseas_investment
-					duration = -1
-				}
-			}
-			572 = {
-				add_province_modifier = {
-					name = lot_overseas_investment
-					duration = -1
-				}
-			}
-			4407 = {
-				add_province_modifier = {
-					name = lot_overseas_investment
-					duration = -1
-				}
-			}
+			country_event = { id = new_flavour_bur.9 }
 		}
 	}
 	lot_steal_portugese_spices = {
@@ -1379,6 +1375,23 @@ emp_lotharingia_2 = {
 		effect = {
 			add_country_modifier = {
 				name = not_q_do_anyway
+				duration = -1
+			}
+		}
+	}
+	lot_global_power = {
+		icon = mission_monarch_in_throne_room
+		required_missions = { lot_steal_portugese_spices lot_navy_reformation }
+
+		trigger = {
+			is_hegemon = yes
+			army_size = 300
+			navy_size = 300
+			monthly_income = 400
+		}
+		effect = {
+			add_country_modifier = {
+				name = lot_true_superpower
 				duration = -1
 			}
 		}
@@ -1534,9 +1547,48 @@ emp_lotharingia_3 = {
 	}
 	has_country_shield = yes
 
-	lot_gaul_foothold = {
+	lot_gaul_foothold_across_the_rhine = {
 		icon = mission_rhine
-		required_missions = { emp_bur_crown_of_lothair }
+		required_missions = { }
+		position = 5
+
+		trigger = {
+			north_rhine_area = {
+				type = all
+				owned_by = ROOT
+			}
+			lower_rhineland_area = {
+				type = all
+				owned_by = ROOT
+			}
+			palatinate_area = {
+				type = all
+				owned_by = ROOT
+			}
+			78 = {
+				owned_by = ROOT
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = begin_the_advance
+				duration = 3650
+			}
+			upper_rhineland_area = {
+				add_permanent_claim = ROOT
+			}
+			lower_swabia_area = {
+				add_permanent_claim = ROOT
+			}
+			upper_swabia_area = {
+				add_permanent_claim = ROOT
+			}			
+		}
+	}
+
+	lot_continue_the_march = {
+		icon = mission_rhine
+		required_missions = { lot_gaul_foothold_across_the_rhine emp_bur_crown_of_lothair }
 		position = 6
 		provinces_to_highlight = {
 			OR = {
@@ -1565,29 +1617,27 @@ emp_lotharingia_3 = {
 			}
 		}
 		effect = {
-			north_german_region = {
-				limit = { 
-				NOT = { owned_by = ROOT } 
-				NOT = { is_core = ROOT } 
-				}
-				add_permanent_claim = ROOT 
-			}
-			south_german_region = { 
-				limit = { 
-					NOT = { owned_by = ROOT } 
-					NOT = { is_core = ROOT } 
-				}
-				add_permanent_claim = ROOT 
-			}
 			add_country_modifier = {
 				name = covering_the_advance
 				duration = 5475
-			}			
+			}
+			lower_saxony_area = {
+				add_permanent_claim = ROOT
+			}
+			weser_area = {
+				add_permanent_claim = ROOT
+			}
+			holstein_area = {
+				add_permanent_claim = ROOT
+			}
+			mecklenburg_area = {
+				add_permanent_claim = ROOT
+			}		
 		}
 	}
 	lot_reclaim_hansiatic_land = {
 		icon = mission_bane_of_the_hansa
-		required_missions = { lot_gaul_foothold }
+		required_missions = { lot_continue_the_march }
 		provinces_to_highlight = {
 			area = lower_saxony_area
 			area = weser_area
@@ -1617,18 +1667,42 @@ emp_lotharingia_3 = {
 				add_trade_modifier = {
 					who = ROOT
 					duration = 5475
-					power = 50
+					power = 75
 					key = lot_trade_presence_c
 				}
 			}
+			north_rhine_area = {
+				add_permanent_claim = ROOT
+			}	
+			lower_rhineland_area = {
+				add_permanent_claim = ROOT
+			}	
+			westphalia_area = {
+				add_permanent_claim = ROOT
+			}	
+			north_westphalia_area = {
+				add_permanent_claim = ROOT
+			}	
+			hesse_area = {
+				add_permanent_claim = ROOT
+			}	
+			franconia_area = {
+				add_permanent_claim = ROOT
+			}	
+			upper_franconia_area = {
+				add_permanent_claim = ROOT
+			}	
+			thuringia_area = {
+				add_permanent_claim = ROOT
+			}	
 		}
 	}
 	lot_into_central_gemany = {
 		icon = mission_hanseatic_city
 		required_missions = { lot_reclaim_hansiatic_land }
 		provinces_to_highlight = {
-			area = north_rhine_area
-			area = lower_rhineland_area
+			area = northern_saxony_area
+			area = braunschweig_area
 			area = westphalia_area
 			area = north_westphalia_area
 			area = hesse_area
@@ -1637,11 +1711,11 @@ emp_lotharingia_3 = {
 			area = thuringia_area
 		}
 		trigger = {
-			north_rhine_area = {
+			northern_saxony_area = {
 				type = all
 				owned_by = ROOT
 			}
-			lower_rhineland_area = {
+			braunschweig_area = {
 				type = all
 				owned_by = ROOT
 			}
@@ -1674,6 +1748,24 @@ emp_lotharingia_3 = {
 			add_country_modifier = {
 				name = lot_gaulish_tactics
 				duration = 3650
+			}
+			tirol_area = {
+				add_permanent_claim = ROOT
+			}
+			inner_austria_area = {
+				add_permanent_claim = ROOT
+			}
+			austria_proper_area = {
+				add_permanent_claim = ROOT
+			}
+			east_bavaria_area = {
+				add_permanent_claim = ROOT
+			}
+			upper_bavaria_area = {
+				add_permanent_claim = ROOT
+			}
+			lower_bavaria_area = {
+				add_permanent_claim = ROOT
 			}
 		}
 	}
@@ -2835,11 +2927,13 @@ emp_lotharingia_5 = {
 				type = manpower
 				amount = 20
 				limit = "
+					OR = {
 					area = west_burgundy_area
 					area = picardy_area
 					area = bourgogne_area
 					area = lorraine_area
 					area = wallonia_area
+					}
 					has_manpower_building_trigger = yes
 				"
 			}
@@ -2859,6 +2953,283 @@ emp_lotharingia_5 = {
 			add_country_modifier = {
 				name = lot_smarterer
 				duration = -1
+			}
+		}
+	}
+
+	lot_trade_dev = {
+		icon = ansbach_succession
+		required_missions = { lot_get_educated }
+		provinces_to_highlight = {
+			province_id = 183
+			province_id = 186
+			province_id = 184
+			province_id = 188
+			province_id = 192
+			province_id = 203
+			province_id = 90
+			province_id = 1744
+			province_id = 97
+			province_id = 78
+			province_id = 1876
+			province_id = 85
+		}
+		trigger = {
+			custom_trigger_tooltip = {
+			tooltip = lot_all_the_trade_cities
+				183 = {
+					owned_by = ROOT
+					development = 35
+					base_production = 8
+					has_trade_building_trigger = yes
+					OR = {
+						has_building = workshop
+						has_building = counting_house
+					}
+					OR = {
+						has_building = courthouse
+						has_building = town_hall
+					}
+				}
+				186 = {
+					owned_by = ROOT
+					development = 35
+					base_production = 8
+					has_trade_building_trigger = yes
+					OR = {
+						has_building = workshop
+						has_building = counting_house
+					}
+					OR = {
+						has_building = courthouse
+						has_building = town_hall
+					}
+				}
+				184 = {
+					owned_by = ROOT
+					development = 30
+					base_production = 8
+					has_trade_building_trigger = yes
+					OR = {
+						has_building = workshop
+						has_building = counting_house
+					}
+					OR = {
+						has_building = courthouse
+						has_building = town_hall
+					}
+				}
+				188 = {
+					owned_by = ROOT				
+					development = 30
+					base_production = 8
+					has_trade_building_trigger = yes
+					OR = {
+						has_building = workshop
+						has_building = counting_house
+					}
+					OR = {
+						has_building = courthouse
+						has_building = town_hall
+					}
+				}
+				192 = {
+					owned_by = ROOT
+					development = 30
+					base_production = 8
+					has_trade_building_trigger = yes
+					OR = {
+						has_building = workshop
+						has_building = counting_house
+					}
+					OR = {
+						has_building = courthouse
+						has_building = town_hall
+					}
+				}
+				203 = {
+					owned_by = ROOT
+					development = 30
+					base_production = 8
+					has_trade_building_trigger = yes
+					OR = {
+						has_building = workshop
+						has_building = counting_house
+					}
+					OR = {
+						has_building = courthouse
+						has_building = town_hall
+					}
+				}
+				90 = {
+					owned_by = ROOT
+					development = 30
+					base_production = 8
+					has_trade_building_trigger = yes
+					OR = {
+						has_building = workshop
+						has_building = counting_house
+					}
+					OR = {
+						has_building = courthouse
+						has_building = town_hall
+					}
+				}
+				1744 = {
+					owned_by = ROOT
+					development = 30
+					base_production = 8
+					has_trade_building_trigger = yes
+					OR = {
+						has_building = workshop
+						has_building = counting_house
+					}
+					OR = {
+						has_building = courthouse
+						has_building = town_hall
+					}
+				}
+				97 = {
+					owned_by = ROOT
+					development = 30
+					base_production = 8
+					has_trade_building_trigger = yes
+					OR = {
+						has_building = workshop
+						has_building = counting_house
+					}
+					OR = {
+						has_building = courthouse
+						has_building = town_hall
+					}
+				}
+				78 = {
+					owned_by = ROOT
+					development = 30
+					base_production = 8
+					has_trade_building_trigger = yes
+					OR = {
+						has_building = workshop
+						has_building = counting_house
+					}
+					OR = {	
+						has_building = courthouse
+						has_building = town_hall
+					}
+				}
+				1876 = {
+					owned_by = ROOT
+					development = 30
+					base_production = 8
+					has_trade_building_trigger = yes
+					OR = {
+						has_building = workshop
+						has_building = counting_house
+					}
+					OR = {
+						has_building = courthouse
+						has_building = town_hall
+					}
+				}
+				85 = {
+					owned_by = ROOT
+					development = 30
+					base_production = 8
+					has_trade_building_trigger = yes
+					OR = {	
+						has_building = workshop
+						has_building = counting_house
+					}
+					OR = {
+						has_building = courthouse
+						has_building = town_hall
+					}
+				}
+			}
+		}
+		effect = {
+			custom_tooltip = all_provinces_get_this_mod
+			tooltip = {
+				183 = {
+					add_province_modifier = {
+						name = trade_capitals_of_europe
+						duration = -1
+					}
+				}
+			}
+			hidden_effect = {
+				183 = {
+					add_province_modifier = {
+						name = trade_capitals_of_europe
+						duration = -1
+					}
+				}
+				184 = {
+					add_province_modifier = {
+						name = trade_capitals_of_europe
+						duration = -1
+					}
+				}
+				186 = {
+					add_province_modifier = {
+						name = trade_capitals_of_europe
+						duration = -1
+					}
+				}
+				188 = {
+					add_province_modifier = {
+						name = trade_capitals_of_europe
+						duration = -1
+					}
+				}
+				192 = {
+					add_province_modifier = {
+						name = trade_capitals_of_europe
+						duration = -1
+					}
+				}
+				203 = {
+					add_province_modifier = {
+						name = trade_capitals_of_europe
+						duration = -1
+					}
+				}
+				90 = {
+					add_province_modifier = {
+						name = trade_capitals_of_europe
+						duration = -1
+					}
+				}
+				1744 = {
+					add_province_modifier = {
+						name = trade_capitals_of_europe
+						duration = -1
+					}
+				}
+				97 = {
+					add_province_modifier = {
+						name = trade_capitals_of_europe
+						duration = -1
+					}
+				}
+				78 = {
+					add_province_modifier = {
+						name = trade_capitals_of_europe
+						duration = -1
+					}
+				}
+				1876 = {
+					add_province_modifier = {
+						name = trade_capitals_of_europe
+						duration = -1
+					}
+				}
+				85 = {
+					add_province_modifier = {
+						name = trade_capitals_of_europe
+						duration = -1
+					}
+				}
 			}
 		}
 	}

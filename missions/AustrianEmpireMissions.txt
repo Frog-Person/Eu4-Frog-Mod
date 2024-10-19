@@ -758,7 +758,7 @@ cultural_dominance = {
 		required_missions = { room_for_austrians }
 		trigger = { 
 			num_of_owned_provinces_with = {
-				value = 80
+				value = 100
 				culture = ROOT
 			}
 		}
