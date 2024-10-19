@@ -20932,7 +20932,7 @@ gme_dlugi_targ = {
 		cost_to_upgrade = { factor = 500 }
 		province_modifiers = {
 			province_trade_power_value = 20
-			production_efficiency = 0.05
+			local_production_efficiency = 0.05
 		}
 		area_modifier = { }
 		region_modifier = { }
@@ -20948,7 +20948,7 @@ gme_dlugi_targ = {
 			province_trade_power_value = 40
 			trade_goods_size = 1
 			local_development_cost = -0.05
-			production_efficiency = 0.10
+			local_production_efficiency = 0.10
 		}
 		area_modifier = { }
 		region_modifier = { }
@@ -20965,7 +20965,7 @@ gme_dlugi_targ = {
 			province_trade_power_value = 80
 			trade_goods_size = 2
 			local_development_cost = -0.10
-			production_efficiency = 0.15
+			local_production_efficiency = 0.15
 		}
 		area_modifier = { }
 		region_modifier = { }
@@ -21451,7 +21451,7 @@ frankfurter_roemer = {
 			local_development_cost = -0.10
 			local_institution_spread = 0.10
 			province_trade_power_value = 40
-			production_efficiency = 0.20
+			local_production_efficiency = 0.20
 		}
 
 		#what modifiers are added to the provinces in the map area when we have this project here on this tier
@@ -21484,7 +21484,7 @@ frankfurter_roemer = {
 			local_institution_spread = 0.15
 			local_governing_cost = -0.10
 			province_trade_power_value = 80
-			production_efficiency = 0.40
+			local_production_efficiency = 0.40
 		}
 
 		#what modifiers are added to the provinces in the map area when we have this project here on this tier
