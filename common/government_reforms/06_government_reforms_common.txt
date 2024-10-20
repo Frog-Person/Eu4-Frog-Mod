@@ -463,6 +463,50 @@ vodka_of_the_crown_reform = {
 	}
 }
 
+portuguese_wineries = {
+	icon = vodka_monopoly
+	allow_normal_conversion = yes
+	potential = {
+		OR = {
+			tag = POR
+			tag = LUS
+		}
+		has_country_flag = por_unlock_wine
+	}
+	modifiers = {
+		global_unrest = -1.5
+		global_trade_goods_size_modifier = 0.05
+	}
+	effect = {
+			every_owned_province = {
+				if = {
+					limit = {
+						trade_goods = wine
+					}
+					add_province_modifier = { 
+						name = state_wine_bonus_prod 
+						duration = -1
+						hidden = yes
+					}
+				}
+			}
+	}
+	removed_effect = {
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					has_province_modifier = state_wine_bonus_prod 
+				}
+				remove_province_modifier = state_wine_bonus_prod 
+			}
+		}
+	}
+
+	ai = {
+		factor = 1
+	}
+}
+
 
 governing_senate_reform = {
 	icon = governing_senate

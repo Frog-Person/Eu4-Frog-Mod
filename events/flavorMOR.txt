@@ -603,3 +603,62 @@ country_event = {
 		}
 	}
 }
+
+country_event = {
+	id = flavor_mor.14
+	title = flavor_mor.14.t
+	desc = flavor_mor.14.desc
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = "flavor_mor.14.A"
+		346 = {
+			add_province_modifier = {
+				name = "portugese_investment"
+				duration = 18250
+			}
+		}
+		if = {
+			limit = {
+				NOT = { exists = ADU }
+				exists = MOR
+			}
+			MOR = {
+				country_event = { id = flavor_mor.15 days = 18250 }
+			}
+		}
+		if = {
+			limit = {
+				NOT = { exists = MOR }
+				exists = ADU
+			}
+			ADU = {
+				country_event = { id = flavor_ADU.15 days = 18250 }
+			}
+		}
+	}
+	option = {
+		name = "flavor_mor.14.B"
+		treasury = 500
+		if = {
+			limit = {
+				NOT = { exists = LOS }
+				exists = POR
+			}
+			POR = {
+				country_event = { id = flavor_por.5001 days = 30 }
+			}
+		}
+		if = {
+			limit = {
+				NOT = { exists = POR }
+				exists = LOS
+			}
+			LOS = {
+				country_event = { id = flavor_por.5001 days = 30 }
+			}
+		}
+	}
+}

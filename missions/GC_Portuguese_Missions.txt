@@ -680,65 +680,229 @@ gc_por_2_b = {
 			}
 		}
 	}
-}
 
-gc_por_2_c = {
-	slot = 2
-	generic = no
-	ai = yes
-	potential_on_load = {
-		OR = {
-			has_dlc = "Domination" 
-			has_dlc = "Golden Century"
-		}
-	}
-	potential = {
-		OR = {
-			has_dlc = "Domination" 
-			has_dlc = "Golden Century"
-		}
-		tag = POR
-		NOT = { map_setup = map_setup_random }
-		is_random_new_world = no
-	}
-	has_country_shield = yes
-	
-	
-	gc_por_flagship = {
-		icon = mission_launch_a_flagship
-		required_missions = { gc_por_build_the_navy }
+	gc_por_lus_states = {
+		icon = mission_unite_home_region
+		required_missions = { gc_por_english_alliance gc_por_build_the_navy }
 		position = 10
-		provinces_to_highlight = {
-			province_id = 227
-			NOT = { owned_by = ROOT }
-		}
+
 		trigger = {
-			if = {
-				limit = { has_dlc = "Golden Century" }
-				has_flagship = yes
+			OR = {
+				num_of_owned_provinces_with = {
+					value = 10
+					area = galicia_area
+					area = leon_area
+					province_id = 4788
+					province_id = 1747
+				}
+				AND = {
+					galicia_area = {
+						type = all
+						OR = {
+							owned_by = CAS
+							owned_by = SPA
+						}
+					}
+					leon_area = {
+						type = all
+						OR = {
+							owned_by = CAS
+							owned_by = SPA
+						}
+					}
+					any_ally = {
+						culture_group = iberian 
+						has_opinion = {
+							who = ROOT 
+							value = 190
+						}
+					}
+				}
 			}
-			else = {
-				num_of_heavy_ship = 8
-			}
-			227 = { owned_by = ROOT }
 		}
 		effect = {
-			add_navy_tradition = 20
-			227 = {
+			custom_tooltip = por_reclaim_lusatian_states
+			tooltip = {
+					
+				add_country_modifier = {
+					name = "spa_rb_morale"
+					duration = 5475
+				}
+			}
+			custom_tooltip = por_strengthen_the_alliance
+				tooltip = {
+					add_country_modifier = {
+						name = "por_minor_mill_buff"
+						duration = 5475
+					}
+				}	
+			hidden_effect = {
 				if = {
-					limit = { has_building = grand_shipyard }
-					add_base_production = 2 
+					limit = {
+					num_of_owned_provinces_with = {
+							value = 10
+							area = galicia_area
+							area = leon_area
+							province_id = 4788
+							province_id = 1747
+						}					
+					}
+					add_country_modifier = {
+						name = "spa_rb_morale"
+						duration = 5475
+					}
 				}
-				else_if = {
-					limit = { has_building = shipyard }
-					remove_building = shipyard 
-					add_building = grand_shipyard 
+				else = {
+					add_country_modifier = {
+						name = "por_minor_mill_buff"
+						duration = 5475
+					}
 				}
-				else = { add_building = shipyard }
 			}
 		}
 	}
+	
+	gc_por_lus_cities = {
+		icon = spa_new_capital
+		required_missions = { gc_por_lus_states }
+		position = 12
+
+		trigger = {
+			OR = {
+				219 = {
+					owned_by = ROOT
+				}
+				any_ally = {
+					culture_group = iberian 
+						has_opinion = {
+							who = ROOT 
+							value = 190
+						}
+					owns_core_province = 219
+				}
+			}
+			OR = {
+				217 = {
+					owned_by = ROOT
+				}
+				any_ally = {
+					culture_group = iberian 
+						has_opinion = {
+							who = ROOT 
+							value = 190
+						}
+					owns_core_province = 219
+				}
+			}
+		}
+		effect = {
+			custom_tooltip = iberian_conquest
+			tooltip = {
+				add_country_modifier = {
+					name = "por_tercio_staff"
+					duration = 3650
+				}
+			}
+			custom_tooltip = por_ally_iberian
+			tooltip = {
+				add_country_modifier = {
+					name = "iberian_urban_planning"
+					duration = 3650
+				}
+			}
+			hidden_effect = {
+				if = {
+					limit = {
+						217 = {
+						owned_by = ROOT
+						}
+						219 = {
+						owned_by = ROOT
+						}
+					}
+					iberia_region = {
+						limit = { 
+							NOT = { owned_by = ROOT }
+							OR = {
+								owned_by = CAS
+								owned_by = SPA
+							}
+						}
+						add_permanent_claim = ROOT
+					}
+					add_country_modifier = {
+						name = "por_tercio_staff"
+						duration = 3650
+					}
+				}
+				else_if = {
+					limit = {
+						any_ally = {
+						culture_group = iberian 
+							has_opinion = {
+								who = ROOT 
+								value = 190
+							}
+						owns_core_province = 219
+						}
+						any_ally = {
+						culture_group = iberian 
+							has_opinion = {
+								who = ROOT 
+								value = 190
+							}
+						owns_core_province = 219
+						}
+					}
+					add_country_modifier = {
+						name = "iberian_urban_planning"
+						duration = 3650
+					}
+				}
+			}
+		}
+	}
+	gc_por_wine_monopolies = {
+		icon = mission_wine_monopolies
+		required_missions = { gc_por_lus_cities }
+		position = 14
+		trigger = {
+			OR = {
+				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+					value = 8
+					trade_goods = wine
+					OR = {
+						has_building = workshop
+						has_building = counting_house
+					}
+				}
+				AND = {
+					4150 = {
+						base_production = 8
+						has_manufactory_trigger = yes
+					}
+					228 = {
+						base_production = 8
+						has_manufactory_trigger = yes
+					}
+					232 = {
+						base_production = 8
+						has_manufactory_trigger = yes
+					}
+					231 = {
+						base_production = 8
+						has_manufactory_trigger = yes
+					}
+				}
+			}
+		}
+		effect = {
+			custom_tooltip = por_unlock_state_wine_reform_tt
+			hidden_effect = { set_country_flag = por_unlock_wine } 	
+		}
+	}
 }
+
 
 gc_por_3_b = {
 	slot = 3
@@ -1033,8 +1197,8 @@ gc_por_3 = {
 
 	gc_por_plus_ultra = {
 		icon = mission_plus_ultra
-		required_missions = { }
-		position = 7
+		required_missions = { gc_por_build_the_navy }
+		position = 11
 		provinces_to_highlight = {
 			province_id = 4565
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
@@ -1088,6 +1252,24 @@ gc_por_3 = {
 				add_ruler_personality = expansionist_personality
 			}
 			else = { add_dip_power = 50 }
+		}
+	}
+	gc_por_lusatia_formed = {
+		icon = mission_lusitanian_empire
+		required_missions = { gc_conquer_the_north_african_coast gc_por_lus_cities }
+		position = 13
+
+		trigger = {
+			tag = LUS
+		}
+
+		effect = {
+			add_prestige_or_monarch_power = { amount = 25 } 
+			remove_country_modifier = centralization_modifier
+			add_country_modifier = {
+				name = lus_reclaiming_heritage
+				duration = 7300
+			}	
 		}
 	}
 }
@@ -1412,6 +1594,222 @@ gc_por_4 = {
 				}
 				else = {
 					add_mercantilism = 3
+				}
+			}
+		}
+	}
+
+	gc_por_conquer_tangiers = {
+		icon = mission_unite_home_region
+		required_missions = { gc_por_build_the_navy gc_por_flagship }
+		completed_by = 1472.1.1
+		position = 10
+		provinces_to_highlight = {
+			province_id = 334
+			NOT = { owned_by = ROOT }
+		}
+		
+		trigger = {
+			OR = {
+				AND = {
+					owns = 334
+					owns = 1751
+				}
+				AND = {
+					334 = {
+						OR = {
+							owned_by = MOR
+							owned_by = ADU
+						}
+					}
+					OR = {
+						alliance_with = MOR
+						alliance_with = ADU	
+					}
+				}	
+			}
+		}
+		
+		effect = {
+			add_adm_power = 150
+			if = { 
+				limit = {
+					OR = {
+						alliance_with = MOR
+						alliance_with = ADU
+					}	
+				}
+				add_country_modifier = {
+					name = "berber_cav"
+					duration = 3650
+				}
+			}
+			else = { add_prestige = 5 }
+			western_morocco_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			southern_morocco_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_claim = ROOT }
+				}
+				add_claim = ROOT
+			}
+		}
+	}
+
+	gc_conquer_the_north_african_coast = {
+		icon = mission_arabian_fort
+		required_missions = { gc_por_conquer_tangiers }
+		completed_by = 1488.1.1
+		position = 12
+		provinces_to_highlight = {
+			area = western_morocco_area
+			NOT = { owned_by = ROOT }
+		}
+		
+		trigger = {
+			OR = {
+				western_morocco_area = {
+					type = all
+					owned_by = ROOT
+				}
+				AND = {
+					OR = {
+					western_morocco_area = {
+						type = all
+						owned_by = MOR
+						}
+					western_morocco_area = {
+						type = all
+						owned_by = ADU
+						}
+					}
+					AND = {
+						OR = {
+							alliance_with = MOR
+							alliance_with = ADU
+						}
+					}
+				}
+			}
+		}
+		
+		effect = {
+			western_morocco_area = {
+				limit = { 
+					owned_by = ROOT
+				}
+				add_province_modifier = {
+					name = "buffer_zone_commerce"
+					duration = 5475
+				}
+			}
+			northern_morocco_area = {
+				limit = { 
+					owned_by = ROOT
+				}
+				add_province_modifier = {
+					name = "buffer_zone_commerce"
+					duration = 5475
+				}
+			}
+			southern_morocco_area = {
+				limit = { 
+					owned_by = ROOT
+				}
+				add_province_modifier = {
+					name = "buffer_zone_commerce"
+					duration = 5475
+				}
+			}
+		}
+	}
+
+	gc_por_african_gold = {
+		icon = mission_african_gold
+		required_missions = { gc_conquer_the_north_african_coast }
+		position = 14
+
+		trigger = {
+			OR = {
+				346 = {
+					owned_by = ROOT
+					base_production = 8
+				}
+				AND = {
+					OR = {
+							alliance_with = MOR
+							alliance_with = ADU
+					}
+					OR = {
+						346 = {
+							owned_by = MOR
+							development = 20
+							base_production = 10
+						}
+						346 = {
+							owned_by = ADU
+							development = 20
+							base_production = 10
+						}
+					}
+					treasury = 1500
+				}
+			}
+		}
+		effect = {
+			custom_tooltip = por_own_the_mines
+			tooltip = {
+				346 = {
+					add_province_modifier = {
+					name = "por_mining_upgrades"
+					duration = -1
+					}
+				}
+			}
+			custom_tooltip = investment_event
+			tooltip = {
+				country_event = { id = flavor_por.5000 }
+			}
+			hidden_effect = {
+				if = {
+					346 = {
+						owned_by = ROOT
+						base_production = 8
+					}
+				}
+				346 = {
+					add_province_modifier = {
+					name = "por_mining_upgrades"
+					duration = -1
+					}
+				}
+				else_if = {
+					AND = {
+						OR = {
+								alliance_with = MOR
+								alliance_with = ADU
+						}
+						OR = {
+							346 = {
+								owned_by = MOR
+								development = 20
+								base_production = 10
+							}
+							346 = {
+							owned_by = ADU
+								development = 20
+								base_production = 10
+							}
+						}
+						treasury = 1500
+					}		
+					country_event = { id = flavor_por.5000 }
 				}
 			}
 		}
@@ -1758,10 +2156,44 @@ gc_por_5_continued = {
 		}
 	}
 
+	gc_por_flagship = {
+		icon = mission_launch_a_flagship
+		required_missions = { }
+		position = 9
+		provinces_to_highlight = {
+			province_id = 227
+			NOT = { owned_by = ROOT }
+		}
+		trigger = {
+			if = {
+				limit = { has_dlc = "Golden Century" }
+				has_flagship = yes
+			}
+			else = {
+				num_of_heavy_ship = 8
+			}
+			227 = { owned_by = ROOT }
+		}
+		effect = {
+			add_navy_tradition = 20
+			227 = {
+				if = {
+					limit = { has_building = grand_shipyard }
+					add_base_production = 2 
+				}
+				else_if = {
+					limit = { has_building = shipyard }
+					remove_building = shipyard 
+					add_building = grand_shipyard 
+				}
+				else = { add_building = shipyard }
+			}
+		}
+	}
 	dom_portugal_reform_navy = {
 		icon = mission_aragonese_navy
 		required_missions = { gc_por_flagship }
-		position = 9
+		position = 11
 		trigger = {
 			num_of_owned_provinces_with = {
 				has_shipyard_building_trigger = yes 
