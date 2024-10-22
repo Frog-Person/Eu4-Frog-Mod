@@ -362,6 +362,107 @@ gc_por_1 = {
 	}
 }
 
+gc_por_1 = {
+	slot = 1
+	generic = no
+	ai = yes
+	potential_on_load = {
+		OR = {
+			has_dlc = "Domination" 
+			has_dlc = "Golden Century"
+		}
+	}
+	potential = {
+		OR = {
+			has_dlc = "Domination" 
+			has_dlc = "Golden Century"
+		}
+		OR = {
+		tag = POR
+		tag = LUS
+		}
+		NOT = { map_setup = map_setup_random }
+		is_random_new_world = no
+	}
+	has_country_shield = yes
+
+	lus_berber_relations = {
+		icon = catholic_confraternity
+		position = 13
+		required_missions = { }
+		trigger = {
+			OR = {
+				OR = {
+					alliance_with = MOR
+					alliance_with = ADU	
+				}	
+				OR = {
+					is_enemy = ADU
+					is_enemy = MOR
+				}
+				OR = {
+					NOT = { exists = MOR }
+					NOT = { exists = ADU }
+				}
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					OR = {
+						NOT = { exists = MOR }
+						NOT = { exists = ADU }
+					}
+				}
+				add_country_modifier = { 
+					name = "survivors_of_south" 
+					duration = 10950
+				}
+			}
+			else = {
+				add_country_modifier = { 
+					name = "diplomats_and_spies" 
+					duration = 7200
+				}
+			}
+		}
+	}
+	lus_plots_against_berbers = {
+		icon
+		position
+		required_missions = { }
+		trigger = {
+			OR = {
+				AND = {
+					OR = {
+						alliance_with = MOR
+						alliance_with = ADU	
+					}
+					
+				}
+				AND = {
+					rivaled to Mor/Adu
+					spy network on them is 50
+					ducats = 500
+				}
+			}
+		}
+		effect = {
+			if = {
+				limit = { rivaled, 50 spy, ducats }
+				country_event = { flavor_por.5002 }
+				add_country_modifier = {
+					name = "lus_spymasters"
+					duration = -1
+			}
+				else = {
+				add_country_modifier = { name = "trustworthy_nation" duration = temp? }
+				}
+			}
+		}
+	}
+}
+
 gc_por_2 = {
 	slot = 2
 	generic = no
@@ -878,7 +979,7 @@ gc_por_2_b = {
 	gc_por_wine_monopolies = {
 		icon = mission_wine_monopolies
 		required_missions = { gc_por_lus_cities }
-		position = 14
+		position = 13
 		trigger = {
 			OR = {
 				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
@@ -916,6 +1017,123 @@ gc_por_2_b = {
 	}
 }
 
+gc_por_2 = {
+	slot = 2
+	generic = no
+	ai = yes
+	potential_on_load = {
+		OR = {
+			has_dlc = "Domination" 
+			has_dlc = "Golden Century"
+		}
+	}
+	potential = {
+		OR = {
+			has_dlc = "Domination" 
+			has_dlc = "Golden Century"
+		}
+		tag = LUS
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+
+lus_end_cas = {
+   icon = mission_castillian_aggression
+   position = 14
+   required_missions = { gc_por_lusatia_formed }
+  	trigger = {
+    	OR = {
+    		NOT = { exists = CAS }
+    		NOT = { exists = SPA }
+    	}
+		num_of_owned_provinces_with = {
+			value = 10
+			culture = castillian
+		}
+   	}
+   	effect = {
+    	add_adm = 100
+    	add_prestiege = 20
+    	add_country_modifier = {
+			name = "true_kings_of_iberia"
+			duration = 7300
+		}
+   	}
+}
+
+lus_take_east_iberia = {
+   icon = mission_have_two_subjects
+   position = 16
+   required_missions { }
+   trigger = {
+		NOT = { exists = ARG }
+		220 = {
+			owned_by = ROOT
+		}
+		catalonia_area = {
+			type = all
+			owned_by = ROOT
+		}
+ 	}
+	effect = {
+		220 = {
+			add_province_modifier = {
+				name = "jewel_of_eastern_iberia"
+				duration = -1
+			}
+		}
+		213 = {
+			add_province_modifier = {
+				name = "lus_production_hub"
+				duration = -1
+			}
+		}
+		baleries_area = {
+			limit = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+			add_permanant_claim = { ROOT }
+		}
+	}
+}
+	control_our_med_island_clay = {
+		icon = mission_rb_mediterranean_authority
+		position = 18
+		required_missions { lus_take_east_iberia }
+		trigger = {
+			baleries_area = {
+				type = all
+				owned_by = ROOT
+				OR = {
+					has_building = dock
+					has_building = drydock
+				}
+				has_trade_building_trigger = yes
+			}
+		}
+		effect = {
+			4560 = {
+				add_province_modifier = {
+					name = "lus_med_trade_hubs"
+					duration = -1
+				}
+			}
+			333 = {
+				add_province_modifier = {
+					name = "lus_med_trade_hubs"
+					duration = -1
+				}
+			}
+			4559 = {
+				add_province_modifier = {
+					name = "lus_med_trade_hubs"
+					duration = -1
+				}
+			}
+		}
+	}
+}
 
 gc_por_3_b = {
 	slot = 3
@@ -1390,7 +1608,7 @@ gc_lus_3 = {
 		required_missions = { lus_manpower }
 		trigger = {
 			num_of_owned_provinces_with = {
-				value = 30
+				value = 8
 				has_manufactory_trigger = yes
 				OR = {
 					has_building = workshop
@@ -1926,7 +2144,7 @@ gc_por_4 = {
 	gc_por_tafilalt_gold = {
 		icon = mission_african_gold
 		required_missions = { gc_conquer_the_north_african_coast }
-		position = 14
+		position = 13
 
 		trigger = {
 			OR = {
@@ -2522,7 +2740,7 @@ gc_lus_5 = {
 	has_country_shield = yes
 
 	lus_high_sea_fleet = {
-		icon
+		icon = mission_rb_grow_the_channel
 		required_missions = { gc_por_lusatia_formed }
 		position = 14
 
@@ -2537,16 +2755,47 @@ gc_lus_5 = {
 	}
 
 	lus_cannon_manus = {
-		icon
+		icon = mission_industrial_forging
 		required_missions = { lus_high_sea_fleet }
 		position = 16
 
 		trigger = {
 			num_of_artillery = 40
 			num_of_owned_provinces_with = {
-				value = 10
-				base_production = 10
-				has_building = 
+				value = 8
+				base_production = 8
+				has_manufactory_trigger = yes
+				OR = {
+					trade_goods = fish
+					trade_goods = salt
+					trade_goods = naval_supplies
+					trade_goods = copper
+					trade_goods = iron
+				}
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = "pre_industrial_cannons"
+				duration = -1
+			}
+		}
+	}
+
+	lus_field_cannons = {
+		icon = mission_cannons_firing
+		position = 18
+		required_missions = { lus_cannon_manus lus_otto_siege_cannons }
+		trigger = {
+			num_of_artillery = 100
+			artillery_fraction = 0.2
+			has_commanding_three_star = yes
+			#will add a modifier for battles later
+		}
+		effect = {
+			add_country_modifier = {
+				name = "guns_of_fire_and_thunder"
+				duration = -1
 			}
 		}
 	}
