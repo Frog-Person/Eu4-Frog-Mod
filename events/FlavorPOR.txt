@@ -1140,6 +1140,12 @@ country_event = {
 	option = {
 		name = "flavor_por.5000.A"
 		add_treasury = -1500
+		2754 = {
+			add_province_modifier = {
+				name = "portuguese_investment"
+				duration = 18250
+			}
+		}
 		if = {
 			limit = {
 				NOT = { exists = ADU }
@@ -1159,22 +1165,13 @@ country_event = {
 			}
 		}
 	}
-}
-
-country_event = {
-	id = flavor_por.5001
-	title = "flavor_por.5001.name"
-	desc = "flavor_por.5001.desc"
-	picture = SHIP_SAILING_eventPicture
-
-	is_triggered_only = yes
-
 	option = {
-		name = "title = "flavor_por.5001.A"
-		treasury = 1000
+		name = "flavor_por.5000.B"
+		add_treasury = -1500
+		
 		add_country_modifier = {
-			name = "berber_trade_access"
-			duration = 3650
+			name = "portugese_prospecting"
+			duration = -1
 		}
 	}
 }

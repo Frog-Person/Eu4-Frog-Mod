@@ -1707,6 +1707,49 @@ POR_ideas = {
 	}
 }
 
+LUS_ideas = {
+	start = {
+		movement_speed_in_fleet_modifier = 1
+		land_morale = 0.15
+	}
+	
+	bonus = {
+		global_tariffs = 0.20
+	}
+	
+	trigger = {
+		tag = LUS
+	}
+	free = yes		#will be added at load.
+	
+	legacy_of_naval_war = {
+		naval_morale = 0.15
+		heavy_ship_power = 0.15
+	}
+	afonsine_ordinances = {
+		global_trade_goods_size_modifier = 0.1
+	}
+	sons_of_lusitanii = {
+		infantry_power = 0.1
+		leader_land_manuever = 1
+	}
+	global_reach = {
+		min_autonomy_in_territories = -0.1
+		trade_company_investment_cost = -0.15
+	}
+	the_bandeirantes = {
+		trade_efficiency = 0.15
+	}
+	lus_absolutism = {
+		build_cost = -0.15
+		yearly_absolutism = 0.5
+	}
+	lus_royal_military_academy = {
+		leader_naval_manuever = 1
+		artillery_fire = 1
+	}
+}
+
 
 POL_ideas = {
 	start = {

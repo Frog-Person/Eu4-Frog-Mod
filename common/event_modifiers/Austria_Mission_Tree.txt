@@ -457,18 +457,50 @@ lus_reclaiming_heritage = {
     monthly_splendor = 1
 }
 state_wine_bonus_prod = {
-    trade_goods_size_modifier = 1
+    local_production_efficiency = 1.2
     unrest = -1
 }
 por_mining_upgrades = {
     local_development_cost = -0.05
     local_gold_depletion_chance_modifier = -0.2
 }
-portugese_investment = {
-    local_production_efficiency = 0.5
-    local_gold_depletion_chance_modifier = 0.1
+portuguese_investment = {
+    trade_goods_size_modifier = 0.5
 }
 berber_trade_access = {
     trade_efficiency = 0.1
     caravan_power = 0.2
+}
+portugese_prospecting = {
+    increase_trade_goods_discovery = {
+		trade_goods = gold
+	}
+    colony_development_boost = 1
+}
+world_renowned_ports = {
+    global_trade_power = 0.05
+    ship_recruit_speed = -0.25
+    local_ship_cost = -0.2
+}
+prepared_reservists = {
+    allowed_marine_fraction = 0.1
+    sailors_recovery_speed = 0.1
+    manpower_recovery_speed = 0.10
+}
+lus_effficient_trade_routes = {
+    ship_power_propagation = 0.20
+    trade_steering = 0.1
+    global_trade_power = 0.05
+}
+heroes_of_the_sea = {
+    is_marine_modifier = yes
+    fire_damage_received = -0.1
+}
+otto_arty_secrets = {
+    artillery_power = 0.05
+    siege_ability = 0.2
+}
+deep_water_ships = {
+    naval_morale = 0.05
+    global_naval_engagement_modifier = 0.1
 }

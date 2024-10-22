@@ -13,7 +13,10 @@ gc_por_1 = {
 			has_dlc = "Domination" 
 			has_dlc = "Golden Century"
 		}
+		OR = {
 		tag = POR
+		tag = LUS
+		}
 		NOT = { map_setup = map_setup_random }
 		is_random_new_world = no
 	}
@@ -374,7 +377,10 @@ gc_por_2 = {
 			has_dlc = "Domination" 
 			has_dlc = "Golden Century"
 		}
+		OR = {
 		tag = POR
+		tag = LUS
+		}
 		NOT = { map_setup = map_setup_random }
 	}
 	has_country_shield = yes
@@ -505,7 +511,10 @@ gc_por_2_b = {
 			has_dlc = "Domination" 
 			has_dlc = "Golden Century"
 		}
+		OR = {
 		tag = POR
+		tag = LUS
+		}
 		NOT = { map_setup = map_setup_random }
 		is_random_new_world = no
 	}
@@ -690,10 +699,12 @@ gc_por_2_b = {
 			OR = {
 				num_of_owned_provinces_with = {
 					value = 10
-					area = galicia_area
-					area = leon_area
-					province_id = 4788
-					province_id = 1747
+					OR = {
+						area = galicia_area
+						area = leon_area
+						province_id = 4788
+						province_id = 1747
+					}
 				}
 				AND = {
 					galicia_area = {
@@ -741,10 +752,12 @@ gc_por_2_b = {
 					limit = {
 					num_of_owned_provinces_with = {
 							value = 10
-							area = galicia_area
-							area = leon_area
-							province_id = 4788
-							province_id = 1747
+							OR = {
+								area = galicia_area
+								area = leon_area
+								province_id = 4788
+								province_id = 1747
+							}
 						}					
 					}
 					add_country_modifier = {
@@ -919,7 +932,10 @@ gc_por_3_b = {
 			has_dlc = "Domination" 
 			has_dlc = "Golden Century"
 		}
+		OR = {
 		tag = POR
+		tag = LUS
+		}
 		NOT = { map_setup = map_setup_random }
 		is_random_new_world = no
 	}
@@ -983,7 +999,10 @@ gc_por_3 = {
 			has_dlc = "Domination" 
 			has_dlc = "Golden Century"
 		}
+		OR = {
 		tag = POR
+		tag = LUS
+		}
 		NOT = { map_setup = map_setup_random }
 	}
 	has_country_shield = yes
@@ -1274,6 +1293,177 @@ gc_por_3 = {
 	}
 }
 
+gc_lus_3 = {
+	slot = 3
+	generic = no
+	ai = yes
+	potential_on_load = {
+		OR = {
+			has_dlc = "Domination" 
+			has_dlc = "Golden Century"
+		}
+	}
+	potential = {
+		OR = {
+			has_dlc = "Domination" 
+			has_dlc = "Golden Century"
+		}
+		tag = LUS
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+
+	lus_ports = {
+		icon = renaissance_city
+		required_missions = { gc_por_lusatia_formed }
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				has_dock_building_trigger = yes 
+				has_shipyard_building_trigger = yes 
+				value = 12
+			}
+			development_in_provinces = {
+				value = 200 
+				has_port = yes 
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = "world_renowned_ports"
+				duration = -1
+			}
+			iberia_region_region = {
+				limit = { 
+					has_dock_building_trigger = yes 
+					has_shipyard_building_trigger = yes 
+					owned_by = ROOT 
+					has_port = yes 
+				}
+				add_base_production = 1
+				add_base_manpower = 1
+			}
+		}
+	}
+	lus_trade = {
+		icon = the_shape_of_trades_to_come
+		required_missions = { lus_ports }
+		trigger = {
+			num_of_owned_provinces_with = {
+				value = 1
+				center_of_trade = 4
+				same_trade_node_as = 1293
+			}
+			num_of_owned_provinces_with = {
+				value = 4
+				center_of_trade = 3
+				same_trade_node_as = 1293
+			}
+		}
+		effect = {
+			custom_tooltip = lus_magnificent_upgrade
+		}
+	}
+	lus_manpower = {
+		icon = mission_landsknecht_soldier
+		required_missions = { lus_trade }
+		trigger = {
+			num_of_owned_provinces_with = {
+				value = 10
+				has_building = impressment_offices
+				region = iberia_region
+			}
+			num_of_owned_provinces_with = {
+				value = 20
+				base_manpower = 8
+				has_manpower_building_trigger = yes
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = "prepared_reservists"
+				duration = -1
+			}
+		}
+	}
+	lus_manufactories = {
+		icon = mission_have_manufactories
+		required_missions = { lus_manpower }
+		trigger = {
+			num_of_owned_provinces_with = {
+				value = 30
+				has_manufactory_trigger = yes
+				OR = {
+					has_building = workshop
+					has_building = counting_house
+				}
+				base_production = 5
+			}
+		}
+		effect = {
+			add_years_of_income = 0.5
+			custom_tooltip = lus_random_provinces_in_iberia
+			tooltip = {
+				add_province_modifier = {
+					name = "lus_double_shifts"
+					duration = -1
+				}
+			}
+			hidden_effect = {
+				iberia_region = {
+					limit = { 
+						owned_by = ROOT
+						has_manufactory_trigger = yes
+					}
+					type = random
+					amount = 8
+					add_province_modifier = { name = lus_double_shifts duration = -1 }
+				}
+				random_owned_province = { limit = { NOT = { has_province_modifier = lus_double_shifts } region = iberia_region owned_by = ROOT  has_manufactory_trigger = yes } add_province_modifier = { name = lus_double_shifts duration = -1 } }
+				random_owned_province = { limit = { NOT = { has_province_modifier = lus_double_shifts } region = iberia_region owned_by = ROOT  has_manufactory_trigger = yes } add_province_modifier = { name = lus_double_shifts duration = -1 } }
+				random_owned_province = { limit = { NOT = { has_province_modifier = lus_double_shifts } region = iberia_region owned_by = ROOT  has_manufactory_trigger = yes } add_province_modifier = { name = lus_double_shifts duration = -1 } }
+				random_owned_province = { limit = { NOT = { has_province_modifier = lus_double_shifts } region = iberia_region owned_by = ROOT  has_manufactory_trigger = yes } add_province_modifier = { name = lus_double_shifts duration = -1 } }
+				random_owned_province = { limit = { NOT = { has_province_modifier = lus_double_shifts } region = iberia_region owned_by = ROOT  has_manufactory_trigger = yes } add_province_modifier = { name = lus_double_shifts duration = -1 } }
+				random_owned_province = { limit = { NOT = { has_province_modifier = lus_double_shifts } region = iberia_region owned_by = ROOT  has_manufactory_trigger = yes } add_province_modifier = { name = lus_double_shifts duration = -1 } }
+				random_owned_province = { limit = { NOT = { has_province_modifier = lus_double_shifts } region = iberia_region owned_by = ROOT  has_manufactory_trigger = yes } add_province_modifier = { name = lus_double_shifts duration = -1 } }
+				random_owned_province = { limit = { NOT = { has_province_modifier = lus_double_shifts } region = iberia_region owned_by = ROOT  has_manufactory_trigger = yes } add_province_modifier = { name = lus_double_shifts duration = -1 } }
+			}
+		}
+	}
+	lus_med_trade = {
+		icon = mission_rb_mediterranean_authority
+		required_missions = { lus_manufactories }
+		trigger = {
+			126 = {
+				development = 10
+				owned_by = ROOT
+				has_trade_building_trigger = yes
+			}
+			163 = {
+				development = 20
+				owned_by = ROOT
+				has_trade_building_trigger = yes
+			}
+			321 = {
+				development = 20
+				owned_by = ROOT
+				has_trade_building_trigger = yes
+			}
+			baleares_area = {
+				development = 10
+				type = all
+				owned_by = ROOT
+				has_trade_building_trigger = yes
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = "lus_effficient_trade_routes"
+				duration = -1
+			}
+		}
+	}
+}
+
 gc_por_4 = {
 	slot = 4
 	generic = no
@@ -1289,7 +1479,10 @@ gc_por_4 = {
 			has_dlc = "Domination" 
 			has_dlc = "Golden Century"
 		}
+		OR = {
 		tag = POR
+		tag = LUS
+		}
 		NOT = { map_setup = map_setup_random }
 	}
 	has_country_shield = yes
@@ -1730,7 +1923,7 @@ gc_por_4 = {
 		}
 	}
 
-	gc_por_african_gold = {
+	gc_por_tafilalt_gold = {
 		icon = mission_african_gold
 		required_missions = { gc_conquer_the_north_african_coast }
 		position = 14
@@ -1778,36 +1971,40 @@ gc_por_4 = {
 			}
 			hidden_effect = {
 				if = {
-					346 = {
-						owned_by = ROOT
-						base_production = 8
+					limit = {
+						346 = {
+							owned_by = ROOT
+							base_production = 8
+						}
 					}
-				}
-				346 = {
-					add_province_modifier = {
-					name = "por_mining_upgrades"
-					duration = -1
+					346 = {
+						add_province_modifier = {
+						name = "por_mining_upgrades"
+						duration = -1
+						}
 					}
 				}
 				else_if = {
-					AND = {
-						OR = {
+					limit = {
+						AND = {
+							OR = {
 								alliance_with = MOR
 								alliance_with = ADU
-						}
-						OR = {
-							346 = {
-								owned_by = MOR
-								development = 20
-								base_production = 10
 							}
-							346 = {
-							owned_by = ADU
-								development = 20
-								base_production = 10
+							OR = {
+								346 = {
+									owned_by = MOR
+									development = 20
+									base_production = 10
+								}
+								346 = {
+								owned_by = ADU
+									development = 20
+									base_production = 10
+								}
 							}
+							treasury = 1500
 						}
-						treasury = 1500
 					}		
 					country_event = { id = flavor_por.5000 }
 				}
@@ -1844,6 +2041,74 @@ gc_por_4 = {
 		# }
 	# }
 }
+gc_lus_4 = {
+	slot = 4
+	generic = no
+	ai = yes
+	potential_on_load = {
+		OR = {
+			has_dlc = "Domination" 
+			has_dlc = "Golden Century"
+		}
+	}
+	potential = {
+		OR = {
+			has_dlc = "Domination" 
+			has_dlc = "Golden Century"
+		}
+		tag = LUS
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+
+	lus_portuguese_marines = {
+		icon = mission_plc_lifetime_of_war
+		required_missions = { lus_ports }
+		position = 15
+		trigger = {
+			num_of_marines = 80
+			naval_forcelimit = 120
+		}
+		effect = {
+			add_country_modifier = {
+				name = "heroes_of_the_sea"
+				duration = -1
+			}
+		}
+	}
+
+	lus_otto_siege_cannons = {
+		icon = mission_guns_of_urban
+		required_missions = { lus_portuguese_marines }
+		position = 17
+
+		trigger = {
+			OR = {
+				AND = {
+					alliance_with = TUR
+					reverse_has_opinion = {
+						who = TUR
+						value = 100
+					}
+				}
+				AND = {
+					is_rival = TUR
+					has_spy_network_in = {
+						who = TUR
+						value = 50
+					}
+				}
+				NOT = { exists = TUR }			
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = "otto_arty_secrets"
+				duration = -1
+			}
+		}
+	}
+}
 
 gc_por_5_dom = {
 	slot = 5
@@ -1856,7 +2121,10 @@ gc_por_5_dom = {
 	potential = {
 		has_dlc = "Golden Century"
 		has_dlc = "Domination"
+		OR = {
 		tag = POR
+		tag = LUS
+		}
 		NOT = { map_setup = map_setup_random }
 	}
 	has_country_shield = yes
@@ -1945,7 +2213,10 @@ gc_por_5 = {
 			has_dlc = "Golden Century"
 			has_dlc = "Domination"
 		}
+		OR = {
 		tag = POR
+		tag = LUS
+		}
 		NOT = { map_setup = map_setup_random }
 	}
 	has_country_shield = yes
@@ -2044,7 +2315,10 @@ gc_por_5_bb = {
 	potential = {
 		has_dlc = "Golden Century"
 		has_dlc = "Domination"
+		OR = {
 		tag = POR
+		tag = LUS
+		}
 		NOT = { map_setup = map_setup_random }
 	}
 	has_country_shield = yes
@@ -2093,7 +2367,10 @@ gc_por_5_continued = {
 			has_dlc = "Golden Century"
 			has_dlc = "Domination"
 		}
+		OR = {
 		tag = POR
+		tag = LUS
+		}
 		NOT = { map_setup = map_setup_random }
 	}
 	has_country_shield = yes
@@ -2219,6 +2496,57 @@ gc_por_5_continued = {
 					cost_multiplier = 0.25
 				}
 				add_navy_tradition = 25 
+			}
+		}
+	}
+}
+
+gc_lus_5 = {
+	slot = 5
+	generic = no
+	ai = yes
+	potential_on_load = {
+		OR = {
+			has_dlc = "Domination" 
+			has_dlc = "Golden Century"
+		}
+	}
+	potential = {
+		OR = {
+			has_dlc = "Domination" 
+			has_dlc = "Golden Century"
+		}
+		tag = LUS
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+
+	lus_high_sea_fleet = {
+		icon
+		required_missions = { gc_por_lusatia_formed }
+		position = 14
+
+		trigger = {
+			num_of_heavy_ship = 60
+			num_of_light_ship = 75
+		}
+		effect = {
+			name = "deep_water_ships"
+			duration = 7300
+		}
+	}
+
+	lus_cannon_manus = {
+		icon
+		required_missions = { lus_high_sea_fleet }
+		position = 16
+
+		trigger = {
+			num_of_artillery = 40
+			num_of_owned_provinces_with = {
+				value = 10
+				base_production = 10
+				has_building = 
 			}
 		}
 	}
