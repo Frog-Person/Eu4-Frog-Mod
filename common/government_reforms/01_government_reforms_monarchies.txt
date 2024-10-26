@@ -7333,6 +7333,26 @@ system_of_councils_reform = {
 	}
 }
 
+lus_system_of_councils_reform = {
+	icon = "hispanic_monarchy"
+	allow_normal_conversion = no
+	potential = {
+		tag  = LUS
+		mission_completed = lus_gov_reform
+	}
+	trigger = {
+		mission_completed = spa_system_councils
+	}
+	government_abilities = {
+		lus_system_of_councils_mechanic
+	}
+	modifiers = {
+		allow_free_estate_privilege_revocation = yes 
+		tolerance_own = 2
+		monarch_admin_power = 1 
+	}
+}
+
 courts_of_navarra = {
 	icon = "parliament_hall"
 	allow_normal_conversion = yes

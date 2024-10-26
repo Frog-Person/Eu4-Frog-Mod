@@ -362,7 +362,7 @@ gc_por_1 = {
 	}
 }
 
-gc_por_1 = {
+gc_lus_1 = {
 	slot = 1
 	generic = no
 	ai = yes
@@ -428,9 +428,9 @@ gc_por_1 = {
 		}
 	}
 	lus_plots_against_berbers = {
-		icon
-		position
-		required_missions = { }
+		icon = mission_eliminate_pretenders
+		position = 15
+		required_missions = {  lus_berber_relations }
 		trigger = {
 			OR = {
 				AND = {
@@ -458,6 +458,195 @@ gc_por_1 = {
 				else = {
 				add_country_modifier = { name = "trustworthy_nation" duration = temp? }
 				}
+			}
+		}
+	}
+	lus_controllers_of_iberia = {
+	icon = mission_castillian_aggression 
+	position = 17
+	required_missions = { lus_plots_against_berbers }
+		trigger = {
+			OR = {
+				development_in_provinces = {
+					region = iberia_region
+					total_development = HUN
+				}
+				iberia_region = {
+					type = ALL
+					owned_by = ROOT
+				}
+			}
+		}
+		effect = {
+			add_country_modifier = { 
+				name = "masters_of_iberia" 
+				duration = -1 
+			}
+		}
+	}
+	lus_strait_of_gibraltar = {
+		icon
+		position
+		required_missions = { lus_controllers_of_iberia }
+		trigger = {
+			OR = {
+				AND = {
+					tangiers_area = {
+						type = all
+						owned_by = ROOT
+					}
+					granada_area = {
+						type = all
+						owned_by = ROOT
+					}
+					226 = {
+						owned_by = ROOT
+						development = 20
+						has_trade_building_trigger = yes
+						OR = {
+							has_building = fort_15th
+							has_building = fort_16th
+							has_building = fort_17th
+							has_building = fort_18th
+						}
+					}
+					1751 = {
+						owned_by = ROOT
+						development = 20
+						has_trade_building_trigger = yes
+						OR = {
+							has_building = fort_15th
+							has_building = fort_16th
+							has_building = fort_17th
+							has_building = fort_18th
+						}
+					}
+				}
+				AND = {
+					1293 = { 
+						is_strongest_trade_power = LUS
+					}
+					OR = {
+						navy_size = ADU
+						navy_size = MOR
+					}
+				}
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					AND = {
+						tangiers_area = {
+							type = all
+							owned_by = ROOT
+						}
+						granada_area = {
+							type = all
+							owned_by = ROOT
+						}
+						226 = {
+							owned_by = ROOT
+							development = 20
+							has_trade_building_trigger = yes
+							OR = {
+								has_building = fort_15th
+								has_building = fort_16th
+								has_building = fort_17th
+								has_building = fort_18th
+							}
+						}
+						1751 = {
+							owned_by = ROOT
+							development = 20
+							has_trade_building_trigger = yes
+							OR = {
+								has_building = fort_15th
+								has_building = fort_16th
+								has_building = fort_17th
+								has_building = fort_18th
+							}
+						}
+					}
+				}
+				226 =  {
+					add_province_modifier = {
+						name = new_sound_toll
+						duration = -1
+					}
+				}
+				1751 = {
+					add_province_modifier = {
+						name = new_sound_toll							
+						duration = -1
+					}
+				}
+			}
+			else = {
+				1466 = {
+					add_trade_modifier = {
+						who = ROOT
+						duration = 5475
+						power = 50
+						key = lus_secure_seville
+					}
+				}
+				1301 = {
+					add_trade_modifier = {
+						who = ROOT
+						duration = 5475
+						power = 50
+						key = lus_secure_seville
+					}
+				}
+				1516 = {
+					add_trade_modifier = {
+						who = ROOT
+						duration = 5475
+						power = 50
+						key = lus_secure_seville
+					}
+				}
+			}
+		}
+	}
+	lus_master_of_w_med = {
+		icon = mission_dominate_the_mediterranean
+		position = 19
+		required_missions = { control_our_med_island_clay lus_strait_of_gibraltar }
+		trigger = {
+			naval_forcelimit = 300
+			navy_size_percentage = 1
+			AND = {
+				1293 = {
+					is_strongest_trade_power = ROOT
+				}
+				1301 = {
+					is_strongest_trade_power = ROOT
+				}
+				1298 = {
+					is_strongest_trade_power = ROOT
+				}
+				358 = {
+					trade_share = {
+						country = LUS
+						share = 30
+					}
+				}
+			}
+			num_of_owned_provinces_with = {
+				value = 30
+				is_coastal = yes
+				OR = {
+					region = iberia_region
+					region = North_africa_region
+				}
+			}
+		}
+		effect = {
+			add_country_modifier = { 
+				name = "lessons_of_the_west_global" 
+				duration = -1 
 			}
 		}
 	}
@@ -1017,7 +1206,7 @@ gc_por_2_b = {
 	}
 }
 
-gc_por_2 = {
+gc_lus_2 = {
 	slot = 2
 	generic = no
 	ai = yes
@@ -1064,7 +1253,7 @@ lus_end_cas = {
 lus_take_east_iberia = {
    icon = mission_have_two_subjects
    position = 16
-   required_missions { }
+   required_missions { lus_end_cas }
    trigger = {
 		NOT = { exists = ARG }
 		220 = {
@@ -1131,6 +1320,23 @@ lus_take_east_iberia = {
 					duration = -1
 				}
 			}
+		}
+	}
+	lus_gov_reform = {
+		icon = hispanic_monarchy
+		position = 19
+		required_missions = { control_our_med_island_clay lus_med_trade }
+		trigger = {
+			reform_level = 5
+			OR = { 
+				full_idea_group = administrative_ideas 
+				adm = 6 
+				monthly_adm = 15 
+			}
+			crown_land_share = 50
+		}
+		effect = {
+			add_government_reform = lus_system_of_councils_reform 
 		}
 	}
 }
@@ -1649,7 +1855,7 @@ gc_lus_3 = {
 	}
 	lus_med_trade = {
 		icon = mission_rb_mediterranean_authority
-		required_missions = { lus_manufactories }
+		required_missions = { lus_manufactories  control_our_med_island_clay }
 		trigger = {
 			126 = {
 				development = 10
