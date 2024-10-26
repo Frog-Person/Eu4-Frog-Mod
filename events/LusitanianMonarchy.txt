@@ -1,8 +1,8 @@
 ###########################################
-# Events for Hispanic Monarchy
+# Events for Lusitanian Monarchy
 ###########################################
 
-namespace = hispanic_monarchy_events
+namespace = lusitanian_monarchy_events
 
 #Royal Council Meeting
 country_event = {

@@ -12,7 +12,7 @@ lus_system_of_councils_mechanic = {
 			scaled_modifier = {
 				modifier = {
 					administrative_efficiency = 0.05
-					monthly_splendor = 4
+					min_autonomy_in_territories = -0.1
 				}
 			}
 		}

@@ -453,6 +453,7 @@ monarchy = {
 		polish_elective_monarchy
 		polish_great_sejm
 		system_of_councils_reform
+		lus_system_of_councils_reform
 		courts_of_navarra
 		elective_monarchy_reform
 		elective_monarchy
