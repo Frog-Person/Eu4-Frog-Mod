@@ -31,7 +31,7 @@ lus_system_of_councils_mechanic = {
 					duration = 3650
 				}
 				country_event = {
-					id = hispanic_monarchy_events.1
+					id = lusitanian_monarchy_events.1
 					tooltip = royal_council_interaction_tooltip
 				}
 			}
@@ -52,7 +52,7 @@ lus_system_of_councils_mechanic = {
 					duration = 3650
 				}
 				country_event = {
-					id = hispanic_monarchy_events.2
+					id = lusitanian_monarchy_events.2
 					tooltip = state_council_interaction_tooltip
 				}
 			}
@@ -73,7 +73,7 @@ lus_system_of_councils_mechanic = {
 					duration = 3650
 				}
 				country_event = {
-					id = hispanic_monarchy_events.3
+					id = lusitanian_monarchy_events.3
 					tooltip = war_council_interaction_tooltip
 				}
 			}

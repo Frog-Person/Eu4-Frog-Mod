@@ -6,9 +6,9 @@ namespace = lusitanian_monarchy_events
 
 #Royal Council Meeting
 country_event = {
-	id = hispanic_monarchy_events.1
-	title = hispanic_monarchy_events.1.t
-	desc = hispanic_monarchy_events.1.desc
+	id = lusitanian_monarchy_events.1
+	title = lusitanian_monarchy_events.1.t
+	desc = lusitanian_monarchy_events.1.desc
 	picture = HISPANIC_MONARCHY_eventPICTURE
 	is_triggered_only = yes
 
@@ -57,16 +57,16 @@ country_event = {
 
 #State Council Meeting
 country_event = {
-	id = hispanic_monarchy_events.2
-	title = hispanic_monarchy_events.2.t
-	desc = hispanic_monarchy_events.2.desc
+	id = lusitanian_monarchy_events.2
+	title = lusitanian_monarchy_events.2.t
+	desc = lusitanian_monarchy_events.2.desc
 	picture = HISPANIC_MONARCHY_eventPICTURE
 	is_triggered_only = yes
 
 	option = {
 		name = hispanic_monarchy_events.2.a
 		add_country_modifier = {
-			name = council_of_europe_mod
+			name = lus_council_of_trade
 			duration = 3650
 		}
 		ai_chance = {
@@ -77,7 +77,7 @@ country_event = {
 	option = {
 		name = hispanic_monarchy_events.2.b
 		add_country_modifier = {
-			name = council_of_mediterranean_mod
+			name = lus_council_of_seas_mod
 			duration = 3650
 		}
 		ai_chance = {
@@ -123,16 +123,16 @@ country_event = {
 
 #War Council Meeting
 country_event = {
-	id = hispanic_monarchy_events.3
-	title = hispanic_monarchy_events.3.t
-	desc = hispanic_monarchy_events.3.desc
+	id = lusitanian_monarchy_events.3
+	title = lusitanian_monarchy_events.3.t
+	desc = lusitanian_monarchy_events.3.desc
 	picture = HISPANIC_MONARCHY_eventPICTURE
 	is_triggered_only = yes
 
 	option = {
 		name = hispanic_monarchy_events.3.a
 		add_country_modifier = {
-			name = council_of_the_crusade_mod
+			name = lus_council_of_the_crusade_mod
 			duration = 3650
 		}
 		ai_chance = {

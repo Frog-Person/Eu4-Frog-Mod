@@ -549,3 +549,13 @@ lessons_of_the_west_global = {
 	fleet_movespeed = 1.0
 	ship_capture = 0.1
 }
+lus_global_trade_access = {
+    global_tariffs = 0.2
+}
+lus_council_of_seas_mod = {
+    heavy_ship_power = 0.1
+}
+lus_council_of_the_crusade_mod = {
+    manpower_recovery_speed = 0.15
+    sailors_recovery_speed = 0.3
+}

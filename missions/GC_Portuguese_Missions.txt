@@ -441,26 +441,31 @@ gc_lus_1 = {
 					
 				}
 				AND = {
-					rivaled to Mor/Adu
-					spy network on them is 50
-					ducats = 500
+					OR = {
+						AND = {
+							is_rival = MOR
+							has_spy_network_in = {
+								who = MOR
+								value = 50
+							}
+						}
+						AND = {
+							is_rival = ADU
+							has_spy_network_in = {
+								who = ADU
+								value = 50
+							}
+						}
+					}
+					treasury = 500
 				}
 			}
 		}
 		effect = {
-			if = {
-				limit = { rivaled, 50 spy, ducats }
-				country_event = { flavor_por.5002 }
-				add_country_modifier = {
-					name = "lus_spymasters"
-					duration = -1
-			}
-				else = {
-				add_country_modifier = { name = "trustworthy_nation" duration = temp? }
-				}
-			}
+			add_prestige = 10
 		}
 	}
+
 	lus_controllers_of_iberia = {
 	icon = mission_castillian_aggression 
 	position = 17
@@ -484,18 +489,19 @@ gc_lus_1 = {
 			}
 		}
 	}
+
 	lus_strait_of_gibraltar = {
-		icon
-		position
+		icon = mission_reconquer_ceuta
+		position = 19
 		required_missions = { lus_controllers_of_iberia }
 		trigger = {
 			OR = {
 				AND = {
-					tangiers_area = {
+					northern_morocco_area = {
 						type = all
 						owned_by = ROOT
 					}
-					granada_area = {
+					upper_andalucia_area = {
 						type = all
 						owned_by = ROOT
 					}
@@ -537,11 +543,11 @@ gc_lus_1 = {
 			if = {
 				limit = {
 					AND = {
-						tangiers_area = {
+						northern_morocco_area = {
 							type = all
 							owned_by = ROOT
 						}
-						granada_area = {
+						upper_andalucia_area = {
 							type = all
 							owned_by = ROOT
 						}
@@ -610,9 +616,10 @@ gc_lus_1 = {
 			}
 		}
 	}
-	lus_master_of_w_med = {
+
+	lus_master_of_west_med = {
 		icon = mission_dominate_the_mediterranean
-		position = 19
+		position = 21
 		required_missions = { control_our_med_island_clay lus_strait_of_gibraltar }
 		trigger = {
 			naval_forcelimit = 300
@@ -636,7 +643,7 @@ gc_lus_1 = {
 			}
 			num_of_owned_provinces_with = {
 				value = 30
-				is_coastal = yes
+				has_port = yes
 				OR = {
 					region = iberia_region
 					region = North_africa_region
@@ -1241,8 +1248,8 @@ lus_end_cas = {
 		}
    	}
    	effect = {
-    	add_adm = 100
-    	add_prestiege = 20
+    	add_adm_power = 100
+    	add_prestige = 20
     	add_country_modifier = {
 			name = "true_kings_of_iberia"
 			duration = 7300
@@ -1277,12 +1284,12 @@ lus_take_east_iberia = {
 				duration = -1
 			}
 		}
-		baleries_area = {
-			limit = {
+		baleares_area = {
+			limit = { 
 				NOT = { owned_by = ROOT }
 				NOT = { is_core = ROOT }
 			}
-			add_permanant_claim = { ROOT }
+			add_permanent_claim = ROOT 
 		}
 	}
 }
@@ -1291,7 +1298,7 @@ lus_take_east_iberia = {
 		position = 18
 		required_missions { lus_take_east_iberia }
 		trigger = {
-			baleries_area = {
+			baleares_area = {
 				type = all
 				owned_by = ROOT
 				OR = {
