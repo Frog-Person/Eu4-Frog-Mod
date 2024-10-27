@@ -3116,6 +3116,117 @@ gc_por_5_continued = {
 			}
 		}
 	}
+	dom_portugal_dev_suburbs = {
+		icon = renaissance_city
+		required_missions = { }
+		position = 12
+		trigger = {
+			227 = {
+				owned_by = ROOT
+				development = 30
+				has_trade_building_trigger = yes
+				OR = {
+					has_building = courthouse
+					has_building = town_hall
+				}
+			}
+			231 = {
+				owned_by = ROOT
+				development = 30
+				has_trade_building_trigger = yes
+				OR = {
+					has_building = courthouse
+					has_building = town_hall
+				}
+			}
+			4556 = {
+				owned_by = ROOT
+				development = 30
+				has_trade_building_trigger = yes
+				OR = {
+					has_building = courthouse
+					has_building = town_hall
+				}
+			}
+		}
+		effect = {
+			231 = {
+				add_province_modifier = {
+					name = "casas_de_cor"
+					duration = -1
+				}
+			}
+			4556 = {
+				add_province_modifier = {
+					name = "casas_de_cor"
+					duration = -1
+				}
+			}
+		}
+	}
+	dom_portugal_dev_rural_towns = {
+		icon = mission_pol_breadbasket_europe
+		required_missions = { dom_portugal_dev_suburbs }
+		position = 12
+		trigger = {
+			alentejo_area = {
+				type = all
+				owned_by = ROOT
+				development = 20
+				has_manpower_building_trigger = yes
+			}
+			beieras_area = {
+				type = all
+				owned_by = ROOT
+				development = 20
+				has_manpower_building_trigger = yes
+			}
+		}
+		effect = {
+			232 = {
+				add_province_modifier = {
+					name = "local_population_boom:
+					duration = -1
+				}
+			}
+			228 = {
+				add_province_modifier = {
+					name = "local_population_boom:
+					duration = -1
+				}
+			}
+			1851 = {
+				add_province_modifier = {
+					name = "local_population_boom:
+					duration = -1
+				}
+			}
+			229 = {
+				add_province_modifier = {
+					name = "local_population_boom:
+					duration = -1
+				}
+			}
+			230 = {
+				add_province_modifier = {
+					name = "local_population_boom:
+					duration = -1
+				}
+			}
+			4150 = {
+				add_province_modifier = {
+					name = "local_population_boom:
+					duration = -1
+				}
+			}
+			4787 = {
+				add_province_modifier = {
+					name = "local_population_boom:
+					duration = -1
+				}
+			}
+		}
+	}
 }
 
 gc_lus_5 = {

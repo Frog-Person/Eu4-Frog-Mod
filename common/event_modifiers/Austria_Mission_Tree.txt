@@ -597,3 +597,12 @@ por_local_connections = {
     min_autonomy_in_territories = -0.1
     trade_company_investment_cost = -0.1
 }
+casas_de_cor = {
+    prestige_decay = -0.005
+    monthly_splendor = 0.5
+}
+local_population_boom = {
+    development_cost = -0.025
+    local_manpower_modifier = 0.10
+    land_forcelimit = 2
+}
