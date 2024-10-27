@@ -624,6 +624,24 @@ country_event = {
 	}
 	option = {
 		name = "flavor_mor.14.B"
-		add_treasury = 1500
+		add_treasury = 750
+		if = {
+			limit = {
+				NOT = { exists = POR }
+				exists = LUS
+			}
+			LUS = {
+				country_event = { id = flavor_por.5001 days = 10 }
+			}
+		}
+		if = {
+			limit = {
+				NOT = { exists = LUS }
+				exists = POR
+			}
+			POR = {
+				country_event = { id = flavor_por.5001 days = 10 }
+			}
+		}
 	}
 }

@@ -1168,9 +1168,72 @@ country_event = {
 	option = {
 		name = "flavor_por.5000.B"
 		add_treasury = -1500
-		
+		custom_tooltip = por_increased_gold
+			set_parliament_action_flag = {
+				parliament_action = the_gold_act
+			}
+			increase_trade_goods_discovery = {
+				trade_goods = gold
+			}
 		add_country_modifier = {
 			name = "portugese_prospecting"
+			duration = -1
+		}
+	}
+}
+
+country_event = {
+	id = flavor_por.5001
+	title = "flavor_por.5001.name"
+	desc = "flavor_por.5001.desc"
+	picture = SHIP_SAILING_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = "flavor_por.5001.A"
+		add_country_modifier = {
+			name = "upset_merchants"
+			duration = 7300
+		}
+	}
+}
+
+country_event = {
+	id = flavor_por.5002
+	title = "flavor_por.5002.name"
+	desc = "flavor_por.5002.desc"
+	picture = SHIP_SAILING_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = "flavor_por.5002.A"
+		define_ruler = {
+			name = "Viriato"
+			dynasty = "de Avis"
+			culture = portugese
+			adm = 5
+			dip = 5
+			mil = 6
+			age = 25
+		}
+		add_ruler_personality = martial_educator_personality
+	}
+	option = {
+		name = "flavor_por.5002.B"
+		create_general = {
+			name = "Viriato"
+			shock = 6
+			fire = 3
+			manuever = 5
+			siege = 1
+		}
+	}
+	option = {
+		name = "flavor_por.5002.C"
+		add_country_modifier = {
+			name = "por_strong_royalty"
 			duration = -1
 		}
 	}

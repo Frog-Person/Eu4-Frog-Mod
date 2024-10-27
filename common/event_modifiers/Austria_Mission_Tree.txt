@@ -387,7 +387,7 @@ lot_exploitation = {
 }
 lot_death_to_pretenders = {
     prestige = 1.5
-    unrest = -1
+    global_unrest = -1
     core_creation = -0.1
 }
 lot_modern_army = {
@@ -458,23 +458,20 @@ lus_reclaiming_heritage = {
 }
 state_wine_bonus_prod = {
     local_production_efficiency = 1.2
-    unrest = -1
+    local_unrest = -1
 }
 por_mining_upgrades = {
     local_development_cost = -0.05
     local_gold_depletion_chance_modifier = -0.2
 }
 portuguese_investment = {
-    trade_goods_size_modifier = 0.5
+    trade_goods_size = 2
 }
 berber_trade_access = {
     trade_efficiency = 0.1
     caravan_power = 0.2
 }
 portugese_prospecting = {
-    increase_trade_goods_discovery = {
-		trade_goods = gold
-	}
     colony_development_boost = 1
 }
 world_renowned_ports = {
@@ -535,7 +532,7 @@ lus_med_trade_hubs = {
 scholars_of_south = {
     prestige = 0.5
     idea_cost = 0.025
-    tech_cost = 0.025
+    technology_cost = 0.025
 }
 diplomats_and_spies = {
     improve_relation_modifier = 0.25
@@ -545,8 +542,8 @@ masters_of_iberia = {
 	global_unrest = -1
     global_autonomy = -0.1
 }
-lessons_of_the_west_global = {
-	fleet_movespeed = 1.0
+lus_council_of_trade = {
+	leader_naval_manuever = 1.0
 	ship_capture = 0.1
 }
 lus_global_trade_access = {
@@ -558,4 +555,12 @@ lus_council_of_seas_mod = {
 lus_council_of_the_crusade_mod = {
     manpower_recovery_speed = 0.15
     sailors_recovery_speed = 0.3
+}
+upset_merchants = {
+    embargo_efficiency = 0.50
+}
+por_strong_royalty = {
+    heir_chance = 0.25
+    monthly_heir_claim_increase = 0.05
+    legitimacy = 1
 }

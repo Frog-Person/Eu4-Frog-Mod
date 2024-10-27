@@ -377,10 +377,7 @@ gc_lus_1 = {
 			has_dlc = "Domination" 
 			has_dlc = "Golden Century"
 		}
-		OR = {
-		tag = POR
 		tag = LUS
-		}
 		NOT = { map_setup = map_setup_random }
 		is_random_new_world = no
 	}
@@ -400,7 +397,7 @@ gc_lus_1 = {
 					is_enemy = ADU
 					is_enemy = MOR
 				}
-				OR = {
+				AND = {
 					NOT = { exists = MOR }
 					NOT = { exists = ADU }
 				}
@@ -409,7 +406,7 @@ gc_lus_1 = {
 		effect = {
 			if = {
 				limit = {
-					OR = {
+					AND = {
 						NOT = { exists = MOR }
 						NOT = { exists = ADU }
 					}
@@ -472,9 +469,12 @@ gc_lus_1 = {
 	required_missions = { lus_plots_against_berbers }
 		trigger = {
 			OR = {
-				development_in_provinces = {
-					region = iberia_region
-					total_development = HUN
+				AND = {
+					NOT = { development_in_provinces = { tag = MOR value = 500 region = iberia_region } }
+					development_in_provinces = {
+						value = 1000
+						region = iberia_region
+					}
 				}
 				iberia_region = {
 					type = ALL
@@ -492,7 +492,7 @@ gc_lus_1 = {
 
 	lus_strait_of_gibraltar = {
 		icon = mission_reconquer_ceuta
-		position = 19
+		position = 18
 		required_missions = { lus_controllers_of_iberia }
 		trigger = {
 			OR = {
@@ -619,7 +619,7 @@ gc_lus_1 = {
 
 	lus_master_of_west_med = {
 		icon = mission_dominate_the_mediterranean
-		position = 21
+		position = 19
 		required_missions = { control_our_med_island_clay lus_strait_of_gibraltar }
 		trigger = {
 			naval_forcelimit = 300
@@ -1262,7 +1262,7 @@ lus_take_east_iberia = {
    position = 16
    required_missions { lus_end_cas }
    trigger = {
-		NOT = { exists = ARG }
+		NOT = { exists = ARA }
 		220 = {
 			owned_by = ROOT
 		}
@@ -1331,7 +1331,7 @@ lus_take_east_iberia = {
 	}
 	lus_gov_reform = {
 		icon = hispanic_monarchy
-		position = 19
+		position = 20
 		required_missions = { control_our_med_island_clay lus_med_trade }
 		trigger = {
 			reform_level = 5
@@ -1343,7 +1343,7 @@ lus_take_east_iberia = {
 			crown_land_share = 50
 		}
 		effect = {
-			add_government_reform = lus_system_of_councils_reform 
+			add_government_reform = lus_councils_reform 
 		}
 	}
 }
@@ -1714,6 +1714,7 @@ gc_por_3 = {
 		}
 
 		effect = {
+			country_event = { id = flavor_por.5002 }
 			add_prestige_or_monarch_power = { amount = 25 } 
 			remove_country_modifier = centralization_modifier
 			add_country_modifier = {
@@ -1763,7 +1764,7 @@ gc_lus_3 = {
 				name = "world_renowned_ports"
 				duration = -1
 			}
-			iberia_region_region = {
+			iberia_region = {
 				limit = { 
 					has_dock_building_trigger = yes 
 					has_shipyard_building_trigger = yes 
@@ -1781,12 +1782,12 @@ gc_lus_3 = {
 		trigger = {
 			num_of_owned_provinces_with = {
 				value = 1
-				center_of_trade = 4
+				province_has_center_of_trade_of_level = 4
 				same_trade_node_as = 1293
 			}
 			num_of_owned_provinces_with = {
 				value = 4
-				center_of_trade = 3
+				province_has_center_of_trade_of_level = 3
 				same_trade_node_as = 1293
 			}
 		}
@@ -1863,6 +1864,7 @@ gc_lus_3 = {
 	lus_med_trade = {
 		icon = mission_rb_mediterranean_authority
 		required_missions = { lus_manufactories  control_our_med_island_clay }
+		position = 19
 		trigger = {
 			126 = {
 				development = 10
@@ -2962,8 +2964,10 @@ gc_lus_5 = {
 			num_of_light_ship = 75
 		}
 		effect = {
-			name = "deep_water_ships"
-			duration = 7300
+			add_country_modifier = {
+				name = "deep_water_ships"
+				duration = 7300
+			}
 		}
 	}
 

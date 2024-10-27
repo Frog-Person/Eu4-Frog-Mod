@@ -7333,7 +7333,7 @@ system_of_councils_reform = {
 	}
 }
 
-lus_system_of_councils_reform = {
+lus_councils_reform = {
 	icon = "hispanic_monarchy"
 	allow_normal_conversion = no
 	potential = {
@@ -7341,7 +7341,7 @@ lus_system_of_councils_reform = {
 		mission_completed = lus_gov_reform
 	}
 	trigger = {
-		mission_completed = spa_system_councils
+		mission_completed = lus_gov_reform
 	}
 	government_abilities = {
 		lus_system_of_councils_mechanic
