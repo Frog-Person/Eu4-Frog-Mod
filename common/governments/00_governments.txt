@@ -368,7 +368,7 @@ monarchy = {
 				laesio_enormis_reform
 				#1.36
 				karimi_stations_reform
-				portuguese_wineries
+				portuguese_distilleries
 			}
 		}
 		legitimation_of_power = {

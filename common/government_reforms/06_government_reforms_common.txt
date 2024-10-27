@@ -463,7 +463,7 @@ vodka_of_the_crown_reform = {
 	}
 }
 
-portuguese_wineries = {
+portuguese_distilleries = {
 	icon = vodka_monopoly
 	allow_normal_conversion = yes
 	potential = {
@@ -471,25 +471,28 @@ portuguese_wineries = {
 			tag = POR
 			tag = LUS
 		}
-		has_country_flag = por_unlock_wine
+		has_country_flag = portuguese_distilleries
 	}
 	modifiers = {
-		global_unrest = -1.5
+		global_unrest = -0.5
 		global_trade_goods_size_modifier = 0.05
 	}
 	effect = {
-			every_owned_province = {
-				if = {
-					limit = {
-						trade_goods = wine
-					}
-					add_province_modifier = { 
-						name = state_wine_bonus_prod 
-						duration = -1
-						hidden = yes
-					}
+		custom_tooltip = portuguese_distilleries_bonuses
+		every_owned_province = {
+			if = {
+				limit = {
+					trade_goods = wine
+					trade_goods = grain
+					trade_goods = sugar
+				}
+				add_province_modifier = { 
+					name = state_wine_bonus_prod 
+					duration = -1
+					hidden = no
 				}
 			}
+		}
 	}
 	removed_effect = {
 		hidden_effect = {

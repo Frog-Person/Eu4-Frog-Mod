@@ -1161,7 +1161,7 @@ country_event = {
 				exists = ADU
 			}
 			ADU = {
-				country_event = { id = flavor_ADU.14 days = 10 }
+				country_event = { id = flavor_mor.14 days = 10 }
 			}
 		}
 	}
@@ -1169,12 +1169,7 @@ country_event = {
 		name = "flavor_por.5000.B"
 		add_treasury = -1500
 		custom_tooltip = por_increased_gold
-			set_parliament_action_flag = {
-				parliament_action = the_gold_act
-			}
-			increase_trade_goods_discovery = {
-				trade_goods = gold
-			}
+		set_country_flag = por_prospecting_flag
 		add_country_modifier = {
 			name = "portugese_prospecting"
 			duration = -1
@@ -1223,6 +1218,7 @@ country_event = {
 	option = {
 		name = "flavor_por.5002.B"
 		create_general = {
+			tradition = 50 
 			name = "Viriato"
 			shock = 6
 			fire = 3
@@ -1232,9 +1228,42 @@ country_event = {
 	}
 	option = {
 		name = "flavor_por.5002.C"
+		add_adm_power = 100
+		add_dip_power = 100
+		add_mil_power = 100
 		add_country_modifier = {
 			name = "por_strong_royalty"
 			duration = -1
+		}
+	}
+}
+
+country_event = {
+	id = flavor_por.5003
+	title = "flavor_por.5003.name"
+	desc = "flavor_por.5003.desc"
+	picture = SHIP_SAILING_eventPicture
+
+	is_triggered_only = yes
+	option = {
+		name = "flavor_por.5003.A"
+		if = {
+			limit = {
+				NOT = { exists = ADU }
+				exists = MOR
+			}
+			MOR = {
+				country_event = { id = flavor_mor.15 days = 10 }
+			}
+		}
+		if = {
+			limit = {
+				NOT = { exists = MOR }
+				exists = ADU
+			}
+			ADU = {
+				country_event = { id = flavor_mor.15 days = 10 }
+			}
 		}
 	}
 }
