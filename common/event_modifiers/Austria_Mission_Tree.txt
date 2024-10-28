@@ -529,7 +529,7 @@ lus_production_hub = {
 lus_med_trade_hubs = {
     province_trade_power_value = 5
 }
-scholars_of_south = {
+survivors_of_south = {
     prestige = 0.5
     idea_cost = 0.025
     technology_cost = 0.025

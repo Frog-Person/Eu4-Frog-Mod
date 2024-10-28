@@ -3185,43 +3185,43 @@ gc_por_5_continued = {
 		effect = {
 			232 = {
 				add_province_modifier = {
-					name = "local_population_boom:
+					name = "local_population_boom"
 					duration = -1
 				}
 			}
 			228 = {
 				add_province_modifier = {
-					name = "local_population_boom:
+					name = "local_population_boom"
 					duration = -1
 				}
 			}
 			1851 = {
 				add_province_modifier = {
-					name = "local_population_boom:
+					name = "local_population_boom"
 					duration = -1
 				}
 			}
 			229 = {
 				add_province_modifier = {
-					name = "local_population_boom:
+					name = "local_population_boom"
 					duration = -1
 				}
 			}
 			230 = {
 				add_province_modifier = {
-					name = "local_population_boom:
+					name = "local_population_boom"
 					duration = -1
 				}
 			}
 			4150 = {
 				add_province_modifier = {
-					name = "local_population_boom:
+					name = "local_population_boom"
 					duration = -1
 				}
 			}
 			4787 = {
 				add_province_modifier = {
-					name = "local_population_boom:
+					name = "local_population_boom"
 					duration = -1
 				}
 			}
