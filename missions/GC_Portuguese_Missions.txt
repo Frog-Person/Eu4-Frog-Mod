@@ -762,8 +762,8 @@ gc_lus_1 = {
 		position = 19
 		required_missions = { control_our_med_island_clay lus_strait_of_gibraltar }
 		trigger = {
-			naval_forcelimit = 300
-			navy_size_percentage = 1
+			num_of_heavy_ship = 200
+			navy_size_percentage = 0.8
 			AND = {
 				1293 = {
 					is_strongest_trade_power = ROOT
@@ -1828,7 +1828,7 @@ gc_por_3 = {
 		trigger = {
 			num_of_explorers = 1
 			custom_trigger_tooltip = {
-				tooltip = spa_plus_ultra_tooltip
+				tooltip = por_plus_ultra_tooltip
 				OR = {
 					AND = {
 						macaronesia_area = {
@@ -2438,7 +2438,7 @@ gc_por_4 = {
 				}
 				add_country_modifier = {
 					name = "berber_cav"
-					duration = 3650
+					duration = 7300
 				}
 			}
 			else = {
@@ -3300,7 +3300,7 @@ gc_lus_5 = {
 		required_missions = { lus_cannon_manus lus_otto_siege_cannons }
 		trigger = {
 			num_of_artillery = 100
-			artillery_fraction = 0.2
+			artillery_fraction = 0.35
 			has_commanding_three_star = yes
 			#will add a modifier for battles later
 		}

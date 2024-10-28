@@ -1172,7 +1172,7 @@ country_event = {
 		set_country_flag = por_prospecting_flag
 		add_country_modifier = {
 			name = "portugese_prospecting"
-			duration = -1
+			duration = 29200
 		}
 	}
 }

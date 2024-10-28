@@ -448,8 +448,8 @@ iberian_urban_planning = {
     build_time = -0.15
 }
 berber_cav = {
-    cavalry_cost = -0.10
-    cavalry_power = 0.05
+    cavalry_cost = -0.20
+    cavalry_power = 0.15
 }
 lus_reclaiming_heritage = {
     global_autonomy = -0.05
@@ -577,14 +577,16 @@ lus_sabotage = {
     harsh_treatment_cost = -0.2
 }
 por_irrigation_projects = {
-    development_cost = -0.025
-    trade_goods_size = 0.2
+    development_cost = -0.05
+    trade_goods_size = 0.25
 }
 por_feitoria = {
     local_own_coast_naval_combat_bonus = 1
 }
 berber_privateer_captains = {
+    may_perform_slave_raid_on_same_religion = yes
     may_perform_slave_raid = yes
+    coast_raid_range = 1
 }
 english_naval_officers = {
     naval_morale = 0.1
@@ -602,7 +604,7 @@ casas_de_cor = {
     monthly_splendor = 0.5
 }
 local_population_boom = {
-    development_cost = -0.025
+    development_cost = -0.05
     local_manpower_modifier = 0.10
     land_forcelimit = 2
 }
