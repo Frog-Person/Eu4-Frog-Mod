@@ -797,6 +797,27 @@ gc_lus_1 = {
 			}
 		}
 	}
+
+	lus_sack_franconian_capital = {
+		icon = the_seven_provinces
+		position = 21
+		required_missions = { }
+		trigger = {
+			183 = {
+				controlled_by = LUS
+			}
+		}
+		effect = {
+			183 = {
+				owner = { country_event = { id = flavor_por.5004 days = 1 } }
+			}
+			add_treasury = 1000
+			add_country_modifier = {
+				name = "frankonian_capital_sacked"
+				duration = -1
+			}
+		}
+	}
 }
 
 gc_por_2 = {
@@ -1486,6 +1507,26 @@ lus_take_east_iberia = {
 			add_government_reform = lus_councils_reform 
 		}
 	}
+	lus_sack_egyptian_capital = {
+		icon = mission_break_the_mamluks
+		position = 21
+		required_missions = { }
+		trigger = {
+			361 = {
+				controlled_by = LUS
+			}
+		}
+		effect = {
+			361 = {
+				owner = { country_event = { id = flavor_por.5005 days = 1 } }
+			}
+			add_treasury = 1000
+			add_country_modifier = {
+				name = "egyptian_capital_sacked"
+				duration = -1
+			}
+		}
+	}
 }
 
 gc_por_3_b = {
@@ -2063,6 +2104,53 @@ gc_lus_3 = {
 		effect = {
 			add_country_modifier = {
 				name = "lus_effficient_trade_routes"
+				duration = -1
+			}
+		}
+	}
+
+	lus_sack_austrian_capital = {
+		icon = boh_humiliate_austria
+		position = 21
+		required_missions = { }
+		trigger = {
+			134 = {
+				controlled_by = LUS
+			}
+		}
+		effect = {
+			134 = {
+				owner = { country_event = { id = flavor_por.5006 days = 1 } }
+			}
+			add_treasury = 1000
+			add_country_modifier = {
+				name = "austrian_capital_sacked"
+				duration = -1
+			}
+		}
+	}
+
+	lus_war_of_fire = {
+		icon = mission_lusitanian_empire
+		position = 22
+		required_missions = { lus_sack_austrian_capital lus_sack_byz_capital lus_sack_egyptian_capital lus_sack_franconian_capital lus_sack_roman_capital }
+		trigger = {
+			legitimacy = 100
+			prestige = 80
+			stability = 3
+		}
+		effect = {
+				remove_country_modifier = byz_capital_sacked
+				remove_country_modifier = roman_capital_sacked
+				remove_country_modifier = austrian_capital_sacked
+				remove_country_modifier = egyptian_capital_sacked
+				remove_country_modifier = frankonian_capital_sacked
+			add_country_modifier = {
+				name = "revenge_for_the_past"
+				duration = -1
+			}
+			add_country_modifier = {
+				name = "end_the_war_of_fire"
 				duration = -1
 			}
 		}
@@ -2725,6 +2813,27 @@ gc_lus_4 = {
 			}
 		}
 	}
+
+	lus_sack_byz_capital = {
+		icon = byz_city_of_worlds_desire
+		position = 21
+		required_missions = { }
+		trigger = {
+			151 = {
+				controlled_by = LUS
+			}
+		}
+		effect = {
+			151 = {
+				owner = { country_event = { id = flavor_por.5007 days = 1 } }
+			}
+			add_treasury = 1000
+			add_country_modifier = {
+				name = "byz_capital_sacked"
+				duration = -1
+			}
+		}
+	}
 }
 
 gc_por_5_dom = {
@@ -3307,6 +3416,26 @@ gc_lus_5 = {
 		effect = {
 			add_country_modifier = {
 				name = "guns_of_fire_and_thunder"
+				duration = -1
+			}
+		}
+	}
+	lus_sack_roman_capital = {
+		icon = a_real_roman_empire
+		position = 21
+		required_missions = { }
+		trigger = {
+			118 = {
+				controlled_by = LUS
+			}
+		}
+		effect = {
+			118 = {
+				owner = { country_event = { id = flavor_por.5008 days = 1 } }
+			}
+			add_treasury = 1000
+			add_country_modifier = {
+				name = "roman_capital_sacked"
 				duration = -1
 			}
 		}

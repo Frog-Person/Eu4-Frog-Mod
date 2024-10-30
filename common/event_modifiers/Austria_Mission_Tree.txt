@@ -608,3 +608,72 @@ local_population_boom = {
     local_manpower_modifier = 0.10
     land_forcelimit = 2
 }
+frankonian_capital_sacked = {
+    land_morale = 0.025
+}
+lus_sacked_paris = {
+    land_morale = -0.025
+}
+lus_sacked_qahirah = {
+    advisor_cost = 0.05
+}
+egyptian_capital_sacked = {
+    advisor_cost = -0.05
+}
+austrian_capital_sacked = {
+    morale_damage_received = -0.025
+}
+lus_sacked_wien = {
+    morale_damage_received = 0.025
+}
+byz_capital_sacked = {
+    naval_morale = 0.025
+}
+lus_sacked_constan = {
+    naval_morale = -0.025
+}
+roman_capital_sacked = {
+    governing_capacity_modifier = 0.05
+}
+lus_sacked_rome = {
+    governing_capacity_modifier = -0.05
+}
+revenge_for_the_past = {
+    land_morale = 0.05
+    advisor_cost = -0.1
+    morale_damage_received = -0.05
+    naval_morale = 0.05
+    governing_capacity_modifier = 0.05
+    morale_damage = 0.05
+}
+end_the_war_of_fire = {
+    prestige = 2
+    monthly_splendor = 2
+}
+old_capital_restored = {
+	potential = {
+		always = yes
+	}
+	trigger = {
+		owner = {
+			OR = {
+                tag = ENG
+                tag = AVE
+            }
+			if = {
+				limit = {
+					capital = 178
+				}
+			}
+		}
+	}
+	
+	development_cost = 0.05
+    build_cost = -0.1
+    build_time = -0.1
+    local_defensiveness = 0.15
+}
+secure_the_port = {
+    local_fort_maintenance_modifier = -0.33
+    local_defensiveness = 0.25
+}

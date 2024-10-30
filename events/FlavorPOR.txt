@@ -1218,7 +1218,6 @@ country_event = {
 	option = {
 		name = "flavor_por.5002.B"
 		create_general = {
-			tradition = 50 
 			name = "Viriato"
 			shock = 6
 			fire = 3
@@ -1263,6 +1262,121 @@ country_event = {
 			}
 			ADU = {
 				country_event = { id = flavor_mor.15 days = 10 }
+			}
+		}
+	}
+}
+
+country_event = {
+	id = flavor_por.5004
+	title = "flavor_por.5004.name"
+	desc = "flavor_por.5004.desc"
+	picture = SHIP_SAILING_eventPicture
+
+	is_triggered_only = yes
+	option = {
+		name = "flavor_por.5004.A"
+		183 = {
+			add_great_project_tier = {
+    			type = notre_dame_cathedral
+    			tier = -1
+			}
+			add_base_tax = -2
+			add_province_modifier = {
+				name = "lus_sacked_paris"
+				duration = 7300
+			}
+		}
+	}
+}
+
+country_event = {
+	id = flavor_por.5005
+	title = "flavor_por.5005.name"
+	desc = "flavor_por.5005.desc"
+	picture = SHIP_SAILING_eventPicture
+
+	is_triggered_only = yes
+	option = {
+		name = "flavor_por.5005.A"
+		361 = {
+			add_great_project_tier = {
+    			type = pyramid_of_cheops
+    			tier = -1
+			}
+			add_base_tax = -2
+			add_province_modifier = {
+				name = "lus_sacked_qahirah"
+				duration = 7300
+			}
+		}
+	}
+}
+
+country_event = {
+	id = flavor_por.5006
+	title = "flavor_por.5006.name"
+	desc = "flavor_por.5006.desc"
+	picture = SHIP_SAILING_eventPicture
+
+	is_triggered_only = yes
+	option = {
+		name = "flavor_por.5006.A"
+		134 = {
+			add_great_project_tier = {
+    			type = schonbrunn_palace
+    			tier = -1
+			}
+			add_base_tax = -2
+			add_province_modifier = {
+				name = "lus_sacked_wien"
+				duration = 7300
+			}
+		}
+	}
+}
+
+country_event = {
+	id = flavor_por.5007
+	title = "flavor_por.5007.name"
+	desc = "flavor_por.5007.desc"
+	picture = SHIP_SAILING_eventPicture
+
+	is_triggered_only = yes
+	option = {
+		name = "flavor_por.5007.A"
+		151 = {
+			add_great_project_tier = {
+    			type = hagia_sophia
+    			tier = -1
+			}
+			add_base_tax = -2
+			add_province_modifier = {
+				name = "lus_sacked_constan"
+				duration = 7300
+			}
+		}
+	}
+}
+
+country_event = {
+	id = flavor_por.5008
+	title = "flavor_por.5008.name"
+	desc = "flavor_por.5008.desc"
+	picture = SHIP_SAILING_eventPicture
+
+	is_triggered_only = yes
+	option = {
+		name = "flavor_por.5008.A"
+		118 = {
+			add_great_project_tier = {
+    			type = stpeters_cathedral
+    			tier = -1
+			}
+			add_base_tax = -2
+			add_province_modifier = {
+				name = "lus_sacked_rome"
+				duration = 7300
 			}
 		}
 	}
