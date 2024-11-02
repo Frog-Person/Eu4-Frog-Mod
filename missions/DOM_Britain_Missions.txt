@@ -1002,77 +1002,140 @@ ave_row_slot_2 = {
 		}
 	}
 
-	ave_conquer_iberia = {
-		icon = mission_intervene_in_castile
-		required_missions = { ave_the_angevin_empire }
+	avg_dealings_in_med = {
+		icon = mission_rb_a_mighty_fleet
 		position = 5
+		required_missions = { ave_the_angevin_empire }
 		provinces_to_highlight = {
-			region = iberia_region
+			OR = {
+				area = languedoc_area
+				area = catalonia_area
+				area = provence_area
+			}
+			has_port = yes
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
-		}		
-		trigger = { 
-			not_in_mission_preview_mode = { key = GBR }
-			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
-				region = iberia_region
-				value = 15
-			}
-		}	
-		effect = {
-			iberia_region = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
+
+		}
+		trigger = {
+			OR = {	
+				AND = {
+					custom_tooltip_trigger = {
+						tooltip = med_ports
+						num_provinces_with = {
+							value = 5
+							area = languedoc_area
+							area = catalonia_area
+							area = provence_area
+							has_port = yes
+						}
+					}
 				}
-				add_permanent_claim = ROOT
-			}
-			unlock_issue = {
-				issue = crown_of_iberia_act
-			}
-			add_prestige_or_monarch_power = {
-				amount = 25
+				OR = {
+					alliance_with = POR
+					alliance_with = CAS
+					alliance_with = SPA
+					alliance_with = MAM
+					alliance_with = MOR
+					alliance_with = ADU
+					alliance_with = NAP
+					alliance_with = MIL
+					alliance_with = TUR
+				}
 			}
 		}
-		ai_weight = {
-			factor = 250
+		effect = {
+			if = {
+				limit = {
+					OR = {
+						alliance_with = POR
+						alliance_with = CAS
+						alliance_with = SPA
+						alliance_with = MAM	
+						alliance_with = MOR
+						alliance_with = ADU
+						alliance_with = NAP
+						alliance_with = MIL
+						alliance_with = TUR
+					}
+				}
+					add_country_modifier = {
+						name = "med_port_access"
+						duration = 7300
+					}
+			}
+			else = {
+				add_country_modifier = {
+					name = "extended_presence"
+					duration = 7300
+				}
+			}
 		}
 	}
 
-	ave_angevin_iberia = {
-		icon = the_spanish_succession
-		required_missions = { ave_conquer_iberia }
+	avg_med_authority = {
+		icon = mission_rb_mediterranean_authority
+		required_missions = { avg_dealings_in_med }
 		position = 6
 		provinces_to_highlight = {
-			region = iberia_region
+			OR = {
+				province_id = 126
+				province_id = 163
+				province_id = 321
+				province_id = 4559
+			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
-		}		
+		}
 		trigger = {
 			not_in_mission_preview_mode = { key = GBR }
-			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
-				region = iberia_region
-				value = 55
-			}
-		}	
-		effect = {
-			add_power_projection = {
-				type = mission_rewards_power_projection
-				amount = 50
-			}
-			add_country_modifier = {
-				name = ave_iberian_conquest
-				duration = 7300
-			}
-			capital_scope = {
-				tercio_infantry = ROOT
-				tercio_infantry = ROOT
-				tercio_infantry = ROOT
-				tercio_infantry = ROOT
-				tercio_infantry = ROOT
-				tercio_infantry = ROOT
-				tercio_infantry = ROOT
-			}
+			owns_or_non_sovereign_subject_of = 126
+			owns_or_non_sovereign_subject_of = 163
+			owns_or_non_sovereign_subject_of = 321
+			owns_or_non_sovereign_subject_of = 4559
 		}
-		ai_weight = {
-			factor = 250
+		effect = {
+			add_dip_power = 100
+			custom_tooltip = gbr_the_mediterranean_isles_tt
+			hidden_effect = {
+				baleares_area = {
+					limit = {
+						NOT = { is_core = ROOT }
+						NOT = { is_permanent_claim = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
+				aegean_archipelago_area = {
+					limit = {
+						NOT = { is_core = ROOT }
+						NOT = { is_permanent_claim = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
+				sicily_area = {
+					limit = {
+						NOT = { is_core = ROOT }
+						NOT = { is_permanent_claim = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
+				add_permanent_claim_province = {
+					province = 163
+				}
+				add_permanent_claim_province = {
+					province = 142
+				}
+				add_permanent_claim_province = {
+					province = 4698
+				}
+			}
+			126 = {
+				center_of_trade = 1
+			}
+			163 = {
+				center_of_trade = 1
+			}
+			321 = {
+				center_of_trade = 1
+			}
 		}
 	}
 }
@@ -2042,78 +2105,62 @@ ave_row_3 = {
 		}
 	}
 
-	ave_invade_italy = {
-		icon = the_alpine_wall
-		required_missions = { ave_the_angevin_empire }
+	recooperate_our_losses = {
+		icon = mission_assemble_an_army
 		position = 5
-		provinces_to_highlight = {
-			OR = {
-				area = piedmont_area
-				area = liguria_area
-				area = lombardy_area
-				area = emilia_romagna_area
-				area = po_valley_area
-				area = venetia_area
-			}
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		required_missions = { ave_the_angevin_empire }
+		trigger = {
+			land_forcelimit = 150
+			army_size_percentage = 1
+			manpower_percentage = 0.75
 		}
-		trigger = { 
-			not_in_mission_preview_mode = { key = GBR }
-			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
-				OR = {
-					area = piedmont_area
-					area = liguria_area
-					area = lombardy_area
-					area = emilia_romagna_area
-					area = po_valley_area
-					area = venetia_area
-				}
-				value = 15
-			}
-		}	
 		effect = {
-			unlock_issue = {
-				issue = crown_of_italy_act
+			add_country_modifier = {
+				name = "rallied_forces"
+				duration = 5475
 			}
-			italy_region = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
-		}
-		ai_weight = {
-			factor = 250
 		}
 	}
 
-	ave_italian_domination = {
-		icon = union_with_naples
-		required_missions = { ave_invade_italy }
-		position = 6
-		provinces_to_highlight = {
-			region = italy_region
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
-		}		
-		trigger = { 
-			not_in_mission_preview_mode = { key = GBR }
-			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
-				region = italy_region
-				value = 35
+	control_of_toulose_lands = {
+		icon = develop_provence
+		position = 6 
+		required_missions = { recooperate_our_losses }
+		trigger = {
+			languedoc_area = {
+				type = all
+				owned_by = ROOT
 			}
-		}	
-		effect = {
-			add_permanent_power_projection = {
-				type = 10_permanent_power_projection
-				amount = 10
+			provence_area = {
+				type = all
+				owned_by = ROOT
 			}
-			add_prestige_or_monarch_power = {
-				amount = 100
+			204 = {
+				owned_by = ROOT
+			}
+			203 = {
+				owned_by = ROOT
 			}
 		}
-		ai_weight = {
-			factor = 250
+		effect = {
+			2753 = {
+				add_province_modifier = {
+					name = "southern_power_base"
+					duration = -1
+				}
+			}
+			4696 = {
+				add_province_modifier = {
+					name = "southern_power_base"
+					duration = -1
+				}
+			}
+			203 = {
+				add_province_modifier = {
+					name = "southern_power_base"
+					duration = -1
+				}
+			}
 		}
 	}
 

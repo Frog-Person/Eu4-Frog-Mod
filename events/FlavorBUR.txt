@@ -1263,3 +1263,51 @@ country_event = {
 			}
 	}
 }
+
+country_event = {
+	id = new_flavour_bur.10
+	title = "new_flavour_bur.10.name"
+	desc = "new_flavour_bur.10.desc"
+	picture = SHIP_SAILING_eventPicture
+
+	is_triggered_only = yes
+	option = {
+		name = "new_flavour_bur.10.A"
+		add_country_modifier = {
+			name = "dutch_trade_partners"
+			duration = 7300
+		}
+	}
+}
+
+country_event = {
+	id = new_flavour_bur.11
+	title = "new_flavour_bur.11.name"
+	desc = "new_flavour_bur.11.desc"
+	picture = SHIP_SAILING_eventPicture
+
+	is_triggered_only = yes
+	option = {
+		name = "new_flavour_bur.11.A"
+		add_country_modifier = {
+			name = "hold_our_land"
+			duration = 7300
+		}
+	}
+}
+
+country_event = {
+	id = new_flavour_bur.12
+	title = "new_flavour_bur.12.name"
+	desc = "new_flavour_bur.12.desc"
+	picture = SHIP_SAILING_eventPicture
+
+	is_triggered_only = yes
+	option = {
+		name = "new_flavour_bur.12.A"
+		add_country_modifier = {
+			name = "accept_but_be_ready"
+			duration = 7300
+		}
+	}
+}

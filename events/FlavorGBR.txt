@@ -3723,3 +3723,105 @@ province_event = {
 		}
 	}
 }
+
+country_event = {
+	id = flavor_gbr.201
+	title = "flavor_gbr.201.name"
+	desc = "flavor_gbr.201.desc"
+	picture = SHIP_SAILING_eventPicture
+
+	is_triggered_only = yes
+	option = {
+		name = "flavor_gbr.201.A"
+		add_country_modifier = {
+			name = "dutch_trade_partners"
+			duration = 7300
+		}
+		if = {
+			limit = {
+				NOT = { exists = BUR }
+				exists = LOT
+			}
+			LOT = {
+				country_event = { id = new_flavour_bur.10 days = 10 }
+			}
+		}
+		if = {
+			limit = {
+				NOT = { exists = LOT }
+				exists = BUR
+			}
+			BUR = {
+				country_event = { id = new_flavour_bur.10 days = 10 }
+			}
+		}
+	}
+	option = {
+		name = "flavor_gbr.201.B"
+		add_country_modifier = {
+			name = "our_rightful_clay"
+			duration = 7300
+		}
+		wallonia_area = {
+			add_permanent_claim = ROOT
+		}
+		flanders_area = {
+			add_permanent_claim = ROOT
+		}
+		holland_area = {
+			add_permanent_claim = ROOT
+		}
+		frisia_area = {
+			add_permanent_claim = ROOT
+		}
+		brabant_area = {
+			add_permanent_claim = ROOT
+		}
+		north_brabant_area = {
+			add_permanent_claim = ROOT
+		}
+		if = {
+			limit = {
+				NOT = { exists = BUR }
+				exists = LOT
+			}
+			LOT = {
+				country_event = { id = new_flavour_bur.11 days = 10 }
+			}
+		}
+		if = {
+			limit = {
+				NOT = { exists = LOT }
+				exists = BUR
+			}
+			BUR = {
+				country_event = { id = new_flavour_bur.11 days = 10 }
+			}
+		}
+	}
+	option = {
+		name = "flavor_gbr.201.C"
+		add_country_modifier = {
+			name = "indecisive_nerd"
+			duration = 7300
+		}
+		if = {
+			limit = {
+				NOT = { exists = POR }
+				exists = LUS
+			}
+			LUS = {
+				country_event = { id = new_flavour_bur.12 days = 10 }
+			}
+		}
+		if = {
+			limit = {
+				NOT = { exists = LUS }
+				exists = POR
+			}
+			POR = {
+				country_event = { id = new_flavour_bur.12 days = 10 }
+			}
+		}
+	}
+}
