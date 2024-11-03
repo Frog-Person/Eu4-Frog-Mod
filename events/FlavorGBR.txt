@@ -36,18 +36,7 @@ country_event = {
 		custom_tooltip = flavor_gbr.1.b.tt
 		set_country_flag = eng_took_ave_branch
 		swap_non_generic_missions = yes
-		if = {
-			limit = {
-				FRA = {
-					is_subject = no
-				}
-			}
-			add_casus_belli = {
-				target = FRA
-				type = cb_hundred_years_union
-				months = 360
-			}
-		}
+		
 		ile_de_france_area = {
 			limit = {
 				NOT = { is_core = ROOT }
@@ -3740,6 +3729,7 @@ country_event = {
 		if = {
 			limit = {
 				NOT = { exists = BUR }
+				NOT = { exists = NED }
 				exists = LOT
 			}
 			LOT = {
@@ -3749,10 +3739,21 @@ country_event = {
 		if = {
 			limit = {
 				NOT = { exists = LOT }
+				NOT = { exists = NED }
 				exists = BUR
 			}
 			BUR = {
 				country_event = { id = new_flavour_bur.10 days = 10 }
+			}
+		}
+		if = {
+			limit = {
+				NOT = { exists = LOT }
+				NOT = { exists = BUR }
+				exists = NED
+			}
+			BUR = {
+				country_event = { id = flavor_hol.212 days = 10 }
 			}
 		}
 	}
@@ -3783,6 +3784,7 @@ country_event = {
 		if = {
 			limit = {
 				NOT = { exists = BUR }
+				NOT = { exists = NED }
 				exists = LOT
 			}
 			LOT = {
@@ -3792,10 +3794,21 @@ country_event = {
 		if = {
 			limit = {
 				NOT = { exists = LOT }
+				NOT = { exists = NED }
 				exists = BUR
 			}
 			BUR = {
 				country_event = { id = new_flavour_bur.11 days = 10 }
+			}
+		}
+		if = {
+			limit = {
+				NOT = { exists = LOT }
+				NOT = { exists = BUR }
+				exists = NED
+			}
+			BUR = {
+				country_event = { id = flavor_hol.213 days = 10 }
 			}
 		}
 	}
@@ -3805,22 +3818,52 @@ country_event = {
 			name = "indecisive_nerd"
 			duration = 7300
 		}
+		wallonia_area = {
+			add_permanent_claim = ROOT
+		}
+		flanders_area = {
+			add_permanent_claim = ROOT
+		}
+		holland_area = {
+			add_permanent_claim = ROOT
+		}
+		frisia_area = {
+			add_permanent_claim = ROOT
+		}
+		brabant_area = {
+			add_permanent_claim = ROOT
+		}
+		north_brabant_area = {
+			add_permanent_claim = ROOT
+		}
 		if = {
 			limit = {
-				NOT = { exists = POR }
-				exists = LUS
+				NOT = { exists = BUR }
+				NOT = { exists = NED }
+				exists = LOT
 			}
-			LUS = {
+			LOT = {
 				country_event = { id = new_flavour_bur.12 days = 10 }
 			}
 		}
 		if = {
 			limit = {
-				NOT = { exists = LUS }
-				exists = POR
+				NOT = { exists = LOT }
+				NOT = { exists = NED }
+				exists = BUR
 			}
-			POR = {
+			BUR = {
 				country_event = { id = new_flavour_bur.12 days = 10 }
+			}
+		}
+		if = {
+			limit = {
+				NOT = { exists = LOT }
+				NOT = { exists = BUR }
+				exists = NED
+			}
+			BUR = {
+				country_event = { id = flavor_hol.214 days = 10 }
 			}
 		}
 	}

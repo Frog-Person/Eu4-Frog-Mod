@@ -952,7 +952,7 @@ ave_row_slot_2 = {
 
 	ave_eliminate_brittany = {
 		icon = mission_have_two_subjects
-		required_missions = { ave_take_the_french_throne }
+		required_missions = { ave_keep_the_foothold }
 		position = 3
 		provinces_to_highlight = {
 			region = france_region
@@ -1832,13 +1832,7 @@ ave_row_3 = {
 		icon = the_hundred_years_war
 		required_missions = { gbr_ave_hundred_years_war }
 		position = 2		
-		provinces_to_highlight = {
-			OR = {
-				area = normandy_area
-				province_id = 177
-			}
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
-		}		
+		provinces_to_highlight = {	}		
 		trigger = {
 			not_in_mission_preview_mode = { key = GBR }
 			AND = {
@@ -1848,13 +1842,11 @@ ave_row_3 = {
 				}
 				177 = {
 					country_or_non_sovereign_subject_holds = ROOT
-					has_building = {
-						OR = {
+					OR = {
 						has_building = fort_15th
 						has_building = fort_16th
 						has_building = fort_17th
 						has_building = fort_18th
-						}
 					}
 				}
 				174 = {
@@ -1893,7 +1885,11 @@ ave_row_3 = {
 			}
 			loire_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
 			}
 			pyrenees_area = {
 				limit = {
@@ -1919,19 +1915,22 @@ ave_row_3 = {
 				type = all
 				owned_by = ROOT
 			}
-			177 = {
+			178 = {
 				development = 20
 				NOT = { devastation = 1 }
 			}
 		}	
 		effect = {
-			177 = {
+			178 = {
 				if = {
 					limit = { has_building = fort_15th }
 					remove_building = fort_15th
 					add_building = fort_16th
 				}
-				add_province_triggered_modifier = old_capital_restored
+				add_province_modifier = {
+					name = "old_capital_restored"
+					duration = -1
+				}
 			}
 		}
 		ai_weight = {
@@ -2013,7 +2012,7 @@ ave_row_3 = {
 	control_of_toulose_lands = {
 		icon = develop_provence
 		position = 6 
-		required_missions = { recooperate_our_losses }
+		required_missions = { recuperate_our_losses }
 		trigger = {
 			languedoc_area = {
 				type = all
@@ -2896,14 +2895,8 @@ ave_row_4 = {
 		trigger = {
 			OR = {
 				any_ally = {
-					culture = germanic
-					development_in = {
-						OR = {
-							region = north_german_region
-							region = south_german_region
-						}
-						value = 250
-					}
+					culture_group = germanic
+					total_development = 300
 				}
 				OR = {
 					is_enemy = HAB
@@ -2920,14 +2913,8 @@ ave_row_4 = {
 			if = {
 				limit = {
 					any_ally = {
-						culture = germanic
-						development_in = {
-							OR = {
-								region = north_german_region
-								region = south_german_region
-							}
-							value = 250
-						}
+						culture_group = germanic
+						total_development = 300
 					}
 				}
 				add_country_modifier = {
@@ -3764,57 +3751,59 @@ ave_row_5 = {
 				type = all
 				owned_by = ROOT
 			}
-			custom_trigger_tooltip = {
-			tooltip = lowland_friend_or_foe
 				OR = {
 					OR = {	
 						AND = {
-							NOT = { exist = BUR }
-							NOT = { exist = NED }
+							NOT = { exists = BUR }
+							NOT = { exists = NED }
 							is_enemy = LOT
 						}
 						AND = {
-							NOT = { exist = LOT }
-							NOT = { exist = NED }
+							NOT = { exists = LOT }
+							NOT = { exists = NED }
 							is_enemy = BUR
 						}
 						AND = {
-							NOT = { exist = BUR }
-							NOT = { exist = LOT }
+							NOT = { exists = BUR }
+							NOT = { exists = LOT }
 							is_enemy = NED
 						}
 					}
 					OR = {
 						AND = {
-							NOT = { exist = BUR }
-							NOT = { exist = NED }
-							is_allied_to = LOT
+							NOT = { exists = BUR }
+							NOT = { exists = NED }
+							any_ally = {
+								tag = LOT
 							}
-						AND = {
-							NOT = { exist = LOT }
-							NOT = { exist = NED }
-							is_allied_to = BUR
 						}
 						AND = {
-							NOT = { exist = BUR }
-							NOT = { exist = LOT }
-							is_allied_to = NED
+							NOT = { exists = LOT }
+							NOT = { exists = NED }
+							any_ally = {
+								tag = BUR
+							}
 						}
-					}
+						AND = {
+							NOT = { exists = BUR }
+							NOT = { exists = LOT }
+							any_ally = {
+								tag = NED
+							}
+						}
 				}
 			}
 		}
 		effect = {
 			87 = {
 				add_province_modifier = {
-					name = "sured_up_defenses"
+					name = "shored_up_defenses"
 					duration = -1
 				}
 			}
-			country_event = flavor_eng_ave.201
+			country_event = { id = flavor_gbr.201 }
 		}
 	}
-
 	former_angevin_subjects = {
 		icon = mission_rb_repatriate_burgundy
 		position = 6
@@ -3846,19 +3835,25 @@ ave_row_5 = {
 				}		
 				OR = {
 					AND = {
-						NOT = { exist = BUR }
-						NOT = { exist = NED }
-						is_allied_to = LOT
+						NOT = { exists = BUR }
+						NOT = { exists = NED }
+						any_ally = {
+							tag = LOT
+						}
 					}
 					AND = {
-						NOT = { exist = LOT }
-						NOT = { exist = NED }
-						is_allied_to = BUR
+						NOT = { exists = LOT }
+						NOT = { exists = NED }
+						any_ally = {
+							tag = BUR
+						}
 					}
 					AND = {
-						NOT = { exist = BUR }
-						NOT = { exist = LOT }
-						is_allied_to = NED
+						NOT = { exists = BUR }
+						NOT = { exists = LOT }
+						any_ally = {
+							tag = NED
+						}
 					}
 				}
 			}
@@ -4021,7 +4016,6 @@ ave_row_5 = {
 		}
 	}
 }
-
 gbr_ave_row_1 = {
 	slot = 1
 	generic = no

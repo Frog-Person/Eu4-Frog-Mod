@@ -652,25 +652,7 @@ end_the_war_of_fire = {
 }
 
 #Angiven mods
-old_capital_restored = {
-	potential = {
-		always = yes
-	}
-	trigger = {
-		owner = {
-			OR = {
-                tag = ENG
-                tag = AVE
-            }
-			if = {
-				limit = {
-					capital = 178
-				}
-			}
-		}
-	}
-	
-	development_cost = 0.05
+old_capital_restored = {	
     build_cost = -0.1
     build_time = -0.1
     local_defensiveness = 0.15
@@ -710,4 +692,36 @@ med_port_access = {
 extended_presence = {
 	naval_morale = 0.05
 	navy_tradition = 0.5
+}
+southern_power_base = {
+	local_defensiveness  = 0.25
+	local_governing_cost = -0.10
+}
+control_french_seat_of_power = {
+	local_unrest = 1
+	prestige = 0.5
+	legitimacy = 1
+}
+dual_monarchy_secured = {
+    monthly_splendor = 2
+    heir_chance = 0.15
+    parliament_backing_chance = 0.1
+}
+consider_the_empire = {
+    reasons_to_elect = 30
+    diplomats = 1
+    improve_relation_modifier = 0.2
+}
+rallied_forces = {
+    reinforce_speed = 0.25
+    army_tradition = 0.5
+}
+crush_their_trade = {
+    movement_speed = 0.15
+    ae_impact = -0.10
+}
+shored_up_defenses = {
+    local_defensiveness = 0.33
+	local_fort_maintenance_modifier = -0.2
+	local_garrison_size = 0.15
 }
