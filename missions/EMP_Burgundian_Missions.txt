@@ -2961,6 +2961,7 @@ emp_lotharingia_5 = {
 		icon = ansbach_succession
 		required_missions = { lot_get_educated }
 		provinces_to_highlight = {
+			OR = {
 			province_id = 183
 			province_id = 186
 			province_id = 184
@@ -2973,6 +2974,7 @@ emp_lotharingia_5 = {
 			province_id = 78
 			province_id = 1876
 			province_id = 85
+			}
 		}
 		trigger = {
 			custom_trigger_tooltip = {

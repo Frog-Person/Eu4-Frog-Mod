@@ -704,3 +704,10 @@ accept_but_be_ready = {
     defensiveness = 0.1
     trade_efficiency = 0.05
 }
+med_port_access = {
+    naval_attrition = -0.90
+}
+extended_presence = {
+	naval_morale = 0.05
+	navy_tradition = 0.5
+}
