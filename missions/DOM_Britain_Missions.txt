@@ -1038,7 +1038,7 @@ ave_row_slot_2 = {
 					alliance_with = MOR
 					alliance_with = ADU
 					alliance_with = NAP
-					alliance_with = MIL
+					alliance_with = MLO
 					alliance_with = TUR
 				}
 			}
@@ -1054,7 +1054,7 @@ ave_row_slot_2 = {
 						alliance_with = MOR
 						alliance_with = ADU
 						alliance_with = NAP
-						alliance_with = MIL
+						alliance_with = MLO
 						alliance_with = TUR
 					}
 				}

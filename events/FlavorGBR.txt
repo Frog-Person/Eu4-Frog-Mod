@@ -3750,9 +3750,9 @@ country_event = {
 			limit = {
 				NOT = { exists = LOT }
 				NOT = { exists = BUR }
-				exists = NED
+				NED = { exists = yes }
 			}
-			BUR = {
+			NED = {
 				country_event = { id = flavor_hol.212 days = 10 }
 			}
 		}
