@@ -725,3 +725,137 @@ shored_up_defenses = {
 	local_fort_maintenance_modifier = -0.2
 	local_garrison_size = 0.15
 }
+jungle_expansion = {
+    development_cost = -0.05
+    build_cost = -0.15
+    build_time = -0.15
+}
+worker_expansion = {
+    global_colonial_growth = 10
+    global_unrest = 1
+    production_efficiency = 0.1
+}
+colonial_acceptance_policy = {
+    num_accepted_cultures = 2
+    colonist_placement_chance = 0.15
+}
+local_leadership = {
+    state_governing_cost = -0.1
+}
+respected_officials = {
+    advisor_cost = -0.25
+    advisor_pool = 1
+}
+cultural_melting_pot = {
+    native_assimilation = -1.5
+    global_colonial_growth = 20
+    colony_cost_modifier = -0.1
+}
+forced_assimilation = {
+    native_assimilation = 1
+    colony_cost_modifier = -0.1
+    colonist_placement_chance = 0.1
+}
+native_land_reclamation = {
+    colony_development_boost = 1
+}
+native_target_practice = {
+    army_tradition = 1
+    yearly_army_professionalism = -0.01
+}
+encourage_new_colonies = {
+    global_colonial_growth = 10
+    colonist_placement_chance = 0.05
+}
+greater_oversight = {
+    development_cost_in_primary_culture = -0.025
+    governing_capacity_modifier = -0.025
+}
+excessive_oversight = {
+    development_cost_in_primary_culture = -0.025
+    governing_capacity_modifier = -0.025
+}
+genocidal_maniac = {
+    ae_impact = 0.2
+    governing_capacity_modifier = 0.05
+    development_cost_in_primary_culture = -0.025
+}
+brazilwood_camps_established = {
+    local_development_cost = -0.05
+    trade_goods_size = 0.25
+}
+new_world_plantations = {
+    trade_goods_size = 0.5
+}
+colonial_fervor = {
+    colony_cost_modifier = -0.5
+    colonist_placement_chance = 0.05
+}
+brz_sugar_plantations = {
+    trade_value_modifier = 0.25
+    trade_goods_size_modifier = 0.1
+}
+brz_favored_traders = {
+    trade_efficiency = 0.15
+    trade_steering = 0.05
+    global_ship_trade_power = 0.25
+    global_trade_power = 0.05
+}
+brz_gov_restored = {
+    monthly_reform_progress_modifier = 0.2
+    advisor_cost = -0.1
+}
+strong_administrator = {
+    country_admin_power = 1
+    global_unrest = -1
+    global_autonomy = -0.05
+}
+academia_militar_das_agulhas_negras = {
+    army_tradition_decay = -0.01
+    mil_tech_cost_modifier = -0.025
+}
+brazilian_royal_navy = {
+    naval_attrition = -0.25
+    naval_morale = 0.05
+}
+merchant_marines = {
+    fire_damage_received = -0.10
+    morale_damage_received = -0.025
+    is_marine_modifier = yes
+}
+jungle_expertise = {
+    global_supply_limit_modifier = 0.15
+    land_attrition = -0.10
+    movement_speed = 0.10
+}
+beneficial_volunteer_contracts = {
+    land_forcelimit_modifier = 0.2
+    global_manpower_modifier = 0.2
+    regiment_manpower_usage = -0.1
+}
+carnival = {
+    prestige_decay = -0.01
+    monthly_splendor = 1
+    governing_capacity_modifier = 0.5
+}
+port_santos = {
+    province_trade_power_value = 10
+    merchants = 1
+}
+was_once_mauritsstad = {
+    trade_efficiency = 0.1
+    production_efficiency = 0.075
+}
+responsible_mining_efforts = {
+    local_gold_depletion_chance_modifier = -0.15
+    monthly_gold_inflation_modifier = -0.05
+}
+deep_water_port = {
+    navy_tradition = 1
+    naval_forcelimit = 0.15
+    ship_recruit_speed = -0.25
+}
+administration_center = {
+    state_governing_cost = -0.1
+    governing_capacity_modifier = 0.05
+}
