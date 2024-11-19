@@ -10,13 +10,13 @@ fra_canada_1 = {
 	has_country_shield = yes
 
 	can_tadoussac_post = {
-		icon
+		icon = mission_rb_colonise_canada
 		position = 1
 		required_missions = {}
 		trigger = {
-			tadoussacprov = {
-					development = 10
-					has_trade_building_trigger = yes
+			995 = {
+				development = 10
+				has_trade_building_trigger = yes
 			}
 		}
 		effect = {
@@ -26,7 +26,7 @@ fra_canada_1 = {
 					duration = -1
 				}
 			}
-			overlord = {
+			FRA = {
 				add_country_modifier = {
 					name = "entering_the_colonial_ring"
 					duration = 9125
@@ -38,13 +38,13 @@ fra_canada_1 = {
 	can_interior_movement = {
 		icon
 		position = 3
-		required_missions = {}
+		required_missions = { establishing_quebec }
 		trigger = {
-			montreal_area = {
+			lower_canada_area = {
 				type = all
 				owned_by = ROOT
 			}
-			rivieres_area = {
+			trois_rivieres_area = {
 				type = all
 				owned_by = ROOT
 			}
@@ -54,7 +54,7 @@ fra_canada_1 = {
 				name = "expand_the_interior"
 				duration = 7300
 			}
-			overlord = {
+			FRA = {
 				add_prestige = 10
 				add_mercantilism = 3
 			}
@@ -68,8 +68,8 @@ fra_canada_1 = {
 		trigger = {
 			if = {
 				limit = {
-					overlord = {
-						mission_completed = ra_hudson_bay_fur
+					FRA = {
+						mission_completed = fra_hudson_bay_fur
 					}
 				}
 				num_of_owned_provinces_with = {
@@ -92,10 +92,10 @@ fra_canada_1 = {
 			}
 		}
 		effect = {
-			custom_tooltip = fra_can_every_prov_with_prod_building
+			custom_tooltip = qeb_can_every_prov_with_prod_building
 			tooltip = {
 				add_province_modifier = {
-					name = fra_hudson_bay_fur_modifier
+					name = expand_fur_trade
 					duration = -1 
 				}
 			}
@@ -120,7 +120,7 @@ fra_canada_1 = {
 				random_owned_province = { limit = { NOT = { has_province_modifier = expand_fur_trade } region = canada_region country_or_non_sovereign_subject_holds = ROOT trade_goods = fur has_manufactory_trigger = yes } add_province_modifier = { name = expand_fur_trade duration = -1 } }
 				random_owned_province = { limit = { NOT = { has_province_modifier = expand_fur_trade } region = canada_region country_or_non_sovereign_subject_holds = ROOT trade_goods = fur has_manufactory_trigger = yes } add_province_modifier = { name = expand_fur_trade duration = -1 } }
 			}
-			overlord = {
+			FRA = {
 				add_mercantilism = 3
 				add_country_modifier = {
 					name = "the_fur_must_flow"
@@ -133,20 +133,31 @@ fra_canada_1 = {
 	can_trade_enterprises = {
 		icon
 		position = 6
-		required_missions {}
+		required_missions { can_fur_trade }
 		trigger = {
 			num_owned_provinces_with = {
 				OR = {
-					has_center_of_trade_level = 2
+					has_center_of_trade_of_level = 2
 					has_estuairy = yes
 				}
 				has_trade_building_trigger = yes
-				value = 4
+				value = 3
 			}
 		}
 		effect = {
-			#upgrade buildings in 4 provinces that meet the requirements
-			overlord = {
+			canada_region = {
+				limit = { 
+					OR = {
+						has_center_of_trade_of_level = 2
+						has_estuairy = yes
+					}
+					has_trade_building_trigger = yes
+				}
+				type = random
+				amount = 3
+				add_province_modifier = { name = fra_hudson_bay_fur_modifier duration = -1 }
+			}
+			FRA = {
 				add_mercantilism = 3
 				#look in to other effects
 			}
@@ -156,18 +167,18 @@ fra_canada_1 = {
 	sovereign_councils = {
 		icon
 		position = 7
-		required_missions = {}
+		required_missions = { can_trade_enterprises towns_of_the_saint_lawrence_valley }
 		trigger = {
-			adm_points_generation = 10
-			government_reform_level = 7
-			republican_tradition = 100
+			monthly_adm = 10
+			reform_level = 5
+			legitimacy_equivalent = 100
 		}
 		effect = {
 			add_country_modifier = {
 				name = "beginnings_of_a_freedom_movement"
 				duration = -1
 			}
-			overlord = {
+			FRA = {
 				add_country_modifier = {
 					name = "increased_oversight"
 					duration = -1
@@ -191,16 +202,19 @@ fra_canada_2 = {
 	establishing_quebec = {
 		icon
 		position = 2
-		required_missions = {}
+		required_missions = { lands_of_saint_lawrence }
 		trigger = {
-			#development or number of provinces in quebec area
+			notre_dame_mountains_area = {
+				type = all
+				owned_by = ROOT
+			}
 		}
 		effect = {
 			add_country_modifier = {
 				name = "non_canada_like_french_canada"
 				duration = 18250
 			}
-			overlord = {
+			FRA = {
 				add_mercantilism = 2
 				add_country_modifier = {
 					name = "new_colonial_power"
@@ -215,7 +229,14 @@ fra_canada_2 = {
 		position = 5
 		required_missions = {}
 		trigger = {
-			#development in forest/woods
+			development_in_provinces = {
+				value = 200
+				region = canada_region
+				OR = {
+					has_terrain = forrest
+					has_terrain = woods
+				}
+			}
 		}
 		effect = {
 			add_country_modifier = {
@@ -236,17 +257,39 @@ fra_canada_2 = {
 		position = 6
 		required_missions = {}
 		trigger = {
-			#development of st lawrence area
+			development_in_provinces = {
+				OR = {
+					area = cote_nord_area
+					area = upper_acadia_area
+					province_id = 986
+				}
+				development = 120
+			}
 		}
 		effect = {
-			#add to all provinces
-			add_province_modifier = {
-				name = "ports_of_the_saint_lawrence_area"
-				duration = -1
+			986 = {
+				add_province_modifier = {
+					name = "ports_of_the_saint_lawrence_area"
+					duration = -1
+				}
 			}
-			overlord = {
+			cote_nord_area = {
+				type = all
+				add_province_modifier = {
+					name = "ports_of_the_saint_lawrence_area"
+					duration = -1
+				}
+			}
+			upper_acadia_area = {
+				type = all
+				add_province_modifier = {
+					name = "ports_of_the_saint_lawrence_area"
+					duration = -1
+				}
+			}
+			FRA = {
 				add_mercantilism = 3
-				#1 year trade income
+				add_treasury = 1500
 			}
 		}
 	}
@@ -269,7 +312,10 @@ fra_canada_3 = {
 		required_missions = {}
 		trigger = {
 			num_of_provinces_with = {
-				area = saint_lawrence_area
+				area = cote_nord_area
+				area = upper_acadia_area
+				area = newfoundland_area
+				area = lower_acadia_area
 				value = 5
 			}
 		effect = {
@@ -291,10 +337,40 @@ fra_canada_3 = {
 		position = 3
 		required_missions = {}
 		trigger = {
-			#have close to or all the modern Quebec borders?
+			cote_nord_area = {
+				type = all
+				owned_by = ROOT
+			}
+			notre_dame_mountains_area = {
+				type = all	
+				owned_by = ROOT
+			}
+			ottawa_valley_area = {
+				type = all
+				owned_by = ROOT
+			}
+			laurentian_area = {
+				type = all
+				owned_by = ROOT
+			}
+			lower_canada_area = {
+				type = all
+				owned_by = ROOT
+			}
+			trois_rivieres_area = {
+				type = all
+				owned_by = ROOT
+			}
+			1002 = {
+				owned_by = ROOT
+			}
+			james_bay_area = {
+				type = all
+				owned_by = ROOT
+			}
 		}
 		effect = {
-			#add one year of income
+			add_years_of_income = 1
 			add_country_modifier = {
 				name = "administrative_progress"
 				duration = -1
@@ -325,7 +401,7 @@ fra_canada_3 = {
 		}
 		effect = {
 			#change trade goods on provinces. random? check scandi tree
-			overlord = {
+			FRA = {
 				add_country_modifier = {
 					name = "new_world_minerals"
 					duration = -1
