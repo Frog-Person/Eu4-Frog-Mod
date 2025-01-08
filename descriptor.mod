@@ -5,5 +5,5 @@ tags={
 }
 name="Frog Mod"
 picture="thumbnail.png"
-supported_version="v1.37.4.0"
+supported_version="v1.37.5.0"
 remote_file_id="3025031059"
