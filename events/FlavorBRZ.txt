@@ -1,0 +1,41 @@
+########################################
+# Major Flavor Events                  #
+########################################
+
+namespace = flavor_brz
+normal_or_historical_nations = yes
+
+country_event = {
+	id = flavor_brz.1
+	title = flavor_brz.1.t
+	desc = flavor_brz.1.desc
+	picture = SIEGE_eventPicture
+	is_triggered_only = yes
+	
+	option = {
+		name = flavor_brz.1.a
+        trigger = {
+            native_policy = native_policy_trade
+        }
+        add_country_modifier = {
+            name = "cultural_melting_pot"
+            duration = -1
+        }
+	}
+	
+	option = {
+		name = flavor_brz.1.b
+		set_country_flag = brz_killing_natives
+		swap_non_generic_missions = yes
+
+        trigger = {
+            native_policy = native_policy_hostile
+        }
+        add_country_modifier = {
+            add_country_modifier = {
+                name = "forced_assimilation"
+                duration = -1
+            }
+        }
+	}
+}

@@ -107,6 +107,7 @@ monarchy = {
 				janissary_autocracy_reform
 				admiralty_regime_reform
 				system_of_councils_reform
+				lus_councils_reform
 				courts_of_navarra
 				league_of_lezhe_reform
 				tibetan_dual_government_reform
@@ -366,6 +367,7 @@ monarchy = {
 				laesio_enormis_reform
 				#1.36
 				karimi_stations_reform
+				portuguese_distilleries
 			}
 		}
 		legitimation_of_power = {
@@ -451,6 +453,7 @@ monarchy = {
 		polish_elective_monarchy
 		polish_great_sejm
 		system_of_councils_reform
+		lus_councils_reform
 		courts_of_navarra
 		elective_monarchy_reform
 		elective_monarchy

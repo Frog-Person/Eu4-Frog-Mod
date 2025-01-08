@@ -1,7 +1,7 @@
 ########################################
 # Flavor events for Holland/The Netherlands
 #
-# written by Sara Wendel-Örtqvist & Johan Andersson
+# written by Sara Wendel-ï¿½rtqvist & Johan Andersson
 ########################################
 
 namespace = flavor_hol
@@ -1990,5 +1990,53 @@ country_event = {
 		add_legitimacy = -25 
 		add_republican_tradition = -20
 		add_manpower = -0.002
+	}
+}
+
+country_event = {
+	id = flavor_hol.212
+	title = "flavor_hol.212.t"
+	desc = "flavor_hol.212.d"
+	picture = SHIP_SAILING_eventPicture
+
+	is_triggered_only = yes
+	option = {
+		name = "flavor_hol.212.A"
+		add_country_modifier = {
+			name = "dutch_trade_partners"
+			duration = 7300
+		}
+	}
+}
+
+country_event = {
+	id = flavor_hol.213
+	title = "flavor_hol.213.t"
+	desc = "flavor_hol.213.d"
+	picture = SHIP_SAILING_eventPicture
+
+	is_triggered_only = yes
+	option = {
+		name = "flavor_hol.213.A"
+		add_country_modifier = {
+			name = "hold_our_land"
+			duration = 7300
+		}
+	}
+}
+
+country_event = {
+	id = flavor_hol.214
+	title = "flavor_hol.214.t"
+	desc = "flavor_hol.214.d"
+	picture = SHIP_SAILING_eventPicture
+
+	is_triggered_only = yes
+	option = {
+		name = "flavor_hol.214.A"
+		add_country_modifier = {
+			name = "accept_but_be_ready"
+			duration = 7300
+		}
 	}
 }

@@ -133,7 +133,7 @@ trade_states = {
 			    1320 = {
 					trade_share = {
 						country = ROOT
-						share = 30
+						share = 20
 					}
 			        has_merchant = ROOT
 			    }
@@ -229,7 +229,8 @@ internal_development = {
 		position = 5
 		required_missions = { local_universities }
 		trigger = {
-				all_owned_province = {
+				num_of_owned_provinces_with = {
+					value = 50
 					num_of_times_expanded_infrastructure = 2
 					development = 30
 				}		
@@ -582,14 +583,22 @@ building_capacity = {
 		position = 5
 		required_missions = { quartering_troops }
 		trigger = {
-				cathedral = 50
-				counting_house = 50
-				town_hall = 50
-				university = 50
-				OR = {
-					trade_depot = 50
-					stock_exchange = 50
+			OR = {
+				AND = {
+					church = 50
+					workshop = 50
+					courthouse = 50
+					university = 50
+					OR = {
+						trade_depot = 50
+						stock_exchange = 50
+					}
 				}
+				AND = {
+					full_idea_group = infrastructure_ideas
+					full_idea_group = economic_ideas
+				}
+			}
 				num_of_owned_provinces_with = {
 					value = 50
 					has_manufactory_trigger = yes

@@ -1,0 +1,603 @@
+fra_canada_1 = {
+	slot = 1
+	generic = no
+	ai = yes
+	
+	potential = {
+		has_country_flag = quebec_colony_established
+		has_overlord = yes
+	}
+	has_country_shield = yes
+
+	can_tadoussac_post = {
+		icon = mission_rb_colonise_canada
+		position = 1
+		required_missions = {}
+		trigger = {
+			995 = {
+				development = 10
+				has_trade_building_trigger = yes
+			}
+		}
+		effect = {
+			tadoussacprov = {
+				add_province_modifier = {
+					name = "first_trade_post"
+					duration = -1
+				}
+			}
+			FRA = {
+				add_country_modifier = {
+					name = "entering_the_colonial_ring"
+					duration = 9125
+				}
+			}
+		}
+	}
+	
+	can_interior_movement = {
+		icon
+		position = 3
+		required_missions = { establishing_quebec }
+		trigger = {
+			lower_canada_area = {
+				type = all
+				owned_by = ROOT
+			}
+			trois_rivieres_area = {
+				type = all
+				owned_by = ROOT
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = "expand_the_interior"
+				duration = 7300
+			}
+			FRA = {
+				add_prestige = 10
+				add_mercantilism = 3
+			}
+		}
+	}
+	
+	can_fur_trade = {
+		icon
+		position = 5
+		required_missions = {}
+		trigger = {
+			if = {
+				limit = {
+					FRA = {
+						mission_completed = fra_hudson_bay_fur
+					}
+				}
+				num_of_owned_provinces_with = {
+					base_production = 6
+					trade_goods = fur
+					has_province_modifier = fra_hudson_bay_fur_modifier
+					value = 4
+				}
+			}
+			else = {
+				num_of_owned_provinces_with = {
+					base_production = 8
+					trade_goods = fur
+					OR = {
+						has_building = workshop
+						has_building = counting_house
+					}
+					value = 6
+				}
+			}
+		}
+		effect = {
+			custom_tooltip = qeb_can_every_prov_with_prod_building
+			tooltip = {
+				add_province_modifier = {
+					name = expand_fur_trade
+					duration = -1 
+				}
+			}
+			hidden_effect = {
+				canada_region = {
+					limit = { 
+						country_or_non_sovereign_subject_holds = ROOT 
+						trade_goods = fur 
+						OR = {
+							has_building = workshop
+							has_building = counting_house
+						}
+					}
+					type = random
+					amount = 6 
+					add_province_modifier = { name = "expand_fur_trade" duration = -1 }
+				}
+				random_owned_province = { limit = { NOT = { has_province_modifier = expand_fur_trade } region = canada_region country_or_non_sovereign_subject_holds = ROOT trade_goods = fur has_manufactory_trigger = yes } add_province_modifier = { name = expand_fur_trade duration = -1 } }
+				random_owned_province = { limit = { NOT = { has_province_modifier = expand_fur_trade } region = canada_region country_or_non_sovereign_subject_holds = ROOT trade_goods = fur has_manufactory_trigger = yes } add_province_modifier = { name = expand_fur_trade duration = -1 } }
+				random_owned_province = { limit = { NOT = { has_province_modifier = expand_fur_trade } region = canada_region country_or_non_sovereign_subject_holds = ROOT trade_goods = fur has_manufactory_trigger = yes } add_province_modifier = { name = expand_fur_trade duration = -1 } }
+				random_owned_province = { limit = { NOT = { has_province_modifier = expand_fur_trade } region = canada_region country_or_non_sovereign_subject_holds = ROOT trade_goods = fur has_manufactory_trigger = yes } add_province_modifier = { name = expand_fur_trade duration = -1 } }
+				random_owned_province = { limit = { NOT = { has_province_modifier = expand_fur_trade } region = canada_region country_or_non_sovereign_subject_holds = ROOT trade_goods = fur has_manufactory_trigger = yes } add_province_modifier = { name = expand_fur_trade duration = -1 } }
+				random_owned_province = { limit = { NOT = { has_province_modifier = expand_fur_trade } region = canada_region country_or_non_sovereign_subject_holds = ROOT trade_goods = fur has_manufactory_trigger = yes } add_province_modifier = { name = expand_fur_trade duration = -1 } }
+			}
+			FRA = {
+				add_mercantilism = 3
+				add_country_modifier = {
+					name = "the_fur_must_flow"
+					duration 7300
+				}
+			}
+		}
+	}
+	
+	can_trade_enterprises = {
+		icon
+		position = 6
+		required_missions { can_fur_trade }
+		trigger = {
+			num_owned_provinces_with = {
+				OR = {
+					has_center_of_trade_of_level = 2
+					has_estuairy = yes
+				}
+				has_trade_building_trigger = yes
+				value = 3
+			}
+		}
+		effect = {
+			canada_region = {
+				limit = { 
+					OR = {
+						has_center_of_trade_of_level = 2
+						has_estuairy = yes
+					}
+					has_trade_building_trigger = yes
+				}
+				type = random
+				amount = 3
+				add_province_modifier = { name = fra_hudson_bay_fur_modifier duration = -1 }
+			}
+			FRA = {
+				add_mercantilism = 3
+				#look in to other effects
+			}
+		}
+	}
+	
+	sovereign_councils = {
+		icon
+		position = 7
+		required_missions = { can_trade_enterprises towns_of_the_saint_lawrence_valley }
+		trigger = {
+			monthly_adm = 10
+			reform_level = 5
+			legitimacy_equivalent = 100
+		}
+		effect = {
+			add_country_modifier = {
+				name = "beginnings_of_a_freedom_movement"
+				duration = -1
+			}
+			FRA = {
+				add_country_modifier = {
+					name = "increased_oversight"
+					duration = -1
+				}
+			}
+		}
+	}
+}
+
+fra_canada_2 = {
+	slot = 2
+	generic = no
+	ai = yes
+	
+	potential = {
+		has_country_flag = quebec_colony_established
+		has_overlord = yes
+	}
+	has_country_shield = yes
+
+	establishing_quebec = {
+		icon
+		position = 2
+		required_missions = { lands_of_saint_lawrence }
+		trigger = {
+			notre_dame_mountains_area = {
+				type = all
+				owned_by = ROOT
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = "non_canada_like_french_canada"
+				duration = 18250
+			}
+			FRA = {
+				add_mercantilism = 2
+				add_country_modifier = {
+					name = "new_colonial_power"
+					duration = 7300
+				}
+			}
+		}
+	}
+	
+	developing_forestry = {
+		icon
+		position = 5
+		required_missions = {}
+		trigger = {
+			development_in_provinces = {
+				value = 200
+				region = canada_region
+				OR = {
+					has_terrain = forrest
+					has_terrain = woods
+				}
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = "tales_of_big_joe_mufferaw"
+				duration = -1
+			}
+			overlord = {
+				add_country_modifier = {
+					name = "influx_of_timber"
+					duration = 7300
+				}
+			}
+		}
+	}
+	
+	towns_of_the_saint_lawrence_valley = {
+		icon
+		position = 6
+		required_missions = {}
+		trigger = {
+			development_in_provinces = {
+				OR = {
+					area = cote_nord_area
+					area = upper_acadia_area
+					province_id = 986
+				}
+				development = 120
+			}
+		}
+		effect = {
+			986 = {
+				add_province_modifier = {
+					name = "ports_of_the_saint_lawrence_area"
+					duration = -1
+				}
+			}
+			cote_nord_area = {
+				type = all
+				add_province_modifier = {
+					name = "ports_of_the_saint_lawrence_area"
+					duration = -1
+				}
+			}
+			upper_acadia_area = {
+				type = all
+				add_province_modifier = {
+					name = "ports_of_the_saint_lawrence_area"
+					duration = -1
+				}
+			}
+			FRA = {
+				add_mercantilism = 3
+				add_treasury = 1500
+			}
+		}
+	}
+}
+
+fra_canada_3 = {
+	slot = 3
+	generic = no
+	ai = yes
+	
+	potential = {
+		has_country_flag = quebec_colony_established
+		has_overlord = yes
+	}
+	has_country_shield = yes
+	
+	lands_of_saint_lawrence = {
+		icon
+		position = 1
+		required_missions = {}
+		trigger = {
+			num_of_provinces_with = {
+				area = cote_nord_area
+				area = upper_acadia_area
+				area = newfoundland_area
+				area = lower_acadia_area
+				value = 5
+			}
+		effect = {
+			add_country_modifier = {
+				name = "expansion_beyond_the_gulf"
+				duration = 18250
+			}
+			overlord = {
+				add_country_modifier = {
+					name = "interest_in_colonial_lifestyle"
+					duration = 9125
+				}
+			}
+		}
+	}
+	
+	establishing_adminstrative_borders = {
+		icon
+		position = 3
+		required_missions = {}
+		trigger = {
+			cote_nord_area = {
+				type = all
+				owned_by = ROOT
+			}
+			notre_dame_mountains_area = {
+				type = all	
+				owned_by = ROOT
+			}
+			ottawa_valley_area = {
+				type = all
+				owned_by = ROOT
+			}
+			laurentian_area = {
+				type = all
+				owned_by = ROOT
+			}
+			lower_canada_area = {
+				type = all
+				owned_by = ROOT
+			}
+			trois_rivieres_area = {
+				type = all
+				owned_by = ROOT
+			}
+			1002 = {
+				owned_by = ROOT
+			}
+			james_bay_area = {
+				type = all
+				owned_by = ROOT
+			}
+		}
+		effect = {
+			add_years_of_income = 1
+			add_country_modifier = {
+				name = "administrative_progress"
+				duration = -1
+			}
+			overlord = {
+				add_prestige = 20
+				add_country_modifier = {
+					name = "thats_quite_large"
+					duration = -1
+				}
+			}
+		}
+	}
+	
+	resources_of_the_canadian_shield = {
+		icon
+		position = 5
+		required_missions = {}
+		trigger = {
+			num_of_provinces_with = {
+				base_production = 5
+				OR = {
+					has_building = workshop
+					has_building = counting_house
+				}
+				value = 8
+			}
+		}
+		effect = {
+			#change trade goods on provinces. random? check scandi tree
+			FRA = {
+				add_country_modifier = {
+					name = "new_world_minerals"
+					duration = -1
+				}
+			}
+		}
+	}
+	
+	valley_of_forts = {
+		icon
+		position = 6
+		required_missions = {}
+		trigger = {
+			num_of_provinces_with = {
+				base_manpower = 6
+				#fort OR statement
+				value = 6
+				#quebec area/region
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = "greater_entrenchment"
+				duration = -1
+			}
+			overlord = {
+				add_country_modifier = {
+					name = "lessons_of_colonial_defense"
+					duration = 9125
+				}
+			}
+		}
+	}
+
+	the_carignan_salieres = {
+		icon
+		position = 7
+		required_missions = {}
+		trigger = {
+			num_of_provinces_with = {
+				base_manpower = 6
+				has_manpower_building_trigger
+				#canada region
+				value = 20
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = "soldiers_of_the_great_white_north"
+				duration = -1
+			}
+			overlord = {
+				add_country_modifier = {
+					name = "mercenary_hiring_practices"
+					duration = 18250
+				}
+			}
+		}
+	}
+}
+}
+
+fra_canada_4 = {
+	slot = 4
+	generic = no
+	ai = yes
+	
+	potential = {
+		has_country_flag = quebec_colony_established
+		has_overlord = yes
+	}
+	has_country_shield = yes
+	
+	look_for_the_north_west_passage = {
+		icon
+		position = 2
+		required_missions = {}
+		trigger = {
+			overlord = {
+				#have lightships with an explorer and navy tradition
+			}
+			#have port in hudson bay area
+		}
+		effect = {
+			#discover canada region
+			add_prestige = 20
+			overlord = {
+				#delete ships and explorer
+				#discover entire canada region
+				add_country_modifier = {
+					name = "legacy_of_explorers"
+					duration 18250
+				}
+			}
+		}
+	}
+
+	lands_of_the_great_white_north = {
+		icon	
+		position = 4
+		required_missions = {}
+		trigger = {
+			num_of_provinces_with = {
+				region = canada_region
+				value = 30
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = "local_acceptance"
+				duration = -1
+			}
+			overlord = {
+				add_country_modifier = {
+					name = "the_crowns_colony"
+					duration = -1
+				}
+			}
+		}
+	}
+	
+	establish_ports_of_entry = {
+		icon
+		position = 5
+		required_missions = {}
+		trigger = {
+			num_of_provinces_with = {
+				#stlawrence area
+				has_dock_building_trigger = yes
+				has_shipyard_building_trigger = yes
+				value = 2
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = "influx_of_resources"
+				duration = 7300
+			}
+			overlord = {
+				add_mercantilism = 3
+				add_country_modifier = {
+					name = "draw_of_the_frontier"
+					duration = 7300
+				}
+			}
+		}
+	}
+	
+	local_shilp_building = {
+		icon
+		position = 6
+		required_missions = {}
+		trigger = {
+			num_of_provinces_with = {
+				has_dock_building_trigger = yes
+				has_shipyard_building_trigger = yes
+				value = 10
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = "royal_shipyards_of_quebec"
+				duration = -1
+			}
+			overlord = {
+				add_country_modifier = {
+					name = "influx_of_new_officers"
+					duration = -1
+				}
+			}
+		}
+	}
+}
+
+fra_canada_4 = {
+	slot = 4
+	generic = no
+	ai = yes
+	
+	potential = {
+		has_country_flag = quebec_colony_established
+		has_overlord = yes
+	}
+	has_country_shield = yes
+
+	hudson_bay_control = {
+		icon
+		position = 1
+		required_missions = {}
+		trigger = {
+			num_of_provinces_with = {
+				#hudsonbayareas
+				has_trade_building_trigger = yes
+				value = 3
+			}
+		}
+		effect = { }
+	}
+}			

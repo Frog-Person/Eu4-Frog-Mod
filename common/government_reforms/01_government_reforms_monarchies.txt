@@ -4684,6 +4684,56 @@ austrian_absolute_monarchy = {
 	}
 }
 
+austrian_empire_monarchy = {
+	icon = "prussian_monarchy"
+	allow_normal_conversion = no
+	potential = {
+		has_dlc = "Domination"
+		NOT = { has_reform = prussian_monarchy_base }
+		OR = {
+			AND = {
+				tag = AUE
+				NOT = { map_setup = map_setup_random }
+				NOT = { tag = PRU }
+			}
+			has_unlocked_government_reform = {
+				government_reform = prussian_monarchy
+			}
+			has_reform = prussian_monarchy
+			have_had_reform = prussian_monarchy
+		}
+	}
+	trigger = {
+		OR = {
+			religion = protestant
+			religion = reformed
+			religion = hussite
+			religion = anglican
+			religion = catholic
+			has_unlocked_government_reform_tooltip = {
+				government_reform = prussian_monarchy
+			}
+		}
+	}
+
+	modifiers = {
+		war_exhaustion = -0.01
+		global_unrest = -1
+		global_autonomy = -0.075
+		max_absolutism = 10
+		monarch_military_power = 1
+		nobles_loyalty_modifier = 0.1
+		governing_capacity_modifier = -0.15
+	}
+
+	conditional = {
+		allow = { has_dlc = "Domination" }
+		government_abilities = {
+			prussian_militarization_mechanic_1
+		}
+	}
+}
+
 merchant_aristocracy_reform = {
 	icon = "merchant_aristocracy_reform"
 	allow_normal_conversion = no
@@ -7328,6 +7378,26 @@ system_of_councils_reform = {
 	modifiers = {
 		allow_free_estate_privilege_revocation = yes 
 		diplomatic_upkeep = 2
+		monarch_admin_power = 1 
+	}
+}
+
+lus_councils_reform = {
+	icon = "hispanic_monarchy"
+	allow_normal_conversion = no
+	potential = {
+		tag  = LUS
+		mission_completed = lus_gov_reform
+	}
+	trigger = {
+		mission_completed = lus_gov_reform
+	}
+	government_abilities = {
+		lus_system_of_councils_mechanic
+	}
+	modifiers = {
+		allow_free_estate_privilege_revocation = yes 
+		tolerance_own = 2
 		monarch_admin_power = 1 
 	}
 }

@@ -36,18 +36,7 @@ country_event = {
 		custom_tooltip = flavor_gbr.1.b.tt
 		set_country_flag = eng_took_ave_branch
 		swap_non_generic_missions = yes
-		if = {
-			limit = {
-				FRA = {
-					is_subject = no
-				}
-			}
-			add_casus_belli = {
-				target = FRA
-				type = cb_hundred_years_union
-				months = 360
-			}
-		}
+		
 		ile_de_france_area = {
 			limit = {
 				NOT = { is_core = ROOT }
@@ -3720,6 +3709,162 @@ province_event = {
 		name = flavor_gbr.200.a
 		ai_chance = {
 			factor = 1
+		}
+	}
+}
+
+country_event = {
+	id = flavor_gbr.201
+	title = "flavor_gbr.201.name"
+	desc = "flavor_gbr.201.desc"
+	picture = SHIP_SAILING_eventPicture
+
+	is_triggered_only = yes
+	option = {
+		name = "flavor_gbr.201.A"
+		add_country_modifier = {
+			name = "dutch_trade_partners"
+			duration = 7300
+		}
+		if = {
+			limit = {
+				NOT = { exists = BUR }
+				NOT = { exists = NED }
+				exists = LOT
+			}
+			LOT = {
+				country_event = { id = new_flavour_bur.10 days = 10 }
+			}
+		}
+		if = {
+			limit = {
+				NOT = { exists = LOT }
+				NOT = { exists = NED }
+				exists = BUR
+			}
+			BUR = {
+				country_event = { id = new_flavour_bur.10 days = 10 }
+			}
+		}
+		if = {
+			limit = {
+				NOT = { exists = LOT }
+				NOT = { exists = BUR }
+				NED = { exists = yes }
+			}
+			NED = {
+				country_event = { id = flavor_hol.212 days = 10 }
+			}
+		}
+	}
+	option = {
+		name = "flavor_gbr.201.B"
+		add_country_modifier = {
+			name = "our_rightful_clay"
+			duration = 7300
+		}
+		wallonia_area = {
+			add_permanent_claim = ROOT
+		}
+		flanders_area = {
+			add_permanent_claim = ROOT
+		}
+		holland_area = {
+			add_permanent_claim = ROOT
+		}
+		frisia_area = {
+			add_permanent_claim = ROOT
+		}
+		brabant_area = {
+			add_permanent_claim = ROOT
+		}
+		north_brabant_area = {
+			add_permanent_claim = ROOT
+		}
+		if = {
+			limit = {
+				NOT = { exists = BUR }
+				NOT = { exists = NED }
+				exists = LOT
+			}
+			LOT = {
+				country_event = { id = new_flavour_bur.11 days = 10 }
+			}
+		}
+		if = {
+			limit = {
+				NOT = { exists = LOT }
+				NOT = { exists = NED }
+				exists = BUR
+			}
+			BUR = {
+				country_event = { id = new_flavour_bur.11 days = 10 }
+			}
+		}
+		if = {
+			limit = {
+				NOT = { exists = LOT }
+				NOT = { exists = BUR }
+				exists = NED
+			}
+			BUR = {
+				country_event = { id = flavor_hol.213 days = 10 }
+			}
+		}
+	}
+	option = {
+		name = "flavor_gbr.201.C"
+		add_country_modifier = {
+			name = "indecisive_nerd"
+			duration = 7300
+		}
+		wallonia_area = {
+			add_permanent_claim = ROOT
+		}
+		flanders_area = {
+			add_permanent_claim = ROOT
+		}
+		holland_area = {
+			add_permanent_claim = ROOT
+		}
+		frisia_area = {
+			add_permanent_claim = ROOT
+		}
+		brabant_area = {
+			add_permanent_claim = ROOT
+		}
+		north_brabant_area = {
+			add_permanent_claim = ROOT
+		}
+		if = {
+			limit = {
+				NOT = { exists = BUR }
+				NOT = { exists = NED }
+				exists = LOT
+			}
+			LOT = {
+				country_event = { id = new_flavour_bur.12 days = 10 }
+			}
+		}
+		if = {
+			limit = {
+				NOT = { exists = LOT }
+				NOT = { exists = NED }
+				exists = BUR
+			}
+			BUR = {
+				country_event = { id = new_flavour_bur.12 days = 10 }
+			}
+		}
+		if = {
+			limit = {
+				NOT = { exists = LOT }
+				NOT = { exists = BUR }
+				exists = NED
+			}
+			BUR = {
+				country_event = { id = flavor_hol.214 days = 10 }
+			}
 		}
 	}
 }

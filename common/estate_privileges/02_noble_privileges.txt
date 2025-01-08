@@ -4517,7 +4517,7 @@ estate_nobles_hab_habsburg_connections = {
 			always = yes
 		}
 		modifier = {
-			country_diplomatic_power = 2
+			diplomatic_annexation_cost = -0.15
 			diplomatic_reputation = 2
 		}
 	}

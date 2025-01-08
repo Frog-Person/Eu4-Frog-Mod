@@ -185,6 +185,7 @@ age_of_discovery = {
 		
 			allow = {
 				tag = POR
+				tag = LUS
 			}
 			modifier = {
 				global_colonial_growth = 50
