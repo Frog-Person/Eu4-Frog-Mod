@@ -13,19 +13,34 @@ country_event = {
 		name = echo.1.a
 		
 		add_adm_power  = -25
-		create_advisor = commandant		
+		define_advisor = {
+			culture = ROOT
+			religion = ROOT
+			type = commandant
+			skill = 1
+		}
 	}
 	option = {
 		name = echo.1.b
 		
 		add_adm_power  = -25
-		create_advisor = army_reformer
+		define_advisor = {
+			culture = ROOT
+			religion = ROOT
+			type = army_reformer
+			skill = 1
+		}
 	}
 	option = {
 		name = echo.1.c
 		
 		add_adm_power  = -25
-		create_advisor = recruitmaster
+		define_advisor = {
+			culture = ROOT
+			religion = ROOT
+			type = recruitmaster
+			skill = 1
+		}
 	}
 	#option = {
 	#	name = echo.1.d
@@ -55,19 +70,34 @@ country_event = {
 		name = echo.1.h
 		
 		add_adm_power  = -25
-		create_advisor = grand_captain	
+		define_advisor = {
+			culture = ROOT
+			religion = ROOT
+			type = grand_captain	
+			skill = 1
+		}
 	}
 	option = {
 		name = echo.1.i
 		
 		add_adm_power  = -25
-		create_advisor = fortification_expert		
+		define_advisor = {
+			culture = ROOT
+			religion = ROOT
+			type = fortification_expert
+			skill = 1
+		}		
 	}
 	option = {
 		name = echo.1.j
 		
 		add_adm_power  = -25
-		create_advisor = quartermaster		
+		define_advisor = {
+			culture = ROOT
+			religion = ROOT
+			type = quartermaster	
+			skill = 1
+		}		
 	}
 	#option = {
 	#	name = echo.1.k
@@ -79,7 +109,12 @@ country_event = {
 		name = echo.1.l
 		
 		add_adm_power  = -25
-		create_advisor = army_organiser	
+		define_advisor = {
+			culture = ROOT
+			religion = ROOT
+			type = army_organiser	
+			skill = 1
+		}
 	}
 	option = {
 		name = echo.1.m
@@ -349,7 +384,12 @@ country_event = {
 					name = "trade_hub_created"
 					duration = 3650
 				}
+				add_treasury = -200
+				add_dip_power = -50
 			}
 		}
-	}	
+	}
+	option = {
+		name = echo.4.b
+	}
 }	

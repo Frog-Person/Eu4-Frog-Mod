@@ -313,11 +313,6 @@ emp_sav_missions_conquest = {
 							valid_for_personal_unions_trigger = yes
 						}
 					}
-					add_casus_belli = {
-						type = cb_ambrosian_personal_union
-						months = 300
-						target = TTS
-					}
 				}
 				else_if = {
 					limit = {
@@ -325,11 +320,6 @@ emp_sav_missions_conquest = {
 						NAP = {
 							valid_for_personal_unions_trigger = yes
 						}
-					}
-					add_casus_belli = {
-						type = cb_ambrosian_personal_union
-						months = 300
-						target = NAP
 					}
 				}
 				else = {
@@ -358,7 +348,7 @@ emp_sav_missions_conquest = {
 			}
 			add_country_modifier = {
 					name = sav_tyrrhenian_sea
-					duration = 7300
+					duration = 10950
 				}
 		}
 		ai_weight = {
@@ -559,7 +549,7 @@ emp_sav_missions_conquest_north = {
 			add_adm_power = 50
 			add_country_modifier = {
 				name = sav_duke_of_burgundy
-				duration = 9125
+				duration = 10950
 			}
 		}
 	}
@@ -809,7 +799,7 @@ emp_sav_missions_conquest_west = {
 					}
 					add_province_modifier = {
 						name = sav_savoyard_occitania
-						duration = 9125
+						duration = 10950
 					}
 				}
 			}
@@ -857,7 +847,7 @@ emp_sav_missions_conquest_west = {
 		effect = {
 			add_country_modifier = {
 				name = sav_king_of_france
-				duration = 10950
+				duration = 10 950
 			}
 
 			if = {
@@ -1051,7 +1041,7 @@ emp_sav_missions_security = {
 			change_heir_dip = 1
 			add_country_modifier = {
 				name = sav_savoyard_diplomacy2
-				duration = 9125
+				duration = 10950
 			}
 		}
 	}
@@ -1066,10 +1056,6 @@ emp_sav_missions_security = {
 				area = provence_area
 				area = switzerland_area
 				area = romandie_area
-				province_id = 102
-				province_id = 4740
-				province_id = 111
-				province_id = 110
 			}
 			owned_by = root
 			NOT = {
@@ -1096,10 +1082,6 @@ emp_sav_missions_security = {
 							area = provence_area
 							area = switzerland_area
 							area = romandie_area
-							province_id = 102
-							province_id = 4740
-							province_id = 111
-							province_id = 110
 						}
 					}
 				}
@@ -1109,10 +1091,6 @@ emp_sav_missions_security = {
 			num_of_owned_provinces_with = {
 				value = 4
 				OR = {
-					has_building = fort_15th
-					has_building = fort_16th
-					has_building = fort_17th
-					has_building = fort_18th
 				}
 				OR = {
 					area = piedmont_area
@@ -1120,10 +1098,6 @@ emp_sav_missions_security = {
 					area = provence_area
 					area = switzerland_area
 					area = romandie_area
-					province_id = 102
-					province_id = 4740
-					province_id = 111
-					province_id = 110
 				}
 			}
 		}
@@ -1138,10 +1112,6 @@ emp_sav_missions_security = {
 							area = provence_area
 							area = switzerland_area
 							area = romandie_area
-							province_id = 102
-							province_id = 4740
-							province_id = 111
-							province_id = 110
 						}
 						has_building = fort_18th
 					}
@@ -1158,10 +1128,6 @@ emp_sav_missions_security = {
 							area = provence_area
 							area = switzerland_area
 							area = romandie_area
-							province_id = 102
-							province_id = 4740
-							province_id = 111
-							province_id = 110
 							
 						}
 					}
@@ -1319,7 +1285,7 @@ emp_sav_missions_economy = {
 						}
 						add_province_modifier = {
 							name = sav_prosperous_homelands
-							duration = 9125
+							duration = 10950
 						}
 					}
 				}
@@ -1458,7 +1424,7 @@ emp_sav_missions_papacy = {
 		effect = {
 			add_country_modifier = {
 				name = sav_king_of_cyprus
-				duration = 9125
+				duration = 10950
 			}
 			palestine_area = {
 				limit = {
