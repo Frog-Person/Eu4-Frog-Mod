@@ -58,6 +58,32 @@ cb_restore_personal_union = {
 
 	war_goal = take_capital_personal_union
 }
+#Special PU that works with republics
+cb_ambrosian_personal_union = {
+	valid_for_subject = no
+
+	is_triggered_only = yes
+	months = 240
+
+	prerequisites_self = {
+		has_reform = ambrosian_republic
+		is_revolutionary = no
+	}
+
+	prerequisites = {
+		FROM = {
+			OR = {
+				government = monarchy
+				has_reform = ambrosian_republic
+				# has_reform = military_dictatorship_reform
+				has_country_flag = neapolitan_republic
+			}
+			is_subject = no
+		}
+	}
+
+	war_goal = take_capital_ambrosian_personal_union
+}
 
 #Hundred Years War
 cb_hundred_years_war = {
