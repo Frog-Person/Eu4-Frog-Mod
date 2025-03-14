@@ -8,7 +8,6 @@ brz_beginning = {
 
 	south_american_expeditions = {
 		icon = mission_build_up_to_force_limit
-		position = 14
 		required_missions = {  }
 		trigger = { 
 			guapore_area = {
@@ -33,7 +32,6 @@ brz_beginning = {
 	}
 	access_to_labor = {
 		icon = mission_build_up_to_force_limit
-		position = 2
 		required_missions = { south_american_expeditions }
 		trigger = { 
 			any_ally = {

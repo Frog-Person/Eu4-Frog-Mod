@@ -163,6 +163,7 @@ country_decisions = {
 		effect = {
 			change_tag = BRZ
 			on_change_tag_effect = yes
+			swap_non_generic_missions = yes
 			every_subject_country = {
 				limit = {
 					is_colonial_nation = yes
