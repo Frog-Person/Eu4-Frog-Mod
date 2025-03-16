@@ -141,7 +141,7 @@ country_decisions = {
 			NOT = {
 				num_of_owned_provinces_with = {
 					continent = europe
-					value = 5
+					value = 6
 				}
 			}
 		}
