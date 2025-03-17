@@ -13787,37 +13787,19 @@ khajuraho = {
 }
 
 kilwa_city = {
-	start = 1196 #Kilwa
+	start = 1201 #Zanzibar
 	date = 975.01.01
 	time = { months = 0	}
 	build_cost = 0
 	can_be_moved = no
 	move_days_per_unit_distance = 10
-	starting_tier = 2
+	starting_tier = 0
 	type = monument
-
-	build_trigger = {
-		province_is_or_accepts_religion_group = {
-			religion_group = muslim
-		}
-	}
 
 	on_built = {
 	}
 
 	on_destroyed = {
-	}
-
-	can_use_modifiers_trigger = {
-		province_is_or_accepts_religion_group = {
-			religion_group = muslim
-		}
-	}
-
-	can_upgrade_trigger = {
-		province_is_or_accepts_religion_group = {
-			religion_group = muslim
-		}
 	}
 
 	keep_trigger = {
@@ -13852,8 +13834,7 @@ kilwa_city = {
 		area_modifier = {
 		}
 		country_modifiers = {
-			prestige = 0.25
-			global_ship_trade_power = 0.1
+			placed_merchant_power = 5
 		}
 		on_upgraded = {
 		}
@@ -13867,13 +13848,13 @@ kilwa_city = {
 			factor = 1500
 		}
 		province_modifiers = {
+			local_defensiveness = 0.05
 		}
 		area_modifier = {
 		}
 		country_modifiers = {
-			prestige = 0.5
-			global_ship_trade_power = 0.2
-			placed_merchant_power = 2
+			global_ship_trade_power = 0.1
+			placed_merchant_power = 15
 		}
 		on_upgraded = {
 		}
@@ -13887,13 +13868,14 @@ kilwa_city = {
 			factor = 3000
 		}
 		province_modifiers = {
+			fort_level = 1
+			local_defensiveness = 0.1
 		}
 		area_modifier = {
 		}
 		country_modifiers = {
-			prestige = 1
-			global_ship_trade_power = 0.3
-			placed_merchant_power = 4
+			global_ship_trade_power = 0.15
+			placed_merchant_power = 25
 		}
 		on_upgraded = {
 		}
@@ -13909,6 +13891,132 @@ kilwa_city = {
 			modifier = {
 				light_ship_cost = -0.15
 			}
+		}
+		conditional_modifier = {
+			trigger = {
+				custom_trigger_tooltip = {
+					tooltip = CAPITAL_IN_AFRICA
+					1201 = {
+						same_continent = capital
+					}
+				}
+			}
+			modifier = {
+				global_own_trade_power = 0.2
+			}
+		}
+	}
+}
+
+hormuz_fort = {
+	start = 2999 #Hormuz
+	date = 1444.01.01
+	time = { months = 0	}
+	build_cost = 0
+	can_be_moved = no
+	move_days_per_unit_distance = 10
+	starting_tier = 0
+	type = monument
+
+	on_built = {
+	}
+
+	on_destroyed = {
+	}
+
+	keep_trigger = {
+	}
+	
+	can_use_modifiers_trigger = {
+		owner = {
+			religion_group = christian
+		}
+	}
+
+	can_upgrade_trigger = {
+		owner = {
+			religion_group = christian
+		}
+	}
+
+	tier_0 = {
+		upgrade_time = {
+			months = 0
+		}
+		cost_to_upgrade = {
+			factor = 0
+		}
+		province_modifiers = {
+		}
+		area_modifier = {
+		}
+		country_modifiers = {
+		}
+		on_upgraded = {
+		}
+	}
+
+	tier_1 = {
+		upgrade_time = {
+			months = 120
+		}
+		cost_to_upgrade = {
+			factor = 500
+		}
+		province_modifiers = {
+			local_hostile_movement_speed = -0.1
+			local_defensiveness = 0.1
+		}
+		area_modifier = {
+		}
+		country_modifiers = {
+			artillery_cost = -0.05
+		}
+		on_upgraded = {
+		}
+	}
+
+	tier_2 = {
+		upgrade_time = {
+			months = 240
+		}
+		cost_to_upgrade = {
+			factor = 1500
+		}
+		province_modifiers = {
+			local_hostile_movement_speed = -0.15
+			local_defensiveness = 0.2
+		}
+		area_modifier = {
+		}
+		country_modifiers = {
+			artillery_cost = -0.10
+			backrow_artillery_damage = 0.05
+		}
+		on_upgraded = {
+		}
+	}
+
+	tier_3 = {
+		upgrade_time = {
+			months = 480
+		}
+		cost_to_upgrade = {
+			factor = 3000
+		}
+		province_modifiers = {
+			local_hostile_movement_speed = -0.25
+			local_defensiveness = 0.25
+			fort_level = 2
+			local_own_coast_naval_combat_bonus = 1
+		}
+		area_modifier = {
+		}
+		country_modifiers = {
+			artillery_cost = -0.10
+			backrow_artillery_damage = 0.15
+		}
+		on_upgraded = {
 		}
 	}
 }
