@@ -362,7 +362,7 @@ brz_trade_good_shiz = {
 	brazilwood_camps = {
 		icon = mission_build_up_to_force_limit
 		position = 6
-		required_missions = { brz_development new_world_sugar utilize_colonial_enthousiasm }
+		required_missions = { new_world_sugar utilize_colonial_enthousiasm }
 		trigger = {
 			2900 = {
 				OR = {
@@ -622,7 +622,7 @@ brz_colonial_exclave = {
 			add_prestige = 15
 			add_country_modifier = {
 				name = "colonial_fervor"
-				duration 7300
+				duration = 36500
 			}
 		}
 	}
@@ -635,7 +635,7 @@ brz_colonial_exclave = {
 			legitimacy_equivalent = 100
 			stability = 1
 			any_neighbor_country = {
-				tech_difference = 1
+				NOT = { tech_difference = 1 }
 			}
 		}
 		effect = { 
@@ -700,7 +700,7 @@ brz_trade_stuff = {
 			}
 		}
 		effect = { 
-			custom_tooltip = brz_burgher_dev_jungle
+			custom_tooltip = brz_burgher_dev_jungle_tt
 			set_country_flag = brz_burgher_dev_jungle
 		}
 	}
@@ -760,8 +760,8 @@ brz_trade_stuff = {
 				province_has_center_of_trade_of_level = 2
 				value = 8
 			}
-			num_of_light_ship = 100
-			num_of_heavy_ship = 50
+			num_of_light_ship = 60
+			num_of_heavy_ship = 60
 			trade_income_percentage = 0.2
 		}
 		effect = { 
@@ -842,8 +842,8 @@ slot4 = {
 		position = 5
 		required_missions = { keep_pace_with_military_science }
 		trigger = { 
-			num_of_heavy_ship = 130
-			num_of_transport = 60
+			num_of_heavy_ship = 40
+			num_of_transport = 30
 		}
 		effect = { 
 			add_country_modifier = {
