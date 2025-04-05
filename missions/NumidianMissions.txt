@@ -91,7 +91,7 @@ numidia_missions_1 = {
 		position = 4
 		
 		trigger = {
-			num_of_owned_provinces = {
+			num_of_owned_provinces_with = {
 				trade_goods = grain
 				num_of_times_improved = 5
 				value = 5
@@ -111,7 +111,7 @@ numidia_missions_1 = {
 		position = 5
 		
 		trigger = {
-			num_of_owned_provinces = {
+			num_of_owned_provinces_with = {
 				trade_goods = livestock
 				development 15
 				has_manufactory = yes
