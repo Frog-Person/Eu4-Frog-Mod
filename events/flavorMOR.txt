@@ -666,3 +666,249 @@ country_event = {
 		}
 	}
 }
+
+country_event = {
+	id = flavor_mor.16
+	title = flavor_mor.16.t
+	desc = flavor_mor.16.desc
+	picture = CITY_VIEW_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "flavor_mor.16.a"
+		343 = {
+			if = {
+				limit = {
+					NOT = {
+						is_capital = yes
+					}
+				}
+				move_capital_effect = yes
+			}
+			add_base_tax = 1
+			add_base_production = 1
+			add_base_manpower = 1
+		}
+	}
+	option = {
+		name = "flavor_mor.16.b"
+		344 = {
+			if = {
+				limit = {
+					NOT = {
+						is_capital = yes
+					}
+				}
+				move_capital_effect = yes
+			}
+			add_base_tax = 1
+			add_base_production = 1
+			add_base_manpower = 1
+		}
+	}
+	option = {
+		name = "flavor_mor.16.c"
+		2467 = {
+			if = {
+				limit = {
+					NOT = {
+						is_capital = yes
+					}
+				}
+				move_capital_effect = yes
+			}
+			add_base_tax = 1
+			add_base_production = 1
+			add_base_manpower = 1
+		}
+	}
+	option = {
+		name = "flavor_mor.16.d"
+		342 = {
+			if = {
+				limit = {
+					NOT = {
+						is_capital = yes
+					}
+				}
+				move_capital_effect = yes
+			}
+			add_base_tax = 1
+			add_base_production = 1
+			add_base_manpower = 1
+		}
+	}
+}
+
+country_event = { #Expanding the Quarter Army Num Equivalent 
+	id = flavor_mor.17
+	title = flavor_mor.17.t 
+	desc = flavor_mor.17.d 
+	picture = HUSSARS_eventPicture
+	is_triggered_only = yes 
+	
+	option = { 
+		name = flavor_mor.17.a 
+		
+		if = { 
+			limit = { has_dlc = "Cradle of Civilization" }
+			add_country_modifier = { 
+				name = pol_modernized_army_modifier
+				duration = -1 
+			}
+		}
+		else = { 
+			add_country_modifier = {
+				name = pol_modernized_army_2_modifier
+				duration = -1 
+			}
+		}
+	}
+	
+	option = { 
+		name = flavor_mor.17.b 
+		
+		trigger = {
+			OR = { 
+				num_of_hussars = 8
+				num_of_cavalry = 65 
+			}
+		}
+		if = { 
+			limit = { has_dlc = "Lions of the North" }
+			add_country_modifier = { 
+				name = pol_elite_hussar_cavalry_modifier
+				duration = -1 
+			}
+		}
+		if = { 
+			limit = { 
+				has_dlc = "Lions of the North"
+				has_estate = estate_nobles 
+			}
+			set_estate_privilege = estate_nobles_sponsor_hussars 
+		}
+		else = { 
+			add_country_modifier = { 
+				name = pol_elite_hussar_cavalry_2_modifier
+				duration = -1 
+			}
+		}
+	}
+	
+	option = { 
+		name = flavor_mor.17.c 
+		
+		trigger = { 
+			OR = { 
+				has_global_modifier_value = {
+					which = infantry_power 
+					value = 0.30 
+				}
+				has_global_modifier_value = {
+					which = discipline  
+					value = 0.25
+				}
+			}
+		}
+		add_country_modifier = { 
+			name = modernized_fire_ranks_modifier
+			duration = -1 
+		}
+	}
+	
+	option = { 
+		name = flavor_mor.17.dee
+		
+		trigger = { 
+			estate_loyalty = { 
+				estate = estate_cossacks 
+				loyalty = 60 
+			}
+			num_of_estate_privileges = {	
+				estate = estate_cossacks 
+				value = 5 
+			}
+		}
+		add_country_modifier = { 
+			name = pol_cavalry_with_state_modifier 
+			duration = -1 
+		}
+	}
+}
+
+country_event = {
+	id = flavor_mor.18
+	title = flavor_mor.18.t
+	desc = flavor_mor.18.d
+	picture = SHIP_SAILING_eventPicture
+
+	is_triggered_only = yes
+
+	option = {		# Glorious!
+		name = flavor_mor.18.a 
+		trigger = {
+            treasury = 1000
+		}
+		messina = {
+            owner = {
+                country_event = { flavor_ita.69 }
+            }
+        }
+		add_claim = 2030
+        add_treasury = -1000
+	}
+}
+
+country_event = {
+    id = flavor_ita.69
+	title = flavor_ita.69.t
+	desc = flavor_ita.69.d
+	picture = SHIP_SAILING_eventPicture
+
+	is_triggered_only = yes
+
+    option = {		# sure
+		name = flavor_ita.69.a 
+
+		messina = { cede_province = POR }
+        add_treasury = 1000
+        
+        NDI = { country_event = flavor_mor.19 }
+	}
+    option = {		# nah
+		name = flavor_ita.69.a 
+        
+        NDI = { country_event = flavor_mor.19 }
+	}
+}
+
+country_event = {
+	id = flavor_mor.19
+	title = flavor_mor.19.t
+	desc = flavor_mor.19.d
+	picture = SHIP_SAILING_eventPicture
+
+	is_triggered_only = yes
+
+	option = {		# Yipee!
+		name = flavor_mor.19.a 
+		trigger = {
+            owns_core_province = messina
+		}
+        messina = {
+		    add_province_modifier = {
+                name = italian_port_access
+                duration = -1
+            }
+        }
+	}
+    option = {		# Get cash
+		name = flavor_mor.19.b 
+		trigger = {
+            NOT = { owns_core_province = messina }
+		}
+        add_treasury = 1000
+	}
+}
