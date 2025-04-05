@@ -206,8 +206,6 @@ numidia_missions_2 = {
 			custom_trigger_tooltip = {
 				tooltip = ndi_condot_rat
 			}
-			calc_true_if = {
-				NOT = { value = 0 }
 				OR = {
 					is_renting_condottieri_to = FRA
 					is_renting_condottieri_to = CAS
@@ -219,9 +217,7 @@ numidia_missions_2 = {
 					is_renting_condottieri_to = NAP
 					is_renting_condottieri_to = TTS
 					is_renting_condottieri_to = ITA
-					value = 2
 				}
-			}
 		}
 		effect = {
 			add_country_modifier = {
