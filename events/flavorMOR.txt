@@ -677,7 +677,7 @@ country_event = {
 	
 	option = {
 		name = "flavor_mor.16.a"
-		343 = {
+		341 = {
 			if = {
 				limit = {
 					NOT = {
@@ -689,11 +689,15 @@ country_event = {
 			add_base_tax = 1
 			add_base_production = 1
 			add_base_manpower = 1
+			add_province_modifier = {
+				name = "carthaginian_naval_defenses"
+				duration = -1
+			}
 		}
 	}
 	option = {
 		name = "flavor_mor.16.b"
-		344 = {
+		338 = {
 			if = {
 				limit = {
 					NOT = {
@@ -705,11 +709,15 @@ country_event = {
 			add_base_tax = 1
 			add_base_production = 1
 			add_base_manpower = 1
+			add_province_modifier = {
+				name = "master_raiders"
+				duration = -1
+			}
 		}
 	}
 	option = {
 		name = "flavor_mor.16.c"
-		2467 = {
+		2465 = {
 			if = {
 				limit = {
 					NOT = {
@@ -721,11 +729,15 @@ country_event = {
 			add_base_tax = 1
 			add_base_production = 1
 			add_base_manpower = 1
+			add_province_modifier = {
+				name = "nomad_warriors"
+				duration = -1
+			}
 		}
 	}
 	option = {
 		name = "flavor_mor.16.d"
-		342 = {
+		354 = {
 			if = {
 				limit = {
 					NOT = {
@@ -737,6 +749,10 @@ country_event = {
 			add_base_tax = 1
 			add_base_production = 1
 			add_base_manpower = 1
+			add_province_modifier = {
+				name = "tripoli_pirates"
+				duration = -1
+			}
 		}
 	}
 }
@@ -768,30 +784,11 @@ country_event = { #Expanding the Quarter Army Num Equivalent
 	
 	option = { 
 		name = flavor_mor.17.b 
-		
-		trigger = {
-			OR = { 
-				num_of_hussars = 8
-				num_of_cavalry = 65 
-			}
-		}
+
 		if = { 
 			limit = { has_dlc = "Lions of the North" }
 			add_country_modifier = { 
-				name = pol_elite_hussar_cavalry_modifier
-				duration = -1 
-			}
-		}
-		if = { 
-			limit = { 
-				has_dlc = "Lions of the North"
-				has_estate = estate_nobles 
-			}
-			set_estate_privilege = estate_nobles_sponsor_hussars 
-		}
-		else = { 
-			add_country_modifier = { 
-				name = pol_elite_hussar_cavalry_2_modifier
+				name = elite_cav_modifier
 				duration = -1 
 			}
 		}
@@ -820,17 +817,7 @@ country_event = { #Expanding the Quarter Army Num Equivalent
 	
 	option = { 
 		name = flavor_mor.17.dee
-		
-		trigger = { 
-			estate_loyalty = { 
-				estate = estate_cossacks 
-				loyalty = 60 
-			}
-			num_of_estate_privileges = {	
-				estate = estate_cossacks 
-				value = 5 
-			}
-		}
+	
 		add_country_modifier = { 
 			name = pol_cavalry_with_state_modifier 
 			duration = -1 
@@ -851,12 +838,12 @@ country_event = {
 		trigger = {
             treasury = 1000
 		}
-		messina = {
+		4736 = {
             owner = {
                 country_event = { flavor_ita.69 }
             }
         }
-		add_claim = 2030
+		add_claim = 4736
         add_treasury = -1000
 	}
 }
@@ -872,7 +859,7 @@ country_event = {
     option = {		# sure
 		name = flavor_ita.69.a 
 
-		messina = { cede_province = POR }
+		4736 = { cede_province = NDI }
         add_treasury = 1000
         
         NDI = { country_event = flavor_mor.19 }
@@ -895,7 +882,7 @@ country_event = {
 	option = {		# Yipee!
 		name = flavor_mor.19.a 
 		trigger = {
-            owns_core_province = messina
+            owns_core_province = 4736
 		}
         messina = {
 		    add_province_modifier = {

@@ -141,7 +141,7 @@ numidia_missions_2 = {
 	
 	numidian_palaces = {
 		icon = the_hundred_years_war
-		required_missions = {  }
+		required_missions = { dev_capital_tunis  }
 		position = 2
 	
 		trigger = {
@@ -149,14 +149,14 @@ numidia_missions_2 = {
 				owned_by = ROOT
 				development = 30
 			}
-			algeria = {
+			338 = {
 				owned_by = ROOT
 				OR = {
 					has_building = temple
 					development = 15
 				}
 			}
-			touggourt = {
+			2465 = {
 				owned_by = ROOT
 				OR = {
 					has_building = temple
@@ -181,7 +181,7 @@ numidia_missions_2 = {
 	
 	grand_cavalry = {
 		icon = the_hundred_years_war
-		required_missions = { berber_culture }
+		required_missions = { numidian_palaces berber_culture }
 		position = 3
 	
 		trigger = {
@@ -207,6 +207,7 @@ numidia_missions_2 = {
 				tooltip = ndi_condot_rat
 			}
 			calc_true_if = {
+				NOT = { value = 0 }
 				OR = {
 					is_renting_condottieri_to = FRA
 					is_renting_condottieri_to = CAS
@@ -218,7 +219,7 @@ numidia_missions_2 = {
 					is_renting_condottieri_to = NAP
 					is_renting_condottieri_to = TTS
 					is_renting_condottieri_to = ITA
-					amount = 2
+					value = 2
 				}
 			}
 		}
@@ -270,7 +271,12 @@ numidia_missions_3 = {
 				culture = ROOT
 			} 
 		}
-		effect = { #temp dev in primary culture buff }
+		effect = { 
+			add_country_modifier = {
+				name = "cultural_quarters"
+				duration = -1
+			}
+		 }
 	}
 
 	expanding_berber_culture = {
@@ -284,12 +290,17 @@ numidia_missions_3 = {
 				culture = ROOT
 			}
 		}
-		effect = { #temp unrest and prestige }
+		effect = { 
+			add_country_modifier = {
+				name = "greater_hegemony"
+				duration = 7300
+			}
+		 }
 	}
 	
 	berber_court = {
 		icon = the_hundred_years_war
-		required_missions = { berber_court }
+		required_missions = { expanding_berber_culture }
 		position = 4
 	
 		trigger = {
@@ -322,7 +333,12 @@ numidia_missions_3 = {
 				quartermaster = 5
 			}
 		}
-		effect = { #perm advisor culture cost cut }
+		effect = { 
+			add_country_modifier = {
+				name = "yes_men"
+				duration = -1
+			}
+		 }
 	}
 }
 
@@ -376,11 +392,12 @@ numidia_missions_4 = {
 	
 	mediterranian_raider = {
 		icon = the_hundred_years_war
-		required_missions = { fleet_development }
+		required_missions = { deep_water_ships }
 		position = 2
 	
 		trigger = { 
-				europe_superriegion = {
+				calc_true_if = {
+					continent = europe
 					amount = 10
 					has_port = yes
 					has_province_modifier = "slaves_raided"
@@ -397,18 +414,16 @@ numidia_missions_4 = {
 	
 	old_world_pirates = {
 		icon = the_hundred_years_war
-		required_missions = { fleet_development }
+		required_missions = { mediterranian_raider }
 		position = 2
 	
 		trigger = { 
-			OR = {
-				europe_superriegion = {
-					amount = 15
+			calc_true_if = {
+					continent = europe
+					amount = 30
 					has_port = yes
 					has_province_modifier = "slaves_raided"
 				}
-			}
-			#privateers in nonmed euro
 		}
 		effect = {
 			add_years_of_income = 1
@@ -757,7 +772,12 @@ numidia_missions_5 = {
 		position = 3
 	
 		trigger = {
-			#strongest trade in the two main african trade nodes
+			1132 = {
+					is_strongest_trade_power = NDI
+			}
+			1149 = {
+					is_strongest_trade_power = NDI
+			}
 		}
 		effect = {
 			add_adm_power = 125
@@ -769,18 +789,26 @@ numidia_missions_5 = {
 	}
 	new_raiding_ports = {
 		icon = the_hundred_years_war
-		required_missions = { gc_num_air }
+		required_missions = { control_of_african_trade }
 		position = 4
 	
 		trigger = {
 			num_of_owned_provinces_with = {
 				region = guinea_region
 				has_port = yes
-				amount = 5
+				value = 5
 			}
 		}
 		effect = {
-			#claims on atlantic islands not new world
+				1096 = {
+					add_permanent_claim = ROOT
+				}
+				482 = {
+					add_permanent_claim = ROOT
+				}
+				1098 = {
+					add_permanent_claim = ROOT
+				}
 			add_country_modifier = {
 				name = "call_of_a_new_sea"
 				duration = 7300
@@ -789,23 +817,22 @@ numidia_missions_5 = {
 	}
 	new_age_privateers = {
 		icon = the_hundred_years_war
-		required_missions = { gc_num_air }
-		position = 4
+		required_missions = { new_raiding_ports }
+		position = 5
 	
 		trigger = {
-			ivory_coast = {
+			1466 = {
 				num_ships_privateering = 20
 			}
-			caribean_node = {
+			1516 = {
 				num_ships_privateering = 20
 			}
-			brazil_node = {
+			1531 = {
 				num_ships_privateering = 20
 			}
-			kongo_node = {
+			1460 = {
 				num_ships_privateering = 20
 			}
-			#privateering ivory coast, caribean, NE, cape
 		}
 		effect = {
 			add_country_modifier = {
@@ -844,7 +871,7 @@ numidia_neighbors_missions_2 = {
 	demand_roman_reparations = {
 		icon = the_hundred_years_war
 		required_missions = { new_neighbors_new_relationships }
-		position = 5
+		position = 7
 	
 		trigger = {
 			OR = {
@@ -897,7 +924,7 @@ numidia_neighbors_missions_2 = {
 	carthaginian_islands = {
 		icon = the_hundred_years_war
 		required_missions = { demand_roman_reparations }
-		position = 6
+		position = 8
 	
 		trigger = {
 			OR = {
@@ -906,7 +933,7 @@ numidia_neighbors_missions_2 = {
 						area = sardinia_area
 						area = sicily_area
 					}
-					amount = 5
+					value = 5
 				}
 				AND = {
 					any_ally = { 
@@ -922,6 +949,7 @@ numidia_neighbors_missions_2 = {
 								value = 80
 							}
 						}
+						owns = 4736
 					}
 					treasury = 1000
 				}
@@ -935,7 +963,7 @@ numidia_neighbors_missions_2 = {
 							area = sardinia_area
 							area = sicily_area
 						}
-						amount = 5
+						value = 5
 					} 
 				}
 				add_power_projection = {
@@ -965,7 +993,7 @@ numidia_neighbors_missions_3 = {
 	new_neighbors_new_relationships = {
 		icon = the_hundred_years_war
 		required_missions = { }
-		position = 4
+		position = 6
 	
 		trigger = {
 			OR = {
@@ -982,16 +1010,16 @@ numidia_neighbors_missions_3 = {
 			OR = {
 				any_country = {
 						capital_scope = { region = italy_region }
-						is_rival = NUM
+						is_rival = NDI
 						was_player = yes
 				}
 				any_country = {
 						capital_scope = { region = italy_region }
 						has_opinion = {
-							who = NUM
+							who = NDI
 							value = 100
 						}
-						alliance_with = NUM
+						alliance_with = NDI
 						was_player = yes
 				}
 						
@@ -1110,7 +1138,7 @@ numidia_neighbors_missions_3 = {
 					}
 				}
 			}
-			alexandria_area = {
+			delta_area = {
 				type = all
 				add_permanent_claim = ROOT
 			}
@@ -1119,12 +1147,12 @@ numidia_neighbors_missions_3 = {
 	end_of_the_ghosts_of_the_past = {
 		icon = the_hundred_years_war
 		required_missions = { cairos_controller carthaginian_islands }
-		position = 5
+		position = 9
 	
 		trigger = {
 			stability = 2
 			prestige = 50
-			total_development = 60
+			total_development = 500
 		}
 		effect = {
 			add_country_modifier = {
@@ -1150,25 +1178,22 @@ numidia_neighbors_missions_4 = {
 	control_of_alexandria = {
 		icon = the_hundred_years_war
 		required_missions = { new_neighbors_new_relationships }
-		position = 5
+		position = 7
 	
 		trigger = {
 			OR = {
-				alexandria_area = {
-					type = all
+				358 = {
 					owned_by = ROOT
 				}
-				alexandria_node = {
+				358 = {
 					is_strongest_trade_power = NDI
 				}
-				#alexandria state or trade node
 			}
 		}
 		effect = {
 			if = {
 				limit = {
-						alexandria_area = {
-						type = all
+						385 = {
 						owned_by = ROOT
 					}
 				}
@@ -1183,12 +1208,11 @@ numidia_neighbors_missions_4 = {
 					duration = 7300
 				}
 			}
-			#claims on cairo and delta state
 			delta_area = {
 				type = all
 				add_permanent_claim = ROOT
 			}
-			cairo_area = {
+			bahari_area = {
 				type = all
 				add_permanent_claim = ROOT
 			}
@@ -1197,7 +1221,7 @@ numidia_neighbors_missions_4 = {
 	cairos_controller = {
 		icon = the_hundred_years_war
 		required_missions = { control_of_alexandria }
-		position = 5
+		position = 8
 	
 		trigger = {
 			OR = {
@@ -1206,12 +1230,12 @@ numidia_neighbors_missions_4 = {
 						type = all
 						owned_by = ROOT
 					}
-					cairo_area = {
+					bahari_area = {
 						type = all
 						owned_by = ROOT
 					}
 				}
-				cairo = {
+				361 = {
 					owner = {
 						has_opinion = { 
 							who = ROOT 
@@ -1223,7 +1247,6 @@ numidia_neighbors_missions_4 = {
 						}
 					}
 				}
-				#cairo and delta state owned or relations and trust
 			}
 		}
 		effect = {
@@ -1233,7 +1256,7 @@ numidia_neighbors_missions_4 = {
 						type = all
 						owned_by = ROOT
 					}
-					cairo_area = {
+					bahari_area = {
 						type = all
 						owned_by = ROOT
 					}

@@ -950,3 +950,34 @@ shared_interest_in_the_node = {
 cairo_educated_advisors = {
     same_culture_advisor_cost = -0.15
 }
+carthaginian_naval_defenses = {
+    galley_power = 0.2
+    hostile_fleet_attrition = 1
+}
+master_raiders = {
+    coast_raid_range = 1
+    may_perform_slave_raid_on_same_religion = yes
+}
+nomad_warriors = {
+    cavalry_cost = -0.10
+    cavalry_flanking = 0.10
+}
+tripoli_pirates = {
+    privateer_efficiency = 0.25
+    has_marines = yes
+    allowed_marine_fraction = 0.15
+}
+elite_cav_modifier = {
+    cavalry_power = 0.20
+}
+cultural_quarters = {
+    development_cost_in_primary_culture = -0.05
+}
+greater_hegemony = {
+    global_unrest = -1.5
+    prestige = 1.5
+}
+yes_men = {
+    same_culture_advisor_cost = -0.2
+    yearly_corruption = 0.1
+}

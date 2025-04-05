@@ -9,9 +9,11 @@ country_decisions = {
             NOT = { 343 = { owned_by = ROOT } }
 		kabylia_area = {
 			owned_by = ROOT
+			type = all
 		}
 		tunisia_area = {
 			owned_by = ROOT
+			type = all
 		}
 	}
         effect = {
