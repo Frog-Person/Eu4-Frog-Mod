@@ -1,0 +1,16 @@
+﻿l_english:
+ ####################
+ # Modifiers
+ ####################
+ #Province Modifiers
+ cat_lower_defense_1: "Overbuilt defenses I"
+ desc_cat_lower_defense_1: "Adjacent forts offer diminishing returns and are harder to maintain. §YDestroy the fort to remove.§"
+ 
+ cat_lower_defense_2: "Overbuilt defenses II"
+ desc_cat_lower_defense_2: "Adjacent forts offer diminishing returns and are harder to maintain. §YDestroy the fort to remove.§"
+ 
+ cat_lower_defense_3: "Overbuilt defenses III"
+ desc_cat_lower_defense_3: "Adjacent forts offer diminishing returns and are harder to maintain. §YDestroy the fort to remove.§"
+ 
+ cat_lower_defense_4: "Overbuilt defenses IV"
+ desc_cat_lower_defense_4: "Adjacent forts offer diminishing returns and are harder to maintain. §YDestroy the fort to remove.§"
