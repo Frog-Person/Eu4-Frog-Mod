@@ -77,6 +77,19 @@ country_decisions = {
 	free_colonist = {
 		color = { 166  0  0 }
 		potential = {
+				OR = {
+					tag = POR
+					tag = CAS
+					tag = SPA
+					tag = GBR
+					tag = ENG
+					tag = FRA
+					tag = ADU
+					tag = SCO
+					tag = HOL
+					tag = NED
+					tag = LUS
+				}
 				NOT = {
 					capital_scope = {
 						continent = north_america
@@ -120,6 +133,20 @@ country_decisions = {
 	free_colonist_2 = {
 		color = { 166  0  0 }
 		potential = {
+				NOT = {
+					OR = {
+						tag = POR
+						tag = CAS
+						tag = SPA
+						tag = GBR
+						tag = ENG
+						tag = FRA
+						tag = ADU
+						tag = SCO
+						tag = HOL
+						tag = NED
+					}
+				}
 				NOT = {
 					capital_scope = {
 						continent = north_america
@@ -205,43 +232,44 @@ country_decisions = {
 			}
 		}
 	}
-	Create_a_Trade_Hub = {
-		color = { 166  0  0 }
-		potential = {
-			ai = no
-			has_dlc = "Dharma"
-		}
-		
-		allow = {
-			is_at_war = no
-			any_owned_province = {
-					area_for_scope_province = {
-								type = all
-								NOT = {
-									province_has_center_of_trade_of_level = 1
-								}
-					}
-					development = 30
-					OR = {
-						has_building = marketplace
-						has_building = trade_depot
-						has_building = stock_exchange
-					}
-					NOT = {
-						province_has_center_of_trade_of_level = 1
-					}
-				
-			}
-			NOT = { has_country_modifier = trade_hub_created }
-			treasury = 200
-			dip_power = 50
-		}
-		
-		effect = {
-			country_event = { id = echo.4 }
-		}
-		
-	}
+# No longer needed, moved functionality to a building
+#	Create_a_Trade_Hub = {
+#		color = { 166  0  0 }
+#		potential = {
+#			ai = no
+#			has_dlc = "Dharma"
+#		}
+#		
+#		allow = {
+#			is_at_war = no
+#			any_owned_province = {
+#					area_for_scope_province = {
+#								type = all
+#								NOT = {
+#									province_has_center_of_trade_of_level = 1
+#								}
+#					}
+#					development = 30
+#					OR = {
+#						has_building = marketplace
+#						has_building = trade_depot
+#						has_building = stock_exchange
+#					}
+#					NOT = {
+#						province_has_center_of_trade_of_level = 1
+#					}
+#				
+#			}
+#			NOT = { has_country_modifier = trade_hub_created }
+#			treasury = 200
+#			dip_power = 50
+#		}
+#		
+#		effect = {
+#			country_event = { id = echo.4 }
+#		}
+#		
+#	}
 
 	echo_development_counter = {
 		color = { 166  0  0 }

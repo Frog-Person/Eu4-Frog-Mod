@@ -1,0 +1,38 @@
+﻿l_english:
+
+ cat_lower_defense_1: "Overbuilt defenses I"
+ desc_cat_lower_defense_1: "Adjacent forts offer diminishing returns and are harder to maintain. §YDestroy the fort to remove.§"
+ 
+ cat_lower_defense_2: "Overbuilt defenses II"
+ desc_cat_lower_defense_2: "Adjacent forts offer diminishing returns and are harder to maintain. §YDestroy the fort to remove.§"
+ 
+ cat_lower_defense_3: "Overbuilt defenses III"
+ desc_cat_lower_defense_3: "Adjacent forts offer diminishing returns and are harder to maintain. §YDestroy the fort to remove.§"
+ 
+ cat_lower_defense_4: "Overbuilt defenses IV"
+ desc_cat_lower_defense_4: "Adjacent forts offer diminishing returns and are harder to maintain. §YDestroy the fort to remove.§"
+ 
+ 
+ edict_feudal_de_jure_law: "Conscript More Sailors"
+ edict_centralization_effort: "Sabotage Key Infrastructure"
+ 
+ recruit_great_commander_title: "Recruit Great Commander"
+ recruit_great_commander_desc: "Recruit a Great Commander to aid your country in desperate situation."
+ 
+ cat.1.title: "Recruit Great Commander"
+ cat.1.desc: "Recruit a Great Commander to aid your country in desperate situation. Each has a cooldown of 100 years."
+ 
+ cat.1.a: "Recruit Commandant"
+ cat.1.b: "Recruit Grand Captain"
+ cat.1.c: "Nevermind."
+ 
+ echo_commandant_cooldown: "Inspirational Leader Cooldown (Soft)"
+ echo_grand_captain_cooldown: "A Truly Great Captain Cooldown (Soft)"
+ 
+ echo_commandant_cooldown_100: "Inspirational Leader Cooldown (Hard)"
+ echo_grand_captain_cooldown_100: "A Truly Great Captain Cooldown (Hard)"
+ 
+ free_colonist_2_title: "Free Colonist 1600s"
+ 
+ PEACE_cat_downgrade_cot: "Downgrade Centers of Trade"
+ cat_downgrade_cot_desc: "All enemy Centers of Trade will get reduced by 1 level."

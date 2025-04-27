@@ -1,0 +1,54 @@
+namespace = cat
+
+#recruit inspirational leader
+country_event = {
+	id = cat.1
+	title = cat.1.title
+	desc = cat.1.desc
+	picture = LAND_MILITARY_eventPicture
+
+	is_triggered_only = yes
+	
+	#commandant
+	option = {
+		name = cat.1.a
+		
+		trigger = {
+			NOT = { has_country_modifier = echo_commandant_cooldown_100 }
+		}
+		add_mil_power  = -400
+		add_country_modifier = {
+			name = "commandant_boost"
+			duration = 2190
+		}
+		remove_country_modifier = echo_commandant_cooldown
+		add_country_modifier = { 
+			name = echo_commandant_cooldown_100
+			duration = 36500
+			hidden = no
+		}
+	}
+	#grand captain
+	option = {
+		name = cat.1.b
+		
+		trigger = {
+			NOT = { has_country_modifier = echo_grand_captain_cooldown_100 }
+		}
+		add_mil_power  = -400
+		add_country_modifier = {
+			name = "grand_captain_boost"
+			duration = 2190
+		}	
+		remove_country_modifier = echo_grand_captain_cooldown
+		add_country_modifier = { 
+			name = echo_grand_captain_cooldown_100
+			duration = 36500
+			hidden = no
+		}
+	}
+	option = {
+		name = cat.1.c
+		}
+	}
+}

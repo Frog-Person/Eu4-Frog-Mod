@@ -1,0 +1,19 @@
+country_decisions = {
+	recruit_great_commander = {
+		color = { 166  0  166 }
+		potential = {
+			ai = no
+       }
+		allow = {
+			mil_power = 400
+			ai = no
+			is_at_war = yes
+			all_war_enemy_countries = { offensive_war_with = PREV }
+		}
+		effect = {
+			country_event = {
+				id = cat.1
+			}
+		}
+	}
+	
