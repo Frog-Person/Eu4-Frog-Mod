@@ -4722,8 +4722,13 @@ WoC_austria_5_austria_hungary = {
                         duration = 9125
                     }
                 }
+				4128 = { 
+					add_great_project_tier = {
+						type = bran_castle
+						tier = 1 
+					}
+				} 
             }
-			#subject monument upgraded but owned to get religious tolerance bonuses
 		}
 	}
 
@@ -4756,7 +4761,12 @@ WoC_austria_5_austria_hungary = {
 				BOH = { change_country_color = { country = HAB } }
             }
             else = {
-                #upgrade great project by one
+                154 = { 
+					add_great_project_tier = {
+						type = golden_kremnica
+						tier = 1 
+					}
+				}
                 add_country_modifier = {
                     name = kreminca_mint
                     duration = 9125
