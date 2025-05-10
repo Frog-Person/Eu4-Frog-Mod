@@ -645,7 +645,7 @@ brz_colonial_exclave = {
 				}
 				set_government_rank = 2
 			}
-			prestige = 20
+			add_prestige = 20
 			brazil_region = {
 				add_permanent_claim = ROOT
 			}

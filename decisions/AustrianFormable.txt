@@ -10,12 +10,27 @@ country_decisions = {
                 tooltip = forming_austria_hungary
                 has_country_flag = austrian_hungary_formable
             }
-            NOT = { exists = HUN }
-            NOT = { exists = BOH }
-            adm_tech = 12
-            owns_core_province = 153
-            owns_core_province = 266
-            owns_core_province = 134
+            OR = {
+                AND = {
+                    NOT = { exists = HUN }
+                    NOT = { exists = BOH }
+                    adm_tech = 12
+                    owns_core_province = 153
+                    owns_core_province = 266
+                    owns_core_province = 134
+                }
+                AND = {
+                    HUN = {
+                        is_subject_of = HAB
+                        is_subject_of_type = auh_integrated_union
+                    }
+                    BOH = {
+                        is_subject_of = HAB
+                        is_subject_of_type = auh_integrated_union
+                    }
+                    adm_tech = 12
+                }
+            }
         }
         effect = {
             change_tag = AUH
@@ -44,7 +59,7 @@ country_decisions = {
                 }
                 add_casus_belli = {
 				    type = cb_vassalize_mission
-                    months = 1000
+                    months = 964
 					target = BAV
 				}
             }
@@ -69,7 +84,7 @@ country_decisions = {
                 }
                 add_casus_belli = {
 				    type = cb_vassalize_mission
-                    months = 1000
+                    months = 964
 					target = WAL
 				}
             }
@@ -147,7 +162,7 @@ country_decisions = {
                 }
                 add_casus_belli = {
 				    type = cb_vassalize_mission
-                    months = 1000
+                    months = 964
 					target = BAV
 				}
             }
@@ -172,7 +187,7 @@ country_decisions = {
                 }
                 add_casus_belli = {
 				    type = cb_vassalize_mission
-                    months = 1000
+                    months = 964
 					target = WAL
 				}
             }
@@ -229,7 +244,7 @@ country_decisions = {
                 }
                 add_casus_belli = {
 				    type = cb_vassalize_mission
-                    months = 1000
+                    months = 964
 					target = BAV
 				}
             }

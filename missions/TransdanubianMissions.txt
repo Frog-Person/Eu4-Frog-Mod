@@ -585,9 +585,18 @@ building_capacity = {
 		trigger = {
 			OR = {
 				AND = {
-					church = 50
-					workshop = 50
-					courthouse = 50
+					OR = {
+						temple = 50
+						cathedral = 50
+					}
+					OR = {
+						workshop = 50
+						counting_house = 50
+					}
+					OR = {
+						courthouse = 50
+						town_hall = 50
+					}
 					university = 50
 					OR = {
 						trade_depot = 50

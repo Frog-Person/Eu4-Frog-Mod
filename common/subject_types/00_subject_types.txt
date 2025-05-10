@@ -1803,6 +1803,33 @@ integrated_personal_union = {
 	takes_diplo_slot = no
 }
 
+auh_integrated_union = {
+	copy_from = personal_union
+	
+	sprite = GFX_icon_integrated_personal_union_subject_type
+	diplomacy_overlord_sprite = GFX_icon_diplomacy_lead_integrated_personal_union_subject_type
+	diplomacy_subject_sprite = GFX_icon_diplomacy_am_integrated_personal_union_subject_type
+	annex_cost_per_development = 6.0
+	takes_diplo_slot = no
+	can_be_integrated = yes
+	can_use_claims = yes
+	disable_inheritance = yes
+	
+	forcelimit_to_overlord = 0.35
+	manpower_to_overlord = 0.35
+	naval_forcelimit_to_overlord = 0.1
+	sailors_to_overlord = 0.1
+	
+	modifier_overlord = clear
+	modifier_overlord = {
+		modifier = auh_union_overlord
+	}
+
+	modifier_subject = {
+		modifier = auh_union_subject
+	}
+}
+
 soyurghal_subject_type = {
 	copy_from = vassal
 	count = vassal

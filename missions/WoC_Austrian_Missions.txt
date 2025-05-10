@@ -4379,6 +4379,26 @@ WoC_austria_5 = {
 			factor = 0	#No
 		}
 	}
+}
+
+WoC_austria_5_culture = {
+	slot = 5
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential_on_load = {
+		has_dlc = "Winds of Change"
+	}
+	potential = { 
+		has_dlc = "Winds of Change"
+		OR = {
+			tag = HAB
+			AND = {
+				was_tag = HAB
+				tag = AUH
+			}
+		}
+	} 
 
 	direction_of_our_country = {
 		icon = mission_build_up_to_force_limit
@@ -4388,6 +4408,7 @@ WoC_austria_5 = {
 				if = {
 						129 = {
 							AND = {
+								development = 15
 								owned_by = ROOT
 								has_owner_accepted_culture = yes
 								NOT = { culture = austrian }
@@ -4395,6 +4416,7 @@ WoC_austria_5 = {
 						}
 						1769 = {
 							AND = {
+								development = 15
 								owned_by = ROOT
 								has_owner_accepted_culture = yes
 								NOT = { culture = austrian }
@@ -4403,10 +4425,12 @@ WoC_austria_5 = {
 				}
 				if = {
 						129 = {
+							development = 15
 							owned_by = ROOT
 							culture = austrian
 						}
 						1769 = {
+							development = 15
 							owned_by = ROOT
 							culture = austrian
 						}
@@ -4414,1786 +4438,631 @@ WoC_austria_5 = {
 			}
 		}
 		effect = {
-			if = {
-				limit = {
-					AND = {
-						owns_core_province = 129
-						129 = {
-							has_owner_accepted_culture = yes
-							NOT = { culture = austrian }
-						}
-						owns_core_province = 1769
-						1769 = {
-							has_owner_accepted_culture = yes
-							NOT = { culture = austrian }
-						}
-					}
-				}
-				custom_tooltip = hab_cultural_acceptance
-				tooltip = {
-					add_country_modifier = {
-						name = acceptance_path1
-						duration = -1
-					}					
-				}
-			}
-			else = {
-				custom_tooltip = hab_cultural_removal
-				tooltip = {
-					add_country_modifier = {
-						name = austrian_path1
-						duration = -1
-					}
-				}
-			}
-			hidden_effect = {
-				if = {
-					limit = {
-						AND = {
-							owns_core_province = 129
-							129 = {
-								has_owner_accepted_culture = yes
-								NOT = { culture = austrian }
-							}
-							owns_core_province = 1769
-							1769 = {
-								has_owner_accepted_culture = yes
-								NOT = { culture = austrian }
-							}
-						}
-					}
-					add_country_modifier = {
-						name = acceptance_path1
-						duration = -1
-					}					
-				}
-				else = {
-					add_country_modifier = {
-						name = austrian_path1
-						duration = -1
-					}
-				}			
-			}
+			country_event = { id = flavor_hab.37 }
 		}
 	}
+}
 
-	czech_choice = {
+WoC_austria_5_branching_culture = {
+	slot = 5
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential_on_load = {
+		has_dlc = "Winds of Change"
+	}
+	potential = { 
+		has_dlc = "Winds of Change"
+		OR = {
+			tag = HAB
+			AND = {
+				was_tag = HAB
+				tag = AUH
+			}
+		}
+		NOT = { has_country_flag = hab_historical_branch }
+		NOT = { has_country_flag = hab_multiculturalism_branch }
+		NOT = { has_country_flag = hab_funnymoustache_branch }
+	} 
+
+	hab_branching_culture1 = {
+		icon = mission_unknown_mission
+		position = 5
+		required_missions = { direction_of_our_country } 
+		trigger = {  
+			custom_trigger_tooltip = { tooltip = HAB_this_is_a_branching_mission always = no }
+		} 
+
+		effect = {  
+			custom_tooltip = HAB_this_is_a_branching_mission
+		} 
+	}
+
+	hab_branching_culture2 = {
+		icon = mission_unknown_mission
+		position = 6
+		required_missions = { hab_branching_culture1 }
+		trigger = {  
+			custom_trigger_tooltip = { tooltip = HAB_this_is_a_branching_mission always = no }
+		} 
+
+		effect = {  
+			custom_tooltip = HAB_this_is_a_branching_mission
+		} 
+	}
+
+	hab_branching_culture3 = {
+		icon = mission_unknown_mission
+		position = 7
+		required_missions = { hab_branching_culture2 }
+		trigger = {  
+			custom_trigger_tooltip = { tooltip = HAB_this_is_a_branching_mission always = no }
+		} 
+
+		effect = {  
+			custom_tooltip = HAB_this_is_a_branching_mission
+		} 
+	}
+
+	hab_branching_culture4 = {
+		icon = mission_unknown_mission
+		position = 8
+		required_missions = { hab_branching_culture3 }
+		trigger = {  
+			custom_trigger_tooltip = { tooltip = HAB_this_is_a_branching_mission always = no }
+		} 
+
+		effect = {  
+			custom_tooltip = HAB_this_is_a_branching_mission
+		} 
+	}
+
+	hab_branching_culture5 = {
+		icon = mission_unknown_mission
+		position = 9
+		required_missions = { hab_branching_culture4 }
+		trigger = {  
+			custom_trigger_tooltip = { tooltip = HAB_this_is_a_branching_mission always = no }
+		} 
+
+		effect = {  
+			custom_tooltip = HAB_this_is_a_branching_mission
+		} 
+	}
+}
+
+WoC_austria_5_austria_hungary = {
+	slot = 5
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential_on_load = {
+		has_dlc = "Winds of Change"
+	}
+	potential = { 
+		has_dlc = "Winds of Change"
+		OR = {
+			tag = HAB
+			AND = {
+				was_tag = HAB
+				tag = AUH
+			}
+		}
+		has_country_flag = hab_historical_branch
+	}
+
+	devlop_czech_crown = {
 		icon = mission_build_up_to_force_limit
 		position = 5
 		required_missions = { direction_of_our_country }
 		trigger = {
-			OR = {
-				custom_trigger_tooltip = {
-					tooltip = hab_czech_accept
-					bohemia_area = {
-						type = all
-						has_owner_accepted_culture = yes
-					    NOT = { culture = austrian }
-						country_or_non_sovereign_subject_holds = ROOT
-					}
-					erzgebirge_area = {
-						type = all
-						has_owner_accepted_culture = yes
-					    NOT = { culture = austrian }
-						country_or_non_sovereign_subject_holds = ROOT
-					}
-					moravia_area = {
-						type = all
-						has_owner_accepted_culture = yes
-					    NOT = { culture = austrian }
-						country_or_non_sovereign_subject_holds = ROOT
-					}
+			AND = {
+				bohemia_area = {
+					type = all
+					development = 10
+					country_or_non_sovereign_subject_holds = ROOT
 				}
-				custom_trigger_tooltip = {
-					tooltip = hab_czech_convert
-					bohemia_area = {
-						type = all
-						culture = austrian
-						country_or_non_sovereign_subject_holds = ROOT
-					}
-					erzgebirge_area = {
-						type = all
-						culture = austrian
-						country_or_non_sovereign_subject_holds = ROOT
-					}
-					moravia_area = {
-						type = all
-						culture = austrian
-						country_or_non_sovereign_subject_holds = ROOT
-					}
+				erzgebirge_area = {
+					type = all
+					development = 10
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+				moravia_area = {
+					type = all
+					development = 10
+					country_or_non_sovereign_subject_holds = ROOT
 				}
 			}
 		}
 		effect = {
 			if = {
 				limit = {
-					has_country_modifier = acceptance_path1
-					bohemia_area = {
-						type = all
-						has_owner_accepted_culture = yes
-						NOT = { culture = austrian }
-						country_or_non_sovereign_subject_holds = ROOT
-					}
-					erzgebirge_area = {
-						type = all
-						has_owner_accepted_culture = yes
-						NOT = { culture = austrian }
-						country_or_non_sovereign_subject_holds = ROOT
-					}
-					moravia_area = {
-						type = all
-						has_owner_accepted_culture = yes
-						NOT = { culture = austrian }
-						country_or_non_sovereign_subject_holds = ROOT
-					}
+					exists = BOH
+					BOH = { is_subject_of = ROOT }
 				}
-				custom_tooltip = hab_more_acceptance
-					tooltip = {
-					add_country_modifier = {
-						name = acceptance_path2
-						duration = -1
-					}
-				}
-			}
-			else_if = {
-				limit = {
-					bohemia_area = {
-						type = all
-						has_owner_accepted_culture = yes
-						NOT = { culture = austrian }
-						country_or_non_sovereign_subject_holds = ROOT
-					}
-					erzgebirge_area = {
-						type = all
-						has_owner_accepted_culture = yes
-						NOT = { culture = austrian }
-						country_or_non_sovereign_subject_holds = ROOT
-					}
-					moravia_area = {
-						type = all
-						has_owner_accepted_culture = yes
-						NOT = { culture = austrian }
-						country_or_non_sovereign_subject_holds = ROOT
-					}
-				}
-				custom_tooltip = hab_cultural_acceptance
-					tooltip = {
-					add_country_modifier = {
-						name = acceptance_path1
-						duration = -1
-					}
-				}
-			}
-			else_if = {
-				limit = {
-					has_country_modifier = austrian_path1
-					bohemia_area = {
-						type = all
-						culture = austrian
-						country_or_non_sovereign_subject_holds = ROOT
-					}
-					erzgebirge_area = {
-						type = all
-						culture = austrian
-						country_or_non_sovereign_subject_holds = ROOT
-					}
-					moravia_area = {
-						type = all
-						culture = austrian
-						country_or_non_sovereign_subject_holds = ROOT
-					}
-				}
-				custom_tooltip = hab_more_removal
-					tooltip = {
-					remove_country_modifier = austrian_path1
-					add_country_modifier = {
-						name = austrian_path2
-						duration = -1
-					}
-				}
-			}
-			else_if = {
-				limit = {
-					bohemia_area = {
-						type = all
-						culture = austrian
-						country_or_non_sovereign_subject_holds = ROOT
-					}
-					erzgebirge_area = {
-						type = all
-						culture = austrian
-						country_or_non_sovereign_subject_holds = ROOT
-					}
-					moravia_area = {
-						type = all
-						culture = austrian
-						country_or_non_sovereign_subject_holds = ROOT
-					}
-				}
-				custom_tooltip = hab_cultural_removal
-				tooltip = {
-					add_country_modifier = {
-					name = austrian_path1
-						duration = -1
-					}
-				}
-			}
-			hidden_effect = {
-				if = {
-					limit = {
-						has_country_modifier = acceptance_path1
-						bohemia_area = {
-							type = all
-							has_owner_accepted_culture = yes
-							NOT = { culture = austrian }
-							country_or_non_sovereign_subject_holds = ROOT
-						}
-						erzgebirge_area = {
-							type = all
-							has_owner_accepted_culture = yes
-							NOT = { culture = austrian }
-							country_or_non_sovereign_subject_holds = ROOT
-						}
-						moravia_area = {
-							type = all
-							has_owner_accepted_culture = yes
-							NOT = { culture = austrian }
-							country_or_non_sovereign_subject_holds = ROOT
-						}
-					}
-					remove_country_modifier = acceptance_path1
+					BOH = {
 						add_country_modifier = {
-							name = acceptance_path2
-							duration = -1
-						}
-				}
-				else_if = {
-					limit = {
-						bohemia_area = {
-							type = all
-							has_owner_accepted_culture = yes
-							NOT = { culture = austrian }
-							country_or_non_sovereign_subject_holds = ROOT
-						}
-						erzgebirge_area = {
-							type = all
-							has_owner_accepted_culture = yes
-							NOT = { culture = austrian }
-							country_or_non_sovereign_subject_holds = ROOT
-						}
-						moravia_area = {
-							type = all
-							has_owner_accepted_culture = yes
-							NOT = { culture = austrian }
-							country_or_non_sovereign_subject_holds = ROOT
+							name = benevolent_hab_monarch
+                            duration = 18250
 						}
 					}
-					add_country_modifier = {
-						name = acceptance_path1
-						duration = -1
-					}
-				}
-				else_if = {
-					limit = {
-						has_country_modifier = austrian_path1
-						bohemia_area = {
-							type = all
-							culture = austrian
-							country_or_non_sovereign_subject_holds = ROOT
-						}
-						erzgebirge_area = {
-							type = all
-							culture = austrian
-							country_or_non_sovereign_subject_holds = ROOT
-						}
-						moravia_area = {
-							type = all
-							culture = austrian
-							country_or_non_sovereign_subject_holds = ROOT
-						}
-					}
-					remove_country_modifier = austrian_path1
-					add_country_modifier = {
-						name = austrian_path2
-						duration = -1
-					}
-				}
-				else_if = {
-					limit = {
-						bohemia_area = {
-							type = all
-							culture = austrian
-							country_or_non_sovereign_subject_holds = ROOT
-						}
-						erzgebirge_area = {
-							type = all
-							culture = austrian
-							country_or_non_sovereign_subject_holds = ROOT
-						}
-						moravia_area = {
-							type = all
-							culture = austrian
-							country_or_non_sovereign_subject_holds = ROOT
-						}
-					}
-					add_country_modifier = {
-						name = austrian_path1
-						duration = -1
-					}
+			}
+			else = {
+				add_country_modifier = {
+					name = bohemian_glassworks
+                    duration = 9125
 				}
 			}
 		}
 	}
 
-	croatian_conundrum = {
+	devlop_croatian_lands = {
 		icon = mission_build_up_to_force_limit
-		position = 6
-		required_missions = { czech_choice }
+		position = 5
+		required_missions = { devlop_czech_crown }
 		trigger = {
-			OR = {
-				custom_trigger_tooltip = {
-					tooltip = hab_croat_accept
-					AND = {
-						croatia_area = {
-							type = all
-							has_owner_accepted_culture = yes
-							NOT = { culture = austrian }
-							country_or_non_sovereign_subject_holds = ROOT
-						}
-						slavonia_area = {
-							type = all
-							has_owner_accepted_culture = yes
-							NOT = { culture = austrian }
-							country_or_non_sovereign_subject_holds = ROOT
-						}
-					}
+			AND = {
+				croatia_area = {
+					type = all
+					development = 10
+					country_or_non_sovereign_subject_holds = ROOT
 				}
-				custom_trigger_tooltip = {
-					tooltip = hab_croat_convert
-					AND = {
-						croatia_area = {
-							type = all
-							culture = austrian
-							country_or_non_sovereign_subject_holds = ROOT
-						}
-						slavonia_area = {
-							type = all
-							culture = austrian
-							country_or_non_sovereign_subject_holds = ROOT
-						}
-					}
+				slavonia_area = {
+					type = all
+					development = 10
+					country_or_non_sovereign_subject_holds = ROOT
 				}
 			}
 		}
 		effect = {
-			if = {
+            if = {
 				limit = {
-					has_country_modifier = acceptance_path2
-					croatia_area = {
-						has_owner_accepted_culture = yes
-						NOT = { culture = austrian }
-						country_or_non_sovereign_subject_holds = ROOT
-					}
-					slavonia_area = {
-						has_owner_accepted_culture = yes
-						NOT = { culture = austrian }
-						country_or_non_sovereign_subject_holds = ROOT
-					}
+                    AND = {
+					    croatia_area = {
+                            owned_by_subject_of = HAB
+                        }
+                        slavonia_area = {
+                            owned_by_subject_of = HAB
+                        }
+                    }
 				}
-				custom_tooltip = hab_more_acceptance
-					tooltip = {
-					add_country_modifier = {
-						name = acceptance_path3
-						duration = -1
-					}
-				}
+                add_country_modifier = {
+                    name = subject_sailors
+                    duration = -1
+                }
 			}
-			else_if = {
-				limit = {
-					has_country_modifier = acceptance_path1
-					croatia_area = {
-						has_owner_accepted_culture = yes
-						NOT = { culture = austrian }
-						country_or_non_sovereign_subject_holds = ROOT
-					}
-					slavonia_area = {
-						has_owner_accepted_culture = yes
-						NOT = { culture = austrian }
-						country_or_non_sovereign_subject_holds = ROOT
-					}
-				}
-				custom_tooltip = hab_more_acceptance
-					tooltip = {
-					add_country_modifier = {
-						name = acceptance_path2
-						duration = -1
-					}
-				}
-			}
-			else_if = {
-				limit = {
-					croatia_area = {
-						has_owner_accepted_culture = yes
-						NOT = { culture = austrian }
-						country_or_non_sovereign_subject_holds = ROOT
-					}
-					slavonia_area = {
-						has_owner_accepted_culture = yes
-						NOT = { culture = austrian }
-						country_or_non_sovereign_subject_holds = ROOT
-					}
-				}
-				custom_tooltip = hab_cultural_acceptance
-					tooltip = {
-					add_country_modifier = {
-						name = acceptance_path1
-						duration = -1
-					}
-				}
-			}
-			else_if = {
-				limit = {
-					has_country_modifier = austrian_path1
-					croatia_area = {
-						type = all
-						culture = austrian
-						country_or_non_sovereign_subject_holds = ROOT
-					}
-					slavonia_area = {
-						type = all						
-						culture = austrian
-						country_or_non_sovereign_subject_holds = ROOT
-					}
-				}
-				custom_tooltip = hab_more_removal
-					tooltip = {
-					add_country_modifier = {
-						name = austrian_path2
-						duration = -1
-					}
-				}
-			}
-			else_if = {
-				limit = {
-					has_country_modifier = austrian_path2
-					croatia_area = {
-						type = all
-						culture = austrian
-						country_or_non_sovereign_subject_holds = ROOT
-					}
-					slavonia_area = {
-						type = all						
-						culture = austrian
-						country_or_non_sovereign_subject_holds = ROOT
-					}
-				}
-				custom_tooltip = hab_more_removal
-					tooltip = {
-					add_country_modifier = {
-						name = austrian_path3
-						duration = -1
-					}
-				}
-			}
-			else_if = {
-				limit = {
-					croatia_area = {
-						type = all
-						culture = austrian
-						country_or_non_sovereign_subject_holds = ROOT
-					}
-					slavonia_area = {
-						type = all						
-						culture = austrian
-						country_or_non_sovereign_subject_holds = ROOT
-					}
-				}
-				custom_tooltip = hab_cultural_removal
-					tooltip = {
-					add_country_modifier = {
-						name = austrian_path1
-						duration = -1
-					}
-				}
-			}
-			hidden_effect = {
-				if = {
-					limit = {
-						has_country_modifier = acceptance_path2
-						croatia_area = {
-							has_owner_accepted_culture = yes
-							NOT = { culture = austrian }
-							country_or_non_sovereign_subject_holds = ROOT
-						}
-						slavonia_area = {
-							has_owner_accepted_culture = yes
-							NOT = { culture = austrian }
-							country_or_non_sovereign_subject_holds = ROOT
-						}
-					}
-					remove_country_modifier = acceptance_path2
-					add_country_modifier = {
-						name = acceptance_path3
-						duration = -1
-					}
-				}
-				else_if = {
-					limit = {
-						has_country_modifier = acceptance_path1
-						croatia_area = {
-							has_owner_accepted_culture = yes
-							NOT = { culture = austrian }
-							country_or_non_sovereign_subject_holds = ROOT
-						}
-						slavonia_area = {
-							has_owner_accepted_culture = yes
-							NOT = { culture = austrian }
-							country_or_non_sovereign_subject_holds = ROOT
-						}
-					}
-					remove_country_modifier = acceptance_path1
-					add_country_modifier = {
-						name = acceptance_path2
-						duration = -1
-					}
-				}
-				else_if = {
-					limit = {
-						croatia_area = {
-							has_owner_accepted_culture = yes
-							NOT = { culture = austrian }
-							country_or_non_sovereign_subject_holds = ROOT
-						}
-						slavonia_area = {
-							has_owner_accepted_culture = yes
-							NOT = { culture = austrian }
-							country_or_non_sovereign_subject_holds = ROOT
-						}
-					}
-					add_country_modifier = {
-						name = acceptance_path1
-						duration = -1
-					}
-				}
-				else_if = {
-					limit = {
-						has_country_modifier = austrian_path1
-						croatia_area = {
-							type = all
-							culture = austrian
-							country_or_non_sovereign_subject_holds = ROOT
-						}
-						slavonia_area = {
-							type = all						
-							culture = austrian
-							country_or_non_sovereign_subject_holds = ROOT
-						}
-					}
-					remove_country_modifier = austrian_path1
-					add_country_modifier = {
-						name = austrian_path2
-						duration = -1
-					}
-				}
-				else_if = {
-					limit = {
-						has_country_modifier = austrian_path2
-						croatia_area = {
-							type = all
-							culture = austrian
-							country_or_non_sovereign_subject_holds = ROOT
-						}
-						slavonia_area = {
-							type = all						
-							culture = austrian
-							country_or_non_sovereign_subject_holds = ROOT
-						}
-					}
-					remove_country_modifier = austrian_path2
-					add_country_modifier = {
-						name = austrian_path3
-						duration = -1
-					}
-				}
-				else_if = {
-					limit = {
-						croatia_area = {
-							type = all
-							culture = austrian
-							country_or_non_sovereign_subject_holds = ROOT
-						}
-						slavonia_area = {
-							type = all						
-							culture = austrian
-							country_or_non_sovereign_subject_holds = ROOT
-						}
-					}
-					add_country_modifier = {
-						name = austrian_path1
-						duration = -1
-					}
-				}
-			}
+            else = {
+                add_country_modifier = {
+                    name = greater_adriatic_access
+                    duration = 9125
+                }
+            }
 		}
 	}
 
-	hungarian_headache = {
+	hungarian_crown_development = {
 		icon = mission_build_up_to_force_limit
 		position = 7
-		required_missions = { croatian_conundrum }
+		required_missions = { devlop_croatian_lands }
 		trigger = {
-			OR = {
-				custom_trigger_tooltip = {
-					tooltip = hab_hun_accept
-					AND = {
-						transdanubia_area = {
-							type = all
-							has_owner_accepted_culture = yes
-							NOT = { culture = austrian }
-							country_or_non_sovereign_subject_holds = ROOT
-						}
-						alfold_area = {
-							type = all
-							has_owner_accepted_culture = yes
-							NOT = { culture = austrian }
-							country_or_non_sovereign_subject_holds = ROOT
-						}
-					}
+			AND = {
+				transdanubia_area = {
+					type = all
+					development = 10
+					country_or_non_sovereign_subject_holds = ROOT
 				}
-				custom_trigger_tooltip = {
-					tooltip = hab_hun_convert
-					AND = {
-						transdanubia_area = {
-							type = all
-							culture = austrian
-							country_or_non_sovereign_subject_holds = ROOT
-						}
-						alfold_area = {
-							type = all
-							culture = austrian
-							country_or_non_sovereign_subject_holds = ROOT
-						}
-					}
+				alfold_area = {
+					type = all
+					development = 10
+					country_or_non_sovereign_subject_holds = ROOT
 				}
 			}
 		}
 		effect = {
-			if = {
+            if = {
 				limit = {
-					has_country_modifier = acceptance_path3
-					transdanubia_area = {
-						type = all
-						has_owner_accepted_culture = yes
-						NOT = { culture = austrian }
-						country_or_non_sovereign_subject_holds = ROOT
-					}
-					alfold_area = {
-						type = all
-						has_owner_accepted_culture = yes
-						NOT = { culture = austrian }
-						country_or_non_sovereign_subject_holds = ROOT
-					}
+					exists = HUN
+					HUN = { is_subject_of = ROOT }
 				}
-				custom_tooltip = hab_more_acceptance
-					tooltip = {
-					add_country_modifier = {
-						name = acceptance_path4
-						duration = -1
+					HUN = {
+						add_country_modifier = {
+							name = benevolent_hab_monarch
+                            duration = 18250
+						}
 					}
-				}
 			}
-			else_if = {
-				limit = {
-					has_country_modifier = acceptance_path2
-					transdanubia_area = {
-						type = all
-						has_owner_accepted_culture = yes
-						NOT = { culture = austrian }
-						country_or_non_sovereign_subject_holds = ROOT
-					}
-					alfold_area = {
-						type = all
-						has_owner_accepted_culture = yes
-						NOT = { culture = austrian }
-						country_or_non_sovereign_subject_holds = ROOT
-					}
-				}
-				custom_tooltip = hab_more_acceptance
-					tooltip = {
-					add_country_modifier = {
-						name = acceptance_path3
-						duration = -1
-					}
-				}	
-			}
-			else_if = {
-				limit = {
-					has_country_modifier = acceptance_path1
-					transdanubia_area = {
-						type = all
-						has_owner_accepted_culture = yes
-						NOT = { culture = austrian }
-						country_or_non_sovereign_subject_holds = ROOT
-					}
-					alfold_area = {
-						type = all
-						has_owner_accepted_culture = yes
-						NOT = { culture = austrian }
-						country_or_non_sovereign_subject_holds = ROOT
-					}
-				}
-				custom_tooltip = hab_more_acceptance
-					tooltip = {
-					add_country_modifier = {
-						name = acceptance_path2
-						duration = -1
-					}
-				}	
-			}
-			else_if = {
-				limit = {
-					transdanubia_area = {
-						type = all
-						has_owner_accepted_culture = yes
-						NOT = { culture = austrian }
-						country_or_non_sovereign_subject_holds = ROOT
-					}
-					alfold_area = {
-						type = all
-						has_owner_accepted_culture = yes
-						NOT = { culture = austrian }
-						country_or_non_sovereign_subject_holds = ROOT
-					}
-				}
-				custom_tooltip = hab_cultural_acceptance
-					tooltip = {
-					add_country_modifier = {
-						name = acceptance_path1
-						duration = -1
-					}
-				}	
-			}
-			else_if = {
-				limit = {
-					has_country_modifier = austrian_path1
-					transdanubia_area = {
-						type = all
-						culture = austrian
-						country_or_non_sovereign_subject_holds = ROOT
-					}
-					alfold_area = {
-						type = all
-						culture = austrian
-						country_or_non_sovereign_subject_holds = ROOT
-					}
-				}
-				custom_tooltip = hab_more_removal
-					tooltip = {
-					add_country_modifier = {
-						name = austrian_path2
-						duration = -1
-					}
-				}
-			}
-			else_if = {
-				limit = {
-					has_country_modifier = austrian_path2
-					transdanubia_area = {
-						type = all
-						culture = austrian
-						country_or_non_sovereign_subject_holds = ROOT
-					}
-					alfold_area = {
-						type = all
-						culture = austrian
-						country_or_non_sovereign_subject_holds = ROOT
-					}
-				}
-				custom_tooltip = hab_more_removal
-					tooltip = {
-					add_country_modifier = {
-						name = austrian_path3
-						duration = -1
-					}
-				}
-			}
-			else_if = {
-				limit = {
-					has_country_modifier = austrian_path3
-					transdanubia_area = {
-						type = all
-						culture = austrian
-						country_or_non_sovereign_subject_holds = ROOT
-					}
-					alfold_area = {
-						type = all
-						culture = austrian
-						country_or_non_sovereign_subject_holds = ROOT
-					}
-				}
-				custom_tooltip = hab_more_removal
-					tooltip = {
-					add_country_modifier = {
-						name = austrian_path4								
-						duration = -1
-					}
-				}
-			}
-			else_if = {
-				limit = {
-					transdanubia_area = {
-						type = all
-						culture = austrian
-						country_or_non_sovereign_subject_holds = ROOT
-					}
-					alfold_area = {
-						type = all
-						culture = austrian
-						country_or_non_sovereign_subject_holds = ROOT
-					}
-				}
-				custom_tooltip = hab_cultural_removal
-					tooltip = {
-					add_country_modifier = {
-						name = austrian_path1
-						duration = -1
-					}
-				}
-			}
-			hidden_effect = {
-				if = {
-					limit = {
-						has_country_modifier = acceptance_path3
-						transdanubia_area = {
-							type = all
-							has_owner_accepted_culture = yes
-							NOT = { culture = austrian }
-							country_or_non_sovereign_subject_holds = ROOT
-						}
-						alfold_area = {
-							type = all
-							has_owner_accepted_culture = yes
-							NOT = { culture = austrian }
-							country_or_non_sovereign_subject_holds = ROOT
-						}
-					}
-					remove_country_modifier = acceptance_path3
-					add_country_modifier = {
-						name = acceptance_path4
-						duration = -1
-					}
-				}
-				else_if = {
-					limit = {
-						has_country_modifier = acceptance_path2
-						transdanubia_area = {
-							type = all
-							has_owner_accepted_culture = yes
-							NOT = { culture = austrian }
-							country_or_non_sovereign_subject_holds = ROOT
-						}
-						alfold_area = {
-							type = all
-							has_owner_accepted_culture = yes
-							NOT = { culture = austrian }
-							country_or_non_sovereign_subject_holds = ROOT
-						}
-					}
-					remove_country_modifier = acceptance_path2
-					add_country_modifier = {
-						name = acceptance_path3
-						duration = -1
-					}	
-				}
-				else_if = {
-					limit = {
-						has_country_modifier = acceptance_path1
-						transdanubia_area = {
-							type = all
-							has_owner_accepted_culture = yes
-							NOT = { culture = austrian }
-							country_or_non_sovereign_subject_holds = ROOT
-						}
-						alfold_area = {
-							type = all
-							has_owner_accepted_culture = yes
-							NOT = { culture = austrian }
-							country_or_non_sovereign_subject_holds = ROOT
-						}
-					}
-					remove_country_modifier = acceptance_path1
-					add_country_modifier = {
-						name = acceptance_path2
-						duration = -1
-					}	
-				}
-				else_if = {
-					limit = {
-						transdanubia_area = {
-							type = all
-							has_owner_accepted_culture = yes
-							NOT = { culture = austrian }
-							country_or_non_sovereign_subject_holds = ROOT
-						}
-						alfold_area = {
-							type = all
-							has_owner_accepted_culture = yes
-							NOT = { culture = austrian }
-							country_or_non_sovereign_subject_holds = ROOT
-						}
-					}
-					add_country_modifier = {
-						name = acceptance_path1
-						duration = -1
-					}	
-				}
-				else_if = {
-					limit = {
-						has_country_modifier = austrian_path1
-						transdanubia_area = {
-							type = all
-							culture = austrian
-							country_or_non_sovereign_subject_holds = ROOT
-						}
-						alfold_area = {
-							type = all
-							culture = austrian
-							country_or_non_sovereign_subject_holds = ROOT
-						}
-					}
-					remove_country_modifier = austrian_path1
-					add_country_modifier = {
-						name = austrian_path2
-						duration = -1
-					}
-				}
-				else_if = {
-					limit = {
-						has_country_modifier = austrian_path2
-						transdanubia_area = {
-							type = all
-							culture = austrian
-							country_or_non_sovereign_subject_holds = ROOT
-						}
-						alfold_area = {
-							type = all
-							culture = austrian
-							country_or_non_sovereign_subject_holds = ROOT
-						}
-					}
-					remove_country_modifier = austrian_path2
-					add_country_modifier = {
-						name = austrian_path3
-						duration = -1
-					}
-				}
-				else_if = {
-					limit = {
-						has_country_modifier = austrian_path3
-					}
-					remove_country_modifier = austrian_path3
-					add_country_modifier = {
-						name = austrian_path4								
-						duration = -1
-					}
-				}
-				else_if = {
-					limit = {
-						transdanubia_area = {
-							type = all
-							culture = austrian
-							country_or_non_sovereign_subject_holds = ROOT
-						}
-						alfold_area = {
-							type = all
-							culture = austrian
-							country_or_non_sovereign_subject_holds = ROOT
-						}
-					}
-					add_country_modifier = {
-						name = austrian_path1
-						duration = -1
-					}
+			else = {
+				add_country_modifier = {
+					name = hungarian_grain
+                    duration = 9125
 				}
 			}
 		}
 	}
 
-	transylvanian_trouble = {
+	transylvanian_land_expansion = {
 		icon = mission_build_up_to_force_limit
 		position = 8
-		required_missions = { hungarian_headache }
+		required_missions = { hungarian_crown_development }
 		trigger = {
-			OR = {
-				custom_trigger_tooltip = {
-					tooltip = hab_tran_accept
-					AND = {
-						transylvania_area = {
-							type = all
-							has_owner_accepted_culture = yes
-							NOT = { culture = austrian }
-							country_or_non_sovereign_subject_holds = ROOT
-						}
-						southern_transylvania_area = {
-							type = all
-							has_owner_accepted_culture = yes
-							NOT = { culture = austrian }
-							country_or_non_sovereign_subject_holds = ROOT
-						}
+				AND = {
+					transylvania_area = {
+						type = all
+						development = 10
+						country_or_non_sovereign_subject_holds = ROOT
+					}
+					southern_transylvania_area = {
+						type = all
+						development = 10
+						country_or_non_sovereign_subject_holds = ROOT
 					}
 				}
-				custom_trigger_tooltip = {
-					tooltip = hab_tran_convert
-					AND = {
-						transylvania_area = {
-							type = all
-							culture = austrian
-							country_or_non_sovereign_subject_holds = ROOT
-						}
-						southern_transylvania_area = {
-							type = all
-							culture = austrian
-							country_or_non_sovereign_subject_holds = ROOT
-						}
-					}
-				}
+		}
+		effect = {
+            effect = {
+                if = {
+                    limit = {
+                        AND = {
+                            transylvania_area = {
+                                owned_by_subject_of = HAB
+                            }
+                            southern_transylvania_area = {
+                                owned_by_subject_of = HAB
+                            }
+                        }
+                    }
+                    add_country_modifier = {
+                        name = subject_soldiers
+                        duration = -1
+                    }
+                }
+                else = {
+                    add_country_modifier = {
+                        name = transylvanian_tolerance
+                        duration = 9125
+                    }
+                }
+            }
+			#subject monument upgraded but owned to get religious tolerance bonuses
+		}
+	}
+
+	slovak_development = {
+		icon = mission_build_up_to_force_limit
+		position = 9
+		required_missions = { transylvanian_land_expansion }
+		trigger = {
+			slovakia_area = {
+				type = all
+				development = 10
+				country_or_non_sovereign_subject_holds = ROOT		
 			}
 		}
 		effect = {
-			if = {
-				limit = {
-					has_country_modifier = acceptance_path4
-					transylvania_area = {
-						type = all
-						has_owner_accepted_culture = yes
-						NOT = { culture = austrian }
-						country_or_non_sovereign_subject_holds = ROOT
-					}
-					southern_transylvania_area = {
-						type = all
-						has_owner_accepted_culture = yes
-						NOT = { culture = austrian }
-						country_or_non_sovereign_subject_holds = ROOT
-					}
-				}	
-				custom_tooltip = hab_more_acceptance
-					tooltip = {
-					add_country_modifier = {
-						name = acceptance_path5
-						duration = -1
-					}
-				}
+            if = {
+                limit = {
+                    HUN = { is_subject_of = ROOT }
+                    BOH = { is_subject_of = ROOT }
+                }
+                create_subject = {
+                    subject_type = auh_integrated_union
+                    subject = HUN
+                }
+                create_subject = {
+                    subject_type = auh_integrated_union
+                    subject = BOH
+                }
+				HUN = { change_country_color = { country = HAB } }
+				BOH = { change_country_color = { country = HAB } }
+            }
+            else = {
+                #upgrade great project by one
+                add_country_modifier = {
+                    name = kreminca_mint
+                    duration = 9125
+                }
+            }
+			set_country_flag = austrian_hungary_formable
+		}
+	}
+}
+
+WoC_austria_5_austrian_empire = {
+	slot = 5
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential_on_load = {
+		has_dlc = "Winds of Change"
+	}
+	potential = { 
+		has_dlc = "Winds of Change"
+		tag = HAB
+		has_country_flag = hab_funnymoustache_branch
+	}
+
+	czech_correction = {
+		icon = mission_build_up_to_force_limit
+		position = 5
+		required_missions = { direction_of_our_country }
+		trigger = {
+			bohemia_area = {
+				type = all
+				culture = austrian
+				country_or_non_sovereign_subject_holds = ROOT
 			}
-			else_if = {
-				limit = {
-					has_country_modifier = acceptance_path3
-					transylvania_area = {
-						type = all
-						has_owner_accepted_culture = yes
-						NOT = { culture = austrian }
-						country_or_non_sovereign_subject_holds = ROOT
-					}
-					southern_transylvania_area = {
-						has_owner_accepted_culture = yes
-						NOT = { culture = austrian }
-						country_or_non_sovereign_subject_holds = ROOT
-					}
-				}	
-				custom_tooltip = hab_more_acceptance
-					tooltip = {
-					add_country_modifier = {
-						name = acceptance_path4
-						duration = -1
-					}
-				}
+			erzgebirge_area = {
+				type = all
+				culture = austrian
+				country_or_non_sovereign_subject_holds = ROOT
 			}
-			else_if = {
-				limit = {
-					has_country_modifier = acceptance_path3
-					owns_core_province = 1951
-					transylvania_area = {
-						type = all
-						has_owner_accepted_culture = yes
-						NOT = { culture = austrian }
-						country_or_non_sovereign_subject_holds = ROOT
-					}
-					southern_transylvania_area = {
-						type = all
-						has_owner_accepted_culture = yes
-						NOT = { culture = austrian }
-						country_or_non_sovereign_subject_holds = ROOT
-					}
-				}	
-				custom_tooltip = hab_more_acceptance
-					tooltip = {
-					add_country_modifier = {						
-						name = acceptance_path4
-						duration = -1
-					}
-				}
+			moravia_area = {
+				type = all
+				culture = austrian
+				country_or_non_sovereign_subject_holds = ROOT
 			}
-			else_if = {
-				limit = {
-					has_country_modifier = acceptance_path1
-					transylvania_area = {
-						type = all
-						has_owner_accepted_culture = yes
-						NOT = { culture = austrian }
-						country_or_non_sovereign_subject_holds = ROOT
-					}	
-					southern_transylvania_area = {
-						type = all
-						has_owner_accepted_culture = yes
-						NOT = { culture = austrian }
-						country_or_non_sovereign_subject_holds = ROOT						
-					}
-				}	
-				custom_tooltip = hab_more_acceptance
-					tooltip = {
-					add_country_modifier = {
-						name = acceptance_path2
-						duration = -1
-					}
-				}
-			}
-			else_if = {
-				limit = {
-					transylvania_area = {
-						type = all
-						has_owner_accepted_culture = yes
-						NOT = { culture = austrian }
-						country_or_non_sovereign_subject_holds = ROOT	
-					}
-					southern_transylvania_area = {
-						type = all
-						has_owner_accepted_culture = yes
-						NOT = { culture = austrian }
-						country_or_non_sovereign_subject_holds = ROOT	
-					}
-				}
-				custom_tooltip = hab_cultural_acceptance
-					tooltip = {
-					add_country_modifier =  {
-						name = acceptance_path1
-						duration = -1
-					}
-				}
-			}
-			else_if = {
-				limit = {
-					has_country_modifier = austrian_path4
-					transylvania_area = {
-						type = all
-						culture = austrian
-						country_or_non_sovereign_subject_holds = ROOT	
-					}
-					southern_transylvania_area = {
-						type = all
-						culture = austrian
-						country_or_non_sovereign_subject_holds = ROOT	
-					}
-				}
-				custom_tooltip = hab_more_removal
-					tooltip = {
-					add_country_modifier = {
-						name = austrian_path5
-						duration = -1
-					}
-				}
-			}
-			else_if = {
-				limit = {
-					has_country_modifier = austrian_path1
-					transylvania_area = {
-						type = all
-						culture = austrian
-						country_or_non_sovereign_subject_holds = ROOT	
-					}
-					southern_transylvania_area = {
-						type = all
-						culture = austrian
-						country_or_non_sovereign_subject_holds = ROOT	
-					}
-				}
-				custom_tooltip = hab_more_removal
-					tooltip = {
-					add_country_modifier = {
-						name = austrian_path2
-						duration = -1
-					}
-				}
-			}
-			else_if = {
-				limit = {
-					has_country_modifier = austrian_path3
-					transylvania_area = {
-						type = all
-						culture = austrian
-						country_or_non_sovereign_subject_holds = ROOT	
-					}
-					southern_transylvania_area = {
-						type = all
-						culture = austrian
-						country_or_non_sovereign_subject_holds = ROOT	
-					}
-				}
-				custom_tooltip = hab_more_removal
-					tooltip = {
-					add_country_modifier = {
-						name = austrian_path4
-						duration = -1
-					}
-				}
-			}
-			else_if = {
-				limit = {
-					transylvania_area = {
-						type = all
-						culture = austrian
-						country_or_non_sovereign_subject_holds = ROOT	
-					}
-					southern_transylvania_area = {
-						type = all
-						culture = austrian
-						country_or_non_sovereign_subject_holds = ROOT	
-					}
-				}
-				custom_tooltip = hab_cultural_removal
-					tooltip = {
-					add_country_modifier = {
-						name = austrian_path1
-						duration = -1
-					}
-				}
-			}
-		hidden_effect = {
-				if = {
-					limit = {
-						has_country_modifier = acceptance_path4
-						transylvania_area = {
-							type = all
-							has_owner_accepted_culture = yes
-							NOT = { culture = austrian }
-							country_or_non_sovereign_subject_holds = ROOT
-						}
-						southern_transylvania_area = {
-							type = all
-							has_owner_accepted_culture = yes
-							NOT = { culture = austrian }
-							country_or_non_sovereign_subject_holds = ROOT
-						}
-					}	
-					remove_country_modifier = acceptance_path4
-					add_country_modifier = {
-						name = acceptance_path5
-						duration = -1
-					}
-				}
-				else_if = {
-					limit = {
-						has_country_modifier = acceptance_path3
-						transylvania_area = {
-							type = all
-							has_owner_accepted_culture = yes
-							NOT = { culture = austrian }
-							country_or_non_sovereign_subject_holds = ROOT
-						}
-						southern_transylvania_area = {
-							has_owner_accepted_culture = yes
-							NOT = { culture = austrian }
-							country_or_non_sovereign_subject_holds = ROOT
-						}
-					}	
-					remove_country_modifier = acceptance_path3
-					add_country_modifier = {
-						name = acceptance_path4
-						duration = -1
-					}
-				}
-				else_if = {
-					limit = {
-						has_country_modifier = acceptance_path3
-						owns_core_province = 1951
-						transylvania_area = {
-							type = all
-							has_owner_accepted_culture = yes
-							NOT = { culture = austrian }
-							country_or_non_sovereign_subject_holds = ROOT
-						}
-						southern_transylvania_area = {
-							type = all
-							has_owner_accepted_culture = yes
-							NOT = { culture = austrian }
-							country_or_non_sovereign_subject_holds = ROOT
-						}
-					}	
-					remove_country_modifier = acceptance_path3
-					add_country_modifier = {						
-						name = acceptance_path4
-						duration = -1
-					}
-				}
-				else_if = {
-					limit = {
-						has_country_modifier = acceptance_path1
-						transylvania_area = {
-							type = all
-							has_owner_accepted_culture = yes
-							NOT = { culture = austrian }
-							country_or_non_sovereign_subject_holds = ROOT
-						}	
-						southern_transylvania_area = {
-							type = all
-							has_owner_accepted_culture = yes
-							NOT = { culture = austrian }
-							country_or_non_sovereign_subject_holds = ROOT						
-						}
-					}	
-					remove_country_modifier = acceptance_path1
-					add_country_modifier = {
-						name = acceptance_path2
-							duration = -1
-					}
-				}
-				else_if = {
-					limit = {
-						transylvania_area = {
-							type = all
-							has_owner_accepted_culture = yes
-							NOT = { culture = austrian }
-							country_or_non_sovereign_subject_holds = ROOT	
-						}
-						southern_transylvania_area = {
-							type = all
-							has_owner_accepted_culture = yes
-							NOT = { culture = austrian }
-							country_or_non_sovereign_subject_holds = ROOT	
-						}
-					}	
-					add_country_modifier =  {
-						name = acceptance_path1
-						duration = -1
-					}
-				}
-				else_if = {
-					limit = {
-						has_country_modifier = austrian_path4
-						transylvania_area = {
-							type = all
-							culture = austrian
-							country_or_non_sovereign_subject_holds = ROOT	
-						}
-						southern_transylvania_area = {
-							type = all
-							culture = austrian
-							country_or_non_sovereign_subject_holds = ROOT	
-						}
-					}
-					remove_country_modifier = austrian_path4
-					add_country_modifier = {
-						name = austrian_path5
-						duration = -1
-					}
-				}
-				else_if = {
-					limit = {
-						has_country_modifier = austrian_path1
-						transylvania_area = {
-							type = all
-							culture = austrian
-							country_or_non_sovereign_subject_holds = ROOT	
-						}
-						southern_transylvania_area = {
-							type = all
-							culture = austrian
-							country_or_non_sovereign_subject_holds = ROOT	
-						}
-					}
-					remove_country_modifier = austrian_path1
-					add_country_modifier = {
-						name = austrian_path2
-						duration = -1
-					}
-				}
-				else_if = {
-					limit = {
-						has_country_modifier = austrian_path3
-						transylvania_area = {
-							type = all
-							culture = austrian
-							country_or_non_sovereign_subject_holds = ROOT	
-						}
-						southern_transylvania_area = {
-							type = all
-							culture = austrian
-							country_or_non_sovereign_subject_holds = ROOT	
-						}
-					}
-					remove_country_modifier = austrian_path3
-					add_country_modifier = {
-						name = austrian_path4
-						duration = -1
-					}
-				}
-				else_if = {
-					limit = {
-						transylvania_area = {
-							type = all
-							culture = austrian
-							country_or_non_sovereign_subject_holds = ROOT	
-						}
-						southern_transylvania_area = {
-							type = all
-							culture = austrian
-							country_or_non_sovereign_subject_holds = ROOT	
-						}
-					}
-					add_country_modifier = {
-						name = austrian_path1
-						duration = -1
-					}
-				}
+		}
+		effect = {
+			add_country_modifier = {
+				name = austrian_path1
+				duration = -1
 			}
 		}
 	}
-	slovak_situation = {
+
+	croatian_cleansing = {
 		icon = mission_build_up_to_force_limit
-		position = 9
-		required_missions = { transylvanian_trouble }
+		position = 6
+		required_missions = { czech_correction }
 		trigger = {
-			OR = {
-				custom_trigger_tooltip = {
-					tooltip = hab_slov_accept
-					slovakia_area = {
-						type = all
-						has_owner_accepted_culture = yes
-						NOT = { culture = austrian }
-						country_or_non_sovereign_subject_holds = ROOT		
-					}
+			AND = {
+				croatia_area = {
+					type = all
+					culture = austrian
+					country_or_non_sovereign_subject_holds = ROOT
 				}
-				custom_trigger_tooltip = {
-					tooltip = hab_slov_convert
-					slovakia_area = {
-						type = all
-						culture = austrian
-						country_or_non_sovereign_subject_holds = ROOT	
-					}
+				slavonia_area = {
+					type = all
+					culture = austrian
+					country_or_non_sovereign_subject_holds = ROOT
 				}
 			}
 		}
 		effect = {
-			if = {
-				limit = {
-					has_country_modifier = acceptance_path5
-					slovakia_area = {
-						type = all
-						has_owner_accepted_culture = yes
-						NOT = { culture = austrian }
-						country_or_non_sovereign_subject_holds = ROOT
-					}
+			remove_country_modifier = austrian_path1
+			add_country_modifier = {
+				name = austrian_path2
+				duration = -1
+			}
+		}
+	}
+
+	hungarian_handling = {
+		icon = mission_build_up_to_force_limit
+		position = 7
+		required_missions = { croatian_cleansing }
+		trigger = {
+			AND = {
+				transdanubia_area = {
+					type = all
+					culture = austrian
+					country_or_non_sovereign_subject_holds = ROOT
 				}
-				custom_tooltip = hab_more_acceptance_transdan
-					tooltip = {
-					add_country_modifier = {
-						name = acceptance_path6
-						duration = -1
-					}
+				alfold_area = {
+					type = all
+					culture = austrian
+					country_or_non_sovereign_subject_holds = ROOT
 				}
 			}
-			else_if = {
-				limit = {
-					has_country_modifier = acceptance_path4
-					slovakia_area = {
-						type = all
-						has_owner_accepted_culture = yes
-						NOT = { culture = austrian }
-						country_or_non_sovereign_subject_holds = ROOT
-					}
+		}
+		effect = {
+			remove_country_modifier = austrian_path2
+			add_country_modifier = {
+				name = austrian_path3
+				duration = -1
+			}
+		}
+	}
+
+	transylvanian_termination = {
+		icon = mission_build_up_to_force_limit
+		position = 8
+		required_missions = { hungarian_handling }
+		trigger = {
+			AND = {
+				transylvania_area = {
+					type = all
+					culture = austrian
+					country_or_non_sovereign_subject_holds = ROOT
 				}
-				custom_tooltip = hab_more_acceptance_austriaH
-					tooltip = {
-					add_country_modifier = {
-						name = acceptance_path4
-						duration = -1
-					}
+				southern_transylvania_area = {
+					type = all
+					culture = austrian
+					country_or_non_sovereign_subject_holds = ROOT
 				}
 			}
-			else_if = {
-				limit = {
-					has_country_modifier = acceptance_path3
-					slovakia_area = {
-						type = all
-						has_owner_accepted_culture = yes
-						NOT = { culture = austrian }
-						country_or_non_sovereign_subject_holds = ROOT
-					}
+		}
+		effect = {
+			remove_country_modifier = austrian_path3
+			add_country_modifier = {
+				name = austrian_path4
+				duration = -1
+			}
+		}
+	}
+
+	slovak_solution = {
+		icon = mission_build_up_to_force_limit
+		position = 9
+		required_missions = { transylvanian_termination }
+		trigger = {
+			slovakia_area = {
+				type = all
+				culture = austrian
+				country_or_non_sovereign_subject_holds = ROOT	
+			}
+		}
+		effect = {
+			remove_country_modifier = austrian_path4
+			add_country_modifier = {
+				name = austrian_path5
+				duration = -1
+			}
+			set_country_flag = austrian_empire_formable
+		}
+	}
+}
+
+WoC_austria_5_transdanubian = {
+	slot = 5
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential_on_load = {
+		has_dlc = "Winds of Change"
+	}
+	potential = { 
+		has_dlc = "Winds of Change"
+		tag = HAB
+		has_country_flag = hab_multiculturalism_branch
+	}
+
+	czech_companionship = {
+		icon = mission_build_up_to_force_limit
+		position = 5
+		required_missions = { direction_of_our_country }
+		trigger = {
+			bohemia_area = {
+				type = all
+				has_owner_accepted_culture = yes
+				NOT = { culture = austrian }
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			erzgebirge_area = {
+				type = all
+				has_owner_accepted_culture = yes
+				NOT = { culture = austrian }
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			moravia_area = {
+				type = all
+				has_owner_accepted_culture = yes
+				NOT = { culture = austrian }
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = acceptance_path1
+				duration = -1
+			}
+		}
+	}
+
+	croatian_camraderie = {
+		icon = mission_build_up_to_force_limit
+		position = 6
+		required_missions = { czech_companionship }
+		trigger = {
+			AND = {
+				croatia_area = {
+					type = all
+					has_owner_accepted_culture = yes
+					NOT = { culture = austrian }
+					country_or_non_sovereign_subject_holds = ROOT
 				}
-				custom_tooltip = hab_more_acceptance_austriaH
-					tooltip = {
-					add_country_modifier = {
-						name = acceptance_path4
-						duration = -1
-					}
+				slavonia_area = {
+					type = all
+					has_owner_accepted_culture = yes
+					NOT = { culture = austrian }
+					country_or_non_sovereign_subject_holds = ROOT
 				}
 			}
-			else_if = {
-				limit = {
-					has_country_modifier = acceptance_path2
-					slovakia_area = {
-						type = all
-						has_owner_accepted_culture = yes
-						NOT = { culture = austrian }
-						country_or_non_sovereign_subject_holds = ROOT
-					}
+		}
+		effect = {
+			remove_country_modifier = acceptance_path1
+			add_country_modifier = {
+				name = acceptance_path2
+				duration = -1
+			}
+		}
+	}
+
+	hungarian_help = {
+		icon = mission_build_up_to_force_limit
+		position = 7
+		required_missions = { croatian_camraderie }
+		trigger = {
+			AND = {
+				transdanubia_area = {
+					type = all
+					has_owner_accepted_culture = yes
+					NOT = { culture = austrian }
+					country_or_non_sovereign_subject_holds = ROOT
 				}
-				custom_tooltip = hab_more_acceptance_austriaH
-					tooltip = {
-					add_country_modifier =  {
-						name = acceptance_path3
-						duration = -1
-					}
+				alfold_area = {
+					type = all
+					has_owner_accepted_culture = yes
+					NOT = { culture = austrian }
+					country_or_non_sovereign_subject_holds = ROOT
 				}
 			}
-			else_if = {
-				limit = {
-					has_country_modifier = acceptance_path1
-					slovakia_area = {
-						has_owner_accepted_culture = yes
-						NOT = { culture = austrian }
-						country_or_non_sovereign_subject_holds = ROOT
-					}
+		}
+		effect = {
+			remove_country_modifier = acceptance_path2
+			add_country_modifier = {
+				name = acceptance_path3
+				duration = -1
+			}
+		}
+	}
+	transylvanian_teams = {
+		icon = mission_build_up_to_force_limit
+		position = 8
+		required_missions = { hungarian_help }
+		trigger = {
+			AND = {
+				transylvania_area = {
+					type = all
+					has_owner_accepted_culture = yes
+					NOT = { culture = austrian }
+					country_or_non_sovereign_subject_holds = ROOT
 				}
-				custom_tooltip = hab_more_acceptance_austriaH
-					tooltip = {
-					add_country_modifier =  {
-						name = acceptance_path2
-						duration = -1
-					}
+				southern_transylvania_area = {
+					type = all
+					has_owner_accepted_culture = yes
+					NOT = { culture = austrian }
+					country_or_non_sovereign_subject_holds = ROOT
 				}
 			}
-			else_if = {
-				limit = {
-					has_country_modifier = austrian_path1
-					slovakia_area = {
-						type = all
-						culture = austrian
-						country_or_non_sovereign_subject_holds = ROOT
-					}
-				}
-				custom_tooltip = hab_more_removal_austriaH
-					tooltip = {
-					add_country_modifier = {
-						name = austrian_path2
-						duration = -1	
-					}
-				}
+		}
+		effect = {
+			remove_country_modifier = acceptance_path3
+			add_country_modifier = {
+				name = acceptance_path4
+				duration = -1
 			}
-			else_if = {
-				limit = {
-					has_country_modifier = austrian_path2
-					slovakia_area = {
-						type = all
-						culture = austrian
-						country_or_non_sovereign_subject_holds = ROOT
-					}
-				}
-				custom_tooltip = hab_more_removal_austriaH
-					tooltip = {
-					add_country_modifier = {
-						name = austrian_path3
-						duration = -1	
-					}
-				}
+		}
+	}
+	slovak_services = {
+		icon = mission_build_up_to_force_limit
+		position = 9
+		required_missions = { transylvanian_teams }
+		trigger = {
+			slovakia_area = {
+				type = all
+				has_owner_accepted_culture = yes
+				NOT = { culture = austrian }
+				country_or_non_sovereign_subject_holds = ROOT		
 			}
-			else_if = {
-				limit = {
-					has_country_modifier = austrian_path3
-					slovakia_area = {
-						type = all
-						culture = austrian
-						country_or_non_sovereign_subject_holds = ROOT
-					}
-				}
-				custom_tooltip = hab_more_removal_austriaH
-					tooltip = {
-					add_country_modifier = {
-						name = austrian_path4
-						duration = -1	
-					}
-				}
+		}
+		effect = {
+			remove_country_modifier = acceptance_path4
+			add_country_modifier = {
+				name = acceptance_path5
+				duration = -1
 			}
-			else_if = {
-				limit = {
-					has_country_modifier = austrian_path5
-					slovakia_area = {
-						type = all
-						culture = austrian
-						country_or_non_sovereign_subject_holds = ROOT
-					}
-				}
-				custom_tooltip = hab_more_removal_austriaE
-					tooltip = {
-					add_country_modifier = {
-						name = austrian_path6
-						duration = -1				
-					}
-				}
-			}
-			hidden_effect = {
-				if = {
-					limit = {
-						has_country_modifier = acceptance_path5
-						slovakia_area = {
-							type = all
-							has_owner_accepted_culture = yes
-							NOT = { culture = austrian }
-							country_or_non_sovereign_subject_holds = ROOT
-						}
-					}
-					remove_country_modifier = acceptance_path5
-					add_country_modifier = {
-						name = acceptance_path6
-						duration = -1
-					}
-					set_country_flag = transdanubia_formable
-				}
-				else_if = {
-					limit = {
-						has_country_modifier = acceptance_path4
-						slovakia_area = {
-							type = all
-							has_owner_accepted_culture = yes
-							NOT = { culture = austrian }
-							country_or_non_sovereign_subject_holds = ROOT
-						}
-					}
-					remove_country_modifier = acceptance_path5
-					add_country_modifier = {
-						name = acceptance_path4
-						duration = -1
-					}
-					set_country_flag = austrian_hungary_formable
-				}
-				else_if = {
-					limit = {
-						has_country_modifier = acceptance_path3
-						slovakia_area = {
-							type = all
-							has_owner_accepted_culture = yes
-							NOT = { culture = austrian }
-							country_or_non_sovereign_subject_holds = ROOT
-						}
-					}
-					remove_country_modifier = acceptance_path3
-					add_country_modifier = {
-						name = acceptance_path4
-						duration = -1
-					}
-					set_country_flag = austrian_hungary_formable
-				}
-				else_if = {
-					limit = {
-						has_country_modifier = acceptance_path2
-						slovakia_area = {
-							type = all
-							has_owner_accepted_culture = yes
-							NOT = { culture = austrian }
-							country_or_non_sovereign_subject_holds = ROOT
-						}
-					}
-					remove_country_modifier = acceptance_path2
-					add_country_modifier =  {
-						name = acceptance_path3
-						duration = -1
-					}
-					set_country_flag = austrian_hungary_formable
-				}
-				else_if = {
-					limit = {
-						has_country_modifier = acceptance_path1
-						slovakia_area = {
-							has_owner_accepted_culture = yes
-							NOT = { culture = austrian }
-							country_or_non_sovereign_subject_holds = ROOT
-						}
-					}
-					remove_country_modifier = acceptance_path1
-					add_country_modifier =  {
-						name = acceptance_path2
-						duration = -1
-					}
-					set_country_flag = austrian_hungary_formable
-				}
-				else_if = {
-					limit = {
-						has_country_modifier = austrian_path1
-						slovakia_area = {
-							type = all
-							culture = austrian
-							country_or_non_sovereign_subject_holds = ROOT
-						}
-					}
-					remove_country_modifier = austrian_path1
-					add_country_modifier = {
-						name = austrian_path2
-						duration = -1	
-					}
-					set_country_flag = austrian_hungary_formable
-				}
-				else_if = {
-					limit = {
-						has_country_modifier = austrian_path2
-						slovakia_area = {
-							type = all
-							culture = austrian
-							country_or_non_sovereign_subject_holds = ROOT
-						}
-					}
-					remove_country_modifier = austrian_path2
-					add_country_modifier = {
-						name = austrian_path3
-						duration = -1	
-					}
-					set_country_flag = austrian_hungary_formable
-				}
-				else_if = {
-					limit = {
-						has_country_modifier = austrian_path3
-						slovakia_area = {
-							type = all
-							culture = austrian
-							country_or_non_sovereign_subject_holds = ROOT
-						}
-					}
-					remove_country_modifier = austrian_path3
-					add_country_modifier = {
-						name = austrian_path4
-						duration = -1	
-					}
-					set_country_flag = austrian_hungary_formable
-				}
-				else_if = {
-					limit = {
-						has_country_modifier = austrian_path5
-						slovakia_area = {
-							type = all
-							culture = austrian
-							country_or_non_sovereign_subject_holds = ROOT
-						}
-					}
-					remove_country_modifier = austrian_path5
-					add_country_modifier = {
-						name = austrian_path6
-						duration = -1				
-					}
-					set_country_flag = austrian_empire_formable
-				}
-				else = {
-					set_country_flag = austrian_empire_formable
-					set_country_flag = transdanubia_formable
-					set_country_flag = austrian_hungary_formable
-				}			
-			}
+			set_country_flag = transdanubia_formable
 		}
 	}
 }
