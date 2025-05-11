@@ -90,11 +90,11 @@ nap_galley_fleet = {
 	naval_forcelimit_modifier = 0.10
 }
 italy_divided = {
-	legitimacy = -0.90
-	republican_tradition = -0.33
-	prestige = -0.90
+	legitimacy = -1.0
+	republican_tradition = -0.20
+	prestige = -1.0
 	global_unrest = 1.0
-	monthly_reform_progress = -0.20
+	monthly_reform_progress = -0.10
 }
 ragusa_renovated = { 
 	local_center_of_trade_upgrade_cost = -0.33	
