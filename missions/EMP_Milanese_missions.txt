@@ -1361,41 +1361,45 @@ emp_mlo_economy_branch = {
 			}
 		}
 	}
-	emp_mlo_peace = {
+	emp_mlo_italian_riches = {
 		icon = italian_riches
-		position = 3
+		position = 3	
 		required_missions = { emp_mlo_develop_po_valley }
 		trigger = {
 			share_of_starting_income = 5
-			treasury = 1000
+			treasury = 500
 			num_of_owned_provinces_with = {
-				value = 5
-				has_manufactory_trigger = yes
+				value = 10
+				has_building = workshop
 			}
 		}
 		effect = {
-			custom_tooltip = emp_mlo_italian_riches_effect_tooltip
-			hidden_effect = {
-				every_owned_province = {
-					limit = {
-						culture = lombard
-						NOT = { nationalism = 1 }
-					}
-					random_list = {
-						1 = { add_base_tax = 1 }
-						1 = { add_base_production = 1 }
-						1 = { add_base_manpower = 1 }
-					}
+			lombardy_area = {
+				limit = {
+					owned_by = root
+				}
+				add_province_modifier = {
+					name = "mlo_lombard_productivity"
+					duration = -1
+				}
+			}
+			po_valley_area = {
+				limit = {
+					owned_by = root
+				}
+				add_province_modifier = {
+					name = "mlo_lombard_productivity"
+					duration = -1
 				}
 			}
 		}
 	}
-	emp_mlo_italian_riches = {
+	emp_mlo_peace = {
 		icon = italian_riches
-		position = 4	
-		required_missions = { emp_mlo_peace }
+		position = 4
+		required_missions = { emp_mlo_italian_riches }
 		trigger = {
-			share_of_starting_income = 5
+			share_of_starting_income = 8
 			treasury = 1000
 			num_of_owned_provinces_with = {
 				value = 5
