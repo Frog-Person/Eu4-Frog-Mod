@@ -518,6 +518,13 @@
  we_rule_the_seas: "Rule the Seas"
  genonese_merchants: "Genonese Merchants"
  mlo_florence_university: "University of Florence"
+
+ mlo_capital_of_europe: "Capital of Europe"
+ mlo_trade_fleet: "Trade Fleet"
+ mlo_pride_of_the_fleet: "Pride of the Fleet"
+ mlo_swiss_attrition: "Swiss Bulwark"
+ mlo_perm_swiss_mercs: "Permanent Swiss mercenaries"
+ mlo_lombard_productivity: "Lombard Productivity"
  
  #Italian Event Options
  nap_civil_war.1.A: "We are the chosen ones!"
