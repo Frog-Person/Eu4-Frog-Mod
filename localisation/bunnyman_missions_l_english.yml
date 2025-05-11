@@ -465,7 +465,7 @@
  nap_civil_war.1.name: "The Quest for Italian Unification"
  nap_civil_war.1.desc: "Divided, Italy is weak and the plaything of French and Austrian Kings. We must unify without delay, to stand strong against our enemies. Our aggressive quest for Italian Unification may destablise the realm and anger our neighbours, but we must seek it nonetheless."
  nap_civil_war.2.name: "Italy divided"
- nap_civil_war.2.desc: "Italy is divided whilst our neighbours laugh."
+ nap_civil_war.2.desc: "Your nation will suffer from consistent negative modifiers until you form the nation of Italy"
  nap_civil_war.3.name: "Italy is united!"
  nap_civil_war.3.desc: "The world with no longer laugh at the divided Italians, rather they will feel the wrath of our new found strength!"
  
@@ -525,9 +525,11 @@
  mlo_swiss_attrition: "Swiss Bulwark"
  mlo_perm_swiss_mercs: "Permanent Swiss mercenaries"
  mlo_lombard_productivity: "Lombard Productivity"
+ italy_divided: "Italy Divided"
  
  #Italian Event Options
  nap_civil_war.1.A: "We are the chosen ones!"
+ nap_civil_war.2.A: "Divided we are weak"
  
  #Morocco Missions
  MOR_expand_fez_title: "Expand Fez"
