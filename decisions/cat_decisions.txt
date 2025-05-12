@@ -1,0 +1,119 @@
+country_decisions = {
+	recruit_great_commander = {
+		color = { 166  0  166 }
+		potential = {
+			ai = no
+       }
+		allow = {
+			mil_power = 400
+			ai = no
+			is_at_war = yes
+			all_war_enemy_countries = { offensive_war_with = PREV }
+		}
+		effect = {
+			country_event = {
+				id = cat.1
+			}
+		}
+	}
+	
+	cat_recruit_administrative_advisor = {
+		color = { 166  0  0 }
+		potential = {
+			ai = no
+       }
+		allow = {
+			adm_power = 25
+			ai = no
+		}
+		effect = {
+			country_event = {
+				id = cat.2
+			}
+		}
+	}
+	
+	cat_recruit_diplomatic_advisor = {
+		color = { 166  0  0 }
+		potential = {
+			ai = no
+       }
+		allow = {
+			dip_power = 25
+			ai = no
+		}
+		effect = {
+			country_event = {
+				id = cat.3
+			}
+		}
+	}
+	
+	echo_recruit_military_advisor = {
+		color = { 166  0  0 }
+		potential = {
+			ai = no
+       }
+		allow = {
+			mil_power = 25
+			ai = no
+		}
+		effect = {
+			country_event = {
+				id = echo.1
+			}
+		}
+	}
+	
+	cat_hide_merc_nonsense = {
+		color = { 0  166  166 }
+		potential = {
+			ai = no
+			check_variable = {
+				which = cat_merc_nonsense
+				value = 1
+			}
+		}
+		allow = {
+			ai = no
+		}
+		effect = {
+			change_variable = {
+				which = cat_merc_nonsense
+				value = -1
+				#hidden = yes
+			}
+		}
+	
+	}
+	
+	cat_show_merc_nonsense = {
+		color = { 0  166  166 }
+		potential = {
+			ai = no
+			check_variable = {
+				which = cat_merc_nonsense
+				value = 0
+			}
+			NOT = {
+				check_variable = {
+					which = cat_merc_nonsense
+					value = 1
+				}
+			}
+		}
+		allow = {
+			ai = no
+		}
+		effect = {
+			change_variable = {
+				which = cat_merc_nonsense
+				value = 1
+				#hidden = yes
+			}
+		}
+	
+	}
+	
+}
+	

@@ -44,39 +44,30 @@ country_decisions = {
 				always = yes
 			}
 			effect = {
-				add_years_of_income = -0.1
-				create_explorer = { tradition = 10 }
+				add_years_of_income = -0.2
 				add_country_modifier = {
 				name = "hired_explorer"
 				duration = 1825
-				hidden = yes
+				hidden = no
 				}
 			}
 		}	
-		
-	sm_hire_conquistador = {
-		color = { 166  0  0 }
-		potential = {
-				is_bankrupt = no
-				ai = no
-				NOT = { has_country_modifier = hired_conquistador }
-			}
-			allow = {
-				always = yes
-			}
-			effect = {
-				add_years_of_income = -0.2
-				create_conquistador = { tradition = 10 }
-				add_country_modifier = {
-				name = "hired_conquistador"
-				duration = 1825
-				hidden = yes
-				}
-			}	
-		}
 	free_colonist = {
 		color = { 166  0  0 }
 		potential = {
+				OR = {
+					tag = POR
+					tag = CAS
+					tag = SPA
+					tag = GBR
+					tag = ENG
+					tag = FRA
+					tag = ADU
+					tag = SCO
+					tag = HOL
+					tag = NED
+					tag = LUS
+				}
 				NOT = {
 					capital_scope = {
 						continent = north_america
@@ -121,6 +112,20 @@ country_decisions = {
 		color = { 166  0  0 }
 		potential = {
 				NOT = {
+					OR = {
+						tag = POR
+						tag = CAS
+						tag = SPA
+						tag = GBR
+						tag = ENG
+						tag = FRA
+						tag = ADU
+						tag = SCO
+						tag = HOL
+						tag = NED
+					}
+				}
+				NOT = {
 					capital_scope = {
 						continent = north_america
 					}
@@ -162,7 +167,7 @@ country_decisions = {
 		}
 	}	
 	echo_critical_events = {
-		color = { 166  0  0 }
+		color = { 166  0  166 }
 		potential = {
 			ai = no
 		}
@@ -190,58 +195,44 @@ country_decisions = {
 		effect = {
 		}
 	}
-	echo_recruit_military_advisor = {
-		color = { 166  0  0 }
-		potential = {
-			ai = no
-       }
-		allow = {
-			adm_power = 25
-			ai = no
-		}
-		effect = {
-			country_event = {
-				id = echo.1
-			}
-		}
-	}
-	Create_a_Trade_Hub = {
-		color = { 166  0  0 }
-		potential = {
-			ai = no
-			has_dlc = "Dharma"
-		}
-		
-		allow = {
-			is_at_war = no
-			any_owned_province = {
-					area_for_scope_province = {
-								type = all
-								NOT = {
-									province_has_center_of_trade_of_level = 1
-								}
-					}
-					development = 30
-					OR = {
-						has_building = marketplace
-						has_building = trade_depot
-						has_building = stock_exchange
-					}
-					NOT = {
-						province_has_center_of_trade_of_level = 1
-					}
-				
-			}
-			NOT = { has_country_modifier = trade_hub_created }
-			treasury = 200
-			dip_power = 50
-		}
-		
-		effect = {
-			country_event = { id = echo.4 }
-		}
-		
-	}
+# No longer needed, moved functionality to a building
+#	Create_a_Trade_Hub = {
+#		color = { 166  0  0 }
+#		potential = {
+#			ai = no
+#			has_dlc = "Dharma"
+#		}
+#		
+#		allow = {
+#			is_at_war = no
+#			any_owned_province = {
+#					area_for_scope_province = {
+#								type = all
+#								NOT = {
+#									province_has_center_of_trade_of_level = 1
+#								}
+#					}
+#					development = 30
+#					OR = {
+#						has_building = marketplace
+#						has_building = trade_depot
+#						has_building = stock_exchange
+#					}
+#					NOT = {
+#						province_has_center_of_trade_of_level = 1
+#					}
+#				
+#			}
+#			NOT = { has_country_modifier = trade_hub_created }
+#			treasury = 200
+#			dip_power = 50
+#		}
+#		
+#		effect = {
+#			country_event = { id = echo.4 }
+#		}
+#		
+#	}
 
 	echo_development_counter = {
 		color = { 166  0  0 }

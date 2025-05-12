@@ -14171,6 +14171,32 @@ used_persian_influece_interaction_20 = { influence_to_vassal_elevation_cost = -4
 #free_slot_for_al_iraqiya_arabic = { num_accepted_cultures = 1 }
 #free_slot_for_al_suryah_arabic = { num_accepted_cultures = 1 }
 
-cat_lower_defense = {
-	local_defensiveness = -0.15
+cat_lower_defense_1 = {
+	local_defensiveness = -0.10
+	local_fort_maintenance_modifier = 0.25
+	picture = "cat_fort_i"
+}
+cat_lower_defense_2 = {
+	local_defensiveness = -0.20
+	local_fort_maintenance_modifier = 0.50
+	fort_maintenance_modifier = 0.05
+	picture = "cat_fort_ii"
+}
+cat_lower_defense_3 = {
+	local_defensiveness = -0.30
+	local_fort_maintenance_modifier = 1.00
+	fort_maintenance_modifier = 0.10
+	picture = "cat_fort_iii"
+}
+cat_lower_defense_4 = {
+	local_defensiveness = -0.40
+	local_fort_maintenance_modifier = 2.00
+	fort_maintenance_modifier = 0.20
+	picture = "cat_fort_iv"
+}
+MOR_grand_raid = {
+	may_perform_slave_raid_on_same_religion = yes
+	available_province_loot = 0.50
+	coast_raid_range = 5
+	naval_attrition = -0.9
 }

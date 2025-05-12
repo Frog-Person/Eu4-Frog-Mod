@@ -26,6 +26,39 @@ technology = { #Tribal Government
 	native_sweat_lodge = yes
 	native_great_trail = yes
 	native_ceremonial_fire_pit = yes
+	
+	marketplace_destroy = yes
+	workshop_destroy = yes
+	temple_destroy = yes
+	barracks_destroy = yes
+	shipyard_destroy = yes
+	fort_15th_destroy = yes
+	coastal_defence_destroy = yes
+	courthouse_destroy = yes
+	dock_destroy = yes
+	regimental_camp_destroy = yes
+	fort_16th_destroy = yes
+	naval_battery_destroy = yes
+	cathedral_destroy = yes
+	university_destroy = yes
+	trade_depot_destroy = yes
+	grand_shipyard_destroy = yes
+	training_fields_destroy = yes
+	fort_17th_destroy = yes
+	stock_exchange_destroy = yes
+	counting_house_destroy = yes
+	town_hall_destroy = yes
+	drydock_destroy = yes
+	conscription_center_destroy = yes
+	fort_18th_destroy = yes
+	manufactory_destroy = yes
+	furnace_destroy = yes
+	ramparts_destroy = yes
+	soldier_households_destroy = yes
+	impressment_offices_destroy = yes
+	state_house_destroy = yes
+	
+	cat_trade_center = yes
 }
 
 technology = { #Advanced Tribes

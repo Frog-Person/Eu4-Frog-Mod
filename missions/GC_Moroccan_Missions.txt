@@ -505,12 +505,11 @@ gc_morocco_1 = {
 	MOR_sponsor_piracy = {
 		icon = mission_sponsor_piracy
 		required_missions = { MOR_corsair_fleet }
-		position = 10
+		position = 9
 		provinces_to_highlight = {
 			OR = {
 				province_id = 1298
 				province_id = 1293
-				province_id = 1295
 			}
 			NOT = {
 				if = {
@@ -535,12 +534,6 @@ gc_morocco_1 = {
 								share = 0.1
 							}
 						}
-						1295 = {
-							has_privateer_share_in_trade_node = {
-								who = ROOT
-								share = 0.1
-							}
-						}
 					}
 				}
 				else = {
@@ -552,12 +545,6 @@ gc_morocco_1 = {
 							}
 						}
 						1293 = {
-							trade_share = {
-								country = ROOT
-								share = 10
-							}
-						}
-						1295 = {
 							trade_share = {
 								country = ROOT
 								share = 10
@@ -594,12 +581,6 @@ gc_morocco_1 = {
 								share = 0.1
 							}
 						}
-						1295 = {
-							has_privateer_share_in_trade_node = {
-								who = ROOT
-								share = 0.1
-							}
-						}
 					}
 				}
 				else = {
@@ -616,30 +597,11 @@ gc_morocco_1 = {
 								share = 10
 							}
 						}
-						1295 = {
-							trade_share = {
-								country = ROOT
-								share = 10
-							}
-						}
 					}
 				}
 			}
-			if = { 
-				limit = {
-					OR = {
-						has_dlc = "Golden Century"
-						has_dlc = "Mare Nostrum"
-					}
-				}
-				custom_trigger_tooltip = {
-					tooltip = MOR_provinces_raided_125
-					check_variable = {
-						which = NumOfRaidedCoasts
-						value = 125
-					}
-				}
-			}
+			naval_forcelimit = 75
+			navy_size_percentage = 0.9
 		}
 		effect = {
 			add_treasury = 750
@@ -663,6 +625,33 @@ gc_morocco_1 = {
 			add_country_modifier = {
 				name = MOR_raiding
 				duration = -1
+			}
+		}
+	}
+	
+	MOR_grand_raid = {
+		icon = mission_pirate_flag
+		required_missions = { MOR_sponsor_piracy }
+		position = 10
+		trigger = {
+			if = { 
+				limit = {
+					OR = {
+						has_dlc = "Golden Century"
+						has_dlc = "Mare Nostrum"
+					}
+				}
+				treasurer = 3
+				sailors_percentage = 1
+				naval_forcelimit = 150
+				navy_size_percentage = 0.9
+			}
+		}
+		effect = {	
+			add_yearly_sailors = -10
+			add_country_modifier = {
+				name = MOR_grand_raid
+				duration = 3650
 			}
 		}
 	}
@@ -1308,10 +1297,6 @@ gc_morocco_4 = {
 		}
 		
 		trigger = {
-			lower_andalucia_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
 			219 = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
@@ -1412,10 +1397,13 @@ gc_morocco_4 = {
 			}
 		}
 		effect = {
+			343 = {
+				add_or_upgrade_trade_building = yes
+			}
 			home_trade_node_effect_scope = {
 				add_trade_modifier = {
 					who = ROOT
-					duration = 5475
+					duration = -1
 					power = 20
 					key = MOR_funduqs_expanded
 				}

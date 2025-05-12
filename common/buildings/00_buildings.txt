@@ -423,6 +423,84 @@ fort_15th = {
 			limit = {
 				any_neighbor_province = {
 					owned_by = ROOT
+					has_province_modifier = cat_lower_defense_3
+				}
+			}
+			every_neighbor_province = {
+				if = {
+					limit = {
+						owned_by = ROOT
+						has_province_modifier = cat_lower_defense_3
+					}
+					remove_province_modifier = cat_lower_defense_3
+					add_permanent_province_modifier = {
+						name = cat_lower_defense_4
+						duration = -1
+					}
+				}
+			}
+			remove_province_modifier = cat_lower_defense_3
+			add_permanent_province_modifier = {
+				name = cat_lower_defense_4
+				duration = -1
+			}
+		}
+		else_if = {
+			limit = {
+				any_neighbor_province = {
+					owned_by = ROOT
+					has_province_modifier = cat_lower_defense_2
+				}
+			}
+			every_neighbor_province = {
+				if = {
+					limit = {
+						owned_by = ROOT
+						has_province_modifier = cat_lower_defense_2
+					}
+					remove_province_modifier = cat_lower_defense_2
+					add_permanent_province_modifier = {
+						name = cat_lower_defense_3
+						duration = -1
+					}
+				}
+			}
+			remove_province_modifier = cat_lower_defense_2 
+			add_permanent_province_modifier = {
+				name = cat_lower_defense_3
+				duration = -1
+			}
+		}
+		else_if = {
+			limit = {
+				any_neighbor_province = {
+					owned_by = ROOT
+					has_province_modifier = cat_lower_defense_1
+				}
+			}
+			every_neighbor_province = {
+				if = {
+					limit = {
+						owned_by = ROOT
+						has_province_modifier = cat_lower_defense_1
+					}
+					remove_province_modifier = cat_lower_defense_1
+					add_permanent_province_modifier = {
+						name = cat_lower_defense_2
+						duration = -1
+					}
+				}
+			}
+			remove_province_modifier = cat_lower_defense_1 
+			add_permanent_province_modifier = {
+				name = cat_lower_defense_2
+				duration = -1
+			}
+		}
+		else_if = {
+			limit = {
+				any_neighbor_province = {
+					owned_by = ROOT
 					OR = {
 						has_building = fort_15th
 						has_building = fort_16th
@@ -442,14 +520,14 @@ fort_15th = {
 							has_building = fort_18th
 						}
 					}
-					add_province_modifier = {
-						name = cat_lower_defense
+					add_permanent_province_modifier = {
+						name = cat_lower_defense_1
 						duration = -1
 					}
 				}
 			}
-			add_province_modifier = {
-				name = cat_lower_defense
+			add_permanent_province_modifier = {
+				name = cat_lower_defense_1
 				duration = -1
 			}	
 		}
@@ -570,7 +648,10 @@ fort_15th = {
 
 	# THIS = Province, FROM = Destroyer, Will not be called on buildings made obsolete!
 	on_destroyed = {
-		remove_province_modifier = cat_lower_defense
+		remove_province_modifier = cat_lower_defense_1
+		remove_province_modifier = cat_lower_defense_2
+		remove_province_modifier = cat_lower_defense_3
+		remove_province_modifier = cat_lower_defense_4
 		if = {
 			limit = {
 				has_province_modifier = estate_nobles_vegvar_system_modifier
@@ -846,6 +927,84 @@ fort_16th = {
 			limit = {
 				any_neighbor_province = {
 					owned_by = ROOT
+					has_province_modifier = cat_lower_defense_3
+				}
+			}
+			every_neighbor_province = {
+				if = {
+					limit = {
+						owned_by = ROOT
+						has_province_modifier = cat_lower_defense_3
+					}
+					remove_province_modifier = cat_lower_defense_3
+					add_permanent_province_modifier = {
+						name = cat_lower_defense_4
+						duration = -1
+					}
+				}
+			}
+			remove_province_modifier = cat_lower_defense_3
+			add_permanent_province_modifier = {
+				name = cat_lower_defense_4
+				duration = -1
+			}
+		}
+		else_if = {
+			limit = {
+				any_neighbor_province = {
+					owned_by = ROOT
+					has_province_modifier = cat_lower_defense_2
+				}
+			}
+			every_neighbor_province = {
+				if = {
+					limit = {
+						owned_by = ROOT
+						has_province_modifier = cat_lower_defense_2
+					}
+					remove_province_modifier = cat_lower_defense_2
+					add_permanent_province_modifier = {
+						name = cat_lower_defense_3
+						duration = -1
+					}
+				}
+			}
+			remove_province_modifier = cat_lower_defense_2 
+			add_permanent_province_modifier = {
+				name = cat_lower_defense_3
+				duration = -1
+			}
+		}
+		else_if = {
+			limit = {
+				any_neighbor_province = {
+					owned_by = ROOT
+					has_province_modifier = cat_lower_defense_1
+				}
+			}
+			every_neighbor_province = {
+				if = {
+					limit = {
+						owned_by = ROOT
+						has_province_modifier = cat_lower_defense_1
+					}
+					remove_province_modifier = cat_lower_defense_1
+					add_permanent_province_modifier = {
+						name = cat_lower_defense_2
+						duration = -1
+					}
+				}
+			}
+			remove_province_modifier = cat_lower_defense_1 
+			add_permanent_province_modifier = {
+				name = cat_lower_defense_2
+				duration = -1
+			}
+		}
+		else_if = {
+			limit = {
+				any_neighbor_province = {
+					owned_by = ROOT
 					OR = {
 						has_building = fort_15th
 						has_building = fort_16th
@@ -865,14 +1024,14 @@ fort_16th = {
 							has_building = fort_18th
 						}
 					}
-					add_province_modifier = {
-						name = cat_lower_defense
+					add_permanent_province_modifier = {
+						name = cat_lower_defense_1
 						duration = -1
 					}
 				}
 			}
-			add_province_modifier = {
-				name = cat_lower_defense
+			add_permanent_province_modifier = {
+				name = cat_lower_defense_1
 				duration = -1
 			}	
 		}
@@ -970,7 +1129,10 @@ fort_16th = {
 
 	# THIS = Province, FROM = Destroyer, Will not be called on buildings made obsolete!
 	on_destroyed = {
-		remove_province_modifier = cat_lower_defense
+		remove_province_modifier = cat_lower_defense_1
+		remove_province_modifier = cat_lower_defense_2
+		remove_province_modifier = cat_lower_defense_3
+		remove_province_modifier = cat_lower_defense_4
 		if = {
 			limit = {
 				has_province_modifier = estate_nobles_vegvar_system_modifier
@@ -1511,6 +1673,84 @@ fort_17th = {
 			limit = {
 				any_neighbor_province = {
 					owned_by = ROOT
+					has_province_modifier = cat_lower_defense_3
+				}
+			}
+			every_neighbor_province = {
+				if = {
+					limit = {
+						owned_by = ROOT
+						has_province_modifier = cat_lower_defense_3
+					}
+					remove_province_modifier = cat_lower_defense_3
+					add_permanent_province_modifier = {
+						name = cat_lower_defense_4
+						duration = -1
+					}
+				}
+			}
+			remove_province_modifier = cat_lower_defense_3
+			add_permanent_province_modifier = {
+				name = cat_lower_defense_4
+				duration = -1
+			}
+		}
+		else_if = {
+			limit = {
+				any_neighbor_province = {
+					owned_by = ROOT
+					has_province_modifier = cat_lower_defense_2
+				}
+			}
+			every_neighbor_province = {
+				if = {
+					limit = {
+						owned_by = ROOT
+						has_province_modifier = cat_lower_defense_2
+					}
+					remove_province_modifier = cat_lower_defense_2
+					add_permanent_province_modifier = {
+						name = cat_lower_defense_3
+						duration = -1
+					}
+				}
+			}
+			remove_province_modifier = cat_lower_defense_2 
+			add_permanent_province_modifier = {
+				name = cat_lower_defense_3
+				duration = -1
+			}
+		}
+		else_if = {
+			limit = {
+				any_neighbor_province = {
+					owned_by = ROOT
+					has_province_modifier = cat_lower_defense_1
+				}
+			}
+			every_neighbor_province = {
+				if = {
+					limit = {
+						owned_by = ROOT
+						has_province_modifier = cat_lower_defense_1
+					}
+					remove_province_modifier = cat_lower_defense_1
+					add_permanent_province_modifier = {
+						name = cat_lower_defense_2
+						duration = -1
+					}
+				}
+			}
+			remove_province_modifier = cat_lower_defense_1 
+			add_permanent_province_modifier = {
+				name = cat_lower_defense_2
+				duration = -1
+			}
+		}
+		else_if = {
+			limit = {
+				any_neighbor_province = {
+					owned_by = ROOT
 					OR = {
 						has_building = fort_15th
 						has_building = fort_16th
@@ -1530,14 +1770,14 @@ fort_17th = {
 							has_building = fort_18th
 						}
 					}
-					add_province_modifier = {
-						name = cat_lower_defense
+					add_permanent_province_modifier = {
+						name = cat_lower_defense_1
 						duration = -1
 					}
 				}
 			}
-			add_province_modifier = {
-				name = cat_lower_defense
+			add_permanent_province_modifier = {
+				name = cat_lower_defense_1
 				duration = -1
 			}	
 		}
@@ -1635,7 +1875,10 @@ fort_17th = {
 
 	# THIS = Province, FROM = Destroyer, Will not be called on buildings made obsolete!
 	on_destroyed = {
-		remove_province_modifier = cat_lower_defense
+		remove_province_modifier = cat_lower_defense_1
+		remove_province_modifier = cat_lower_defense_2
+		remove_province_modifier = cat_lower_defense_3
+		remove_province_modifier = cat_lower_defense_4
 		if = {
 			limit = {
 				has_province_modifier = estate_nobles_vegvar_system_modifier
@@ -2079,6 +2322,84 @@ fort_18th = {
 			limit = {
 				any_neighbor_province = {
 					owned_by = ROOT
+					has_province_modifier = cat_lower_defense_3
+				}
+			}
+			every_neighbor_province = {
+				if = {
+					limit = {
+						owned_by = ROOT
+						has_province_modifier = cat_lower_defense_3
+					}
+					remove_province_modifier = cat_lower_defense_3
+					add_permanent_province_modifier = {
+						name = cat_lower_defense_4
+						duration = -1
+					}
+				}
+			}
+			remove_province_modifier = cat_lower_defense_3
+			add_permanent_province_modifier = {
+				name = cat_lower_defense_4
+				duration = -1
+			}
+		}
+		else_if = {
+			limit = {
+				any_neighbor_province = {
+					owned_by = ROOT
+					has_province_modifier = cat_lower_defense_2
+				}
+			}
+			every_neighbor_province = {
+				if = {
+					limit = {
+						owned_by = ROOT
+						has_province_modifier = cat_lower_defense_2
+					}
+					remove_province_modifier = cat_lower_defense_2
+					add_permanent_province_modifier = {
+						name = cat_lower_defense_3
+						duration = -1
+					}
+				}
+			}
+			remove_province_modifier = cat_lower_defense_2 
+			add_permanent_province_modifier = {
+				name = cat_lower_defense_3
+				duration = -1
+			}
+		}
+		else_if = {
+			limit = {
+				any_neighbor_province = {
+					owned_by = ROOT
+					has_province_modifier = cat_lower_defense_1
+				}
+			}
+			every_neighbor_province = {
+				if = {
+					limit = {
+						owned_by = ROOT
+						has_province_modifier = cat_lower_defense_1
+					}
+					remove_province_modifier = cat_lower_defense_1
+					add_permanent_province_modifier = {
+						name = cat_lower_defense_2
+						duration = -1
+					}
+				}
+			}
+			remove_province_modifier = cat_lower_defense_1 
+			add_permanent_province_modifier = {
+				name = cat_lower_defense_2
+				duration = -1
+			}
+		}
+		else_if = {
+			limit = {
+				any_neighbor_province = {
+					owned_by = ROOT
 					OR = {
 						has_building = fort_15th
 						has_building = fort_16th
@@ -2098,14 +2419,14 @@ fort_18th = {
 							has_building = fort_18th
 						}
 					}
-					add_province_modifier = {
-						name = cat_lower_defense
+					add_permanent_province_modifier = {
+						name = cat_lower_defense_1
 						duration = -1
 					}
 				}
 			}
-			add_province_modifier = {
-				name = cat_lower_defense
+			add_permanent_province_modifier = {
+				name = cat_lower_defense_1
 				duration = -1
 			}	
 		}
@@ -2203,7 +2524,10 @@ fort_18th = {
 
 	# THIS = Province, FROM = Destroyer, Will not be called on buildings made obsolete!
 	on_destroyed = {
-		remove_province_modifier = cat_lower_defense
+		remove_province_modifier = cat_lower_defense_1
+		remove_province_modifier = cat_lower_defense_2
+		remove_province_modifier = cat_lower_defense_3
+		remove_province_modifier = cat_lower_defense_4
 		if = {
 			limit = {
 				has_province_modifier = estate_nobles_vegvar_system_modifier
@@ -2866,53 +3190,130 @@ state_house = {
 		}
 	}
 }
-gc_bureaucracy_manufactory = {
-	cost = 500
-	time = 60
+# gc_bureaucracy_manufactory = {
+# 	cost = 500
+# 	time = 60
+#	build_trigger = {
+#		NOT = {
+#			area_for_scope_province = {
+#				owner = {
+#					tag = ROOT
+#				}
+#				OR = {
+#					has_building = gc_bureaucracy_manufactory
+#					has_construction = gc_bureaucracy_manufactory
+#				}
+#			}
+#		}
+#	}
+#	keep_trigger = {
+#		NOT = {
+#			area_for_scope_province = {
+#				NOT = { province_id = root }
+#				owner = {
+#					tag = ROOT
+#				}
+#				OR = {
+#					has_building = gc_bureaucracy_manufactory
+#					has_construction = gc_bureaucracy_manufactory
+#				}
+#			}
+#		}
+#	}
+#	on_built = {
+#
+#	}
+#	on_destroyed = {
+# 
+#	}
+#	on_obsolete = {
+#	}
+#	modifier = {
+#		allowed_num_of_buildings = 1
+#		
+#	}
+#	onmap = no
+#	show_separate = yes # Means as a manufactory it will be shown according to the old way
+#
+#	ai_will_do = {
+#		factor = 1000
+#	}
+#}
+cat_trade_center = {
+		cost = 300
+		time = 0
+
+
 	build_trigger = {
 		NOT = {
 			area_for_scope_province = {
-				owner = {
-					tag = ROOT
-				}
 				OR = {
-					has_building = gc_bureaucracy_manufactory
-					has_construction = gc_bureaucracy_manufactory
+					has_building = cat_trade_center
+					has_construction = cat_trade_center
 				}
 			}
 		}
+		is_state = yes
+		development = 30
+		OR = {
+			has_building = marketplace
+			has_building = trade_depot
+			has_building = stock_exchange
+		}
+		area_for_scope_province = {
+			type = all
+			NOT = {
+				province_has_center_of_trade_of_level = 1
+			}
+		}
 	}
+	
 	keep_trigger = {
 		NOT = {
 			area_for_scope_province = {
-				NOT = { province_id = root }
-				owner = {
-					tag = ROOT
-				}
 				OR = {
-					has_building = gc_bureaucracy_manufactory
-					has_construction = gc_bureaucracy_manufactory
+					has_building = cat_trade_center
+					has_construction = cat_trade_center
 				}
 			}
 		}
+		is_state = yes
+		development = 30
+		OR = {
+			has_building = marketplace
+			has_building = trade_depot
+			has_building = stock_exchange
+		}
+		area_for_scope_province = {
+			type = all
+			NOT = {
+				province_has_center_of_trade_of_level = 1
+			}
+		}
 	}
-	on_built = {
- 
-	}
-	on_destroyed = {
- 
-	}
-	on_obsolete = {
-	}
+	
 	modifier = {
 		allowed_num_of_buildings = 1
-		
 	}
 	onmap = no
 	show_separate = yes # Means as a manufactory it will be shown according to the old way
+	on_built = {
+		ROOT = {
+			remove_building = cat_trade_center
+			add_base_production = 2
+			center_of_trade = 1
+		}
+		FROM = {
+			add_dip_power = -50
+		}
+	}
+	on_destroyed = {
+	}
+	on_obsolete = {
+	}
 
 	ai_will_do = {
-		factor = 1000
+		factor = 0
 	}
 }
 
