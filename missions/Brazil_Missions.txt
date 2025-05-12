@@ -1,0 +1,1067 @@
+brz_beginning = {
+	slot = 1
+	generic = no
+	ai = yes
+	potential = {
+		tag = BRZ
+	}
+
+	south_american_expeditions = {
+		icon = mission_build_up_to_force_limit
+		required_missions = {  }
+		trigger = { 
+			guapore_area = {
+				has_discovered = ROOT
+			}
+			mato_grosso_area = {
+				has_discovered = ROOT
+			}
+			pontal_area = {
+				has_discovered = ROOT
+			}
+			amazon_area = {
+				has_discovered = ROOT
+			}
+		}
+		effect = { 
+			add_country_modifier = {
+				name = "jungle_expansion"
+				duration = 7300
+			}
+		}
+	}
+	access_to_labor = {
+		icon = mission_build_up_to_force_limit
+		required_missions = { south_american_expeditions }
+		trigger = { 
+			any_ally = {
+				trade_goods_produced_amount = {
+					trade_goods = slaves
+					amount = 1
+				}
+			}
+		}
+		effect = { 
+			brazil_region = {
+				limit = { 
+					country_or_non_sovereign_subject_holds = ROOT 
+					NOT = { trade_goods = slaves }
+				}
+				type = random
+				amount = 1
+				change_trade_goods = slaves
+			}
+			add_country_modifier = {
+				name = "worker_expansion"
+				duration = 10950
+			}
+		}
+	}
+}
+
+brz_native_acceptance = {
+	slot = 1
+	generic = no
+	ai = yes
+	potential = {
+		tag = BRZ
+		NOT = { has_country_flag = brz_killing_natives }
+	}
+	brz_accepting = {
+		icon = mission_build_up_to_force_limit
+		position = 4
+		required_missions = { new_world_exclave }
+		trigger = { 
+			num_accepted_cultures = 4
+			num_of_owned_provinces_with = {
+				value = 15
+				OR = {
+					culture_group = je_tupi
+					culture_group = je
+					culture_group = mataco
+					culture_group = carribean
+					culture_group = araucanian
+					culture_group = andean_group
+				}
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = "colonial_acceptance_policy"
+				duration = -1
+			}
+		}
+	}
+	brz_development = {
+		icon = mission_build_up_to_force_limit
+		position = 5
+		required_missions = { brz_accepting }
+		trigger = { 
+			development_in_provinces = {
+				value = 300
+				NOT = { culture = ROOT }
+			}
+		}
+		effect = { 
+			add_country_modifier = {
+				name = "local_leadership"
+				duration = -1
+			}
+		}
+	}
+	brz_government = {
+		icon = mission_build_up_to_force_limit
+		position = 6
+		required_missions = { brz_development }
+		trigger = { 
+			num_of_different_cultures_in_court = 3
+			OR = {
+				artist = 5
+				inquisitor = 5
+				master_of_mint = 5
+				natural_scientist = 5
+				philosopher = 5
+				theologian = 5
+				treasurer = 5
+			}
+			OR = {
+				colonial_governor = 5
+				diplomat = 5
+				naval_reformer = 5
+				navigator = 5
+				spymaster = 5
+				statesman = 5
+				trader = 5
+			}
+			OR = {
+				army_organiser = 5
+				army_reformer = 5
+				commandant = 5
+				grand_captain = 5
+				recruitmaster = 5
+				fortification_expert = 5
+				quartermaster = 5
+			}
+		}
+		effect = { 
+			change_government_reform_progress = 100
+			add_country_modifier = {
+				name = "respected_officials"
+				duration = 7300
+			}
+		}
+	}
+	brz_multi_culturalism = {
+		icon = mission_build_up_to_force_limit
+		position = 7
+		required_missions = { brz_multi_culturalism }
+		trigger = { 
+			num_accepted_cultures = 6
+			development_in_provinces = {
+				value = 600
+				NOT = { culture = ROOT }
+			}
+		}
+		effect = { 
+			add_prestige = 20
+			custom_tooltip = brz_burgher_culture_pot
+			set_country_flag = brz_melting_pot_flag
+		}
+	}
+}
+
+brz_native_assimilation = {
+	slot = 1
+	generic = no
+	ai = yes
+	potential = {
+		tag = BRZ
+		has_country_flag = brz_killing_natives
+	}
+
+	brz_itty_killing = {
+		icon = mission_build_up_to_force_limit
+		position = 4
+		required_missions = { new_world_exclave }
+		trigger = { 
+			num_of_owned_provinces_with = {
+				value = 15
+				has_owner_culture = yes
+			}
+		}
+		effect = { 
+			add_country_modifier = {
+				name = "encourage_new_colonies"
+				duration = 14600
+			}
+		}
+	}
+	brz_smol_killing = {
+		icon = mission_build_up_to_force_limit
+		position = 5
+		required_missions = { brz_itty_killing }
+		trigger = { 
+			num_of_owned_provinces_with = {
+				value = 25
+				has_owner_culture = yes
+			}
+		}
+		effect = { 
+			add_country_modifier = {
+				name = "greater_oversight"
+				duration = -1
+			}
+		}
+	}
+	brz_med_killing = {
+		icon = mission_build_up_to_force_limit
+		position = 6
+		required_missions = { brz_smol_killing }
+		trigger = { 
+			num_of_owned_provinces_with = {
+				value = 35
+				has_owner_culture = yes
+			}
+		}
+		effect = { 
+			add_country_modifier = {
+				name = "excessive_oversight"
+				duration = -1
+			}
+		}
+	}
+	brz_beeg_killing = {
+		icon = mission_build_up_to_force_limit
+		position = 7
+		required_missions = { brz_med_killing }
+		trigger = { 
+			num_of_owned_provinces_with = {
+				value = 50
+				has_owner_culture = yes
+			}
+		}
+		effect = { 
+			add_country_modifier = {
+				name = "genocidal_maniac"
+				duration = -1
+			}
+		}
+	}
+}
+
+brz_native_choices = {
+	slot = 2
+	generic = no
+	ai = yes
+	potential = {
+		tag = BRZ
+	}
+
+	native_policy = {
+		icon = mission_build_up_to_force_limit
+		position = 1
+		required_missions = {  }
+		trigger = { 
+			OR = {
+				native_policy = native_policy_trade
+				native_policy = native_policy_hostile
+			}
+		}
+		effect = { 
+			country_event = { id = flavor_brz.1 }
+		}
+	}
+	handling_cultures = {
+		icon = mission_build_up_to_force_limit
+		position = 2
+		required_missions = { native_policy }
+		trigger = {
+			unrest = -2
+			NOT = { num_of_rebel_armies = 1 }
+			NOT = { num_of_rebel_controlled_provinces = 1 }
+		}
+		effect = { 
+			if = {
+				limit = {
+					native_policy = native_policy_trade
+				}
+				add_country_modifier = {
+					name = "native_land_reclamation"
+					duration = 7300
+				}
+			}
+			else = {
+				add_country_modifier = {
+					name = "native_target_practice"
+					duration = 7300
+				}
+			}
+		}
+	}
+}
+
+brz_trade_good_shiz = {
+	slot = 2
+	generic = no
+	ai = yes
+	potential = {
+		tag = BRZ
+	}
+
+	new_world_sugar = {
+		icon = mission_build_up_to_force_limit
+		position = 5
+		required_missions = { establish_ports }
+		trigger = {
+			763 = {
+				OR = {
+					has_building = workshop
+					has_building = counting_house
+				}
+				base_production = 8
+			}
+			762 = {
+				OR = {
+					has_building = workshop
+					has_building = counting_house
+				}
+				base_production = 8
+			}
+			755 = {
+				OR = {
+					has_building = workshop
+					has_building = counting_house
+				}
+				base_production = 8
+			}
+		}
+		effect = { 
+			763 = {
+				limit = {
+					NOT = { trade_goods = sugar }
+				}
+				change_trade_goods = sugar
+				add_base_production = 2
+			}
+			762 = {
+				limit = {
+					NOT = { trade_goods = sugar }
+				}
+				change_trade_goods = sugar
+				add_base_production = 2
+			}
+			755 = {
+				limit = {
+					NOT = { trade_goods = sugar }
+				}
+				change_trade_goods = sugar
+				add_base_production = 2
+			}
+		}
+	}
+	brazilwood_camps = {
+		icon = mission_build_up_to_force_limit
+		position = 6
+		required_missions = { new_world_sugar utilize_colonial_enthousiasm }
+		trigger = {
+			2900 = {
+				OR = {
+					has_building = workshop
+					has_building = counting_house
+				}
+				base_production = 8
+			}
+			2901 = {
+				OR = {
+					has_building = workshop
+					has_building = counting_house
+				}
+				base_production = 8
+			}
+			2902 = {
+				OR = {
+					has_building = workshop
+					has_building = counting_house
+				}
+				base_production = 8
+			}
+			2904 = {
+				OR = {
+					has_building = workshop
+					has_building = counting_house
+				}
+				base_production = 8
+			}
+			2905 = {
+				OR = {
+					has_building = workshop
+					has_building = counting_house
+				}
+				base_production = 8
+			}
+			2909 = {
+				OR = {
+					has_building = workshop
+					has_building = counting_house
+				}
+				base_production = 8
+			}
+		}
+		effect = { 
+			2900 = {
+				limit = {
+					NOT = { trade_goods = tropical_wood }
+				}
+				change_trade_goods = tropical_wood
+				add_province_modifier = {
+					name = "brazilwood_camps_established"
+					duration = -1
+				}
+			}
+			2901 = {
+				limit = {
+					NOT = { trade_goods = tropical_wood }
+				}
+				change_trade_goods = tropical_wood
+				add_province_modifier = {
+					name = "brazilwood_camps_established"
+					duration = -1
+				}
+			}
+			2902 = {
+				limit = {
+					NOT = { trade_goods = tropical_wood }
+				}
+				change_trade_goods = tropical_wood
+				add_province_modifier = {
+					name = "brazilwood_camps_established"
+					duration = -1
+				}
+			}
+			2904 = {
+				limit = {
+					NOT = { trade_goods = tropical_wood }
+				}
+				change_trade_goods = tropical_wood
+				add_province_modifier = {
+					name = "brazilwood_camps_established"
+					duration = -1
+				}
+			}
+			2905 = {
+				limit = {
+					NOT = { trade_goods = tropical_wood }
+				}
+				change_trade_goods = tropical_wood
+				add_province_modifier = {
+					name = "brazilwood_camps_established"
+					duration = -1
+				}
+			}
+			2909 = {
+				limit = {
+					NOT = { trade_goods = tropical_wood }
+				}
+				change_trade_goods = tropical_wood
+				add_province_modifier = {
+					name = "brazilwood_camps_established"
+					duration = -1
+				}
+			}
+		}
+	}
+	new_world_coffee = {
+		icon = mission_build_up_to_force_limit
+		position = 7
+		required_missions = { brazilwood_camps }
+		trigger = {
+			2887 = {
+				OR = {
+					has_building = workshop
+					has_building = counting_house
+				}
+				base_production = 8
+			}
+			769 = {
+				OR = {
+					has_building = workshop
+					has_building = counting_house
+				}
+				base_production = 8
+			}
+			766 = {
+				OR = {
+					has_building = workshop
+					has_building = counting_house
+				}
+				base_production = 8
+			}
+			764 = {
+				OR = {
+					has_building = workshop
+					has_building = counting_house
+				}
+				base_production = 8
+			}
+			2894 = {
+				OR = {
+					has_building = workshop
+					has_building = counting_house
+				}
+				base_production = 8
+			}
+			2896 = {
+				OR = {
+					has_building = workshop
+					has_building = counting_house
+				}
+				base_production = 8
+			}
+			2895 = {
+				OR = {
+					has_building = workshop
+					has_building = counting_house
+				}
+				base_production = 8
+			}
+		}
+		effect = { 
+			2887 = {
+				limit = {
+					NOT = { trade_goods = coffee }
+				}
+				change_trade_goods = coffee
+				add_province_modifier = {
+					name = "new_world_plantations"
+					duration = -1
+				}
+			}
+			769 = {
+				limit = {
+					NOT = { trade_goods = coffee }
+				}
+				change_trade_goods = coffee
+				add_province_modifier = {
+					name = "new_world_plantations"
+					duration = -1
+				}
+			}
+			766 = {
+				limit = {
+					NOT = { trade_goods = coffee }
+				}
+				change_trade_goods = coffee
+				add_province_modifier = {
+					name = "new_world_plantations"
+					duration = -1
+				}
+			}
+			764 = {
+				limit = {
+					NOT = { trade_goods = coffee }
+				}
+				change_trade_goods = coffee
+				add_province_modifier = {
+					name = "new_world_plantations"
+					duration = -1
+				}
+			}
+			2894 = {
+				limit = {
+					NOT = { trade_goods = coffee }
+				}
+				change_trade_goods = coffee
+				add_province_modifier = {
+					name = "new_world_plantations"
+					duration = -1
+				}
+			}
+			2896 = {
+				limit = {
+					NOT = { trade_goods = coffee }
+				}
+				change_trade_goods = coffee
+				add_province_modifier = {
+					name = "new_world_plantations"
+					duration = -1
+				}
+			}
+			2895 = {
+				limit = {
+					NOT = { trade_goods = coffee }
+				}
+				change_trade_goods = coffee
+				add_province_modifier = {
+					name = "new_world_plantations"
+					duration = -1
+				}
+			}
+		}
+	}
+}
+
+brz_colonial_exclave = {
+	slot = 3
+	generic = no
+	ai = yes
+	potential = {
+		tag = BRZ
+	}
+
+	expand_brazil = {
+		icon = mission_build_up_to_force_limit
+		position = 1
+		required_missions = {  }
+		trigger = { 
+			num_of_owned_provinces_with = {
+				colonial_region = colonial_brazil
+				value = 25
+			}
+		}
+		effect = { 
+			add_prestige = 15
+			add_country_modifier = {
+				name = "colonial_fervor"
+				duration = 36500
+			}
+		}
+	}
+	new_world_exclave = {
+		icon = mission_build_up_to_force_limit
+		position = 3
+		required_missions = { expand_brazil access_to_labor how_to_handle_cultures longstanding_governor_generale }
+		trigger = {
+			total_development = 550
+			legitimacy_equivalent = 100
+			stability = 1
+			any_neighbor_country = {
+				NOT = { tech_difference = 1 }
+			}
+		}
+		effect = { 
+			if = {
+				limit = {
+					NOT = { government_rank = 2 }
+				}
+				set_government_rank = 2
+			}
+			add_prestige = 20
+			brazil_region = {
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+}
+
+brz_trade_stuff = {
+	slot = 3
+	generic = no
+	ai = yes
+	potential = {
+		tag = BRZ
+	}
+
+	establish_ports = {
+		icon = mission_build_up_to_force_limit
+		position = 4
+		required_missions = { new_world_exclave }
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				has_dock_building_trigger = yes 
+				has_shipyard_building_trigger = yes 
+				value = 10
+			}
+			development_in_provinces = {
+				value = 150 
+				has_port = yes 
+			}
+		}
+		effect = {
+			brazil_region = {
+				limit = { 
+					has_dock_building_trigger = yes 
+					has_shipyard_building_trigger = yes 
+					owned_by = ROOT 
+					has_port = yes 
+				}
+				add_base_production = 2
+			}
+		}
+	}
+	utilize_colonial_enthousiasm = {
+		icon = mission_build_up_to_force_limit
+		position = 5
+		required_missions = { establish_ports }
+		trigger = { 
+			num_of_owned_provinces_with = {
+				development = 20
+				has_owner_accepted_culture = yes
+				value = 20
+			}
+		}
+		effect = { 
+			custom_tooltip = brz_burgher_dev_jungle_tt
+			set_country_flag = brz_burgher_dev_jungle
+		}
+	}
+	sugar_boom = {
+		icon = mission_build_up_to_force_limit
+		position = 6
+		required_missions = { new_world_sugar utilize_colonial_enthousiasm }
+		trigger = { 
+			num_of_owned_provinces_with = {
+				OR = {
+						has_building = workshop
+						has_building = counting_house
+				} 
+				trade_goods = sugar
+				base_production = 8
+				value = 8
+			}
+		}
+		effect = { 
+			add_years_of_owned_provinces_production_income = {
+				years = 5
+				trigger = {
+					trade_goods = sugar
+				}
+			}
+			change_price = {
+				trade_goods = sugar
+				key = brz_sugar_FLOOD
+				value = -0.5
+				duration = 14600
+			}
+			brazil_region = {
+				limit = { 
+					trade_goods = sugar
+					OR = {
+						has_building = workshop
+						has_building = counting_house
+					} 
+					owned_by = ROOT 
+					has_port = yes 
+				}
+				type = random
+				amount = 5
+				add_province_modifier = {
+					name = "brz_sugar_plantations"
+					duration = -1
+				}
+			}
+		}
+	}
+	major_trade_nation = {
+		icon = mission_build_up_to_force_limit
+		position = 7
+		required_missions = { sugar_boom extensive_trade_fleet }
+		trigger = { 
+			num_of_owned_provinces_with = {
+				province_has_center_of_trade_of_level = 2
+				value = 8
+			}
+			num_of_light_ship = 60
+			num_of_heavy_ship = 60
+			trade_income_percentage = 0.2
+		}
+		effect = { 
+			add_years_of_income = 1.5
+			add_country_modifier = {
+				name = "brz_favored_traders"
+				duration = 18250
+			}
+		}
+	}
+}
+
+slot4 = {
+	slot = 4
+	generic = no
+	ai = yes
+	potential = {
+		tag = BRZ
+	}
+
+	stabilize_the_government = {
+		icon = mission_build_up_to_force_limit
+		position = 1
+		required_missions = {  }
+		trigger = { 
+			stability = 1
+			legitimacy_equivalent = 90
+			prestige = 25
+		}
+		effect = { 
+			change_government_reform_progress = 100
+			add_country_modifier = {
+				name = "brz_gov_restored"
+				duration = 7300
+			}
+		}
+	}
+	longstanding_governor_generale = {
+		icon = mission_build_up_to_force_limit
+		position = 2
+		required_missions = { stabilize_the_government }
+		trigger = {
+			months_of_ruling = 144
+			legitimacy = 100
+		}
+		effect = { 
+			add_country_modifier = {
+				name = "strong_administrator"
+				duration = 7300
+			}
+		}
+	}
+	keep_pace_with_military_science = {
+		icon = mission_build_up_to_force_limit
+		position = 4
+		required_missions = { new_world_exclave }
+		trigger = { 
+			NOT = {
+				any_country = {
+					is_non_new_world_tech_group = yes
+					tech_difference = 3
+				}
+			}
+		}
+		effect = { 
+			add_mil_power = 100
+			add_army_professionalism = 0.1
+			763 = {
+				add_province_modifier = {
+					name = "academia_militar_das_agulhas_negras"
+					duration = -1
+				}
+			}
+		}
+	}
+	new_world_navy = {
+		icon = mission_build_up_to_force_limit
+		position = 5
+		required_missions = { keep_pace_with_military_science }
+		trigger = { 
+			num_of_heavy_ship = 40
+			num_of_transport = 30
+		}
+		effect = { 
+			add_country_modifier = {
+				name = "brazilian_royal_navy"
+				duration = -1
+			}
+		}
+	}
+	extensive_trade_fleet = {
+		icon = mission_build_up_to_force_limit
+		position = 6
+		required_missions = { new_world_navy }
+		trigger = { 
+			1531 = {
+				is_strongest_trade_power = ROOT
+			}
+			num_of_light_ship = 200
+		}
+		effect = { 
+			add_country_modifier = {
+				name = "merchant_marines"
+				duration = -1
+			}
+		}
+	}
+	size_for_brazil = {
+		icon = mission_build_up_to_force_limit
+		position = 7
+		required_missions = { extensive_trade_fleet }
+		trigger = { 
+			army_size = 250
+			army_size_percentage = 0.75
+			army_professionalism = 0.5
+		}
+		effect = { 
+			add_manpower = 100
+			add_country_modifier = {
+				name = "jungle_expertise"
+				duration = -1
+			}
+		}
+	}
+	covering_mlitary_finances = {
+		icon = mission_build_up_to_force_limit
+		position = 8
+		required_missions = { major_trade_nation size_for_brazil }
+		trigger = {
+			monthly_income = 350
+			army_size_percentage = 1.0
+			land_maintenance = 1.0
+		}
+		effect = { 
+			add_country_modifier = {
+				name = "beneficial_volunteer_contracts"
+				duration = -1
+			}
+		}
+	}
+}
+
+brz_major_cities = {
+	slot = 5
+	generic = no
+	ai = yes
+	potential = {
+		tag = BRZ
+	}
+
+	rio_de_janeiro = {
+		icon = mission_build_up_to_force_limit
+		position = 1
+		required_missions = {  }
+		trigger = { 
+			763 = {
+				development = 30
+				OR = {
+					has_building = courthouse
+					has_building = town_hall
+				}
+				OR = {
+					has_building = fort_15th
+					has_building = fort_16th
+					has_building = fort_17th
+					has_building = fort_18th
+				}
+			}
+		}
+		effect = { 
+			763 = {
+				add_province_modifier = {
+					name = "carnival"
+					duration = -1
+				}
+			}
+		}
+	}
+	sao_paulo_santos_port = {
+		icon = mission_build_up_to_force_limit
+		position = 2
+		required_missions = {  }
+		trigger = { 
+			764 = {
+				development = 30
+				OR = {
+					has_building = shipyard
+					has_building = grand_shipyard
+				}
+				has_dock_building_trigger = yes
+				OR = {
+					has_building = workshop
+					has_building = counting_house
+				}
+			}
+		}
+		effect = { 
+			764 = {
+				change_trade_goods = paper
+				add_province_modifier = {
+					name = "port_santos"
+					duration = -1
+				}
+			}
+		}
+	}
+	recife = {
+		icon = mission_build_up_to_force_limit
+		position = 3
+		required_missions = {  }
+		trigger = { 
+			755 = {
+				development = 30
+				has_trade_building_trigger = yes
+				OR = {
+					has_building = workshop
+					has_building = counting_house
+				}
+			}
+		}
+		effect = { 
+			755 = {
+				add_province_modifier = {
+					name = "was_once_mauritsstad"
+					duration = -1
+				}
+			}
+		}
+	}
+	minas_gerais = {
+		icon = mission_build_up_to_force_limit
+		position = 4
+		required_missions = {  }
+		trigger = {
+			765 = {
+				OR = {
+					development = 30
+					AND = {
+						trade_goods = gold
+						base_production = 12
+					}
+				}
+			}
+		}
+		effect = { 
+			765 = {
+				if = {
+					limit = {
+						NOT = { trade_goods = gold }
+					}
+					change_trade_goods = gold
+				}
+				add_province_modifier = {
+					name = "responsible_mining_efforts"
+					duration = -1
+				}
+			}
+		}
+	}
+	port_of_paranagua = {
+		icon = mission_build_up_to_force_limit
+		position = 5
+		required_missions = {  }
+		trigger = { 
+			769 = {
+				development = 30
+				has_dock_building_trigger = yes
+				has_shipyard_building_trigger = yes
+			}
+		}
+		effect = { 
+			add_country_modifier = {
+				name = "deep_water_port"
+				duration = -1
+			}
+		}
+	}
+	salvador = {
+		icon = mission_build_up_to_force_limit
+		position = 6
+		required_missions = {  }
+		trigger = { 
+			756 = {
+				development = 30
+				OR = {
+					has_building = courthouse
+					has_building = town_hall
+				}
+			}
+		}
+		effect = {
+			change_government_reform_progress = 50
+			765 = {
+				change_trade_goods = paper
+				add_province_modifier = {
+					name = "administration_center"
+					duration = -1
+				}
+			}
+		}
+	}
+}
+

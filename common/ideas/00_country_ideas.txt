@@ -8018,10 +8018,10 @@ CND_ideas = {
 BRZ_ideas = {
 	start = {
 		hostile_attrition = 1
-		envoy_travel_time = -0.25
+		land_forcelimit_modifier = 0.15
 	}
 	bonus = {
-		global_trade_goods_size_modifier = 0.1
+		development_cost = -0.075
 	}	
 	trigger = {
 		tag = BRZ
@@ -8030,28 +8030,32 @@ BRZ_ideas = {
 
 	governorate_general = {
 		global_tax_modifier = 0.1
+		legitimacy = 1
+		devotion = 1
+		republican_tradition = 0.3
+		meritocracy = 1
+		horde_unity = 1
 	}
 	research_of_nassau = {
-		global_institution_spread = 0.1
+		global_institution_spread = 0.15
+		idea_cost = -0.1
 	}
 	mines_of_minas_gerais = {
 		inflation_reduction = 0.1
+		global_trade_goods_size_modifier = 0.1
 	}
 	halting_foreign_incursions = {
-		infantry_power = 0.1
+		infantry_power = 0.15
 	}
 	entradas_and_bandeiras = {
 		core_creation = -0.15
 	}
 	inconfidencia_mineira = {
 		stability_cost_modifier = -0.1
+		global_unrest = -1
 	}
 	old_seat_of_the_empire = {
-		legitimacy = 1
-		devotion = 1
-		republican_tradition = 0.3
-		meritocracy = 1
-		horde_unity = 1
+		governing_capacity_modifier = 0.2
 	}
 }
 

@@ -184,8 +184,10 @@ age_of_discovery = {
 		ab_portugal_colonial_growth = {
 		
 			allow = {
-				tag = POR
-				tag = LUS
+				OR = {
+					tag = POR
+					tag = LUS
+				}
 			}
 			modifier = {
 				global_colonial_growth = 50

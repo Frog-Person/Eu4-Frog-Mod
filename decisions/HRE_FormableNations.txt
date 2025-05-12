@@ -66,14 +66,13 @@ country_decisions = {
 			}
 		}
 		allow = {
-			is_free_or_tributary_trigger = yes
 			is_at_war = no
 
 			if = {
 				limit = { NOT = { tag = UBV } }
 				OR = {
 					NOT = { exists = UBV }
-					UBV = {
+					UBV = {`
 						NOT = { num_of_cities = 5 }
 						is_subject_of = ROOT
 					}

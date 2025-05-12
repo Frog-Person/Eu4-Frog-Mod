@@ -141,7 +141,7 @@ country_decisions = {
 			NOT = {
 				num_of_owned_provinces_with = {
 					continent = europe
-					value = 5
+					value = 6
 				}
 			}
 		}
@@ -163,6 +163,7 @@ country_decisions = {
 		effect = {
 			change_tag = BRZ
 			on_change_tag_effect = yes
+			swap_non_generic_missions = yes
 			every_subject_country = {
 				limit = {
 					is_colonial_nation = yes

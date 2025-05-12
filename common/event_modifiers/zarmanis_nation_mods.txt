@@ -139,6 +139,56 @@ consolidate_administrations = {
 administrations_consolidated = {
     global_unrest = -2
 }
+benevolent_hab_monarch = {
+    liberty_desire = -20
+    global_unrest = -1.5
+    development_cost = -0.075
+}
+
+bohemian_glassworks = {
+    production_efficiency = 0.1
+    dip_tech_cost_modifier = -0.05
+}
+
+subject_sailors = {
+    vassal_sailors_bonus = 0.2
+}
+
+greater_adriatic_access = {
+    caravan_power = 0.2
+    trade_efficiency = 0.1
+}
+
+hungarian_grain = {
+    global_manpower_modifier = 0.15
+    manpower_recovery_speed = 0.15
+}
+
+subject_soldiers = {
+    vassal_manpower_bonus = 0.2
+}
+
+transylvanian_tolerance = {
+    tolerance_own = 1
+    tolerance_heretic = 1
+    tolerance_heathen = 1
+}
+
+kreminca_mint = {
+    global_trade_goods_size_modifier = 0.1
+    inflation_reduction = 0.05
+}
+
+auh_union_overlord = {
+	vassal_income = 0.25
+	diplomatic_reputation = 1
+}
+
+au_union_subject = {
+	liberty_desire = -25
+	liberty_desire_from_subject_development = -0.1
+}
+
 
 #Transdanubia_modifiers
 early_investment_in_our_state = {
@@ -358,9 +408,9 @@ lot_overseas_acceptable_investment  = {
 }
 lot_overseas_full_investment = {
     local_governing_cost = -0.1
-    development_cost = -0.05
-    build_time = -0.25
-    build_cost = -0.25
+    local_development_cost = -0.05
+    local_build_time = -0.25
+    local_build_cost = -0.25
 }
 not_q_do_anyway = {
     merchants = 1
@@ -604,7 +654,7 @@ casas_de_cor = {
     monthly_splendor = 0.5
 }
 local_population_boom = {
-    development_cost = -0.05
+    local_development_cost = -0.05
     local_manpower_modifier = 0.10
     land_forcelimit = 2
 }
@@ -836,7 +886,7 @@ beneficial_volunteer_contracts = {
 carnival = {
     prestige_decay = -0.01
     monthly_splendor = 1
-    governing_capacity_modifier = 0.5
+    governing_capacity_modifier = 0.05
 }
 port_santos = {
     province_trade_power_value = 10
@@ -852,10 +902,132 @@ responsible_mining_efforts = {
 }
 deep_water_port = {
     navy_tradition = 1
-    naval_forcelimit = 0.15
+    naval_forcelimit_modifier = 0.15
     ship_recruit_speed = -0.25
 }
 administration_center = {
     state_governing_cost = -0.1
     governing_capacity_modifier = 0.05
+}
+
+#NDI mods
+urbanization = {
+    development_cost = -0.05
+    build_cost = -0.1
+    build_time = -0.15
+}
+cartharginian_shipyard = {
+    local_ship_cost = -0.25
+    ship_recruit_speed = -0.25
+}
+fodder_for_horses = {
+    cavalry_cost = -0.15
+    land_maintenance_modifier = -0.10
+}
+improved_efficiency = {
+    global_trade_goods_size_modifier = 0.05
+    production_efficiency = 0.1
+}
+master_skirmishers = {
+    movement_speed = 0.10
+    cav_to_inf_ratio = 0.10
+    cavalry_power = 0.05
+}
+found_on_every_front = {
+    land_maintenance_modifier = -0.10
+    possible_condottieri = 0.5
+}
+expereinced_raiders = {
+    naval_maintenance_modifier = -0.1
+    galley_power = 0.15
+}
+fleet_command = {
+    navy_tradition = 1
+    sunk_ship_morale_hit_recieved = -0.15
+}
+feared_across_the_med = {
+    coast_raid_range = 1
+    may_perform_slave_raid_on_same_religion = yes
+}
+know_where_the_loot_is = {
+    loot_amount = 0.15
+    available_province_loot = 0.15
+    blockade_efficiency = 0.15
+}
+secured_new_lands = {
+    core_creation = -0.15
+    global_unrest = -1
+}
+call_of_a_new_sea = {
+    may_explore = yes
+    range = 0.5
+}
+golden_age_of_raiding = {
+    coast_raid_range = 1
+    privateer_efficiency = 0.25
+}
+victory_against_former_oppressor = {
+    prestige = 1
+    land_morale = 0.05
+}
+given_reparations = {
+    global_unrest = -1.5
+    stability_cost_modifier = -0.1
+}
+med_trade_cooperation = {
+    trade_efficiency = 0.15
+}
+ready_for_war = {
+    land_maintenance_modifier = -0.05
+    land_morale = 0.05
+}
+fresh_oarsmen = {
+    galley_power = 0.15
+    galley_cost = -0.1
+}
+outlived_empires_of_old = {
+    all_power_cost = -0.025
+    legitimacy = 1
+}
+the_doorstep_of_the_delta = {
+    manpower_recovery_speed = 0.15
+    global_supply_limit_modifier = 0.10
+}
+shared_interest_in_the_node = {
+    ship_trade_power_modifier = 0.15
+    trade_steering = 0.125
+}
+cairo_educated_advisors = {
+    same_culture_advisor_cost = -0.15
+}
+carthaginian_naval_defenses = {
+    galley_power = 0.2
+    hostile_fleet_attrition = 1
+}
+master_raiders = {
+    coast_raid_range = 1
+    may_perform_slave_raid_on_same_religion = yes
+}
+nomad_warriors = {
+    cavalry_cost = -0.10
+    cavalry_flanking = 0.10
+}
+tripoli_pirates = {
+    privateer_efficiency = 0.25
+    has_marines = yes
+    allowed_marine_fraction = 0.15
+}
+elite_cav_modifier = {
+    cavalry_power = 0.20
+}
+cultural_quarters = {
+    development_cost_in_primary_culture = -0.05
+}
+greater_hegemony = {
+    global_unrest = -1.5
+    prestige = 1.5
+}
+yes_men = {
+    same_culture_advisor_cost = -0.2
+    yearly_corruption = 0.1
 }
