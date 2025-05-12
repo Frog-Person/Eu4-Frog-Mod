@@ -33,6 +33,55 @@
  echo_grand_captain_cooldown_100: "A Truly Great Captain Cooldown (Hard)"
  
  free_colonist_2_title: "Free Colonist 1600s"
+ free_colonist_2_desc: ""
  
  PEACE_cat_downgrade_cot: "Downgrade Centers of Trade"
  cat_downgrade_cot_desc: "All enemy Centers of Trade will get reduced by 1 level."
+ 
+ MOR_3_most_provs: "§Y3§! Most developed coastal provinces:"
+ MOR_provinces_raided_125: "§YMorocco§! has raided §Y125§! provinces."
+ MOR_provinces_raided_200: "§YMorocco§! has raided §Y200§! provinces."
+ 
+ MOR_grand_raid_title: "The Grand Raid"
+ MOR_grand_raid_desc: "Piracy has supplied our coffers with an immense amount of wealth. Our [MOR.Monarch.GetTitle] has been thinking all day and night how we can bring in even more gold. Our §YTreasurer§! came up with a brilliant idea! We shall organise a Grand Raid! We shall raze and plunder like nobody has razed and plundered before! World's greatest treasures will be ours!!"
+ MOR_grand_raid: "Grand Raid §RWARNING! THIS MAKES SOME FLEET INTERACTIONS VERY LAGGY!§!"
+ 
+ hired_explorer: "Funded Exploration"
+ hired_explorer_desc: "Allows recruitment of Explorers and Conquistadors"
+ 
+ cat_show_merc_nonsense_title: "§!Show Mercenary Decisions"
+ cat_show_merc_nonsense_desc: ""
+ cat_hide_merc_nonsense_title: "§!Hide Mercenary Decisions"
+ cat_hide_merc_nonsense_desc: ""
+ 
+ ######################
+ # pick advisor stuff #
+ ######################
+ cat_recruit_administrative_advisor_title: "Recruit Administrative Advisor"
+ cat_recruit_administrative_advisor_desc: ""
+ 
+ cat_recruit_diplomatic_advisor_title: "Recruit Diplomatic Advisor"
+ cat_recruit_diplomatic_advisor_desc: ""
+ 
+ cat.2.title: "Recruit Administrative Advisor"
+ cat.2.desc: "Use the state's resources to find an appropriate advisor. Scroll down for more."
+ cat.2.a: "Recruit Artist"
+ cat.2.b: "Recruit Inquisitor"
+ cat.2.c: "Recruit Master of Mint"
+ cat.2.d: "Recruit Natural Scientist"
+ cat.2.e: "Recruit Philosopher"
+ cat.2.f: "Recruit Theologian"
+ cat.2.g: "Recruit Treasurer"
+ cat.2.h: "Do Nothing"
+ 
+ cat.3.title: "Recruit Diplomatic Advisor"
+ cat.3.desc: "Use the state's resources to find an appropriate advisor. Scroll down for more."
+ cat.3.a: "Recruit Colonial Governor"
+ cat.3.b: "Recruit Diplomat"
+ cat.3.c: "Recruit Naval Reformer"
+ cat.3.d: "Recruit Spymaster"
+ cat.3.e: "Recruit Statesman"
+ cat.3.f: "Recruit Trader"
+ cat.3.g: "Recruit Navigator"
+ cat.3.h: "Do Nothing"
+ 

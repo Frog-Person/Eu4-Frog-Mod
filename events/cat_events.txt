@@ -49,6 +49,194 @@ country_event = {
 	}
 	option = {
 		name = cat.1.c
+	}
+}
+
+#pick admin advisor
+
+country_event = {
+	id = cat.2
+	title = cat.2.title
+	desc = cat.2.desc
+	picture = ADVISOR_eventPicture
+
+	is_triggered_only = yes
+	
+	option = {
+		name = cat.2.a
+		
+		add_adm_power  = -25
+		define_advisor = {
+			culture = ROOT
+			religion = ROOT
+			type = artist	
+			skill = 1
 		}
 	}
+	option = {
+		name = cat.2.b
+		
+		add_adm_power  = -25
+		define_advisor = {
+			culture = ROOT
+			religion = ROOT
+			type = inquisitor	
+			skill = 1
+		}
+	}
+	option = {
+		name = cat.2.c
+		
+		add_adm_power  = -25
+		define_advisor = {
+			culture = ROOT
+			religion = ROOT
+			type = master_of_mint	
+			skill = 1
+		}
+	}
+	option = {
+		name = cat.2.d
+		
+		add_adm_power  = -25
+		define_advisor = {
+			culture = ROOT
+			religion = ROOT
+			type = natural_scientist	
+			skill = 1
+		}
+	}
+	option = {
+		name = cat.2.e
+		
+		add_adm_power  = -25
+		define_advisor = {
+			culture = ROOT
+			religion = ROOT
+			type = philosopher	
+			skill = 1
+		}
+	}
+	option = {
+		name = cat.2.f
+		
+		add_adm_power  = -25
+		define_advisor = {
+			culture = ROOT
+			religion = ROOT
+			type = theologian	
+			skill = 1
+		}
+	}
+	option = {
+		name = cat.2.g
+		
+		add_adm_power  = -25
+		define_advisor = {
+			culture = ROOT
+			religion = ROOT
+			type = treasurer	
+			skill = 1
+		}
+	}
+	option = {
+		name = cat.2.h
+		
+		#nothing
+	}
+	
+}
+#pick diplo advisor
+
+country_event = {
+	id = cat.3
+	title = cat.3.title
+	desc = cat.3.desc
+	picture = ADVISOR_eventPicture
+
+	is_triggered_only = yes
+	
+	option = {
+		name = cat.3.a
+		
+		add_dip_power  = -25
+		define_advisor = {
+			culture = ROOT
+			religion = ROOT
+			type = colonial_governor	
+			skill = 1
+		}
+	}
+	option = {
+		name = cat.3.b
+		
+		add_dip_power  = -25
+		define_advisor = {
+			culture = ROOT
+			religion = ROOT
+			type = diplomat	
+			skill = 1
+		}
+	}
+	option = {
+		name = cat.3.c
+		
+		add_dip_power  = -25
+		define_advisor = {
+			culture = ROOT
+			religion = ROOT
+			type = naval_reformer	
+			skill = 1
+		}
+	}
+	option = {
+		name = cat.3.d
+		
+		add_dip_power  = -25
+		define_advisor = {
+			culture = ROOT
+			religion = ROOT
+			type = spymaster	
+			skill = 1
+		}
+	}
+	option = {
+		name = cat.3.e
+		
+		add_dip_power  = -25
+		define_advisor = {
+			culture = ROOT
+			religion = ROOT
+			type = statesman	
+			skill = 1
+		}
+	}
+	option = {
+		name = cat.3.f
+		
+		add_dip_power  = -25
+		define_advisor = {
+			culture = ROOT
+			religion = ROOT
+			type = trader	
+			skill = 1
+		}
+	}
+	option = {
+		name = cat.3.g
+		
+		add_dip_power  = -25
+		define_advisor = {
+			culture = ROOT
+			religion = ROOT
+			type = navigator	
+			skill = 1
+		}
+	}
+	option = {
+		name = cat.3.h
+		
+		#nothing
+	}
+	
 }

@@ -1,0 +1,6 @@
+#Country effect
+
+set_variable = {
+    which = cat_merc_nonsense
+    value = 0
+}

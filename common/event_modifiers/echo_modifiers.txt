@@ -66,9 +66,7 @@ echo_militaryreform_cooldown = {
 }
 
 hired_explorer = {
-}
-
-hired_conquistador = {
+	may_explore = yes
 }
 
 echo_development = {

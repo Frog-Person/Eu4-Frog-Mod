@@ -5,14 +5,14 @@ country_event = {
 	id = echo.1
 	title = echo.1.title
 	desc = echo.1.desc
-	picture = LAND_MILITARY_eventPicture
+	picture = ADVISOR_eventPicture
 
 	is_triggered_only = yes
 
 	option = {
 		name = echo.1.a
 		
-		add_adm_power  = -25
+		add_mil_power  = -25
 		define_advisor = {
 			culture = ROOT
 			religion = ROOT
@@ -23,7 +23,7 @@ country_event = {
 	option = {
 		name = echo.1.b
 		
-		add_adm_power  = -25
+		add_mil_power  = -25
 		define_advisor = {
 			culture = ROOT
 			religion = ROOT
@@ -34,7 +34,7 @@ country_event = {
 	option = {
 		name = echo.1.c
 		
-		add_adm_power  = -25
+		add_mil_power  = -25
 		define_advisor = {
 			culture = ROOT
 			religion = ROOT
@@ -69,7 +69,7 @@ country_event = {
 	option = {
 		name = echo.1.h
 		
-		add_adm_power  = -25
+		add_mil_power  = -25
 		define_advisor = {
 			culture = ROOT
 			religion = ROOT
@@ -80,7 +80,7 @@ country_event = {
 	option = {
 		name = echo.1.i
 		
-		add_adm_power  = -25
+		add_mil_power  = -25
 		define_advisor = {
 			culture = ROOT
 			religion = ROOT
@@ -91,7 +91,7 @@ country_event = {
 	option = {
 		name = echo.1.j
 		
-		add_adm_power  = -25
+		add_mil_power  = -25
 		define_advisor = {
 			culture = ROOT
 			religion = ROOT
@@ -108,7 +108,7 @@ country_event = {
 	option = {
 		name = echo.1.l
 		
-		add_adm_power  = -25
+		add_mil_power  = -25
 		define_advisor = {
 			culture = ROOT
 			religion = ROOT

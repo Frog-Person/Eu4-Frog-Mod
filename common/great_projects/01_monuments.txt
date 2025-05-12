@@ -22043,10 +22043,9 @@ fez_market = {
 		owner = {
 			OR = {
 				tag = MOR
-				tag = ADU
-				tag = TUN
+				was_tag = MOR
 				tag = MAM
-				tag = EGY
+				was_tag = MAM
 			}
 		}
 	}
