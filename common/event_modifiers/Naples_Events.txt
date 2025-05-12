@@ -3,7 +3,7 @@ nap_renaissance_centre = {
 	local_build_cost = -0.125
 }
 nap_neapolitan_renaissance = {
-	advisor_cost = -0.05
+	advisor_cost = -0.03
 }
 nap_a_centralised_capital = {
 	local_development_cost = -0.10
@@ -37,8 +37,8 @@ nap_holy_land = {
 	yearly_patriarch_authority = 0.002
 }
 nap_controller_spice_trade = {
-	local_tax_modifier = 0.30
-	province_trade_power_modifier = 0.30
+	local_tax_modifier = 0.80
+	province_trade_power_modifier = 0.80
 }
 nap_commissioni_marittime = {
 	trade_efficiency = 0.075
@@ -68,7 +68,7 @@ nap_le_castella = {
 	ship_recruit_speed = -0.10
 }
 nap_tuscan_ideas = {
-	idea_cost = -0.1
+	idea_cost = -0.05
 }
 nap_controller_of_rome = {
 	papal_influence = 1
@@ -79,11 +79,79 @@ nap_defeated_milan = {
 	ae_impact = -0.30	
 }
 nap_victory_monument = {
-	prestige = 0.75
+	prestige = 0.15
+	legitimacy = 0.15
+	republican_tradition = 0.005
 }
 nap_galley_fleet = {
 	galley_number_of_cannons_modifier = 0.20	
 	galley_power = 0.1
 	galley_cost = -0.25
 	naval_forcelimit_modifier = 0.10
+}
+italy_divided = {
+	legitimacy = -1.0
+	republican_tradition = -0.20
+	prestige = -1.0
+	global_unrest = 1.0
+	monthly_reform_progress = -0.10
+}
+ragusa_renovated = { 
+	local_center_of_trade_upgrade_cost = -0.33	
+}
+italian_merchants = {
+	mercantilism_cost = -0.20
+}
+army_for_rent = {
+	possible_condottieri = 0.5
+	loot_amount = 0.25
+}
+we_rule_the_seas = {
+	naval_morale = 0.20
+}
+genonese_merchants = {
+	placed_merchant_power_modifier = 0.75
+}
+controlled_pope = {
+	papal_influence = 25
+}
+every_mario_and_luigi = {
+	manpower_recovery_speed = 0.60
+}
+italian_endsieg = {
+	province_warscore_cost = -0.2
+	ae_impact = -0.2
+}
+florence_university = {
+	all_power_cost = -0.05
+}
+mlo_capital_of_europe = {
+	local_tax_modifier = 0.40
+	trade_value = 15
+}
+mlo_piedmont_integration = {
+	autonomy_change_time = -0.2
+	local_prosperity_growth = 0.1
+}
+mlo_perm_swiss_mercs = {
+	drill_gain_modifier = 0.15
+	drill_decay_modifier = -0.15
+}
+mlo_swiss_attrition = {
+	local_hostile_attrition = 2.5
+	local_defensiveness = 0.25
+	local_garrison_size = 0.15
+	local_manpower_modifier = 0.25
+}
+mlo_trade_fleet = {
+	ship_trade_power_modifier = 0.10
+}
+mlo_pride_of_the_fleet = {
+	flagship_morale = 1
+	flagship_durability = 1
+	number_of_cannons_flagship_modifier = 0.5
+	naval_maintenance_flagship_modifier = 0.5
+}
+mlo_florence_university = {
+	all_power_cost = -0.03
 }
