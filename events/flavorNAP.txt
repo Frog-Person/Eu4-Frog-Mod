@@ -809,13 +809,7 @@ country_event = {
 	fire_only_once = no	
 
 	trigger = {
-		OR = {
-			tag = NAP
-			tag = TTS
-			tag = MLO
-			tag = TUS
-			tag = SPI
-		}
+		culture_group = latin
 		NOT = { has_country_flag = attained_italy_divded }
 	}
 	
@@ -842,13 +836,7 @@ country_event = {
 	fire_only_once = no	
 
 	trigger = {
-		OR = {
-			tag = NAP		
-			tag = TTS
-			tag = MLO
-			tag = TUS
-			tag = SPI
-		}
+		culture_group = latin
 		has_country_flag = naples_civil_war_flag
 		NOT = { has_country_flag = attained_civil_war_event }
 	}	
