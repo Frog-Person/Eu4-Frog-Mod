@@ -101,7 +101,7 @@ country_event = {
 }
 
 country_event = {
-	id = Persia_events_PER_choose_religion
+	id = Persia_events_PER_choose_religion.20
 	title = PER_choose_religion.T
 	desc = PER_choose_religion.D
 	picture = GOOD_WITH_MONARCH_eventPicture
@@ -145,5 +145,10 @@ country_event = {
 			name = PER_zoroastrian_immortals
 			duration = -1
 		}
+	}
+	option = {
+		name = PER_choose_religion.OPT4
+
+		add_prestige = 1
 	}	
 }
