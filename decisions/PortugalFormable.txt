@@ -5,6 +5,14 @@ country_decisions = {
         potential = {
             tag = POR
         }
+		provinces_to_highlight = {
+			OR = {
+				area = galicia_area
+				area = leon_area
+				province_id = 4788
+				province_id = 1747
+			}
+		}
         allow = {
             num_of_owned_provinces_with = {
 					value = 10
