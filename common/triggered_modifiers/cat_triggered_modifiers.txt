@@ -1,0 +1,24 @@
+ai_dev_cost = {
+	potential = {
+		ai = yes
+		was_player = no
+	}
+	trigger = {
+		ai = yes
+		was_player = no
+	}
+	development_cost = 0.2
+}
+ai_emperor = {
+	potential = {
+		ai = yes
+		is_emperor = yes
+		was_player = no
+	}
+	trigger = {
+		ai = yes
+		is_emperor = yes
+		was_player = no
+	}
+	imperial_authority = -0.5
+}
