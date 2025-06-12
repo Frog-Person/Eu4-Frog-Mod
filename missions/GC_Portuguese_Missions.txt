@@ -355,6 +355,13 @@ gc_por_1 = {
 	gc_por_med_islands = {
 		icon = mission_colonial
 		required_missions = { gc_por_english_alliance }
+		provinces_to_highlight = {
+			OR = {
+				area = baleares_area
+				area = sicily_area
+				area = western_sicily_area
+			}
+		}
 		trigger = {
 			OR = {
 				AND = {
@@ -447,6 +454,13 @@ gc_por_1 = {
 		icon = kingdom_of_cyprus
 		required_missions = { gc_por_med_islands }
 		position = 12
+		provinces_to_highlight = {
+			OR = {
+				province_id = 163
+				province_id = 320
+				province_id = 321
+			}
+		}
 		trigger = {
 			163 = {
 				owned_by = ROOT
@@ -802,6 +816,9 @@ gc_lus_1 = {
 		icon = the_seven_provinces
 		position = 21
 		required_missions = { }
+		provinces_to_highlight = {
+			province_id = 183
+		}
 		trigger = {
 			183 = {
 				controlled_by = LUS
@@ -1152,7 +1169,14 @@ gc_por_2_b = {
 		icon = mission_unite_home_region
 		required_missions = { gc_por_english_alliance gc_por_build_the_navy }
 		position = 10
-
+		provinces_to_highlight = {
+			OR = {
+				area = galicia_area
+				area = leon_area
+				province_id = 4788
+				province_id = 1747
+			}
+		}
 		trigger = {
 			OR = {
 				num_of_owned_provinces_with = {
@@ -1237,7 +1261,12 @@ gc_por_2_b = {
 		icon = spa_new_capital
 		required_missions = { gc_por_lus_states }
 		position = 12
-
+		provinces_to_highlight = {
+			OR = {
+				province_id = 219
+				province_id = 217
+			}
+		}
 		trigger = {
 			OR = {
 				219 = {
@@ -1337,6 +1366,9 @@ gc_por_2_b = {
 		icon = mission_wine_monopolies
 		required_missions = { gc_por_lus_cities }
 		position = 13
+		provinces_to_highlight = {
+			trade_goods = wine
+		}
 		trigger = {
 			OR = {
 				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
@@ -1398,6 +1430,9 @@ lus_end_cas = {
    icon = mission_castillian_aggression
    position = 14
    required_missions = { gc_por_lusatia_formed }
+   provinces_to_highlight = {
+		culture = castillian
+   }
   	trigger = {
     	OR = {
     		NOT = { exists = CAS }
@@ -1422,6 +1457,13 @@ lus_take_east_iberia = {
    icon = mission_have_two_subjects
    position = 16
    required_missions { lus_end_cas }
+   provinces_to_highlight = {
+			OR = {
+				province_id = 220
+				area = catalonia_area
+			}
+			NOT = { owned_by = ROOT }
+		}
    trigger = {
 		NOT = { exists = ARA }
 		220 = {
@@ -1458,6 +1500,9 @@ lus_take_east_iberia = {
 		icon = mission_rb_mediterranean_authority
 		position = 18
 		required_missions { lus_take_east_iberia }
+		provinces_to_highlight = {
+			area = baleares_area
+		}
 		trigger = {
 			baleares_area = {
 				type = all
@@ -1511,6 +1556,9 @@ lus_take_east_iberia = {
 		icon = mission_break_the_mamluks
 		position = 21
 		required_missions = { }
+		provinces_to_highlight = {
+			province_id = 361
+		}
 		trigger = {
 			361 = {
 				controlled_by = LUS
@@ -1992,6 +2040,10 @@ gc_lus_3 = {
 	lus_trade = {
 		icon = the_shape_of_trades_to_come
 		required_missions = { lus_ports }
+		provinces_to_highlight = {
+			province_has_center_of_trade_of_level = 1
+			owned_by = ROOT
+		}
 		trigger = {
 			num_of_owned_provinces_with = {
 				value = 1
@@ -2078,6 +2130,14 @@ gc_lus_3 = {
 		icon = mission_rb_mediterranean_authority
 		required_missions = { lus_manufactories  control_our_med_island_clay }
 		position = 19
+		provinces_to_highlight = {
+			OR = {
+				province_id = 126
+				province_id = 163
+				province_id = 321
+				area = baleares_area 
+			}
+		}
 		trigger = {
 			126 = {
 				development = 10
@@ -2113,6 +2173,9 @@ gc_lus_3 = {
 		icon = boh_humiliate_austria
 		position = 21
 		required_missions = { }
+		provinces_to_highlight = {
+			province_id = 134
+		}
 		trigger = {
 			134 = {
 				controlled_by = LUS
@@ -2491,7 +2554,10 @@ gc_por_4 = {
 		completed_by = 1472.1.1
 		position = 10
 		provinces_to_highlight = {
-			province_id = 334
+			OR = {
+				province_id = 334
+				province_id = 1751
+			}
 			NOT = { owned_by = ROOT }
 		}
 		
@@ -2632,7 +2698,9 @@ gc_por_4 = {
 		icon = mission_african_gold
 		required_missions = { gc_conquer_the_north_african_coast }
 		position = 13
-
+		provinces_to_highlight = {
+			province_id = 346
+		}
 		trigger = {
 			OR = {
 				346 = {
@@ -2818,6 +2886,9 @@ gc_lus_4 = {
 		icon = byz_city_of_worlds_desire
 		position = 21
 		required_missions = { }
+		provinces_to_highlight = {
+			province_id = 151
+		}
 		trigger = {
 			151 = {
 				controlled_by = LUS
@@ -3229,6 +3300,13 @@ gc_por_5_continued = {
 		icon = renaissance_city
 		required_missions = { }
 		position = 12
+		provinces_to_highlight = {
+			OR = {
+				province_id = 227
+				province_id = 231
+				province_id = 4556
+			}
+		}
 		trigger = {
 			227 = {
 				owned_by = ROOT
@@ -3277,6 +3355,12 @@ gc_por_5_continued = {
 		icon = mission_pol_breadbasket_europe
 		required_missions = { dom_portugal_dev_suburbs }
 		position = 12
+		provinces_to_highlight = {
+			OR = {
+				area = alentejo_area
+				area = beieras_area
+			}
+		}
 		trigger = {
 			alentejo_area = {
 				type = all
@@ -3379,7 +3463,16 @@ gc_lus_5 = {
 		icon = mission_industrial_forging
 		required_missions = { lus_high_sea_fleet }
 		position = 16
-
+		provinces_to_highlight = {
+			OR = {
+					trade_goods = fish
+					trade_goods = salt
+					trade_goods = naval_supplies
+					trade_goods = copper
+					trade_goods = iron
+				}
+			owned_by = ROOT
+		}
 		trigger = {
 			num_of_artillery = 40
 			num_of_owned_provinces_with = {
@@ -3424,6 +3517,9 @@ gc_lus_5 = {
 		icon = a_real_roman_empire
 		position = 21
 		required_missions = { }
+		provinces_to_highlight = {
+			province_id = 118
+		}
 		trigger = {
 			118 = {
 				controlled_by = LUS
