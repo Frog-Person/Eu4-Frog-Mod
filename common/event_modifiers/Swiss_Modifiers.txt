@@ -26,8 +26,10 @@ swi_milan_taken = {
 }
 fortress_switzerland = {
 	local_defender_dice_roll_bonus = 1
-	local_garrison_size = 0.03
 	garrison_damage = 0.30
+	fort_maintenance_modifier = -0.60
+	local_defensiveness = 0.10
+	local_hostile_attrition = 0.5
 }
 swi_rhine_taken = {
 	infantry_power = 0.075
