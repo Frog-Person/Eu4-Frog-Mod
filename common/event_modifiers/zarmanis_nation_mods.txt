@@ -1031,3 +1031,7 @@ yes_men = {
     same_culture_advisor_cost = -0.2
     yearly_corruption = 0.1
 }
+mlo_lombard_productivity = {
+    trade_goods_size_modifier = 0.1
+    local_governing_cost = -0.1
+}
