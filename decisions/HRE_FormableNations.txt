@@ -72,7 +72,7 @@ country_decisions = {
 				limit = { NOT = { tag = UBV } }
 				OR = {
 					NOT = { exists = UBV }
-					UBV = {`
+					UBV = {
 						NOT = { num_of_cities = 5 }
 						is_subject_of = ROOT
 					}
