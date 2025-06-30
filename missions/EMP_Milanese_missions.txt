@@ -320,19 +320,26 @@ emp_mlo_conquest_branch = {
 		provinces_to_highlight = {
 		}
 		trigger = {
-			AND = {
-				army_size = 50
-				121 = {
-					owner = {
-						NOT = {
-							army_strength = {
-								who = ROOT
-								value = 0.9
+			OR = {
+				AND = {
+					army_size = 50
+					121 = {
+						owner = {
+							NOT = {
+								army_strength = {
+									who = ROOT
+									value = 0.9
+								}
 							}
 						}
 					}
+					army_professionalism = 0.25
 				}
-				army_professionalism = 0.25
+				AND = {
+					NOT = { NAP = exists }
+					NOT = { TTS = exists }
+					NOT = { TUS = exists }
+				}
 			}
 		}
 		effect = {
@@ -1639,6 +1646,11 @@ emp_mlo_papal_branch = {
 					war_with = TUS
 					is_controlled_by_player = yes
 				}
+				AND = {
+					NOT = { NAP = exists }
+					NOT = { TTS = exists }
+					NOT = { TUS = exists }
+				}
 			}
 		}
 		effect = {
@@ -1667,6 +1679,11 @@ emp_mlo_papal_branch = {
 				war_score_against = {
 					who = TUS
 					value = 30
+				}
+				AND = {
+					NOT = { NAP = exists }
+					NOT = { TTS = exists }
+					NOT = { TUS = exists }
 				}
 			}
 		}
@@ -1698,6 +1715,11 @@ emp_mlo_papal_branch = {
 				war_score_against = {
 					who = TUS
 					value = 90
+				}
+				AND = {
+					NOT = { NAP = exists }
+					NOT = { TTS = exists }
+					NOT = { TUS = exists }
 				}
 			}
 		}
