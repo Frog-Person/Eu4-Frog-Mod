@@ -146,6 +146,7 @@ portuguese_navigators = {
 		OR = {
 			tag = POR
 			tag = BRZ
+			tag = LUS
 		}
         normal_or_historical_nations = yes
     }
@@ -170,6 +171,7 @@ portuguese_bombardier = {
 		OR = {
 			tag = POR
 			tag = BRZ
+			tag = LUS
 		}
         normal_or_historical_nations = yes
     }
@@ -194,6 +196,7 @@ portuguese_trade_route_map = {
 		OR = {
 			tag = POR
 			tag = BRZ
+			tag = LUS
 		}
         normal_or_historical_nations = yes
     }
@@ -325,6 +328,7 @@ dutch_courage = {
         OR = {
             tag = POR
             tag = BRZ
+	    tag = LUS
         }
         normal_or_historical_nations = yes
     }
