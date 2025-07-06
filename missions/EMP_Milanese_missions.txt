@@ -259,7 +259,7 @@ emp_mlo_conquest_branch = {
 		effect = {
 			add_prestige = 50
 			add_power_projection = {
-				value = 20
+				amount = 20
 				type = from_insult 
 			}
 		}
@@ -336,16 +336,16 @@ emp_mlo_conquest_branch = {
 					army_professionalism = 0.25
 				}
 				AND = {
-					NOT = { NAP = exists }
-					NOT = { TTS = exists }
-					NOT = { TUS = exists }
+					NOT = { exists = NAP }
+					NOT = { exists = TTS }
+					NOT = { exists = TUS }
 				}
 			}
 		}
 		effect = {
 			add_prestige = 50
 			add_power_projection = {
-				value = 20
+				amount = 20
 				type = from_insult 
 			}
 		}
@@ -1647,9 +1647,9 @@ emp_mlo_papal_branch = {
 					is_controlled_by_player = yes
 				}
 				AND = {
-					NOT = { NAP = exists }
-					NOT = { TTS = exists }
-					NOT = { TUS = exists }
+					NOT = { exists = NAP }
+					NOT = { exists = TTS }
+					NOT = { exists = TUS }
 				}
 			}
 		}
@@ -1681,9 +1681,9 @@ emp_mlo_papal_branch = {
 					value = 30
 				}
 				AND = {
-					NOT = { NAP = exists }
-					NOT = { TTS = exists }
-					NOT = { TUS = exists }
+					NOT = { exists = NAP }
+					NOT = { exists = TTS }
+					NOT = { exists = TUS }
 				}
 			}
 		}
@@ -1717,9 +1717,9 @@ emp_mlo_papal_branch = {
 					value = 90
 				}
 				AND = {
-					NOT = { NAP = exists }
-					NOT = { TTS = exists }
-					NOT = { TUS = exists }
+					NOT = { exists = NAP }
+					NOT = { exists = TTS }
+					NOT = { exists = TUS }
 				}
 			}
 		}
