@@ -727,15 +727,18 @@ emp_mlo_security_branch = {
 			AND = {
 				has_flagship = yes
 				navy_size = 70
-				121 = {
-					owner = {
-						NOT = {
-							naval_strength = {
-								who = ROOT
-								value = 0.9
+				OR = {
+					121 = {
+						owner = {
+							NOT = {
+								naval_strength = {
+									who = ROOT
+									value = 0.9
+								}
 							}
 						}
 					}
+					121 = { owned_by = ROOT }
 				}
 			}
 		}
