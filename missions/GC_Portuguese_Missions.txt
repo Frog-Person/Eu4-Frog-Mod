@@ -2309,7 +2309,7 @@ gc_por_4 = {
 					has_discovered = ROOT
 				}
 				2030 = {
-					has_discovered = POR
+					has_discovered = ROOT
 				}
 			}
 		}
