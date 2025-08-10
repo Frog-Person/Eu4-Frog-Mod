@@ -286,6 +286,7 @@ venetian_arsenal_naval_doctrine = {
 			primary_culture = neapolitan
 			primary_culture = tuscan
 			primary_culture = umbrian
+			primary_culture = roman
 		}
 	}
 
